@@ -17,5 +17,5 @@ print(response.text)
 json_object = json.dumps(response.json())
 
 # Write the JSON object to a file
-with open("D:\\ISAN Security Gizmo Box\\data\\nordpass_wordlist.json", "w") as outfile:
+with open("./data/nordpass_wordlist.json", "w") as outfile:
     outfile.write(json_object)

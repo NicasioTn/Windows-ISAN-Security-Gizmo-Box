@@ -49,10 +49,10 @@ class MessageDigest(QDialog):
 
     def __init__(self):
         super(MessageDigest, self).__init__()
-        loadUi("./Files/Message_Digest.ui", self)
+        loadUi("./assets/ui/Message_Digest.ui", self)
         self.setWindowTitle("Message Digest")
-        self.window_icon = QIcon("./Images/logo.png")
-        self.logo = QPixmap("./Images/logo.png")
+        self.window_icon = QIcon("./assets/icons/logo.png")
+        self.logo = QPixmap("./assets/icons/logo.png")
 
         ## Run on Kali Linux
         '''
@@ -83,7 +83,7 @@ class MessageDigest(QDialog):
         self.browse_Button.clicked.connect(self.open_file_dialog)
 
         # Load the list of hints from the JSON file
-        with open('hint.json', 'r') as openfile:
+        with open('./data/hint.json', 'r') as openfile:
             json_object = json.load(openfile)
         
         for item in json_object:
@@ -382,7 +382,7 @@ class MessageDigest(QDialog):
         qr.add_data(hash)
         qr.make(fit=True)
         img = qr.make_image(fill_color="black", back_color="white")
-        img.save("./SaveQR/MessageDigest-QRCode.png")
+        img.save("./data/MessageDigest-QRCode.png")
         ## Run on Kali Linux
         '''
         img.save("/home/kali/Gizmo/SaveQR/MessageDigest-QRCode.png")
@@ -416,7 +416,7 @@ class MessageDigest(QDialog):
                 
     # Show Image Section ---------------------------------------------
     def ShowImage_QR(self):
-        imagePath = "./SaveQR/MessageDigest-QRCode.png"
+        imagePath = "./data/MessageDigest-QRCode.png"
         ## Run on Kali Linux
         '''
         imagePath = "/home/kali/Gizmo/SaveQR/MessageDigest-QRCode.png"

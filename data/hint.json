@@ -1,0 +1,59 @@
+[
+    {
+        "tool_name":"Message Digest",
+        "tool_usage":"md5 btn",
+        "tool_description":"<b> md5sum </b>is a computer program that calculates and verifies 128-bit MD5 hashes, as described in RFC 1321. The MD5 hash functions as a compact digital fingerprint of a file."
+    },
+    {
+        "tool_name":"Message Digest",
+        "tool_usage":"sha1 btn",
+        "tool_description":"<b> SHA-1 </b> is a cryptographic hash function designed by the United States National Security Agency and is a U.S. Federal Information Processing Standard published by the United States NIST."
+    },
+    {
+        "tool_name":"Message Digest",
+        "tool_usage":"sha224 btn",
+        "tool_description":"<b> SHA-224 </b> is a cryptographic hash function designed by the United States National Security Agency and is a U.S. Federal Information Processing Standard published by the United States NIST."
+    },
+    {
+        "tool_name":"Message Digest",
+        "tool_usage":"sha256 btn",
+        "tool_description":"<b> SHA-256 </b> is a member of the SHA-2 cryptographic hash functions designed by the NSA. SHA stands for Secure Hash Algorithm. Cryptographic hash functions are mathematical operations run on digital data; by comparing the computed hash (the output from execution of the algorithm) to a known and expected hash value, a person can determine the data's integrity."
+    },
+    {
+        "tool_name":"Message Digest",
+        "tool_usage":"sha384 btn",
+        "tool_description":"<b> SHA-384 </b> is a member of the SHA-2 cryptographic hash functions designed by the NSA. SHA stands for Secure Hash Algorithm. Cryptographic hash functions are mathematical operations run on digital data; by comparing the computed hash (the output from execution of the algorithm) to a known and expected hash value, a person can determine the data's integrity."
+
+    },
+    {
+        "tool_name":"Message Digest",
+        "tool_usage":"sha512 btn",
+        "tool_description":"<b> SHA-512 </b> is a member of the SHA-2 cryptographic hash functions designed by the NSA. SHA stands for Secure Hash Algorithm. Cryptographic hash functions are mathematical operations run on digital data; by comparing the computed hash (the output from execution of the algorithm) to a known and expected hash value, a person can determine the data's integrity."
+
+    },
+    {
+        "tool_name":"Message Digest",
+        "tool_usage":"sha3 btn",
+        "tool_description":"<b> SHA-3 </b> is the winner of a five-year competition to select a new cryptographic hash algorithm where 64 competing designs were evaluated. SHA-3 is not meant to replace SHA-2, as no significant attack on SHA-2 has been demonstrated."
+    },
+    {
+        "tool_name":"Message Digest",
+        "tool_usage":"sha3 224 btn",
+        "tool_description":"<b> SHA-3 </b> is the winner of a five-year competition to select a new cryptographic hash algorithm where 64 competing designs were evaluated. SHA-3 is not meant to replace SHA-2, as no significant attack on SHA-2 has been demonstrated."
+    },
+    {
+        "tool_name":"Message Digest",
+        "tool_usage":"sha3 256 btn",
+        "tool_description":"<b> SHA-3 </b> is the winner of a five-year competition to select a new cryptographic hash algorithm where 64 competing designs were evaluated. SHA-3 is not meant to replace SHA-2, as no significant attack on SHA-2 has been demonstrated."
+    },
+    {
+        "tool_name":"Message Digest",
+        "tool_usage":"sha3 384 btn",
+        "tool_description":"<b> SHA-3 </b> is the winner of a five-year competition to select a new cryptographic hash algorithm where 64 competing designs were evaluated. SHA-3 is not meant to replace SHA-2, as no significant attack on SHA-2 has been demonstrated."
+    },
+    {
+        "tool_name":"Message Digest",
+        "tool_usage":"sha3 518 btn",
+        "tool_description":"<b> SHA-3 </b> is the winner of a five-year competition to select a new cryptographic hash algorithm where 64 competing designs were evaluated. SHA-3 is not meant to replace SHA-2, as no significant attack on SHA-2 has been demonstrated."
+    }
+]

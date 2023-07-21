@@ -23,7 +23,7 @@ with open(filename, newline='') as csvfile:
 class httpsScreen(QDialog):
     def __init__(self):
         super(httpsScreen, self).__init__()
-        loadUi("./Files/HTTPS_Testing.ui", self)
+        loadUi("./assets/ui/HTTPS_Testing.ui", self)
         #self.back_Button.clicked.connect(self.gotonetworkmenu)
         self.scan_Button.clicked.connect(self.summary)
         self.send_Button.clicked.connect(self.sendmail)

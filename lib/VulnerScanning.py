@@ -72,11 +72,11 @@ class VulnerabilityScan(QDialog):
     
     def __init__(self):
         super(VulnerabilityScan, self).__init__()
-        loadUi("./Files/Vulnerability_Scanning.ui", self)
+        loadUi("./assets/ui/Vulnerability_Scanning.ui", self)
         self.setWindowTitle("Vulnerability Scan")
-        self.window_icon = QIcon("./Images/logo.png")
+        self.window_icon = QIcon("./assets/icons/logo.png")
         
-        self.logo = QPixmap("./Images/logo.png")
+        self.logo = QPixmap("./assets/icons/logo.png")
         
         self.setWindowIcon(self.window_icon)
         self.logo_Label.setPixmap(self.logo)

@@ -14,10 +14,10 @@ class DictAttack(QDialog):
 
     def __init__(self):
         super(DictAttack, self).__init__()
-        loadUi("./Files/Dict_attack.ui", self)
+        loadUi("./assets/ui/Dict_attack.ui", self)
 
         self.setWindowTitle("Dictionary Attack")
-        self.setWindowIcon(QIcon("./Files/Logo.png"))
+        self.setWindowIcon(QIcon("./assets/icons/Logo.png"))
 
         self.start_Button.clicked.connect(self.startDickAttack)
         self.clear_Button.clicked.connect(self.clearState)
@@ -29,10 +29,11 @@ class DictAttack(QDialog):
         self.Result_Label.setStyleSheet("color: rgb(255, 255, 255); font: 75 14pt \"MS Shell Dlg 2\";")
 
     def clearState(self):
-        self.options_LineEdit.clear()
+        self.input_LineEdit.clear()
 
     def startDickAttack(self):
         password = self.getPasswords()
+        return 0
         if password != "":
             os.system("cd D:\\Hashcat\\hashcat-6.2.5")
             command = "hashcat -m 0 -a 0 -o D:\\Github\\Gizmo\\Credentials\\Cracked\\Cracked.txt D:\\Github\\Gizmo\\Credentials\\Password\\Password.txt D:\\Github\\Gizmo\\Credentials\\Wordlist\\rockyou-30.txt"

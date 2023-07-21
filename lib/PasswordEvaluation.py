@@ -25,14 +25,14 @@ class PasswordEvaluation(QDialog):
 
     def __init__(self):
         super(PasswordEvaluation, self).__init__()
-        loadUi("./Files/Password_Evaluation.ui", self)
+        loadUi("./assets/ui/Password_Evaluation.ui", self)
         # If you run on linux, you need to change the path of the ui file
         ### loadUi("/home/kali/Gizmo/Files/Password_Evaluation.ui", self)
         
         self.setWindowTitle("Password Evaluation")
 
         # Load the list of weak passwords
-        with open('nordpass_wordlist.json', 'r') as openfile:
+        with open('./data/nordpass_wordlist.json', 'r') as openfile:
             json_object = json.load(openfile)
         
         for item in json_object:
@@ -40,12 +40,12 @@ class PasswordEvaluation(QDialog):
 
 
         # Icons Init
-        self.warning_icon = QIcon("./Images/warning.png")
-        self.check_icon = QIcon("./Images/Checked.png")
-        self.hide_icon = QIcon("./Images/hide.png")
-        self.unhid_icon = QIcon("./Images/unhide.png")
-        self.logo = QPixmap("./Images/logo.png")
-        self.window_icon = QIcon("./Images/logo.png")
+        self.warning_icon = QIcon("./assets/icons/warning.png")
+        self.check_icon = QIcon("./assets/icons/Checked.png")
+        self.hide_icon = QIcon("./assets/icons/hide.png")
+        self.unhid_icon = QIcon("./assets/icons/unhide.png")
+        self.logo = QPixmap("./assets/icons/logo.png")
+        self.window_icon = QIcon("./assets/icons/logo.png")
         
         '''
         self.warning_icon = QIcon("/home/kali/Gizmo/Images/warning.png")
