@@ -3,3 +3,5 @@
 
 # Auto detect png files and perform LF normalization
 * png=auto
+
+* json=auto
