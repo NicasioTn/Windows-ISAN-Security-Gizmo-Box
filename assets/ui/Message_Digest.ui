@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgba(9,36,43,255)</string>
+  </property>
+  <widget class="QLabel" name="name_Label1">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>30</y>
+     <width>211</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>40</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgba(80,218,107,255);</string>
+   </property>
+   <property name="text">
+    <string>MESSAGE </string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="input">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>210</y>
+     <width>541</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 5px solid rgba(80,218,107,255);
+color: rgb(255, 255, 255);
+text-align: center;
+border-top-left-radius :20px;
+border-top-right-radius :20px; 
+border-bottom-left-radius : 20px; 
+border-bottom-right-radius : 20px;
+
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="browse_Button">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>320</y>
+     <width>261</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>15</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+border-top-left-radius :20px;
+border-top-right-radius :20px; 
+border-bottom-left-radius : 20px; 
+border-bottom-right-radius : 20px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>BROWSE</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="clear_Button">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>320</y>
+     <width>261</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>15</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 2px solid white;
+color: rgb(255, 255, 255);
+border-top-left-radius :20px;
+border-top-right-radius :20px; 
+border-bottom-left-radius : 20px; 
+border-bottom-right-radius : 20px;
+border-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>CLEAR</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="MD5_Button">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>440</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>15</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(155,233,172,255);
+color: rgb(0, 0, 0);
+border-top-left-radius :20px;
+border-top-right-radius :20px; 
+border-bottom-left-radius : 20px; 
+border-bottom-right-radius : 20px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>MD5</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SHA1_Button">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>520</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>15</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(155,233,172,255);
+color: rgb(0, 0, 0);
+border-top-left-radius :20px;
+border-top-right-radius :20px; 
+border-bottom-left-radius : 20px; 
+border-bottom-right-radius : 20px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>SHA-1</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SHA2_224_Button">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>440</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>15</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(155,233,172,255);
+color: rgb(0, 0, 0);
+border-top-left-radius :20px;
+border-top-right-radius :20px; 
+border-bottom-left-radius : 20px; 
+border-bottom-right-radius : 20px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>SHA-2
+224 bit</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SHA3_224_Button">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>440</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>15</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(155,233,172,255);
+color: rgb(0, 0, 0);
+border-top-left-radius :20px;
+border-top-right-radius :20px; 
+border-bottom-left-radius : 20px; 
+border-bottom-right-radius : 20px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>SHA-3
+224 bit</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="output_QR_Label">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>190</y>
+     <width>551</width>
+     <height>231</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(27,79,96,70%);
+color: rgb(0, 0, 0);
+border-top-left-radius :20px;
+border-top-right-radius :20px; 
+border-bottom-left-radius : 20px; 
+border-bottom-right-radius : 20px;
+
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="output_hash_Label">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>490</y>
+     <width>551</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>17</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(27,79,96,70%);
+border-top-left-radius :20px;
+border-top-right-radius :20px; 
+border-bottom-left-radius : 20px; 
+border-bottom-right-radius : 20px;
+color: white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="save_Button">
+   <property name="geometry">
+    <rect>
+     <x>850</x>
+     <y>610</y>
+     <width>111</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>15</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+border-top-left-radius :20px;
+border-top-right-radius :20px; 
+border-bottom-left-radius : 20px; 
+border-bottom-right-radius : 20px;
+
+
+</string>
+   </property>
+   <property name="text">
+    <string>SAVE</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="QR_Label">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>130</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>19</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>QR CODE </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="name_Label2">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>30</y>
+     <width>161</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>40</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>DIGEST</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="result_Label">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>430</y>
+     <width>91</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>19</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>RESULT </string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="back_Button">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>640</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>15</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 2px solid white;
+color: rgb(255, 255, 255);
+border-top-left-radius :20px;
+border-top-right-radius :20px; 
+border-bottom-left-radius : 20px; 
+border-bottom-right-radius : 20px;
+border-color: rgb(255, 255, 255);
+
+</string>
+   </property>
+   <property name="text">
+    <string>BACK</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="enter_text_Label">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>150</y>
+     <width>161</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>19</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>ENTER TEXT OR FILE </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="logo_Label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>20</y>
+     <width>91</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../../../Downloads/icons8-stan-marsh-96.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SHA2_256_Button">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>520</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>15</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(155,233,172,255);
+color: rgb(0, 0, 0);
+border-top-left-radius :20px;
+border-top-right-radius :20px; 
+border-bottom-left-radius : 20px; 
+border-bottom-right-radius : 20px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>SHA-2
+256 bit</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SHA2_384_Button">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>440</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>15</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(155,233,172,255);
+color: rgb(0, 0, 0);
+border-top-left-radius :20px;
+border-top-right-radius :20px; 
+border-bottom-left-radius : 20px; 
+border-bottom-right-radius : 20px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>SHA-2
+384 bit</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SHA2_512_Button">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>520</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>15</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(155,233,172,255);
+color: rgb(0, 0, 0);
+border-top-left-radius :20px;
+border-top-right-radius :20px; 
+border-bottom-left-radius : 20px; 
+border-bottom-right-radius : 20px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>SHA-2
+512 bit</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SHA3_256_Button">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>520</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>15</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(155,233,172,255);
+color: rgb(0, 0, 0);
+border-top-left-radius :20px;
+border-top-right-radius :20px; 
+border-bottom-left-radius : 20px; 
+border-bottom-right-radius : 20px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>SHA-3
+256 bit</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SHA3_384_Button">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>440</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>15</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(155,233,172,255);
+color: rgb(0, 0, 0);
+border-top-left-radius :20px;
+border-top-right-radius :20px; 
+border-bottom-left-radius : 20px; 
+border-bottom-right-radius : 20px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>SHA-3
+384 bit</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SHA3_512_Button">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>520</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift Condensed</family>
+     <pointsize>15</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(155,233,172,255);
+color: rgb(0, 0, 0);
+border-top-left-radius :20px;
+border-top-right-radius :20px; 
+border-bottom-left-radius : 20px; 
+border-bottom-right-radius : 20px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>SHA-3
+512 bit</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
