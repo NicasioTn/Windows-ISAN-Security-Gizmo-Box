@@ -235,7 +235,7 @@ QPushButton:pressed {
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resource.qrc">:/images/images/main.png</pixmap>
+       <pixmap>:/images/images/main.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -448,7 +448,7 @@ QPushButton:pressed {
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resource.qrc">:/images/images/key.png</pixmap>
+       <pixmap>:/images/images/key.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -467,7 +467,7 @@ QPushButton:pressed {
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resource.qrc">:/images/images/message.png</pixmap>
+       <pixmap>:/images/images/message.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -486,7 +486,7 @@ QPushButton:pressed {
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resource.qrc">:/images/images/bug.png</pixmap>
+       <pixmap>:/images/images/bug.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -505,7 +505,7 @@ QPushButton:pressed {
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resource.qrc">:/images/images/star.png</pixmap>
+       <pixmap>:/images/images/star.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -939,7 +939,7 @@ border-radius: 5px;</string>
         <string/>
        </property>
        <property name="icon">
-        <iconset resource="resource.qrc">
+        <iconset>
          <normaloff>:/icons/icons/icon_info.png</normaloff>:/icons/icons/icon_info.png</iconset>
        </property>
       </widget>
@@ -1050,7 +1050,7 @@ QPushButton:pressed {
        <string/>
       </property>
       <property name="icon">
-       <iconset resource="resource.qrc">
+       <iconset>
         <normaloff>:/icons/icons/icon_openeye.png</normaloff>:/icons/icons/icon_openeye.png</iconset>
       </property>
       <property name="iconSize">
@@ -1078,7 +1078,7 @@ QPushButton:pressed {
        <string/>
       </property>
       <property name="icon">
-       <iconset resource="resource.qrc">
+       <iconset>
         <normaloff>:/icons/icons/icon_back.png</normaloff>:/icons/icons/icon_back.png</iconset>
       </property>
       <property name="iconSize">
@@ -1240,7 +1240,7 @@ QPushButton:pressed {
        <string>OPEN</string>
       </property>
       <property name="icon">
-       <iconset resource="resource.qrc">
+       <iconset>
         <normaloff>:/icons/icons/icon_folder.png</normaloff>:/icons/icons/icon_folder.png</iconset>
       </property>
       <property name="iconSize">
@@ -1423,7 +1423,7 @@ QPushButton:pressed {
        <string>CLEAR</string>
       </property>
       <property name="icon">
-       <iconset resource="resource.qrc">
+       <iconset>
         <normaloff>:/icons/icons/icon_trash.png</normaloff>:/icons/icons/icon_trash.png</iconset>
       </property>
       <property name="iconSize">
@@ -1489,7 +1489,7 @@ QProgressBar:chunk {
        <string/>
       </property>
       <property name="icon">
-       <iconset resource="resource.qrc">
+       <iconset>
         <normaloff>:/icons/icons/icon_back.png</normaloff>:/icons/icons/icon_back.png</iconset>
       </property>
       <property name="iconSize">
@@ -1517,7 +1517,7 @@ QProgressBar:chunk {
        <string/>
       </property>
       <property name="icon">
-       <iconset resource="resource.qrc">
+       <iconset>
         <normaloff>:/icons/icons/icon_openeye.png</normaloff>:/icons/icons/icon_openeye.png</iconset>
       </property>
       <property name="iconSize">
@@ -1746,7 +1746,7 @@ QPushButton:pressed {
         <string>READ MORE</string>
        </property>
        <property name="icon">
-        <iconset resource="resource.qrc">
+        <iconset>
          <normaloff>:/icons/icons/icon_more.png</normaloff>:/icons/icons/icon_more.png</iconset>
        </property>
        <property name="iconSize">
@@ -1797,7 +1797,7 @@ QPushButton:pressed {
        <string>CLEAR</string>
       </property>
       <property name="icon">
-       <iconset resource="resource.qrc">
+       <iconset>
         <normaloff>:/icons/icons/icon_trash.png</normaloff>:/icons/icons/icon_trash.png</iconset>
       </property>
       <property name="iconSize">
@@ -1847,7 +1847,7 @@ QPushButton:pressed {
        <string>SCAN</string>
       </property>
       <property name="icon">
-       <iconset resource="resource.qrc">
+       <iconset>
         <normaloff>:/icons/icons/icon_scan.png</normaloff>:/icons/icons/icon_scan.png</iconset>
       </property>
       <property name="iconSize">
@@ -1897,7 +1897,7 @@ QPushButton:pressed {
        <string>OPEN</string>
       </property>
       <property name="icon">
-       <iconset resource="resource.qrc">
+       <iconset>
         <normaloff>:/icons/icons/icon_folder.png</normaloff>:/icons/icons/icon_folder.png</iconset>
       </property>
       <property name="iconSize">
@@ -1925,7 +1925,7 @@ QPushButton:pressed {
        <string/>
       </property>
       <property name="icon">
-       <iconset resource="resource.qrc">
+       <iconset>
         <normaloff>:/icons/icons/icon_back.png</normaloff>:/icons/icons/icon_back.png</iconset>
       </property>
       <property name="iconSize">
@@ -1968,7 +1968,7 @@ QPushButton:pressed {
        <string/>
       </property>
       <property name="icon">
-       <iconset resource="resource.qrc">
+       <iconset>
         <normaloff>:/icons/icons/icon_back.png</normaloff>:/icons/icons/icon_back.png</iconset>
       </property>
       <property name="iconSize">
@@ -2085,7 +2085,7 @@ QPushButton:pressed {
        <string>OPEN</string>
       </property>
       <property name="icon">
-       <iconset resource="resource.qrc">
+       <iconset>
         <normaloff>:/icons/icons/icon_folder.png</normaloff>:/icons/icons/icon_folder.png</iconset>
       </property>
       <property name="iconSize">
@@ -2135,7 +2135,7 @@ QPushButton:pressed {
        <string>CLEAR</string>
       </property>
       <property name="icon">
-       <iconset resource="resource.qrc">
+       <iconset>
         <normaloff>:/icons/icons/icon_trash.png</normaloff>:/icons/icons/icon_trash.png</iconset>
       </property>
       <property name="iconSize">
@@ -2480,7 +2480,7 @@ QPushButton:pressed {
          <string>SAVE</string>
         </property>
         <property name="icon">
-         <iconset resource="resource.qrc">
+         <iconset>
           <normaloff>:/icons/icons/icon_save.png</normaloff>:/icons/icons/icon_save.png</iconset>
         </property>
         <property name="iconSize">
@@ -2510,7 +2510,7 @@ QPushButton:pressed {
        <string/>
       </property>
       <property name="icon">
-       <iconset resource="resource.qrc">
+       <iconset>
         <normaloff>:/icons/icons/icon_back.png</normaloff>:/icons/icons/icon_back.png</iconset>
       </property>
       <property name="iconSize">
@@ -2559,7 +2559,7 @@ QPushButton:pressed {
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resource.qrc">:/images/images/firewall.png</pixmap>
+       <pixmap>:/images/images/firewall.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -2618,7 +2618,7 @@ QPushButton:pressed {
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resource.qrc">:/images/images/https.png</pixmap>
+       <pixmap>:/images/images/https.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -2661,7 +2661,7 @@ QPushButton:pressed {
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resource.qrc">:/images/images/correct.png</pixmap>
+       <pixmap>:/images/images/correct.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -2680,7 +2680,7 @@ QPushButton:pressed {
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resource.qrc">:/images/images/star.png</pixmap>
+       <pixmap>:/images/images/star.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -2816,7 +2816,7 @@ QPushButton:pressed {
        <string>OPEN</string>
       </property>
       <property name="icon">
-       <iconset resource="resource.qrc">
+       <iconset>
         <normaloff>:/icons/icons/icon_trash.png</normaloff>:/icons/icons/icon_trash.png</iconset>
       </property>
       <property name="iconSize">
@@ -2866,7 +2866,7 @@ QPushButton:pressed {
        <string>SCAN</string>
       </property>
       <property name="icon">
-       <iconset resource="resource.qrc">
+       <iconset>
         <normaloff>:/icons/icons/icon_scan.png</normaloff>:/icons/icons/icon_scan.png</iconset>
       </property>
       <property name="iconSize">
@@ -3126,7 +3126,7 @@ QPushButton:pressed {
         <string>READ MORE</string>
        </property>
        <property name="icon">
-        <iconset resource="resource.qrc">
+        <iconset>
          <normaloff>:/icons/icons/icon_more.png</normaloff>:/icons/icons/icon_more.png</iconset>
        </property>
        <property name="iconSize">
@@ -3155,7 +3155,7 @@ QPushButton:pressed {
        <string/>
       </property>
       <property name="icon">
-       <iconset resource="resource.qrc">
+       <iconset>
         <normaloff>:/icons/icons/icon_back.png</normaloff>:/icons/icons/icon_back.png</iconset>
       </property>
       <property name="iconSize">
@@ -3198,7 +3198,7 @@ QPushButton:pressed {
        <string/>
       </property>
       <property name="icon">
-       <iconset resource="resource.qrc">
+       <iconset>
         <normaloff>:/icons/icons/icon_back.png</normaloff>:/icons/icons/icon_back.png</iconset>
       </property>
       <property name="iconSize">
@@ -3315,7 +3315,7 @@ QPushButton:pressed {
        <string>OPEN</string>
       </property>
       <property name="icon">
-       <iconset resource="resource.qrc">
+       <iconset>
         <normaloff>:/icons/icons/icon_trash.png</normaloff>:/icons/icons/icon_trash.png</iconset>
       </property>
       <property name="iconSize">
@@ -3365,7 +3365,7 @@ QPushButton:pressed {
        <string>SCAN</string>
       </property>
       <property name="icon">
-       <iconset resource="resource.qrc">
+       <iconset>
         <normaloff>:/icons/icons/icon_scan.png</normaloff>:/icons/icons/icon_scan.png</iconset>
       </property>
       <property name="iconSize">
@@ -3503,7 +3503,7 @@ QPushButton:pressed {
         <string>READ MORE</string>
        </property>
        <property name="icon">
-        <iconset resource="resource.qrc">
+        <iconset>
          <normaloff>:/icons/icons/icon_more.png</normaloff>:/icons/icons/icon_more.png</iconset>
        </property>
        <property name="iconSize">
@@ -3532,7 +3532,7 @@ QPushButton:pressed {
        <string/>
       </property>
       <property name="icon">
-       <iconset resource="resource.qrc">
+       <iconset>
         <normaloff>:/icons/icons/icon_back.png</normaloff>:/icons/icons/icon_back.png</iconset>
       </property>
       <property name="iconSize">
@@ -3575,7 +3575,7 @@ QPushButton:pressed {
        <string/>
       </property>
       <property name="icon">
-       <iconset resource="resource.qrc">
+       <iconset>
         <normaloff>:/icons/icons/icon_back.png</normaloff>:/icons/icons/icon_back.png</iconset>
       </property>
       <property name="iconSize">
@@ -3792,7 +3792,6 @@ QPushButton:pressed {
  </widget>
  <resources>
   <include location="resource.qrc"/>
-  <include location="../../.designer/backup/resource.qrc"/>
  </resources>
  <connections/>
 </ui>
