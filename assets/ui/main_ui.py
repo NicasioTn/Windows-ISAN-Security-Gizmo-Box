@@ -2033,7 +2033,7 @@ class Ui_Form(object):
         self.label_gizmo.setObjectName("label_gizmo")
 
         self.retranslateUi(Form)
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(2)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
