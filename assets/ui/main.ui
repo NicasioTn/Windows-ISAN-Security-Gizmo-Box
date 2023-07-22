@@ -235,7 +235,7 @@ QPushButton:pressed {
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>:/images/images/main.png</pixmap>
+       <pixmap>../icons/logo.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -3791,7 +3791,7 @@ QPushButton:pressed {
   </widget>
  </widget>
  <resources>
-  <include location="resource.qrc"/>
+  <include location="../resource/resource.qrc"/>
  </resources>
  <connections/>
 </ui>
