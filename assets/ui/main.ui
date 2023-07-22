@@ -1,0 +1,3798 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1374</width>
+    <height>738</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QWidget" name="widget_main" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1381</width>
+     <height>751</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>1361</width>
+      <height>721</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift SemiBold</family>
+     </font>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="page_home">
+     <widget class="QLabel" name="labe_isanSec">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>150</y>
+        <width>401</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>22</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(42, 49, 66);</string>
+      </property>
+      <property name="text">
+       <string>ISAN SECURITY </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_description1Home">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>210</y>
+        <width>511</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> color: rgba(122,122,122,255);</string>
+      </property>
+      <property name="text">
+       <string>The ISAN security gizmo box is a security device or software suite</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_description2Home">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>260</y>
+        <width>541</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> color: rgba(122,122,122,255);</string>
+      </property>
+      <property name="text">
+       <string> that offers five different tools for various security purposes.</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_advancedUserHome">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>360</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton{
+	    background-color: rgb(42, 49, 66);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>ADVANCED USER</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_networkUserHome">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>360</y>
+        <width>191</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton{
+	    background-color: rgb(42, 49, 66);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>NETWORK ENGINEER</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_gizmoHome">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>150</y>
+        <width>191</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>22</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgba(0,143,255,255);</string>
+      </property>
+      <property name="text">
+       <string>GIZMO BOX</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_imageHome">
+      <property name="geometry">
+       <rect>
+        <x>840</x>
+        <y>100</y>
+        <width>461</width>
+        <height>471</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resource.qrc">:/images/images/main.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_advancedUser">
+     <widget class="QPushButton" name="btn_password">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>350</y>
+        <width>231</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton{
+	    background-color: rgb(42, 49, 66);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>PASSWORD EVALUATUON</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_malware">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>350</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton{
+	    background-color: rgb(42, 49, 66);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>MALWARE SCANNING</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_digest">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>350</y>
+        <width>221</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton{
+	    background-color: rgb(42, 49, 66);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>MESSAGE DIGEST</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_isanSec_adupage">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>140</y>
+        <width>371</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>22</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(42, 49, 66);</string>
+      </property>
+      <property name="text">
+       <string>ISAN SECURITY GIZMO BOX</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_advancdUser">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>190</y>
+        <width>311</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>22</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgba(0,143,255,255);</string>
+      </property>
+      <property name="text">
+       <string> ADVANCED USER</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_description_adupage">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>240</y>
+        <width>631</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> color: rgba(122,122,122,255);</string>
+      </property>
+      <property name="text">
+       <string>Advanced user tools include password evaluation, malware scanning, message digest.</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_image_key">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>30</y>
+        <width>231</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resource.qrc">:/images/images/key.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_image_msg">
+      <property name="geometry">
+       <rect>
+        <x>870</x>
+        <y>400</y>
+        <width>261</width>
+        <height>251</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resource.qrc">:/images/images/message.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_image_bug">
+      <property name="geometry">
+       <rect>
+        <x>1020</x>
+        <y>0</y>
+        <width>261</width>
+        <height>251</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resource.qrc">:/images/images/bug.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_image_star_adupage">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>500</y>
+        <width>111</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resource.qrc">:/images/images/star.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_password">
+     <widget class="QLineEdit" name="lineEdit_inputPwd">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>130</y>
+        <width>811</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+  border: 1px solid gray;
+  color: rgba(40,43,61,255);
+  border-radius: 5px;
+}
+
+QLineEdit:hover {
+  border: 2px solid;
+  border-color: rgba(0,143,255,255);
+}
+QLineEdit:focus {
+  border: 1px solid;
+  border-color: rgba(88,199,141,255);
+}
+</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>TYPE HERE</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_pwd">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>50</y>
+        <width>391</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(38, 50, 56);</string>
+      </property>
+      <property name="text">
+       <string>PASSWORD EVALUATION</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="widget_specialWarning" native="true">
+      <property name="geometry">
+       <rect>
+        <x>930</x>
+        <y>260</y>
+        <width>381</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(242,243,245,255);
+border-radius: 5px;</string>
+      </property>
+      <widget class="QLabel" name="label_title_specialWarning">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>171</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>13</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(42, 49, 66);</string>
+       </property>
+       <property name="text">
+        <string>SPECIAL WARINING!</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>70</y>
+         <width>344</width>
+         <height>288</height>
+        </rect>
+       </property>
+       <layout class="QFormLayout" name="formLayout">
+        <property name="horizontalSpacing">
+         <number>15</number>
+        </property>
+        <property name="verticalSpacing">
+         <number>20</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QToolButton" name="tbtn_chkLength">
+          <property name="styleSheet">
+           <string notr="true"> QToolButton{
+        border-radius: 5px;
+    }</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>:/newPrefix/icon_no.png</normaloff>:/newPrefix/icon_no.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QToolButton" name="tbtn_chkDigit">
+          <property name="styleSheet">
+           <string notr="true"> QToolButton{
+        border-radius: 5px;
+    }</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>:/newPrefix/icon_no.png</normaloff>:/newPrefix/icon_no.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLabel" name="label_digit">
+          <property name="font">
+           <font>
+            <family>Bahnschrift SemiBold</family>
+            <pointsize>13</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(42, 49, 66);</string>
+          </property>
+          <property name="text">
+           <string>DIGITS</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QToolButton" name="rbtn_chkLower">
+          <property name="styleSheet">
+           <string notr="true"> QToolButton{
+        border-radius: 5px;
+    }</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>:/newPrefix/icon_no.png</normaloff>:/newPrefix/icon_no.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLabel" name="label_lower">
+          <property name="font">
+           <font>
+            <family>Bahnschrift SemiBold</family>
+            <pointsize>13</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(42, 49, 66);</string>
+          </property>
+          <property name="text">
+           <string>LOWER CASE LATIN LETTERS</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QToolButton" name="tbrn_chkUpper">
+          <property name="styleSheet">
+           <string notr="true"> QToolButton{
+        border-radius: 5px;
+    }</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>:/newPrefix/icon_no.png</normaloff>:/newPrefix/icon_no.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLabel" name="label_upper">
+          <property name="font">
+           <font>
+            <family>Bahnschrift SemiBold</family>
+            <pointsize>13</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(42, 49, 66);</string>
+          </property>
+          <property name="text">
+           <string>UPPER CASE LATIN LETTERS</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QToolButton" name="tbrn_chkSpecial">
+          <property name="styleSheet">
+           <string notr="true"> QToolButton{
+        border-radius: 5px;
+    }</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>:/newPrefix/icon_no.png</normaloff>:/newPrefix/icon_no.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>30</width>
+            <height>30</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLabel" name="label_special">
+          <property name="font">
+           <font>
+            <family>Bahnschrift SemiBold</family>
+            <pointsize>13</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(42, 49, 66);</string>
+          </property>
+          <property name="text">
+           <string>SPECIAL CHARACTERS</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="label_length">
+          <property name="font">
+           <font>
+            <family>Bahnschrift SemiBold</family>
+            <pointsize>13</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(42, 49, 66);</string>
+          </property>
+          <property name="text">
+           <string>LENGTH &gt;= 8</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="widget_outputPwd" native="true">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>260</y>
+        <width>661</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(242,243,245,255);
+border-radius: 5px;</string>
+      </property>
+      <widget class="QLabel" name="label_pwdStrength">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>241</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>13</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(42, 49, 66);</string>
+       </property>
+       <property name="text">
+        <string>YOUR PASSWORD STRENGTH</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_timetocrack">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>241</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>13</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(42, 49, 66);</string>
+       </property>
+       <property name="text">
+        <string>ESTIMATED TIME TO CRACK</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_entropy">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>120</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>13</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(42, 49, 66);</string>
+       </property>
+       <property name="text">
+        <string>PASSWORD ENTROPY</string>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="tbtn_info_pwd">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>125</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"> QToolButton{
+        border-radius: 5px;
+	    background-color: transparent; 
+    }
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="resource.qrc">
+         <normaloff>:/icons/icons/icon_info.png</normaloff>:/icons/icons/icon_info.png</iconset>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_chkNordpass">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>180</y>
+         <width>341</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>9</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(42, 49, 66);</string>
+       </property>
+       <property name="text">
+        <string>SEARCH FOR YOUT PASSWORD IN THE NORDPASS WORDLISTS</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_dicattack">
+       <property name="geometry">
+        <rect>
+         <x>450</x>
+         <y>320</y>
+         <width>201</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"> QPushButton{
+	    background-color: rgb(42, 49, 66);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+       </property>
+       <property name="text">
+        <string>DICTIONARY ATTACK</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_textPwd">
+      <property name="geometry">
+       <rect>
+        <x>870</x>
+        <y>190</y>
+        <width>191</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(208, 208, 208);</string>
+      </property>
+      <property name="text">
+       <string>THIS WILL NOT BE SENT ANYWARE.</string>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="tbtn_eyePwd">
+      <property name="geometry">
+       <rect>
+        <x>1120</x>
+        <y>140</y>
+        <width>31</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QToolButton{
+        border-radius: 5px;
+    }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/icons/icons/icon_openeye.png</normaloff>:/icons/icons/icon_openeye.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_backPwd">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>30</y>
+        <width>93</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton{
+        border-radius: 5px;
+    }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/icons/icons/icon_back.png</normaloff>:/icons/icons/icon_back.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+     <zorder>widget_outputPwd</zorder>
+     <zorder>lineEdit_inputPwd</zorder>
+     <zorder>label_pwd</zorder>
+     <zorder>widget_specialWarning</zorder>
+     <zorder>label_textPwd</zorder>
+     <zorder>tbtn_eyePwd</zorder>
+     <zorder>btn_backPwd</zorder>
+    </widget>
+    <widget class="QWidget" name="page_dictionary">
+     <widget class="QLabel" name="label_dictionary">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>50</y>
+        <width>261</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(38, 50, 56);</string>
+      </property>
+      <property name="text">
+       <string>DICTIONART ATTACK</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_inputDic">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>130</y>
+        <width>811</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+  border: 1px solid gray;
+  color: rgba(40,43,61,255);
+  border-radius: 5px;
+}
+
+QLineEdit:hover {
+  border: 2px solid;
+  border-color: rgba(0,143,255,255);
+}
+QLineEdit:focus {
+  border: 1px solid;
+  border-color: rgba(88,199,141,255);
+}
+</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>TYPE HERE</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_textPwd2">
+      <property name="geometry">
+       <rect>
+        <x>910</x>
+        <y>190</y>
+        <width>221</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(208, 208, 208);</string>
+      </property>
+      <property name="text">
+       <string>THIS WILL NOT BE SENT ANYWARE.</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="widget_outputDic" native="true">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>310</y>
+        <width>961</width>
+        <height>301</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(242,243,245,255);
+border-radius: 5px;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_openDic">
+      <property name="geometry">
+       <rect>
+        <x>950</x>
+        <y>240</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton{
+	    background-color: rgb(42, 49, 66);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>OPEN</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/icons/icons/icon_folder.png</normaloff>:/icons/icons/icon_folder.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_rockyou">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>240</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton{
+	    background-color: rgb(42, 49, 66);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>ROCKYOU.TXT</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_crackstation">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>240</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton{
+	    background-color: rgb(42, 49, 66);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>CRACKSTATION.TXT</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_inputFileDic">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>240</y>
+        <width>261</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+  border: 1px solid gray;
+  color: rgba(40,43,61,255);
+  border-radius: 5px;
+}
+
+QLineEdit:hover {
+  border: 2px solid;
+  border-color: rgba(0,143,255,255);
+}
+QLineEdit:focus {
+  border: 1px solid;
+  border-color: rgba(88,199,141,255);
+}
+</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>ONLY TEXT FILE</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_clearDic">
+      <property name="geometry">
+       <rect>
+        <x>1090</x>
+        <y>240</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton{
+	    background-color: rgb(42, 49, 66);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>CLEAR</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/icons/icons/icon_trash.png</normaloff>:/icons/icons/icon_trash.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QProgressBar" name="progressBar">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>630</y>
+        <width>961</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QProgressBar {
+    border: 1px solid rgb(42, 49, 66);
+    border-radius: 5px;
+    text-align: center;
+}
+
+QProgressBar:chunk {
+	 border-radius: 10px;
+    background-color:  rgb(42, 49, 66); /* Custom color for the progress bar chunk */
+}
+
+
+
+
+</string>
+      </property>
+      <property name="value">
+       <number>24</number>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_backDic">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>30</y>
+        <width>93</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton{
+        border-radius: 5px;
+    }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/icons/icons/icon_back.png</normaloff>:/icons/icons/icon_back.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="tbtn_eyeDic">
+      <property name="geometry">
+       <rect>
+        <x>1100</x>
+        <y>140</y>
+        <width>31</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QToolButton{
+        border-radius: 5px;
+    }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/icons/icons/icon_openeye.png</normaloff>:/icons/icons/icon_openeye.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_malware">
+     <widget class="QLabel" name="label_malware">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>50</y>
+        <width>271</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(38, 50, 56);</string>
+      </property>
+      <property name="text">
+       <string>MALWARE SCANNING</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_inputMalware">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>130</y>
+        <width>811</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+  border: 1px solid gray;
+  color: rgba(40,43,61,255);
+  border-radius: 5px;
+}
+
+QLineEdit:hover {
+  border: 2px solid;
+  border-color: rgba(0,143,255,255);
+}
+QLineEdit:focus {
+  border: 1px solid;
+  border-color: rgba(88,199,141,255);
+}
+</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>TYPE HERE</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="widget_output_malware" native="true">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>250</y>
+        <width>931</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(242,243,245,255);
+border-radius: 5px;</string>
+      </property>
+      <widget class="QLabel" name="label_nameMalware">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>30</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>13</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(42, 49, 66);</string>
+       </property>
+       <property name="text">
+        <string>NAME</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_sizeMalware">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>80</y>
+         <width>41</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>13</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(42, 49, 66);</string>
+       </property>
+       <property name="text">
+        <string>SIZE</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_dateMalware">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>130</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>13</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(42, 49, 66);
+ background-color: transparent; 
+   
+</string>
+       </property>
+       <property name="text">
+        <string>DATE</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_typeMalware">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>180</y>
+         <width>41</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>13</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(42, 49, 66);</string>
+       </property>
+       <property name="text">
+        <string>TYPE</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_moreMalware">
+       <property name="geometry">
+        <rect>
+         <x>770</x>
+         <y>320</y>
+         <width>141</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"> QPushButton{
+	    background-color: rgb(42, 49, 66);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+       </property>
+       <property name="text">
+        <string>READ MORE</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resource.qrc">
+         <normaloff>:/icons/icons/icon_more.png</normaloff>:/icons/icons/icon_more.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="btn_clearMalware">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>190</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Yu Gothic UI</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton{
+		background-color: rgba(50,54,74,255);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>CLEAR</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/icons/icons/icon_trash.png</normaloff>:/icons/icons/icon_trash.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_scanMalware">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>190</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Yu Gothic UI</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton{
+		background-color: rgba(50,54,74,255);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>SCAN</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/icons/icons/icon_scan.png</normaloff>:/icons/icons/icon_scan.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_openMalware">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>190</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Yu Gothic UI</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton{
+		background-color: rgba(50,54,74,255);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>OPEN</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/icons/icons/icon_folder.png</normaloff>:/icons/icons/icon_folder.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_backMalware">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>30</y>
+        <width>93</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton{
+        border-radius: 5px;
+    }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/icons/icons/icon_back.png</normaloff>:/icons/icons/icon_back.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_detailMalware">
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>250</y>
+        <width>141</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Detail malware</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_backDetailMalware">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>10</y>
+        <width>93</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton{
+        border-radius: 5px;
+    }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/icons/icons/icon_back.png</normaloff>:/icons/icons/icon_back.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_digest">
+     <widget class="QLabel" name="label_digest">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>50</y>
+        <width>221</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(38, 50, 56);</string>
+      </property>
+      <property name="text">
+       <string>MESSAGE DIGEST</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_inputDigest">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>110</y>
+        <width>811</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+  border: 1px solid gray;
+  color: rgba(40,43,61,255);
+  border-radius: 5px;
+}
+
+QLineEdit:hover {
+  border: 2px solid;
+  border-color: rgba(0,143,255,255);
+}
+QLineEdit:focus {
+  border: 1px solid;
+  border-color: rgba(88,199,141,255);
+}
+</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>TYPE HERE</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_openDigest">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>180</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Yu Gothic UI</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton{
+		background-color: rgba(50,54,74,255);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>OPEN</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/icons/icons/icon_folder.png</normaloff>:/icons/icons/icon_folder.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_clearDigest">
+      <property name="geometry">
+       <rect>
+        <x>800</x>
+        <y>180</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Yu Gothic UI</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton{
+		background-color: rgba(50,54,74,255);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>CLEAR</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/icons/icons/icon_trash.png</normaloff>:/icons/icons/icon_trash.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_sha2">
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>260</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding: 1px 18px 1px 3px;
+        min-width: 6em;
+
+
+ }
+ QComboBox:drop-down {
+	subcontrol-origin: padding;
+	subcontrol-position: top right;
+	width: 30px;
+	border-left-width: 1px;
+	border-left-color: darkgray;
+	border-left-style: solid;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;	
+}
+QComboBox::down-arrow {
+	
+	image: url(:/icons/icons/Icon_down.png);
+}
+QComboBox:hover {
+	border: 1px solid;
+   border-color:  rgba(0,143,255,255);
+}
+
+</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>10</width>
+        <height>10</height>
+       </size>
+      </property>
+      <item>
+       <property name="text">
+        <string>SHA-2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>224 BIT</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>256 BIT</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>384 BIT</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>512 BIT</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="btn_md5">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>260</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+		 border: 1px solid gray;
+  		color: rgb(42, 49, 66);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	border: 1px solid;
+   border-color:  rgba(0,143,255,255);
+}
+QPushButton:focus {
+  border: 1px solid;
+  border-color:  rgba(0,143,255,255);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>MD5</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_sha1">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>260</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+		 border: 1px solid gray;
+  		color: rgb(42, 49, 66);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	border: 1px solid;
+   border-color:  rgba(0,143,255,255);
+}
+QPushButton:focus {
+  border: 1px solid;
+  border-color:  rgba(0,143,255,255);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>SHA-1</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_sha3">
+      <property name="geometry">
+       <rect>
+        <x>930</x>
+        <y>260</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding: 1px 18px 1px 3px;
+        min-width: 6em;
+
+ }
+ QComboBox:drop-down {
+	subcontrol-origin: padding;
+	subcontrol-position: top right;
+	width: 30px;
+	border-left-width: 1px;
+	border-left-color: darkgray;
+	border-left-style: solid;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;	
+}
+QComboBox::down-arrow {
+	
+	image: url(:/icons/icons/Icon_down.png);
+}
+QComboBox:hover {
+	border: 1px solid;
+   border-color:  rgba(0,143,255,255);
+}
+
+</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>10</width>
+        <height>10</height>
+       </size>
+      </property>
+      <item>
+       <property name="text">
+        <string>SHA-3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>224 BIT</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>256 BIT</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>384 BIT</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>512 BIT</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+     </widget>
+     <widget class="QWidget" name="widget_optputDigest" native="true">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>320</y>
+        <width>981</width>
+        <height>311</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(242,243,245,255);
+border-radius: 5px;</string>
+      </property>
+      <widget class="QLabel" name="label_resultDigest">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>13</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(42, 49, 66);</string>
+       </property>
+       <property name="text">
+        <string>RESULT</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="widget_qr" native="true">
+       <property name="geometry">
+        <rect>
+         <x>590</x>
+         <y>10</y>
+         <width>381</width>
+         <height>291</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 5px;</string>
+       </property>
+       <widget class="QPushButton" name="btn_saveDigest">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>240</y>
+          <width>121</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Bahnschrift SemiBold</family>
+          <pointsize>11</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"> QPushButton{
+	    background-color: rgb(42, 49, 66);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+        </property>
+        <property name="text">
+         <string>SAVE</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/icons/icons/icon_save.png</normaloff>:/icons/icons/icon_save.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="btn_backDigest">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>30</y>
+        <width>93</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton{
+        border-radius: 5px;
+    }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/icons/icons/icon_back.png</normaloff>:/icons/icons/icon_back.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_networkUser_home">
+     <widget class="QLabel" name="label_isanSec_nwu">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>180</y>
+        <width>461</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>22</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(42, 49, 66);</string>
+      </property>
+      <property name="text">
+       <string>ISAN SECURITY GIZMO BOX</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_image_firewall">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>30</y>
+        <width>231</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resource.qrc">:/images/images/firewall.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_vulner">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>390</y>
+        <width>251</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton{
+	    background-color: rgb(42, 49, 66);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>VULNERABILITY SCANNING</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_image_http">
+      <property name="geometry">
+       <rect>
+        <x>1030</x>
+        <y>60</y>
+        <width>211</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resource.qrc">:/images/images/https.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_networkUser">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>230</y>
+        <width>381</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>22</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgba(0,143,255,255);</string>
+      </property>
+      <property name="text">
+       <string>NETWORK ENGINEER</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_image_correct">
+      <property name="geometry">
+       <rect>
+        <x>1000</x>
+        <y>480</y>
+        <width>211</width>
+        <height>201</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resource.qrc">:/images/images/correct.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_image_star">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>520</y>
+        <width>111</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resource.qrc">:/images/images/star.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_description_nwu">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>280</y>
+        <width>651</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> color: rgba(122,122,122,255);</string>
+      </property>
+      <property name="text">
+       <string>Network engineer tools include Vulnerability Scanning, HTTPS Testing.</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_https">
+      <property name="geometry">
+       <rect>
+        <x>790</x>
+        <y>390</y>
+        <width>191</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton{
+	    background-color: rgb(42, 49, 66);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>HTTPS TESTING</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_vulner">
+     <widget class="QLabel" name="label_vulner">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>50</y>
+        <width>411</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(38, 50, 56);</string>
+      </property>
+      <property name="text">
+       <string>VULNERABILITY SCANNING</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_openVulner">
+      <property name="geometry">
+       <rect>
+        <x>780</x>
+        <y>170</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Yu Gothic UI</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton{
+		background-color: rgba(50,54,74,255);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>OPEN</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/icons/icons/icon_trash.png</normaloff>:/icons/icons/icon_trash.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_scanVulner">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>170</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Yu Gothic UI</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton{
+		background-color: rgba(50,54,74,255);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>SCAN</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/icons/icons/icon_scan.png</normaloff>:/icons/icons/icon_scan.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_inputVulner">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>100</y>
+        <width>811</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+  border: 1px solid gray;
+  color: rgba(40,43,61,255);
+  border-radius: 5px;
+}
+
+QLineEdit:hover {
+  border: 2px solid;
+  border-color: rgba(0,143,255,255);
+}
+QLineEdit:focus {
+  border: 1px solid;
+  border-color: rgba(88,199,141,255);
+}
+</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>TYPE HERE</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_stealth">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>240</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+		 border: 1px solid gray;
+  		color: rgb(42, 49, 66);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	border: 1px solid;
+   border-color:  rgba(0,143,255,255);
+}
+QPushButton:focus {
+  border: 1px solid;
+  border-color:  rgba(0,143,255,255);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>STEALTH</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_agressive">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>240</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+		 border: 1px solid gray;
+  		color: rgb(42, 49, 66);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	border: 1px solid;
+   border-color:  rgba(0,143,255,255);
+}
+QPushButton:focus {
+  border: 1px solid;
+  border-color:  rgba(0,143,255,255);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>AGRESSIVE</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_adaptive">
+      <property name="geometry">
+       <rect>
+        <x>830</x>
+        <y>240</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+		 border: 1px solid gray;
+  		color: rgb(42, 49, 66);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	border: 1px solid;
+   border-color:  rgba(0,143,255,255);
+}
+QPushButton:focus {
+  border: 1px solid;
+  border-color:  rgba(0,143,255,255);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>ADAPTIVE</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_nse">
+      <property name="geometry">
+       <rect>
+        <x>990</x>
+        <y>240</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+		 border: 1px solid gray;
+  		color: rgb(42, 49, 66);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	border: 1px solid;
+   border-color:  rgba(0,143,255,255);
+}
+QPushButton:focus {
+  border: 1px solid;
+  border-color:  rgba(0,143,255,255);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>VULNER.NSE</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="widget_outputVulner" native="true">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>300</y>
+        <width>931</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(242,243,245,255);
+border-radius: 5px;</string>
+      </property>
+      <widget class="QPushButton" name="btn_moreVulner">
+       <property name="geometry">
+        <rect>
+         <x>770</x>
+         <y>320</y>
+         <width>141</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"> QPushButton{
+	    background-color: rgb(42, 49, 66);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+       </property>
+       <property name="text">
+        <string>READ MORE</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resource.qrc">
+         <normaloff>:/icons/icons/icon_more.png</normaloff>:/icons/icons/icon_more.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="btn_backVulner">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>30</y>
+        <width>93</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton{
+        border-radius: 5px;
+    }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/icons/icons/icon_back.png</normaloff>:/icons/icons/icon_back.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_detailVulner">
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>290</y>
+        <width>55</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Deatil Vulner</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_backDetailVulner">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>10</y>
+        <width>93</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton{
+        border-radius: 5px;
+    }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/icons/icons/icon_back.png</normaloff>:/icons/icons/icon_back.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_https">
+     <widget class="QLabel" name="label_https">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>50</y>
+        <width>241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(38, 50, 56);</string>
+      </property>
+      <property name="text">
+       <string>HTTPS TESTING</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_inputHttps">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>110</y>
+        <width>811</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+  border: 1px solid gray;
+  color: rgba(40,43,61,255);
+  border-radius: 5px;
+}
+
+QLineEdit:hover {
+  border: 2px solid;
+  border-color: rgba(0,143,255,255);
+}
+QLineEdit:focus {
+  border: 1px solid;
+  border-color: rgba(88,199,141,255);
+}
+</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>TYPE HERE</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_openHttps">
+      <property name="geometry">
+       <rect>
+        <x>830</x>
+        <y>190</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Yu Gothic UI</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton{
+		background-color: rgba(50,54,74,255);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>OPEN</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/icons/icons/icon_trash.png</normaloff>:/icons/icons/icon_trash.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_scanHttps">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>190</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Yu Gothic UI</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton{
+		background-color: rgba(50,54,74,255);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>SCAN</string>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/icons/icons/icon_scan.png</normaloff>:/icons/icons/icon_scan.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QWidget" name="widget_outputHttps" native="true">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>270</y>
+        <width>991</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(242,243,245,255);
+border-radius: 5px;</string>
+      </property>
+      <widget class="QLabel" name="label_preloadHttps">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>30</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>13</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(42, 49, 66);</string>
+       </property>
+       <property name="text">
+        <string>HSTS PRELOAD</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_certificateHttps">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>80</y>
+         <width>101</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>13</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(42, 49, 66);</string>
+       </property>
+       <property name="text">
+        <string>CERTIFICATE</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_dateHttps">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>200</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>13</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(42, 49, 66);
+ background-color: transparent; 
+   
+</string>
+       </property>
+       <property name="text">
+        <string>DATE</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_moreHttps">
+       <property name="geometry">
+        <rect>
+         <x>830</x>
+         <y>320</y>
+         <width>141</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"> QPushButton{
+	    background-color: rgb(42, 49, 66);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+       </property>
+       <property name="text">
+        <string>READ MORE</string>
+       </property>
+       <property name="icon">
+        <iconset resource="resource.qrc">
+         <normaloff>:/icons/icons/icon_more.png</normaloff>:/icons/icons/icon_more.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="btn_backHttps">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>30</y>
+        <width>93</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton{
+        border-radius: 5px;
+    }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/icons/icons/icon_back.png</normaloff>:/icons/icons/icon_back.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_detailHttps">
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>310</y>
+        <width>55</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>detail https</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_backDetailHttps">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>10</y>
+        <width>93</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton{
+        border-radius: 5px;
+    }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="resource.qrc">
+        <normaloff>:/icons/icons/icon_back.png</normaloff>:/icons/icons/icon_back.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_aboutUs">
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>720</x>
+        <y>310</y>
+        <width>55</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>about us</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="widget_left" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>191</width>
+     <height>741</height>
+    </rect>
+   </property>
+   <widget class="QPushButton" name="btn_home">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>100</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift SemiBold</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> QPushButton{
+        border-radius: 5px;
+		color: rgb(42, 49, 66);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	color:  rgba(0,143,255,255);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>HOME</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_advancedUserLeft">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>160</y>
+      <width>151</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift SemiBold</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> QPushButton{
+        border-radius: 5px;
+		color: rgb(42, 49, 66);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	color:  rgba(0,143,255,255);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>ADVANCED USER</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_networkUserTop">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>220</y>
+      <width>181</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift SemiBold</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> QPushButton{
+        border-radius: 5px;
+		color: rgb(42, 49, 66);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	color:  rgba(0,143,255,255);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>NETWORK ENGINEER</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_aboutUs">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>680</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift SemiBold</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> QPushButton{
+        border-radius: 5px;
+		color: rgb(42, 49, 66);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	color:  rgba(0,143,255,255);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>ABOUT US</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_gizmo">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>50</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bahnschrift SemiBold</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(42, 49, 66);</string>
+    </property>
+    <property name="text">
+     <string> GIZMO BOX</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+  <include location="../../.designer/backup/resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
