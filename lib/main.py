@@ -8,8 +8,12 @@ from math import log2
 from PyQt6.QtGui import QIcon
 from PyQt6.uic import loadUi
 
+# Set DPI Awareness
 os.environ["QT_FONT_DPI"] = "96"
+
 class Main(QDialog):
+
+    hide = True
 
     def __init__(self):
         super(Main, self).__init__()
@@ -27,7 +31,7 @@ class Main(QDialog):
 
     def PasswordEvaluationHome(self):
         self.stackedWidget.setCurrentWidget(self.page_password)
-        
+    
     
 if __name__ == "__main__":
     app = QApplication(sys.argv)
