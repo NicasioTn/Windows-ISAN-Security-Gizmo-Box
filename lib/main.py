@@ -22,15 +22,41 @@ class Main(QDialog):
         self.setWindowTitle("Main")
         self.setWindowIcon(QIcon("./assets/icons/Logo.png"))
 
-
+        # ------------------------------------------------------------------
         self.btn_advancedUserHome.clicked.connect(self.openAdvancedUserHome)
+        # ------------------------------------------------------------------
         self.btn_password.clicked.connect(self.PasswordEvaluationHome)
+        self.btn_malware.clicked.connect(self.openMalwareHome)
+        self.btn_digest.clicked.connect(self.openDigestHome)
+
+        # ------------------------------------------------------------------
+        self.btn_networkUserHome.clicked.connect(self.openNetworkUserHome)
+        # ------------------------------------------------------------------
+        self.btn_vulner.clicked.connect(self.openVulnerabilityHome)
+        self.btn_https.clicked.connect(self.openHttpsHome)
+
 
     def openAdvancedUserHome(self):
         self.stackedWidget.setCurrentWidget(self.page_advancedUser)
 
     def PasswordEvaluationHome(self):
         self.stackedWidget.setCurrentWidget(self.page_password)
+    
+    def openMalwareHome(self):
+        self.stackedWidget.setCurrentWidget(self.page_malware)
+
+    def openDigestHome(self):
+        self.stackedWidget.setCurrentWidget(self.page_digest)
+
+    def openNetworkUserHome(self):
+        self.stackedWidget.setCurrentWidget(self.page_networkUser_home)
+
+    def openVulnerabilityHome(self):
+        self.stackedWidget.setCurrentWidget(self.page_vulner)
+    
+    def openHttpsHome(self):
+        self.stackedWidget.setCurrentWidget(self.page_https)
+
     
     
 if __name__ == "__main__":

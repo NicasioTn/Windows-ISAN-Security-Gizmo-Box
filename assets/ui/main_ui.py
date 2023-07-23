@@ -47,7 +47,7 @@ class Ui_Form(object):
         self.label_description1Home.setStyleSheet(" color: rgba(122,122,122,255);")
         self.label_description1Home.setObjectName("label_description1Home")
         self.label_description2Home = QtWidgets.QLabel(parent=self.page_home)
-        self.label_description2Home.setGeometry(QtCore.QRect(290, 260, 541, 31))
+        self.label_description2Home.setGeometry(QtCore.QRect(270, 260, 541, 31))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(12)
