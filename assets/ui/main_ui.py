@@ -313,110 +313,87 @@ class Ui_Form(object):
         self.label_title_specialWarning.setStyleSheet("color: rgb(42, 49, 66);")
         self.label_title_specialWarning.setObjectName("label_title_specialWarning")
         self.layoutWidget = QtWidgets.QWidget(parent=self.widget_specialWarning)
-        self.layoutWidget.setGeometry(QtCore.QRect(20, 70, 344, 288))
+        self.layoutWidget.setGeometry(QtCore.QRect(20, 70, 321, 291))
         self.layoutWidget.setObjectName("layoutWidget")
         self.formLayout = QtWidgets.QFormLayout(self.layoutWidget)
         self.formLayout.setContentsMargins(0, 0, 0, 0)
-        self.formLayout.setHorizontalSpacing(15)
-        self.formLayout.setVerticalSpacing(20)
+        self.formLayout.setHorizontalSpacing(50)
+        self.formLayout.setVerticalSpacing(40)
         self.formLayout.setObjectName("formLayout")
-        self.tbtn_chkLength = QtWidgets.QToolButton(parent=self.layoutWidget)
-        self.tbtn_chkLength.setStyleSheet(" QToolButton{\n"
-"        border-radius: 5px;\n"
-"    }")
-        self.tbtn_chkLength.setText("")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon_no.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.tbtn_chkLength.setIcon(icon)
-        self.tbtn_chkLength.setIconSize(QtCore.QSize(30, 30))
-        self.tbtn_chkLength.setObjectName("tbtn_chkLength")
-        self.formLayout.setWidget(0, QtWidgets.QFormLayout.ItemRole.LabelRole, self.tbtn_chkLength)
-        self.tbtn_chkDigit = QtWidgets.QToolButton(parent=self.layoutWidget)
-        self.tbtn_chkDigit.setStyleSheet(" QToolButton{\n"
-"        border-radius: 5px;\n"
-"    }")
-        self.tbtn_chkDigit.setText("")
-        self.tbtn_chkDigit.setIcon(icon)
-        self.tbtn_chkDigit.setIconSize(QtCore.QSize(30, 30))
-        self.tbtn_chkDigit.setObjectName("tbtn_chkDigit")
-        self.formLayout.setWidget(1, QtWidgets.QFormLayout.ItemRole.LabelRole, self.tbtn_chkDigit)
-        self.label_digit = QtWidgets.QLabel(parent=self.layoutWidget)
+        self.checkLength = QtWidgets.QCheckBox(parent=self.layoutWidget)
+        self.checkLength.setEnabled(True)
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(13)
+        font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
-        self.label_digit.setFont(font)
-        self.label_digit.setStyleSheet("color: rgb(42, 49, 66);")
-        self.label_digit.setObjectName("label_digit")
-        self.formLayout.setWidget(1, QtWidgets.QFormLayout.ItemRole.FieldRole, self.label_digit)
-        self.rbtn_chkLower = QtWidgets.QToolButton(parent=self.layoutWidget)
-        self.rbtn_chkLower.setStyleSheet(" QToolButton{\n"
-"        border-radius: 5px;\n"
-"    }")
-        self.rbtn_chkLower.setText("")
-        self.rbtn_chkLower.setIcon(icon)
-        self.rbtn_chkLower.setIconSize(QtCore.QSize(30, 30))
-        self.rbtn_chkLower.setObjectName("rbtn_chkLower")
-        self.formLayout.setWidget(2, QtWidgets.QFormLayout.ItemRole.LabelRole, self.rbtn_chkLower)
-        self.label_lower = QtWidgets.QLabel(parent=self.layoutWidget)
+        font.setKerning(True)
+        self.checkLength.setFont(font)
+        self.checkLength.setAcceptDrops(False)
+        self.checkLength.setAutoFillBackground(False)
+        self.checkLength.setStyleSheet("QCheckBox::indicator{\n"
+"     width: 0; height 0;\n"
+"    border-radius: 10px;\n"
+"}")
+        self.checkLength.setCheckable(True)
+        self.checkLength.setChecked(False)
+        self.checkLength.setAutoRepeat(False)
+        self.checkLength.setAutoExclusive(False)
+        self.checkLength.setTristate(False)
+        self.checkLength.setObjectName("checkLength")
+        self.formLayout.setWidget(0, QtWidgets.QFormLayout.ItemRole.FieldRole, self.checkLength)
+        self.checkDigits = QtWidgets.QCheckBox(parent=self.layoutWidget)
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(13)
+        font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
-        self.label_lower.setFont(font)
-        self.label_lower.setStyleSheet("color: rgb(42, 49, 66);")
-        self.label_lower.setObjectName("label_lower")
-        self.formLayout.setWidget(2, QtWidgets.QFormLayout.ItemRole.FieldRole, self.label_lower)
-        self.tbrn_chkUpper = QtWidgets.QToolButton(parent=self.layoutWidget)
-        self.tbrn_chkUpper.setStyleSheet(" QToolButton{\n"
-"        border-radius: 5px;\n"
-"    }")
-        self.tbrn_chkUpper.setText("")
-        self.tbrn_chkUpper.setIcon(icon)
-        self.tbrn_chkUpper.setIconSize(QtCore.QSize(30, 30))
-        self.tbrn_chkUpper.setObjectName("tbrn_chkUpper")
-        self.formLayout.setWidget(3, QtWidgets.QFormLayout.ItemRole.LabelRole, self.tbrn_chkUpper)
-        self.label_upper = QtWidgets.QLabel(parent=self.layoutWidget)
+        self.checkDigits.setFont(font)
+        self.checkDigits.setStyleSheet("QCheckBox::indicator{\n"
+"     width: 0; height 0;\n"
+"    border-radius: 10px;\n"
+"}")
+        self.checkDigits.setObjectName("checkDigits")
+        self.formLayout.setWidget(1, QtWidgets.QFormLayout.ItemRole.FieldRole, self.checkDigits)
+        self.checkLower = QtWidgets.QCheckBox(parent=self.layoutWidget)
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(13)
+        font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
-        self.label_upper.setFont(font)
-        self.label_upper.setStyleSheet("color: rgb(42, 49, 66);")
-        self.label_upper.setObjectName("label_upper")
-        self.formLayout.setWidget(3, QtWidgets.QFormLayout.ItemRole.FieldRole, self.label_upper)
-        self.tbrn_chkSpecial = QtWidgets.QToolButton(parent=self.layoutWidget)
-        self.tbrn_chkSpecial.setStyleSheet(" QToolButton{\n"
-"        border-radius: 5px;\n"
-"    }")
-        self.tbrn_chkSpecial.setText("")
-        self.tbrn_chkSpecial.setIcon(icon)
-        self.tbrn_chkSpecial.setIconSize(QtCore.QSize(30, 30))
-        self.tbrn_chkSpecial.setObjectName("tbrn_chkSpecial")
-        self.formLayout.setWidget(4, QtWidgets.QFormLayout.ItemRole.LabelRole, self.tbrn_chkSpecial)
-        self.label_special = QtWidgets.QLabel(parent=self.layoutWidget)
+        self.checkLower.setFont(font)
+        self.checkLower.setStyleSheet("QCheckBox::indicator{\n"
+"     width: 0; height 0;\n"
+"    border-radius: 10px;\n"
+"}")
+        self.checkLower.setObjectName("checkLower")
+        self.formLayout.setWidget(2, QtWidgets.QFormLayout.ItemRole.FieldRole, self.checkLower)
+        self.checkBox_4 = QtWidgets.QCheckBox(parent=self.layoutWidget)
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(13)
+        font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
-        self.label_special.setFont(font)
-        self.label_special.setStyleSheet("color: rgb(42, 49, 66);")
-        self.label_special.setObjectName("label_special")
-        self.formLayout.setWidget(4, QtWidgets.QFormLayout.ItemRole.FieldRole, self.label_special)
-        self.label_length = QtWidgets.QLabel(parent=self.layoutWidget)
+        self.checkBox_4.setFont(font)
+        self.checkBox_4.setStyleSheet("QCheckBox::indicator{\n"
+"     width: 0; height 0;\n"
+"    border-radius: 10px;\n"
+"}")
+        self.checkBox_4.setObjectName("checkBox_4")
+        self.formLayout.setWidget(3, QtWidgets.QFormLayout.ItemRole.FieldRole, self.checkBox_4)
+        self.checkSpecial = QtWidgets.QCheckBox(parent=self.layoutWidget)
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(13)
+        font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
-        self.label_length.setFont(font)
-        self.label_length.setStyleSheet("color: rgb(42, 49, 66);")
-        self.label_length.setObjectName("label_length")
-        self.formLayout.setWidget(0, QtWidgets.QFormLayout.ItemRole.FieldRole, self.label_length)
+        self.checkSpecial.setFont(font)
+        self.checkSpecial.setStyleSheet("QCheckBox::indicator{\n"
+"     width: 0; height 0;\n"
+"    border-radius: 10px;\n"
+"}")
+        self.checkSpecial.setObjectName("checkSpecial")
+        self.formLayout.setWidget(4, QtWidgets.QFormLayout.ItemRole.FieldRole, self.checkSpecial)
         self.widget_outputPwd = QtWidgets.QWidget(parent=self.page_password)
         self.widget_outputPwd.setGeometry(QtCore.QRect(240, 260, 661, 371))
         self.widget_outputPwd.setStyleSheet("background-color:rgba(242,243,245,255);\n"
@@ -460,9 +437,9 @@ class Ui_Form(object):
 "    }\n"
 "")
         self.tbtn_info_pwd.setText("")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon_info.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.tbtn_info_pwd.setIcon(icon1)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon_info.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.tbtn_info_pwd.setIcon(icon)
         self.tbtn_info_pwd.setObjectName("tbtn_info_pwd")
         self.label_chkNordpass = QtWidgets.QLabel(parent=self.widget_outputPwd)
         self.label_chkNordpass.setGeometry(QtCore.QRect(190, 180, 341, 31))
@@ -556,9 +533,9 @@ class Ui_Form(object):
 "        border-radius: 5px;\n"
 "    }")
         self.tbtn_eyePwd.setText("")
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon_openeye.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.tbtn_eyePwd.setIcon(icon2)
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon_openeye.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.tbtn_eyePwd.setIcon(icon1)
         self.tbtn_eyePwd.setIconSize(QtCore.QSize(30, 30))
         self.tbtn_eyePwd.setObjectName("tbtn_eyePwd")
         self.btn_backPwd = QtWidgets.QPushButton(parent=self.page_password)
@@ -570,9 +547,9 @@ class Ui_Form(object):
 "        border-radius: 5px;\n"
 "    }")
         self.btn_backPwd.setText("")
-        icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon_back.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btn_backPwd.setIcon(icon3)
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon_back.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btn_backPwd.setIcon(icon2)
         self.btn_backPwd.setIconSize(QtCore.QSize(30, 30))
         self.btn_backPwd.setObjectName("btn_backPwd")
         self.widget_outputPwd.raise_()
@@ -670,9 +647,9 @@ class Ui_Form(object):
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon_folder.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btn_openDic.setIcon(icon4)
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon_folder.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btn_openDic.setIcon(icon3)
         self.btn_openDic.setIconSize(QtCore.QSize(30, 30))
         self.btn_openDic.setObjectName("btn_openDic")
         self.btn_rockyou = QtWidgets.QPushButton(parent=self.page_dictionary)
@@ -779,9 +756,9 @@ class Ui_Form(object):
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon_trash.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btn_clearDic.setIcon(icon5)
+        icon4 = QtGui.QIcon()
+        icon4.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon_trash.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btn_clearDic.setIcon(icon4)
         self.btn_clearDic.setIconSize(QtCore.QSize(30, 30))
         self.btn_clearDic.setObjectName("btn_clearDic")
         self.progressBar = QtWidgets.QProgressBar(parent=self.page_dictionary)
@@ -815,7 +792,7 @@ class Ui_Form(object):
 "        border-radius: 5px;\n"
 "    }")
         self.btn_backDic.setText("")
-        self.btn_backDic.setIcon(icon3)
+        self.btn_backDic.setIcon(icon2)
         self.btn_backDic.setIconSize(QtCore.QSize(30, 30))
         self.btn_backDic.setObjectName("btn_backDic")
         self.tbtn_eyeDic = QtWidgets.QToolButton(parent=self.page_dictionary)
@@ -824,9 +801,9 @@ class Ui_Form(object):
 "        border-radius: 5px;\n"
 "    }")
         self.tbtn_eyeDic.setText("")
-        icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap(":/icons/icons/icon_openeye.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.tbtn_eyeDic.setIcon(icon6)
+        icon5 = QtGui.QIcon()
+        icon5.addPixmap(QtGui.QPixmap(":/icons/icons/icon_openeye.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.tbtn_eyeDic.setIcon(icon5)
         self.tbtn_eyeDic.setIconSize(QtCore.QSize(30, 30))
         self.tbtn_eyeDic.setObjectName("tbtn_eyeDic")
         self.stackedWidget.addWidget(self.page_dictionary)
@@ -940,9 +917,9 @@ class Ui_Form(object):
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        icon7 = QtGui.QIcon()
-        icon7.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon_more.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btn_moreMalware.setIcon(icon7)
+        icon6 = QtGui.QIcon()
+        icon6.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon_more.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btn_moreMalware.setIcon(icon6)
         self.btn_moreMalware.setIconSize(QtCore.QSize(30, 30))
         self.btn_moreMalware.setObjectName("btn_moreMalware")
         self.btn_clearMalware = QtWidgets.QPushButton(parent=self.page_malware)
@@ -970,7 +947,7 @@ class Ui_Form(object):
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        self.btn_clearMalware.setIcon(icon5)
+        self.btn_clearMalware.setIcon(icon4)
         self.btn_clearMalware.setIconSize(QtCore.QSize(30, 30))
         self.btn_clearMalware.setObjectName("btn_clearMalware")
         self.btn_scanMalware = QtWidgets.QPushButton(parent=self.page_malware)
@@ -998,9 +975,9 @@ class Ui_Form(object):
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        icon8 = QtGui.QIcon()
-        icon8.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon_scan.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btn_scanMalware.setIcon(icon8)
+        icon7 = QtGui.QIcon()
+        icon7.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon_scan.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btn_scanMalware.setIcon(icon7)
         self.btn_scanMalware.setIconSize(QtCore.QSize(30, 30))
         self.btn_scanMalware.setObjectName("btn_scanMalware")
         self.btn_openMalware = QtWidgets.QPushButton(parent=self.page_malware)
@@ -1028,7 +1005,7 @@ class Ui_Form(object):
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        self.btn_openMalware.setIcon(icon4)
+        self.btn_openMalware.setIcon(icon3)
         self.btn_openMalware.setIconSize(QtCore.QSize(30, 30))
         self.btn_openMalware.setObjectName("btn_openMalware")
         self.btn_backMalware = QtWidgets.QPushButton(parent=self.page_malware)
@@ -1037,7 +1014,7 @@ class Ui_Form(object):
 "        border-radius: 5px;\n"
 "    }")
         self.btn_backMalware.setText("")
-        self.btn_backMalware.setIcon(icon3)
+        self.btn_backMalware.setIcon(icon2)
         self.btn_backMalware.setIconSize(QtCore.QSize(30, 30))
         self.btn_backMalware.setObjectName("btn_backMalware")
         self.stackedWidget.addWidget(self.page_malware)
@@ -1052,7 +1029,7 @@ class Ui_Form(object):
 "        border-radius: 5px;\n"
 "    }")
         self.btn_backDetailMalware.setText("")
-        self.btn_backDetailMalware.setIcon(icon3)
+        self.btn_backDetailMalware.setIcon(icon2)
         self.btn_backDetailMalware.setIconSize(QtCore.QSize(30, 30))
         self.btn_backDetailMalware.setObjectName("btn_backDetailMalware")
         self.stackedWidget.addWidget(self.page_detailMalware)
@@ -1118,7 +1095,7 @@ class Ui_Form(object):
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        self.btn_openDigest.setIcon(icon4)
+        self.btn_openDigest.setIcon(icon3)
         self.btn_openDigest.setIconSize(QtCore.QSize(30, 30))
         self.btn_openDigest.setObjectName("btn_openDigest")
         self.btn_clearDigest = QtWidgets.QPushButton(parent=self.page_digest)
@@ -1146,7 +1123,7 @@ class Ui_Form(object):
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        self.btn_clearDigest.setIcon(icon5)
+        self.btn_clearDigest.setIcon(icon4)
         self.btn_clearDigest.setIconSize(QtCore.QSize(30, 30))
         self.btn_clearDigest.setObjectName("btn_clearDigest")
         self.comboBox_sha2 = QtWidgets.QComboBox(parent=self.page_digest)
@@ -1333,9 +1310,9 @@ class Ui_Form(object):
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        icon9 = QtGui.QIcon()
-        icon9.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon_save.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btn_saveDigest.setIcon(icon9)
+        icon8 = QtGui.QIcon()
+        icon8.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon_save.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btn_saveDigest.setIcon(icon8)
         self.btn_saveDigest.setIconSize(QtCore.QSize(30, 30))
         self.btn_saveDigest.setObjectName("btn_saveDigest")
         self.label_outDic_4 = QtWidgets.QLabel(parent=self.widget_qr)
@@ -1365,7 +1342,7 @@ class Ui_Form(object):
 "        border-radius: 5px;\n"
 "    }")
         self.btn_backDigest.setText("")
-        self.btn_backDigest.setIcon(icon3)
+        self.btn_backDigest.setIcon(icon2)
         self.btn_backDigest.setIconSize(QtCore.QSize(30, 30))
         self.btn_backDigest.setObjectName("btn_backDigest")
         self.stackedWidget.addWidget(self.page_digest)
@@ -1515,7 +1492,7 @@ class Ui_Form(object):
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        self.btn_openVulner.setIcon(icon4)
+        self.btn_openVulner.setIcon(icon3)
         self.btn_openVulner.setIconSize(QtCore.QSize(30, 30))
         self.btn_openVulner.setObjectName("btn_openVulner")
         self.btn_scanVulner = QtWidgets.QPushButton(parent=self.page_vulner)
@@ -1543,7 +1520,7 @@ class Ui_Form(object):
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        self.btn_scanVulner.setIcon(icon8)
+        self.btn_scanVulner.setIcon(icon7)
         self.btn_scanVulner.setIconSize(QtCore.QSize(30, 30))
         self.btn_scanVulner.setObjectName("btn_scanVulner")
         self.lineEdit_inputVulner = QtWidgets.QLineEdit(parent=self.page_vulner)
@@ -1701,7 +1678,7 @@ class Ui_Form(object):
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        self.btn_moreVulner.setIcon(icon7)
+        self.btn_moreVulner.setIcon(icon6)
         self.btn_moreVulner.setIconSize(QtCore.QSize(30, 30))
         self.btn_moreVulner.setObjectName("btn_moreVulner")
         self.btn_backVulner = QtWidgets.QPushButton(parent=self.page_vulner)
@@ -1710,7 +1687,7 @@ class Ui_Form(object):
 "        border-radius: 5px;\n"
 "    }")
         self.btn_backVulner.setText("")
-        self.btn_backVulner.setIcon(icon3)
+        self.btn_backVulner.setIcon(icon2)
         self.btn_backVulner.setIconSize(QtCore.QSize(30, 30))
         self.btn_backVulner.setObjectName("btn_backVulner")
         self.stackedWidget.addWidget(self.page_vulner)
@@ -1725,7 +1702,7 @@ class Ui_Form(object):
 "        border-radius: 5px;\n"
 "    }")
         self.btn_backDetailVulner.setText("")
-        self.btn_backDetailVulner.setIcon(icon3)
+        self.btn_backDetailVulner.setIcon(icon2)
         self.btn_backDetailVulner.setIconSize(QtCore.QSize(30, 30))
         self.btn_backDetailVulner.setObjectName("btn_backDetailVulner")
         self.stackedWidget.addWidget(self.page_detailVulner)
@@ -1791,7 +1768,7 @@ class Ui_Form(object):
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        self.btn_openHttps.setIcon(icon4)
+        self.btn_openHttps.setIcon(icon3)
         self.btn_openHttps.setIconSize(QtCore.QSize(30, 30))
         self.btn_openHttps.setObjectName("btn_openHttps")
         self.btn_scanHttps = QtWidgets.QPushButton(parent=self.page_https)
@@ -1819,7 +1796,7 @@ class Ui_Form(object):
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        self.btn_scanHttps.setIcon(icon8)
+        self.btn_scanHttps.setIcon(icon7)
         self.btn_scanHttps.setIconSize(QtCore.QSize(30, 30))
         self.btn_scanHttps.setObjectName("btn_scanHttps")
         self.widget_outputHttps = QtWidgets.QWidget(parent=self.page_https)
@@ -1885,7 +1862,7 @@ class Ui_Form(object):
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        self.btn_moreHttps.setIcon(icon7)
+        self.btn_moreHttps.setIcon(icon6)
         self.btn_moreHttps.setIconSize(QtCore.QSize(30, 30))
         self.btn_moreHttps.setObjectName("btn_moreHttps")
         self.btn_backHttps = QtWidgets.QPushButton(parent=self.page_https)
@@ -1894,7 +1871,7 @@ class Ui_Form(object):
 "        border-radius: 5px;\n"
 "    }")
         self.btn_backHttps.setText("")
-        self.btn_backHttps.setIcon(icon3)
+        self.btn_backHttps.setIcon(icon2)
         self.btn_backHttps.setIconSize(QtCore.QSize(30, 30))
         self.btn_backHttps.setObjectName("btn_backHttps")
         self.stackedWidget.addWidget(self.page_https)
@@ -1909,7 +1886,7 @@ class Ui_Form(object):
 "        border-radius: 5px;\n"
 "    }")
         self.btn_backDetailHttps.setText("")
-        self.btn_backDetailHttps.setIcon(icon3)
+        self.btn_backDetailHttps.setIcon(icon2)
         self.btn_backDetailHttps.setIconSize(QtCore.QSize(30, 30))
         self.btn_backDetailHttps.setObjectName("btn_backDetailHttps")
         self.stackedWidget.addWidget(self.page_detailHttps)
@@ -2033,7 +2010,7 @@ class Ui_Form(object):
         self.label_gizmo.setObjectName("label_gizmo")
 
         self.retranslateUi(Form)
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(2)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
@@ -2054,11 +2031,11 @@ class Ui_Form(object):
         self.lineEdit_inputPwd.setPlaceholderText(_translate("Form", "TYPE HERE"))
         self.label_pwd.setText(_translate("Form", "PASSWORD EVALUATION"))
         self.label_title_specialWarning.setText(_translate("Form", "SPECIAL WARINING!"))
-        self.label_digit.setText(_translate("Form", "DIGITS"))
-        self.label_lower.setText(_translate("Form", "LOWER CASE LATIN LETTERS"))
-        self.label_upper.setText(_translate("Form", "UPPER CASE LATIN LETTERS"))
-        self.label_special.setText(_translate("Form", "SPECIAL CHARACTERS"))
-        self.label_length.setText(_translate("Form", "LENGTH >= 8"))
+        self.checkLength.setText(_translate("Form", "LENGTH >= 8"))
+        self.checkDigits.setText(_translate("Form", "DIGITS"))
+        self.checkLower.setText(_translate("Form", "LOWER CASE LATIN LETTERS"))
+        self.checkBox_4.setText(_translate("Form", "UPPER CASE LATIN LETTERS"))
+        self.checkSpecial.setText(_translate("Form", "SPECIAL CHARACTERS"))
         self.label_pwdStrength.setText(_translate("Form", "YOUR PASSWORD STRENGTH"))
         self.label_timetocrack.setText(_translate("Form", "ESTIMATED TIME TO CRACK"))
         self.label_entropy.setText(_translate("Form", "PASSWORD ENTROPY"))
