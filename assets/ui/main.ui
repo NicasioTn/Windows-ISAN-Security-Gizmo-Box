@@ -43,7 +43,7 @@
      </font>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="page_home">
      <widget class="QLabel" name="labe_isanSec">
@@ -621,7 +621,7 @@ border-radius: 5px;</string>
          <x>20</x>
          <y>70</y>
          <width>321</width>
-         <height>291</height>
+         <height>292</height>
         </rect>
        </property>
        <layout class="QFormLayout" name="formLayout">
@@ -631,52 +631,6 @@ border-radius: 5px;</string>
         <property name="verticalSpacing">
          <number>40</number>
         </property>
-        <item row="0" column="1">
-         <widget class="QCheckBox" name="checkLength">
-          <property name="enabled">
-           <bool>true</bool>
-          </property>
-          <property name="font">
-           <font>
-            <family>Bahnschrift SemiBold</family>
-            <pointsize>11</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-            <kerning>true</kerning>
-           </font>
-          </property>
-          <property name="acceptDrops">
-           <bool>false</bool>
-          </property>
-          <property name="autoFillBackground">
-           <bool>false</bool>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QCheckBox::indicator{
- 	width: 0; height 0;
-    border-radius: 10px;
-}</string>
-          </property>
-          <property name="text">
-           <string>LENGTH &gt;= 8</string>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="checked">
-           <bool>false</bool>
-          </property>
-          <property name="autoRepeat">
-           <bool>false</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>false</bool>
-          </property>
-          <property name="tristate">
-           <bool>false</bool>
-          </property>
-         </widget>
-        </item>
         <item row="1" column="1">
          <widget class="QCheckBox" name="checkDigits">
           <property name="font">
@@ -720,7 +674,7 @@ border-radius: 5px;</string>
          </widget>
         </item>
         <item row="3" column="1">
-         <widget class="QCheckBox" name="checkBox_4">
+         <widget class="QCheckBox" name="checkUpper">
           <property name="font">
            <font>
             <family>Bahnschrift SemiBold</family>
@@ -758,6 +712,52 @@ border-radius: 5px;</string>
           </property>
           <property name="text">
            <string>SPECIAL CHARACTERS</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QCheckBox" name="checkLength">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="font">
+           <font>
+            <family>Bahnschrift SemiBold</family>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+            <kerning>true</kerning>
+           </font>
+          </property>
+          <property name="acceptDrops">
+           <bool>false</bool>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox::indicator{
+ 	width: 0; height 0;
+    border-radius: 10px;
+}</string>
+          </property>
+          <property name="text">
+           <string>LENGTH &gt;= 8</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+          <property name="tristate">
+           <bool>false</bool>
           </property>
          </widget>
         </item>

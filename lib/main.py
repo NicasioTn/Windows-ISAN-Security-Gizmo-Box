@@ -21,6 +21,8 @@ class Main(QDialog):
         self.setWindowIcon(QIcon("./assets/icons/Logo.png"))
         self.hide_icon = QIcon("./assets/icons/icon_closedeye.png")
         self.unhide_icon = QIcon("./assets/icons/icon_openeye.png")
+        self.warning_icon = QIcon("./assets/icons/warning.png")
+        self.check_icon = QIcon("./assets/icons/Checked.png")
 
         self.lineEdit_inputPwd.setEchoMode(QLineEdit.EchoMode.Password)
         self.tbtn_eyePwd.setIcon(self.hide_icon)
@@ -99,28 +101,24 @@ class PasswordEvaluation(QDialog):
 
     def calculate_entropy(self, password):
         if password == '':
+            self.checkLength.setIcon(self.warning_icon)
+            self.checkDigits.setIcon(self.warning_icon)
+            self.checkUpper.setIcon(self.warning_icon)
+            self.checkLower.setIcon(self.warning_icon)
+            self.checkSpecial.setIcon(self.warning_icon)
             return 0
-            self.length8_check.setIcon(self.warning_icon)
-            self.number_check.setIcon(self.warning_icon)
-            self.upper_check.setIcon(self.warning_icon)
-            self.lower_check.setIcon(self.warning_icon)
-            self.symbol_check.setIcon(self.warning_icon)
-            return 0
-        
-        return log2(94) * len(password)
     
         possible_characters = 0
-        if self.number_check.isChecked(): # 0-9
+        if self.checkDigits.isChecked(): # 0-9
             possible_characters += 10
-        if self.upper_check.isChecked(): # A-Z
+        if self.checkUpper.isChecked(): # A-Z
             possible_characters += 26
-        if self.lower_check.isChecked(): # a-z
+        if self.checkLower.isChecked(): # a-z
             possible_characters += 26
-        if self.symbol_check.isChecked(): # !@#$%^&*()_+-=
+        if self.checkSpecial.isChecked(): # !@#$%^&*()_+-=
             possible_characters += 32
         # Calculate the entropy using the formula log2(possible_characters^password_length)
-        self.total_Label.setText(f'Total {possible_characters} Chars')
-        
+        return log2(possible_characters**len(password))
 
 
 if __name__ == "__main__":
