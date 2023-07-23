@@ -74,8 +74,6 @@ class Main(QDialog):
         self.label_outEntropyPwd.setText(f'{entropy:.0f} bits')
 
         
-    
-
 class PasswordEvaluation(QDialog):
 
     hide = True
