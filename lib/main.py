@@ -16,6 +16,7 @@ from PyQt6.uic import loadUi
 class Main(QDialog):
     
     nordpass_common_passwords = []
+    hint_btn = []
 
     def __init__(self):
         super(Main, self).__init__()
@@ -64,6 +65,18 @@ class Main(QDialog):
         self.lineEdit_inputPwd.textChanged.connect(self.getPassword)
 
         # --------------------- Message Digest ------------------------------
+        
+        # Load the list of hints from the JSON file
+        with open('./data/hint.json', 'r') as openfile:
+            json_object = json.load(openfile)
+        
+        for item in json_object:
+            self.hint_btn.append(str(item['tool_description'])) 
+        
+        self.btn_openDigest.clicked.connect(self.openFileDialog)
+        self.btn_clearDigest.clicked.connect(self.clearMessageDigest)
+        self.btn_saveDigest.clicked.connect(self.saveQRCode)
+
         # --------------------- Malware Scan --------------------------------    
         # --------------------- Vulnerability -------------------------------
         # --------------------- HTTPS Testing -------------------------------
@@ -89,7 +102,7 @@ class Main(QDialog):
     
     def openHttpsHome(self):
         self.stackedWidget.setCurrentWidget(self.page_https)
-
+    
     def btn_hidePwd(self):
         PasswordEvaluation.show_hide_password(self)
 
@@ -98,7 +111,7 @@ class Main(QDialog):
         entropy = PasswordEvaluation.calculate_entropy(self, password)
 
         self.label_outEntropyPwd.setText(f'{entropy:.0f} bits')
-        
+
         if entropy == 0:
             self.label_outEntropyPwd.setText(f'-- Bits')
             self.label_outStrengthPwd.setText('')
@@ -127,6 +140,16 @@ class Main(QDialog):
         # Check if password is in the list of weak passwords
         PasswordEvaluation.check_common_password(self, password, self.nordpass_common_passwords)
         
+    def openFileDialog(self):
+        MessageDigest.open_file_dialog(self)
+    
+    def clearMessageDigest(self):
+        MessageDigest.clear(self)
+    
+    def saveQRCode(self):
+        MessageDigest.saveQRCode(self)
+        
+
 class PasswordEvaluation(QDialog):
 
     hide = True
@@ -258,6 +281,100 @@ class PasswordEvaluation(QDialog):
             time_parts.append(f"{seconds} second{'s' if seconds != 1 else ''}")
 
         return ", ".join(time_parts)
+    
+import hashlib
+import qrcode
+from pathlib import Path
+from PyQt6.QtWidgets import QFileDialog
+
+class MessageDigest(QDialog):
+
+    state_browse_file = False
+
+    def __init__(self):
+        super(MessageDigest, self).__init__()
+
+    def clear (self):
+        self.lineEdit_inputDigest.clear()
+
+    def qrCodeGenerator(self, hash):
+        qr = qrcode.QRCode(
+            version=1,
+            box_size=10,
+            border=5
+        )
+        qr.add_data(hash)
+        qr.make(fit=True)
+        img = qr.make_image(fill_color="black", back_color="white")
+        img.save("./data/MessageDigest-QRCode.png")
+        ## Run on Kali Linux
+        '''
+        img.save("/home/kali/Gizmo/SaveQR/MessageDigest-QRCode.png")
+        '''
+        self.ShowImage_QR() # show image
+
+    def open_file_dialog(self):
+        filename, ok = QFileDialog.getOpenFileName(
+            # self,
+            # "Select a File", 
+            # "D:\\icons\\avatar\\", 
+            # "Images (*.png *.jpg)"
+            self,
+            "Select a File", 
+            "D:\\icons\\avatar\\", 
+            "Text Files (*.txt);;All Files (*)"
+        )
+        if filename:
+            path = Path(filename)
+            self.lineEdit_inputDigest.setText(str(path))
+            if path.exists(): # check if file exists 
+                print("File exists")
+            print(f"\"{path}\"") 
+            
+            # self.state_browse_file = True # browsed file 
+            # if(self.state_browse_file == True):
+            #     #hashfile = self.hash_file(path, self.state)
+            #     self.setPath(path)
+
+    # def setPath(self, path):
+    #     self.path = path
+    
+    # def getPath(self):
+    #     return self.path
+    
+    def saveQRCode(self):
+        pathfile, ok = QFileDialog.getSaveFileName(
+            self,
+            "Save File",
+            "",
+            "Images (*.png *.jpg)")
+        
+        # Check if a filename was provided
+        if pathfile: # show place to save
+            print("Save at: ", pathfile)
+            # Save QR-Code with pixmap at pathfile
+            if not self.label_outQRCode.pixmap().isNull():
+                # Save the pixmap to the specified file path
+                self.label_outQRCode.pixmap().save(pathfile, 'PNG')
+                # Set the text of the save button to "SAVED!" to indicate successful save
+                self.btn_saveDigest.setText("SAVED!")
+            else:
+                print("Error: QR-Code is Not Generated")
+        else:
+            print("Error: No file name specified")
+    
+    def ShowImage_QR(self):
+        imagePath = "./data/MessageDigest-QRCode.png"
+        ## Run on Kali Linux
+        '''
+        imagePath = "/home/kali/Gizmo/SaveQR/MessageDigest-QRCode.png"
+        '''
+        pixmap = QPixmap(imagePath)
+        pixmap = pixmap.scaledToWidth(200)
+        pixmap = pixmap.scaledToHeight(200)
+        self.output_QR_Label.setPixmap(pixmap)
+        #self.resize(pixmap.width(), pixmap.height())
+    
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

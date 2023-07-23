@@ -2338,11 +2338,6 @@ QComboBox:hover {
         <string>512 BIT</string>
        </property>
       </item>
-      <item>
-       <property name="text">
-        <string/>
-       </property>
-      </item>
      </widget>
      <widget class="QPushButton" name="btn_md5">
       <property name="geometry">
@@ -2458,7 +2453,6 @@ QPushButton:focus {
 	border-bottom-right-radius: 3px;	
 }
 QComboBox::down-arrow {
-	
 	image: url(:/icons/icons/Icon_down.png);
 }
 QComboBox:hover {
@@ -2497,11 +2491,6 @@ QComboBox:hover {
       <item>
        <property name="text">
         <string>512 BIT</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string/>
        </property>
       </item>
      </widget>
@@ -2605,7 +2594,7 @@ QPushButton:pressed {
          </size>
         </property>
        </widget>
-       <widget class="QLabel" name="label_outDic_4">
+       <widget class="QLabel" name="label_outQRCode">
         <property name="geometry">
          <rect>
           <x>40</x>

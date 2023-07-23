@@ -87,7 +87,7 @@ class MessageDigest(QDialog):
             json_object = json.load(openfile)
         
         for item in json_object:
-            self.hint_btn.append(str(item['tool_description'])) # Add the password to the list of weak passwords
+            self.hint_btn.append(str(item['tool_description'])) 
 
         # Set the tooltips for the buttons
         self.MD5_Button.setToolTip(self.hint_btn[0])
@@ -424,7 +424,7 @@ class MessageDigest(QDialog):
         pixmap = QPixmap(imagePath)
         pixmap = pixmap.scaledToWidth(200)
         pixmap = pixmap.scaledToHeight(200)
-        self.output_QR_Label.setPixmap(pixmap)
+        self.label_outQRCode.setPixmap(pixmap)
         #self.resize(pixmap.width(), pixmap.height())
             
     def setPath(self, path):

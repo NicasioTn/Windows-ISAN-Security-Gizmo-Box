@@ -1186,8 +1186,6 @@ class Ui_Form(object):
         self.comboBox_sha2.addItem("")
         self.comboBox_sha2.addItem("")
         self.comboBox_sha2.addItem("")
-        self.comboBox_sha2.addItem("")
-        self.comboBox_sha2.setItemText(5, "")
         self.btn_md5 = QtWidgets.QPushButton(parent=self.page_digest)
         self.btn_md5.setGeometry(QtCore.QRect(460, 260, 111, 41))
         font = QtGui.QFont()
@@ -1264,7 +1262,6 @@ class Ui_Form(object):
 "    border-bottom-right-radius: 3px;    \n"
 "}\n"
 "QComboBox::down-arrow {\n"
-"    \n"
 "    image: url(:/icons/icons/Icon_down.png);\n"
 "}\n"
 "QComboBox:hover {\n"
@@ -1280,8 +1277,6 @@ class Ui_Form(object):
         self.comboBox_sha3.addItem("")
         self.comboBox_sha3.addItem("")
         self.comboBox_sha3.addItem("")
-        self.comboBox_sha3.addItem("")
-        self.comboBox_sha3.setItemText(5, "")
         self.widget_optputDigest = QtWidgets.QWidget(parent=self.page_digest)
         self.widget_optputDigest.setGeometry(QtCore.QRect(280, 320, 981, 311))
         self.widget_optputDigest.setStyleSheet("background-color:rgba(242,243,245,255);\n"
@@ -1332,17 +1327,17 @@ class Ui_Form(object):
         self.btn_saveDigest.setIcon(icon8)
         self.btn_saveDigest.setIconSize(QtCore.QSize(30, 30))
         self.btn_saveDigest.setObjectName("btn_saveDigest")
-        self.label_outDic_4 = QtWidgets.QLabel(parent=self.widget_qr)
-        self.label_outDic_4.setGeometry(QtCore.QRect(40, 30, 311, 191))
+        self.label_outQRCode = QtWidgets.QLabel(parent=self.widget_qr)
+        self.label_outQRCode.setGeometry(QtCore.QRect(40, 30, 311, 191))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(9)
         font.setBold(True)
         font.setWeight(75)
-        self.label_outDic_4.setFont(font)
-        self.label_outDic_4.setText("")
-        self.label_outDic_4.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.label_outDic_4.setObjectName("label_outDic_4")
+        self.label_outQRCode.setFont(font)
+        self.label_outQRCode.setText("")
+        self.label_outQRCode.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_outQRCode.setObjectName("label_outQRCode")
         self.label_outDic_3 = QtWidgets.QLabel(parent=self.widget_optputDigest)
         self.label_outDic_3.setGeometry(QtCore.QRect(140, 30, 421, 16))
         font = QtGui.QFont()
