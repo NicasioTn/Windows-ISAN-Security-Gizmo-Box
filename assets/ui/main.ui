@@ -43,7 +43,7 @@
      </font>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="page_home">
      <widget class="QLabel" name="labe_isanSec">
@@ -2615,7 +2615,7 @@ QPushButton:pressed {
          </size>
         </property>
        </widget>
-       <widget class="QLabel" name="label_outDic_4">
+       <widget class="QLabel" name="label_outQrDigest">
         <property name="geometry">
          <rect>
           <x>40</x>
@@ -2640,7 +2640,7 @@ QPushButton:pressed {
         </property>
        </widget>
       </widget>
-      <widget class="QLabel" name="label_outDic_3">
+      <widget class="QLabel" name="label_outTxtDigest">
        <property name="geometry">
         <rect>
          <x>140</x>
@@ -2694,7 +2694,7 @@ QPushButton:pressed {
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_networkUser_home">
+    <widget class="QWidget" name="page_networkUser">
      <widget class="QLabel" name="label_isanSec_nwu">
       <property name="geometry">
        <rect>
@@ -3877,7 +3877,7 @@ QPushButton:pressed {
      <string>ADVANCED USER</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="btn_networkUserTop">
+   <widget class="QPushButton" name="btn_networkUserLeft">
     <property name="geometry">
      <rect>
       <x>10</x>
