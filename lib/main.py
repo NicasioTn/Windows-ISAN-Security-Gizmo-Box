@@ -2,22 +2,27 @@ import sys
 import os
 import time
 from math import log2
+import json
 
 from PyQt6.QtWidgets import ( QApplication, QDialog, QLineEdit)
 from PyQt6 import QtCore, QtGui, QtWidgets
 from PyQt6.QtGui import QIcon, QPixmap
 from PyQt6.uic import loadUi
 
+
 # Set DPI Awareness
-os.environ["QT_FONT_DPI"] = "96"
+# os.environ["QT_FONT_DPI"] = "96"
 
 class Main(QDialog):
+    
+    nordpass_common_passwords = []
 
     def __init__(self):
         super(Main, self).__init__()
         loadUi("./assets/ui/main.ui", self)
 
-        self.setWindowTitle("Main")
+        # initialize 
+        self.setWindowTitle("ISAN Security Gizmo Box v1.0")
         self.setWindowIcon(QIcon("./assets/icons/Logo.png"))
         self.hide_icon = QIcon("./assets/icons/icon_closedeye.png")
         self.unhide_icon = QIcon("./assets/icons/icon_openeye.png")
@@ -41,15 +46,35 @@ class Main(QDialog):
         self.btn_https.clicked.connect(self.openHttpsHome)
 
         # --------------------- Password Evaluation -------------------------
+        if self.lineEdit_inputPwd.text() == '':
+            self.checkLength.setIcon(self.warning_icon)
+            self.checkDigits.setIcon(self.warning_icon)
+            self.checkUpper.setIcon(self.warning_icon)
+            self.checkLower.setIcon(self.warning_icon)
+            self.checkSpecial.setIcon(self.warning_icon)
+
+        # Load the list of weak passwords
+        with open('./data/nordpass_wordlist.json', 'r') as openfile:
+            json_object = json.load(openfile)
+        
+        for item in json_object:
+            self.nordpass_common_passwords.append(str(item['Password']))
+
         self.tbtn_eyePwd.clicked.connect(self.btn_hidePwd)
         self.lineEdit_inputPwd.textChanged.connect(self.getPassword)
+
+        # --------------------- Message Digest ------------------------------
+        # --------------------- Malware Scan --------------------------------    
+        # --------------------- Vulnerability -------------------------------
+        # --------------------- HTTPS Testing -------------------------------
+
 
     def openAdvancedUserHome(self):
         self.stackedWidget.setCurrentWidget(self.page_advancedUser)
 
     def PasswordEvaluationHome(self):
         self.stackedWidget.setCurrentWidget(self.page_password)
-    
+
     def openMalwareHome(self):
         self.stackedWidget.setCurrentWidget(self.page_malware)
 
@@ -69,10 +94,38 @@ class Main(QDialog):
         PasswordEvaluation.show_hide_password(self)
 
     def getPassword(self):
-        passoword = PasswordEvaluation.update(self)
-        entropy = PasswordEvaluation.calculate_entropy(self, passoword)
-        self.label_outEntropyPwd.setText(f'{entropy:.0f} bits')
+        password = PasswordEvaluation.update(self)
+        entropy = PasswordEvaluation.calculate_entropy(self, password)
 
+        self.label_outEntropyPwd.setText(f'{entropy:.0f} bits')
+        
+        if entropy == 0:
+            self.label_outEntropyPwd.setText(f'-- Bits')
+            self.label_outStrengthPwd.setText('')
+        elif entropy > 999:
+            self.label_outEntropyPwd.setText(f'~NaN Bits')
+        else:
+            self.label_outEntropyPwd.setText(f'~{entropy:.0f} Bits')
+        
+        length = len(password)        
+        if length < 8:
+            self.label_outStrengthPwd.setText('So very, very bad Password')
+            if length == 0:
+                self.label_outStrengthPwd.setText('')
+        else : 
+            if entropy < 50 :
+                self.label_outStrengthPwd.setText('Weak password')
+            elif entropy < 80 :
+                self.label_outStrengthPwd.setText('Medium strength')
+            else:
+                self.label_outStrengthPwd.setText('Good password')
+        
+        # Show length of password
+        self.label_lengthOfPassword.setText(f'{length} Chars')
+        # Show time to crack
+        self.label_outTimeCrackPwd.setText(f'{PasswordEvaluation.time_to_Crack(self, password)}')
+        # Check if password is in the list of weak passwords
+        PasswordEvaluation.check_common_password(self, password, self.nordpass_common_passwords)
         
 class PasswordEvaluation(QDialog):
 
@@ -80,7 +133,7 @@ class PasswordEvaluation(QDialog):
     
     def __init__(self):
         super(PasswordEvaluation, self).__init__()
-        
+
     def show_hide_password(self):
         if self.hide == True:
             self.lineEdit_inputPwd.setEchoMode(QLineEdit.EchoMode.Password) 
@@ -91,13 +144,50 @@ class PasswordEvaluation(QDialog):
             self.lineEdit_inputPwd.setEchoMode(QLineEdit.EchoMode.Normal) 
             self.hide = True
             self.tbtn_eyePwd.setIcon(self.unhide_icon)
-            
+
+    def check_common_password(self, password, nordpass_common_passwords):
+        if password == '':
+            self.label_outEntropyPwd.setText('')
+            self.label_outChkNordpass.setText('Start typing to see the entropy score')
+            self.label_outStrengthPwd.setText('')
+        else:
+            if password in self.nordpass_common_passwords:
+                print(self.nordpass_common_passwords.index(password))
+                self.label_outChkNordpass.setText('Found in the top 200 most common passwords by NordPass')
+            else:
+                self.label_outChkNordpass.setText('Not found in the list')
+
     def update(self):
+        self.checkLength.setChecked(False)
+        self.checkDigits.setChecked(False)
+        self.checkUpper.setChecked(False)
+        self.checkLower.setChecked(False)
+        self.checkSpecial.setChecked(False)
+        
         # Get password real time
         password = self.lineEdit_inputPwd.text()
+
+        for char in password:
+            if char.isdigit():
+                self.checkDigits.setChecked(True)
+                self.checkDigits.setIcon(self.check_icon)
+            elif char.isupper():
+                self.checkUpper.setChecked(True)
+                self.checkUpper.setIcon(self.check_icon)
+            elif char.islower():
+                self.checkLower.setChecked(True)
+                self.checkLower.setIcon(self.check_icon)
+            else:
+                self.checkSpecial.setChecked(True)
+                self.checkSpecial.setIcon(self.check_icon)
+                
+            if len(self.lineEdit_inputPwd.text()) >= 8:
+                self.checkLength.setChecked(True)
+                self.checkLength.setIcon(self.check_icon)
         return password
 
     def calculate_entropy(self, password):
+        
         if password == '':
             self.checkLength.setIcon(self.warning_icon)
             self.checkDigits.setIcon(self.warning_icon)
@@ -116,16 +206,66 @@ class PasswordEvaluation(QDialog):
         if self.checkSpecial.isChecked(): # !@#$%^&*()_+-=
             possible_characters += 32
         # Calculate the entropy using the formula log2(possible_characters^password_length)
-        return log2(possible_characters**len(password))
+        entropy = log2(possible_characters**len(password))
+        return entropy
+    
+    def time_to_Crack(self, password):
+        if password == '':
+            self.checkLength.setIcon(self.warning_icon)
+            self.checkDigits.setIcon(self.warning_icon)
+            self.checkUpper.setIcon(self.warning_icon)
+            self.checkLower.setIcon(self.warning_icon)
+            self.checkSpecial.setIcon(self.warning_icon)
+            return 0
+    
+        possible_characters = 0
+        if self.checkDigits.isChecked(): # 0-9
+            possible_characters += 10
+        if self.checkUpper.isChecked(): # A-Z
+            possible_characters += 26
+        if self.checkLower.isChecked(): # a-z
+            possible_characters += 26
+        if self.checkSpecial.isChecked(): # !@#$%^&*()_+-=
+            possible_characters += 32
 
+        combinations = possible_characters ** len(password)
+        KPS_2020 = 17042497.3 # 17 Million
+        seconds = combinations / KPS_2020
+        seconds = f'{seconds:.0f}'
+        seconds = int(seconds)
+
+        minutes, seconds = divmod(seconds, 60)
+        hours, minutes = divmod(minutes, 60)
+        days, hours = divmod(hours, 24)
+        weeks, days = divmod(days, 7)
+        months, weeks = divmod(weeks, 4)
+        years, months = divmod(months, 12)
+
+        time_parts = []
+        if years > 0:
+            time_parts.append(f"{years} year{'s' if years != 1 else ''}")
+        if months > 0:
+            time_parts.append(f"{months} month{'s' if months != 1 else ''}")
+        if weeks > 0:
+            time_parts.append(f"{weeks} week{'s' if weeks != 1 else ''}")
+        if days > 0:
+            time_parts.append(f"{days} day{'s' if days != 1 else ''}")
+        if hours > 0:
+            time_parts.append(f"{hours} hour{'s' if hours != 1 else ''}")
+        if minutes > 0:
+            time_parts.append(f"{minutes} minute{'s' if minutes != 1 else ''}")
+        if seconds > 0:
+            time_parts.append(f"{seconds} second{'s' if seconds != 1 else ''}")
+
+        return ", ".join(time_parts)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = Main()
-    window.setFixedHeight(700)
-    window.setFixedWidth(1200)
-    window.setMinimumSize(1200, 700)
-    window.setMaximumSize(1200, 700)
+    #window.setFixedHeight(700)
+    #window.setFixedWidth(1200)
+    #window.setMinimumSize(1200, 700)
+    #window.setMaximumSize(1200, 700)
     window.show()
     sys.exit(app.exec())     
     
