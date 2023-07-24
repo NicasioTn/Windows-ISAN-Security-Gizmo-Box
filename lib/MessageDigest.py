@@ -130,7 +130,6 @@ class MessageDigest(QDialog):
         self.output_QR_Label.setText(' ')
         self.save_Button.setText("SAVE")
     
-    
     # Hash Algorithms Section ---------------------------------------------
     def Md5(self):
         if os.path.isfile(self.input.text()):
@@ -156,7 +155,6 @@ class MessageDigest(QDialog):
                 self.output_hash_Label.setText(f'{md5}')
                 self.qrCodeGenerator(md5)
                 
-    
     def Sha1(self):
         if os.path.isfile(self.input.text()):
             path_direct = self.getPath()
@@ -228,6 +226,7 @@ class MessageDigest(QDialog):
                 print(f'SHA2_256: {sha2}')
                 self.output_hash_Label.setText(f'{sha2}')
                 self.qrCodeGenerator(sha2)
+    
     def Sha2_384(self):
         if os.path.isfile(self.input.text()):
             init_hash = hashlib.sha384()
@@ -424,7 +423,7 @@ class MessageDigest(QDialog):
         pixmap = QPixmap(imagePath)
         pixmap = pixmap.scaledToWidth(200)
         pixmap = pixmap.scaledToHeight(200)
-        self.label_outQRCode.setPixmap(pixmap)
+        self.output_QR_Label.setPixmap(pixmap)
         #self.resize(pixmap.width(), pixmap.height())
             
     def setPath(self, path):

@@ -77,26 +77,39 @@ class Main(QDialog):
         self.btn_clearDigest.clicked.connect(self.clearMessageDigest)
         self.btn_saveDigest.clicked.connect(self.saveQRCode)
         self.label_outTextHash.setWordWrap(True)
-        self.btn_md5.clicked.connect(lambda: self.label_outTextHash.setText(Hashing.md5(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
-        self.btn_sha1.clicked.connect(lambda: self.label_outTextHash.setText(Hashing.sha1(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
-        self.comboBox_sha2.activated.connect(lambda: self.label_outTextHash.setText(Hashing.sha224(self, self.lineEdit_inputDigest.text())) if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
-        self.comboBox_sha2.activated.connect(lambda: self.label_outTextHash.setText(Hashing.sha256(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
-        self.comboBox_sha2.activated.connect(lambda: self.label_outTextHash.setText(Hashing.sha384(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
-        self.comboBox_sha2.activated.connect(lambda: self.label_outTextHash.setText(Hashing.sha512(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
-        self.comboBox_sha3.activated.connect(lambda: self.label_outTextHash.setText(Hashing.sha3_224(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
-        self.comboBox_sha3.activated.connect(lambda: self.label_outTextHash.setText(Hashing.sha3_256(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
-        self.comboBox_sha3.activated.connect(lambda: self.label_outTextHash.setText(Hashing.sha3_384(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
-        self.comboBox_sha3.activated.connect(lambda: self.label_outTextHash.setText(Hashing.sha3_512(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
-        
+    
+        if os.path.exists(self.lineEdit_inputDigest.text()):
+            # File path input
+            path = self.lineEdit_inputDigest.text()
+            self.btn_md5.clicked.connect(lambda: MessageDigest.fileHash(self, "md5", path))
+            self.btn_sha1.clicked.connect(lambda: MessageDigest.fileHash(self, "sha1", path))
+            self.comboBox_sha2.activated.connect(lambda: MessageDigest.fileHash(self, "sha224", path))
+            self.comboBox_sha2.activated.connect(lambda: MessageDigest.fileHash(self, "sha256", path))
+            self.comboBox_sha2.activated.connect(lambda: MessageDigest.fileHash(self, "sha384", path))
+            self.comboBox_sha2.activated.connect(lambda: MessageDigest.fileHash(self, "sha512", path))
+            self.comboBox_sha3.activated.connect(lambda: MessageDigest.fileHash(self, "sha3_224", path))
+            self.comboBox_sha3.activated.connect(lambda: MessageDigest.fileHash(self, "sha3_256", path))
+            self.comboBox_sha3.activated.connect(lambda: MessageDigest.fileHash(self, "sha3_384", path))
+            self.comboBox_sha3.activated.connect(lambda: MessageDigest.fileHash(self, "sha3_512", path))
+        else:
+            # Plain text input
+            self.btn_md5.clicked.connect(lambda: self.label_outTextHash.setText(Hashing.md5(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
+            self.btn_sha1.clicked.connect(lambda: self.label_outTextHash.setText(Hashing.sha1(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
+            self.comboBox_sha2.activated.connect(lambda: self.label_outTextHash.setText(Hashing.sha224(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
+            self.comboBox_sha2.activated.connect(lambda: self.label_outTextHash.setText(Hashing.sha256(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
+            self.comboBox_sha2.activated.connect(lambda: self.label_outTextHash.setText(Hashing.sha384(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
+            self.comboBox_sha2.activated.connect(lambda: self.label_outTextHash.setText(Hashing.sha512(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
+            self.comboBox_sha3.activated.connect(lambda: self.label_outTextHash.setText(Hashing.sha3_224(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
+            self.comboBox_sha3.activated.connect(lambda: self.label_outTextHash.setText(Hashing.sha3_256(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
+            self.comboBox_sha3.activated.connect(lambda: self.label_outTextHash.setText(Hashing.sha3_384(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
+            self.comboBox_sha3.activated.connect(lambda: self.label_outTextHash.setText(Hashing.sha3_512(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
+            
         # show Image QR Code
         self.btn_md5.clicked.connect(self.ShowImage_QR)
         self.btn_sha1.clicked.connect(self.ShowImage_QR)
         self.comboBox_sha2.activated.connect(self.ShowImage_QR)
         self.comboBox_sha3.activated.connect(self.ShowImage_QR)
 
-        
-            
-            
         # --------------------- Malware Scan --------------------------------    
         # --------------------- Vulnerability -------------------------------
         # --------------------- HTTPS Testing -------------------------------
@@ -161,8 +174,10 @@ class Main(QDialog):
         PasswordEvaluation.check_common_password(self, password, self.nordpass_common_passwords)
         
     def openFileDialog(self):
-        MessageDigest.open_file_dialog(self)
-    
+       path = MessageDigest.open_file_dialog(self)
+       #print(type(path)) # <class 'pathlib.WindowsPath'>
+       return path
+
     def clearMessageDigest(self):
         MessageDigest.clear(self)
     
@@ -173,9 +188,7 @@ class Main(QDialog):
         if self.label_outTextHash.text() != '':
             MessageDigest.qrCodeGenerator(self, self.label_outTextHash.text())
             MessageDigest.ShowImage_QR(self)
-        
-        
-
+    
 class PasswordEvaluation(QDialog):
 
     hide = True
@@ -347,8 +360,6 @@ class Hashing:
     
 class MessageDigest(QDialog):
 
-    state_browse_file = False
-
     def __init__(self):
         super(MessageDigest, self).__init__()
 
@@ -373,7 +384,6 @@ class MessageDigest(QDialog):
         '''
         return img
         
-    
     def ShowImage_QR(self):
         imagePath = "./data/MessageDigest-QRCode.png"
         ## Run on Kali Linux
@@ -401,21 +411,143 @@ class MessageDigest(QDialog):
         if filename:
             path = Path(filename)
             self.lineEdit_inputDigest.setText(str(path))
-            if path.exists(): # check if file exists 
-                print("File exists")
-            print(f"\"{path}\"") 
-            
-    #         self.state_browse_file = True # browsed file 
-    #         if(self.state_browse_file == True):
-    #             #hashfile = self.hash_file(path, self.state)
-    #             self.setPath(path)
+            if path.exists() != True: # check if file exists 
+                print(f"File exists at: {path.exists()}")
+            print(f"Get file at: {path}") 
+        
+            return path
+        
+    def fileHash(self, type, path):
+        if type == "md5":
+            init_hash = hashlib.md5()
+            file = path
+            BLOCK_SIZE = 65536 
+            with open(file, 'rb') as f: 
+                fb = f.read(BLOCK_SIZE) 
+                while len(fb) > 0: 
+                    init_hash.update(fb) 
+                    fb = f.read(BLOCK_SIZE) 
+            file_hashed =  init_hash.hexdigest()
+            print (f"This is file hash {type}: {file_hashed}")
+            self.label_outTextHash.setText(f'{file_hashed}')
 
-    # def setPath(self, path):
-    #     self.path = path
-    
-    # def getPath(self):
-    #     return self.path
-    
+        elif type == "sha1":
+            init_hash = hashlib.sha1()
+            file = path
+            BLOCK_SIZE = 65536 
+            with open(file, 'rb') as f: 
+                fb = f.read(BLOCK_SIZE) 
+                while len(fb) > 0: 
+                    init_hash.update(fb) 
+                    fb = f.read(BLOCK_SIZE) 
+            file_hashed =  init_hash.hexdigest()
+            print (f"This is file hash {type}: {file_hashed}")
+            self.label_outTextHash.setText(f'{file_hashed}') 
+
+        elif type == "sha224":
+            init_hash = hashlib.sha224()
+            file = path
+            BLOCK_SIZE = 65536 
+            with open(file, 'rb') as f: 
+                fb = f.read(BLOCK_SIZE) 
+                while len(fb) > 0: 
+                    init_hash.update(fb) 
+                    fb = f.read(BLOCK_SIZE) 
+            file_hashed =  init_hash.hexdigest()
+            print (f"This is file hash {type}: {file_hashed}")
+            self.label_outTextHash.setText(f'{file_hashed}')
+
+        elif type == "sha256":
+            init_hash = hashlib.sha256()
+            file = path
+            BLOCK_SIZE = 65536 
+            with open(file, 'rb') as f: 
+                fb = f.read(BLOCK_SIZE) 
+                while len(fb) > 0: 
+                    init_hash.update(fb) 
+                    fb = f.read(BLOCK_SIZE) 
+            file_hashed =  init_hash.hexdigest()
+            print (f"This is file hash {type}: {file_hashed}")
+            self.label_outTextHash.setText(f'{file_hashed}')
+
+        elif type == "sha384":
+            init_hash = hashlib.sha384()
+            file = path
+            BLOCK_SIZE = 65536 
+            with open(file, 'rb') as f: 
+                fb = f.read(BLOCK_SIZE) 
+                while len(fb) > 0: 
+                    init_hash.update(fb) 
+                    fb = f.read(BLOCK_SIZE) 
+            file_hashed =  init_hash.hexdigest()
+            print (f"This is file hash {type}: {file_hashed}")
+            self.label_outTextHash.setText(f'{file_hashed}')
+
+        elif type == "sha512":
+            init_hash = hashlib.sha512()
+            file = path
+            BLOCK_SIZE = 65536 
+            with open(file, 'rb') as f: 
+                fb = f.read(BLOCK_SIZE) 
+                while len(fb) > 0: 
+                    init_hash.update(fb) 
+                    fb = f.read(BLOCK_SIZE) 
+            file_hashed =  init_hash.hexdigest()
+            print (f"This is file hash {type}: {file_hashed}")
+            self.label_outTextHash.setText(f'{file_hashed}')
+
+        elif type == "sha3_224":
+            init_hash = hashlib.sha3_224()
+            file = path
+            BLOCK_SIZE = 65536 
+            with open(file, 'rb') as f: 
+                fb = f.read(BLOCK_SIZE) 
+                while len(fb) > 0: 
+                    init_hash.update(fb) 
+                    fb = f.read(BLOCK_SIZE) 
+            file_hashed =  init_hash.hexdigest()
+            print (f"This is file hash {type}: {file_hashed}") 
+            self.label_outTextHash.setText(f'{file_hashed}')
+
+        elif type == "sha3_256":
+            init_hash = hashlib.sha3_256()
+            file = path
+            BLOCK_SIZE = 65536 
+            with open(file, 'rb') as f: 
+                fb = f.read(BLOCK_SIZE) 
+                while len(fb) > 0: 
+                    init_hash.update(fb) 
+                    fb = f.read(BLOCK_SIZE) 
+            file_hashed =  init_hash.hexdigest()
+            print (f"This is file hash {type}: {file_hashed}") 
+            self.label_outTextHash.setText(f'{file_hashed}')
+
+        elif type == "sha3_384":
+            init_hash = hashlib.sha3_384()
+            file = path
+            BLOCK_SIZE = 65536 
+            with open(file, 'rb') as f: 
+                fb = f.read(BLOCK_SIZE) 
+                while len(fb) > 0: 
+                    init_hash.update(fb) 
+                    fb = f.read(BLOCK_SIZE) 
+            file_hashed =  init_hash.hexdigest()
+            print (f"This is file hash {type}: {file_hashed}") 
+            self.label_outTextHash.setText(f'{file_hashed}')
+
+        elif type == "sha3_512":
+            init_hash = hashlib.sha3_512()
+            file = path
+            BLOCK_SIZE = 65536 
+            with open(file, 'rb') as f: 
+                fb = f.read(BLOCK_SIZE) 
+                while len(fb) > 0: 
+                    init_hash.update(fb) 
+                    fb = f.read(BLOCK_SIZE) 
+            file_hashed =  init_hash.hexdigest()
+            print (f"This is file hash {type}: {file_hashed}") 
+            self.label_outTextHash.setText(f'{file_hashed}')
+
     def saveQRCode(self):
         pathfile, ok = QFileDialog.getSaveFileName(
             self,
@@ -437,9 +569,6 @@ class MessageDigest(QDialog):
         else:
             print("Error: No file name specified")
     
-    
-    
-
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = Main()
