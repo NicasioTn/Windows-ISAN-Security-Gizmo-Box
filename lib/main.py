@@ -76,22 +76,9 @@ class Main(QDialog):
         self.btn_openDigest.clicked.connect(self.openFileDialog)
         self.btn_clearDigest.clicked.connect(self.clearMessageDigest)
         self.btn_saveDigest.clicked.connect(self.saveQRCode)
-        self.label_outTextHash.setWordWrap(True)
-    
-        if os.path.exists(self.lineEdit_inputDigest.text()):
-            # File path input
-            path = self.lineEdit_inputDigest.text()
-            self.btn_md5.clicked.connect(lambda: MessageDigest.fileHash(self, "md5", path))
-            self.btn_sha1.clicked.connect(lambda: MessageDigest.fileHash(self, "sha1", path))
-            self.comboBox_sha2.activated.connect(lambda: MessageDigest.fileHash(self, "sha224", path))
-            self.comboBox_sha2.activated.connect(lambda: MessageDigest.fileHash(self, "sha256", path))
-            self.comboBox_sha2.activated.connect(lambda: MessageDigest.fileHash(self, "sha384", path))
-            self.comboBox_sha2.activated.connect(lambda: MessageDigest.fileHash(self, "sha512", path))
-            self.comboBox_sha3.activated.connect(lambda: MessageDigest.fileHash(self, "sha3_224", path))
-            self.comboBox_sha3.activated.connect(lambda: MessageDigest.fileHash(self, "sha3_256", path))
-            self.comboBox_sha3.activated.connect(lambda: MessageDigest.fileHash(self, "sha3_384", path))
-            self.comboBox_sha3.activated.connect(lambda: MessageDigest.fileHash(self, "sha3_512", path))
-        else:
+
+        
+        if os.path.exists(self.lineEdit_inputDigest.text()) != True: # check if file exists
             # Plain text input
             self.btn_md5.clicked.connect(lambda: self.label_outTextHash.setText(Hashing.md5(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
             self.btn_sha1.clicked.connect(lambda: self.label_outTextHash.setText(Hashing.sha1(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
@@ -103,7 +90,7 @@ class Main(QDialog):
             self.comboBox_sha3.activated.connect(lambda: self.label_outTextHash.setText(Hashing.sha3_256(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
             self.comboBox_sha3.activated.connect(lambda: self.label_outTextHash.setText(Hashing.sha3_384(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
             self.comboBox_sha3.activated.connect(lambda: self.label_outTextHash.setText(Hashing.sha3_512(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
-            
+                
         # show Image QR Code
         self.btn_md5.clicked.connect(self.ShowImage_QR)
         self.btn_sha1.clicked.connect(self.ShowImage_QR)
@@ -174,9 +161,27 @@ class Main(QDialog):
         PasswordEvaluation.check_common_password(self, password, self.nordpass_common_passwords)
         
     def openFileDialog(self):
-       path = MessageDigest.open_file_dialog(self)
-       #print(type(path)) # <class 'pathlib.WindowsPath'>
-       return path
+        path = MessageDigest.open_file_dialog(self)
+        #print(type(path)) # <class 'pathlib.WindowsPath'>
+        
+        # file hashing
+        self.btn_md5.clicked.connect(lambda: MessageDigest.fileHash(self, "md5", path))
+        self.btn_sha1.clicked.connect(lambda: MessageDigest.fileHash(self, "sha1", path))
+        self.comboBox_sha2.activated.connect(lambda: MessageDigest.fileHash(self, "sha224", path))
+        self.comboBox_sha2.activated.connect(lambda: MessageDigest.fileHash(self, "sha256", path))
+        self.comboBox_sha2.activated.connect(lambda: MessageDigest.fileHash(self, "sha384", path))
+        self.comboBox_sha2.activated.connect(lambda: MessageDigest.fileHash(self, "sha512", path))
+        self.comboBox_sha3.activated.connect(lambda: MessageDigest.fileHash(self, "sha3_224", path))
+        self.comboBox_sha3.activated.connect(lambda: MessageDigest.fileHash(self, "sha3_256", path))
+        self.comboBox_sha3.activated.connect(lambda: MessageDigest.fileHash(self, "sha3_384", path))
+        self.comboBox_sha3.activated.connect(lambda: MessageDigest.fileHash(self, "sha3_512", path))
+        
+        # Show Image QR Code
+        self.btn_md5.clicked.connect(self.ShowImage_QR)
+        self.btn_sha1.clicked.connect(self.ShowImage_QR)
+        self.comboBox_sha2.activated.connect(self.ShowImage_QR)
+        self.comboBox_sha3.activated.connect(self.ShowImage_QR)
+
 
     def clearMessageDigest(self):
         MessageDigest.clear(self)
