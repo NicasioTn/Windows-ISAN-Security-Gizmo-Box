@@ -76,7 +76,18 @@ class Main(QDialog):
         self.btn_openDigest.clicked.connect(self.openFileDialog)
         self.btn_clearDigest.clicked.connect(self.clearMessageDigest)
         self.btn_saveDigest.clicked.connect(self.saveQRCode)
-
+        self.label_outTextHash.setWordWrap(True)
+        self.btn_md5.clicked.connect(lambda: self.label_outTextHash.setText(Hashing.md5(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
+        self.btn_sha1.clicked.connect(lambda: self.label_outTextHash.setText(Hashing.sha1(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
+        self.comboBox_sha2.activated.connect(lambda: self.label_outTextHash.setText(Hashing.sha224(self, self.lineEdit_inputDigest.text())) if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
+        self.comboBox_sha2.activated.connect(lambda: self.label_outTextHash.setText(Hashing.sha256(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
+        self.comboBox_sha2.activated.connect(lambda: self.label_outTextHash.setText(Hashing.sha384(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
+        self.comboBox_sha2.activated.connect(lambda: self.label_outTextHash.setText(Hashing.sha512(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
+        self.comboBox_sha3.activated.connect(lambda: self.label_outTextHash.setText(Hashing.sha3_224(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
+        self.comboBox_sha3.activated.connect(lambda: self.label_outTextHash.setText(Hashing.sha3_256(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
+        self.comboBox_sha3.activated.connect(lambda: self.label_outTextHash.setText(Hashing.sha3_384(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
+        self.comboBox_sha3.activated.connect(lambda: self.label_outTextHash.setText(Hashing.sha3_512(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
+        
         # --------------------- Malware Scan --------------------------------    
         # --------------------- Vulnerability -------------------------------
         # --------------------- HTTPS Testing -------------------------------
@@ -148,6 +159,7 @@ class Main(QDialog):
     
     def saveQRCode(self):
         MessageDigest.saveQRCode(self)
+        
         
 
 class PasswordEvaluation(QDialog):
@@ -287,6 +299,38 @@ import qrcode
 from pathlib import Path
 from PyQt6.QtWidgets import QFileDialog
 
+class Hashing:
+    
+    def md5(self, data):
+        return hashlib.md5(data.encode('utf-8')).hexdigest()
+
+    def sha1(self, data):
+        return hashlib.sha1(data.encode('utf-8')).hexdigest()
+
+    def sha224(self, data):
+        return hashlib.sha224(data.encode('utf-8')).hexdigest()
+
+    def sha256(self, data):
+        return hashlib.sha256(data.encode('utf-8')).hexdigest()
+
+    def sha384(self, data):
+        return hashlib.sha384(data.encode('utf-8')).hexdigest()
+
+    def sha512(self, data):
+        return hashlib.sha512(data.encode('utf-8')).hexdigest()
+
+    def sha3_224(self, data):
+        return hashlib.sha3_224(data.encode('utf-8')).hexdigest()
+
+    def sha3_256(self, data):
+        return hashlib.sha3_256(data.encode('utf-8')).hexdigest()
+
+    def sha3_384(self, data):
+        return hashlib.sha3_384(data.encode('utf-8')).hexdigest()
+
+    def sha3_512(self, data):
+        return hashlib.sha3_512(data.encode('utf-8')).hexdigest()
+    
 class MessageDigest(QDialog):
 
     state_browse_file = False
@@ -295,7 +339,7 @@ class MessageDigest(QDialog):
         super(MessageDigest, self).__init__()
 
     def clear (self):
-        self.lineEdit_inputDigest.clear()
+        self.lineEdit_inputDigest.setText('')
         self.label_outTextHash.setText('')
         self.label_outQRCode.setText('') # clear QR-Code
 
