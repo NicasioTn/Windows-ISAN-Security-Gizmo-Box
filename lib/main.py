@@ -88,6 +88,15 @@ class Main(QDialog):
         self.comboBox_sha3.activated.connect(lambda: self.label_outTextHash.setText(Hashing.sha3_384(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
         self.comboBox_sha3.activated.connect(lambda: self.label_outTextHash.setText(Hashing.sha3_512(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.label_outTextHash.setText(''))
         
+        # show Image QR Code
+        self.btn_md5.clicked.connect(self.ShowImage_QR)
+        self.btn_sha1.clicked.connect(self.ShowImage_QR)
+        self.comboBox_sha2.activated.connect(self.ShowImage_QR)
+        self.comboBox_sha3.activated.connect(self.ShowImage_QR)
+
+        
+            
+            
         # --------------------- Malware Scan --------------------------------    
         # --------------------- Vulnerability -------------------------------
         # --------------------- HTTPS Testing -------------------------------
@@ -159,6 +168,11 @@ class Main(QDialog):
     
     def saveQRCode(self):
         MessageDigest.saveQRCode(self)
+    
+    def ShowImage_QR(self):
+        if self.label_outTextHash.text() != '':
+            MessageDigest.qrCodeGenerator(self, self.label_outTextHash.text())
+            MessageDigest.ShowImage_QR(self)
         
         
 
@@ -341,7 +355,7 @@ class MessageDigest(QDialog):
     def clear (self):
         self.lineEdit_inputDigest.setText('')
         self.label_outTextHash.setText('')
-        self.label_outQRCode.setText('') # clear QR-Code
+        self.label_outQRCode.clear()
 
     def qrCodeGenerator(self, hash):
         qr = qrcode.QRCode(
@@ -357,7 +371,21 @@ class MessageDigest(QDialog):
         '''
         img.save("/home/kali/Gizmo/SaveQR/MessageDigest-QRCode.png")
         '''
-        self.ShowImage_QR() # show image
+        return img
+        
+    
+    def ShowImage_QR(self):
+        imagePath = "./data/MessageDigest-QRCode.png"
+        ## Run on Kali Linux
+        '''
+        imagePath = "/home/kali/Gizmo/SaveQR/MessageDigest-QRCode.png"
+        '''
+        #pixmap = QPixmap(imagePath)
+        pixmap = QPixmap(imagePath)
+        pixmap = pixmap.scaledToWidth(200)
+        pixmap = pixmap.scaledToHeight(200)
+        self.label_outQRCode.setPixmap(pixmap)
+        #self.resize(pixmap.width(), pixmap.height())
 
     def open_file_dialog(self):
         filename, ok = QFileDialog.getOpenFileName(
@@ -409,17 +437,7 @@ class MessageDigest(QDialog):
         else:
             print("Error: No file name specified")
     
-    def ShowImage_QR(self):
-        imagePath = "./data/MessageDigest-QRCode.png"
-        ## Run on Kali Linux
-        '''
-        imagePath = "/home/kali/Gizmo/SaveQR/MessageDigest-QRCode.png"
-        '''
-        pixmap = QPixmap(imagePath)
-        pixmap = pixmap.scaledToWidth(200)
-        pixmap = pixmap.scaledToHeight(200)
-        self.output_QR_Label.setPixmap(pixmap)
-        #self.resize(pixmap.width(), pixmap.height())
+    
     
 
 if __name__ == "__main__":

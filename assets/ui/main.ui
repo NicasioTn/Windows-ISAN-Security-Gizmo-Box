@@ -2643,7 +2643,7 @@ QPushButton:pressed {
         <enum>QFrame::Raised</enum>
        </property>
        <property name="text">
-        <string>--</string>
+        <string/>
        </property>
        <property name="scaledContents">
         <bool>false</bool>
