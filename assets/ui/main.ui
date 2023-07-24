@@ -2619,7 +2619,7 @@ QPushButton:pressed {
         </property>
        </widget>
       </widget>
-      <widget class="QLabel" name="label_outDic_3">
+      <widget class="QLabel" name="label_outTextHash">
        <property name="geometry">
         <rect>
          <x>140</x>

@@ -296,6 +296,8 @@ class MessageDigest(QDialog):
 
     def clear (self):
         self.lineEdit_inputDigest.clear()
+        self.label_outTextHash.setText('')
+        self.label_outQRCode.setText('') # clear QR-Code
 
     def qrCodeGenerator(self, hash):
         qr = qrcode.QRCode(
@@ -331,10 +333,10 @@ class MessageDigest(QDialog):
                 print("File exists")
             print(f"\"{path}\"") 
             
-            # self.state_browse_file = True # browsed file 
-            # if(self.state_browse_file == True):
-            #     #hashfile = self.hash_file(path, self.state)
-            #     self.setPath(path)
+    #         self.state_browse_file = True # browsed file 
+    #         if(self.state_browse_file == True):
+    #             #hashfile = self.hash_file(path, self.state)
+    #             self.setPath(path)
 
     # def setPath(self, path):
     #     self.path = path
