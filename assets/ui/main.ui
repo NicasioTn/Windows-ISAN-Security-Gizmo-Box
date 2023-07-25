@@ -621,7 +621,7 @@ border-radius: 5px;</string>
          <x>20</x>
          <y>70</y>
          <width>321</width>
-         <height>292</height>
+         <height>291</height>
         </rect>
        </property>
        <layout class="QFormLayout" name="formLayout">
@@ -631,114 +631,6 @@ border-radius: 5px;</string>
         <property name="verticalSpacing">
          <number>40</number>
         </property>
-        <item row="1" column="1">
-         <widget class="QCheckBox" name="checkDigits">
-          <property name="font">
-           <font>
-            <family>Bahnschrift SemiBold</family>
-            <pointsize>13</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QCheckBox::indicator{
- 	width: 0; height 0;
-    border-radius: 10px;
-}</string>
-          </property>
-          <property name="text">
-           <string>DIGITS</string>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>30</width>
-            <height>30</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QCheckBox" name="checkLower">
-          <property name="font">
-           <font>
-            <family>Bahnschrift SemiBold</family>
-            <pointsize>13</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QCheckBox::indicator{
- 	width: 0; height 0;
-    border-radius: 10px;
-}</string>
-          </property>
-          <property name="text">
-           <string>LOWER CASE LATIN LETTERS</string>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>30</width>
-            <height>30</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="1">
-         <widget class="QCheckBox" name="checkUpper">
-          <property name="font">
-           <font>
-            <family>Bahnschrift SemiBold</family>
-            <pointsize>13</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QCheckBox::indicator{
- 	width: 0; height 0;
-    border-radius: 10px;
-}</string>
-          </property>
-          <property name="text">
-           <string>UPPER CASE LATIN LETTERS</string>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>30</width>
-            <height>30</height>
-           </size>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="1">
-         <widget class="QCheckBox" name="checkSpecial">
-          <property name="font">
-           <font>
-            <family>Bahnschrift SemiBold</family>
-            <pointsize>13</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QCheckBox::indicator{
- 	width: 0; height 0;
-    border-radius: 10px;
-}</string>
-          </property>
-          <property name="text">
-           <string>SPECIAL CHARACTERS</string>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>30</width>
-            <height>30</height>
-           </size>
-          </property>
-         </widget>
-        </item>
         <item row="0" column="1">
          <widget class="QCheckBox" name="checkLength">
           <property name="enabled">
@@ -747,7 +639,7 @@ border-radius: 5px;</string>
           <property name="font">
            <font>
             <family>Bahnschrift SemiBold</family>
-            <pointsize>13</pointsize>
+            <pointsize>11</pointsize>
             <weight>75</weight>
             <bold>true</bold>
             <kerning>true</kerning>
@@ -768,12 +660,6 @@ border-radius: 5px;</string>
           <property name="text">
            <string>LENGTH &gt;= 8</string>
           </property>
-          <property name="iconSize">
-           <size>
-            <width>30</width>
-            <height>30</height>
-           </size>
-          </property>
           <property name="checkable">
            <bool>true</bool>
           </property>
@@ -791,34 +677,91 @@ border-radius: 5px;</string>
           </property>
          </widget>
         </item>
+        <item row="1" column="1">
+         <widget class="QCheckBox" name="checkDigits">
+          <property name="font">
+           <font>
+            <family>Bahnschrift SemiBold</family>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox::indicator{
+ 	width: 0; height 0;
+    border-radius: 10px;
+}</string>
+          </property>
+          <property name="text">
+           <string>DIGITS</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QCheckBox" name="checkLower">
+          <property name="font">
+           <font>
+            <family>Bahnschrift SemiBold</family>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox::indicator{
+ 	width: 0; height 0;
+    border-radius: 10px;
+}</string>
+          </property>
+          <property name="text">
+           <string>LOWER CASE LATIN LETTERS</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QCheckBox" name="checkBox_4">
+          <property name="font">
+           <font>
+            <family>Bahnschrift SemiBold</family>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox::indicator{
+ 	width: 0; height 0;
+    border-radius: 10px;
+}</string>
+          </property>
+          <property name="text">
+           <string>UPPER CASE LATIN LETTERS</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QCheckBox" name="checkSpecial">
+          <property name="font">
+           <font>
+            <family>Bahnschrift SemiBold</family>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox::indicator{
+ 	width: 0; height 0;
+    border-radius: 10px;
+}</string>
+          </property>
+          <property name="text">
+           <string>SPECIAL CHARACTERS</string>
+          </property>
+         </widget>
+        </item>
        </layout>
-      </widget>
-      <widget class="QLabel" name="label_lengthOfPassword">
-       <property name="geometry">
-        <rect>
-         <x>210</x>
-         <y>10</y>
-         <width>161</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Bahnschrift SemiBold</family>
-         <pointsize>13</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(42, 49, 66);</string>
-       </property>
-       <property name="text">
-        <string>0 Char</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
       </widget>
      </widget>
      <widget class="QWidget" name="widget_outputPwd" native="true">
@@ -933,7 +876,7 @@ border-radius: 5px;</string>
       <widget class="QLabel" name="label_chkNordpass">
        <property name="geometry">
         <rect>
-         <x>170</x>
+         <x>190</x>
          <y>180</y>
          <width>341</width>
          <height>31</height>
@@ -951,7 +894,7 @@ border-radius: 5px;</string>
         <string notr="true">color: rgb(42, 49, 66);</string>
        </property>
        <property name="text">
-        <string>SEARCH FOR YOUR PASSWORD IN THE NORDPASS WORDLISTS</string>
+        <string>SEARCH FOR YOUT PASSWORD IN THE NORDPASS WORDLISTS</string>
        </property>
       </widget>
       <widget class="QPushButton" name="btn_dicattack">
@@ -997,16 +940,16 @@ QPushButton:pressed {
       <widget class="QLabel" name="label_outStrengthPwd">
        <property name="geometry">
         <rect>
-         <x>250</x>
+         <x>360</x>
          <y>30</y>
-         <width>381</width>
-         <height>20</height>
+         <width>271</width>
+         <height>16</height>
         </rect>
        </property>
        <property name="font">
         <font>
          <family>Bahnschrift SemiBold</family>
-         <pointsize>13</pointsize>
+         <pointsize>9</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
@@ -1015,22 +958,22 @@ QPushButton:pressed {
         <string>--</string>
        </property>
        <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
       <widget class="QLabel" name="label_outTimeCrackPwd">
        <property name="geometry">
         <rect>
-         <x>250</x>
+         <x>360</x>
          <y>70</y>
-         <width>381</width>
-         <height>20</height>
+         <width>271</width>
+         <height>16</height>
         </rect>
        </property>
        <property name="font">
         <font>
          <family>Bahnschrift SemiBold</family>
-         <pointsize>13</pointsize>
+         <pointsize>9</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
@@ -1039,22 +982,22 @@ QPushButton:pressed {
         <string>--</string>
        </property>
        <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
       <widget class="QLabel" name="label_outEntropyPwd">
        <property name="geometry">
         <rect>
-         <x>249</x>
+         <x>360</x>
          <y>110</y>
-         <width>381</width>
-         <height>20</height>
+         <width>270</width>
+         <height>16</height>
         </rect>
        </property>
        <property name="font">
         <font>
          <family>Bahnschrift SemiBold</family>
-         <pointsize>13</pointsize>
+         <pointsize>9</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
@@ -1063,7 +1006,7 @@ QPushButton:pressed {
         <string>--</string>
        </property>
        <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
       <widget class="QLabel" name="label_outChkNordpass">
@@ -1078,7 +1021,7 @@ QPushButton:pressed {
        <property name="font">
         <font>
          <family>Bahnschrift SemiBold</family>
-         <pointsize>13</pointsize>
+         <pointsize>9</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
@@ -1094,9 +1037,9 @@ QPushButton:pressed {
      <widget class="QLabel" name="label_textPwd">
       <property name="geometry">
        <rect>
-        <x>950</x>
+        <x>870</x>
         <y>190</y>
-        <width>211</width>
+        <width>191</width>
         <height>20</height>
        </rect>
       </property>
@@ -1113,9 +1056,6 @@ QPushButton:pressed {
       </property>
       <property name="text">
        <string>THIS WILL NOT BE SENT ANYWARE.</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
      </widget>
      <widget class="QToolButton" name="tbtn_eyePwd">
