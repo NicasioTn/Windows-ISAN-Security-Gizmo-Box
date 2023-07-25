@@ -167,14 +167,14 @@ class Main(QDialog):
         # file hashing
         self.btn_md5.clicked.connect(lambda: MessageDigest.fileHash(self, "md5", path))
         self.btn_sha1.clicked.connect(lambda: MessageDigest.fileHash(self, "sha1", path))
-        self.comboBox_sha2.activated.connect(lambda: MessageDigest.fileHash(self, "sha224", path))
-        self.comboBox_sha2.activated.connect(lambda: MessageDigest.fileHash(self, "sha256", path))
-        self.comboBox_sha2.activated.connect(lambda: MessageDigest.fileHash(self, "sha384", path))
-        self.comboBox_sha2.activated.connect(lambda: MessageDigest.fileHash(self, "sha512", path))
-        self.comboBox_sha3.activated.connect(lambda: MessageDigest.fileHash(self, "sha3_224", path))
-        self.comboBox_sha3.activated.connect(lambda: MessageDigest.fileHash(self, "sha3_256", path))
-        self.comboBox_sha3.activated.connect(lambda: MessageDigest.fileHash(self, "sha3_384", path))
-        self.comboBox_sha3.activated.connect(lambda: MessageDigest.fileHash(self, "sha3_512", path))
+        self.comboBox_sha2.textActivated.connect(lambda: MessageDigest.fileHash(self, "sha224", path))
+        self.comboBox_sha2.textActivated.connect(lambda: MessageDigest.fileHash(self, "sha256", path))
+        self.comboBox_sha2.textActivated.connect(lambda: MessageDigest.fileHash(self, "sha384", path))
+        self.comboBox_sha2.textActivated.connect(lambda: MessageDigest.fileHash(self, "sha512", path))
+        self.comboBox_sha3.textActivated.connect(lambda: MessageDigest.fileHash(self, "sha3_224", path))
+        self.comboBox_sha3.textActivated.connect(lambda: MessageDigest.fileHash(self, "sha3_256", path))
+        self.comboBox_sha3.textActivated.connect(lambda: MessageDigest.fileHash(self, "sha3_384", path))
+        self.comboBox_sha3.textActivated.connect(lambda: MessageDigest.fileHash(self, "sha3_512", path))
         
         # Show Image QR Code
         self.btn_md5.clicked.connect(self.ShowImage_QR)
@@ -383,10 +383,6 @@ class MessageDigest(QDialog):
         qr.make(fit=True)
         img = qr.make_image(fill_color="black", back_color="white")
         img.save("./data/MessageDigest-QRCode.png")
-        ## Run on Kali Linux
-        '''
-        img.save("/home/kali/Gizmo/SaveQR/MessageDigest-QRCode.png")
-        '''
         return img
         
     def ShowImage_QR(self):
