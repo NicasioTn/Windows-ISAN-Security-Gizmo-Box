@@ -222,7 +222,7 @@ class Main(QDialog):
         if path.exists() == True: # check if file exists
             # file hashing
             print(f"File exists at: {path.exists()}")
-            
+            print(self.algorithm)
             if self.algorithm == 'md5':
                 MessageDigest.fileExtract(self, "md5", path)
             elif self.algorithm == 'sha1':
