@@ -69,9 +69,7 @@ class Main(QDialog):
         # --------------------- Message Digest ------------------------------
         self.lineEdit_inputLineKey.setVisible(False)
         self.btn_sendLine.setVisible(False)
-        self.btn_showBtnLine.clicked.connect(self.lineChat)
-        self.btn_sendLine.clicked.connect(lambda: MessageDigest.processLineKey(self))
-        
+
         # Load the list of hints from the JSON file
         with open('./data/hint.json', 'r') as openfile:
             json_object = json.load(openfile)
@@ -82,6 +80,8 @@ class Main(QDialog):
         self.btn_openDigest.clicked.connect(self.openFileDialog)
         self.btn_clearDigest.clicked.connect(self.clearMessageDigest)
         self.btn_saveDigest.clicked.connect(self.saveQRCode)
+        self.btn_showBtnLine.clicked.connect(self.showBtnLine)
+        self.btn_sendLine.clicked.connect(lambda: MessageDigest.processLineKey(self))
 
         
         if os.path.exists(self.lineEdit_inputDigest.text()) != True: # check if file exists
@@ -249,7 +249,7 @@ class Main(QDialog):
             MessageDigest.qrCodeGenerator(self, self.label_outTextHash.text())
             MessageDigest.ShowImage_QR(self)
     
-    def lineChat(self):
+    def showBtnLine(self):
         self.lineEdit_inputLineKey.setVisible(True)
         self.btn_sendLine.setVisible(True)
     
