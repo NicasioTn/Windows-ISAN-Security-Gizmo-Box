@@ -2301,7 +2301,7 @@ QPushButton:pressed {
 }
 QComboBox::down-arrow {
 	
-	image: url(:/icons/icons/Icon_down.png);
+	image: url(D:/ISAN Security Gizmo Box/assets/icons/Icon_down.png);
 }
 QComboBox:hover {
 	border: 1px solid;
@@ -2456,11 +2456,11 @@ QPushButton:focus {
 	border-bottom-right-radius: 3px;	
 }
 QComboBox::down-arrow {
-	image: url(:/icons/icons/Icon_down.png);
+	image: url(D:/ISAN Security Gizmo Box/assets/icons/Icon_down.png);
 }
 QComboBox:hover {
 	border: 1px solid;
-   border-color:  rgba(0,143,255,255);
+    border-color:  rgba(0,143,255,255);
 }
 
 </string>
@@ -2676,9 +2676,9 @@ QPushButton:pressed {
        <property name="geometry">
         <rect>
          <x>30</x>
-         <y>60</y>
+         <y>170</y>
          <width>541</width>
-         <height>231</height>
+         <height>101</height>
         </rect>
        </property>
        <property name="font">
@@ -2703,6 +2703,103 @@ QPushButton:pressed {
        </property>
        <property name="wordWrap">
         <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_outputHash">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>60</y>
+         <width>421</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>15</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>ArrowCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+  border: 1px solid gray;
+  color: rgba(40,43,61,255);
+  border-radius: 5px;
+}
+
+QLineEdit:hover {
+  border: 2px solid;
+  border-color: rgba(0,143,255,255);
+}
+QLineEdit:focus {
+  border: 1px solid;
+  border-color: rgba(88,199,141,255);
+}
+</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="placeholderText">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_copyOutput">
+       <property name="geometry">
+        <rect>
+         <x>460</x>
+         <y>70</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Bahnschrift SemiBold</family>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"> QPushButton{
+	    background-color: rgb(42, 49, 66);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Copy</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../icons/icon_save.png</normaloff>../icons/icon_save.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
        </property>
       </widget>
      </widget>

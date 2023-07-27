@@ -1172,7 +1172,7 @@ class Ui_Form(object):
 "}\n"
 "QComboBox::down-arrow {\n"
 "    \n"
-"    image: url(:/icons/icons/Icon_down.png);\n"
+"    image: url(D:/ISAN Security Gizmo Box/assets/icons/Icon_down.png);\n"
 "}\n"
 "QComboBox:hover {\n"
 "    border: 1px solid;\n"
@@ -1263,11 +1263,11 @@ class Ui_Form(object):
 "    border-bottom-right-radius: 3px;    \n"
 "}\n"
 "QComboBox::down-arrow {\n"
-"    image: url(:/icons/icons/Icon_down.png);\n"
+"    image: url(D:/ISAN Security Gizmo Box/assets/icons/Icon_down.png);\n"
 "}\n"
 "QComboBox:hover {\n"
 "    border: 1px solid;\n"
-"   border-color:  rgba(0,143,255,255);\n"
+"    border-color:  rgba(0,143,255,255);\n"
 "}\n"
 "\n"
 "")
@@ -1368,7 +1368,7 @@ class Ui_Form(object):
         self.label_resultDigest.setStyleSheet("color: rgb(42, 49, 66);")
         self.label_resultDigest.setObjectName("label_resultDigest")
         self.label_outTextHash = QtWidgets.QLabel(parent=self.widget_optputDigest)
-        self.label_outTextHash.setGeometry(QtCore.QRect(30, 60, 541, 231))
+        self.label_outTextHash.setGeometry(QtCore.QRect(30, 170, 541, 101))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(13)
@@ -1381,6 +1381,62 @@ class Ui_Form(object):
         self.label_outTextHash.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignTop)
         self.label_outTextHash.setWordWrap(True)
         self.label_outTextHash.setObjectName("label_outTextHash")
+        self.lineEdit_outputHash = QtWidgets.QLineEdit(parent=self.widget_optputDigest)
+        self.lineEdit_outputHash.setGeometry(QtCore.QRect(20, 60, 421, 61))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(15)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lineEdit_outputHash.setFont(font)
+        self.lineEdit_outputHash.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.ArrowCursor))
+        self.lineEdit_outputHash.setStyleSheet("QLineEdit {\n"
+"  border: 1px solid gray;\n"
+"  color: rgba(40,43,61,255);\n"
+"  border-radius: 5px;\n"
+"}\n"
+"\n"
+"QLineEdit:hover {\n"
+"  border: 2px solid;\n"
+"  border-color: rgba(0,143,255,255);\n"
+"}\n"
+"QLineEdit:focus {\n"
+"  border: 1px solid;\n"
+"  border-color: rgba(88,199,141,255);\n"
+"}\n"
+"")
+        self.lineEdit_outputHash.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.lineEdit_outputHash.setReadOnly(True)
+        self.lineEdit_outputHash.setPlaceholderText("")
+        self.lineEdit_outputHash.setObjectName("lineEdit_outputHash")
+        self.btn_copyOutput = QtWidgets.QPushButton(parent=self.widget_optputDigest)
+        self.btn_copyOutput.setGeometry(QtCore.QRect(460, 70, 111, 41))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_copyOutput.setFont(font)
+        self.btn_copyOutput.setStyleSheet(" QPushButton{\n"
+"        background-color: rgb(42, 49, 66);\n"
+"        border-radius: 5px;\n"
+"        color: rgb(255, 255, 255);\n"
+"    }\n"
+" QPushButton{\n"
+"        border-radius: 10px;\n"
+"    }\n"
+"QPushButton:hover {\n"
+"     border-radius: 10px;\n"
+"     background-color: rgba(0,143,255,255);\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(120, 120, 120);\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"")
+        self.btn_copyOutput.setIcon(icon8)
+        self.btn_copyOutput.setIconSize(QtCore.QSize(30, 30))
+        self.btn_copyOutput.setObjectName("btn_copyOutput")
         self.btn_backDigest = QtWidgets.QPushButton(parent=self.page_digest)
         self.btn_backDigest.setGeometry(QtCore.QRect(200, 30, 93, 31))
         self.btn_backDigest.setStyleSheet(" QPushButton{\n"
@@ -2186,6 +2242,7 @@ class Ui_Form(object):
         self.btn_saveDigest.setText(_translate("Form", "SAVE"))
         self.btn_showBtnLine.setText(_translate("Form", "Line chat"))
         self.label_resultDigest.setText(_translate("Form", "RESULT"))
+        self.btn_copyOutput.setText(_translate("Form", "Copy"))
         self.lineEdit_inputLineKey.setPlaceholderText(_translate("Form", "Enter Line API Token"))
         self.btn_sendLine.setText(_translate("Form", "Send"))
         self.label_isanSec_nwu.setText(_translate("Form", "ISAN SECURITY GIZMO BOX"))
