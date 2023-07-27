@@ -91,6 +91,7 @@ class Main(QDialog):
 
             if self.comboBox_sha2.currentIndex() != 0:
                 size_of_sha2 = self.comboBox_sha2.currentText()
+                #print(size_of_sha2)
                 if size_of_sha2 == "224 BIT":
                     self.comboBox_sha2.activated.connect(lambda: self.hash("sha2-224"))
                 elif size_of_sha2 == "256 BIT":
@@ -102,7 +103,7 @@ class Main(QDialog):
             
             if self.comboBox_sha3.currentIndex() != -1:
                 size_of_sha3 = self.comboBox_sha3.currentText()
-                print(size_of_sha3)
+                #print(size_of_sha3)
                 if size_of_sha3 == "224 BIT":
                     self.comboBox_sha3.activated.connect(lambda: self.hash("sha3_224"))
                 elif size_of_sha3 == "256 BIT":
@@ -654,8 +655,19 @@ class MessageDigest(QDialog):
             
             if response.status_code == 200:
                 print("Image sent successfully!")
+                self.lineEdit_inputLineKey.setStyleSheet("border: 1px solid green;")
+            elif response.status_code == 400:
+                print("Bad request!")
+                self.lineEdit_inputLineKey.setStyleSheet("border: 1px solid red;")
+            elif response.status_code == 401:
+                print("Invalid access token!")
+                self.lineEdit_inputLineKey.setStyleSheet("border: 1px solid orange;")
+            elif response.status_code == 500:
+                print("Server error!")
+                self.lineEdit_inputLineKey.setStyleSheet("border: 1px solid yellow;")
             else:
-                print("Failed to send image.")
+                print("Process over time.")
+                self.lineEdit_inputLineKey.setStyleSheet("border: 1px solid grey;")
         else:
             self.lineEdit_inputLineKey.setStyleSheet("border: 1px solid red;")
     
