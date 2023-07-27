@@ -2597,6 +2597,56 @@ QPushButton:pressed {
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
+       <widget class="QPushButton" name="btn_showBtnLine">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>240</y>
+          <width>121</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Bahnschrift SemiBold</family>
+          <pointsize>11</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"> QPushButton{
+	    background-color: rgb(42, 49, 66);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Line chat</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../icons/icon_save.png</normaloff>../icons/icon_save.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+       </widget>
       </widget>
       <widget class="QLabel" name="label_resultDigest">
        <property name="geometry">
@@ -2676,6 +2726,103 @@ QPushButton:pressed {
       <property name="icon">
        <iconset>
         <normaloff>../icons/icon_back.png</normaloff>../icons/icon_back.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_inputLineKey">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>660</y>
+        <width>461</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+  border: 1px solid gray;
+  color: rgba(40,43,61,255);
+  border-radius: 5px;
+}
+
+QLineEdit:hover {
+  border: 2px solid;
+  border-color: rgba(0,143,255,255);
+}
+QLineEdit:focus {
+  border: 1px solid;
+  border-color: rgba(88,199,141,255);
+}
+</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>Enter Line API Token</string>
+      </property>
+      <property name="clearButtonEnabled">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_sendLine">
+      <property name="geometry">
+       <rect>
+        <x>760</x>
+        <y>660</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bahnschrift SemiBold</family>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QPushButton{
+	    background-color: rgb(42, 49, 66);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Send</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../icons/icon_save.png</normaloff>../icons/icon_save.png</iconset>
       </property>
       <property name="iconSize">
        <size>

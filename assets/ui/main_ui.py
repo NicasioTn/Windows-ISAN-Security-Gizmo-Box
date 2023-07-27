@@ -1329,6 +1329,34 @@ class Ui_Form(object):
         self.label_outQRCode.setText("")
         self.label_outQRCode.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_outQRCode.setObjectName("label_outQRCode")
+        self.btn_showBtnLine = QtWidgets.QPushButton(parent=self.widget_qr)
+        self.btn_showBtnLine.setGeometry(QtCore.QRect(50, 240, 121, 41))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_showBtnLine.setFont(font)
+        self.btn_showBtnLine.setStyleSheet(" QPushButton{\n"
+"        background-color: rgb(42, 49, 66);\n"
+"        border-radius: 5px;\n"
+"        color: rgb(255, 255, 255);\n"
+"    }\n"
+" QPushButton{\n"
+"        border-radius: 10px;\n"
+"    }\n"
+"QPushButton:hover {\n"
+"     border-radius: 10px;\n"
+"     background-color: rgba(0,143,255,255);\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(120, 120, 120);\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"")
+        self.btn_showBtnLine.setIcon(icon8)
+        self.btn_showBtnLine.setIconSize(QtCore.QSize(30, 30))
+        self.btn_showBtnLine.setObjectName("btn_showBtnLine")
         self.label_resultDigest = QtWidgets.QLabel(parent=self.widget_optputDigest)
         self.label_resultDigest.setGeometry(QtCore.QRect(20, 20, 61, 31))
         font = QtGui.QFont()
@@ -1362,6 +1390,61 @@ class Ui_Form(object):
         self.btn_backDigest.setIcon(icon2)
         self.btn_backDigest.setIconSize(QtCore.QSize(30, 30))
         self.btn_backDigest.setObjectName("btn_backDigest")
+        self.lineEdit_inputLineKey = QtWidgets.QLineEdit(parent=self.page_digest)
+        self.lineEdit_inputLineKey.setGeometry(QtCore.QRect(280, 660, 461, 41))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lineEdit_inputLineKey.setFont(font)
+        self.lineEdit_inputLineKey.setAutoFillBackground(False)
+        self.lineEdit_inputLineKey.setStyleSheet("QLineEdit {\n"
+"  border: 1px solid gray;\n"
+"  color: rgba(40,43,61,255);\n"
+"  border-radius: 5px;\n"
+"}\n"
+"\n"
+"QLineEdit:hover {\n"
+"  border: 2px solid;\n"
+"  border-color: rgba(0,143,255,255);\n"
+"}\n"
+"QLineEdit:focus {\n"
+"  border: 1px solid;\n"
+"  border-color: rgba(88,199,141,255);\n"
+"}\n"
+"")
+        self.lineEdit_inputLineKey.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.lineEdit_inputLineKey.setClearButtonEnabled(False)
+        self.lineEdit_inputLineKey.setObjectName("lineEdit_inputLineKey")
+        self.btn_sendLine = QtWidgets.QPushButton(parent=self.page_digest)
+        self.btn_sendLine.setGeometry(QtCore.QRect(760, 660, 121, 41))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_sendLine.setFont(font)
+        self.btn_sendLine.setStyleSheet(" QPushButton{\n"
+"        background-color: rgb(42, 49, 66);\n"
+"        border-radius: 5px;\n"
+"        color: rgb(255, 255, 255);\n"
+"    }\n"
+" QPushButton{\n"
+"        border-radius: 10px;\n"
+"    }\n"
+"QPushButton:hover {\n"
+"     border-radius: 10px;\n"
+"     background-color: rgba(0,143,255,255);\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(120, 120, 120);\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"")
+        self.btn_sendLine.setIcon(icon8)
+        self.btn_sendLine.setIconSize(QtCore.QSize(30, 30))
+        self.btn_sendLine.setObjectName("btn_sendLine")
         self.stackedWidget.addWidget(self.page_digest)
         self.page_networkUser_home = QtWidgets.QWidget()
         self.page_networkUser_home.setObjectName("page_networkUser_home")
@@ -2101,7 +2184,10 @@ class Ui_Form(object):
         self.comboBox_sha3.setItemText(3, _translate("Form", "384 BIT"))
         self.comboBox_sha3.setItemText(4, _translate("Form", "512 BIT"))
         self.btn_saveDigest.setText(_translate("Form", "SAVE"))
+        self.btn_showBtnLine.setText(_translate("Form", "Line chat"))
         self.label_resultDigest.setText(_translate("Form", "RESULT"))
+        self.lineEdit_inputLineKey.setPlaceholderText(_translate("Form", "Enter Line API Token"))
+        self.btn_sendLine.setText(_translate("Form", "Send"))
         self.label_isanSec_nwu.setText(_translate("Form", "ISAN SECURITY GIZMO BOX"))
         self.btn_vulner.setText(_translate("Form", "VULNERABILITY SCANNING"))
         self.label_networkUser.setText(_translate("Form", "NETWORK ENGINEER"))
