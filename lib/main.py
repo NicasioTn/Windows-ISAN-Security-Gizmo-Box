@@ -19,7 +19,7 @@ class Main(QDialog):
     algorithm = ''
     nordpass_common_passwords = []
     hint_btn = []
-    file_state = 0
+    state_detect = 0
     path = ''
 
     def __init__(self):
@@ -104,18 +104,21 @@ class Main(QDialog):
         self.lineEdit_inputLineKey.setVisible(False)
         self.btn_sendLine.setVisible(False)
         self.lineEdit_inputDigest.textChanged.connect(lambda: self.checkFile_Text())
+        
             
     def checkFile_Text(self):
         if os.path.exists(self.lineEdit_inputDigest.text()) == True: # check if file exists
             print("File")
+            self.state_detect = 1
             self.btn_md5.clicked.connect(lambda: MessageDigest.fileExtract(self, "md5", self.getPath()))
             self.btn_sha1.clicked.connect(lambda: MessageDigest.fileExtract(self, "sha1", self.getPath()))
             self.comboBox_sha2.activated.connect(lambda: MessageDigest.fileExtract(self, "sha2_" + self.comboBox_sha2.currentText(), self.getPath()))
             self.comboBox_sha3.activated.connect(lambda: MessageDigest.fileExtract(self, "sha3_" + self.comboBox_sha3.currentText(), self.getPath()))
         else:
+            self.state_detect = 0
             print("Plaintext")
-            self.btn_md5.clicked.connect(lambda: self.hash("md5"))
-            self.btn_sha1.clicked.connect(lambda: self.hash("sha1"))
+            self.btn_md5.clicked.connect(lambda: MessageDigest.hash(self, "md5"))
+            self.btn_sha1.clicked.connect(lambda: MessageDigest.hash(self, "sha1"))
             self.comboBox_sha2.activated.connect(lambda: self.getComboBox_sha2())
             self.comboBox_sha3.activated.connect(lambda: self.getComboBox_sha3())
 
@@ -172,12 +175,13 @@ class Main(QDialog):
         PasswordEvaluation.check_common_password(self, password, self.nordpass_common_passwords)
     
     def getComboBox_sha2(self):
-        MessageDigest.hash("sha2_" + self.comboBox_sha2.currentText())
+        
+        MessageDigest.hash(self, "sha2_" + self.comboBox_sha2.currentText())
         self.algorithm = 'SHA2-' + self.comboBox_sha2.currentText()
-        self.comboBox_sha3.setCurrentIndex(0)
+        self.comboBox_sha3.setCurrentIndex(0) 
 
     def getComboBox_sha3(self):
-        MessageDigest.hash("sha3_" + self.comboBox_sha3.currentText())
+        MessageDigest.hash(self, "sha3_" + self.comboBox_sha3.currentText())
         self.algorithm = 'SHA3-' + self.comboBox_sha3.currentText()
         self.comboBox_sha2.setCurrentIndex(0)
 
@@ -205,7 +209,7 @@ class Main(QDialog):
         if self.lineEdit_outputHash.text() != '':
             MessageDigest.qrCodeGenerator(self, self.lineEdit_outputHash.text())
             MessageDigest.ShowImage_QR(self)
-    
+
     def showBtnLine(self):
         self.lineEdit_inputLineKey.setVisible(True)
         self.btn_sendLine.setVisible(True)
@@ -397,6 +401,9 @@ class MessageDigest(QDialog):
         elif type == "sha3_512 BIT":
             self.lineEdit_outputHash.setText(MessageDigest.sha3_512(self, self.lineEdit_inputDigest.text()))if self.lineEdit_inputDigest.text() != '' else self.lineEdit_outputHash.setText('')
             self.algorithm = 'SHA3-512'
+        
+        # reset copy button
+        self.btn_copyOutput.setText('Copy')
 
     def qrCodeGenerator(self, hash):
         qr = qrcode.QRCode(
@@ -419,6 +426,7 @@ class MessageDigest(QDialog):
         
     
     def fileExtract(self, type, path):
+        print(type)
         if type == "md5":
             self.btn_md5.clicked.connect(lambda: MessageDigest.fileHash(self, "md5", path))
         elif type == "sha1":
