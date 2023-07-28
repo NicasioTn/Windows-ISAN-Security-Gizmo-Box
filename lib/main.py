@@ -428,25 +428,25 @@ class MessageDigest(QDialog):
     def fileExtract(self, type, path):
         print(type)
         if type == "md5":
-            self.btn_md5.clicked.connect(lambda: MessageDigest.fileHash(self, "md5", path))
+            MessageDigest.fileHash(self, "md5", path)
         elif type == "sha1":
-            self.btn_sha1.clicked.connect(lambda: MessageDigest.fileHash(self, "sha1", path))
+            MessageDigest.fileHash(self, "sha1", path)
         elif type == "sha2_224 BIT":
-            self.comboBox_sha2.textActivated.connect(lambda: MessageDigest.fileHash(self, "sha224", path))
+            MessageDigest.fileHash(self, "sha224", path)
         elif type == "sha2_256 BIT":
-            self.comboBox_sha2.textActivated.connect(lambda: MessageDigest.fileHash(self, "sha256", path))
+            MessageDigest.fileHash(self, "sha256", path)
         elif type == "sha2_384 BIT":
-            self.comboBox_sha2.textActivated.connect(lambda: MessageDigest.fileHash(self, "sha384", path))
+            MessageDigest.fileHash(self, "sha384", path)
         elif type == "sha2_512 BIT":
-            self.comboBox_sha2.textActivated.connect(lambda: MessageDigest.fileHash(self, "sha512", path))
+            MessageDigest.fileHash(self, "sha512", path)
         elif type == "sha3_224 BIT":
-            self.comboBox_sha3.textActivated.connect(lambda: MessageDigest.fileHash(self, "sha3_224", path))
+            MessageDigest.fileHash(self, "sha3_224", path)
         elif type == "sha3_256 BIT":
-            self.comboBox_sha3.textActivated.connect(lambda: MessageDigest.fileHash(self, "sha3_256", path))
+            MessageDigest.fileHash(self, "sha3_256", path)
         elif type == "sha3_384 BIT":
-            self.comboBox_sha3.textActivated.connect(lambda: MessageDigest.fileHash(self, "sha3_384", path))
+            MessageDigest.fileHash(self, "sha3_384", path)
         elif type == "sha3_512 BIT":
-            self.comboBox_sha3.textActivated.connect(lambda: MessageDigest.fileHash(self, "sha3_512", path))
+            MessageDigest.fileHash(self, "sha3_512", path)
 
         # Show Image QR Code
         self.btn_md5.clicked.connect(self.ShowImage_QR)
