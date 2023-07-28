@@ -1053,7 +1053,7 @@ class Ui_Form(object):
         self.page_digest = QtWidgets.QWidget()
         self.page_digest.setObjectName("page_digest")
         self.label_digest = QtWidgets.QLabel(parent=self.page_digest)
-        self.label_digest.setGeometry(QtCore.QRect(600, 50, 281, 31))
+        self.label_digest.setGeometry(QtCore.QRect(640, 50, 281, 31))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(20)
@@ -1061,6 +1061,7 @@ class Ui_Form(object):
         font.setWeight(75)
         self.label_digest.setFont(font)
         self.label_digest.setStyleSheet("color: rgb(38, 50, 56);")
+        self.label_digest.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_digest.setObjectName("label_digest")
         self.lineEdit_inputDigest = QtWidgets.QLineEdit(parent=self.page_digest)
         self.lineEdit_inputDigest.setGeometry(QtCore.QRect(370, 110, 811, 41))
@@ -1171,7 +1172,7 @@ class Ui_Form(object):
 "}\n"
 "QComboBox::down-arrow {\n"
 "    \n"
-"    image: url(:/icons/icons/Icon_down.png);\n"
+"    image: url(D:/ISAN Security Gizmo Box/assets/icons/Icon_down.png);\n"
 "}\n"
 "QComboBox:hover {\n"
 "    border: 1px solid;\n"
@@ -1186,8 +1187,6 @@ class Ui_Form(object):
         self.comboBox_sha2.addItem("")
         self.comboBox_sha2.addItem("")
         self.comboBox_sha2.addItem("")
-        self.comboBox_sha2.addItem("")
-        self.comboBox_sha2.setItemText(5, "")
         self.btn_md5 = QtWidgets.QPushButton(parent=self.page_digest)
         self.btn_md5.setGeometry(QtCore.QRect(460, 260, 111, 41))
         font = QtGui.QFont()
@@ -1264,12 +1263,11 @@ class Ui_Form(object):
 "    border-bottom-right-radius: 3px;    \n"
 "}\n"
 "QComboBox::down-arrow {\n"
-"    \n"
-"    image: url(:/icons/icons/Icon_down.png);\n"
+"    image: url(D:/ISAN Security Gizmo Box/assets/icons/Icon_down.png);\n"
 "}\n"
 "QComboBox:hover {\n"
 "    border: 1px solid;\n"
-"   border-color:  rgba(0,143,255,255);\n"
+"    border-color:  rgba(0,143,255,255);\n"
 "}\n"
 "\n"
 "")
@@ -1280,23 +1278,11 @@ class Ui_Form(object):
         self.comboBox_sha3.addItem("")
         self.comboBox_sha3.addItem("")
         self.comboBox_sha3.addItem("")
-        self.comboBox_sha3.addItem("")
-        self.comboBox_sha3.setItemText(5, "")
         self.widget_optputDigest = QtWidgets.QWidget(parent=self.page_digest)
         self.widget_optputDigest.setGeometry(QtCore.QRect(280, 320, 981, 311))
         self.widget_optputDigest.setStyleSheet("background-color:rgba(242,243,245,255);\n"
 "border-radius: 5px;")
         self.widget_optputDigest.setObjectName("widget_optputDigest")
-        self.label_resultDigest = QtWidgets.QLabel(parent=self.widget_optputDigest)
-        self.label_resultDigest.setGeometry(QtCore.QRect(20, 20, 81, 31))
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(13)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_resultDigest.setFont(font)
-        self.label_resultDigest.setStyleSheet("color: rgb(42, 49, 66);")
-        self.label_resultDigest.setObjectName("label_resultDigest")
         self.widget_qr = QtWidgets.QWidget(parent=self.widget_optputDigest)
         self.widget_qr.setGeometry(QtCore.QRect(590, 10, 381, 291))
         self.widget_qr.setStyleSheet("background-color: rgb(255, 255, 255);\n"
@@ -1332,27 +1318,111 @@ class Ui_Form(object):
         self.btn_saveDigest.setIcon(icon8)
         self.btn_saveDigest.setIconSize(QtCore.QSize(30, 30))
         self.btn_saveDigest.setObjectName("btn_saveDigest")
-        self.label_outDic_4 = QtWidgets.QLabel(parent=self.widget_qr)
-        self.label_outDic_4.setGeometry(QtCore.QRect(40, 30, 311, 191))
+        self.label_outQRCode = QtWidgets.QLabel(parent=self.widget_qr)
+        self.label_outQRCode.setGeometry(QtCore.QRect(40, 30, 311, 191))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(9)
         font.setBold(True)
         font.setWeight(75)
-        self.label_outDic_4.setFont(font)
-        self.label_outDic_4.setText("")
-        self.label_outDic_4.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.label_outDic_4.setObjectName("label_outDic_4")
-        self.label_outDic_3 = QtWidgets.QLabel(parent=self.widget_optputDigest)
-        self.label_outDic_3.setGeometry(QtCore.QRect(140, 30, 421, 16))
+        self.label_outQRCode.setFont(font)
+        self.label_outQRCode.setText("")
+        self.label_outQRCode.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_outQRCode.setObjectName("label_outQRCode")
+        self.btn_showBtnLine = QtWidgets.QPushButton(parent=self.widget_qr)
+        self.btn_showBtnLine.setGeometry(QtCore.QRect(50, 240, 121, 41))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(9)
+        font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
-        self.label_outDic_3.setFont(font)
-        self.label_outDic_3.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.label_outDic_3.setObjectName("label_outDic_3")
+        self.btn_showBtnLine.setFont(font)
+        self.btn_showBtnLine.setStyleSheet(" QPushButton{\n"
+"        background-color: rgb(42, 49, 66);\n"
+"        border-radius: 5px;\n"
+"        color: rgb(255, 255, 255);\n"
+"    }\n"
+" QPushButton{\n"
+"        border-radius: 10px;\n"
+"    }\n"
+"QPushButton:hover {\n"
+"     border-radius: 10px;\n"
+"     background-color: rgba(0,143,255,255);\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(120, 120, 120);\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"")
+        self.btn_showBtnLine.setIcon(icon8)
+        self.btn_showBtnLine.setIconSize(QtCore.QSize(30, 30))
+        self.btn_showBtnLine.setObjectName("btn_showBtnLine")
+        self.label_resultDigest = QtWidgets.QLabel(parent=self.widget_optputDigest)
+        self.label_resultDigest.setGeometry(QtCore.QRect(20, 20, 61, 31))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_resultDigest.setFont(font)
+        self.label_resultDigest.setStyleSheet("color: rgb(42, 49, 66);")
+        self.label_resultDigest.setObjectName("label_resultDigest")
+        self.lineEdit_outputHash = QtWidgets.QLineEdit(parent=self.widget_optputDigest)
+        self.lineEdit_outputHash.setGeometry(QtCore.QRect(20, 60, 421, 61))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(15)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lineEdit_outputHash.setFont(font)
+        self.lineEdit_outputHash.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.ArrowCursor))
+        self.lineEdit_outputHash.setStyleSheet("QLineEdit {\n"
+"  border: 1px solid gray;\n"
+"  color: rgba(40,43,61,255);\n"
+"  border-radius: 5px;\n"
+"}\n"
+"\n"
+"QLineEdit:hover {\n"
+"  border: 2px solid;\n"
+"  border-color: rgba(0,143,255,255);\n"
+"}\n"
+"QLineEdit:focus {\n"
+"  border: 1px solid;\n"
+"  border-color: rgba(88,199,141,255);\n"
+"}\n"
+"")
+        self.lineEdit_outputHash.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.lineEdit_outputHash.setReadOnly(True)
+        self.lineEdit_outputHash.setPlaceholderText("")
+        self.lineEdit_outputHash.setObjectName("lineEdit_outputHash")
+        self.btn_copyOutput = QtWidgets.QPushButton(parent=self.widget_optputDigest)
+        self.btn_copyOutput.setGeometry(QtCore.QRect(460, 70, 111, 41))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_copyOutput.setFont(font)
+        self.btn_copyOutput.setStyleSheet(" QPushButton{\n"
+"        background-color: rgb(42, 49, 66);\n"
+"        border-radius: 5px;\n"
+"        color: rgb(255, 255, 255);\n"
+"    }\n"
+" QPushButton{\n"
+"        border-radius: 10px;\n"
+"    }\n"
+"QPushButton:hover {\n"
+"     border-radius: 10px;\n"
+"     background-color: rgba(0,143,255,255);\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(120, 120, 120);\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"")
+        self.btn_copyOutput.setIcon(icon8)
+        self.btn_copyOutput.setIconSize(QtCore.QSize(30, 30))
+        self.btn_copyOutput.setObjectName("btn_copyOutput")
         self.btn_backDigest = QtWidgets.QPushButton(parent=self.page_digest)
         self.btn_backDigest.setGeometry(QtCore.QRect(200, 30, 93, 31))
         self.btn_backDigest.setStyleSheet(" QPushButton{\n"
@@ -1362,6 +1432,61 @@ class Ui_Form(object):
         self.btn_backDigest.setIcon(icon2)
         self.btn_backDigest.setIconSize(QtCore.QSize(30, 30))
         self.btn_backDigest.setObjectName("btn_backDigest")
+        self.lineEdit_inputLineKey = QtWidgets.QLineEdit(parent=self.page_digest)
+        self.lineEdit_inputLineKey.setGeometry(QtCore.QRect(280, 660, 461, 41))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lineEdit_inputLineKey.setFont(font)
+        self.lineEdit_inputLineKey.setAutoFillBackground(False)
+        self.lineEdit_inputLineKey.setStyleSheet("QLineEdit {\n"
+"  border: 1px solid gray;\n"
+"  color: rgba(40,43,61,255);\n"
+"  border-radius: 5px;\n"
+"}\n"
+"\n"
+"QLineEdit:hover {\n"
+"  border: 2px solid;\n"
+"  border-color: rgba(0,143,255,255);\n"
+"}\n"
+"QLineEdit:focus {\n"
+"  border: 1px solid;\n"
+"  border-color: rgba(88,199,141,255);\n"
+"}\n"
+"")
+        self.lineEdit_inputLineKey.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.lineEdit_inputLineKey.setClearButtonEnabled(False)
+        self.lineEdit_inputLineKey.setObjectName("lineEdit_inputLineKey")
+        self.btn_sendLine = QtWidgets.QPushButton(parent=self.page_digest)
+        self.btn_sendLine.setGeometry(QtCore.QRect(760, 660, 121, 41))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_sendLine.setFont(font)
+        self.btn_sendLine.setStyleSheet(" QPushButton{\n"
+"        background-color: rgb(42, 49, 66);\n"
+"        border-radius: 5px;\n"
+"        color: rgb(255, 255, 255);\n"
+"    }\n"
+" QPushButton{\n"
+"        border-radius: 10px;\n"
+"    }\n"
+"QPushButton:hover {\n"
+"     border-radius: 10px;\n"
+"     background-color: rgba(0,143,255,255);\n"
+"}\n"
+"QPushButton:pressed {\n"
+"    background-color: rgb(120, 120, 120);\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"")
+        self.btn_sendLine.setIcon(icon8)
+        self.btn_sendLine.setIconSize(QtCore.QSize(30, 30))
+        self.btn_sendLine.setObjectName("btn_sendLine")
         self.stackedWidget.addWidget(self.page_digest)
         self.page_networkUser_home = QtWidgets.QWidget()
         self.page_networkUser_home.setObjectName("page_networkUser_home")
@@ -2100,9 +2225,12 @@ class Ui_Form(object):
         self.comboBox_sha3.setItemText(2, _translate("Form", "256 BIT"))
         self.comboBox_sha3.setItemText(3, _translate("Form", "384 BIT"))
         self.comboBox_sha3.setItemText(4, _translate("Form", "512 BIT"))
-        self.label_resultDigest.setText(_translate("Form", "RESULT"))
         self.btn_saveDigest.setText(_translate("Form", "SAVE"))
-        self.label_outDic_3.setText(_translate("Form", "--"))
+        self.btn_showBtnLine.setText(_translate("Form", "Line chat"))
+        self.label_resultDigest.setText(_translate("Form", "RESULT"))
+        self.btn_copyOutput.setText(_translate("Form", "Copy"))
+        self.lineEdit_inputLineKey.setPlaceholderText(_translate("Form", "Enter Line API Token"))
+        self.btn_sendLine.setText(_translate("Form", "Send"))
         self.label_isanSec_nwu.setText(_translate("Form", "ISAN SECURITY GIZMO BOX"))
         self.btn_vulner.setText(_translate("Form", "VULNERABILITY SCANNING"))
         self.label_networkUser.setText(_translate("Form", "NETWORK ENGINEER"))
