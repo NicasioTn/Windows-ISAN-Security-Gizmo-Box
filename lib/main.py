@@ -218,32 +218,34 @@ class Main(QDialog):
     def openFileDialog(self):
         path = MessageDigest.open_file_dialog(self)
         #print(type(path)) # <class 'pathlib.WindowsPath'>
-        
-        if path.exists() == True: # check if file exists
-            # file hashing
-            print(f"File exists at: {path.exists()}")
-            print(self.algorithm)
-            if self.algorithm == 'md5':
-                MessageDigest.fileExtract(self, "md5", path)
-            elif self.algorithm == 'sha1':
-                MessageDigest.fileExtract(self, "sha1", path)
-            elif self.algorithm == 'sha2-224':
-                MessageDigest.fileExtract(self, "sha2_224 BIT", path)
-            elif self.algorithm == 'sha2-256':
-                MessageDigest.fileExtract(self, "sha2_256 BIT", path)
-            elif self.algorithm == 'sha2-384':
-                MessageDigest.fileExtract(self, "sha2_384 BIT", path)
-            elif self.algorithm == 'sha2-512':
-                MessageDigest.fileExtract(self, "sha2_512 BIT", path)
-            elif self.algorithm == 'sha3-224':
-                MessageDigest.fileExtract(self, "sha3_224 BIT", path)
-            elif self.algorithm == 'sha3-256':
-                MessageDigest.fileExtract(self, "sha3_256 BIT", path)
-            elif self.algorithm == 'sha3-384':
-                MessageDigest.fileExtract(self, "sha3_384 BIT", path)
-            elif self.algorithm == 'sha3-512':
-                MessageDigest.fileExtract(self, "sha3_512 BIT", path)
-            return path
+        try:
+            if path.exists() == True: # check if file exists
+                # file hashing
+                print(f"File exists at: {path.exists()}")
+                print(self.algorithm)
+                if self.algorithm == 'md5':
+                    MessageDigest.fileExtract(self, "md5", path)
+                elif self.algorithm == 'sha1':
+                    MessageDigest.fileExtract(self, "sha1", path)
+                elif self.algorithm == 'sha2-224':
+                    MessageDigest.fileExtract(self, "sha2_224 BIT", path)
+                elif self.algorithm == 'sha2-256':
+                    MessageDigest.fileExtract(self, "sha2_256 BIT", path)
+                elif self.algorithm == 'sha2-384':
+                    MessageDigest.fileExtract(self, "sha2_384 BIT", path)
+                elif self.algorithm == 'sha2-512':
+                    MessageDigest.fileExtract(self, "sha2_512 BIT", path)
+                elif self.algorithm == 'sha3-224':
+                    MessageDigest.fileExtract(self, "sha3_224 BIT", path)
+                elif self.algorithm == 'sha3-256':
+                    MessageDigest.fileExtract(self, "sha3_256 BIT", path)
+                elif self.algorithm == 'sha3-384':
+                    MessageDigest.fileExtract(self, "sha3_384 BIT", path)
+                elif self.algorithm == 'sha3-512':
+                    MessageDigest.fileExtract(self, "sha3_512 BIT", path)
+        except AttributeError as e:
+            print(f"Empty file or Not found")
+
         return path
         
 
