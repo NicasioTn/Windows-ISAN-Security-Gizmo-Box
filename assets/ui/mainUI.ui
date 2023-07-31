@@ -2813,20 +2813,35 @@ border-radius: 5px;</string>
                                 </widget>
                                </item>
                                <item>
-                                <widget class="QLabel" name="label_outputTextDigest">
-                                 <property name="font">
-                                  <font>
-                                   <family>Bahnschrift SemiBold</family>
-                                   <pointsize>11</pointsize>
-                                   <weight>75</weight>
-                                   <bold>true</bold>
-                                  </font>
+                                <widget class="QLineEdit" name="lineEdit_outputTextDigest">
+                                 <property name="minimumSize">
+                                  <size>
+                                   <width>650</width>
+                                   <height>35</height>
+                                  </size>
                                  </property>
-                                 <property name="text">
-                                  <string/>
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>650</width>
+                                   <height>35</height>
+                                  </size>
                                  </property>
-                                 <property name="alignment">
-                                  <set>Qt::AlignCenter</set>
+                                 <property name="styleSheet">
+                                  <string notr="true">QLineEdit {
+  border: 1px solid gray;
+  color: rgba(40,43,61,255);
+  border-radius: 5px;
+}
+
+QLineEdit:hover {
+  border: 2px solid;
+  border-color: rgba(0,143,255,255);
+}
+QLineEdit:focus {
+  border: 1px solid;
+  border-color: rgba(88,199,141,255);
+}
+</string>
                                  </property>
                                 </widget>
                                </item>
@@ -2906,18 +2921,33 @@ QPushButton:pressed {
                                  <property name="frameShadow">
                                   <enum>QFrame::Raised</enum>
                                  </property>
-                                 <layout class="QHBoxLayout" name="horizontalLayout_40">
+                                 <layout class="QVBoxLayout" name="verticalLayout_26">
+                                  <item>
+                                   <widget class="QLabel" name="label_linrAPIDigest">
+                                    <property name="font">
+                                     <font>
+                                      <family>Bahnschrift SemiBold</family>
+                                      <pointsize>13</pointsize>
+                                      <weight>75</weight>
+                                      <bold>true</bold>
+                                     </font>
+                                    </property>
+                                    <property name="text">
+                                     <string>LINE API TOKEN</string>
+                                    </property>
+                                   </widget>
+                                  </item>
                                   <item>
                                    <widget class="QLineEdit" name="lineEdit_digest_2">
                                     <property name="minimumSize">
                                      <size>
-                                      <width>500</width>
+                                      <width>630</width>
                                       <height>35</height>
                                      </size>
                                     </property>
                                     <property name="maximumSize">
                                      <size>
-                                      <width>500</width>
+                                      <width>630</width>
                                       <height>35</height>
                                      </size>
                                     </property>
@@ -2954,7 +2984,7 @@ QLineEdit:focus {
                                     </property>
                                    </widget>
                                   </item>
-                                  <item>
+                                  <item alignment="Qt::AlignRight|Qt::AlignBottom">
                                    <widget class="QPushButton" name="btn_sendDigest">
                                     <property name="minimumSize">
                                      <size>
