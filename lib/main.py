@@ -94,6 +94,8 @@ class Main(QDialog):
 
     def PasswordEvaluationHome(self):
         self.stackedWidget.setCurrentWidget(self.page_password)
+        self.pushButton_3.setVisible(False)
+        self.label_outputSearchNordPass.setText('Start typing to see the entropy score')
 
     def openMalwareHome(self):
         self.stackedWidget.setCurrentWidget(self.page_malware)
@@ -237,12 +239,15 @@ class PasswordEvaluation(QDialog):
             self.label_outputEntropy.setText('')
             self.label_outputSearchNordPass.setText('Start typing to see the entropy score')
             self.label_outputPasswordStrength.setText('')
+            self.pushButton_3.setVisible(False)
         else:
             if password in self.nordpass_common_passwords:
                 print(self.nordpass_common_passwords.index(password))
                 self.label_outputSearchNordPass.setText('Found in the top 200 most common passwords by NordPass')
+                self.pushButton_3.setVisible(False)
             else:
                 self.label_outputSearchNordPass.setText('Not found in the list')
+                self.pushButton_3.setVisible(True) if self.label_outputSearchNordPass.text() == '' or self.label_outputSearchNordPass.text() == 'Not found in the list' else self.pushButton_3.setVisible(False)
 
     def update(self):
         self.chk_length.setChecked(False)
