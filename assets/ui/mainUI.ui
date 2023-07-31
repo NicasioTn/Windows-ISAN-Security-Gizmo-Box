@@ -1711,7 +1711,7 @@ QPushButton:pressed {
                                <enum>QFrame::Raised</enum>
                               </property>
                               <layout class="QVBoxLayout" name="verticalLayout_15">
-                               <item>
+                               <item alignment="Qt::AlignHCenter">
                                 <widget class="QFrame" name="frame_78">
                                  <property name="frameShape">
                                   <enum>QFrame::StyledPanel</enum>
@@ -1720,40 +1720,64 @@ QPushButton:pressed {
                                   <enum>QFrame::Raised</enum>
                                  </property>
                                  <layout class="QHBoxLayout" name="horizontalLayout_42">
-                                  <item>
-                                   <widget class="QLabel" name="label_specialWarning">
-                                    <property name="font">
-                                     <font>
-                                      <family>Bahnschrift SemiBold</family>
-                                      <pointsize>13</pointsize>
-                                      <weight>75</weight>
-                                      <bold>true</bold>
-                                     </font>
+                                  <item alignment="Qt::AlignHCenter">
+                                   <widget class="QFrame" name="frame_82">
+                                    <property name="frameShape">
+                                     <enum>QFrame::StyledPanel</enum>
                                     </property>
-                                    <property name="styleSheet">
-                                     <string notr="true">color: rgb(42, 49, 66);</string>
+                                    <property name="frameShadow">
+                                     <enum>QFrame::Raised</enum>
                                     </property>
-                                    <property name="text">
-                                     <string>SPECIAL WARINING!</string>
-                                    </property>
-                                    <property name="alignment">
-                                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                                    </property>
+                                    <layout class="QVBoxLayout" name="verticalLayout_59">
+                                     <item>
+                                      <widget class="QLabel" name="label_specialWarning">
+                                       <property name="font">
+                                        <font>
+                                         <family>Bahnschrift SemiBold</family>
+                                         <pointsize>13</pointsize>
+                                         <weight>75</weight>
+                                         <bold>true</bold>
+                                        </font>
+                                       </property>
+                                       <property name="styleSheet">
+                                        <string notr="true">color: rgb(42, 49, 66);</string>
+                                       </property>
+                                       <property name="text">
+                                        <string>SPECIAL WARINING!</string>
+                                       </property>
+                                       <property name="alignment">
+                                        <set>Qt::AlignCenter</set>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                    </layout>
                                    </widget>
                                   </item>
                                   <item alignment="Qt::AlignRight">
-                                   <widget class="QLabel" name="label_lengthOfPassword">
-                                    <property name="font">
-                                     <font>
-                                      <family>Bahnschrift SemiBold</family>
-                                      <pointsize>13</pointsize>
-                                      <weight>75</weight>
-                                      <bold>true</bold>
-                                     </font>
+                                   <widget class="QFrame" name="frame_81">
+                                    <property name="frameShape">
+                                     <enum>QFrame::StyledPanel</enum>
                                     </property>
-                                    <property name="text">
-                                     <string>0 CHAR</string>
+                                    <property name="frameShadow">
+                                     <enum>QFrame::Raised</enum>
                                     </property>
+                                    <layout class="QVBoxLayout" name="verticalLayout_58">
+                                     <item>
+                                      <widget class="QLabel" name="label_lengthOfPassword">
+                                       <property name="font">
+                                        <font>
+                                         <family>Bahnschrift SemiBold</family>
+                                         <pointsize>13</pointsize>
+                                         <weight>75</weight>
+                                         <bold>true</bold>
+                                        </font>
+                                       </property>
+                                       <property name="text">
+                                        <string>0 CHAR</string>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                    </layout>
                                    </widget>
                                   </item>
                                  </layout>
