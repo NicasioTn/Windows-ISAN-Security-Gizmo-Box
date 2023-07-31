@@ -24,7 +24,7 @@ class Main(QDialog):
 
     def __init__(self):
         super(Main, self).__init__()
-        loadUi("./assets/ui/main.ui", self)
+        loadUi("./assets/ui/mainUI.ui", self)
 
         # initialize 
         self.setWindowTitle("ISAN Security Gizmo Box v1.0")
