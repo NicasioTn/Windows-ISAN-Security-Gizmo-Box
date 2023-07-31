@@ -1522,17 +1522,26 @@ class Ui_Form(object):
         self.label_resultDigeat.setStyleSheet("color: rgb(42, 49, 66);")
         self.label_resultDigeat.setObjectName("label_resultDigeat")
         self.verticalLayout_23.addWidget(self.label_resultDigeat, 0, QtCore.Qt.AlignmentFlag.AlignTop)
-        self.label_outputTextDigest = QtWidgets.QLabel(parent=self.frame_17)
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_outputTextDigest.setFont(font)
-        self.label_outputTextDigest.setText("")
-        self.label_outputTextDigest.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.label_outputTextDigest.setObjectName("label_outputTextDigest")
-        self.verticalLayout_23.addWidget(self.label_outputTextDigest)
+        self.lineEdit_outputTextDigest = QtWidgets.QLineEdit(parent=self.frame_17)
+        self.lineEdit_outputTextDigest.setMinimumSize(QtCore.QSize(650, 35))
+        self.lineEdit_outputTextDigest.setMaximumSize(QtCore.QSize(650, 35))
+        self.lineEdit_outputTextDigest.setStyleSheet("QLineEdit {\n"
+"  border: 1px solid gray;\n"
+"  color: rgba(40,43,61,255);\n"
+"  border-radius: 5px;\n"
+"}\n"
+"\n"
+"QLineEdit:hover {\n"
+"  border: 2px solid;\n"
+"  border-color: rgba(0,143,255,255);\n"
+"}\n"
+"QLineEdit:focus {\n"
+"  border: 1px solid;\n"
+"  border-color: rgba(88,199,141,255);\n"
+"}\n"
+"")
+        self.lineEdit_outputTextDigest.setObjectName("lineEdit_outputTextDigest")
+        self.verticalLayout_23.addWidget(self.lineEdit_outputTextDigest)
         self.pushButton = QtWidgets.QPushButton(parent=self.frame_17)
         self.pushButton.setMinimumSize(QtCore.QSize(200, 40))
         self.pushButton.setMaximumSize(QtCore.QSize(200, 40))
@@ -1576,11 +1585,20 @@ class Ui_Form(object):
         self.frame_33.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frame_33.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_33.setObjectName("frame_33")
-        self.horizontalLayout_40 = QtWidgets.QHBoxLayout(self.frame_33)
-        self.horizontalLayout_40.setObjectName("horizontalLayout_40")
+        self.verticalLayout_26 = QtWidgets.QVBoxLayout(self.frame_33)
+        self.verticalLayout_26.setObjectName("verticalLayout_26")
+        self.label_linrAPIDigest = QtWidgets.QLabel(parent=self.frame_33)
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_linrAPIDigest.setFont(font)
+        self.label_linrAPIDigest.setObjectName("label_linrAPIDigest")
+        self.verticalLayout_26.addWidget(self.label_linrAPIDigest)
         self.lineEdit_digest_2 = QtWidgets.QLineEdit(parent=self.frame_33)
-        self.lineEdit_digest_2.setMinimumSize(QtCore.QSize(500, 35))
-        self.lineEdit_digest_2.setMaximumSize(QtCore.QSize(500, 35))
+        self.lineEdit_digest_2.setMinimumSize(QtCore.QSize(630, 35))
+        self.lineEdit_digest_2.setMaximumSize(QtCore.QSize(630, 35))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(9)
@@ -1604,7 +1622,7 @@ class Ui_Form(object):
 "")
         self.lineEdit_digest_2.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.lineEdit_digest_2.setObjectName("lineEdit_digest_2")
-        self.horizontalLayout_40.addWidget(self.lineEdit_digest_2)
+        self.verticalLayout_26.addWidget(self.lineEdit_digest_2)
         self.btn_sendDigest = QtWidgets.QPushButton(parent=self.frame_33)
         self.btn_sendDigest.setMinimumSize(QtCore.QSize(200, 40))
         self.btn_sendDigest.setMaximumSize(QtCore.QSize(200, 40))
@@ -1636,7 +1654,7 @@ class Ui_Form(object):
         self.btn_sendDigest.setIcon(icon9)
         self.btn_sendDigest.setIconSize(QtCore.QSize(30, 30))
         self.btn_sendDigest.setObjectName("btn_sendDigest")
-        self.horizontalLayout_40.addWidget(self.btn_sendDigest)
+        self.verticalLayout_26.addWidget(self.btn_sendDigest, 0, QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignBottom)
         self.verticalLayout_7.addWidget(self.frame_33)
         self.verticalLayout_22.addWidget(self.frame_18)
         self.horizontalLayout_11.addWidget(self.frame_15)
@@ -2790,6 +2808,7 @@ class Ui_Form(object):
         self.dropdown_sha3.setItemText(4, _translate("Form", "512 BIT"))
         self.label_resultDigeat.setText(_translate("Form", "RESULT"))
         self.pushButton.setText(_translate("Form", "COPY"))
+        self.label_linrAPIDigest.setText(_translate("Form", "LINE API TOKEN"))
         self.lineEdit_digest_2.setPlaceholderText(_translate("Form", "ENTER LINR API TOKEN"))
         self.btn_sendDigest.setText(_translate("Form", "SEND"))
         self.pushButton_2.setText(_translate("Form", "LINE CHAT"))
