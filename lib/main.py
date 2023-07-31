@@ -64,7 +64,7 @@ class Main(QDialog):
             self.chk_upper.setIcon(self.warning_icon)
             self.chk_lower.setIcon(self.warning_icon)
             self.chk_special.setIcon(self.warning_icon)
-            self.label_outEntropyPwd.setText('')
+            self.label_outputEntropy.setText('')
 
         self.btn_iconEye.clicked.connect(self.btn_hidePwd)
         self.lineEdit_password.textChanged.connect(self.getPassword)
@@ -79,7 +79,7 @@ class Main(QDialog):
         
         self.btn_openDigest.clicked.connect(self.openFileDialog)
         self.btn_clearDigest.clicked.connect(lambda: MessageDigest.clear(self))
-        self.btn_saveDigest.clicked.connect(lambda: MessageDigest.saveQRCode(self))
+        self.btn_saveQR.clicked.connect(lambda: MessageDigest.saveQRCode(self))
         self.btn_showBtnLine.clicked.connect(self.showBtnLine)
         self.btn_sendLine.clicked.connect(lambda: MessageDigest.processLineKey(self))
         self.btn_copyOutput.clicked.connect(lambda: MessageDigest.copyOutput(self))
@@ -144,15 +144,15 @@ class Main(QDialog):
         password = PasswordEvaluation.update(self)
         entropy = PasswordEvaluation.calculate_entropy(self, password)
 
-        self.label_outEntropyPwd.setText(f'{entropy:.0f} bits')
+        self.label_outputEntropy.setText(f'{entropy:.0f} bits')
 
         if entropy == 0:
-            self.label_outEntropyPwd.setText(f'-- Bits')
+            self.label_outputEntropy.setText(f'-- Bits')
             self.label_outStrengthPwd.setText('')
         elif entropy > 999:
-            self.label_outEntropyPwd.setText(f'~NaN Bits')
+            self.label_outputEntropy.setText(f'~NaN Bits')
         else:
-            self.label_outEntropyPwd.setText(f'~{entropy:.0f} Bits')
+            self.label_outputEntropy.setText(f'~{entropy:.0f} Bits')
         
         length = len(password)        
         if length < 8:
@@ -234,7 +234,7 @@ class PasswordEvaluation(QDialog):
 
     def check_common_password(self, password, nordpass_common_passwords):
         if password == '':
-            self.label_outEntropyPwd.setText('')
+            self.label_outputEntropy.setText('')
             self.label_outChkNordpass.setText('Start typing to see the entropy score')
             self.label_outStrengthPwd.setText('')
         else:
@@ -621,7 +621,7 @@ class MessageDigest(QDialog):
                 # Save the pixmap to the specified file path
                 self.label_outQRCode.pixmap().save(pathfile, 'PNG')
                 # Set the text of the save button to "SAVED!" to indicate successful save
-                self.btn_saveDigest.setText("SAVED!")
+                self.btn_saveQR.setText("SAVED!")
             else:
                 print("Error: QR-Code is Not Generated")
         else:
