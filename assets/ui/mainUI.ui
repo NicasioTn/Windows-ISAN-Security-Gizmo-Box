@@ -1767,8 +1767,8 @@ QPushButton:pressed {
                                  <property name="frameShadow">
                                   <enum>QFrame::Raised</enum>
                                  </property>
-                                 <layout class="QVBoxLayout" name="verticalLayout_55">
-                                  <item alignment="Qt::AlignHCenter">
+                                 <layout class="QGridLayout" name="gridLayout_2">
+                                  <item row="0" column="0" alignment="Qt::AlignHCenter">
                                    <widget class="QCheckBox" name="chk_length">
                                     <property name="font">
                                      <font>
@@ -1787,7 +1787,7 @@ QPushButton:pressed {
                                     </property>
                                    </widget>
                                   </item>
-                                  <item alignment="Qt::AlignHCenter">
+                                  <item row="1" column="0" alignment="Qt::AlignHCenter">
                                    <widget class="QCheckBox" name="chk_digits">
                                     <property name="font">
                                      <font>
@@ -1806,7 +1806,7 @@ QPushButton:pressed {
                                     </property>
                                    </widget>
                                   </item>
-                                  <item alignment="Qt::AlignHCenter">
+                                  <item row="2" column="0" alignment="Qt::AlignHCenter">
                                    <widget class="QCheckBox" name="chk_lower">
                                     <property name="font">
                                      <font>
@@ -1825,7 +1825,7 @@ QPushButton:pressed {
                                     </property>
                                    </widget>
                                   </item>
-                                  <item alignment="Qt::AlignHCenter">
+                                  <item row="3" column="0" alignment="Qt::AlignHCenter">
                                    <widget class="QCheckBox" name="chk_upper">
                                     <property name="font">
                                      <font>
@@ -1844,7 +1844,7 @@ QPushButton:pressed {
                                     </property>
                                    </widget>
                                   </item>
-                                  <item alignment="Qt::AlignHCenter">
+                                  <item row="4" column="0" alignment="Qt::AlignHCenter">
                                    <widget class="QCheckBox" name="chk_special">
                                     <property name="font">
                                      <font>
