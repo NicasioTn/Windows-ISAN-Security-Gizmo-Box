@@ -456,7 +456,7 @@ border-radius: 5px;
 </string>
                  </property>
                  <property name="currentIndex">
-                  <number>4</number>
+                  <number>0</number>
                  </property>
                  <widget class="QWidget" name="page_home">
                   <layout class="QHBoxLayout" name="horizontalLayout_26">
@@ -1638,119 +1638,158 @@ QPushButton:pressed {
                               </property>
                               <layout class="QVBoxLayout" name="verticalLayout_15">
                                <item>
-                                <widget class="QLabel" name="label_specialWarning">
-                                 <property name="font">
-                                  <font>
-                                   <family>Bahnschrift SemiBold</family>
-                                   <pointsize>13</pointsize>
-                                   <weight>75</weight>
-                                   <bold>true</bold>
-                                  </font>
+                                <widget class="QFrame" name="frame_78">
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
                                  </property>
-                                 <property name="styleSheet">
-                                  <string notr="true">color: rgb(42, 49, 66);</string>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
                                  </property>
-                                 <property name="text">
-                                  <string>SPECIAL WARINING!</string>
-                                 </property>
-                                 <property name="alignment">
-                                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                                 </property>
+                                 <layout class="QHBoxLayout" name="horizontalLayout_42">
+                                  <item>
+                                   <widget class="QLabel" name="label_specialWarning">
+                                    <property name="font">
+                                     <font>
+                                      <family>Bahnschrift SemiBold</family>
+                                      <pointsize>13</pointsize>
+                                      <weight>75</weight>
+                                      <bold>true</bold>
+                                     </font>
+                                    </property>
+                                    <property name="styleSheet">
+                                     <string notr="true">color: rgb(42, 49, 66);</string>
+                                    </property>
+                                    <property name="text">
+                                     <string>SPECIAL WARINING!</string>
+                                    </property>
+                                    <property name="alignment">
+                                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item alignment="Qt::AlignRight">
+                                   <widget class="QLabel" name="label_lengthOfPassword">
+                                    <property name="font">
+                                     <font>
+                                      <family>Bahnschrift SemiBold</family>
+                                      <pointsize>13</pointsize>
+                                      <weight>75</weight>
+                                      <bold>true</bold>
+                                     </font>
+                                    </property>
+                                    <property name="text">
+                                     <string>0 CHAR</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
                                 </widget>
                                </item>
-                               <item alignment="Qt::AlignTop">
-                                <widget class="QCheckBox" name="chk_length">
-                                 <property name="font">
-                                  <font>
-                                   <family>Bahnschrift SemiBold</family>
-                                   <pointsize>13</pointsize>
-                                   <weight>75</weight>
-                                   <bold>true</bold>
-                                  </font>
+                               <item>
+                                <widget class="QFrame" name="frame_79">
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
                                  </property>
-                                 <property name="text">
-                                  <string>LENGTH &gt;= 8</string>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
                                  </property>
-                                 <property name="icon">
-                                  <iconset resource="../resource.qrc">
-                                   <normaloff>:/icons/icons/icon_no.png</normaloff>:/icons/icons/icon_no.png</iconset>
-                                 </property>
-                                </widget>
-                               </item>
-                               <item alignment="Qt::AlignTop">
-                                <widget class="QCheckBox" name="chk_digits">
-                                 <property name="font">
-                                  <font>
-                                   <family>Bahnschrift SemiBold</family>
-                                   <pointsize>13</pointsize>
-                                   <weight>75</weight>
-                                   <bold>true</bold>
-                                  </font>
-                                 </property>
-                                 <property name="text">
-                                  <string>DIGITS</string>
-                                 </property>
-                                 <property name="icon">
-                                  <iconset resource="../resource.qrc">
-                                   <normaloff>:/icons/icons/icon_no.png</normaloff>:/icons/icons/icon_no.png</iconset>
-                                 </property>
-                                </widget>
-                               </item>
-                               <item alignment="Qt::AlignTop">
-                                <widget class="QCheckBox" name="chk_lower">
-                                 <property name="font">
-                                  <font>
-                                   <family>Bahnschrift SemiBold</family>
-                                   <pointsize>13</pointsize>
-                                   <weight>75</weight>
-                                   <bold>true</bold>
-                                  </font>
-                                 </property>
-                                 <property name="text">
-                                  <string>LOWER CASE LATIN LETTERS</string>
-                                 </property>
-                                 <property name="icon">
-                                  <iconset resource="../resource.qrc">
-                                   <normaloff>:/icons/icons/icon_no.png</normaloff>:/icons/icons/icon_no.png</iconset>
-                                 </property>
-                                </widget>
-                               </item>
-                               <item alignment="Qt::AlignTop">
-                                <widget class="QCheckBox" name="chk_upper">
-                                 <property name="font">
-                                  <font>
-                                   <family>Bahnschrift SemiBold</family>
-                                   <pointsize>13</pointsize>
-                                   <weight>75</weight>
-                                   <bold>true</bold>
-                                  </font>
-                                 </property>
-                                 <property name="text">
-                                  <string>UPPER CASE LATIN LETTERS</string>
-                                 </property>
-                                 <property name="icon">
-                                  <iconset resource="../resource.qrc">
-                                   <normaloff>:/icons/icons/icon_no.png</normaloff>:/icons/icons/icon_no.png</iconset>
-                                 </property>
-                                </widget>
-                               </item>
-                               <item alignment="Qt::AlignTop">
-                                <widget class="QCheckBox" name="chk_special">
-                                 <property name="font">
-                                  <font>
-                                   <family>Bahnschrift SemiBold</family>
-                                   <pointsize>13</pointsize>
-                                   <weight>75</weight>
-                                   <bold>true</bold>
-                                  </font>
-                                 </property>
-                                 <property name="text">
-                                  <string>SPECIAL CHARACTERS</string>
-                                 </property>
-                                 <property name="icon">
-                                  <iconset resource="../resource.qrc">
-                                   <normaloff>:/icons/icons/icon_no.png</normaloff>:/icons/icons/icon_no.png</iconset>
-                                 </property>
+                                 <layout class="QVBoxLayout" name="verticalLayout_55">
+                                  <item>
+                                   <widget class="QCheckBox" name="chk_length">
+                                    <property name="font">
+                                     <font>
+                                      <family>Bahnschrift SemiBold</family>
+                                      <pointsize>13</pointsize>
+                                      <weight>75</weight>
+                                      <bold>true</bold>
+                                     </font>
+                                    </property>
+                                    <property name="text">
+                                     <string>LENGTH &gt;= 8</string>
+                                    </property>
+                                    <property name="icon">
+                                     <iconset resource="../resource.qrc">
+                                      <normaloff>:/icons/icons/icon_no.png</normaloff>:/icons/icons/icon_no.png</iconset>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QCheckBox" name="chk_digits">
+                                    <property name="font">
+                                     <font>
+                                      <family>Bahnschrift SemiBold</family>
+                                      <pointsize>13</pointsize>
+                                      <weight>75</weight>
+                                      <bold>true</bold>
+                                     </font>
+                                    </property>
+                                    <property name="text">
+                                     <string>DIGITS</string>
+                                    </property>
+                                    <property name="icon">
+                                     <iconset resource="../resource.qrc">
+                                      <normaloff>:/icons/icons/icon_no.png</normaloff>:/icons/icons/icon_no.png</iconset>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QCheckBox" name="chk_lower">
+                                    <property name="font">
+                                     <font>
+                                      <family>Bahnschrift SemiBold</family>
+                                      <pointsize>13</pointsize>
+                                      <weight>75</weight>
+                                      <bold>true</bold>
+                                     </font>
+                                    </property>
+                                    <property name="text">
+                                     <string>LOWER CASE LATIN LETTERS</string>
+                                    </property>
+                                    <property name="icon">
+                                     <iconset resource="../resource.qrc">
+                                      <normaloff>:/icons/icons/icon_no.png</normaloff>:/icons/icons/icon_no.png</iconset>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QCheckBox" name="chk_upper">
+                                    <property name="font">
+                                     <font>
+                                      <family>Bahnschrift SemiBold</family>
+                                      <pointsize>13</pointsize>
+                                      <weight>75</weight>
+                                      <bold>true</bold>
+                                     </font>
+                                    </property>
+                                    <property name="text">
+                                     <string>UPPER CASE LATIN LETTERS</string>
+                                    </property>
+                                    <property name="icon">
+                                     <iconset resource="../resource.qrc">
+                                      <normaloff>:/icons/icons/icon_no.png</normaloff>:/icons/icons/icon_no.png</iconset>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QCheckBox" name="chk_special">
+                                    <property name="font">
+                                     <font>
+                                      <family>Bahnschrift SemiBold</family>
+                                      <pointsize>13</pointsize>
+                                      <weight>75</weight>
+                                      <bold>true</bold>
+                                     </font>
+                                    </property>
+                                    <property name="text">
+                                     <string>SPECIAL CHARACTERS</string>
+                                    </property>
+                                    <property name="icon">
+                                     <iconset resource="../resource.qrc">
+                                      <normaloff>:/icons/icons/icon_no.png</normaloff>:/icons/icons/icon_no.png</iconset>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
                                 </widget>
                                </item>
                               </layout>
