@@ -1406,21 +1406,71 @@ QPushButton:pressed {
                               </property>
                              </widget>
                             </item>
-                            <item>
+                            <item alignment="Qt::AlignTop">
                              <widget class="QLabel" name="label_outputSearchNordPass">
                               <property name="font">
                                <font>
                                 <family>Bahnschrift SemiBold</family>
-                                <pointsize>13</pointsize>
+                                <pointsize>23</pointsize>
                                 <weight>75</weight>
                                 <bold>true</bold>
                                </font>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">color: rgba(0, 143, 255, 255);
+</string>
                               </property>
                               <property name="text">
                                <string/>
                               </property>
                               <property name="alignment">
                                <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                            <item alignment="Qt::AlignRight">
+                             <widget class="QPushButton" name="pushButton_3">
+                              <property name="minimumSize">
+                               <size>
+                                <width>200</width>
+                                <height>40</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>200</width>
+                                <height>40</height>
+                               </size>
+                              </property>
+                              <property name="font">
+                               <font>
+                                <family>Bahnschrift SemiBold</family>
+                                <pointsize>12</pointsize>
+                                <weight>75</weight>
+                                <bold>true</bold>
+                               </font>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true"> QPushButton{
+	    background-color: rgb(42, 49, 66);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+                              </property>
+                              <property name="text">
+                               <string>DICTIONARY ATTACK</string>
                               </property>
                              </widget>
                             </item>
@@ -1478,15 +1528,19 @@ QPushButton:pressed {
                                  </property>
                                 </widget>
                                </item>
-                               <item>
+                               <item alignment="Qt::AlignTop">
                                 <widget class="QLabel" name="label_outputTimeToCrack">
                                  <property name="font">
                                   <font>
                                    <family>Bahnschrift SemiBold</family>
-                                   <pointsize>13</pointsize>
+                                   <pointsize>23</pointsize>
                                    <weight>75</weight>
                                    <bold>true</bold>
                                   </font>
+                                 </property>
+                                 <property name="styleSheet">
+                                  <string notr="true">color: rgba(0, 143, 255, 255);
+</string>
                                  </property>
                                  <property name="text">
                                   <string/>
@@ -1529,15 +1583,19 @@ QPushButton:pressed {
                                  </property>
                                 </widget>
                                </item>
-                               <item>
+                               <item alignment="Qt::AlignTop">
                                 <widget class="QLabel" name="label_outputPasswordStrength">
                                  <property name="font">
                                   <font>
                                    <family>Bahnschrift SemiBold</family>
-                                   <pointsize>13</pointsize>
+                                   <pointsize>23</pointsize>
                                    <weight>75</weight>
                                    <bold>true</bold>
                                   </font>
+                                 </property>
+                                 <property name="styleSheet">
+                                  <string notr="true">color: rgba(0, 143, 255, 255);
+</string>
                                  </property>
                                  <property name="text">
                                   <string/>
@@ -1598,15 +1656,31 @@ QPushButton:pressed {
                                     </property>
                                    </widget>
                                   </item>
-                                  <item>
+                                  <item alignment="Qt::AlignTop">
                                    <widget class="QLabel" name="label_outputEntropy">
+                                    <property name="minimumSize">
+                                     <size>
+                                      <width>520</width>
+                                      <height>40</height>
+                                     </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>520</width>
+                                      <height>40</height>
+                                     </size>
+                                    </property>
                                     <property name="font">
                                      <font>
                                       <family>Bahnschrift SemiBold</family>
-                                      <pointsize>13</pointsize>
+                                      <pointsize>23</pointsize>
                                       <weight>75</weight>
                                       <bold>true</bold>
                                      </font>
+                                    </property>
+                                    <property name="styleSheet">
+                                     <string notr="true">color: rgba(0, 143, 255, 255);
+</string>
                                     </property>
                                     <property name="text">
                                      <string/>
@@ -1694,7 +1768,7 @@ QPushButton:pressed {
                                   <enum>QFrame::Raised</enum>
                                  </property>
                                  <layout class="QVBoxLayout" name="verticalLayout_55">
-                                  <item>
+                                  <item alignment="Qt::AlignHCenter">
                                    <widget class="QCheckBox" name="chk_length">
                                     <property name="font">
                                      <font>
@@ -1705,7 +1779,7 @@ QPushButton:pressed {
                                      </font>
                                     </property>
                                     <property name="text">
-                                     <string>LENGTH &gt;= 8</string>
+                                     <string>LENGTH &gt;= 8                           </string>
                                     </property>
                                     <property name="icon">
                                      <iconset resource="../resource.qrc">
@@ -1713,7 +1787,7 @@ QPushButton:pressed {
                                     </property>
                                    </widget>
                                   </item>
-                                  <item>
+                                  <item alignment="Qt::AlignHCenter">
                                    <widget class="QCheckBox" name="chk_digits">
                                     <property name="font">
                                      <font>
@@ -1724,7 +1798,7 @@ QPushButton:pressed {
                                      </font>
                                     </property>
                                     <property name="text">
-                                     <string>DIGITS</string>
+                                     <string>DIGITS                                    </string>
                                     </property>
                                     <property name="icon">
                                      <iconset resource="../resource.qrc">
@@ -1732,7 +1806,7 @@ QPushButton:pressed {
                                     </property>
                                    </widget>
                                   </item>
-                                  <item>
+                                  <item alignment="Qt::AlignHCenter">
                                    <widget class="QCheckBox" name="chk_lower">
                                     <property name="font">
                                      <font>
@@ -1751,7 +1825,7 @@ QPushButton:pressed {
                                     </property>
                                    </widget>
                                   </item>
-                                  <item>
+                                  <item alignment="Qt::AlignHCenter">
                                    <widget class="QCheckBox" name="chk_upper">
                                     <property name="font">
                                      <font>
@@ -1770,7 +1844,7 @@ QPushButton:pressed {
                                     </property>
                                    </widget>
                                   </item>
-                                  <item>
+                                  <item alignment="Qt::AlignHCenter">
                                    <widget class="QCheckBox" name="chk_special">
                                     <property name="font">
                                      <font>
@@ -1781,7 +1855,7 @@ QPushButton:pressed {
                                      </font>
                                     </property>
                                     <property name="text">
-                                     <string>SPECIAL CHARACTERS</string>
+                                     <string>SPECIAL CHARACTERS         </string>
                                     </property>
                                     <property name="icon">
                                      <iconset resource="../resource.qrc">
