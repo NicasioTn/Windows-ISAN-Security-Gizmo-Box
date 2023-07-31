@@ -34,8 +34,8 @@ class Main(QDialog):
         self.warning_icon = QIcon("./assets/icons/warning.png")
         self.check_icon = QIcon("./assets/icons/Checked.png")
 
-        self.lineEdit_inputPwd.setEchoMode(QLineEdit.EchoMode.Password)
-        self.tbtn_eyePwd.setIcon(self.hide_icon)
+        self.lineEdit_password.setEchoMode(QLineEdit.EchoMode.Password)
+        self.btn_iconEye.setIcon(self.hide_icon)
 
         # -------------------- Advance User ---------------------------------
         self.btn_advancedUserHome.clicked.connect(self.openAdvancedUserHome)
@@ -58,16 +58,16 @@ class Main(QDialog):
         for item in json_object:
             self.nordpass_common_passwords.append(str(item['Password']))
 
-        if self.lineEdit_inputPwd.text() == '':
-            self.checkLength.setIcon(self.warning_icon)
-            self.checkDigits.setIcon(self.warning_icon)
-            self.checkUpper.setIcon(self.warning_icon)
-            self.checkLower.setIcon(self.warning_icon)
-            self.checkSpecial.setIcon(self.warning_icon)
+        if self.lineEdit_password.text() == '':
+            self.chk_length.setIcon(self.warning_icon)
+            self.chk_digits.setIcon(self.warning_icon)
+            self.chk_upper.setIcon(self.warning_icon)
+            self.chk_lower.setIcon(self.warning_icon)
+            self.chk_special.setIcon(self.warning_icon)
             self.label_outEntropyPwd.setText('')
 
-        self.tbtn_eyePwd.clicked.connect(self.btn_hidePwd)
-        self.lineEdit_inputPwd.textChanged.connect(self.getPassword)
+        self.btn_iconEye.clicked.connect(self.btn_hidePwd)
+        self.lineEdit_password.textChanged.connect(self.getPassword)
 
         # --------------------- Message Digest ------------------------------
         # Load the list of hints from the JSON file
@@ -223,14 +223,14 @@ class PasswordEvaluation(QDialog):
 
     def show_hide_password(self):
         if self.hide == True:
-            self.lineEdit_inputPwd.setEchoMode(QLineEdit.EchoMode.Password) 
+            self.lineEdit_password.setEchoMode(QLineEdit.EchoMode.Password) 
             self.hide = False
-            self.tbtn_eyePwd.setIcon(self.hide_icon)
+            self.btn_iconEye.setIcon(self.hide_icon)
             
         else:
-            self.lineEdit_inputPwd.setEchoMode(QLineEdit.EchoMode.Normal) 
+            self.lineEdit_password.setEchoMode(QLineEdit.EchoMode.Normal) 
             self.hide = True
-            self.tbtn_eyePwd.setIcon(self.unhide_icon)
+            self.btn_iconEye.setIcon(self.unhide_icon)
 
     def check_common_password(self, password, nordpass_common_passwords):
         if password == '':
@@ -245,52 +245,52 @@ class PasswordEvaluation(QDialog):
                 self.label_outChkNordpass.setText('Not found in the list')
 
     def update(self):
-        self.checkLength.setChecked(False)
-        self.checkDigits.setChecked(False)
-        self.checkUpper.setChecked(False)
-        self.checkLower.setChecked(False)
-        self.checkSpecial.setChecked(False)
+        self.chk_length.setChecked(False)
+        self.chk_digits.setChecked(False)
+        self.chk_upper.setChecked(False)
+        self.chk_lower.setChecked(False)
+        self.chk_special.setChecked(False)
         
         # Get password real time
-        password = self.lineEdit_inputPwd.text()
+        password = self.lineEdit_password.text()
 
         for char in password:
             if char.isdigit():
-                self.checkDigits.setChecked(True)
-                self.checkDigits.setIcon(self.check_icon)
+                self.chk_digits.setChecked(True)
+                self.chk_digits.setIcon(self.check_icon)
             elif char.isupper():
-                self.checkUpper.setChecked(True)
-                self.checkUpper.setIcon(self.check_icon)
+                self.chk_upper.setChecked(True)
+                self.chk_upper.setIcon(self.check_icon)
             elif char.islower():
-                self.checkLower.setChecked(True)
-                self.checkLower.setIcon(self.check_icon)
+                self.chk_lower.setChecked(True)
+                self.chk_lower.setIcon(self.check_icon)
             else:
-                self.checkSpecial.setChecked(True)
-                self.checkSpecial.setIcon(self.check_icon)
+                self.chk_special.setChecked(True)
+                self.chk_special.setIcon(self.check_icon)
                 
-            if len(self.lineEdit_inputPwd.text()) >= 8:
-                self.checkLength.setChecked(True)
-                self.checkLength.setIcon(self.check_icon)
+            if len(self.lineEdit_password.text()) >= 8:
+                self.chk_length.setChecked(True)
+                self.chk_length.setIcon(self.check_icon)
         return password
 
     def calculate_entropy(self, password):
         
         if password == '':
-            self.checkLength.setIcon(self.warning_icon)
-            self.checkDigits.setIcon(self.warning_icon)
-            self.checkUpper.setIcon(self.warning_icon)
-            self.checkLower.setIcon(self.warning_icon)
-            self.checkSpecial.setIcon(self.warning_icon)
+            self.chk_length.setIcon(self.warning_icon)
+            self.chk_digits.setIcon(self.warning_icon)
+            self.chk_upper.setIcon(self.warning_icon)
+            self.chk_lower.setIcon(self.warning_icon)
+            self.chk_special.setIcon(self.warning_icon)
             return 0
     
         possible_characters = 0
-        if self.checkDigits.isChecked(): # 0-9
+        if self.chk_digits.isChecked(): # 0-9
             possible_characters += 10
-        if self.checkUpper.isChecked(): # A-Z
+        if self.chk_upper.isChecked(): # A-Z
             possible_characters += 26
-        if self.checkLower.isChecked(): # a-z
+        if self.chk_lower.isChecked(): # a-z
             possible_characters += 26
-        if self.checkSpecial.isChecked(): # !@#$%^&*()_+-=
+        if self.chk_special.isChecked(): # !@#$%^&*()_+-=
             possible_characters += 32
         # Calculate the entropy using the formula log2(possible_characters^password_length)
         entropy = log2(possible_characters**len(password))
@@ -298,21 +298,21 @@ class PasswordEvaluation(QDialog):
     
     def time_to_Crack(self, password):
         if password == '':
-            self.checkLength.setIcon(self.warning_icon)
-            self.checkDigits.setIcon(self.warning_icon)
-            self.checkUpper.setIcon(self.warning_icon)
-            self.checkLower.setIcon(self.warning_icon)
-            self.checkSpecial.setIcon(self.warning_icon)
+            self.chk_length.setIcon(self.warning_icon)
+            self.chk_digits.setIcon(self.warning_icon)
+            self.chk_upper.setIcon(self.warning_icon)
+            self.chk_lower.setIcon(self.warning_icon)
+            self.chk_special.setIcon(self.warning_icon)
             return 0
     
         possible_characters = 0
-        if self.checkDigits.isChecked(): # 0-9
+        if self.chk_digits.isChecked(): # 0-9
             possible_characters += 10
-        if self.checkUpper.isChecked(): # A-Z
+        if self.chk_upper.isChecked(): # A-Z
             possible_characters += 26
-        if self.checkLower.isChecked(): # a-z
+        if self.chk_lower.isChecked(): # a-z
             possible_characters += 26
-        if self.checkSpecial.isChecked(): # !@#$%^&*()_+-=
+        if self.chk_special.isChecked(): # !@#$%^&*()_+-=
             possible_characters += 32
 
         combinations = possible_characters ** len(password)
