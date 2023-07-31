@@ -302,55 +302,62 @@ class PasswordEvaluation(QDialog):
         return entropy
     
     def time_to_Crack(self, password):
-        if password == '':
-            self.chk_length.setIcon(self.warning_icon)
-            self.chk_digits.setIcon(self.warning_icon)
-            self.chk_upper.setIcon(self.warning_icon)
-            self.chk_lower.setIcon(self.warning_icon)
-            self.chk_special.setIcon(self.warning_icon)
-            return 0
-    
-        possible_characters = 0
-        if self.chk_digits.isChecked(): # 0-9
-            possible_characters += 10
-        if self.chk_upper.isChecked(): # A-Z
-            possible_characters += 26
-        if self.chk_lower.isChecked(): # a-z
-            possible_characters += 26
-        if self.chk_special.isChecked(): # !@#$%^&*()_+-=
-            possible_characters += 32
+        try:
+            if password == '':
+                self.chk_length.setIcon(self.warning_icon)
+                self.chk_digits.setIcon(self.warning_icon)
+                self.chk_upper.setIcon(self.warning_icon)
+                self.chk_lower.setIcon(self.warning_icon)
+                self.chk_special.setIcon(self.warning_icon)
+                return 0
+        
+            possible_characters = 0
+            if self.chk_digits.isChecked(): # 0-9
+                possible_characters += 10
+            if self.chk_upper.isChecked(): # A-Z
+                possible_characters += 26
+            if self.chk_lower.isChecked(): # a-z
+                possible_characters += 26
+            if self.chk_special.isChecked(): # !@#$%^&*()_+-=
+                possible_characters += 32
 
-        combinations = possible_characters ** len(password)
-        KPS_2020 = 17042497.3 # 17 Million
-        seconds = combinations / KPS_2020
-        seconds = f'{seconds:.0f}'
-        seconds = int(seconds)
+            combinations = possible_characters ** len(password)
+            KPS_2020 = 17042497.3 # 17 Million
+            
+            seconds = combinations / KPS_2020
+            seconds = f'{seconds:.0f}'
+            seconds = int(seconds)
 
-        minutes, seconds = divmod(seconds, 60)
-        hours, minutes = divmod(minutes, 60)
-        days, hours = divmod(hours, 24)
-        weeks, days = divmod(days, 7)
-        months, weeks = divmod(weeks, 4)
-        years, months = divmod(months, 12)
+            minutes, seconds = divmod(seconds, 60)
+            hours, minutes = divmod(minutes, 60)
+            days, hours = divmod(hours, 24)
+            weeks, days = divmod(days, 7)
+            months, weeks = divmod(weeks, 4)
+            years, months = divmod(months, 12)
+            
+            time_parts = []
+            if years > 0:
+                time_parts.append(f"{years} year{'s' if years != 1 else ''}")
+            if months > 0:
+                time_parts.append(f"{months} month{'s' if months != 1 else ''}")
+            if weeks > 0:
+                time_parts.append(f"{weeks} week{'s' if weeks != 1 else ''}")
+            if days > 0:
+                time_parts.append(f"{days} day{'s' if days != 1 else ''}")
+            if hours > 0:
+                time_parts.append(f"{hours} hour{'s' if hours != 1 else ''}")
+            if minutes > 0:
+                time_parts.append(f"{minutes} minute{'s' if minutes != 1 else ''}")
+            if seconds > 0:
+                time_parts.append(f"{seconds} second{'s' if seconds != 1 else ''}")
+            if years > 10:
+                time_parts = ['more than 10 years']
+            return ", ".join(time_parts)
+        except OverflowError as e:
+            print(f"Error: {e}")
+        except UnboundLocalError as e:
+            print(f"Error: {e}")
 
-        time_parts = []
-        if years > 0:
-            time_parts.append(f"{years} year{'s' if years != 1 else ''}")
-        if months > 0:
-            time_parts.append(f"{months} month{'s' if months != 1 else ''}")
-        if weeks > 0:
-            time_parts.append(f"{weeks} week{'s' if weeks != 1 else ''}")
-        if days > 0:
-            time_parts.append(f"{days} day{'s' if days != 1 else ''}")
-        if hours > 0:
-            time_parts.append(f"{hours} hour{'s' if hours != 1 else ''}")
-        if minutes > 0:
-            time_parts.append(f"{minutes} minute{'s' if minutes != 1 else ''}")
-        if seconds > 0:
-            time_parts.append(f"{seconds} second{'s' if seconds != 1 else ''}")
-        if years > 10:
-            time_parts = ['more than 10 years']
-        return ", ".join(time_parts)
     
 import hashlib
 import qrcode
