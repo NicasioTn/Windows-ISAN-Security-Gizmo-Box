@@ -87,7 +87,7 @@ class MessageDigest(QDialog):
             json_object = json.load(openfile)
         
         for item in json_object:
-            self.hint_btn.append(str(item['tool_description'])) # Add the password to the list of weak passwords
+            self.hint_btn.append(str(item['tool_description'])) 
 
         # Set the tooltips for the buttons
         self.MD5_Button.setToolTip(self.hint_btn[0])
@@ -130,7 +130,6 @@ class MessageDigest(QDialog):
         self.output_QR_Label.setText(' ')
         self.save_Button.setText("SAVE")
     
-    
     # Hash Algorithms Section ---------------------------------------------
     def Md5(self):
         if os.path.isfile(self.input.text()):
@@ -156,7 +155,6 @@ class MessageDigest(QDialog):
                 self.output_hash_Label.setText(f'{md5}')
                 self.qrCodeGenerator(md5)
                 
-    
     def Sha1(self):
         if os.path.isfile(self.input.text()):
             path_direct = self.getPath()
@@ -228,6 +226,7 @@ class MessageDigest(QDialog):
                 print(f'SHA2_256: {sha2}')
                 self.output_hash_Label.setText(f'{sha2}')
                 self.qrCodeGenerator(sha2)
+    
     def Sha2_384(self):
         if os.path.isfile(self.input.text()):
             init_hash = hashlib.sha384()
