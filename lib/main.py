@@ -353,6 +353,7 @@ class PasswordEvaluation(QDialog):
             if years > 10:
                 time_parts = ['more than 10 years']
             return ", ".join(time_parts)
+        
         except OverflowError as e:
             print(f"Error: {e}")
         except UnboundLocalError as e:
