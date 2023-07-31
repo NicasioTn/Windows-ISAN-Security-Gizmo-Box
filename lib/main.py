@@ -148,7 +148,7 @@ class Main(QDialog):
 
         if entropy == 0:
             self.label_outputEntropy.setText(f'-- Bits')
-            self.label_outStrengthPwd.setText('')
+            self.label_outputPasswordStrength.setText('')
         elif entropy > 999:
             self.label_outputEntropy.setText(f'~NaN Bits')
         else:
@@ -156,21 +156,21 @@ class Main(QDialog):
         
         length = len(password)        
         if length < 8:
-            self.label_outStrengthPwd.setText('So very, very bad Password')
+            self.label_outputPasswordStrength.setText('So very, very bad Password')
             if length == 0:
-                self.label_outStrengthPwd.setText('')
+                self.label_outputPasswordStrength.setText('')
         else : 
             if entropy < 50 :
-                self.label_outStrengthPwd.setText('Weak password')
+                self.label_outputPasswordStrength.setText('Weak password')
             elif entropy < 80 :
-                self.label_outStrengthPwd.setText('Medium strength')
+                self.label_outputPasswordStrength.setText('Medium strength')
             else:
-                self.label_outStrengthPwd.setText('Good password')
+                self.label_outputPasswordStrength.setText('Good password')
         
         # Show length of password
         self.label_lengthOfPassword.setText(f'{length} Chars')
         # Show time to crack
-        self.label_outTimeCrackPwd.setText(f'{PasswordEvaluation.time_to_Crack(self, password)}')
+        self.label_outputTimeToCrack.setText(f'{PasswordEvaluation.time_to_Crack(self, password)}')
         # Check if password is in the list of weak passwords
         PasswordEvaluation.check_common_password(self, password, self.nordpass_common_passwords)
     
@@ -235,14 +235,14 @@ class PasswordEvaluation(QDialog):
     def check_common_password(self, password, nordpass_common_passwords):
         if password == '':
             self.label_outputEntropy.setText('')
-            self.label_outChkNordpass.setText('Start typing to see the entropy score')
-            self.label_outStrengthPwd.setText('')
+            self.label_outputSearchNordPass.setText('Start typing to see the entropy score')
+            self.label_outputPasswordStrength.setText('')
         else:
             if password in self.nordpass_common_passwords:
                 print(self.nordpass_common_passwords.index(password))
-                self.label_outChkNordpass.setText('Found in the top 200 most common passwords by NordPass')
+                self.label_outputSearchNordPass.setText('Found in the top 200 most common passwords by NordPass')
             else:
-                self.label_outChkNordpass.setText('Not found in the list')
+                self.label_outputSearchNordPass.setText('Not found in the list')
 
     def update(self):
         self.chk_length.setChecked(False)
