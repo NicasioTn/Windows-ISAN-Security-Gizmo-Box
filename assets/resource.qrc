@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="icons">
+    <file>icons/icon-copy.png</file>
+    <file>icons/icon-line.png</file>
     <file>icons/icon_no.png</file>
     <file>icons/icon_yes.png</file>
     <file>icons/icon-advanceUser.png</file>

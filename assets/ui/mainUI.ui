@@ -2830,6 +2830,62 @@ border-radius: 5px;</string>
                                  </property>
                                 </widget>
                                </item>
+                               <item alignment="Qt::AlignRight">
+                                <widget class="QPushButton" name="pushButton">
+                                 <property name="minimumSize">
+                                  <size>
+                                   <width>200</width>
+                                   <height>40</height>
+                                  </size>
+                                 </property>
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>200</width>
+                                   <height>40</height>
+                                  </size>
+                                 </property>
+                                 <property name="font">
+                                  <font>
+                                   <family>Bahnschrift SemiBold</family>
+                                   <pointsize>11</pointsize>
+                                   <weight>75</weight>
+                                   <bold>true</bold>
+                                  </font>
+                                 </property>
+                                 <property name="styleSheet">
+                                  <string notr="true"> QPushButton{
+	    background-color: rgb(42, 49, 66);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+                                 </property>
+                                 <property name="text">
+                                  <string>COPY</string>
+                                 </property>
+                                 <property name="icon">
+                                  <iconset resource="../resource.qrc">
+                                   <normaloff>:/icons/icons/icon-copy.png</normaloff>:/icons/icons/icon-copy.png</iconset>
+                                 </property>
+                                 <property name="iconSize">
+                                  <size>
+                                   <width>30</width>
+                                   <height>30</height>
+                                  </size>
+                                 </property>
+                                </widget>
+                               </item>
                               </layout>
                              </widget>
                             </item>
@@ -2894,7 +2950,7 @@ QLineEdit:focus {
                                      <set>Qt::AlignCenter</set>
                                     </property>
                                     <property name="placeholderText">
-                                     <string>TYPE HERE</string>
+                                     <string>ENTER LINR API TOKEN</string>
                                     </property>
                                    </widget>
                                   </item>
@@ -3010,7 +3066,7 @@ border-radius: 5px;</string>
                               </layout>
                              </widget>
                             </item>
-                            <item alignment="Qt::AlignRight|Qt::AlignBottom">
+                            <item>
                              <widget class="QFrame" name="frame_20">
                               <property name="frameShape">
                                <enum>QFrame::StyledPanel</enum>
@@ -3018,7 +3074,63 @@ border-radius: 5px;</string>
                               <property name="frameShadow">
                                <enum>QFrame::Raised</enum>
                               </property>
-                              <layout class="QVBoxLayout" name="verticalLayout_26">
+                              <layout class="QHBoxLayout" name="horizontalLayout_6">
+                               <item>
+                                <widget class="QPushButton" name="pushButton_2">
+                                 <property name="minimumSize">
+                                  <size>
+                                   <width>200</width>
+                                   <height>40</height>
+                                  </size>
+                                 </property>
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>200</width>
+                                   <height>40</height>
+                                  </size>
+                                 </property>
+                                 <property name="font">
+                                  <font>
+                                   <family>Bahnschrift SemiBold</family>
+                                   <pointsize>11</pointsize>
+                                   <weight>75</weight>
+                                   <bold>true</bold>
+                                  </font>
+                                 </property>
+                                 <property name="styleSheet">
+                                  <string notr="true"> QPushButton{
+	    background-color: rgb(42, 49, 66);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+                                 </property>
+                                 <property name="text">
+                                  <string>LINE CHAT</string>
+                                 </property>
+                                 <property name="icon">
+                                  <iconset resource="../resource.qrc">
+                                   <normaloff>:/icons/icons/icon-line.png</normaloff>:/icons/icons/icon-line.png</iconset>
+                                 </property>
+                                 <property name="iconSize">
+                                  <size>
+                                   <width>30</width>
+                                   <height>30</height>
+                                  </size>
+                                 </property>
+                                </widget>
+                               </item>
                                <item>
                                 <widget class="QPushButton" name="btn_saveQR">
                                  <property name="minimumSize">
