@@ -95,7 +95,11 @@ class Main(QDialog):
         self.btn_sendDigest.clicked.connect(lambda: MessageDigest.processLineKey(self))
         self.btn_copy.clicked.connect(lambda: MessageDigest.copyOutput(self))
 
-        # --------------------- Malware Scan --------------------------------    
+        # --------------------- Malware Scan --------------------------------
+        self.btn_scanMalware.clicked.connect(MalwareScanning.scanMalware)
+        self.btn_openMalware.clicked.connect(MalwareScanning.openFileScanning)
+        self.btn_clearMalware.clicked.connect(MalwareScanning.clear)
+
         # --------------------- Vulnerability -------------------------------
         # --------------------- HTTPS Testing -------------------------------
 
@@ -399,7 +403,6 @@ class PasswordEvaluation(QDialog):
 
                 return path
 
-   
 import hashlib
 import qrcode
 import pyperclip
@@ -759,8 +762,27 @@ class MessageDigest(QDialog):
             self.btn_copy.setText("Copied!")
             pyperclip.copy(clipboard)
 
-        
+class MalwareScanning():
+    api_key = 'e8cf03a48915da2f70adfb45ae906ce940e837c47ba572bb30a8f1b8573df8e8'
+
+    def __init__(self):
+        super(MalwareScanning, self).__init__()
     
+    def scanMalware(self):
+        print("Scan Malware")
+        #pass
+
+    def openFileScanning(self):
+        print("Open File")
+        #pass
+    
+    def clear(self):
+        print("Clear")
+        #pass
+
+    
+
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = Main()
