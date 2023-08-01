@@ -91,9 +91,9 @@ class Main(QDialog):
         self.btn_openDigest.clicked.connect(self.openFileDialog)
         self.btn_clearDigest.clicked.connect(lambda: MessageDigest.clear(self))
         self.btn_saveQR.clicked.connect(lambda: MessageDigest.saveQRCode(self))
-        self.pushButton_2.clicked.connect(self.showBtnLine)
+        self.btn_lineAPI.clicked.connect(self.showBtnLine)
         self.btn_sendDigest.clicked.connect(lambda: MessageDigest.processLineKey(self))
-        self.pushButton.clicked.connect(lambda: MessageDigest.copyOutput(self))
+        self.btn_copy.clicked.connect(lambda: MessageDigest.copyOutput(self))
 
         # --------------------- Malware Scan --------------------------------    
         # --------------------- Vulnerability -------------------------------
@@ -459,7 +459,7 @@ class MessageDigest(QDialog):
             self.algorithm = 'SHA3-512'
         
         # reset copy button
-        self.pushButton.setText('Copy')
+        self.btn_copy.setText('Copy')
 
     def qrCodeGenerator(self, hash):
         qr = qrcode.QRCode(
@@ -758,7 +758,7 @@ class MessageDigest(QDialog):
             self.lineEdit_outputTextDigest.setStyleSheet("border: 1px solid red;")
         else:
             self.lineEdit_outputTextDigest.setStyleSheet("border: 1px solid green;")
-            self.pushButton.setText("Copied!")
+            self.btn_copy.setText("Copied!")
             pyperclip.copy(clipboard)
 
         

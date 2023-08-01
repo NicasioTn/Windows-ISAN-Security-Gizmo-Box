@@ -2016,6 +2016,9 @@ QLineEdit:focus {
                               <property name="alignment">
                                <set>Qt::AlignCenter</set>
                               </property>
+                              <property name="readOnly">
+                               <bool>true</bool>
+                              </property>
                               <property name="placeholderText">
                                <string>TYPE HERE</string>
                               </property>
@@ -3019,7 +3022,7 @@ QLineEdit:focus {
                                    </widget>
                                   </item>
                                   <item>
-                                   <widget class="QPushButton" name="pushButton">
+                                   <widget class="QPushButton" name="btn_copy">
                                     <property name="minimumSize">
                                      <size>
                                       <width>200</width>
@@ -3297,7 +3300,7 @@ border-radius: 5px;</string>
                               </property>
                               <layout class="QHBoxLayout" name="horizontalLayout_6">
                                <item>
-                                <widget class="QPushButton" name="pushButton_2">
+                                <widget class="QPushButton" name="btn_lineAPI">
                                  <property name="minimumSize">
                                   <size>
                                    <width>200</width>
