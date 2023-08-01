@@ -122,7 +122,6 @@ class Main(QDialog):
         self.btn_sendDigest.setVisible(False)
         self.lineEdit_digest.textChanged.connect(lambda: self.checkFile_Text())
         
-            
     def checkFile_Text(self):
         if os.path.exists(self.lineEdit_digest.text()) == True: # check if file exists
             print("File")
@@ -192,7 +191,6 @@ class Main(QDialog):
         PasswordEvaluation.check_common_password(self, password, self.nordpass_common_passwords)
     
     def getdropdown_sha2(self):
-        
         MessageDigest.hash(self, "sha2_" + self.dropdown_sha2.currentText())
         self.algorithm = 'SHA2-' + self.dropdown_sha2.currentText()
         self.dropdown_sha3.setCurrentIndex(0) 
