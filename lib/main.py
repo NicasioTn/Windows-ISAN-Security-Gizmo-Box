@@ -37,6 +37,11 @@ class Main(QDialog):
         self.lineEdit_password.setEchoMode(QLineEdit.EchoMode.Password)
         self.btn_iconEye.setIcon(self.hide_icon)
 
+        # -------------------- Home ---------------------------------------
+        self.btn_home.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_home))
+        self.btn_advanceUser.clicked.connect(self.openAdvancedUserHome)
+        self.btn_networkUser.clicked.connect(self.openNetworkUserHome)
+
         # -------------------- Advance User ---------------------------------
         self.btn_advancedUserHome.clicked.connect(self.openAdvancedUserHome)
         # ------------------------------------------------------------------
@@ -68,6 +73,12 @@ class Main(QDialog):
 
         self.btn_iconEye.clicked.connect(self.btn_hidePwd)
         self.lineEdit_password.textChanged.connect(self.getPassword)
+        self.btn_dicAttack.clicked.connect(self.Passowrd_Dictionary_Attack)
+        ### --------------------- Dictionary Attack -------------------------
+        self.btn_openDic.clicked.connect(lambda: PasswordEvaluation.open_file_wordlist(self))
+        self.btn_clearDic.clicked.connect(lambda: PasswordEvaluation.clear(self))
+        self.btn_rockyou.clicked.connect(lambda: self.lineEdit_inputFileDic.setText("rockyou.txt"))
+        self.btn_crackstation.clicked.connect(lambda: self.lineEdit_inputFileDic.setText("crackstation.txt"))
 
         # --------------------- Message Digest ------------------------------
         # Load the list of hints from the JSON file
@@ -94,8 +105,12 @@ class Main(QDialog):
 
     def PasswordEvaluationHome(self):
         self.stackedWidget.setCurrentWidget(self.page_password)
-        self.pushButton_3.setVisible(False)
+        self.btn_dicAttack.setVisible(False)
         self.label_outputSearchNordPass.setText('Start typing to see the entropy score')
+    
+    def Passowrd_Dictionary_Attack(self):
+        self.lineEdit_passwordDic.setText(self.lineEdit_password.text())
+        self.stackedWidget.setCurrentWidget(self.page_dictionary)
 
     def openMalwareHome(self):
         self.stackedWidget.setCurrentWidget(self.page_malware)
@@ -131,7 +146,7 @@ class Main(QDialog):
         self.dropdown_sha3.activated.connect(self.ShowImage_QR)
 
     def openNetworkUserHome(self):
-        self.stackedWidget.setCurrentWidget(self.page_networkUser_home)
+        self.stackedWidget.setCurrentWidget(self.page_networklUser)
 
     def openVulnerabilityHome(self):
         self.stackedWidget.setCurrentWidget(self.page_vulner)
@@ -215,13 +230,18 @@ class Main(QDialog):
     def showBtnLine(self):
         self.lineEdit_digest_2.setVisible(True)
         self.btn_sendDigest.setVisible(True)
-        
+
+from PyQt6.QtCore import QFileInfo
+
 class PasswordEvaluation(QDialog):
 
     hide = True
     
     def __init__(self):
         super(PasswordEvaluation, self).__init__()
+
+    def clear(self):
+        self.lineEdit_inputFileDic.setText('')
 
     def show_hide_password(self):
         if self.hide == True:
@@ -239,15 +259,15 @@ class PasswordEvaluation(QDialog):
             self.label_outputEntropy.setText('')
             self.label_outputSearchNordPass.setText('Start typing to see the entropy score')
             self.label_outputPasswordStrength.setText('')
-            self.pushButton_3.setVisible(False)
+            self.btn_dicAttack.setVisible(False)
         else:
             if password in self.nordpass_common_passwords:
                 print(self.nordpass_common_passwords.index(password))
                 self.label_outputSearchNordPass.setText('Found in the top 200 most common passwords by NordPass')
-                self.pushButton_3.setVisible(False)
+                self.btn_dicAttack.setVisible(False)
             else:
                 self.label_outputSearchNordPass.setText('Not found in the list')
-                self.pushButton_3.setVisible(True) if self.label_outputSearchNordPass.text() == '' or self.label_outputSearchNordPass.text() == 'Not found in the list' else self.pushButton_3.setVisible(False)
+                self.btn_dicAttack.setVisible(True) if self.label_outputSearchNordPass.text() == '' or self.label_outputSearchNordPass.text() == 'Not found in the list' else self.btn_dicAttack.setVisible(False)
 
     def update(self):
         self.chk_length.setChecked(False)
@@ -358,8 +378,30 @@ class PasswordEvaluation(QDialog):
             print(f"Error: {e}")
         except UnboundLocalError as e:
             print(f"Error: {e}")
-
     
+    def open_file_wordlist(self):
+        filepath, _ = QFileDialog.getOpenFileName(
+            self,
+           "Open Wordlist File", 
+            "D:\\icons\\avatar\\", 
+            "Text Files (*.txt)",
+        )
+        file_name = QFileInfo(filepath).fileName()
+        if filepath:
+            # Process the selected filename
+            print("Selected file:", filepath)
+            
+            if filepath:
+                path = Path(filepath)
+                #self.lineEdit_inputFileDic.setText(str(path)) # show path file
+                self.lineEdit_inputFileDic.setText(file_name) # show file name
+                if path.exists() != True: # check if file exists 
+                    print(f"File exists at: {path.exists()}")
+                print(f"Get file at: {path}") 
+
+                return path
+
+   
 import hashlib
 import qrcode
 import pyperclip

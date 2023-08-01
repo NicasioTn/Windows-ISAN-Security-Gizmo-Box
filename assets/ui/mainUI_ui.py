@@ -736,16 +736,16 @@ class Ui_Form(object):
         self.label_outputSearchNordPass.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_outputSearchNordPass.setObjectName("label_outputSearchNordPass")
         self.verticalLayout_11.addWidget(self.label_outputSearchNordPass, 0, QtCore.Qt.AlignmentFlag.AlignTop)
-        self.pushButton_3 = QtWidgets.QPushButton(parent=self.frame_5)
-        self.pushButton_3.setMinimumSize(QtCore.QSize(200, 40))
-        self.pushButton_3.setMaximumSize(QtCore.QSize(200, 40))
+        self.btn_dicAttack = QtWidgets.QPushButton(parent=self.frame_5)
+        self.btn_dicAttack.setMinimumSize(QtCore.QSize(200, 40))
+        self.btn_dicAttack.setMaximumSize(QtCore.QSize(200, 40))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
-        self.pushButton_3.setFont(font)
-        self.pushButton_3.setStyleSheet(" QPushButton{\n"
+        self.btn_dicAttack.setFont(font)
+        self.btn_dicAttack.setStyleSheet(" QPushButton{\n"
 "        background-color: rgb(42, 49, 66);\n"
 "        border-radius: 5px;\n"
 "        color: rgb(255, 255, 255);\n"
@@ -762,8 +762,8 @@ class Ui_Form(object):
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        self.pushButton_3.setObjectName("pushButton_3")
-        self.verticalLayout_11.addWidget(self.pushButton_3, 0, QtCore.Qt.AlignmentFlag.AlignRight)
+        self.btn_dicAttack.setObjectName("btn_dicAttack")
+        self.verticalLayout_11.addWidget(self.btn_dicAttack, 0, QtCore.Qt.AlignmentFlag.AlignRight)
         self.verticalLayout_9.addWidget(self.frame_5)
         self.verticalLayout_8.addWidget(self.frame_2)
         self.frame_3 = QtWidgets.QFrame(parent=self.frame)
@@ -1479,7 +1479,7 @@ class Ui_Form(object):
         self.btn_sha1.setObjectName("btn_sha1")
         self.horizontalLayout_9.addWidget(self.btn_sha1)
         self.dropdown_sha2 = QtWidgets.QComboBox(parent=self.frame_13)
-        self.dropdown_sha2.setMinimumSize(QtCore.QSize(119, 41))
+        self.dropdown_sha2.setMinimumSize(QtCore.QSize(101, 41))
         self.dropdown_sha2.setMaximumSize(QtCore.QSize(111, 41))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -1527,7 +1527,7 @@ class Ui_Form(object):
         self.dropdown_sha2.setItemText(5, "")
         self.horizontalLayout_9.addWidget(self.dropdown_sha2)
         self.dropdown_sha3 = QtWidgets.QComboBox(parent=self.frame_13)
-        self.dropdown_sha3.setMinimumSize(QtCore.QSize(119, 41))
+        self.dropdown_sha3.setMinimumSize(QtCore.QSize(101, 41))
         self.dropdown_sha3.setMaximumSize(QtCore.QSize(111, 41))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -2879,7 +2879,7 @@ class Ui_Form(object):
         self.label_Password.setText(_translate("Form", "PASSWORD EVALUATION"))
         self.lineEdit_password.setPlaceholderText(_translate("Form", "TYPE HERE"))
         self.label_searchNordpass.setText(_translate("Form", "SEARCH FOR YOUT PASSWORD IN THE NORDPASS WORDLISTS"))
-        self.pushButton_3.setText(_translate("Form", "DICTIONARY ATTACK"))
+        self.btn_dicAttack.setText(_translate("Form", "DICTIONARY ATTACK"))
         self.label_timeToCrack.setText(_translate("Form", "ESTIMATED TIME TO CRACK"))
         self.label_pwdStrength.setText(_translate("Form", "YOUR PASSWORD STRENGTH"))
         self.label_entropy.setText(_translate("Form", "PASSWORD ENTROPY"))

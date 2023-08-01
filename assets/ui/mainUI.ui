@@ -1429,7 +1429,7 @@ QPushButton:pressed {
                              </widget>
                             </item>
                             <item alignment="Qt::AlignRight">
-                             <widget class="QPushButton" name="pushButton_3">
+                             <widget class="QPushButton" name="btn_dicAttack">
                               <property name="minimumSize">
                                <size>
                                 <width>200</width>
@@ -2730,7 +2730,7 @@ QPushButton:focus {
                              <widget class="QComboBox" name="dropdown_sha2">
                               <property name="minimumSize">
                                <size>
-                                <width>119</width>
+                                <width>101</width>
                                 <height>41</height>
                                </size>
                               </property>
@@ -2821,7 +2821,7 @@ QComboBox:hover {
                              <widget class="QComboBox" name="dropdown_sha3">
                               <property name="minimumSize">
                                <size>
-                                <width>119</width>
+                                <width>101</width>
                                 <height>41</height>
                                </size>
                               </property>
