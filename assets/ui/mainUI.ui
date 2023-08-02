@@ -456,7 +456,7 @@ border-radius: 5px;
 </string>
                  </property>
                  <property name="currentIndex">
-                  <number>0</number>
+                  <number>8</number>
                  </property>
                  <widget class="QWidget" name="page_home">
                   <layout class="QHBoxLayout" name="horizontalLayout_26">
@@ -2733,7 +2733,7 @@ QPushButton:focus {
                              <widget class="QComboBox" name="dropdown_sha2">
                               <property name="minimumSize">
                                <size>
-                                <width>101</width>
+                                <width>119</width>
                                 <height>41</height>
                                </size>
                               </property>
@@ -2824,7 +2824,7 @@ QComboBox:hover {
                              <widget class="QComboBox" name="dropdown_sha3">
                               <property name="minimumSize">
                                <size>
-                                <width>101</width>
+                                <width>119</width>
                                 <height>41</height>
                                </size>
                               </property>
@@ -5076,8 +5076,7 @@ QPushButton:pressed {
                       <item>
                        <widget class="QFrame" name="frame_23">
                         <property name="styleSheet">
-                         <string notr="true">background-color:rgba(242,243,245,255);
-border-radius: 5px;</string>
+                         <string notr="true"/>
                         </property>
                         <property name="frameShape">
                          <enum>QFrame::StyledPanel</enum>
@@ -5085,136 +5084,261 @@ border-radius: 5px;</string>
                         <property name="frameShadow">
                          <enum>QFrame::Raised</enum>
                         </property>
-                        <layout class="QVBoxLayout" name="verticalLayout_30">
+                        <layout class="QHBoxLayout" name="horizontalLayout_43">
                          <item>
-                          <widget class="QLabel" name="label_nameMalware">
-                           <property name="font">
-                            <font>
-                             <family>Bahnschrift SemiBold</family>
-                             <pointsize>13</pointsize>
-                             <weight>75</weight>
-                             <bold>true</bold>
-                            </font>
+                          <widget class="QFrame" name="frame_83">
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
                            </property>
-                           <property name="styleSheet">
-                            <string notr="true">color: rgb(42, 49, 66);</string>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
                            </property>
-                           <property name="text">
-                            <string>NAME</string>
-                           </property>
+                           <layout class="QVBoxLayout" name="verticalLayout_61">
+                            <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+                             <widget class="QFrame" name="frame_89">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
+                              </property>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
+                              </property>
+                              <layout class="QVBoxLayout" name="verticalLayout_62">
+                               <item>
+                                <widget class="QLabel" name="label">
+                                 <property name="font">
+                                  <font>
+                                   <family>Bahnschrift SemiBold</family>
+                                   <pointsize>13</pointsize>
+                                   <weight>75</weight>
+                                   <bold>true</bold>
+                                  </font>
+                                 </property>
+                                 <property name="styleSheet">
+                                  <string notr="true">color: rgba(0,143,255,255);</string>
+                                 </property>
+                                 <property name="text">
+                                  <string>MALWARE SCAN SUMMARY</string>
+                                 </property>
+                                 <property name="alignment">
+                                  <set>Qt::AlignCenter</set>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QLabel" name="label_6">
+                                 <property name="font">
+                                  <font>
+                                   <family>Bahnschrift SemiBold</family>
+                                   <pointsize>13</pointsize>
+                                   <weight>75</weight>
+                                   <bold>true</bold>
+                                  </font>
+                                 </property>
+                                 <property name="styleSheet">
+                                  <string notr="true"/>
+                                 </property>
+                                 <property name="text">
+                                  <string>12/1/44 18:30 PM</string>
+                                 </property>
+                                 <property name="alignment">
+                                  <set>Qt::AlignCenter</set>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QFrame" name="frame_90">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
+                              </property>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
+                              </property>
+                              <layout class="QHBoxLayout" name="horizontalLayout_45">
+                               <item>
+                                <widget class="QFrame" name="frame_91">
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <layout class="QVBoxLayout" name="verticalLayout_63">
+                                  <item>
+                                   <widget class="QLabel" name="label_2">
+                                    <property name="font">
+                                     <font>
+                                      <family>Bahnschrift SemiBold</family>
+                                      <pointsize>13</pointsize>
+                                      <weight>75</weight>
+                                      <bold>true</bold>
+                                     </font>
+                                    </property>
+                                    <property name="text">
+                                     <string>NAME</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QLabel" name="label_3">
+                                    <property name="font">
+                                     <font>
+                                      <family>Bahnschrift SemiBold</family>
+                                      <pointsize>13</pointsize>
+                                      <weight>75</weight>
+                                      <bold>true</bold>
+                                     </font>
+                                    </property>
+                                    <property name="text">
+                                     <string>DETACTION</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QLabel" name="label_4">
+                                    <property name="font">
+                                     <font>
+                                      <family>Bahnschrift SemiBold</family>
+                                      <pointsize>13</pointsize>
+                                      <weight>75</weight>
+                                      <bold>true</bold>
+                                     </font>
+                                    </property>
+                                    <property name="text">
+                                     <string>DETAIL</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QFrame" name="frame_92">
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <layout class="QVBoxLayout" name="verticalLayout_64">
+                                  <item>
+                                   <widget class="QLabel" name="label_5">
+                                    <property name="font">
+                                     <font>
+                                      <family>Bahnschrift SemiBold</family>
+                                      <pointsize>13</pointsize>
+                                      <weight>75</weight>
+                                      <bold>true</bold>
+                                     </font>
+                                    </property>
+                                    <property name="text">
+                                     <string>kkkk</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QLabel" name="label_7">
+                                    <property name="font">
+                                     <font>
+                                      <family>Bahnschrift SemiBold</family>
+                                      <pointsize>13</pointsize>
+                                      <weight>75</weight>
+                                      <bold>true</bold>
+                                     </font>
+                                    </property>
+                                    <property name="text">
+                                     <string>2</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QLabel" name="label_9">
+                                    <property name="font">
+                                     <font>
+                                      <family>Bahnschrift SemiBold</family>
+                                      <pointsize>13</pointsize>
+                                      <weight>75</weight>
+                                      <bold>true</bold>
+                                     </font>
+                                    </property>
+                                    <property name="text">
+                                     <string/>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                           </layout>
                           </widget>
                          </item>
                          <item>
-                          <widget class="QLabel" name="label_sizeMalware">
-                           <property name="font">
-                            <font>
-                             <family>Bahnschrift SemiBold</family>
-                             <pointsize>13</pointsize>
-                             <weight>75</weight>
-                             <bold>true</bold>
-                            </font>
+                          <widget class="QFrame" name="frame_84">
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
                            </property>
-                           <property name="styleSheet">
-                            <string notr="true">color: rgb(42, 49, 66);</string>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
                            </property>
-                           <property name="text">
-                            <string>SIZE</string>
-                           </property>
-                          </widget>
-                         </item>
-                         <item>
-                          <widget class="QLabel" name="label_dateMalware">
-                           <property name="font">
-                            <font>
-                             <family>Bahnschrift SemiBold</family>
-                             <pointsize>13</pointsize>
-                             <weight>75</weight>
-                             <bold>true</bold>
-                            </font>
-                           </property>
-                           <property name="styleSheet">
-                            <string notr="true">color: rgb(42, 49, 66);
- background-color: transparent; 
-   
-</string>
-                           </property>
-                           <property name="text">
-                            <string>DATE</string>
-                           </property>
-                          </widget>
-                         </item>
-                         <item>
-                          <widget class="QLabel" name="label_typeMalware">
-                           <property name="font">
-                            <font>
-                             <family>Bahnschrift SemiBold</family>
-                             <pointsize>13</pointsize>
-                             <weight>75</weight>
-                             <bold>true</bold>
-                            </font>
-                           </property>
-                           <property name="styleSheet">
-                            <string notr="true">color: rgb(42, 49, 66);</string>
-                           </property>
-                           <property name="text">
-                            <string>TYPE</string>
-                           </property>
-                          </widget>
-                         </item>
-                         <item alignment="Qt::AlignRight">
-                          <widget class="QPushButton" name="btn_readmoreMalware">
-                           <property name="minimumSize">
-                            <size>
-                             <width>200</width>
-                             <height>40</height>
-                            </size>
-                           </property>
-                           <property name="maximumSize">
-                            <size>
-                             <width>200</width>
-                             <height>40</height>
-                            </size>
-                           </property>
-                           <property name="font">
-                            <font>
-                             <family>Bahnschrift SemiBold</family>
-                             <pointsize>11</pointsize>
-                             <weight>75</weight>
-                             <bold>true</bold>
-                            </font>
-                           </property>
-                           <property name="styleSheet">
-                            <string notr="true"> QPushButton{
-	    background-color: rgb(42, 49, 66);
-        border-radius: 5px;
-		color: rgb(255, 255, 255);
-    }
- QPushButton{
-        border-radius: 10px;
-    }
-QPushButton:hover {
-	 border-radius: 10px;
-	 background-color: rgba(0,143,255,255);
-}
-QPushButton:pressed {
-	background-color: rgb(120, 120, 120);
-	color: rgb(255, 255, 255);
-}
-</string>
-                           </property>
-                           <property name="text">
-                            <string>READ MORE</string>
-                           </property>
-                           <property name="icon">
-                            <iconset resource="../resource.qrc">
-                             <normaloff>:/icons/icons/icon-more.png</normaloff>:/icons/icons/icon-more.png</iconset>
-                           </property>
-                           <property name="iconSize">
-                            <size>
-                             <width>30</width>
-                             <height>30</height>
-                            </size>
-                           </property>
+                           <layout class="QVBoxLayout" name="verticalLayout_30">
+                            <item>
+                             <widget class="QFrame" name="frame_85">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
+                              </property>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
+                              </property>
+                              <layout class="QHBoxLayout" name="horizontalLayout_44">
+                               <item>
+                                <widget class="QFrame" name="frame_87">
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <layout class="QVBoxLayout" name="verticalLayout_57"/>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QFrame" name="frame_88">
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <layout class="QVBoxLayout" name="verticalLayout_60">
+                                  <item>
+                                   <widget class="QLabel" name="label_8">
+                                    <property name="text">
+                                     <string/>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QFrame" name="frame_86">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
+                              </property>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
                           </widget>
                          </item>
                         </layout>
