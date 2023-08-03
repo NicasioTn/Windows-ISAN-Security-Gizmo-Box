@@ -2733,7 +2733,7 @@ QPushButton:focus {
                              <widget class="QComboBox" name="dropdown_sha2">
                               <property name="minimumSize">
                                <size>
-                                <width>101</width>
+                                <width>119</width>
                                 <height>41</height>
                                </size>
                               </property>
@@ -2772,7 +2772,7 @@ QPushButton:focus {
 }
 QComboBox::down-arrow {
 	
-	image: url(:/icons/icons/Icon_down.png);
+	image: url(D:/ISAN Security Gizmo Box/assets/icons/Icon_down.png);
 
 }
 QComboBox:hover {
@@ -2819,7 +2819,7 @@ QComboBox:hover {
                              <widget class="QComboBox" name="dropdown_sha3">
                               <property name="minimumSize">
                                <size>
-                                <width>101</width>
+                                <width>119</width>
                                 <height>41</height>
                                </size>
                               </property>
@@ -2857,7 +2857,7 @@ QComboBox:hover {
 }
 QComboBox::down-arrow {
 	
-	image: url(:/icons/icons/Icon_down.png);
+	image: url(D:/ISAN Security Gizmo Box/assets/icons/Icon_down.png);
 }
 QComboBox:hover {
 	border: 1px solid;
@@ -3316,6 +3316,7 @@ border-radius: 5px;</string>
 	    background-color: rgb(42, 49, 66);
         border-radius: 5px;
 		color: rgb(255, 255, 255);
+		
     }
  QPushButton{
         border-radius: 10px;
@@ -3327,6 +3328,7 @@ QPushButton:hover {
 QPushButton:pressed {
 	background-color: rgb(120, 120, 120);
 	color: rgb(255, 255, 255);
+
 }
 </string>
                                  </property>
