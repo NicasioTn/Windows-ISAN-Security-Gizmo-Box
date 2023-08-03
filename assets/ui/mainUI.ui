@@ -695,6 +695,18 @@ QPushButton:pressed {
                       </item>
                       <item>
                        <widget class="QFrame" name="frame_67">
+                        <property name="minimumSize">
+                         <size>
+                          <width>500</width>
+                          <height>500</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>500</width>
+                          <height>500</height>
+                         </size>
+                        </property>
                         <property name="frameShape">
                          <enum>QFrame::StyledPanel</enum>
                         </property>
@@ -712,9 +724,12 @@ QPushButton:pressed {
                            </property>
                            <property name="maximumSize">
                             <size>
-                             <width>1000</width>
-                             <height>1000</height>
+                             <width>500</width>
+                             <height>500</height>
                             </size>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">background-image: url(D:/ISAN Security Gizmo Box/assets/images/main.png);</string>
                            </property>
                            <property name="text">
                             <string/>
