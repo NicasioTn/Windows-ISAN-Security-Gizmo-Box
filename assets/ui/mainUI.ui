@@ -3038,6 +3038,10 @@ QLineEdit:focus {
 	    background-color: rgb(42, 49, 66);
         border-radius: 5px;
 		color: rgb(255, 255, 255);
+		background-image: url(D:/ISAN Security Gizmo Box/assets/icons/icon-copy.png);
+		background-repeat: no-repeat;
+        background-position: center left;
+		
     }
  QPushButton{
         border-radius: 10px;
@@ -3054,10 +3058,6 @@ QPushButton:pressed {
                                     </property>
                                     <property name="text">
                                      <string>COPY</string>
-                                    </property>
-                                    <property name="icon">
-                                     <iconset resource="../resource.qrc">
-                                      <normaloff>:/icons/icons/icon-copy.png</normaloff>:/icons/icons/icon-copy.png</iconset>
                                     </property>
                                     <property name="iconSize">
                                      <size>

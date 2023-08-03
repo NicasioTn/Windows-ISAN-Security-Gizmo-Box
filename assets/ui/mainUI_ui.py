@@ -1480,7 +1480,7 @@ class Ui_Form(object):
         self.btn_sha1.setObjectName("btn_sha1")
         self.horizontalLayout_9.addWidget(self.btn_sha1)
         self.dropdown_sha2 = QtWidgets.QComboBox(parent=self.frame_13)
-        self.dropdown_sha2.setMinimumSize(QtCore.QSize(101, 41))
+        self.dropdown_sha2.setMinimumSize(QtCore.QSize(119, 41))
         self.dropdown_sha2.setMaximumSize(QtCore.QSize(111, 41))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -1508,7 +1508,7 @@ class Ui_Form(object):
 "}\n"
 "QComboBox::down-arrow {\n"
 "    \n"
-"    image: url(:/icons/icons/Icon_down.png);\n"
+"    image: url(D:/ISAN Security Gizmo Box/assets/icons/Icon_down.png);\n"
 "\n"
 "}\n"
 "QComboBox:hover {\n"
@@ -1526,7 +1526,7 @@ class Ui_Form(object):
         self.dropdown_sha2.addItem("")
         self.horizontalLayout_9.addWidget(self.dropdown_sha2)
         self.dropdown_sha3 = QtWidgets.QComboBox(parent=self.frame_13)
-        self.dropdown_sha3.setMinimumSize(QtCore.QSize(101, 41))
+        self.dropdown_sha3.setMinimumSize(QtCore.QSize(119, 41))
         self.dropdown_sha3.setMaximumSize(QtCore.QSize(111, 41))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -1553,7 +1553,7 @@ class Ui_Form(object):
 "}\n"
 "QComboBox::down-arrow {\n"
 "    \n"
-"    image: url(:/icons/icons/Icon_down.png);\n"
+"    image: url(D:/ISAN Security Gizmo Box/assets/icons/Icon_down.png);\n"
 "}\n"
 "QComboBox:hover {\n"
 "    border: 1px solid;\n"
@@ -1648,6 +1648,10 @@ class Ui_Form(object):
 "        background-color: rgb(42, 49, 66);\n"
 "        border-radius: 5px;\n"
 "        color: rgb(255, 255, 255);\n"
+"        background-image: url(D:/ISAN Security Gizmo Box/assets/icons/icon-copy.png);\n"
+"        background-repeat: no-repeat;\n"
+"        background-position: center left;\n"
+"        \n"
 "    }\n"
 " QPushButton{\n"
 "        border-radius: 10px;\n"
@@ -1661,9 +1665,6 @@ class Ui_Form(object):
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        icon8 = QtGui.QIcon()
-        icon8.addPixmap(QtGui.QPixmap(":/icons/icons/icon-copy.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btn_copy.setIcon(icon8)
         self.btn_copy.setIconSize(QtCore.QSize(30, 30))
         self.btn_copy.setObjectName("btn_copy")
         self.horizontalLayout_41.addWidget(self.btn_copy)
@@ -1750,9 +1751,9 @@ class Ui_Form(object):
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        icon9 = QtGui.QIcon()
-        icon9.addPixmap(QtGui.QPixmap(":/icons/icons/icon-send.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btn_sendDigest.setIcon(icon9)
+        icon8 = QtGui.QIcon()
+        icon8.addPixmap(QtGui.QPixmap(":/icons/icons/icon-send.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btn_sendDigest.setIcon(icon8)
         self.btn_sendDigest.setIconSize(QtCore.QSize(30, 30))
         self.btn_sendDigest.setObjectName("btn_sendDigest")
         self.horizontalLayout_40.addWidget(self.btn_sendDigest)
@@ -1801,6 +1802,7 @@ class Ui_Form(object):
 "        background-color: rgb(42, 49, 66);\n"
 "        border-radius: 5px;\n"
 "        color: rgb(255, 255, 255);\n"
+"        \n"
 "    }\n"
 " QPushButton{\n"
 "        border-radius: 10px;\n"
@@ -1812,11 +1814,12 @@ class Ui_Form(object):
 "QPushButton:pressed {\n"
 "    background-color: rgb(120, 120, 120);\n"
 "    color: rgb(255, 255, 255);\n"
+"\n"
 "}\n"
 "")
-        icon10 = QtGui.QIcon()
-        icon10.addPixmap(QtGui.QPixmap(":/icons/icons/icon-line.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btn_lineAPI.setIcon(icon10)
+        icon9 = QtGui.QIcon()
+        icon9.addPixmap(QtGui.QPixmap(":/icons/icons/icon-line.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btn_lineAPI.setIcon(icon9)
         self.btn_lineAPI.setIconSize(QtCore.QSize(30, 30))
         self.btn_lineAPI.setObjectName("btn_lineAPI")
         self.horizontalLayout_6.addWidget(self.btn_lineAPI)
@@ -1846,9 +1849,9 @@ class Ui_Form(object):
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        icon11 = QtGui.QIcon()
-        icon11.addPixmap(QtGui.QPixmap(":/icons/icons/icon-save.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btn_saveQR.setIcon(icon11)
+        icon10 = QtGui.QIcon()
+        icon10.addPixmap(QtGui.QPixmap(":/icons/icons/icon-save.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btn_saveQR.setIcon(icon10)
         self.btn_saveQR.setIconSize(QtCore.QSize(30, 30))
         self.btn_saveQR.setObjectName("btn_saveQR")
         self.horizontalLayout_6.addWidget(self.btn_saveQR)
@@ -2154,9 +2157,9 @@ class Ui_Form(object):
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        icon12 = QtGui.QIcon()
-        icon12.addPixmap(QtGui.QPixmap(":/icons/icons/icon-scan.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btn_scanVulner.setIcon(icon12)
+        icon11 = QtGui.QIcon()
+        icon11.addPixmap(QtGui.QPixmap(":/icons/icons/icon-scan.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btn_scanVulner.setIcon(icon11)
         self.btn_scanVulner.setIconSize(QtCore.QSize(30, 30))
         self.btn_scanVulner.setObjectName("btn_scanVulner")
         self.horizontalLayout_10.addWidget(self.btn_scanVulner, 0, QtCore.Qt.AlignmentFlag.AlignRight)
@@ -2386,9 +2389,9 @@ class Ui_Form(object):
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        icon13 = QtGui.QIcon()
-        icon13.addPixmap(QtGui.QPixmap(":/icons/icons/icon-more.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btn_readMoreVulner.setIcon(icon13)
+        icon12 = QtGui.QIcon()
+        icon12.addPixmap(QtGui.QPixmap(":/icons/icons/icon-more.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btn_readMoreVulner.setIcon(icon12)
         self.btn_readMoreVulner.setIconSize(QtCore.QSize(30, 30))
         self.btn_readMoreVulner.setObjectName("btn_readMoreVulner")
         self.verticalLayout_34.addWidget(self.btn_readMoreVulner, 0, QtCore.Qt.AlignmentFlag.AlignRight)
@@ -2487,7 +2490,7 @@ class Ui_Form(object):
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        self.btn_scanHttps.setIcon(icon12)
+        self.btn_scanHttps.setIcon(icon11)
         self.btn_scanHttps.setIconSize(QtCore.QSize(30, 30))
         self.btn_scanHttps.setObjectName("btn_scanHttps")
         self.horizontalLayout_16.addWidget(self.btn_scanHttps, 0, QtCore.Qt.AlignmentFlag.AlignRight)
@@ -2591,7 +2594,7 @@ class Ui_Form(object):
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        self.btn_readMoreHttps.setIcon(icon13)
+        self.btn_readMoreHttps.setIcon(icon12)
         self.btn_readMoreHttps.setIconSize(QtCore.QSize(30, 30))
         self.btn_readMoreHttps.setObjectName("btn_readMoreHttps")
         self.verticalLayout_38.addWidget(self.btn_readMoreHttps, 0, QtCore.Qt.AlignmentFlag.AlignRight)
@@ -2694,7 +2697,7 @@ class Ui_Form(object):
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        self.btn_scanMalware.setIcon(icon12)
+        self.btn_scanMalware.setIcon(icon11)
         self.btn_scanMalware.setIconSize(QtCore.QSize(30, 30))
         self.btn_scanMalware.setObjectName("btn_scanMalware")
         self.horizontalLayout_14.addWidget(self.btn_scanMalware)
