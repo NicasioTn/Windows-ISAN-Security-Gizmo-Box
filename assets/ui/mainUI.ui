@@ -456,7 +456,7 @@ border-radius: 5px;
 </string>
                  </property>
                  <property name="currentIndex">
-                  <number>8</number>
+                  <number>7</number>
                  </property>
                  <widget class="QWidget" name="page_home">
                   <layout class="QHBoxLayout" name="horizontalLayout_26">
@@ -1324,7 +1324,7 @@ QLineEdit:focus {
                                   <set>Qt::AlignCenter</set>
                                  </property>
                                  <property name="placeholderText">
-                                  <string>TYPE HERE</string>
+                                  <string>Type here</string>
                                  </property>
                                 </widget>
                                </item>
@@ -1399,7 +1399,7 @@ QPushButton:pressed {
                                <string notr="true">color: rgb(42, 49, 66);</string>
                               </property>
                               <property name="text">
-                               <string>SEARCH FOR YOUT PASSWORD IN THE NORDPASS WORDLISTS</string>
+                               <string> Search for your password in the NordPass worldists</string>
                               </property>
                               <property name="alignment">
                                <set>Qt::AlignCenter</set>
@@ -1470,7 +1470,7 @@ QPushButton:pressed {
 </string>
                               </property>
                               <property name="text">
-                               <string>DICTIONARY ATTACK</string>
+                               <string>Dictionary attack</string>
                               </property>
                              </widget>
                             </item>
@@ -1536,7 +1536,7 @@ QPushButton:pressed {
                                   <string notr="true">color: rgb(42, 49, 66);</string>
                                  </property>
                                  <property name="text">
-                                  <string>YOUR PASSWORD STRENGTH</string>
+                                  <string> Your password strength</string>
                                  </property>
                                  <property name="alignment">
                                   <set>Qt::AlignCenter</set>
@@ -1591,7 +1591,7 @@ QPushButton:pressed {
                                   <string notr="true">color: rgb(42, 49, 66);</string>
                                  </property>
                                  <property name="text">
-                                  <string>ESTIMATED TIME TO CRACK</string>
+                                  <string> Estimated time to crack</string>
                                  </property>
                                  <property name="alignment">
                                   <set>Qt::AlignCenter</set>
@@ -1664,7 +1664,7 @@ QPushButton:pressed {
                                      </font>
                                     </property>
                                     <property name="text">
-                                     <string>PASSWORD ENTROPY</string>
+                                     <string>Password entropy</string>
                                     </property>
                                     <property name="alignment">
                                      <set>Qt::AlignCenter</set>
@@ -1772,7 +1772,7 @@ QPushButton:pressed {
                                      <string notr="true">color: rgb(42, 49, 66);</string>
                                     </property>
                                     <property name="text">
-                                     <string>SPECIAL WARINING!</string>
+                                     <string>Special warning!</string>
                                     </property>
                                     <property name="alignment">
                                      <set>Qt::AlignCenter</set>
@@ -1790,7 +1790,7 @@ QPushButton:pressed {
                                      </font>
                                     </property>
                                     <property name="text">
-                                     <string>0 CHARACTERS CONTAINING</string>
+                                     <string>0  Characters containing</string>
                                     </property>
                                    </widget>
                                   </item>
@@ -1823,7 +1823,7 @@ QPushButton:pressed {
 }</string>
                                     </property>
                                     <property name="text">
-                                     <string>PASSWORD MORETHAN 8 CHARACTERS                        </string>
+                                     <string>Password morthan 8 characters</string>
                                     </property>
                                     <property name="icon">
                                      <iconset resource="../resource.qrc">
@@ -1848,7 +1848,7 @@ QPushButton:pressed {
 }</string>
                                     </property>
                                     <property name="text">
-                                     <string>DIGITS                                    </string>
+                                     <string>Digits                          </string>
                                     </property>
                                     <property name="icon">
                                      <iconset resource="../resource.qrc">
@@ -1873,7 +1873,7 @@ QPushButton:pressed {
 }</string>
                                     </property>
                                     <property name="text">
-                                     <string>LOWER CASE LATIN LETTERS</string>
+                                     <string> Lower case latin letters</string>
                                     </property>
                                     <property name="icon">
                                      <iconset resource="../resource.qrc">
@@ -1898,7 +1898,7 @@ QPushButton:pressed {
 }</string>
                                     </property>
                                     <property name="text">
-                                     <string>UPPER CASE LATIN LETTERS</string>
+                                     <string> Upper case latin letters</string>
                                     </property>
                                     <property name="icon">
                                      <iconset resource="../resource.qrc">
@@ -1923,7 +1923,7 @@ QPushButton:pressed {
 }</string>
                                     </property>
                                     <property name="text">
-                                     <string>SPECIAL CHARACTERS         </string>
+                                     <string>Special characters</string>
                                     </property>
                                     <property name="icon">
                                      <iconset resource="../resource.qrc">
@@ -2058,7 +2058,7 @@ QLineEdit:focus {
                                <bool>true</bool>
                               </property>
                               <property name="placeholderText">
-                               <string>Type Here</string>
+                               <string>Type here</string>
                               </property>
                              </widget>
                             </item>
@@ -2094,7 +2094,7 @@ QLineEdit:focus {
                                   </font>
                                  </property>
                                  <property name="text">
-                                  <string>Default Dictionary:</string>
+                                  <string>Default dictionary:</string>
                                  </property>
                                 </widget>
                                </item>
@@ -2102,13 +2102,13 @@ QLineEdit:focus {
                                 <widget class="QComboBox" name="comboBox">
                                  <property name="minimumSize">
                                   <size>
-                                   <width>200</width>
+                                   <width>230</width>
                                    <height>41</height>
                                   </size>
                                  </property>
                                  <property name="maximumSize">
                                   <size>
-                                   <width>200</width>
+                                   <width>230</width>
                                    <height>41</height>
                                   </size>
                                  </property>
@@ -2153,7 +2153,7 @@ QComboBox:hover {
                                  </property>
                                  <item>
                                   <property name="text">
-                                   <string>Select Dictionary</string>
+                                   <string>Select dictionary</string>
                                   </property>
                                  </item>
                                  <item>
@@ -2214,7 +2214,7 @@ QComboBox:hover {
                                   </font>
                                  </property>
                                  <property name="text">
-                                  <string>Cuctom Dictionary:</string>
+                                  <string>Custom dictionary:</string>
                                  </property>
                                 </widget>
                                </item>
@@ -2222,13 +2222,13 @@ QComboBox:hover {
                                 <widget class="QLineEdit" name="lineEdit_inputFileDic">
                                  <property name="minimumSize">
                                   <size>
-                                   <width>200</width>
+                                   <width>230</width>
                                    <height>41</height>
                                   </size>
                                  </property>
                                  <property name="maximumSize">
                                   <size>
-                                   <width>200</width>
+                                   <width>230</width>
                                    <height>41</height>
                                   </size>
                                  </property>
@@ -2261,7 +2261,7 @@ QLineEdit:focus {
                                   <set>Qt::AlignCenter</set>
                                  </property>
                                  <property name="placeholderText">
-                                  <string>Only Text File</string>
+                                  <string>Only text file</string>
                                  </property>
                                 </widget>
                                </item>
@@ -2618,7 +2618,7 @@ QLineEdit:focus {
                                <set>Qt::AlignCenter</set>
                               </property>
                               <property name="placeholderText">
-                               <string>Type Here</string>
+                               <string>Type here</string>
                               </property>
                              </widget>
                             </item>
@@ -2878,7 +2878,7 @@ QPushButton:pressed {
                                   <string notr="true">color: rgba(0, 143, 255, 255);</string>
                                  </property>
                                  <property name="text">
-                                  <string>Malware Scanning Summary</string>
+                                  <string>Malware scanning summary</string>
                                  </property>
                                  <property name="alignment">
                                   <set>Qt::AlignCenter</set>
@@ -2980,7 +2980,7 @@ QPushButton:pressed {
                                      </font>
                                     </property>
                                     <property name="text">
-                                     <string>Malware Detected</string>
+                                     <string>Malware detected</string>
                                     </property>
                                    </widget>
                                   </item>
@@ -3125,7 +3125,7 @@ QPushButton:pressed {
 </string>
                                  </property>
                                  <property name="text">
-                                  <string>View Detail</string>
+                                  <string>View detail</string>
                                  </property>
                                 </widget>
                                </item>
@@ -5071,7 +5071,7 @@ border-radius: 5px;</string>
                                <string notr="true">color: rgba(0, 143, 255, 255);</string>
                               </property>
                               <property name="text">
-                               <string>Vulnerability Scanning Summary</string>
+                               <string>Vulnerability scanning summary</string>
                               </property>
                               <property name="alignment">
                                <set>Qt::AlignCenter</set>
@@ -5558,7 +5558,7 @@ QLineEdit:focus {
                             <set>Qt::AlignCenter</set>
                            </property>
                            <property name="placeholderText">
-                            <string>TYPE HERE</string>
+                            <string>Type Here</string>
                            </property>
                           </widget>
                          </item>
