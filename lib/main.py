@@ -3,12 +3,14 @@ import os
 import time
 from math import log2
 import json
+import configparser
+import requests
 
 from PyQt6.QtWidgets import ( QApplication, QDialog, QLineEdit)
 from PyQt6 import QtCore, QtGui, QtWidgets
 from PyQt6.QtGui import QIcon, QPixmap
 from PyQt6.uic import loadUi
-import requests
+
 
 
 # Set DPI Awareness
@@ -86,11 +88,21 @@ class Main(QDialog):
             json_object = json.load(openfile)
         
         # Load the API key from the config file and display it in the textbox
-        with open('./data/api.conf', 'r') as config_file:
-            self.lineAPIKey = config_file.read()
-            if self.lineAPIKey != '':
-                self.lineEdit_digest_2.setText(self.lineAPIKey)
-            config_file.close()
+        # with open('./data/api.conf', 'r') as config_file:
+        #     self.lineAPIKey = config_file.read()
+        #     if self.lineAPIKey != '':
+        #         self.lineEdit_digest_2.setText(self.lineAPIKey)
+        #     config_file.close()
+        
+        config = configparser.ConfigParser()
+        configFilePath = './data/api.conf'
+        config.read(configFilePath)
+        if 'LineNotify' in config:
+            line_api_key = config.get('LineNotify', 'LineAPIKEY')
+            self.lineEdit_digest_2.setText(line_api_key)
+            print(f'Line API Key: {line_api_key}')
+        else:
+            print('Section "LineNotify" does not exist in the config file.')
         
         for item in json_object:
             self.hint_btn.append(str(item['tool_description'])) 
@@ -424,10 +436,18 @@ class MessageDigest(QDialog):
     def saveAPIKey(self):
         self.lineAPIKey = self.lineEdit_digest_2.text()
         print(self.lineAPIKey)
+        config = configparser.ConfigParser()
+        configFilePath = './data/api.conf'
+        config.read(configFilePath)
 
-        with open("./data/api.conf", "w") as config_file:
-            config_file.write(self.lineAPIKey)
-            config_file.close()
+        if 'LineNotify' in config:
+            config.set('LineNotify', 'LineAPIKEY', str(self.lineAPIKey))
+            print(f'Set API KEY: {self.lineAPIKey}')
+        else:
+            print('Section "LineNotify" does not exist in the config file.')
+
+        with open(configFilePath, 'w') as configfile:
+            config.write(configfile)
 
     def clear (self):
         self.lineEdit_digest.setText('')
