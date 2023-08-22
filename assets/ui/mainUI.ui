@@ -718,14 +718,14 @@ QPushButton:pressed {
                           <widget class="QLabel" name="image_main">
                            <property name="minimumSize">
                             <size>
-                             <width>500</width>
-                             <height>500</height>
+                             <width>200</width>
+                             <height>200</height>
                             </size>
                            </property>
                            <property name="maximumSize">
                             <size>
-                             <width>500</width>
-                             <height>500</height>
+                             <width>200</width>
+                             <height>200</height>
                             </size>
                            </property>
                            <property name="styleSheet">
@@ -2748,7 +2748,7 @@ QPushButton:focus {
                              <widget class="QComboBox" name="dropdown_sha2">
                               <property name="minimumSize">
                                <size>
-                                <width>119</width>
+                                <width>101</width>
                                 <height>41</height>
                                </size>
                               </property>
@@ -2834,7 +2834,7 @@ QComboBox:hover {
                              <widget class="QComboBox" name="dropdown_sha3">
                               <property name="minimumSize">
                                <size>
-                                <width>119</width>
+                                <width>101</width>
                                 <height>41</height>
                                </size>
                               </property>

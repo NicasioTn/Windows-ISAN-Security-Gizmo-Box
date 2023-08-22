@@ -85,6 +85,13 @@ class Main(QDialog):
         with open('./data/hint.json', 'r') as openfile:
             json_object = json.load(openfile)
         
+        # Load the API key from the config file and display it in the textbox
+        with open('./data/api.conf', 'r') as config_file:
+            self.lineAPIKey = config_file.read()
+            if self.lineAPIKey != '':
+                self.lineEdit_digest_2.setText(self.lineAPIKey)
+            config_file.close()
+        
         for item in json_object:
             self.hint_btn.append(str(item['tool_description'])) 
         
@@ -413,6 +420,14 @@ class MessageDigest(QDialog):
 
     def __init__(self):
         super(MessageDigest, self).__init__()
+        
+    def saveAPIKey(self):
+        self.lineAPIKey = self.lineEdit_digest_2.text()
+        print(self.lineAPIKey)
+
+        with open("./data/api.conf", "w") as config_file:
+            config_file.write(self.lineAPIKey)
+            config_file.close()
 
     def clear (self):
         self.lineEdit_digest.setText('')
@@ -732,6 +747,7 @@ class MessageDigest(QDialog):
                     response = requests.post(url, headers=headers, params=payload, files=files)
                 
                 if response.status_code == 200:
+                    MessageDigest.saveAPIKey(self) # save api key to file api.conf
                     print("Image sent successfully!")
                     self.lineEdit_digest_2.setStyleSheet("border: 1px solid green;")
                 elif response.status_code == 400:
