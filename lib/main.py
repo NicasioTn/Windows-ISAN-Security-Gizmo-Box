@@ -223,7 +223,6 @@ class Main(QDialog):
         self.algorithm = 'SHA3-' + self.dropdown_sha3.currentText()
         self.dropdown_sha2.setCurrentIndex(0)
 
-
     def openFileDialog(self):
         path = MessageDigest.open_file_dialog(self)
         #print(type(path)) # <class 'pathlib.WindowsPath'>
@@ -394,7 +393,14 @@ class PasswordEvaluation(QDialog):
             if years > 10:
                 time_parts = ['more than 10 years']
             
-            return ", ".join(time_parts)
+            # return " ".join(time_parts)
+
+            # Show time to crack 2 largest units
+            if len(time_parts) <= 2:
+                return " ".join(time_parts)
+            
+            largest_units = time_parts[:2]
+            return " ".join(largest_units)
         
         except OverflowError as e:
             print(f"Error: {e}")
@@ -799,7 +805,6 @@ class MessageDigest(QDialog):
         except UnicodeEncodeError as e:
             print("Cannot send message to LINE")
             
-
     def copyOutput(self):
         clipboard = self.lineEdit_outputTextDigest.text()
         if clipboard == '':
