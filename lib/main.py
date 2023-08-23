@@ -461,6 +461,17 @@ class MessageDigest(QDialog):
         self.lineEdit_outputTextDigest.setStyleSheet("border: 1px solid black;")
         self.lineEdit_outputTextDigest.setPlaceholderText('')
 
+        #fetch API Key from config file
+        config = configparser.ConfigParser()
+        configFilePath = './data/api.conf'
+        config.read(configFilePath)
+        if 'LineNotify' in config:
+            line_api_key = config.get('LineNotify', 'LineAPIKEY')
+            self.lineEdit_digest_2.setText(line_api_key)
+            print(f'Line API Key: {line_api_key}')
+        else:
+            print('Section "LineNotify" does not exist in the config file.')
+
     def hash(self, type):
         #print(self.dropdown_sha2.currentText())
         if type == "md5":
