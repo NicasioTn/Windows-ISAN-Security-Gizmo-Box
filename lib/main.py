@@ -92,6 +92,7 @@ class Main(QDialog):
         #         self.lineEdit_digest_2.setText(self.lineAPIKey)
         #     config_file.close()
         
+        # Fetch API Key from config file
         config = configparser.ConfigParser()
         configFilePath = './data/init.conf'
         config.read(configFilePath)
