@@ -393,6 +393,7 @@ class PasswordEvaluation(QDialog):
                 time_parts.append(f"{seconds} second{'s' if seconds != 1 else ''}")
             if years > 10:
                 time_parts = ['more than 10 years']
+            
             return ", ".join(time_parts)
         
         except OverflowError as e:
