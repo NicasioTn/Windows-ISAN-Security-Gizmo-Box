@@ -107,11 +107,16 @@ class Ui_Form(object):
         self.label_gizmo.setObjectName("label_gizmo")
         self.verticalLayout_6.addWidget(self.label_gizmo)
         self.btn_home = QtWidgets.QPushButton(parent=self.menus)
-        self.btn_home.setMinimumSize(QtCore.QSize(0, 35))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Preferred, QtWidgets.QSizePolicy.Policy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_home.sizePolicy().hasHeightForWidth())
+        self.btn_home.setSizePolicy(sizePolicy)
+        self.btn_home.setMinimumSize(QtCore.QSize(160, 35))
         self.btn_home.setMaximumSize(QtCore.QSize(200, 35))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(9)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.btn_home.setFont(font)
@@ -138,13 +143,13 @@ class Ui_Form(object):
         self.btn_home.setIcon(icon1)
         self.btn_home.setIconSize(QtCore.QSize(22, 22))
         self.btn_home.setObjectName("btn_home")
-        self.verticalLayout_6.addWidget(self.btn_home)
+        self.verticalLayout_6.addWidget(self.btn_home, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
         self.btn_advanceUser = QtWidgets.QPushButton(parent=self.menus)
         self.btn_advanceUser.setMinimumSize(QtCore.QSize(0, 35))
         self.btn_advanceUser.setMaximumSize(QtCore.QSize(200, 35))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(9)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.btn_advanceUser.setFont(font)
@@ -170,13 +175,13 @@ class Ui_Form(object):
         self.btn_advanceUser.setIcon(icon2)
         self.btn_advanceUser.setIconSize(QtCore.QSize(25, 25))
         self.btn_advanceUser.setObjectName("btn_advanceUser")
-        self.verticalLayout_6.addWidget(self.btn_advanceUser)
+        self.verticalLayout_6.addWidget(self.btn_advanceUser, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
         self.btn_networkUser = QtWidgets.QPushButton(parent=self.menus)
         self.btn_networkUser.setMinimumSize(QtCore.QSize(0, 35))
         self.btn_networkUser.setMaximumSize(QtCore.QSize(200, 35))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(9)
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.btn_networkUser.setFont(font)
@@ -202,7 +207,7 @@ class Ui_Form(object):
         self.btn_networkUser.setIcon(icon3)
         self.btn_networkUser.setIconSize(QtCore.QSize(25, 25))
         self.btn_networkUser.setObjectName("btn_networkUser")
-        self.verticalLayout_6.addWidget(self.btn_networkUser)
+        self.verticalLayout_6.addWidget(self.btn_networkUser, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
         self.verticalLayout_3.addWidget(self.menus, 0, QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignTop)
         self.horizontalLayout.addWidget(self.contentLeft, 0, QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignTop)
         self.contentMain = QtWidgets.QFrame(parent=self.background)
@@ -369,7 +374,7 @@ class Ui_Form(object):
         self.btn_advancedUserHome.setMaximumSize(QtCore.QSize(200, 40))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(11)
+        font.setPointSize(13)
         font.setBold(True)
         font.setWeight(75)
         self.btn_advancedUserHome.setFont(font)
@@ -399,7 +404,7 @@ class Ui_Form(object):
         self.btn_networkUserHome.setSizeIncrement(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(11)
+        font.setPointSize(13)
         font.setBold(True)
         font.setWeight(75)
         self.btn_networkUserHome.setFont(font)
@@ -1294,11 +1299,11 @@ class Ui_Form(object):
         self.btn_crackstation.setObjectName("btn_crackstation")
         self.horizontalLayout_30.addWidget(self.btn_crackstation)
         self.lineEdit_inputFileDic = QtWidgets.QLineEdit(parent=self.frame_75)
-        self.lineEdit_inputFileDic.setMinimumSize(QtCore.QSize(261, 41))
-        self.lineEdit_inputFileDic.setMaximumSize(QtCore.QSize(400, 41))
+        self.lineEdit_inputFileDic.setMinimumSize(QtCore.QSize(200, 40))
+        self.lineEdit_inputFileDic.setMaximumSize(QtCore.QSize(400, 40))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(10)
+        font.setPointSize(13)
         font.setBold(True)
         font.setWeight(75)
         self.lineEdit_inputFileDic.setFont(font)
@@ -1318,6 +1323,7 @@ class Ui_Form(object):
 "}\n"
 "")
         self.lineEdit_inputFileDic.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.lineEdit_inputFileDic.setReadOnly(True)
         self.lineEdit_inputFileDic.setObjectName("lineEdit_inputFileDic")
         self.horizontalLayout_30.addWidget(self.lineEdit_inputFileDic)
         self.btn_openDic = QtWidgets.QPushButton(parent=self.frame_75)
@@ -1428,16 +1434,28 @@ class Ui_Form(object):
         self.horizontalLayout_7 = QtWidgets.QHBoxLayout(self.page_messageDigest)
         self.horizontalLayout_7.setObjectName("horizontalLayout_7")
         self.frame_8 = QtWidgets.QFrame(parent=self.page_messageDigest)
-        self.frame_8.setMaximumSize(QtCore.QSize(1050, 720))
+        self.frame_8.setMaximumSize(QtCore.QSize(1050, 620))
         self.frame_8.setBaseSize(QtCore.QSize(1050, 720))
+        font = QtGui.QFont()
+        font.setFamily("MS Shell Dlg 2")
+        self.frame_8.setFont(font)
         self.frame_8.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frame_8.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_8.setObjectName("frame_8")
         self.verticalLayout_19 = QtWidgets.QVBoxLayout(self.frame_8)
         self.verticalLayout_19.setObjectName("verticalLayout_19")
+        self.btn_backDigest = QtWidgets.QPushButton(parent=self.frame_8)
+        self.btn_backDigest.setMaximumSize(QtCore.QSize(16, 16))
+        self.btn_backDigest.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btn_backDigest.setStyleSheet("background-image: url(D:/ISAN Security Gizmo Box/assets/icons/icon-back.png);")
+        self.btn_backDigest.setText("")
+        self.btn_backDigest.setIcon(icon4)
+        self.btn_backDigest.setObjectName("btn_backDigest")
+        self.verticalLayout_19.addWidget(self.btn_backDigest)
         self.frame_9 = QtWidgets.QFrame(parent=self.frame_8)
         self.frame_9.setMaximumSize(QtCore.QSize(1050, 300))
         self.frame_9.setBaseSize(QtCore.QSize(1050, 300))
+        self.frame_9.setStyleSheet("")
         self.frame_9.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frame_9.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_9.setObjectName("frame_9")
@@ -1450,11 +1468,6 @@ class Ui_Form(object):
         self.verticalLayout_21 = QtWidgets.QVBoxLayout(self.frame_11)
         self.verticalLayout_21.setSpacing(30)
         self.verticalLayout_21.setObjectName("verticalLayout_21")
-        self.btn_backDigest = QtWidgets.QPushButton(parent=self.frame_11)
-        self.btn_backDigest.setText("")
-        self.btn_backDigest.setIcon(icon4)
-        self.btn_backDigest.setObjectName("btn_backDigest")
-        self.verticalLayout_21.addWidget(self.btn_backDigest, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
         self.label_digest = QtWidgets.QLabel(parent=self.frame_11)
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -1470,7 +1483,7 @@ class Ui_Form(object):
         self.lineEdit_digest.setMinimumSize(QtCore.QSize(600, 35))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(10)
+        font.setPointSize(18)
         font.setBold(True)
         font.setWeight(75)
         self.lineEdit_digest.setFont(font)
@@ -1492,7 +1505,7 @@ class Ui_Form(object):
         self.lineEdit_digest.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.lineEdit_digest.setObjectName("lineEdit_digest")
         self.verticalLayout_21.addWidget(self.lineEdit_digest)
-        self.verticalLayout_20.addWidget(self.frame_11, 0, QtCore.Qt.AlignmentFlag.AlignTop)
+        self.verticalLayout_20.addWidget(self.frame_11)
         self.frame_12 = QtWidgets.QFrame(parent=self.frame_9)
         self.frame_12.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frame_12.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
@@ -1503,18 +1516,17 @@ class Ui_Form(object):
         self.btn_openDigest.setMinimumSize(QtCore.QSize(200, 40))
         self.btn_openDigest.setMaximumSize(QtCore.QSize(200, 40))
         font = QtGui.QFont()
-        font.setFamily("Yu Gothic UI")
-        font.setPointSize(10)
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(13)
         font.setBold(True)
         font.setWeight(75)
         self.btn_openDigest.setFont(font)
+        self.btn_openDigest.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_openDigest.setStyleSheet(" QPushButton{\n"
 "        background-color: rgba(50,54,74,255);\n"
-"        border-radius: 5px;\n"
-"        color: rgb(255, 255, 255);\n"
-"    }\n"
-" QPushButton{\n"
 "        border-radius: 10px;\n"
+"        color: rgb(255, 255, 255);\n"
+"        \n"
 "    }\n"
 "QPushButton:hover {\n"
 "     border-radius: 10px;\n"
@@ -1533,19 +1545,17 @@ class Ui_Form(object):
         self.btn_clearDigest.setMinimumSize(QtCore.QSize(200, 40))
         self.btn_clearDigest.setMaximumSize(QtCore.QSize(200, 40))
         font = QtGui.QFont()
-        font.setFamily("Yu Gothic UI")
-        font.setPointSize(10)
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(13)
         font.setBold(True)
         font.setWeight(75)
         self.btn_clearDigest.setFont(font)
+        self.btn_clearDigest.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_clearDigest.setStyleSheet(" QPushButton{\n"
 "        background-color: rgba(50,54,74,255);\n"
-"        border-radius: 5px;\n"
-"        color: rgb(255, 255, 255);\n"
-"    }\n"
-" QPushButton{\n"
 "        border-radius: 10px;\n"
-"    }\n"
+"        color: rgb(255, 255, 255);\n"
+" }\n"
 "QPushButton:hover {\n"
 "     border-radius: 10px;\n"
 "     background-color: rgba(0,143,255,255);\n"
@@ -1577,6 +1587,7 @@ class Ui_Form(object):
         font.setBold(True)
         font.setWeight(75)
         self.btn_md5.setFont(font)
+        self.btn_md5.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_md5.setStyleSheet("QPushButton{\n"
 "         border: 1px solid gray;\n"
 "          color: rgb(42, 49, 66);\n"
@@ -1604,6 +1615,7 @@ class Ui_Form(object):
         font.setBold(True)
         font.setWeight(75)
         self.btn_sha1.setFont(font)
+        self.btn_sha1.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_sha1.setStyleSheet("QPushButton{\n"
 "         border: 1px solid gray;\n"
 "          color: rgb(42, 49, 66);\n"
@@ -1631,6 +1643,7 @@ class Ui_Form(object):
         font.setBold(True)
         font.setWeight(75)
         self.dropdown_sha2.setFont(font)
+        self.dropdown_sha2.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.dropdown_sha2.setStyleSheet("QComboBox {\n"
 "        border: 1px solid gray;\n"
 "        border-radius: 5px;\n"
@@ -1677,6 +1690,7 @@ class Ui_Form(object):
         font.setBold(True)
         font.setWeight(75)
         self.dropdown_sha3.setFont(font)
+        self.dropdown_sha3.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.dropdown_sha3.setStyleSheet("QComboBox {\n"
 "        border: 1px solid gray;\n"
 "        border-radius: 5px;\n"
@@ -1742,6 +1756,7 @@ class Ui_Form(object):
         self.verticalLayout_54 = QtWidgets.QVBoxLayout(self.frame_41)
         self.verticalLayout_54.setObjectName("verticalLayout_54")
         self.label_resultDigeat = QtWidgets.QLabel(parent=self.frame_41)
+        self.label_resultDigeat.setMaximumSize(QtCore.QSize(500, 40))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(13)
@@ -1759,8 +1774,11 @@ class Ui_Form(object):
         self.horizontalLayout_41 = QtWidgets.QHBoxLayout(self.frame_77)
         self.horizontalLayout_41.setObjectName("horizontalLayout_41")
         self.lineEdit_outputTextDigest = QtWidgets.QLineEdit(parent=self.frame_77)
-        self.lineEdit_outputTextDigest.setMinimumSize(QtCore.QSize(400, 35))
+        self.lineEdit_outputTextDigest.setMinimumSize(QtCore.QSize(300, 35))
         self.lineEdit_outputTextDigest.setMaximumSize(QtCore.QSize(400, 35))
+        font = QtGui.QFont()
+        font.setPointSize(13)
+        self.lineEdit_outputTextDigest.setFont(font)
         self.lineEdit_outputTextDigest.setStyleSheet("QLineEdit {\n"
 "  border: 1px solid gray;\n"
 "  color: rgba(40,43,61,255);\n"
@@ -1780,7 +1798,7 @@ class Ui_Form(object):
         self.lineEdit_outputTextDigest.setObjectName("lineEdit_outputTextDigest")
         self.horizontalLayout_41.addWidget(self.lineEdit_outputTextDigest)
         self.btn_copy = QtWidgets.QPushButton(parent=self.frame_77)
-        self.btn_copy.setMinimumSize(QtCore.QSize(120, 0))
+        self.btn_copy.setMinimumSize(QtCore.QSize(100, 0))
         self.btn_copy.setMaximumSize(QtCore.QSize(140, 40))
         self.btn_copy.setSizeIncrement(QtCore.QSize(120, 40))
         self.btn_copy.setBaseSize(QtCore.QSize(120, 40))
@@ -1790,14 +1808,11 @@ class Ui_Form(object):
         font.setBold(True)
         font.setWeight(75)
         self.btn_copy.setFont(font)
+        self.btn_copy.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_copy.setStyleSheet(" QPushButton{\n"
 "        background-color: rgb(42, 49, 66);\n"
 "        border-radius: 5px;\n"
-"        color: rgb(255, 255, 255);\n"
-"        background-image: url(D:/ISAN Security Gizmo Box/assets/icons/icon-copy.png);\n"
-"        background-repeat: no-repeat;\n"
-"        background-position: center left;\n"
-"        \n"
+"        color: rgb(255, 255, 255);    \n"
 "    }\n"
 " QPushButton{\n"
 "        border-radius: 10px;\n"
@@ -1829,6 +1844,7 @@ class Ui_Form(object):
         self.verticalLayout_26 = QtWidgets.QVBoxLayout(self.frame_24)
         self.verticalLayout_26.setObjectName("verticalLayout_26")
         self.label_linrAPIDigest = QtWidgets.QLabel(parent=self.frame_24)
+        self.label_linrAPIDigest.setMaximumSize(QtCore.QSize(500, 50))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(13)
@@ -1845,11 +1861,11 @@ class Ui_Form(object):
         self.horizontalLayout_40 = QtWidgets.QHBoxLayout(self.frame_33)
         self.horizontalLayout_40.setObjectName("horizontalLayout_40")
         self.lineEdit_digest_2 = QtWidgets.QLineEdit(parent=self.frame_33)
-        self.lineEdit_digest_2.setMinimumSize(QtCore.QSize(400, 35))
+        self.lineEdit_digest_2.setMinimumSize(QtCore.QSize(300, 35))
         self.lineEdit_digest_2.setMaximumSize(QtCore.QSize(400, 35))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(9)
+        font.setPointSize(13)
         font.setBold(True)
         font.setWeight(75)
         self.lineEdit_digest_2.setFont(font)
@@ -1872,14 +1888,15 @@ class Ui_Form(object):
         self.lineEdit_digest_2.setObjectName("lineEdit_digest_2")
         self.horizontalLayout_40.addWidget(self.lineEdit_digest_2)
         self.btn_sendDigest = QtWidgets.QPushButton(parent=self.frame_33)
-        self.btn_sendDigest.setMinimumSize(QtCore.QSize(200, 40))
-        self.btn_sendDigest.setMaximumSize(QtCore.QSize(200, 40))
+        self.btn_sendDigest.setMinimumSize(QtCore.QSize(100, 40))
+        self.btn_sendDigest.setMaximumSize(QtCore.QSize(100, 40))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
         self.btn_sendDigest.setFont(font)
+        self.btn_sendDigest.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_sendDigest.setStyleSheet(" QPushButton{\n"
 "        background-color: rgb(42, 49, 66);\n"
 "        border-radius: 5px;\n"
@@ -1921,13 +1938,16 @@ class Ui_Form(object):
         self.horizontalLayout_12 = QtWidgets.QHBoxLayout(self.frame_19)
         self.horizontalLayout_12.setObjectName("horizontalLayout_12")
         self.label_QRCode = QtWidgets.QLabel(parent=self.frame_19)
-        self.label_QRCode.setMinimumSize(QtCore.QSize(300, 300))
-        self.label_QRCode.setMaximumSize(QtCore.QSize(300, 300))
+        self.label_QRCode.setMinimumSize(QtCore.QSize(200, 210))
+        self.label_QRCode.setMaximumSize(QtCore.QSize(400, 100))
+        font = QtGui.QFont()
+        font.setPointSize(13)
+        self.label_QRCode.setFont(font)
         self.label_QRCode.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.label_QRCode.setText("")
         self.label_QRCode.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_QRCode.setObjectName("label_QRCode")
-        self.horizontalLayout_12.addWidget(self.label_QRCode)
+        self.horizontalLayout_12.addWidget(self.label_QRCode, 0, QtCore.Qt.AlignmentFlag.AlignTop)
         self.verticalLayout_25.addWidget(self.frame_19)
         self.frame_20 = QtWidgets.QFrame(parent=self.frame_16)
         self.frame_20.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
@@ -1944,6 +1964,7 @@ class Ui_Form(object):
         font.setBold(True)
         font.setWeight(75)
         self.btn_lineAPI.setFont(font)
+        self.btn_lineAPI.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_lineAPI.setStyleSheet(" QPushButton{\n"
 "        background-color: rgb(42, 49, 66);\n"
 "        border-radius: 5px;\n"
@@ -1978,6 +1999,7 @@ class Ui_Form(object):
         font.setBold(True)
         font.setWeight(75)
         self.btn_saveQR.setFont(font)
+        self.btn_saveQR.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_saveQR.setStyleSheet(" QPushButton{\n"
 "        background-color: rgb(42, 49, 66);\n"
 "        border-radius: 5px;\n"
@@ -2931,7 +2953,7 @@ class Ui_Form(object):
         self.gridLayout.addWidget(self.background, 0, 1, 1, 1)
 
         self.retranslateUi(Form)
-        self.stackedWidget.setCurrentIndex(3)
+        self.stackedWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):

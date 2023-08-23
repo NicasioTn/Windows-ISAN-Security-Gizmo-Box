@@ -280,11 +280,17 @@ border-radius: 5px;</string>
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignLeft">
              <widget class="QPushButton" name="btn_home">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="minimumSize">
                <size>
-                <width>0</width>
+                <width>160</width>
                 <height>35</height>
                </size>
               </property>
@@ -297,7 +303,7 @@ border-radius: 5px;</string>
               <property name="font">
                <font>
                 <family>Bahnschrift SemiBold</family>
-                <pointsize>9</pointsize>
+                <pointsize>10</pointsize>
                 <weight>75</weight>
                 <bold>true</bold>
                </font>
@@ -341,7 +347,7 @@ QPushButton:pressed {
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignLeft">
              <widget class="QPushButton" name="btn_advanceUser">
               <property name="minimumSize">
                <size>
@@ -358,7 +364,7 @@ QPushButton:pressed {
               <property name="font">
                <font>
                 <family>Bahnschrift SemiBold</family>
-                <pointsize>9</pointsize>
+                <pointsize>10</pointsize>
                 <weight>75</weight>
                 <bold>true</bold>
                </font>
@@ -399,7 +405,7 @@ QPushButton:pressed {
               </property>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignLeft">
              <widget class="QPushButton" name="btn_networkUser">
               <property name="minimumSize">
                <size>
@@ -416,7 +422,7 @@ QPushButton:pressed {
               <property name="font">
                <font>
                 <family>Bahnschrift SemiBold</family>
-                <pointsize>9</pointsize>
+                <pointsize>10</pointsize>
                 <weight>75</weight>
                 <bold>true</bold>
                </font>
@@ -709,7 +715,7 @@ border-radius: 5px;
 </string>
                  </property>
                  <property name="currentIndex">
-                  <number>3</number>
+                  <number>0</number>
                  </property>
                  <widget class="QWidget" name="page_home">
                   <property name="maximumSize">
@@ -910,7 +916,7 @@ border-radius: 5px;
                                  <property name="font">
                                   <font>
                                    <family>Bahnschrift SemiBold</family>
-                                   <pointsize>11</pointsize>
+                                   <pointsize>13</pointsize>
                                    <weight>75</weight>
                                    <bold>true</bold>
                                   </font>
@@ -965,7 +971,7 @@ QPushButton:pressed {
                                  <property name="font">
                                   <font>
                                    <family>Bahnschrift SemiBold</family>
-                                   <pointsize>11</pointsize>
+                                   <pointsize>13</pointsize>
                                    <weight>75</weight>
                                    <bold>true</bold>
                                   </font>
@@ -2883,20 +2889,20 @@ QPushButton:pressed {
                              <widget class="QLineEdit" name="lineEdit_inputFileDic">
                               <property name="minimumSize">
                                <size>
-                                <width>261</width>
-                                <height>41</height>
+                                <width>200</width>
+                                <height>40</height>
                                </size>
                               </property>
                               <property name="maximumSize">
                                <size>
                                 <width>400</width>
-                                <height>41</height>
+                                <height>40</height>
                                </size>
                               </property>
                               <property name="font">
                                <font>
                                 <family>Bahnschrift SemiBold</family>
-                                <pointsize>10</pointsize>
+                                <pointsize>13</pointsize>
                                 <weight>75</weight>
                                 <bold>true</bold>
                                </font>
@@ -2920,6 +2926,9 @@ QLineEdit:focus {
                               </property>
                               <property name="alignment">
                                <set>Qt::AlignCenter</set>
+                              </property>
+                              <property name="readOnly">
+                               <bool>true</bool>
                               </property>
                               <property name="placeholderText">
                                <string>ONLY TEXT FILE</string>
@@ -3147,7 +3156,7 @@ border-radius: 5px;</string>
                      <property name="maximumSize">
                       <size>
                        <width>1050</width>
-                       <height>720</height>
+                       <height>620</height>
                       </size>
                      </property>
                      <property name="baseSize">
@@ -3156,6 +3165,11 @@ border-radius: 5px;</string>
                        <height>720</height>
                       </size>
                      </property>
+                     <property name="font">
+                      <font>
+                       <family>MS Shell Dlg 2</family>
+                      </font>
+                     </property>
                      <property name="frameShape">
                       <enum>QFrame::StyledPanel</enum>
                      </property>
@@ -3163,6 +3177,29 @@ border-radius: 5px;</string>
                       <enum>QFrame::Raised</enum>
                      </property>
                      <layout class="QVBoxLayout" name="verticalLayout_19">
+                      <item>
+                       <widget class="QPushButton" name="btn_backDigest">
+                        <property name="maximumSize">
+                         <size>
+                          <width>16</width>
+                          <height>16</height>
+                         </size>
+                        </property>
+                        <property name="cursor">
+                         <cursorShape>PointingHandCursor</cursorShape>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">background-image: url(D:/ISAN Security Gizmo Box/assets/icons/icon-back.png);</string>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="../resource.qrc">
+                          <normaloff>:/icons/icons/icon-back.png</normaloff>:/icons/icons/icon-back.png</iconset>
+                        </property>
+                       </widget>
+                      </item>
                       <item alignment="Qt::AlignTop">
                        <widget class="QFrame" name="frame_9">
                         <property name="maximumSize">
@@ -3177,6 +3214,9 @@ border-radius: 5px;</string>
                           <height>300</height>
                          </size>
                         </property>
+                        <property name="styleSheet">
+                         <string notr="true"/>
+                        </property>
                         <property name="frameShape">
                          <enum>QFrame::StyledPanel</enum>
                         </property>
@@ -3184,7 +3224,7 @@ border-radius: 5px;</string>
                          <enum>QFrame::Raised</enum>
                         </property>
                         <layout class="QVBoxLayout" name="verticalLayout_20">
-                         <item alignment="Qt::AlignTop">
+                         <item>
                           <widget class="QFrame" name="frame_11">
                            <property name="frameShape">
                             <enum>QFrame::StyledPanel</enum>
@@ -3196,17 +3236,6 @@ border-radius: 5px;</string>
                             <property name="spacing">
                              <number>30</number>
                             </property>
-                            <item alignment="Qt::AlignLeft">
-                             <widget class="QPushButton" name="btn_backDigest">
-                              <property name="text">
-                               <string/>
-                              </property>
-                              <property name="icon">
-                               <iconset resource="../resource.qrc">
-                                <normaloff>:/icons/icons/icon-back.png</normaloff>:/icons/icons/icon-back.png</iconset>
-                              </property>
-                             </widget>
-                            </item>
                             <item alignment="Qt::AlignHCenter|Qt::AlignTop">
                              <widget class="QLabel" name="label_digest">
                               <property name="font">
@@ -3239,7 +3268,7 @@ border-radius: 5px;</string>
                               <property name="font">
                                <font>
                                 <family>Bahnschrift SemiBold</family>
-                                <pointsize>10</pointsize>
+                                <pointsize>18</pointsize>
                                 <weight>75</weight>
                                 <bold>true</bold>
                                </font>
@@ -3297,20 +3326,21 @@ QLineEdit:focus {
                               </property>
                               <property name="font">
                                <font>
-                                <family>Yu Gothic UI</family>
-                                <pointsize>10</pointsize>
+                                <family>Bahnschrift SemiBold</family>
+                                <pointsize>13</pointsize>
                                 <weight>75</weight>
                                 <bold>true</bold>
                                </font>
                               </property>
+                              <property name="cursor">
+                               <cursorShape>PointingHandCursor</cursorShape>
+                              </property>
                               <property name="styleSheet">
                                <string notr="true"> QPushButton{
 		background-color: rgba(50,54,74,255);
-        border-radius: 5px;
-		color: rgb(255, 255, 255);
-    }
- QPushButton{
         border-radius: 10px;
+		color: rgb(255, 255, 255);
+		
     }
 QPushButton:hover {
 	 border-radius: 10px;
@@ -3353,21 +3383,21 @@ QPushButton:pressed {
                               </property>
                               <property name="font">
                                <font>
-                                <family>Yu Gothic UI</family>
-                                <pointsize>10</pointsize>
+                                <family>Bahnschrift SemiBold</family>
+                                <pointsize>13</pointsize>
                                 <weight>75</weight>
                                 <bold>true</bold>
                                </font>
                               </property>
+                              <property name="cursor">
+                               <cursorShape>PointingHandCursor</cursorShape>
+                              </property>
                               <property name="styleSheet">
                                <string notr="true"> QPushButton{
 		background-color: rgba(50,54,74,255);
-        border-radius: 5px;
-		color: rgb(255, 255, 255);
-    }
- QPushButton{
         border-radius: 10px;
-    }
+		color: rgb(255, 255, 255);
+ }
 QPushButton:hover {
 	 border-radius: 10px;
 	 background-color: rgba(0,143,255,255);
@@ -3442,6 +3472,9 @@ QPushButton:pressed {
                                 <bold>true</bold>
                                </font>
                               </property>
+                              <property name="cursor">
+                               <cursorShape>PointingHandCursor</cursorShape>
+                              </property>
                               <property name="styleSheet">
                                <string notr="true">QPushButton{
 		 border: 1px solid gray;
@@ -3487,6 +3520,9 @@ QPushButton:focus {
                                 <bold>true</bold>
                                </font>
                               </property>
+                              <property name="cursor">
+                               <cursorShape>PointingHandCursor</cursorShape>
+                              </property>
                               <property name="styleSheet">
                                <string notr="true">QPushButton{
 		 border: 1px solid gray;
@@ -3531,6 +3567,9 @@ QPushButton:focus {
                                 <weight>75</weight>
                                 <bold>true</bold>
                                </font>
+                              </property>
+                              <property name="cursor">
+                               <cursorShape>PointingHandCursor</cursorShape>
                               </property>
                               <property name="styleSheet">
                                <string notr="true">QComboBox {
@@ -3617,6 +3656,9 @@ QComboBox:hover {
                                 <weight>75</weight>
                                 <bold>true</bold>
                                </font>
+                              </property>
+                              <property name="cursor">
+                               <cursorShape>PointingHandCursor</cursorShape>
                               </property>
                               <property name="styleSheet">
                                <string notr="true">QComboBox {
@@ -3734,6 +3776,12 @@ border-radius: 5px;</string>
                                  <layout class="QVBoxLayout" name="verticalLayout_54">
                                   <item>
                                    <widget class="QLabel" name="label_resultDigeat">
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>500</width>
+                                      <height>40</height>
+                                     </size>
+                                    </property>
                                     <property name="font">
                                      <font>
                                       <family>Bahnschrift SemiBold</family>
@@ -3766,7 +3814,7 @@ border-radius: 5px;</string>
                                    <widget class="QLineEdit" name="lineEdit_outputTextDigest">
                                     <property name="minimumSize">
                                      <size>
-                                      <width>400</width>
+                                      <width>300</width>
                                       <height>35</height>
                                      </size>
                                     </property>
@@ -3775,6 +3823,11 @@ border-radius: 5px;</string>
                                       <width>400</width>
                                       <height>35</height>
                                      </size>
+                                    </property>
+                                    <property name="font">
+                                     <font>
+                                      <pointsize>13</pointsize>
+                                     </font>
                                     </property>
                                     <property name="styleSheet">
                                      <string notr="true">QLineEdit {
@@ -3802,7 +3855,7 @@ QLineEdit:focus {
                                    <widget class="QPushButton" name="btn_copy">
                                     <property name="minimumSize">
                                      <size>
-                                      <width>120</width>
+                                      <width>100</width>
                                       <height>0</height>
                                      </size>
                                     </property>
@@ -3832,15 +3885,14 @@ QLineEdit:focus {
                                       <bold>true</bold>
                                      </font>
                                     </property>
+                                    <property name="cursor">
+                                     <cursorShape>PointingHandCursor</cursorShape>
+                                    </property>
                                     <property name="styleSheet">
                                      <string notr="true"> QPushButton{
 	    background-color: rgb(42, 49, 66);
         border-radius: 5px;
-		color: rgb(255, 255, 255);
-		background-image: url(D:/ISAN Security Gizmo Box/assets/icons/icon-copy.png);
-		background-repeat: no-repeat;
-        background-position: center left;
-		
+		color: rgb(255, 255, 255);	
     }
  QPushButton{
         border-radius: 10px;
@@ -3892,6 +3944,12 @@ QPushButton:pressed {
                                  <layout class="QVBoxLayout" name="verticalLayout_26">
                                   <item>
                                    <widget class="QLabel" name="label_linrAPIDigest">
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>500</width>
+                                      <height>50</height>
+                                     </size>
+                                    </property>
                                     <property name="font">
                                      <font>
                                       <family>Bahnschrift SemiBold</family>
@@ -3921,7 +3979,7 @@ QPushButton:pressed {
                                    <widget class="QLineEdit" name="lineEdit_digest_2">
                                     <property name="minimumSize">
                                      <size>
-                                      <width>400</width>
+                                      <width>300</width>
                                       <height>35</height>
                                      </size>
                                     </property>
@@ -3934,7 +3992,7 @@ QPushButton:pressed {
                                     <property name="font">
                                      <font>
                                       <family>Bahnschrift SemiBold</family>
-                                      <pointsize>9</pointsize>
+                                      <pointsize>13</pointsize>
                                       <weight>75</weight>
                                       <bold>true</bold>
                                      </font>
@@ -3968,13 +4026,13 @@ QLineEdit:focus {
                                    <widget class="QPushButton" name="btn_sendDigest">
                                     <property name="minimumSize">
                                      <size>
-                                      <width>200</width>
+                                      <width>100</width>
                                       <height>40</height>
                                      </size>
                                     </property>
                                     <property name="maximumSize">
                                      <size>
-                                      <width>200</width>
+                                      <width>100</width>
                                       <height>40</height>
                                      </size>
                                     </property>
@@ -3985,6 +4043,9 @@ QLineEdit:focus {
                                       <weight>75</weight>
                                       <bold>true</bold>
                                      </font>
+                                    </property>
+                                    <property name="cursor">
+                                     <cursorShape>PointingHandCursor</cursorShape>
                                     </property>
                                     <property name="styleSheet">
                                      <string notr="true"> QPushButton{
@@ -4051,19 +4112,24 @@ border-radius: 5px;</string>
                                <enum>QFrame::Raised</enum>
                               </property>
                               <layout class="QHBoxLayout" name="horizontalLayout_12">
-                               <item>
+                               <item alignment="Qt::AlignTop">
                                 <widget class="QLabel" name="label_QRCode">
                                  <property name="minimumSize">
                                   <size>
-                                   <width>300</width>
-                                   <height>300</height>
+                                   <width>200</width>
+                                   <height>210</height>
                                   </size>
                                  </property>
                                  <property name="maximumSize">
                                   <size>
-                                   <width>300</width>
-                                   <height>300</height>
+                                   <width>400</width>
+                                   <height>100</height>
                                   </size>
+                                 </property>
+                                 <property name="font">
+                                  <font>
+                                   <pointsize>13</pointsize>
+                                  </font>
                                  </property>
                                  <property name="styleSheet">
                                   <string notr="true">background-color: rgb(255, 255, 255);</string>
@@ -4109,6 +4175,9 @@ border-radius: 5px;</string>
                                    <weight>75</weight>
                                    <bold>true</bold>
                                   </font>
+                                 </property>
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
                                  </property>
                                  <property name="styleSheet">
                                   <string notr="true"> QPushButton{
@@ -4167,6 +4236,9 @@ QPushButton:pressed {
                                    <weight>75</weight>
                                    <bold>true</bold>
                                   </font>
+                                 </property>
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
                                  </property>
                                  <property name="styleSheet">
                                   <string notr="true"> QPushButton{

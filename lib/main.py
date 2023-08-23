@@ -76,7 +76,11 @@ class Main(QDialog):
             self.label_outputPasswordStrength.setText('no password')
             self.label_outputEntropy.setText('0 Bits')
 
+        # Back button
         self.btn_backPassword.clicked.connect(self.openAdvancedUserHome)
+        self.btn_backDic.clicked.connect(self.PasswordEvaluationHome)
+        self.btn_backDigest.clicked.connect(self.openAdvancedUserHome)
+
         self.btn_iconEye.clicked.connect(self.btn_hidePwd)
         self.lineEdit_password.textChanged.connect(self.getPassword)
         self.btn_dicAttack.clicked.connect(self.Passowrd_Dictionary_Attack)
