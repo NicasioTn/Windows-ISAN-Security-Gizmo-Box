@@ -11,8 +11,6 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 from PyQt6.QtGui import QIcon, QPixmap
 from PyQt6.uic import loadUi
 
-
-
 # Set DPI Awareness
 # os.environ["QT_FONT_DPI"] = "96"
 
