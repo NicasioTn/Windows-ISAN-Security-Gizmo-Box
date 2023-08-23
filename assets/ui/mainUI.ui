@@ -10,6 +10,12 @@
     <height>720</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
   <property name="minimumSize">
    <size>
     <width>1280</width>
@@ -109,25 +115,25 @@
        <widget class="QFrame" name="contentLeft">
         <property name="minimumSize">
          <size>
-          <width>250</width>
+          <width>200</width>
           <height>700</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
-          <width>500</width>
+          <width>400</width>
           <height>720</height>
          </size>
         </property>
         <property name="sizeIncrement">
          <size>
-          <width>500</width>
+          <width>200</width>
           <height>700</height>
          </size>
         </property>
         <property name="baseSize">
          <size>
-          <width>1280</width>
+          <width>200</width>
           <height>700</height>
          </size>
         </property>
@@ -190,19 +196,7 @@ border-radius: 5px;</string>
             <enum>QFrame::Raised</enum>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_6">
-            <property name="spacing">
-             <number>30</number>
-            </property>
-            <property name="leftMargin">
-             <number>10</number>
-            </property>
-            <property name="topMargin">
-             <number>0</number>
-            </property>
-            <property name="rightMargin">
-             <number>0</number>
-            </property>
-            <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
+            <item alignment="Qt::AlignHCenter">
              <widget class="QLabel" name="label_logo">
               <property name="minimumSize">
                <size>
@@ -244,7 +238,7 @@ border-radius: 5px;</string>
               </property>
              </widget>
             </item>
-            <item alignment="Qt::AlignHCenter">
+            <item>
              <widget class="QLabel" name="label_gizmo">
               <property name="maximumSize">
                <size>
@@ -519,21 +513,33 @@ QPushButton:pressed {
          </property>
          <item>
           <widget class="QFrame" name="contenTop">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
            <property name="minimumSize">
             <size>
-             <width>1010</width>
+             <width>1050</width>
              <height>60</height>
             </size>
            </property>
            <property name="maximumSize">
             <size>
-             <width>1010</width>
+             <width>1050</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="sizeIncrement">
+            <size>
+             <width>1050</width>
              <height>60</height>
             </size>
            </property>
            <property name="baseSize">
             <size>
-             <width>1010</width>
+             <width>1050</width>
              <height>60</height>
             </size>
            </property>
@@ -580,7 +586,7 @@ border-radius: 5px;</string>
               <property name="frameShadow">
                <enum>QFrame::Raised</enum>
               </property>
-              <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <layout class="QVBoxLayout" name="verticalLayout_30">
                <item>
                 <widget class="QLabel" name="label_isanSec">
                  <property name="minimumSize">
@@ -703,7 +709,7 @@ border-radius: 5px;
 </string>
                  </property>
                  <property name="currentIndex">
-                  <number>1</number>
+                  <number>3</number>
                  </property>
                  <widget class="QWidget" name="page_home">
                   <property name="maximumSize">
@@ -872,7 +878,7 @@ border-radius: 5px;
                             <enum>QFrame::Raised</enum>
                            </property>
                            <layout class="QVBoxLayout" name="verticalLayout_47">
-                            <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+                            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
                              <widget class="QFrame" name="frame_70">
                               <property name="maximumSize">
                                <size>
@@ -1088,6 +1094,12 @@ QPushButton:pressed {
                         <layout class="QHBoxLayout" name="horizontalLayout_19">
                          <item>
                           <widget class="QFrame" name="frame_46">
+                           <property name="maximumSize">
+                            <size>
+                             <width>500</width>
+                             <height>500</height>
+                            </size>
+                           </property>
                            <property name="frameShape">
                             <enum>QFrame::StyledPanel</enum>
                            </property>
@@ -1099,15 +1111,24 @@ QPushButton:pressed {
                              <widget class="QLabel" name="image_key">
                               <property name="minimumSize">
                                <size>
-                                <width>350</width>
-                                <height>350</height>
+                                <width>200</width>
+                                <height>200</height>
                                </size>
                               </property>
                               <property name="maximumSize">
                                <size>
-                                <width>350</width>
-                                <height>350</height>
+                                <width>200</width>
+                                <height>200</height>
                                </size>
+                              </property>
+                              <property name="baseSize">
+                               <size>
+                                <width>200</width>
+                                <height>200</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">background-image: url(D:/ISAN Security Gizmo Box/assets/images/key.png);</string>
                               </property>
                               <property name="text">
                                <string/>
@@ -1125,6 +1146,12 @@ QPushButton:pressed {
                          </item>
                          <item>
                           <widget class="QFrame" name="frame_47">
+                           <property name="maximumSize">
+                            <size>
+                             <width>500</width>
+                             <height>500</height>
+                            </size>
+                           </property>
                            <property name="frameShape">
                             <enum>QFrame::StyledPanel</enum>
                            </property>
@@ -1147,7 +1174,7 @@ QPushButton:pressed {
                             <property name="bottomMargin">
                              <number>0</number>
                             </property>
-                            <item alignment="Qt::AlignBottom">
+                            <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
                              <widget class="QLabel" name="label_isanSec_adupage">
                               <property name="maximumSize">
                                <size>
@@ -1197,6 +1224,12 @@ QPushButton:pressed {
                             </item>
                             <item alignment="Qt::AlignTop">
                              <widget class="QLabel" name="label_description_adupage">
+                              <property name="maximumSize">
+                               <size>
+                                <width>400</width>
+                                <height>50</height>
+                               </size>
+                              </property>
                               <property name="font">
                                <font>
                                 <family>Bahnschrift SemiBold</family>
@@ -1209,7 +1242,7 @@ QPushButton:pressed {
                                <string notr="true"> color: rgba(122,122,122,255);</string>
                               </property>
                               <property name="text">
-                               <string>Advanced user tools include password evaluation, malware scanning, message digest.</string>
+                               <string>Advanced user tools include </string>
                               </property>
                               <property name="alignment">
                                <set>Qt::AlignCenter</set>
@@ -1221,6 +1254,12 @@ QPushButton:pressed {
                          </item>
                          <item>
                           <widget class="QFrame" name="frame_48">
+                           <property name="maximumSize">
+                            <size>
+                             <width>500</width>
+                             <height>500</height>
+                            </size>
+                           </property>
                            <property name="frameShape">
                             <enum>QFrame::StyledPanel</enum>
                            </property>
@@ -1232,15 +1271,24 @@ QPushButton:pressed {
                              <widget class="QLabel" name="image_bug">
                               <property name="minimumSize">
                                <size>
-                                <width>350</width>
-                                <height>350</height>
+                                <width>200</width>
+                                <height>200</height>
                                </size>
                               </property>
                               <property name="maximumSize">
                                <size>
-                                <width>350</width>
-                                <height>350</height>
+                                <width>200</width>
+                                <height>200</height>
                                </size>
+                              </property>
+                              <property name="baseSize">
+                               <size>
+                                <width>200</width>
+                                <height>200</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">background-image: url(D:/ISAN Security Gizmo Box/assets/images/bug.png);</string>
                               </property>
                               <property name="text">
                                <string/>
@@ -1447,6 +1495,12 @@ QPushButton:pressed {
                            <layout class="QHBoxLayout" name="horizontalLayout_21">
                             <item>
                              <widget class="QFrame" name="frame_53">
+                              <property name="maximumSize">
+                               <size>
+                                <width>500</width>
+                                <height>500</height>
+                               </size>
+                              </property>
                               <property name="frameShape">
                                <enum>QFrame::StyledPanel</enum>
                               </property>
@@ -1458,15 +1512,24 @@ QPushButton:pressed {
                                 <widget class="QLabel" name="image_star">
                                  <property name="minimumSize">
                                   <size>
-                                   <width>350</width>
-                                   <height>250</height>
+                                   <width>200</width>
+                                   <height>200</height>
                                   </size>
                                  </property>
                                  <property name="maximumSize">
                                   <size>
-                                   <width>350</width>
-                                   <height>350</height>
+                                   <width>200</width>
+                                   <height>200</height>
                                   </size>
+                                 </property>
+                                 <property name="baseSize">
+                                  <size>
+                                   <width>200</width>
+                                   <height>200</height>
+                                  </size>
+                                 </property>
+                                 <property name="styleSheet">
+                                  <string notr="true">background-image: url(D:/ISAN Security Gizmo Box/assets/images/star.png);</string>
                                  </property>
                                  <property name="text">
                                   <string/>
@@ -1484,6 +1547,12 @@ QPushButton:pressed {
                             </item>
                             <item>
                              <widget class="QFrame" name="frame_52">
+                              <property name="maximumSize">
+                               <size>
+                                <width>500</width>
+                                <height>200</height>
+                               </size>
+                              </property>
                               <property name="frameShape">
                                <enum>QFrame::StyledPanel</enum>
                               </property>
@@ -1495,15 +1564,24 @@ QPushButton:pressed {
                                 <widget class="QLabel" name="image_message">
                                  <property name="minimumSize">
                                   <size>
-                                   <width>350</width>
-                                   <height>300</height>
+                                   <width>200</width>
+                                   <height>200</height>
                                   </size>
                                  </property>
                                  <property name="maximumSize">
                                   <size>
-                                   <width>350</width>
-                                   <height>350</height>
+                                   <width>200</width>
+                                   <height>200</height>
                                   </size>
+                                 </property>
+                                 <property name="baseSize">
+                                  <size>
+                                   <width>200</width>
+                                   <height>200</height>
+                                  </size>
+                                 </property>
+                                 <property name="styleSheet">
+                                  <string notr="true">background-image: url(D:/ISAN Security Gizmo Box/assets/images/message.png);</string>
                                  </property>
                                  <property name="text">
                                   <string/>
@@ -1549,6 +1627,18 @@ QPushButton:pressed {
                    </property>
                    <item>
                     <widget class="QFrame" name="frame">
+                     <property name="maximumSize">
+                      <size>
+                       <width>1050</width>
+                       <height>720</height>
+                      </size>
+                     </property>
+                     <property name="baseSize">
+                      <size>
+                       <width>1050</width>
+                       <height>720</height>
+                      </size>
+                     </property>
                      <property name="frameShape">
                       <enum>QFrame::StyledPanel</enum>
                      </property>
@@ -1558,6 +1648,12 @@ QPushButton:pressed {
                      <layout class="QVBoxLayout" name="verticalLayout_8">
                       <item>
                        <widget class="QFrame" name="frame_2">
+                        <property name="maximumSize">
+                         <size>
+                          <width>1050</width>
+                          <height>300</height>
+                         </size>
+                        </property>
                         <property name="frameShape">
                          <enum>QFrame::StyledPanel</enum>
                         </property>
@@ -1567,6 +1663,21 @@ QPushButton:pressed {
                         <layout class="QVBoxLayout" name="verticalLayout_9">
                          <item>
                           <widget class="QFrame" name="frame_4">
+                           <property name="minimumSize">
+                            <size>
+                             <width>0</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>1050</width>
+                             <height>150</height>
+                            </size>
+                           </property>
+                           <property name="focusPolicy">
+                            <enum>Qt::TabFocus</enum>
+                           </property>
                            <property name="frameShape">
                             <enum>QFrame::StyledPanel</enum>
                            </property>
@@ -1591,6 +1702,18 @@ QPushButton:pressed {
                             </property>
                             <item alignment="Qt::AlignLeft">
                              <widget class="QPushButton" name="btn_backPassword">
+                              <property name="maximumSize">
+                               <size>
+                                <width>16</width>
+                                <height>16</height>
+                               </size>
+                              </property>
+                              <property name="cursor">
+                               <cursorShape>PointingHandCursor</cursorShape>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">background-image: url(D:/ISAN Security Gizmo Box/assets/icons/icon-back.png);</string>
+                              </property>
                               <property name="text">
                                <string/>
                               </property>
@@ -1598,9 +1721,15 @@ QPushButton:pressed {
                                <iconset resource="../resource.qrc">
                                 <normaloff>:/icons/icons/icon-back.png</normaloff>:/icons/icons/icon-back.png</iconset>
                               </property>
+                              <property name="iconSize">
+                               <size>
+                                <width>20</width>
+                                <height>20</height>
+                               </size>
+                              </property>
                              </widget>
                             </item>
-                            <item alignment="Qt::AlignBottom">
+                            <item alignment="Qt::AlignTop">
                              <widget class="QLabel" name="label_Password">
                               <property name="font">
                                <font>
@@ -1638,13 +1767,22 @@ QPushButton:pressed {
                                    <height>35</height>
                                   </size>
                                  </property>
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>1050</width>
+                                   <height>50</height>
+                                  </size>
+                                 </property>
                                  <property name="font">
                                   <font>
                                    <family>Bahnschrift SemiBold</family>
-                                   <pointsize>10</pointsize>
+                                   <pointsize>18</pointsize>
                                    <weight>75</weight>
                                    <bold>true</bold>
                                   </font>
+                                 </property>
+                                 <property name="focusPolicy">
+                                  <enum>Qt::StrongFocus</enum>
                                  </property>
                                  <property name="styleSheet">
                                   <string notr="true">QLineEdit {
@@ -1662,6 +1800,12 @@ QLineEdit:focus {
   border-color: rgba(88,199,141,255);
 }
 </string>
+                                 </property>
+                                 <property name="maxLength">
+                                  <number>100</number>
+                                 </property>
+                                 <property name="echoMode">
+                                  <enum>QLineEdit::Normal</enum>
                                  </property>
                                  <property name="alignment">
                                   <set>Qt::AlignCenter</set>
@@ -1684,6 +1828,9 @@ QLineEdit:focus {
                                    <width>30</width>
                                    <height>30</height>
                                   </size>
+                                 </property>
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
                                  </property>
                                  <property name="styleSheet">
                                   <string notr="true"> QPushButton{
@@ -1716,24 +1863,18 @@ QPushButton:pressed {
                               </layout>
                              </widget>
                             </item>
-                           </layout>
-                          </widget>
-                         </item>
-                         <item>
-                          <widget class="QFrame" name="frame_5">
-                           <property name="frameShape">
-                            <enum>QFrame::StyledPanel</enum>
-                           </property>
-                           <property name="frameShadow">
-                            <enum>QFrame::Raised</enum>
-                           </property>
-                           <layout class="QVBoxLayout" name="verticalLayout_11">
-                            <item alignment="Qt::AlignTop">
+                            <item>
                              <widget class="QLabel" name="label_searchNordpass">
+                              <property name="maximumSize">
+                               <size>
+                                <width>1050</width>
+                                <height>100</height>
+                               </size>
+                              </property>
                               <property name="font">
                                <font>
                                 <family>Bahnschrift SemiBold</family>
-                                <pointsize>9</pointsize>
+                                <pointsize>10</pointsize>
                                 <weight>75</weight>
                                 <bold>true</bold>
                                </font>
@@ -1742,19 +1883,43 @@ QPushButton:pressed {
                                <string notr="true">color: rgb(42, 49, 66);</string>
                               </property>
                               <property name="text">
-                               <string>SEARCH FOR YOUT PASSWORD IN THE NORDPASS WORDLISTS</string>
+                               <string>SEARCH FOR YOUR PASSWORD IN THE NORDPASS WORDLISTS</string>
                               </property>
                               <property name="alignment">
                                <set>Qt::AlignCenter</set>
                               </property>
                              </widget>
                             </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QFrame" name="frame_5">
+                           <property name="maximumSize">
+                            <size>
+                             <width>1050</width>
+                             <height>100</height>
+                            </size>
+                           </property>
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QVBoxLayout" name="verticalLayout_11">
                             <item alignment="Qt::AlignTop">
                              <widget class="QLabel" name="label_outputSearchNordPass">
+                              <property name="maximumSize">
+                               <size>
+                                <width>1050</width>
+                                <height>50</height>
+                               </size>
+                              </property>
                               <property name="font">
                                <font>
                                 <family>Bahnschrift SemiBold</family>
-                                <pointsize>23</pointsize>
+                                <pointsize>18</pointsize>
                                 <weight>75</weight>
                                 <bold>true</bold>
                                </font>
@@ -1793,6 +1958,9 @@ QPushButton:pressed {
                                 <bold>true</bold>
                                </font>
                               </property>
+                              <property name="cursor">
+                               <cursorShape>PointingHandCursor</cursorShape>
+                              </property>
                               <property name="styleSheet">
                                <string notr="true"> QPushButton{
 	    background-color: rgb(42, 49, 66);
@@ -1825,6 +1993,12 @@ QPushButton:pressed {
                       </item>
                       <item>
                        <widget class="QFrame" name="frame_3">
+                        <property name="maximumSize">
+                         <size>
+                          <width>1050</width>
+                          <height>700</height>
+                         </size>
+                        </property>
                         <property name="frameShape">
                          <enum>QFrame::StyledPanel</enum>
                         </property>
@@ -1832,8 +2006,23 @@ QPushButton:pressed {
                          <enum>QFrame::Raised</enum>
                         </property>
                         <layout class="QHBoxLayout" name="horizontalLayout_5">
-                         <item>
+                         <item alignment="Qt::AlignTop">
                           <widget class="QFrame" name="frame_6">
+                           <property name="minimumSize">
+                            <size>
+                             <width>0</width>
+                             <height>300</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>500</width>
+                             <height>700</height>
+                            </size>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">background-color: rgba(255,255,255,255);</string>
+                           </property>
                            <property name="frameShape">
                             <enum>QFrame::StyledPanel</enum>
                            </property>
@@ -1843,6 +2032,12 @@ QPushButton:pressed {
                            <layout class="QVBoxLayout" name="verticalLayout_16">
                             <item>
                              <widget class="QFrame" name="frame_37">
+                              <property name="maximumSize">
+                               <size>
+                                <width>500</width>
+                                <height>300</height>
+                               </size>
+                              </property>
                               <property name="frameShape">
                                <enum>QFrame::StyledPanel</enum>
                               </property>
@@ -1852,6 +2047,12 @@ QPushButton:pressed {
                               <layout class="QVBoxLayout" name="verticalLayout_13">
                                <item alignment="Qt::AlignTop">
                                 <widget class="QLabel" name="label_timeToCrack">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>500</width>
+                                   <height>40</height>
+                                  </size>
+                                 </property>
                                  <property name="font">
                                   <font>
                                    <family>Bahnschrift SemiBold</family>
@@ -1861,7 +2062,7 @@ QPushButton:pressed {
                                   </font>
                                  </property>
                                  <property name="styleSheet">
-                                  <string notr="true">color: rgb(42, 49, 66);</string>
+                                  <string notr="true"/>
                                  </property>
                                  <property name="text">
                                   <string>ESTIMATED TIME TO CRACK</string>
@@ -1871,12 +2072,94 @@ QPushButton:pressed {
                                  </property>
                                 </widget>
                                </item>
-                               <item alignment="Qt::AlignTop">
+                               <item alignment="Qt::AlignVCenter">
                                 <widget class="QLabel" name="label_outputTimeToCrack">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>500</width>
+                                   <height>500</height>
+                                  </size>
+                                 </property>
                                  <property name="font">
                                   <font>
                                    <family>Bahnschrift SemiBold</family>
-                                   <pointsize>23</pointsize>
+                                   <pointsize>18</pointsize>
+                                   <weight>75</weight>
+                                   <bold>true</bold>
+                                  </font>
+                                 </property>
+                                 <property name="styleSheet">
+                                  <string notr="true">color: rgba(0, 143, 255, 255);
+</string>
+                                 </property>
+                                 <property name="text">
+                                  <string/>
+                                 </property>
+                                 <property name="alignment">
+                                  <set>Qt::AlignCenter</set>
+                                 </property>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QFrame" name="frame_40">
+                              <property name="maximumSize">
+                               <size>
+                                <width>500</width>
+                                <height>300</height>
+                               </size>
+                              </property>
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
+                              </property>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
+                              </property>
+                              <layout class="QVBoxLayout" name="verticalLayout_14">
+                               <item>
+                                <widget class="QLabel" name="label_entropy">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>500</width>
+                                   <height>40</height>
+                                  </size>
+                                 </property>
+                                 <property name="font">
+                                  <font>
+                                   <family>Bahnschrift SemiBold</family>
+                                   <pointsize>13</pointsize>
+                                   <weight>75</weight>
+                                   <bold>true</bold>
+                                  </font>
+                                 </property>
+                                 <property name="text">
+                                  <string>PASSWORD ENTROPY</string>
+                                 </property>
+                                 <property name="alignment">
+                                  <set>Qt::AlignCenter</set>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QLabel" name="label_outputEntropy">
+                                 <property name="minimumSize">
+                                  <size>
+                                   <width>0</width>
+                                   <height>0</height>
+                                  </size>
+                                 </property>
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>500</width>
+                                   <height>40</height>
+                                  </size>
+                                 </property>
+                                 <property name="font">
+                                  <font>
+                                   <family>Bahnschrift SemiBold</family>
+                                   <pointsize>18</pointsize>
                                    <weight>75</weight>
                                    <bold>true</bold>
                                   </font>
@@ -1898,6 +2181,12 @@ QPushButton:pressed {
                             </item>
                             <item>
                              <widget class="QFrame" name="frame_36">
+                              <property name="maximumSize">
+                               <size>
+                                <width>500</width>
+                                <height>300</height>
+                               </size>
+                              </property>
                               <property name="frameShape">
                                <enum>QFrame::StyledPanel</enum>
                               </property>
@@ -1907,6 +2196,12 @@ QPushButton:pressed {
                               <layout class="QVBoxLayout" name="verticalLayout_12">
                                <item alignment="Qt::AlignTop">
                                 <widget class="QLabel" name="label_pwdStrength">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>500</width>
+                                   <height>40</height>
+                                  </size>
+                                 </property>
                                  <property name="font">
                                   <font>
                                    <family>Bahnschrift SemiBold</family>
@@ -1916,7 +2211,7 @@ QPushButton:pressed {
                                   </font>
                                  </property>
                                  <property name="styleSheet">
-                                  <string notr="true">color: rgb(42, 49, 66);</string>
+                                  <string notr="true"/>
                                  </property>
                                  <property name="text">
                                   <string>YOUR PASSWORD STRENGTH</string>
@@ -1926,12 +2221,18 @@ QPushButton:pressed {
                                  </property>
                                 </widget>
                                </item>
-                               <item alignment="Qt::AlignTop">
+                               <item alignment="Qt::AlignVCenter">
                                 <widget class="QLabel" name="label_outputPasswordStrength">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>500</width>
+                                   <height>200</height>
+                                  </size>
+                                 </property>
                                  <property name="font">
                                   <font>
                                    <family>Bahnschrift SemiBold</family>
-                                   <pointsize>23</pointsize>
+                                   <pointsize>18</pointsize>
                                    <weight>75</weight>
                                    <bold>true</bold>
                                   </font>
@@ -1954,8 +2255,23 @@ QPushButton:pressed {
                            </layout>
                           </widget>
                          </item>
-                         <item>
+                         <item alignment="Qt::AlignTop">
                           <widget class="QFrame" name="frame_7">
+                           <property name="minimumSize">
+                            <size>
+                             <width>0</width>
+                             <height>300</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>600</width>
+                             <height>400</height>
+                            </size>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">background-color: rgba(255,255,255,255);</string>
+                           </property>
                            <property name="frameShape">
                             <enum>QFrame::StyledPanel</enum>
                            </property>
@@ -1963,26 +2279,95 @@ QPushButton:pressed {
                             <enum>QFrame::Raised</enum>
                            </property>
                            <layout class="QVBoxLayout" name="verticalLayout_24">
-                            <item>
-                             <widget class="QFrame" name="frame_40">
+                            <item alignment="Qt::AlignTop">
+                             <widget class="QFrame" name="frame_head_length">
+                              <property name="maximumSize">
+                               <size>
+                                <width>500</width>
+                                <height>50</height>
+                               </size>
+                              </property>
                               <property name="frameShape">
                                <enum>QFrame::StyledPanel</enum>
                               </property>
                               <property name="frameShadow">
                                <enum>QFrame::Raised</enum>
                               </property>
-                              <layout class="QVBoxLayout" name="verticalLayout_14">
+                              <layout class="QHBoxLayout" name="horizontalLayout_42">
                                <item>
-                                <widget class="QFrame" name="frame_38">
+                                <widget class="QFrame" name="head_special">
+                                 <property name="font">
+                                  <font>
+                                   <family>Bahnschrift</family>
+                                  </font>
+                                 </property>
                                  <property name="frameShape">
                                   <enum>QFrame::StyledPanel</enum>
                                  </property>
                                  <property name="frameShadow">
                                   <enum>QFrame::Raised</enum>
                                  </property>
-                                 <layout class="QVBoxLayout" name="verticalLayout_4">
-                                  <item>
-                                   <widget class="QLabel" name="label_entropy">
+                                 <layout class="QVBoxLayout" name="verticalLayout_59">
+                                  <item alignment="Qt::AlignTop">
+                                   <widget class="QLabel" name="label_specialWarning">
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>500</width>
+                                      <height>50</height>
+                                     </size>
+                                    </property>
+                                    <property name="font">
+                                     <font>
+                                      <family>Bahnschrift SemiBold</family>
+                                      <pointsize>13</pointsize>
+                                      <weight>75</weight>
+                                      <bold>true</bold>
+                                      <kerning>true</kerning>
+                                     </font>
+                                    </property>
+                                    <property name="styleSheet">
+                                     <string notr="true"/>
+                                    </property>
+                                    <property name="text">
+                                     <string>SPECIAL WARINING!</string>
+                                    </property>
+                                    <property name="alignment">
+                                     <set>Qt::AlignCenter</set>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item alignment="Qt::AlignLeft">
+                                <widget class="QFrame" name="length_count">
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>500</width>
+                                   <height>100</height>
+                                  </size>
+                                 </property>
+                                 <property name="font">
+                                  <font>
+                                   <weight>75</weight>
+                                   <bold>true</bold>
+                                  </font>
+                                 </property>
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <layout class="QVBoxLayout" name="verticalLayout_58">
+                                  <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+                                   <widget class="QLabel" name="label_lengthOfPassword">
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>300</width>
+                                      <height>50</height>
+                                     </size>
+                                    </property>
                                     <property name="font">
                                      <font>
                                       <family>Bahnschrift SemiBold</family>
@@ -1992,44 +2377,7 @@ QPushButton:pressed {
                                      </font>
                                     </property>
                                     <property name="text">
-                                     <string>PASSWORD ENTROPY</string>
-                                    </property>
-                                    <property name="alignment">
-                                     <set>Qt::AlignCenter</set>
-                                    </property>
-                                   </widget>
-                                  </item>
-                                  <item alignment="Qt::AlignTop">
-                                   <widget class="QLabel" name="label_outputEntropy">
-                                    <property name="minimumSize">
-                                     <size>
-                                      <width>520</width>
-                                      <height>40</height>
-                                     </size>
-                                    </property>
-                                    <property name="maximumSize">
-                                     <size>
-                                      <width>520</width>
-                                      <height>40</height>
-                                     </size>
-                                    </property>
-                                    <property name="font">
-                                     <font>
-                                      <family>Bahnschrift SemiBold</family>
-                                      <pointsize>23</pointsize>
-                                      <weight>75</weight>
-                                      <bold>true</bold>
-                                     </font>
-                                    </property>
-                                    <property name="styleSheet">
-                                     <string notr="true">color: rgba(0, 143, 255, 255);
-</string>
-                                    </property>
-                                    <property name="text">
-                                     <string/>
-                                    </property>
-                                    <property name="alignment">
-                                     <set>Qt::AlignCenter</set>
+                                     <string>0 CHAR</string>
                                     </property>
                                    </widget>
                                   </item>
@@ -2041,6 +2389,18 @@ QPushButton:pressed {
                             </item>
                             <item>
                              <widget class="QFrame" name="frame_39">
+                              <property name="minimumSize">
+                               <size>
+                                <width>0</width>
+                                <height>100</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>600</width>
+                                <height>700</height>
+                               </size>
+                              </property>
                               <property name="styleSheet">
                                <string notr="true">QCheckBox::indicator{
  	width: 0; height 0;
@@ -2054,192 +2414,156 @@ QPushButton:pressed {
                                <enum>QFrame::Raised</enum>
                               </property>
                               <layout class="QVBoxLayout" name="verticalLayout_15">
-                               <item alignment="Qt::AlignHCenter">
-                                <widget class="QFrame" name="frame_78">
+                               <item alignment="Qt::AlignTop">
+                                <widget class="QFrame" name="checklist_password">
+                                 <property name="minimumSize">
+                                  <size>
+                                   <width>0</width>
+                                   <height>100</height>
+                                  </size>
+                                 </property>
+                                 <property name="maximumSize">
+                                  <size>
+                                   <width>450</width>
+                                   <height>700</height>
+                                  </size>
+                                 </property>
+                                 <property name="font">
+                                  <font>
+                                   <weight>50</weight>
+                                   <bold>false</bold>
+                                  </font>
+                                 </property>
                                  <property name="frameShape">
                                   <enum>QFrame::StyledPanel</enum>
                                  </property>
                                  <property name="frameShadow">
                                   <enum>QFrame::Raised</enum>
                                  </property>
-                                 <layout class="QHBoxLayout" name="horizontalLayout_42">
-                                  <item alignment="Qt::AlignHCenter">
-                                   <widget class="QFrame" name="frame_82">
-                                    <property name="frameShape">
-                                     <enum>QFrame::StyledPanel</enum>
+                                 <layout class="QVBoxLayout" name="verticalLayout_56">
+                                  <item>
+                                   <widget class="QCheckBox" name="chk_length">
+                                    <property name="font">
+                                     <font>
+                                      <family>Bahnschrift SemiBold</family>
+                                      <pointsize>13</pointsize>
+                                      <weight>75</weight>
+                                      <bold>true</bold>
+                                     </font>
                                     </property>
-                                    <property name="frameShadow">
-                                     <enum>QFrame::Raised</enum>
+                                    <property name="text">
+                                     <string>PASSWORD MORETHAN 8 CHARACTERS                        </string>
                                     </property>
-                                    <layout class="QVBoxLayout" name="verticalLayout_59">
-                                     <item>
-                                      <widget class="QLabel" name="label_specialWarning">
-                                       <property name="font">
-                                        <font>
-                                         <family>Bahnschrift SemiBold</family>
-                                         <pointsize>13</pointsize>
-                                         <weight>75</weight>
-                                         <bold>true</bold>
-                                        </font>
-                                       </property>
-                                       <property name="styleSheet">
-                                        <string notr="true">color: rgb(42, 49, 66);</string>
-                                       </property>
-                                       <property name="text">
-                                        <string>SPECIAL WARINING!</string>
-                                       </property>
-                                       <property name="alignment">
-                                        <set>Qt::AlignCenter</set>
-                                       </property>
-                                      </widget>
-                                     </item>
-                                    </layout>
+                                    <property name="icon">
+                                     <iconset resource="../resource.qrc">
+                                      <normaloff>:/icons/icons/icon_no.png</normaloff>:/icons/icons/icon_no.png</iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                     <size>
+                                      <width>30</width>
+                                      <height>30</height>
+                                     </size>
+                                    </property>
                                    </widget>
                                   </item>
-                                  <item alignment="Qt::AlignRight">
-                                   <widget class="QFrame" name="frame_81">
-                                    <property name="frameShape">
-                                     <enum>QFrame::StyledPanel</enum>
+                                  <item>
+                                   <widget class="QCheckBox" name="chk_digits">
+                                    <property name="font">
+                                     <font>
+                                      <family>Bahnschrift SemiBold</family>
+                                      <pointsize>13</pointsize>
+                                      <weight>75</weight>
+                                      <bold>true</bold>
+                                     </font>
                                     </property>
-                                    <property name="frameShadow">
-                                     <enum>QFrame::Raised</enum>
+                                    <property name="text">
+                                     <string>DIGITS                                    </string>
                                     </property>
-                                    <layout class="QVBoxLayout" name="verticalLayout_58">
-                                     <item>
-                                      <widget class="QLabel" name="label_lengthOfPassword">
-                                       <property name="font">
-                                        <font>
-                                         <family>Bahnschrift SemiBold</family>
-                                         <pointsize>13</pointsize>
-                                         <weight>75</weight>
-                                         <bold>true</bold>
-                                        </font>
-                                       </property>
-                                       <property name="text">
-                                        <string>0 CHAR</string>
-                                       </property>
-                                      </widget>
-                                     </item>
-                                    </layout>
+                                    <property name="icon">
+                                     <iconset resource="../resource.qrc">
+                                      <normaloff>:/icons/icons/icon_no.png</normaloff>:/icons/icons/icon_no.png</iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                     <size>
+                                      <width>30</width>
+                                      <height>30</height>
+                                     </size>
+                                    </property>
                                    </widget>
                                   </item>
-                                 </layout>
-                                </widget>
-                               </item>
-                               <item>
-                                <widget class="QFrame" name="frame_79">
-                                 <property name="frameShape">
-                                  <enum>QFrame::StyledPanel</enum>
-                                 </property>
-                                 <property name="frameShadow">
-                                  <enum>QFrame::Raised</enum>
-                                 </property>
-                                 <layout class="QVBoxLayout" name="verticalLayout_55">
-                                  <item alignment="Qt::AlignHCenter">
-                                   <widget class="QFrame" name="frame_80">
-                                    <property name="frameShape">
-                                     <enum>QFrame::StyledPanel</enum>
+                                  <item>
+                                   <widget class="QCheckBox" name="chk_lower">
+                                    <property name="font">
+                                     <font>
+                                      <family>Bahnschrift SemiBold</family>
+                                      <pointsize>13</pointsize>
+                                      <weight>75</weight>
+                                      <bold>true</bold>
+                                     </font>
                                     </property>
-                                    <property name="frameShadow">
-                                     <enum>QFrame::Raised</enum>
+                                    <property name="text">
+                                     <string>LOWER CASE LATIN LETTERS</string>
                                     </property>
-                                    <layout class="QVBoxLayout" name="verticalLayout_56">
-                                     <item>
-                                      <widget class="QCheckBox" name="chk_length">
-                                       <property name="font">
-                                        <font>
-                                         <family>Bahnschrift SemiBold</family>
-                                         <pointsize>13</pointsize>
-                                         <weight>75</weight>
-                                         <bold>true</bold>
-                                        </font>
-                                       </property>
-                                       <property name="text">
-                                        <string>PASSWORD MORETHAN 8 CHARACTERS                        </string>
-                                       </property>
-                                       <property name="icon">
-                                        <iconset resource="../resource.qrc">
-                                         <normaloff>:/icons/icons/icon_no.png</normaloff>:/icons/icons/icon_no.png</iconset>
-                                       </property>
-                                      </widget>
-                                     </item>
-                                     <item>
-                                      <widget class="QCheckBox" name="chk_digits">
-                                       <property name="font">
-                                        <font>
-                                         <family>Bahnschrift SemiBold</family>
-                                         <pointsize>13</pointsize>
-                                         <weight>75</weight>
-                                         <bold>true</bold>
-                                        </font>
-                                       </property>
-                                       <property name="text">
-                                        <string>DIGITS                                    </string>
-                                       </property>
-                                       <property name="icon">
-                                        <iconset resource="../resource.qrc">
-                                         <normaloff>:/icons/icons/icon_no.png</normaloff>:/icons/icons/icon_no.png</iconset>
-                                       </property>
-                                      </widget>
-                                     </item>
-                                     <item>
-                                      <widget class="QCheckBox" name="chk_lower">
-                                       <property name="font">
-                                        <font>
-                                         <family>Bahnschrift SemiBold</family>
-                                         <pointsize>13</pointsize>
-                                         <weight>75</weight>
-                                         <bold>true</bold>
-                                        </font>
-                                       </property>
-                                       <property name="text">
-                                        <string>LOWER CASE LATIN LETTERS</string>
-                                       </property>
-                                       <property name="icon">
-                                        <iconset resource="../resource.qrc">
-                                         <normaloff>:/icons/icons/icon_no.png</normaloff>:/icons/icons/icon_no.png</iconset>
-                                       </property>
-                                      </widget>
-                                     </item>
-                                     <item>
-                                      <widget class="QCheckBox" name="chk_upper">
-                                       <property name="font">
-                                        <font>
-                                         <family>Bahnschrift SemiBold</family>
-                                         <pointsize>13</pointsize>
-                                         <weight>75</weight>
-                                         <bold>true</bold>
-                                        </font>
-                                       </property>
-                                       <property name="text">
-                                        <string>UPPER CASE LATIN LETTERS</string>
-                                       </property>
-                                       <property name="icon">
-                                        <iconset resource="../resource.qrc">
-                                         <normaloff>:/icons/icons/icon_no.png</normaloff>:/icons/icons/icon_no.png</iconset>
-                                       </property>
-                                      </widget>
-                                     </item>
-                                     <item>
-                                      <widget class="QCheckBox" name="chk_special">
-                                       <property name="font">
-                                        <font>
-                                         <family>Bahnschrift SemiBold</family>
-                                         <pointsize>13</pointsize>
-                                         <weight>75</weight>
-                                         <bold>true</bold>
-                                        </font>
-                                       </property>
-                                       <property name="text">
-                                        <string>SPECIAL CHARACTERS         </string>
-                                       </property>
-                                       <property name="icon">
-                                        <iconset resource="../resource.qrc">
-                                         <normaloff>:/icons/icons/icon_no.png</normaloff>:/icons/icons/icon_no.png</iconset>
-                                       </property>
-                                      </widget>
-                                     </item>
-                                    </layout>
+                                    <property name="icon">
+                                     <iconset resource="../resource.qrc">
+                                      <normaloff>:/icons/icons/icon_no.png</normaloff>:/icons/icons/icon_no.png</iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                     <size>
+                                      <width>30</width>
+                                      <height>30</height>
+                                     </size>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QCheckBox" name="chk_upper">
+                                    <property name="font">
+                                     <font>
+                                      <family>Bahnschrift SemiBold</family>
+                                      <pointsize>13</pointsize>
+                                      <weight>75</weight>
+                                      <bold>true</bold>
+                                     </font>
+                                    </property>
+                                    <property name="text">
+                                     <string>UPPER CASE LATIN LETTERS</string>
+                                    </property>
+                                    <property name="icon">
+                                     <iconset resource="../resource.qrc">
+                                      <normaloff>:/icons/icons/icon_no.png</normaloff>:/icons/icons/icon_no.png</iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                     <size>
+                                      <width>30</width>
+                                      <height>30</height>
+                                     </size>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QCheckBox" name="chk_special">
+                                    <property name="font">
+                                     <font>
+                                      <family>Bahnschrift SemiBold</family>
+                                      <pointsize>13</pointsize>
+                                      <weight>75</weight>
+                                      <bold>true</bold>
+                                     </font>
+                                    </property>
+                                    <property name="text">
+                                     <string>SPECIAL CHARACTERS         </string>
+                                    </property>
+                                    <property name="icon">
+                                     <iconset resource="../resource.qrc">
+                                      <normaloff>:/icons/icons/icon_no.png</normaloff>:/icons/icons/icon_no.png</iconset>
+                                    </property>
+                                    <property name="iconSize">
+                                     <size>
+                                      <width>30</width>
+                                      <height>30</height>
+                                     </size>
+                                    </property>
                                    </widget>
                                   </item>
                                  </layout>
@@ -2261,8 +2585,20 @@ QPushButton:pressed {
                  </widget>
                  <widget class="QWidget" name="page_dictionary">
                   <layout class="QHBoxLayout" name="horizontalLayout_29">
-                   <item>
+                   <item alignment="Qt::AlignTop">
                     <widget class="QFrame" name="frame_71">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>620</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>1050</width>
+                       <height>700</height>
+                      </size>
+                     </property>
                      <property name="frameShape">
                       <enum>QFrame::StyledPanel</enum>
                      </property>
@@ -2271,7 +2607,36 @@ QPushButton:pressed {
                      </property>
                      <layout class="QVBoxLayout" name="verticalLayout_48">
                       <item>
+                       <widget class="QPushButton" name="btn_backDic">
+                        <property name="maximumSize">
+                         <size>
+                          <width>16</width>
+                          <height>16</height>
+                         </size>
+                        </property>
+                        <property name="cursor">
+                         <cursorShape>PointingHandCursor</cursorShape>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">background-image: url(D:/ISAN Security Gizmo Box/assets/icons/icon-back.png);</string>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="../resource.qrc">
+                          <normaloff>:/icons/icons/icon-back.png</normaloff>:/icons/icons/icon-back.png</iconset>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
                        <widget class="QFrame" name="frame_72">
+                        <property name="maximumSize">
+                         <size>
+                          <width>1050</width>
+                          <height>200</height>
+                         </size>
+                        </property>
                         <property name="frameShape">
                          <enum>QFrame::StyledPanel</enum>
                         </property>
@@ -2279,8 +2644,14 @@ QPushButton:pressed {
                          <enum>QFrame::Raised</enum>
                         </property>
                         <layout class="QVBoxLayout" name="verticalLayout_49">
-                         <item>
+                         <item alignment="Qt::AlignTop">
                           <widget class="QFrame" name="frame_74">
+                           <property name="maximumSize">
+                            <size>
+                             <width>1050</width>
+                             <height>100</height>
+                            </size>
+                           </property>
                            <property name="frameShape">
                             <enum>QFrame::StyledPanel</enum>
                            </property>
@@ -2291,19 +2662,20 @@ QPushButton:pressed {
                             <property name="spacing">
                              <number>30</number>
                             </property>
-                            <item alignment="Qt::AlignLeft">
-                             <widget class="QPushButton" name="btn_backDic">
-                              <property name="text">
-                               <string/>
-                              </property>
-                              <property name="icon">
-                               <iconset resource="../resource.qrc">
-                                <normaloff>:/icons/icons/icon-back.png</normaloff>:/icons/icons/icon-back.png</iconset>
-                              </property>
-                             </widget>
-                            </item>
-                            <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
+                            <item alignment="Qt::AlignVCenter">
                              <widget class="QLabel" name="label_dictionary">
+                              <property name="minimumSize">
+                               <size>
+                                <width>0</width>
+                                <height>50</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>1050</width>
+                                <height>50</height>
+                               </size>
+                              </property>
                               <property name="font">
                                <font>
                                 <family>Bahnschrift SemiBold</family>
@@ -2323,7 +2695,7 @@ QPushButton:pressed {
                               </property>
                              </widget>
                             </item>
-                            <item>
+                            <item alignment="Qt::AlignVCenter">
                              <widget class="QLineEdit" name="lineEdit_passwordDic">
                               <property name="minimumSize">
                                <size>
@@ -2331,10 +2703,16 @@ QPushButton:pressed {
                                 <height>35</height>
                                </size>
                               </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>1050</width>
+                                <height>34</height>
+                               </size>
+                              </property>
                               <property name="font">
                                <font>
                                 <family>Bahnschrift SemiBold</family>
-                                <pointsize>10</pointsize>
+                                <pointsize>18</pointsize>
                                 <weight>75</weight>
                                 <bold>true</bold>
                                </font>
@@ -2370,8 +2748,20 @@ QLineEdit:focus {
                            </layout>
                           </widget>
                          </item>
-                         <item alignment="Qt::AlignHCenter">
+                         <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
                           <widget class="QFrame" name="frame_75">
+                           <property name="minimumSize">
+                            <size>
+                             <width>980</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>1050</width>
+                             <height>100</height>
+                            </size>
+                           </property>
                            <property name="frameShape">
                             <enum>QFrame::StyledPanel</enum>
                            </property>
@@ -2400,6 +2790,9 @@ QLineEdit:focus {
                                 <weight>75</weight>
                                 <bold>true</bold>
                                </font>
+                              </property>
+                              <property name="cursor">
+                               <cursorShape>PointingHandCursor</cursorShape>
                               </property>
                               <property name="styleSheet">
                                <string notr="true"> QPushButton{
@@ -2453,6 +2846,9 @@ QPushButton:pressed {
                                 <bold>true</bold>
                                </font>
                               </property>
+                              <property name="cursor">
+                               <cursorShape>PointingHandCursor</cursorShape>
+                              </property>
                               <property name="styleSheet">
                                <string notr="true"> QPushButton{
 	    background-color: rgb(42, 49, 66);
@@ -2493,7 +2889,7 @@ QPushButton:pressed {
                               </property>
                               <property name="maximumSize">
                                <size>
-                                <width>261</width>
+                                <width>400</width>
                                 <height>41</height>
                                </size>
                               </property>
@@ -2552,6 +2948,9 @@ QLineEdit:focus {
                                 <bold>true</bold>
                                </font>
                               </property>
+                              <property name="cursor">
+                               <cursorShape>PointingHandCursor</cursorShape>
+                              </property>
                               <property name="styleSheet">
                                <string notr="true"> QPushButton{
 	    background-color: rgb(42, 49, 66);
@@ -2608,6 +3007,9 @@ QPushButton:pressed {
                                 <bold>true</bold>
                                </font>
                               </property>
+                              <property name="cursor">
+                               <cursorShape>PointingHandCursor</cursorShape>
+                              </property>
                               <property name="styleSheet">
                                <string notr="true"> QPushButton{
 	    background-color: rgb(42, 49, 66);
@@ -2648,8 +3050,20 @@ QPushButton:pressed {
                         </layout>
                        </widget>
                       </item>
-                      <item>
+                      <item alignment="Qt::AlignTop">
                        <widget class="QFrame" name="frame_73">
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>390</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>1050</width>
+                          <height>500</height>
+                         </size>
+                        </property>
                         <property name="frameShape">
                          <enum>QFrame::StyledPanel</enum>
                         </property>
@@ -2659,59 +3073,47 @@ QPushButton:pressed {
                         <layout class="QVBoxLayout" name="verticalLayout_51">
                          <item>
                           <widget class="QFrame" name="frame_76">
+                           <property name="maximumSize">
+                            <size>
+                             <width>1050</width>
+                             <height>200</height>
+                            </size>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">background-color: rgba(40,43,61,255);</string>
+                           </property>
                            <property name="frameShape">
                             <enum>QFrame::StyledPanel</enum>
                            </property>
                            <property name="frameShadow">
                             <enum>QFrame::Raised</enum>
                            </property>
-                           <layout class="QVBoxLayout" name="verticalLayout_52">
-                            <item>
-                             <widget class="QWidget" name="widget_outputDic" native="true">
-                              <property name="styleSheet">
-                               <string notr="true">background-color:rgba(242,243,245,255);
+                           <layout class="QVBoxLayout" name="verticalLayout_52"/>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QWidget" name="widget_outputDic" native="true">
+                           <property name="styleSheet">
+                            <string notr="true">background-color:rgba(242,243,245,255);
 border-radius: 5px;</string>
-                              </property>
-                              <layout class="QVBoxLayout" name="verticalLayout_53">
-                               <item>
-                                <widget class="QLabel" name="label_outputDictionary">
-                                 <property name="text">
-                                  <string/>
-                                 </property>
-                                </widget>
-                               </item>
-                              </layout>
-                             </widget>
-                            </item>
+                           </property>
+                           <layout class="QVBoxLayout" name="verticalLayout_53">
                             <item>
-                             <widget class="QProgressBar" name="progressBar">
-                              <property name="font">
-                               <font>
-                                <family>Bahnschrift SemiBold</family>
-                                <pointsize>10</pointsize>
-                                <weight>75</weight>
-                                <bold>true</bold>
-                               </font>
+                             <widget class="QLabel" name="label_outputDictionary">
+                              <property name="minimumSize">
+                               <size>
+                                <width>0</width>
+                                <height>0</height>
+                               </size>
                               </property>
-                              <property name="styleSheet">
-                               <string notr="true">QProgressBar {
-    border: 1px solid rgb(42, 49, 66);
-    border-radius: 5px;
-    text-align: center;
-}
-
-QProgressBar:chunk {
-	 border-radius: 10px;
-    background-color:  rgb(42, 49, 66); /* Custom color for the progress bar chunk */
-}
-
-
-
-
-</string>
+                              <property name="maximumSize">
+                               <size>
+                                <width>1050</width>
+                                <height>200</height>
+                               </size>
                               </property>
-                              <property name="value">
-                               <number>24</number>
+                              <property name="text">
+                               <string/>
                               </property>
                              </widget>
                             </item>
@@ -3112,7 +3514,7 @@ QPushButton:focus {
                              <widget class="QComboBox" name="dropdown_sha2">
                               <property name="minimumSize">
                                <size>
-                                <width>119</width>
+                                <width>101</width>
                                 <height>41</height>
                                </size>
                               </property>
@@ -3198,7 +3600,7 @@ QComboBox:hover {
                              <widget class="QComboBox" name="dropdown_sha3">
                               <property name="minimumSize">
                                <size>
-                                <width>119</width>
+                                <width>101</width>
                                 <height>41</height>
                                </size>
                               </property>

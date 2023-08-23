@@ -71,8 +71,12 @@ class Main(QDialog):
             self.chk_upper.setIcon(self.warning_icon)
             self.chk_lower.setIcon(self.warning_icon)
             self.chk_special.setIcon(self.warning_icon)
-            self.label_outputEntropy.setText('')
+            self.label_outputSearchNordPass.setText('Start typing to see the entropy score')
+            self.label_outputTimeToCrack.setText('no password')
+            self.label_outputPasswordStrength.setText('no password')
+            self.label_outputEntropy.setText('0 Bits')
 
+        self.btn_backPassword.clicked.connect(self.openAdvancedUserHome)
         self.btn_iconEye.clicked.connect(self.btn_hidePwd)
         self.lineEdit_password.textChanged.connect(self.getPassword)
         self.btn_dicAttack.clicked.connect(self.Passowrd_Dictionary_Attack)
@@ -209,8 +213,10 @@ class Main(QDialog):
         
         # Show length of password
         self.label_lengthOfPassword.setText(f'{length} Chars')
+
         # Show time to crack
         self.label_outputTimeToCrack.setText(f'{PasswordEvaluation.time_to_Crack(self, password)}')
+
         # Check if password is in the list of weak passwords
         PasswordEvaluation.check_common_password(self, password, self.nordpass_common_passwords)
     
@@ -279,18 +285,23 @@ class PasswordEvaluation(QDialog):
         if password == '':
             self.label_outputEntropy.setText('')
             self.label_outputSearchNordPass.setText('Start typing to see the entropy score')
+            self.label_outputSearchNordPass.setStyleSheet("color: rgba(0, 143, 255, 255);")
             self.label_outputPasswordStrength.setText('')
             self.btn_dicAttack.setVisible(False)
         else:
             if password in self.nordpass_common_passwords:
                 print(self.nordpass_common_passwords.index(password))
                 self.label_outputSearchNordPass.setText('Found in the top 200 most common passwords by NordPass')
+                self.label_outputSearchNordPass.setStyleSheet("color: red;")
                 self.btn_dicAttack.setVisible(False)
             else:
                 self.label_outputSearchNordPass.setText('Not found in the list')
-                self.btn_dicAttack.setVisible(True) if self.label_outputSearchNordPass.text() == '' or self.label_outputSearchNordPass.text() == 'Not found in the list' else self.btn_dicAttack.setVisible(False)
+                self.label_outputSearchNordPass.setStyleSheet("color: rgba(0, 255, 143, 255);")
+                self.btn_dicAttack.setVisible(True) if self.label_outputSearchNordPass.text() == '' \
+                    or self.label_outputSearchNordPass.text() == 'Not found in the list' else self.btn_dicAttack.setVisible(False)
 
     def update(self):
+
         self.chk_length.setChecked(False)
         self.chk_digits.setChecked(False)
         self.chk_upper.setChecked(False)
@@ -393,8 +404,8 @@ class PasswordEvaluation(QDialog):
                 time_parts.append(f"{seconds} second{'s' if seconds != 1 else ''}")
             if years > 10:
                 time_parts = ['more than 10 years']
-            
-            # return " ".join(time_parts)
+            if time_parts == []:
+                time_parts = ['less than a second']
 
             # Show time to crack 2 largest units
             if len(time_parts) <= 2:
@@ -483,34 +494,44 @@ class MessageDigest(QDialog):
     def hash(self, type):
         #print(self.dropdown_sha2.currentText())
         if type == "md5":
-            self.lineEdit_outputTextDigest.setText(MessageDigest.md5(self, self.lineEdit_digest.text()))if self.lineEdit_digest.text() != '' else self.lineEdit_outputTextDigest.setText('')
+            self.lineEdit_outputTextDigest.setText(MessageDigest.md5(self, self.lineEdit_digest.text())) \
+                if self.lineEdit_digest.text() != '' else self.lineEdit_outputTextDigest.setText('')
             self.algorithm = 'MD5'
         elif type == "sha1":
-            self.lineEdit_outputTextDigest.setText(MessageDigest.sha1(self, self.lineEdit_digest.text()))if self.lineEdit_digest.text() != '' else self.lineEdit_outputTextDigest.setText('')
+            self.lineEdit_outputTextDigest.setText(MessageDigest.sha1(self, self.lineEdit_digest.text())) \
+                if self.lineEdit_digest.text() != '' else self.lineEdit_outputTextDigest.setText('')
             self.algorithm = 'SHA-1'
         elif type == "sha2_224 BIT":
-            self.lineEdit_outputTextDigest.setText(MessageDigest.sha224(self, self.lineEdit_digest.text()))if self.lineEdit_digest.text() != '' else self.lineEdit_outputTextDigest.setText('')
+            self.lineEdit_outputTextDigest.setText(MessageDigest.sha224(self, self.lineEdit_digest.text())) \
+                if self.lineEdit_digest.text() != '' else self.lineEdit_outputTextDigest.setText('')
             self.algorithm = 'SHA2-224'
         elif type == "sha2_256 BIT":
-            self.lineEdit_outputTextDigest.setText(MessageDigest.sha256(self, self.lineEdit_digest.text()))if self.lineEdit_digest.text() != '' else self.lineEdit_outputTextDigest.setText('')
+            self.lineEdit_outputTextDigest.setText(MessageDigest.sha256(self, self.lineEdit_digest.text())) \
+                if self.lineEdit_digest.text() != '' else self.lineEdit_outputTextDigest.setText('')
             self.algorithm = 'SHA2-256'
         elif type == "sha2_384 BIT":
-            self.lineEdit_outputTextDigest.setText(MessageDigest.sha384(self, self.lineEdit_digest.text()))if self.lineEdit_digest.text() != '' else self.lineEdit_outputTextDigest.setText('')
+            self.lineEdit_outputTextDigest.setText(MessageDigest.sha384(self, self.lineEdit_digest.text())) \
+                if self.lineEdit_digest.text() != '' else self.lineEdit_outputTextDigest.setText('')
             self.algorithm = 'SHA2-384'
         elif type == "sha2_512 BIT":
-            self.lineEdit_outputTextDigest.setText(MessageDigest.sha512(self, self.lineEdit_digest.text()))if self.lineEdit_digest.text() != '' else self.lineEdit_outputTextDigest.setText('')
+            self.lineEdit_outputTextDigest.setText(MessageDigest.sha512(self, self.lineEdit_digest.text())) \
+                if self.lineEdit_digest.text() != '' else self.lineEdit_outputTextDigest.setText('')
             self.algorithm = 'SHA2-512'
         elif type == "sha3_224 BIT":
-            self.lineEdit_outputTextDigest.setText(MessageDigest.sha3_224(self, self.lineEdit_digest.text()))if self.lineEdit_digest.text() != '' else self.lineEdit_outputTextDigest.setText('')
+            self.lineEdit_outputTextDigest.setText(MessageDigest.sha3_224(self, self.lineEdit_digest.text())) \
+                if self.lineEdit_digest.text() != '' else self.lineEdit_outputTextDigest.setText('')
             self.algorithm = 'SHA3-224'
         elif type == "sha3_256 BIT":
-            self.lineEdit_outputTextDigest.setText(MessageDigest.sha3_256(self, self.lineEdit_digest.text()))if self.lineEdit_digest.text() != '' else self.lineEdit_outputTextDigest.setText('')
+            self.lineEdit_outputTextDigest.setText(MessageDigest.sha3_256(self, self.lineEdit_digest.text())) \
+                if self.lineEdit_digest.text() != '' else self.lineEdit_outputTextDigest.setText('')
             self.algorithm = 'SHA3-256'
         elif type == "sha3_384 BIT":
-            self.lineEdit_outputTextDigest.setText(MessageDigest.sha3_384(self, self.lineEdit_digest.text()))if self.lineEdit_digest.text() != '' else self.lineEdit_outputTextDigest.setText('')
+            self.lineEdit_outputTextDigest.setText(MessageDigest.sha3_384(self, self.lineEdit_digest.text())) \
+                if self.lineEdit_digest.text() != '' else self.lineEdit_outputTextDigest.setText('')
             self.algorithm = 'SHA3-384'
         elif type == "sha3_512 BIT":
-            self.lineEdit_outputTextDigest.setText(MessageDigest.sha3_512(self, self.lineEdit_digest.text()))if self.lineEdit_digest.text() != '' else self.lineEdit_outputTextDigest.setText('')
+            self.lineEdit_outputTextDigest.setText(MessageDigest.sha3_512(self, self.lineEdit_digest.text())) \
+                if self.lineEdit_digest.text() != '' else self.lineEdit_outputTextDigest.setText('')
             self.algorithm = 'SHA3-512'
         
         # reset copy button
@@ -535,7 +556,6 @@ class MessageDigest(QDialog):
         pixmap = pixmap.scaledToHeight(200)
         self.label_QRCode.setPixmap(pixmap)
         
-    
     def fileExtract(self, type, path):
         print(type)
         if type == "md5":
@@ -833,9 +853,6 @@ class MalwareScanning():
     def clear(self):
         print("Clear")
         #pass
-
-    
-
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
