@@ -80,6 +80,9 @@ class Main(QDialog):
         self.btn_backPassword.clicked.connect(self.openAdvancedUserHome)
         self.btn_backDic.clicked.connect(self.PasswordEvaluationHome)
         self.btn_backDigest.clicked.connect(self.openAdvancedUserHome)
+        self.btn_backMalware.clicked.connect(self.openAdvancedUserHome)
+        self.btn_backVulner.clicked.connect(self.openNetworkUserHome)
+        self.btn_backHttps.clicked.connect(self.openNetworkUserHome)
 
         self.btn_iconEye.clicked.connect(self.btn_hidePwd)
         self.lineEdit_password.textChanged.connect(self.getPassword)
@@ -129,6 +132,7 @@ class Main(QDialog):
         self.btn_clearMalware.clicked.connect(MalwareScanning.clear)
 
         # --------------------- Vulnerability -------------------------------
+       
         # --------------------- HTTPS Testing -------------------------------
 
 
@@ -180,7 +184,7 @@ class Main(QDialog):
         self.stackedWidget.setCurrentWidget(self.page_networklUser)
 
     def openVulnerabilityHome(self):
-        self.stackedWidget.setCurrentWidget(self.page_vulner)
+        self.stackedWidget.setCurrentWidget(self.page_vulnerability)
     
     def openHttpsHome(self):
         self.stackedWidget.setCurrentWidget(self.page_https)
