@@ -28,11 +28,12 @@ class Main(QDialog):
 
         # initialize 
         self.setWindowTitle("ISAN Security Gizmo Box v1.0")
-        self.setWindowIcon(QIcon("./assets/icons/Logo.png"))
+        self.setWindowIcon(QIcon("./assets/icons/icons8-stan-marsh-96.png"))
         self.hide_icon = QIcon("./assets/icons/icon_closedeye.png")
         self.unhide_icon = QIcon("./assets/icons/icon_openeye.png")
         self.warning_icon = QIcon("./assets/icons/warning.png")
         self.check_icon = QIcon("./assets/icons/Checked.png")
+        self.label_logo = QPixmap("./assets/icons/icons8-stan-marsh-96.png")
 
         self.lineEdit_password.setEchoMode(QLineEdit.EchoMode.Password)
         self.btn_iconEye.setIcon(self.hide_icon)
