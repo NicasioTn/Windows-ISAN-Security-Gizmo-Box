@@ -86,14 +86,14 @@ class Main(QDialog):
             json_object = json.load(openfile)
         
         # Load the API key from the config file and display it in the textbox
-        # with open('./data/api.conf', 'r') as config_file:
+        # with open('./data/init.conf', 'r') as config_file:
         #     self.lineAPIKey = config_file.read()
         #     if self.lineAPIKey != '':
         #         self.lineEdit_digest_2.setText(self.lineAPIKey)
         #     config_file.close()
         
         config = configparser.ConfigParser()
-        configFilePath = './data/api.conf'
+        configFilePath = './data/init.conf'
         config.read(configFilePath)
         if 'LineNotify' in config:
             line_api_key = config.get('LineNotify', 'LineAPIKEY')
@@ -435,7 +435,7 @@ class MessageDigest(QDialog):
         self.lineAPIKey = self.lineEdit_digest_2.text()
         print(self.lineAPIKey)
         config = configparser.ConfigParser()
-        configFilePath = './data/api.conf'
+        configFilePath = './data/init.conf'
         config.read(configFilePath)
 
         if 'LineNotify' in config:
@@ -461,7 +461,7 @@ class MessageDigest(QDialog):
 
         #fetch API Key from config file
         config = configparser.ConfigParser()
-        configFilePath = './data/api.conf'
+        configFilePath = './data/init.conf'
         config.read(configFilePath)
         if 'LineNotify' in config:
             line_api_key = config.get('LineNotify', 'LineAPIKEY')
@@ -776,7 +776,7 @@ class MessageDigest(QDialog):
                     response = requests.post(url, headers=headers, params=payload, files=files)
                 
                 if response.status_code == 200:
-                    MessageDigest.saveAPIKey(self) # save api key to file api.conf
+                    MessageDigest.saveAPIKey(self) # save api key to file init.conf
                     print("Image sent successfully!")
                     self.lineEdit_digest_2.setStyleSheet("border: 1px solid green;")
                 elif response.status_code == 400:
