@@ -18,8 +18,8 @@
   </property>
   <property name="maximumSize">
    <size>
-    <width>1302</width>
-    <height>1080</height>
+    <width>1600</width>
+    <height>900</height>
    </size>
   </property>
   <property name="baseSize">
@@ -47,7 +47,25 @@
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="1">
     <widget class="QFrame" name="background">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>1280</width>
+       <height>720</height>
+      </size>
+     </property>
      <property name="maximumSize">
+      <size>
+       <width>1600</width>
+       <height>900</height>
+      </size>
+     </property>
+     <property name="baseSize">
       <size>
        <width>1280</width>
        <height>720</height>
@@ -77,7 +95,19 @@
       </property>
       <item>
        <widget class="QFrame" name="contentLeft">
+        <property name="minimumSize">
+         <size>
+          <width>250</width>
+          <height>720</height>
+         </size>
+        </property>
         <property name="maximumSize">
+         <size>
+          <width>500</width>
+          <height>900</height>
+         </size>
+        </property>
+        <property name="baseSize">
          <size>
           <width>1280</width>
           <height>720</height>
@@ -113,8 +143,14 @@ border-radius: 5px;</string>
           <widget class="QFrame" name="menus">
            <property name="maximumSize">
             <size>
-             <width>500</width>
-             <height>500</height>
+             <width>250</width>
+             <height>900</height>
+            </size>
+           </property>
+           <property name="baseSize">
+            <size>
+             <width>250</width>
+             <height>250</height>
             </size>
            </property>
            <property name="frameShape">
@@ -360,6 +396,24 @@ QPushButton:pressed {
       </item>
       <item>
        <widget class="QFrame" name="contentMain">
+        <property name="minimumSize">
+         <size>
+          <width>1280</width>
+          <height>720</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>1600</width>
+          <height>900</height>
+         </size>
+        </property>
+        <property name="baseSize">
+         <size>
+          <width>1280</width>
+          <height>720</height>
+         </size>
+        </property>
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
         </property>
@@ -384,9 +438,21 @@ QPushButton:pressed {
          </property>
          <item>
           <widget class="QFrame" name="contenTop">
+           <property name="minimumSize">
+            <size>
+             <width>1050</width>
+             <height>60</height>
+            </size>
+           </property>
            <property name="maximumSize">
             <size>
-             <width>16777215</width>
+             <width>1600</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="baseSize">
+            <size>
+             <width>1050</width>
              <height>60</height>
             </size>
            </property>
@@ -406,6 +472,24 @@ border-radius: 5px;</string>
             </property>
             <item>
              <widget class="QFrame" name="title">
+              <property name="minimumSize">
+               <size>
+                <width>300</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>300</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="baseSize">
+               <size>
+                <width>300</width>
+                <height>40</height>
+               </size>
+              </property>
               <property name="styleSheet">
                <string notr="true"/>
               </property>
@@ -418,6 +502,24 @@ border-radius: 5px;</string>
               <layout class="QHBoxLayout" name="horizontalLayout_3">
                <item>
                 <widget class="QLabel" name="label_isanSec">
+                 <property name="minimumSize">
+                  <size>
+                   <width>300</width>
+                   <height>10</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>300</width>
+                   <height>50</height>
+                  </size>
+                 </property>
+                 <property name="baseSize">
+                  <size>
+                   <width>300</width>
+                   <height>50</height>
+                  </size>
+                 </property>
                  <property name="font">
                   <font>
                    <family>Bahnschrift SemiBold</family>
@@ -442,6 +544,24 @@ border-radius: 5px;</string>
          </item>
          <item>
           <widget class="QFrame" name="content">
+           <property name="minimumSize">
+            <size>
+             <width>1050</width>
+             <height>720</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>1050</width>
+             <height>720</height>
+            </size>
+           </property>
+           <property name="baseSize">
+            <size>
+             <width>1050</width>
+             <height>720</height>
+            </size>
+           </property>
            <property name="frameShape">
             <enum>QFrame::StyledPanel</enum>
            </property>
@@ -780,7 +900,13 @@ QPushButton:pressed {
                         <property name="maximumSize">
                          <size>
                           <width>500</width>
-                          <height>500</height>
+                          <height>720</height>
+                         </size>
+                        </property>
+                        <property name="baseSize">
+                         <size>
+                          <width>500</width>
+                          <height>720</height>
                          </size>
                         </property>
                         <property name="frameShape">
@@ -815,6 +941,9 @@ QPushButton:pressed {
                            </property>
                            <property name="scaledContents">
                             <bool>true</bool>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignHCenter|Qt::AlignTop</set>
                            </property>
                           </widget>
                          </item>

@@ -34,6 +34,7 @@ class Main(QDialog):
         self.warning_icon = QIcon("./assets/icons/warning.png")
         self.check_icon = QIcon("./assets/icons/Checked.png")
         self.label_logo = QPixmap("./assets/icons/icons8-stan-marsh-96.png")
+        self.image_main = QPixmap("./assets/images/main.png")
 
         self.lineEdit_password.setEchoMode(QLineEdit.EchoMode.Password)
         self.btn_iconEye.setIcon(self.hide_icon)
