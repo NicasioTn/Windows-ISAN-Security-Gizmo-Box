@@ -5977,7 +5977,7 @@ QPushButton:pressed {
                               <property name="font">
                                <font>
                                 <family>Bahnschrift SemiBold</family>
-                                <pointsize>10</pointsize>
+                                <pointsize>13</pointsize>
                                 <weight>75</weight>
                                 <bold>true</bold>
                                </font>

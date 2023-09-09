@@ -22,6 +22,11 @@ class Main(QDialog):
     state_detect = 0
     path = ''
 
+    api_url_scan = ''
+    api_vt_key = ''
+    api_file_scan = ''
+    api_file_analysis = ''
+
     def __init__(self):
         super(Main, self).__init__()
         loadUi("./assets/ui/mainUI.ui", self)
@@ -127,9 +132,24 @@ class Main(QDialog):
         self.btn_copy.clicked.connect(lambda: MessageDigest.copyOutput(self))
 
         # --------------------- Malware Scan --------------------------------
-        self.btn_scanMalware.clicked.connect(MalwareScanning.scanMalware)
-        self.btn_openMalware.clicked.connect(MalwareScanning.openFileScanning)
-        self.btn_clearMalware.clicked.connect(MalwareScanning.clear)
+        config = configparser.ConfigParser()
+        configFilePath = './data/init.conf'
+        config.read(configFilePath)
+        if 'Malware' in config:
+            self.api_vt_key = config.get('Malware', 'virustotal_api_key')
+            self.api_url_scan = config.get('Malware', 'api_url_scan')
+            self.api_file_scan = config.get('Malware', 'api_file_scan')
+            self.api_file_analysis = config.get('Malware', 'api_file_analysis')
+            print(f'VT API Key: {self.api_vt_key}')
+            print(f'VT API URL: {self.api_url_scan}')
+            print(f'VT API File: {self.api_file_scan}')
+            print(f'VT API Analysis: {self.api_file_analysis}')
+        else:
+            print('Section "Malware" does not exist in the config file.')
+
+        self.btn_scanMalware.clicked.connect(lambda: MalwareScanning.scanMalware(self))
+        self.btn_openMalware.clicked.connect(lambda: MalwareScanning.openFileScanning(self))
+        self.btn_clearMalware.clicked.connect(lambda: MalwareScanning.clear(self))
 
         # --------------------- Vulnerability -------------------------------
        
@@ -874,22 +894,189 @@ class MessageDigest(QDialog):
             pyperclip.copy(clipboard)
 
 class MalwareScanning():
-    api_key = 'e8cf03a48915da2f70adfb45ae906ce940e837c47ba572bb30a8f1b8573df8e8'
 
     def __init__(self):
         super(MalwareScanning, self).__init__()
     
+    def clear(self):
+        print("Clear")
+        self.lineEdit_malware.setText('')
+        self.lineEdit_malware.setStyleSheet("border: 1px solid black;")
+        self.lineEdit_malware.setPlaceholderText('ex. https:// or file')
+        
     def scanMalware(self):
         print("Scan Malware")
-        #pass
+        if self.lineEdit_malware.text() == '':
+            print("Data to send Empty")
+            self.lineEdit_malware.setStyleSheet("border: 1px solid red;")
+            self.lineEdit_malware.setPlaceholderText("Empty")
+            return
+        if self.lineEdit_malware.text().startswith('https://') or self.lineEdit_malware.text().startswith('http://'):
+            print("URL Scan")
+            MalwareScanning.URLScan(self)
+        else:
+            print("Invalid URL")
+            self.lineEdit_malware.setStyleSheet("border: 1px solid red;")
+            self.lineEdit_malware.setText("")
+            self.lineEdit_malware.setPlaceholderText("Invalid URL or File")
+        
+        if os.path.exists(self.lineEdit_malware.text()) == True:
+            print("File Scan")
+            MalwareScanning.FileScan(self)
+        else:
+            print("Invalid File")
+            self.lineEdit_malware.setStyleSheet("border: 1px solid red;")
+            self.lineEdit_malware.setText("")
+            self.lineEdit_malware.setPlaceholderText("Invalid URL or File")
+    
+    def FileScan(self):
+        print("File Scan")
+        input = self.lineEdit_malware.text()
+        url = self.api_file_scan
+        files = { "file": open(input, "rb") }
+        headers = {
+            "accept": "application/json",
+            "x-apikey": self.api_vt_key,
+        }
 
+        response = requests.post(url, files=files, headers=headers)
+
+        print(response.text)
+        # response code detect
+        if response.status_code == 200:
+            print("File Scan Success")
+            self.lineEdit_malware.setStyleSheet("border: 1px solid green;")
+            self.lineEdit_malware.setPlaceholderText("File Scan Success")
+        elif response.status_code == 400:
+            print("Bad request!")
+            self.lineEdit_malware.setStyleSheet("border: 1px solid red;")
+            self.lineEdit_malware.setPlaceholderText("Bad request!")
+        elif response.status_code == 401:
+            print("Invalid access token!")
+            self.lineEdit_malware.setStyleSheet("border: 1px solid orange;")
+            self.lineEdit_malware.setPlaceholderText("Invalid access token!")
+        elif response.status_code == 500:
+            print("Server error!")
+            self.lineEdit_malware.setStyleSheet("border: 1px solid yellow;")
+            self.lineEdit_malware.setPlaceholderText("Server error!")
+        
+        id = response.json()['data']['id']
+        print(id)
+        MalwareScanning.fileAnalyses(self, id)
+
+    def fileAnalyses(self, id):
+        url = self.api_file_analysis + "/" + id
+
+        headers = {
+            "accept": "application/json",
+            "x-apikey": self.api_vt_key
+        }
+
+        response = requests.get(url, headers=headers)
+        print(response.text)
+        if response.status_code == 200:
+            print("File Analyses Success")
+        elif response.status_code == 400:
+            print("Bad request!")
+        elif response.status_code == 401:
+            print("Invalid access token!")
+        elif response.status_code == 500:
+            print("Server error!")
+        id = response.json()['meta']['file_info']['sha256']
+        print(id)
+        MalwareScanning.fileReport(self, id)
+    
+    def fileReport(self, id):
+        url = self.api_file_scan + "/" + id
+
+        headers = {
+            "accept": "application/json",
+            "x-apikey": self.api_vt_key
+        }
+
+        response = requests.get(url, headers=headers)
+        print(response.text)
+        if response.status_code == 200:
+            print("File Report Success")
+        elif response.status_code == 400:
+            print("Bad request!")
+        elif response.status_code == 401:
+            print("Invalid access token!")
+        elif response.status_code == 500:
+            print("Server error!")
+        
+    def URLScan(self):
+        print("URL Scan")
+        input = self.lineEdit_malware.text()
+        url = self.api_url_scan
+
+        payload = { "url": input }
+        headers = {
+            "accept": "application/json",
+            "x-apikey": self.api_vt_key,
+            "content-type": "application/x-www-form-urlencoded"
+        }
+
+        response = requests.post(url, data=payload, headers=headers)
+        print(response.text)
+
+        # response code detect
+        if response.status_code == 200:
+            print("URL Scan Success")
+            self.lineEdit_malware.setStyleSheet("border: 1px solid green;")
+            self.lineEdit_malware.setPlaceholderText("URL Scan Success")
+        elif response.status_code == 400:
+            print("Bad request!")
+            self.lineEdit_malware.setStyleSheet("border: 1px solid red;")
+            self.lineEdit_malware.setPlaceholderText("Bad request!")
+        elif response.status_code == 401:
+            print("Invalid access token!")
+            self.lineEdit_malware.setStyleSheet("border: 1px solid orange;")
+            self.lineEdit_malware.setPlaceholderText("Invalid access token!")
+        elif response.status_code == 500:
+            print("Server error!")
+            self.lineEdit_malware.setStyleSheet("border: 1px solid yellow;")
+            self.lineEdit_malware.setPlaceholderText("Server error!")
+
+        id = response.json()['data']['id'].split('-')[1]
+        print(id)
+        MalwareScanning.URLReport(self, id)
+
+    def URLReport(self, id):
+        url = self.api_url_scan + "/" + id
+        print(url)
+        headers = {
+            "accept": "application/json",
+            "x-apikey": self.api_vt_key
+        }
+        response = requests.get(url, headers=headers)
+        print(response.text)
+        if response.status_code == 200:
+            print("URL Report Success")
+        elif response.status_code == 400:
+            print("Bad request!")
+        elif response.status_code == 401:
+            print("Invalid access token!")
+        elif response.status_code == 500:
+            print("Server error!")
+        
     def openFileScanning(self):
         print("Open File")
         #pass
-    
-    def clear(self):
-        print("Clear")
-        #pass
+        filepath, ok = QFileDialog.getOpenFileName(
+            self,
+            "Select a File", 
+            os.getcwd(), 
+            "All files (*.*)"
+        )
+        if filepath:
+            path = Path(filepath)
+            self.lineEdit_malware.setText(str(path))
+            if path.exists() != True: # check if file exists 
+                print(f"File exists at: {path.exists()}")
+            print(f"Get file at: {path}") 
+
+            return path
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

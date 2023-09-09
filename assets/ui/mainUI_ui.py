@@ -2921,7 +2921,7 @@ class Ui_Form(object):
         self.lineEdit_malware.setMinimumSize(QtCore.QSize(600, 35))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(10)
+        font.setPointSize(13)
         font.setBold(True)
         font.setWeight(75)
         self.lineEdit_malware.setFont(font)
