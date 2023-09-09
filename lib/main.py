@@ -997,6 +997,8 @@ class MalwareScanning():
             print("Invalid access token!")
         elif response.status_code == 500:
             print("Server error!")
+
+        MalwareScanning.showData(self, response, type='file')
         
     def URLScan(self):
         print("URL Scan")
@@ -1053,17 +1055,20 @@ class MalwareScanning():
         elif response.status_code == 500:
             print("Server error!")
         
-        MalwareScanning.showData(self, response)
+        MalwareScanning.showData(self, response, type='url')
 
-    def showData(self, response):
-        self.label_finalURLResurlt.setText(response.json()['data']['attributes']['last_final_url'])
-        self.label_tidResult.setText(response.json()['data']['attributes']['tld'])
-        self.label_typeMalwareResult.setText(response.json()['data']['attributes']['html_meta']['og:type'][0])
-        self.label_sha256Result.setText(response.json()['data']['attributes']['last_http_response_content_sha256'])
-        self.label_sizeResult.setText(response.json()['data']['attributes']['title'])
-        self.label_maliciousResult.setText(str(response.json()['data']['attributes']['last_analysis_stats']['malicious']))
-        self.label_suspiciousResult.setText(str(response.json()['data']['attributes']['last_analysis_stats']['suspicious']))
-        self.label_undetectedResult.setText(str(response.json()['data']['attributes']['last_analysis_stats']['undetected']))
+    def showData(self, response, type):
+        if type == 'file':
+            pass
+        if type == 'url':
+            self.label_finalURLResurlt.setText(response.json()['data']['attributes']['last_final_url'])
+            self.label_tidResult.setText(response.json()['data']['attributes']['tld'])
+            self.label_typeMalwareResult.setText(response.json()['data']['attributes']['html_meta']['og:type'][0])
+            self.label_sha256Result.setText(response.json()['data']['attributes']['last_http_response_content_sha256'])
+            self.label_sizeResult.setText(response.json()['data']['attributes']['title'])
+            self.label_maliciousResult.setText(str(response.json()['data']['attributes']['last_analysis_stats']['malicious']))
+            self.label_suspiciousResult.setText(str(response.json()['data']['attributes']['last_analysis_stats']['suspicious']))
+            self.label_undetectedResult.setText(str(response.json()['data']['attributes']['last_analysis_stats']['undetected']))
         
     def openFileScanning(self):
         print("Open File")
