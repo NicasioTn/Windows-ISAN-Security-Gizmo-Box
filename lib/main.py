@@ -17,6 +17,8 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 from PyQt6.QtGui import QIcon, QPixmap
 from PyQt6.uic import loadUi
 
+from PyQt6.QtCore import QFileInfo
+
 # Set DPI Awareness
 # os.environ["QT_FONT_DPI"] = "96"
 
@@ -32,6 +34,8 @@ class Main(QDialog):
     api_vt_key = ''
     api_file_scan = ''
     api_file_analysis = ''
+
+    nmap_env = ''
 
     def __init__(self):
         super(Main, self).__init__()
@@ -158,6 +162,14 @@ class Main(QDialog):
         self.btn_clearMalware.clicked.connect(lambda: MalwareScanning.clear(self))
 
         # --------------------- Vulnerability -------------------------------
+        if 'NmapEnv' in config:
+            nmap_env = config.get('NmapEnv', 'nmap_env')
+            print(f'nmap_env: {nmap_env}')
+        else:
+            print('Section "NmapEnv" does not exist in the config file.')
+        
+        self.btn_scanVulner.clicked.connect(lambda: VulnerabilityScanning.scanVulnerability(self))
+        self.btn_clearVulner.clicked.connect(lambda: VulnerabilityScanning.clear(self))
        
         # --------------------- HTTPS Testing -------------------------------
 
@@ -292,9 +304,6 @@ class Main(QDialog):
         self.label_lineAPIDigest.setVisible(True)
         self.lineEdit_digest_2.setVisible(True)
         self.btn_sendDigest.setVisible(True)
-
-
-from PyQt6.QtCore import QFileInfo
 
 class PasswordEvaluation(QDialog):
 
@@ -1071,6 +1080,33 @@ class MalwareScanning():
 
             return path
 
+class VulnerabilityScanning():
+    
+    nmap_env = ''
+    os.environ["PATH"] += os.pathsep + nmap_env
+
+    def __init__(self):
+        super(VulnerabilityScanning, self).__init__()
+
+    def setpath(self):
+        if self.lineEdit_vulner == '':
+            print("Data to send Empty")
+            self.lineEdit_vulner.setStyleSheet("border: 1px solid red;")
+            self.lineEdit_vulner.setPlaceholderText("Empty")
+            return
+        
+        VulnerabilityScanning.nmap_env = self.nmap_env
+
+    def clear(self):
+        print("Clear")
+        self.lineEdit_vulner.setText('')
+
+    def scanVulnerability(self):
+        print("Scan Vulnerability")
+        self.lineEdit_vulner.text()
+        os.system(f"nmap {self.lineEdit_vulner.text()} &") # & for run in background
+    
+    
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = Main()
