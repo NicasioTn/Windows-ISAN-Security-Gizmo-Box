@@ -610,6 +610,7 @@ class Ui_Form(object):
         font.setBold(True)
         font.setWeight(75)
         self.btn_password.setFont(font)
+        self.btn_password.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_password.setStyleSheet(" QPushButton{\n"
 "        background-color: rgb(42, 49, 66);\n"
 "        border-radius: 5px;\n"
@@ -638,6 +639,7 @@ class Ui_Form(object):
         font.setBold(True)
         font.setWeight(75)
         self.btn_malware.setFont(font)
+        self.btn_malware.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_malware.setStyleSheet(" QPushButton{\n"
 "        background-color: rgb(42, 49, 66);\n"
 "        border-radius: 5px;\n"
@@ -666,6 +668,7 @@ class Ui_Form(object):
         font.setBold(True)
         font.setWeight(75)
         self.btn_digest.setFont(font)
+        self.btn_digest.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_digest.setStyleSheet(" QPushButton{\n"
 "        background-color: rgb(42, 49, 66);\n"
 "        border-radius: 5px;\n"
@@ -1571,6 +1574,16 @@ class Ui_Form(object):
         self.btn_openDigest.setIconSize(QtCore.QSize(30, 30))
         self.btn_openDigest.setObjectName("btn_openDigest")
         self.horizontalLayout_8.addWidget(self.btn_openDigest)
+        self.label_split_O_C = QtWidgets.QLabel(parent=self.frame_12)
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold Condensed")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_split_O_C.setFont(font)
+        self.label_split_O_C.setStyleSheet("color: rgb(42, 49, 66);")
+        self.label_split_O_C.setObjectName("label_split_O_C")
+        self.horizontalLayout_8.addWidget(self.label_split_O_C)
         self.btn_clearDigest = QtWidgets.QPushButton(parent=self.frame_12)
         self.btn_clearDigest.setMinimumSize(QtCore.QSize(200, 40))
         self.btn_clearDigest.setMaximumSize(QtCore.QSize(200, 40))
@@ -1807,7 +1820,10 @@ class Ui_Form(object):
         self.lineEdit_outputTextDigest.setMinimumSize(QtCore.QSize(300, 35))
         self.lineEdit_outputTextDigest.setMaximumSize(QtCore.QSize(400, 35))
         font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
         self.lineEdit_outputTextDigest.setFont(font)
         self.lineEdit_outputTextDigest.setStyleSheet("QLineEdit {\n"
 "  border: 1px solid gray;\n"
@@ -1823,8 +1839,25 @@ class Ui_Form(object):
 "  border: 1px solid;\n"
 "  border-color: rgba(88,199,141,255);\n"
 "}\n"
+"\n"
+"QLineEdit {\n"
+"  border: 1px solid gray;\n"
+"  color: rgba(40,43,61,255);\n"
+"  border-radius: 5px;\n"
+"}\n"
+"\n"
+"QLineEdit:hover {\n"
+"  border: 2px solid;\n"
+"  border-color: rgba(0,143,255,255);\n"
+"}\n"
+"QLineEdit:focus {\n"
+"  border: 1px solid;\n"
+"  border-color: rgba(88,199,141,255);\n"
+"}\n"
 "")
+        self.lineEdit_outputTextDigest.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.lineEdit_outputTextDigest.setReadOnly(True)
+        self.lineEdit_outputTextDigest.setPlaceholderText("")
         self.lineEdit_outputTextDigest.setObjectName("lineEdit_outputTextDigest")
         self.horizontalLayout_41.addWidget(self.lineEdit_outputTextDigest)
         self.btn_copy = QtWidgets.QPushButton(parent=self.frame_77)
@@ -1876,16 +1909,17 @@ class Ui_Form(object):
         self.frame_24.setObjectName("frame_24")
         self.verticalLayout_26 = QtWidgets.QVBoxLayout(self.frame_24)
         self.verticalLayout_26.setObjectName("verticalLayout_26")
-        self.label_linrAPIDigest = QtWidgets.QLabel(parent=self.frame_24)
-        self.label_linrAPIDigest.setMaximumSize(QtCore.QSize(500, 50))
+        self.label_lineAPIDigest = QtWidgets.QLabel(parent=self.frame_24)
+        self.label_lineAPIDigest.setMaximumSize(QtCore.QSize(500, 50))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(13)
         font.setBold(True)
         font.setWeight(75)
-        self.label_linrAPIDigest.setFont(font)
-        self.label_linrAPIDigest.setObjectName("label_linrAPIDigest")
-        self.verticalLayout_26.addWidget(self.label_linrAPIDigest)
+        self.label_lineAPIDigest.setFont(font)
+        self.label_lineAPIDigest.setStyleSheet("color: rgb(42, 49, 66);")
+        self.label_lineAPIDigest.setObjectName("label_lineAPIDigest")
+        self.verticalLayout_26.addWidget(self.label_lineAPIDigest)
         self.verticalLayout_7.addWidget(self.frame_24)
         self.frame_33 = QtWidgets.QFrame(parent=self.frame_18)
         self.frame_33.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
@@ -1964,6 +1998,17 @@ class Ui_Form(object):
         self.frame_16.setObjectName("frame_16")
         self.verticalLayout_25 = QtWidgets.QVBoxLayout(self.frame_16)
         self.verticalLayout_25.setObjectName("verticalLayout_25")
+        self.label_type = QtWidgets.QLabel(parent=self.frame_16)
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_type.setFont(font)
+        self.label_type.setStyleSheet("color: rgb(42, 49, 66);")
+        self.label_type.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_type.setObjectName("label_type")
+        self.verticalLayout_25.addWidget(self.label_type)
         self.frame_19 = QtWidgets.QFrame(parent=self.frame_16)
         self.frame_19.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frame_19.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
@@ -1971,14 +2016,14 @@ class Ui_Form(object):
         self.horizontalLayout_12 = QtWidgets.QHBoxLayout(self.frame_19)
         self.horizontalLayout_12.setObjectName("horizontalLayout_12")
         self.label_QRCode = QtWidgets.QLabel(parent=self.frame_19)
-        self.label_QRCode.setMinimumSize(QtCore.QSize(200, 210))
-        self.label_QRCode.setMaximumSize(QtCore.QSize(400, 100))
+        self.label_QRCode.setMinimumSize(QtCore.QSize(200, 180))
+        self.label_QRCode.setMaximumSize(QtCore.QSize(400, 150))
         font = QtGui.QFont()
         font.setPointSize(13)
         self.label_QRCode.setFont(font)
         self.label_QRCode.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.label_QRCode.setText("")
-        self.label_QRCode.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_QRCode.setAlignment(QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignTop)
         self.label_QRCode.setObjectName("label_QRCode")
         self.horizontalLayout_12.addWidget(self.label_QRCode, 0, QtCore.Qt.AlignmentFlag.AlignTop)
         self.verticalLayout_25.addWidget(self.frame_19)
@@ -2023,6 +2068,18 @@ class Ui_Form(object):
         self.btn_lineAPI.setIconSize(QtCore.QSize(30, 30))
         self.btn_lineAPI.setObjectName("btn_lineAPI")
         self.horizontalLayout_6.addWidget(self.btn_lineAPI)
+        self.label_Split = QtWidgets.QLabel(parent=self.frame_20)
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_Split.setFont(font)
+        self.label_Split.setStyleSheet("color: rgb(42, 49, 66);\n"
+"")
+        self.label_Split.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_Split.setObjectName("label_Split")
+        self.horizontalLayout_6.addWidget(self.label_Split)
         self.btn_saveQR = QtWidgets.QPushButton(parent=self.frame_20)
         self.btn_saveQR.setMinimumSize(QtCore.QSize(200, 40))
         self.btn_saveQR.setMaximumSize(QtCore.QSize(200, 40))
@@ -2845,8 +2902,11 @@ class Ui_Form(object):
         self.verticalLayout_29 = QtWidgets.QVBoxLayout(self.frame_25)
         self.verticalLayout_29.setObjectName("verticalLayout_29")
         self.btn_backMalware = QtWidgets.QPushButton(parent=self.frame_25)
+        self.btn_backMalware.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_backMalware.setText("")
-        self.btn_backMalware.setIcon(icon5)
+        icon16 = QtGui.QIcon()
+        icon16.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-back.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btn_backMalware.setIcon(icon16)
         self.btn_backMalware.setObjectName("btn_backMalware")
         self.verticalLayout_29.addWidget(self.btn_backMalware, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
         self.label_malware = QtWidgets.QLabel(parent=self.frame_25)
@@ -2864,7 +2924,7 @@ class Ui_Form(object):
         self.lineEdit_malware.setMinimumSize(QtCore.QSize(600, 35))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(10)
+        font.setPointSize(13)
         font.setBold(True)
         font.setWeight(75)
         self.lineEdit_malware.setFont(font)
@@ -3054,6 +3114,7 @@ class Ui_Form(object):
         self.label_digest.setText(_translate("Form", "MESSAGE DIGEST"))
         self.lineEdit_digest.setPlaceholderText(_translate("Form", "TYPE HERE"))
         self.btn_openDigest.setText(_translate("Form", "OPEN"))
+        self.label_split_O_C.setText(_translate("Form", "|"))
         self.btn_clearDigest.setText(_translate("Form", "CLEAR"))
         self.btn_md5.setText(_translate("Form", "MD5"))
         self.btn_sha1.setText(_translate("Form", "SHA-1"))
@@ -3069,10 +3130,12 @@ class Ui_Form(object):
         self.dropdown_sha3.setItemText(4, _translate("Form", "512 BIT"))
         self.label_resultDigeat.setText(_translate("Form", "RESULT"))
         self.btn_copy.setText(_translate("Form", "COPY"))
-        self.label_linrAPIDigest.setText(_translate("Form", "LINE API TOKEN"))
+        self.label_lineAPIDigest.setText(_translate("Form", "LINE API TOKEN"))
         self.lineEdit_digest_2.setPlaceholderText(_translate("Form", "ENTER LINE API TOKEN"))
         self.btn_sendDigest.setText(_translate("Form", "SEND"))
+        self.label_type.setText(_translate("Form", "Type"))
         self.btn_lineAPI.setText(_translate("Form", "LINE NOTIFY"))
+        self.label_Split.setText(_translate("Form", "|"))
         self.btn_saveQR.setText(_translate("Form", "SAVE"))
         self.label_isanSec_nwu.setText(_translate("Form", "ISAN SECURITY GIZMO BOX"))
         self.label_networkUser.setText(_translate("Form", "NETWORK ENGINEER"))
@@ -3101,7 +3164,7 @@ class Ui_Form(object):
         self.label_dateHpps.setText(_translate("Form", "DATE"))
         self.btn_readMoreHttps.setText(_translate("Form", "READ MORE"))
         self.label_malware.setText(_translate("Form", "MALWARE SCANNING"))
-        self.lineEdit_malware.setPlaceholderText(_translate("Form", "TYPE HERE"))
+        self.lineEdit_malware.setPlaceholderText(_translate("Form", "ex. https:// or file"))
         self.btn_scanMalware.setText(_translate("Form", "SCAN"))
         self.btn_openMalware.setText(_translate("Form", "OPEN"))
         self.btn_clearMalware.setText(_translate("Form", "CLEAR"))
