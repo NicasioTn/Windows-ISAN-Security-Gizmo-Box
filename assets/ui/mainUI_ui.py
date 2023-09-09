@@ -1678,7 +1678,7 @@ class Ui_Form(object):
         self.btn_sha1.setObjectName("btn_sha1")
         self.horizontalLayout_9.addWidget(self.btn_sha1)
         self.dropdown_sha2 = QtWidgets.QComboBox(parent=self.frame_13)
-        self.dropdown_sha2.setMinimumSize(QtCore.QSize(119, 41))
+        self.dropdown_sha2.setMinimumSize(QtCore.QSize(101, 41))
         self.dropdown_sha2.setMaximumSize(QtCore.QSize(111, 41))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -1725,7 +1725,7 @@ class Ui_Form(object):
         self.dropdown_sha2.addItem("")
         self.horizontalLayout_9.addWidget(self.dropdown_sha2)
         self.dropdown_sha3 = QtWidgets.QComboBox(parent=self.frame_13)
-        self.dropdown_sha3.setMinimumSize(QtCore.QSize(119, 41))
+        self.dropdown_sha3.setMinimumSize(QtCore.QSize(101, 41))
         self.dropdown_sha3.setMaximumSize(QtCore.QSize(111, 41))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -3300,7 +3300,7 @@ class Ui_Form(object):
         self.gridLayout.addWidget(self.background, 0, 1, 1, 1)
 
         self.retranslateUi(Form)
-        self.stackedWidget.setCurrentIndex(8)
+        self.stackedWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
