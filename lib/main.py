@@ -901,7 +901,15 @@ class MalwareScanning():
         self.lineEdit_malware.setText('')
         self.lineEdit_malware.setStyleSheet("border: 1px solid black;")
         self.lineEdit_malware.setPlaceholderText('ex. https:// or file')
-        
+        self.label_maliciousResult.setText('0')
+        self.label_suspiciousResult.setText('0')
+        self.label_undetectedResult.setText('0')
+        self.label_finalURLResurlt.setText('-')
+        self.label_tidResult.setText('-')
+        self.label_typeMalwareResult.setText('-')
+        self.label_sha256Result.setText('-')
+        self.label_sizeResult.setText('-')
+
     def scanMalware(self):
         print("Scan Malware")
         if self.lineEdit_malware.text() == '':
@@ -1059,16 +1067,60 @@ class MalwareScanning():
 
     def showData(self, response, type):
         if type == 'file':
-            pass
+            # rename label
+            self.label_finalURL.setText('File Name')
+            self.label_tid.setText('File Type')
+            self.label_typeMalware.setText('File Type')
+            self.label_sha256.setText('SHA-256')
+            self.label_size.setText('File Size')
+            # show data
+            try:
+                self.label_maliciousResult.setText(str(response.json()['data']['attributes']['last_analysis_stats']['malicious']))
+                self.label_suspiciousResult.setText(str(response.json()['data']['attributes']['last_analysis_stats']['suspicious']))
+                self.label_undetectedResult.setText(str(response.json()['data']['attributes']['last_analysis_stats']['undetected']))
+
+                self.label_finalURLResurlt.setText(response.json()['data']['attributes']['names'][0]) \
+                    if response.json()['data']['attributes']['names'] != [] else self.label_finalURLResurlt.setText('-') 
+                self.label_sizeResult.setText(str(response.json()['data']['attributes']['size'])) \
+                    if response.json()['data']['attributes']['size'] != 0 else self.label_sizeResult.setText('-')
+                self.label_tidResult.setText(response.json()['data']['attributes']['type_description']) \
+                    if response.json()['data']['attributes']['type_description'] != '' else self.label_tidResult.setText('-')
+                self.label_typeMalwareResult.setText(response.json()['data']['type']) \
+                    if response.json()['data']['type'] != '' else self.label_typeMalwareResult.setText('-')
+                self.label_sha256Result.setText(response.json()['data']['attributes']['sha256']) \
+                    if response.json()['data']['attributes']['sha256'] != '' else self.label_sha256Result.setText('-')
+            except KeyError as e:
+                print("Key Error")
+        
         if type == 'url':
-            self.label_finalURLResurlt.setText(response.json()['data']['attributes']['last_final_url'])
-            self.label_tidResult.setText(response.json()['data']['attributes']['tld'])
-            self.label_typeMalwareResult.setText(response.json()['data']['attributes']['html_meta']['og:type'][0])
-            self.label_sha256Result.setText(response.json()['data']['attributes']['last_http_response_content_sha256'])
-            self.label_sizeResult.setText(response.json()['data']['attributes']['title'])
-            self.label_maliciousResult.setText(str(response.json()['data']['attributes']['last_analysis_stats']['malicious']))
-            self.label_suspiciousResult.setText(str(response.json()['data']['attributes']['last_analysis_stats']['suspicious']))
-            self.label_undetectedResult.setText(str(response.json()['data']['attributes']['last_analysis_stats']['undetected']))
+            # rename label
+            self.label_finalURL.setText('URL')
+            self.label_tid.setText('TLD')
+            self.label_typeMalware.setText('Type')
+            self.label_sha256.setText('SHA-256')
+            self.label_size.setText('Site Name')
+            # show data
+            try:
+                self.label_maliciousResult.setText(str(response.json()['data']['attributes']['last_analysis_stats']['malicious']))
+                self.label_suspiciousResult.setText(str(response.json()['data']['attributes']['last_analysis_stats']['suspicious']))
+                self.label_undetectedResult.setText(str(response.json()['data']['attributes']['last_analysis_stats']['undetected']))
+                
+                self.label_finalURLResurlt.setText(response.json()['data']['attributes']['last_final_url']) \
+                    if response.json()['data']['attributes']['last_final_url'] != '' else self.label_finalURLResurlt.setText('-')
+                self.label_tidResult.setText(response.json()['data']['attributes']['tld']) \
+                    if response.json()['data']['attributes']['tld'] != '' else self.label_tidResult.setText('-')
+                #self.label_typeMalwareResult.setText(response.json()['data']['attributes']['html_meta']['og:type'][0])
+                self.label_typeMalwareResult.setText(response.json()['data']['type'].upper()) \
+                    if response.json()['data']['type'] != '' else self.label_typeMalwareResult.setText('-')
+                self.label_sha256Result.setText(response.json()['data']['attributes']['last_http_response_content_sha256']) \
+                    if response.json()['data']['attributes']['last_http_response_content_sha256'] != '' else self.label_sha256Result.setText('-')
+                #self.label_sizeResult.setText(response.json()['data']['attributes']['title'])
+                self.label_sizeResult.setText(response.json()['data']['attributes']['html_meta']['og:site_name'][0]) \
+                    if response.json()['data']['attributes']['html_meta']['og:site_name'] != [] else self.label_sizeResult.setText('-')
+                
+            except KeyError as e:
+                print("Key Error")
+            
         
     def openFileScanning(self):
         print("Open File")

@@ -2957,11 +2957,12 @@ class Ui_Form(object):
         self.btn_scanMalware.setMinimumSize(QtCore.QSize(200, 40))
         self.btn_scanMalware.setMaximumSize(QtCore.QSize(200, 40))
         font = QtGui.QFont()
-        font.setFamily("Yu Gothic UI")
-        font.setPointSize(10)
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(13)
         font.setBold(True)
         font.setWeight(75)
         self.btn_scanMalware.setFont(font)
+        self.btn_scanMalware.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_scanMalware.setStyleSheet(" QPushButton{\n"
 "        background-color: rgba(50,54,74,255);\n"
 "        border-radius: 5px;\n"
@@ -2987,11 +2988,12 @@ class Ui_Form(object):
         self.btn_openMalware.setMinimumSize(QtCore.QSize(200, 40))
         self.btn_openMalware.setMaximumSize(QtCore.QSize(200, 40))
         font = QtGui.QFont()
-        font.setFamily("Yu Gothic UI")
-        font.setPointSize(10)
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(13)
         font.setBold(True)
         font.setWeight(75)
         self.btn_openMalware.setFont(font)
+        self.btn_openMalware.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_openMalware.setStyleSheet(" QPushButton{\n"
 "        background-color: rgba(50,54,74,255);\n"
 "        border-radius: 5px;\n"
@@ -3017,11 +3019,12 @@ class Ui_Form(object):
         self.btn_clearMalware.setMinimumSize(QtCore.QSize(200, 40))
         self.btn_clearMalware.setMaximumSize(QtCore.QSize(200, 40))
         font = QtGui.QFont()
-        font.setFamily("Yu Gothic UI")
-        font.setPointSize(10)
+        font.setFamily("Bahnschrift SemiBold SemiConden")
+        font.setPointSize(13)
         font.setBold(True)
         font.setWeight(75)
         self.btn_clearMalware.setFont(font)
+        self.btn_clearMalware.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_clearMalware.setStyleSheet(" QPushButton{\n"
 "        background-color: rgba(50,54,74,255);\n"
 "        border-radius: 5px;\n"
@@ -3241,8 +3244,10 @@ class Ui_Form(object):
         self.btn_viewReport.setMinimumSize(QtCore.QSize(200, 40))
         self.btn_viewReport.setMaximumSize(QtCore.QSize(200, 40))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(13)
         self.btn_viewReport.setFont(font)
+        self.btn_viewReport.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_viewReport.setStyleSheet(" QPushButton{\n"
 "        background-color: rgba(50,54,74,255);\n"
 "        border-radius: 5px;\n"
@@ -3266,8 +3271,10 @@ class Ui_Form(object):
         self.btn_done.setMinimumSize(QtCore.QSize(200, 40))
         self.btn_done.setMaximumSize(QtCore.QSize(200, 40))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(13)
         self.btn_done.setFont(font)
+        self.btn_done.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_done.setStyleSheet(" QPushButton{\n"
 "        background-color: rgba(50,54,74,255);\n"
 "        border-radius: 5px;\n"
@@ -3403,17 +3410,17 @@ class Ui_Form(object):
         self.btn_clearMalware.setText(_translate("Form", "CLEAR"))
         self.label_Analysis.setText(_translate("Form", "Analysis"))
         self.label_malicious.setText(_translate("Form", "Malicious"))
-        self.label_suspicious.setText(_translate("Form", "Susoicious"))
+        self.label_suspicious.setText(_translate("Form", "Suspicious"))
         self.label_undetected.setText(_translate("Form", "Undetected"))
         self.label_maliciousResult.setText(_translate("Form", "0"))
         self.label_suspiciousResult.setText(_translate("Form", "0"))
         self.label_undetectedResult.setText(_translate("Form", "0"))
         self.label_scanSummary.setText(_translate("Form", "Threat Scan Summary"))
-        self.label_finalURL.setText(_translate("Form", "Final URL"))
-        self.label_tid.setText(_translate("Form", "Tid"))
+        self.label_finalURL.setText(_translate("Form", "URL"))
+        self.label_tid.setText(_translate("Form", "TLD"))
         self.label_typeMalware.setText(_translate("Form", "Type"))
-        self.label_sha256.setText(_translate("Form", "Sha 256"))
-        self.label_size.setText(_translate("Form", "Size"))
+        self.label_sha256.setText(_translate("Form", "SHA256"))
+        self.label_size.setText(_translate("Form", "Title"))
         self.label_finalURLResurlt.setText(_translate("Form", "-"))
         self.label_tidResult.setText(_translate("Form", "-"))
         self.label_typeMalwareResult.setText(_translate("Form", "-"))
