@@ -6,6 +6,12 @@ import json
 import configparser
 import requests
 
+import hashlib
+import qrcode
+import pyperclip
+from pathlib import Path
+from PyQt6.QtWidgets import QFileDialog
+
 from PyQt6.QtWidgets import ( QApplication, QDialog, QLineEdit)
 from PyQt6 import QtCore, QtGui, QtWidgets
 from PyQt6.QtGui import QIcon, QPixmap
@@ -470,14 +476,6 @@ class PasswordEvaluation(QDialog):
                 print(f"Get file at: {path}") 
 
                 return path
-
-import hashlib
-import qrcode
-import pyperclip
-from pathlib import Path
-from PyQt6.QtWidgets import QFileDialog
-
-
 
 class MessageDigest(QDialog):
 
