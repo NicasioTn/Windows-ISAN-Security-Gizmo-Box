@@ -1067,7 +1067,7 @@ class MalwareScanning():
             self.lineEdit_malware.setText(str(path))
             if path.exists() != True: # check if file exists 
                 print(f"File exists at: {path.exists()}")
-            print(f"Get file at: {path}") 
+            print(f"Get file at: {path}")
 
             return path
 
