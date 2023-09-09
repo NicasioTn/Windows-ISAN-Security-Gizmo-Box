@@ -153,7 +153,7 @@ class Main(QDialog):
 
     def openDigestHome(self):
         self.stackedWidget.setCurrentWidget(self.page_messageDigest)
-
+        self.label_lineAPIDigest.setVisible(False)
         self.lineEdit_digest_2.setVisible(False)
         self.btn_sendDigest.setVisible(False)
         self.lineEdit_digest.textChanged.connect(lambda: self.checkFile_Text())
@@ -263,8 +263,10 @@ class Main(QDialog):
             MessageDigest.ShowImage_QR(self)
 
     def showBtnLine(self):
+        self.label_lineAPIDigest.setVisible(True)
         self.lineEdit_digest_2.setVisible(True)
         self.btn_sendDigest.setVisible(True)
+
 
 from PyQt6.QtCore import QFileInfo
 
@@ -483,6 +485,7 @@ class MessageDigest(QDialog):
         self.label_QRCode.clear()
         self.dropdown_sha2.setCurrentIndex(0)
         self.dropdown_sha3.setCurrentIndex(0)
+        self.label_lineAPIDigest.setVisible(False)
         self.lineEdit_digest_2.setVisible(False)
         self.btn_sendDigest.setVisible(False)
         self.lineEdit_digest_2.setText('')
@@ -818,6 +821,11 @@ class MessageDigest(QDialog):
         return hashlib.sha3_512(data.encode('utf-8')).hexdigest()
     
     def processLineKey(self):
+        if self.lineEdit_digest.text() == '':
+            print("Data to send Empty")
+            self.lineEdit_outputTextDigest.setStyleSheet("border: 1px solid red;")
+            self.lineEdit_outputTextDigest.setPlaceholderText("Empty")
+            return 
         type = self.label_type.text()
         api_key = '6tA0qnCW3qp6jtAMEVyL2T3CIINiEusqZ3nJH5kuzKL'
         message = self.lineEdit_outputTextDigest.text() + "\nHash Algorithms: " + type

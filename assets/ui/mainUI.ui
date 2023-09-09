@@ -1429,6 +1429,9 @@ QPushButton:pressed {
                                    <bold>true</bold>
                                   </font>
                                  </property>
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="styleSheet">
                                   <string notr="true"> QPushButton{
 	    background-color: rgb(42, 49, 66);
@@ -1475,6 +1478,9 @@ QPushButton:pressed {
                                    <bold>true</bold>
                                   </font>
                                  </property>
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
+                                 </property>
                                  <property name="styleSheet">
                                   <string notr="true"> QPushButton{
 	    background-color: rgb(42, 49, 66);
@@ -1520,6 +1526,9 @@ QPushButton:pressed {
                                    <weight>75</weight>
                                    <bold>true</bold>
                                   </font>
+                                 </property>
+                                 <property name="cursor">
+                                  <cursorShape>PointingHandCursor</cursorShape>
                                  </property>
                                  <property name="styleSheet">
                                   <string notr="true"> QPushButton{
@@ -4049,7 +4058,7 @@ QPushButton:pressed {
                                  </property>
                                  <layout class="QVBoxLayout" name="verticalLayout_26">
                                   <item>
-                                   <widget class="QLabel" name="label_linrAPIDigest">
+                                   <widget class="QLabel" name="label_lineAPIDigest">
                                     <property name="maximumSize">
                                      <size>
                                       <width>500</width>
@@ -4063,6 +4072,9 @@ QPushButton:pressed {
                                       <weight>75</weight>
                                       <bold>true</bold>
                                      </font>
+                                    </property>
+                                    <property name="styleSheet">
+                                     <string notr="true">color: rgb(42, 49, 66);</string>
                                     </property>
                                     <property name="text">
                                      <string>LINE API TOKEN</string>

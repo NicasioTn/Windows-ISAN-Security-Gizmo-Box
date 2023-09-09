@@ -610,6 +610,7 @@ class Ui_Form(object):
         font.setBold(True)
         font.setWeight(75)
         self.btn_password.setFont(font)
+        self.btn_password.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_password.setStyleSheet(" QPushButton{\n"
 "        background-color: rgb(42, 49, 66);\n"
 "        border-radius: 5px;\n"
@@ -638,6 +639,7 @@ class Ui_Form(object):
         font.setBold(True)
         font.setWeight(75)
         self.btn_malware.setFont(font)
+        self.btn_malware.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_malware.setStyleSheet(" QPushButton{\n"
 "        background-color: rgb(42, 49, 66);\n"
 "        border-radius: 5px;\n"
@@ -666,6 +668,7 @@ class Ui_Form(object):
         font.setBold(True)
         font.setWeight(75)
         self.btn_digest.setFont(font)
+        self.btn_digest.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_digest.setStyleSheet(" QPushButton{\n"
 "        background-color: rgb(42, 49, 66);\n"
 "        border-radius: 5px;\n"
@@ -1906,16 +1909,17 @@ class Ui_Form(object):
         self.frame_24.setObjectName("frame_24")
         self.verticalLayout_26 = QtWidgets.QVBoxLayout(self.frame_24)
         self.verticalLayout_26.setObjectName("verticalLayout_26")
-        self.label_linrAPIDigest = QtWidgets.QLabel(parent=self.frame_24)
-        self.label_linrAPIDigest.setMaximumSize(QtCore.QSize(500, 50))
+        self.label_lineAPIDigest = QtWidgets.QLabel(parent=self.frame_24)
+        self.label_lineAPIDigest.setMaximumSize(QtCore.QSize(500, 50))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(13)
         font.setBold(True)
         font.setWeight(75)
-        self.label_linrAPIDigest.setFont(font)
-        self.label_linrAPIDigest.setObjectName("label_linrAPIDigest")
-        self.verticalLayout_26.addWidget(self.label_linrAPIDigest)
+        self.label_lineAPIDigest.setFont(font)
+        self.label_lineAPIDigest.setStyleSheet("color: rgb(42, 49, 66);")
+        self.label_lineAPIDigest.setObjectName("label_lineAPIDigest")
+        self.verticalLayout_26.addWidget(self.label_lineAPIDigest)
         self.verticalLayout_7.addWidget(self.frame_24)
         self.frame_33 = QtWidgets.QFrame(parent=self.frame_18)
         self.frame_33.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
@@ -3123,7 +3127,7 @@ class Ui_Form(object):
         self.dropdown_sha3.setItemText(4, _translate("Form", "512 BIT"))
         self.label_resultDigeat.setText(_translate("Form", "RESULT"))
         self.btn_copy.setText(_translate("Form", "COPY"))
-        self.label_linrAPIDigest.setText(_translate("Form", "LINE API TOKEN"))
+        self.label_lineAPIDigest.setText(_translate("Form", "LINE API TOKEN"))
         self.lineEdit_digest_2.setPlaceholderText(_translate("Form", "ENTER LINE API TOKEN"))
         self.btn_sendDigest.setText(_translate("Form", "SEND"))
         self.label_type.setText(_translate("Form", "Type"))
