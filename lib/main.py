@@ -911,20 +911,15 @@ class MalwareScanning():
             self.lineEdit_malware.setStyleSheet("border: 1px solid red;")
             self.lineEdit_malware.setPlaceholderText("Empty")
             return
-        if self.lineEdit_malware.text().startswith('https://') or self.lineEdit_malware.text().startswith('http://'):
-            print("URL Scan")
-            MalwareScanning.URLScan(self)
-        else:
-            print("Invalid URL")
-            self.lineEdit_malware.setStyleSheet("border: 1px solid red;")
-            self.lineEdit_malware.setText("")
-            self.lineEdit_malware.setPlaceholderText("Invalid URL or File")
         
         if os.path.exists(self.lineEdit_malware.text()) == True:
             print("File Scan")
             MalwareScanning.FileScan(self)
+        elif self.lineEdit_malware.text().startswith('https://') or self.lineEdit_malware.text().startswith('http://'):
+            print("URL Scan")
+            MalwareScanning.URLScan(self)
         else:
-            print("Invalid File")
+            print("Invalid File or URL")
             self.lineEdit_malware.setStyleSheet("border: 1px solid red;")
             self.lineEdit_malware.setText("")
             self.lineEdit_malware.setPlaceholderText("Invalid URL or File")

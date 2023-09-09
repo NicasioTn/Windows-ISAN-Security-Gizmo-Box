@@ -5936,12 +5936,15 @@ QPushButton:pressed {
                            <layout class="QVBoxLayout" name="verticalLayout_29">
                             <item alignment="Qt::AlignLeft">
                              <widget class="QPushButton" name="btn_backMalware">
+                              <property name="cursor">
+                               <cursorShape>PointingHandCursor</cursorShape>
+                              </property>
                               <property name="text">
                                <string/>
                               </property>
                               <property name="icon">
-                               <iconset resource="../resource.qrc">
-                                <normaloff>:/icons/icons/icon-back.png</normaloff>:/icons/icons/icon-back.png</iconset>
+                               <iconset>
+                                <normaloff>../icons/icon-back.png</normaloff>../icons/icon-back.png</iconset>
                               </property>
                              </widget>
                             </item>
@@ -6003,7 +6006,7 @@ QLineEdit:focus {
                                <set>Qt::AlignCenter</set>
                               </property>
                               <property name="placeholderText">
-                               <string>TYPE HERE</string>
+                               <string>ex. https:// or file</string>
                               </property>
                              </widget>
                             </item>
