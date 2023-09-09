@@ -770,7 +770,7 @@ border-radius: 5px;
 </string>
                  </property>
                  <property name="currentIndex">
-                  <number>0</number>
+                  <number>8</number>
                  </property>
                  <widget class="QWidget" name="page_home">
                   <property name="maximumSize">
@@ -1121,7 +1121,7 @@ QPushButton:pressed {
                             <string/>
                            </property>
                            <property name="pixmap">
-                            <pixmap resource="../resource.qrc">:/images/images/main.png</pixmap>
+                            <pixmap>:/images/images/main.png</pixmap>
                            </property>
                            <property name="scaledContents">
                             <bool>true</bool>
@@ -1201,7 +1201,7 @@ QPushButton:pressed {
                                <string/>
                               </property>
                               <property name="pixmap">
-                               <pixmap resource="../resource.qrc">:/images/images/key.png</pixmap>
+                               <pixmap>:/images/images/key.png</pixmap>
                               </property>
                               <property name="scaledContents">
                                <bool>true</bool>
@@ -1361,7 +1361,7 @@ QPushButton:pressed {
                                <string/>
                               </property>
                               <property name="pixmap">
-                               <pixmap resource="../resource.qrc">:/images/images/bug.png</pixmap>
+                               <pixmap>:/images/images/bug.png</pixmap>
                               </property>
                               <property name="scaledContents">
                                <bool>true</bool>
@@ -1611,7 +1611,7 @@ QPushButton:pressed {
                                   <string/>
                                  </property>
                                  <property name="pixmap">
-                                  <pixmap resource="../resource.qrc">:/images/images/star.png</pixmap>
+                                  <pixmap>:/images/images/star.png</pixmap>
                                  </property>
                                  <property name="scaledContents">
                                   <bool>true</bool>
@@ -1663,7 +1663,7 @@ QPushButton:pressed {
                                   <string/>
                                  </property>
                                  <property name="pixmap">
-                                  <pixmap resource="../resource.qrc">:/images/images/message.png</pixmap>
+                                  <pixmap>:/images/images/message.png</pixmap>
                                  </property>
                                  <property name="scaledContents">
                                   <bool>true</bool>
@@ -1794,7 +1794,7 @@ QPushButton:pressed {
                                <string/>
                               </property>
                               <property name="icon">
-                               <iconset resource="../resource.qrc">
+                               <iconset>
                                 <normaloff>:/icons/icons/icon-back.png</normaloff>:/icons/icons/icon-back.png</iconset>
                               </property>
                               <property name="iconSize">
@@ -1931,7 +1931,7 @@ QPushButton:pressed {
                                   <string/>
                                  </property>
                                  <property name="icon">
-                                  <iconset resource="../resource.qrc">
+                                  <iconset>
                                    <normaloff>:/icons/icons/icon-eye.png</normaloff>:/icons/icons/icon-eye.png</iconset>
                                  </property>
                                 </widget>
@@ -2530,7 +2530,7 @@ QPushButton:pressed {
                                      <string>PASSWORD MORETHAN 8 CHARACTERS                        </string>
                                     </property>
                                     <property name="icon">
-                                     <iconset resource="../resource.qrc">
+                                     <iconset>
                                       <normaloff>:/icons/icons/icon_no.png</normaloff>:/icons/icons/icon_no.png</iconset>
                                     </property>
                                     <property name="iconSize">
@@ -2555,7 +2555,7 @@ QPushButton:pressed {
                                      <string>DIGITS                                    </string>
                                     </property>
                                     <property name="icon">
-                                     <iconset resource="../resource.qrc">
+                                     <iconset>
                                       <normaloff>:/icons/icons/icon_no.png</normaloff>:/icons/icons/icon_no.png</iconset>
                                     </property>
                                     <property name="iconSize">
@@ -2580,7 +2580,7 @@ QPushButton:pressed {
                                      <string>LOWER CASE LATIN LETTERS</string>
                                     </property>
                                     <property name="icon">
-                                     <iconset resource="../resource.qrc">
+                                     <iconset>
                                       <normaloff>:/icons/icons/icon_no.png</normaloff>:/icons/icons/icon_no.png</iconset>
                                     </property>
                                     <property name="iconSize">
@@ -2605,7 +2605,7 @@ QPushButton:pressed {
                                      <string>UPPER CASE LATIN LETTERS</string>
                                     </property>
                                     <property name="icon">
-                                     <iconset resource="../resource.qrc">
+                                     <iconset>
                                       <normaloff>:/icons/icons/icon_no.png</normaloff>:/icons/icons/icon_no.png</iconset>
                                     </property>
                                     <property name="iconSize">
@@ -2630,7 +2630,7 @@ QPushButton:pressed {
                                      <string>SPECIAL CHARACTERS         </string>
                                     </property>
                                     <property name="icon">
-                                     <iconset resource="../resource.qrc">
+                                     <iconset>
                                       <normaloff>:/icons/icons/icon_no.png</normaloff>:/icons/icons/icon_no.png</iconset>
                                     </property>
                                     <property name="iconSize">
@@ -2699,7 +2699,7 @@ QPushButton:pressed {
                          <string/>
                         </property>
                         <property name="icon">
-                         <iconset resource="../resource.qrc">
+                         <iconset>
                           <normaloff>:/icons/icons/icon-back.png</normaloff>:/icons/icons/icon-back.png</iconset>
                         </property>
                        </widget>
@@ -3264,7 +3264,7 @@ border-radius: 5px;</string>
                          <string/>
                         </property>
                         <property name="icon">
-                         <iconset resource="../resource.qrc">
+                         <iconset>
                           <normaloff>:/icons/icons/icon-back.png</normaloff>:/icons/icons/icon-back.png</iconset>
                         </property>
                        </widget>
@@ -3637,7 +3637,7 @@ QPushButton:focus {
                              <widget class="QComboBox" name="dropdown_sha2">
                               <property name="minimumSize">
                                <size>
-                                <width>101</width>
+                                <width>119</width>
                                 <height>41</height>
                                </size>
                               </property>
@@ -3726,7 +3726,7 @@ QComboBox:hover {
                              <widget class="QComboBox" name="dropdown_sha3">
                               <property name="minimumSize">
                                <size>
-                                <width>101</width>
+                                <width>119</width>
                                 <height>41</height>
                                </size>
                               </property>
@@ -4523,7 +4523,7 @@ QPushButton:pressed {
                                <string/>
                               </property>
                               <property name="pixmap">
-                               <pixmap resource="../resource.qrc">:/images/images/firewall.png</pixmap>
+                               <pixmap>:/images/images/firewall.png</pixmap>
                               </property>
                               <property name="scaledContents">
                                <bool>true</bool>
@@ -4650,7 +4650,7 @@ QPushButton:pressed {
                                <string/>
                               </property>
                               <property name="pixmap">
-                               <pixmap resource="../resource.qrc">:/images/images/https.png</pixmap>
+                               <pixmap>:/images/images/https.png</pixmap>
                               </property>
                               <property name="scaledContents">
                                <bool>true</bool>
@@ -4839,7 +4839,7 @@ QPushButton:pressed {
                                   <string/>
                                  </property>
                                  <property name="pixmap">
-                                  <pixmap resource="../resource.qrc">:/images/images/star.png</pixmap>
+                                  <pixmap>:/images/images/star.png</pixmap>
                                  </property>
                                  <property name="scaledContents">
                                   <bool>true</bool>
@@ -4885,7 +4885,7 @@ QPushButton:pressed {
                                   <string/>
                                  </property>
                                  <property name="pixmap">
-                                  <pixmap resource="../resource.qrc">:/images/images/correct.png</pixmap>
+                                  <pixmap>:/images/images/correct.png</pixmap>
                                  </property>
                                  <property name="scaledContents">
                                   <bool>true</bool>
@@ -4935,7 +4935,7 @@ QPushButton:pressed {
                          <string/>
                         </property>
                         <property name="icon">
-                         <iconset resource="../resource.qrc">
+                         <iconset>
                           <normaloff>:/icons/icons/icon-back.png</normaloff>:/icons/icons/icon-back.png</iconset>
                         </property>
                        </widget>
@@ -5571,7 +5571,7 @@ QPushButton:pressed {
                             <string/>
                            </property>
                            <property name="icon">
-                            <iconset resource="../resource.qrc">
+                            <iconset>
                              <normaloff>:/icons/icons/icon-back.png</normaloff>:/icons/icons/icon-back.png</iconset>
                            </property>
                           </widget>
@@ -6216,6 +6216,413 @@ QPushButton:pressed {
                            <property name="frameShadow">
                             <enum>QFrame::Raised</enum>
                            </property>
+                           <layout class="QHBoxLayout" name="horizontalLayout_3">
+                            <item>
+                             <widget class="QWidget" name="widget" native="true">
+                              <layout class="QVBoxLayout" name="verticalLayout_6">
+                               <item>
+                                <widget class="QWidget" name="widget_3" native="true">
+                                 <layout class="QHBoxLayout" name="horizontalLayout_45">
+                                  <item>
+                                   <widget class="QLabel" name="label_imagemalware">
+                                    <property name="minimumSize">
+                                     <size>
+                                      <width>50</width>
+                                      <height>50</height>
+                                     </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>50</width>
+                                      <height>50</height>
+                                     </size>
+                                    </property>
+                                    <property name="text">
+                                     <string/>
+                                    </property>
+                                    <property name="pixmap">
+                                     <pixmap>../images/icons8-malware-50.png</pixmap>
+                                    </property>
+                                    <property name="scaledContents">
+                                     <bool>true</bool>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QWidget" name="widget_4" native="true">
+                                 <layout class="QVBoxLayout" name="verticalLayout_57">
+                                  <item>
+                                   <widget class="QWidget" name="widget_8" native="true">
+                                    <layout class="QVBoxLayout" name="verticalLayout_60">
+                                     <item>
+                                      <widget class="QLabel" name="label_Analysis">
+                                       <property name="font">
+                                        <font>
+                                         <pointsize>13</pointsize>
+                                        </font>
+                                       </property>
+                                       <property name="text">
+                                        <string>Analysis</string>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                    </layout>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QWidget" name="widget_5" native="true">
+                                    <layout class="QHBoxLayout" name="horizontalLayout_44">
+                                     <item>
+                                      <widget class="QWidget" name="widget_6" native="true">
+                                       <layout class="QVBoxLayout" name="verticalLayout_55">
+                                        <item>
+                                         <widget class="QLabel" name="label_malicious">
+                                          <property name="font">
+                                           <font>
+                                            <pointsize>10</pointsize>
+                                           </font>
+                                          </property>
+                                          <property name="text">
+                                           <string>Malicious</string>
+                                          </property>
+                                         </widget>
+                                        </item>
+                                        <item>
+                                         <widget class="QLabel" name="label_suspicious">
+                                          <property name="font">
+                                           <font>
+                                            <pointsize>10</pointsize>
+                                           </font>
+                                          </property>
+                                          <property name="text">
+                                           <string>Susoicious</string>
+                                          </property>
+                                         </widget>
+                                        </item>
+                                        <item>
+                                         <widget class="QLabel" name="label_undetected">
+                                          <property name="font">
+                                           <font>
+                                            <pointsize>10</pointsize>
+                                           </font>
+                                          </property>
+                                          <property name="text">
+                                           <string>Undetected</string>
+                                          </property>
+                                         </widget>
+                                        </item>
+                                       </layout>
+                                      </widget>
+                                     </item>
+                                     <item alignment="Qt::AlignRight">
+                                      <widget class="QWidget" name="widget_9" native="true">
+                                       <layout class="QVBoxLayout" name="verticalLayout_61">
+                                        <item>
+                                         <widget class="QLabel" name="label_maliciousResult">
+                                          <property name="font">
+                                           <font>
+                                            <pointsize>10</pointsize>
+                                           </font>
+                                          </property>
+                                          <property name="text">
+                                           <string>0</string>
+                                          </property>
+                                         </widget>
+                                        </item>
+                                        <item>
+                                         <widget class="QLabel" name="label_suspiciousResult">
+                                          <property name="font">
+                                           <font>
+                                            <pointsize>10</pointsize>
+                                           </font>
+                                          </property>
+                                          <property name="text">
+                                           <string>0</string>
+                                          </property>
+                                         </widget>
+                                        </item>
+                                        <item>
+                                         <widget class="QLabel" name="label_undetectedResult">
+                                          <property name="font">
+                                           <font>
+                                            <pointsize>10</pointsize>
+                                           </font>
+                                          </property>
+                                          <property name="text">
+                                           <string>0</string>
+                                          </property>
+                                         </widget>
+                                        </item>
+                                       </layout>
+                                      </widget>
+                                     </item>
+                                    </layout>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QWidget" name="widget_2" native="true">
+                              <layout class="QVBoxLayout" name="verticalLayout_62">
+                               <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+                                <widget class="QWidget" name="widget_7" native="true">
+                                 <layout class="QVBoxLayout" name="verticalLayout_63">
+                                  <item alignment="Qt::AlignTop">
+                                   <widget class="QLabel" name="label_scanSummary">
+                                    <property name="font">
+                                     <font>
+                                      <pointsize>15</pointsize>
+                                     </font>
+                                    </property>
+                                    <property name="text">
+                                     <string>Threat Scan Summary</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QWidget" name="widget_10" native="true">
+                                 <layout class="QHBoxLayout" name="horizontalLayout_46">
+                                  <item>
+                                   <widget class="QWidget" name="widget_11" native="true">
+                                    <layout class="QVBoxLayout" name="verticalLayout_64">
+                                     <item>
+                                      <widget class="QLabel" name="label_finalURL">
+                                       <property name="font">
+                                        <font>
+                                         <pointsize>10</pointsize>
+                                        </font>
+                                       </property>
+                                       <property name="text">
+                                        <string>Final URL</string>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                     <item>
+                                      <widget class="QLabel" name="label_tid">
+                                       <property name="font">
+                                        <font>
+                                         <pointsize>10</pointsize>
+                                        </font>
+                                       </property>
+                                       <property name="text">
+                                        <string>Tid</string>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                     <item>
+                                      <widget class="QLabel" name="label_typeMalware">
+                                       <property name="font">
+                                        <font>
+                                         <pointsize>10</pointsize>
+                                        </font>
+                                       </property>
+                                       <property name="text">
+                                        <string>Type</string>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                     <item>
+                                      <widget class="QLabel" name="label_sha256">
+                                       <property name="font">
+                                        <font>
+                                         <pointsize>10</pointsize>
+                                        </font>
+                                       </property>
+                                       <property name="text">
+                                        <string>Sha 256</string>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                     <item>
+                                      <widget class="QLabel" name="label_size">
+                                       <property name="font">
+                                        <font>
+                                         <pointsize>10</pointsize>
+                                        </font>
+                                       </property>
+                                       <property name="text">
+                                        <string>Size</string>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                    </layout>
+                                   </widget>
+                                  </item>
+                                  <item alignment="Qt::AlignRight">
+                                   <widget class="QWidget" name="widget_12" native="true">
+                                    <layout class="QVBoxLayout" name="verticalLayout_65">
+                                     <item>
+                                      <widget class="QLabel" name="label_finalURLResurlt">
+                                       <property name="font">
+                                        <font>
+                                         <pointsize>10</pointsize>
+                                        </font>
+                                       </property>
+                                       <property name="text">
+                                        <string>-</string>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                     <item>
+                                      <widget class="QLabel" name="label_tidResult">
+                                       <property name="font">
+                                        <font>
+                                         <pointsize>10</pointsize>
+                                        </font>
+                                       </property>
+                                       <property name="text">
+                                        <string>-</string>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                     <item>
+                                      <widget class="QLabel" name="label_typeMalwareResult">
+                                       <property name="font">
+                                        <font>
+                                         <pointsize>10</pointsize>
+                                        </font>
+                                       </property>
+                                       <property name="text">
+                                        <string>-</string>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                     <item>
+                                      <widget class="QLabel" name="label_sha256Result">
+                                       <property name="font">
+                                        <font>
+                                         <pointsize>10</pointsize>
+                                        </font>
+                                       </property>
+                                       <property name="text">
+                                        <string>-</string>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                     <item>
+                                      <widget class="QLabel" name="label_sizeResult">
+                                       <property name="font">
+                                        <font>
+                                         <pointsize>10</pointsize>
+                                        </font>
+                                       </property>
+                                       <property name="text">
+                                        <string>-</string>
+                                       </property>
+                                      </widget>
+                                     </item>
+                                    </layout>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                               <item>
+                                <widget class="QWidget" name="widget_13" native="true">
+                                 <layout class="QHBoxLayout" name="horizontalLayout_47">
+                                  <item>
+                                   <widget class="QPushButton" name="btn_viewReport">
+                                    <property name="minimumSize">
+                                     <size>
+                                      <width>200</width>
+                                      <height>40</height>
+                                     </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>200</width>
+                                      <height>40</height>
+                                     </size>
+                                    </property>
+                                    <property name="font">
+                                     <font>
+                                      <pointsize>10</pointsize>
+                                     </font>
+                                    </property>
+                                    <property name="styleSheet">
+                                     <string notr="true"> QPushButton{
+		background-color: rgba(50,54,74,255);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+                                    </property>
+                                    <property name="text">
+                                     <string>View Report</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QPushButton" name="btn_done">
+                                    <property name="minimumSize">
+                                     <size>
+                                      <width>200</width>
+                                      <height>40</height>
+                                     </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>200</width>
+                                      <height>40</height>
+                                     </size>
+                                    </property>
+                                    <property name="font">
+                                     <font>
+                                      <pointsize>10</pointsize>
+                                     </font>
+                                    </property>
+                                    <property name="styleSheet">
+                                     <string notr="true"> QPushButton{
+		background-color: rgba(50,54,74,255);
+        border-radius: 5px;
+		color: rgb(255, 255, 255);
+    }
+ QPushButton{
+        border-radius: 10px;
+    }
+QPushButton:hover {
+	 border-radius: 10px;
+	 background-color: rgba(0,143,255,255);
+}
+QPushButton:pressed {
+	background-color: rgb(120, 120, 120);
+	color: rgb(255, 255, 255);
+}
+</string>
+                                    </property>
+                                    <property name="text">
+                                     <string>Done</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                           </layout>
                           </widget>
                          </item>
                         </layout>
