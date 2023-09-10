@@ -138,6 +138,8 @@ class Main(QDialog):
         self.btn_copy.clicked.connect(lambda: MessageDigest.copyOutput(self))
 
         # --------------------- Malware Scan --------------------------------
+        self.label_imagemalware.setPixmap(QPixmap("./assets/images/Defaultscan.png"))
+
         config = configparser.ConfigParser()
         configFilePath = './data/init.conf'
         config.read(configFilePath)
@@ -909,6 +911,11 @@ class MalwareScanning():
         self.label_typeMalwareResult.setText('-')
         self.label_sha256Result.setText('-')
         self.label_sizeResult.setText('-')
+        self.label_malicious.setStyleSheet("background-color: white;")
+        self.label_suspicious.setStyleSheet("background-color: white;")
+        self.label_undetected.setStyleSheet("background-color: white;")
+        self.label_imagemalware.setPixmap(QPixmap("./assets/images/Defaultscan.png"))
+        
 
     def scanMalware(self):
         print("Scan Malware")
@@ -1074,6 +1081,7 @@ class MalwareScanning():
             self.label_sha256.setText('SHA-256')
             self.label_size.setText('File Size')
             # show data
+            
             try:
                 self.label_maliciousResult.setText(str(response.json()['data']['attributes']['last_analysis_stats']['malicious']))
                 self.label_suspiciousResult.setText(str(response.json()['data']['attributes']['last_analysis_stats']['suspicious']))
@@ -1091,6 +1099,16 @@ class MalwareScanning():
                     if response.json()['data']['attributes']['sha256'] != '' else self.label_sha256Result.setText('-')
             except KeyError as e:
                 print("Key Error")
+
+            if int(self.label_maliciousResult.text()) > 0:
+                print("Malware")
+                self.label_imagemalware.setPixmap(QPixmap("./assets/images/FileMalware.png"))
+                
+            else:
+                print("No Malware")
+                self.label_imagemalware.setPixmap(QPixmap("./assets/images/FileCheck.png"))
+                
+                
         
         if type == 'url':
             # rename label
@@ -1120,6 +1138,24 @@ class MalwareScanning():
                 
             except KeyError as e:
                 print("Key Error")
+
+            if int(self.label_maliciousResult.text()) > 0:
+                print("Malware")
+                malware_logo = QPixmap("./assets/images/URLMalware.png")
+                self.label_imagemalware.setPixmap(malware_logo)
+                self.label_malicious.setStyleSheet("background-color: red;")
+                if int(self.label_suspiciousResult.text()) > 0:
+                    self.label_suspicious.setStyleSheet("background-color: orange;")
+                if int(self.label_undetectedResult.text()) > 0:
+                    self.label_undetected.setStyleSheet("background-color: gray;")
+            else:
+                print("No Malware")
+                urlcheck_logo = QPixmap("./assets/images/URLCheck.png")
+                self.label_imagemalware.setPixmap(urlcheck_logo)
+                self.label_malicious.setStyleSheet("background-color: green;")
+                self.label_suspicious.setStyleSheet("background-color: green;")
+                self.label_undetected.setStyleSheet("background-color: green;")
+
             
         
     def openFileScanning(self):
