@@ -1184,5 +1184,8 @@ if __name__ == "__main__":
     #window.setMinimumSize(1200, 700)
     #window.setMaximumSize(1200, 700)
     window.show()
-    sys.exit(app.exec())     
-    
+
+    try:
+        sys.exit(app.exec())     
+    except SystemExit:
+        print('Closing Window...')
