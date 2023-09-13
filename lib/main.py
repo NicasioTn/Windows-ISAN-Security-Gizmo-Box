@@ -1224,6 +1224,7 @@ class MalwareScanning():
         c.setKeywords("Python, PDF, Malware Analysis, VirusTotal, SecGizmo")
         c.setCreator("SecGizmo")
         c.pageHasData()
+        c.drawImage("./assets/images/ISAN.png", 175, 650, width=255, height=145)
         c.drawString(30, 750, 'Malware Report')
         c.drawString(30, 735, 'SecGizmo')
         c.drawString(480, 750, "Date: " + str(datetime.datetime.now().strftime("%Y-%m-%d")))
