@@ -6584,7 +6584,7 @@ QPushButton:pressed {
                                    </widget>
                                   </item>
                                   <item>
-                                   <widget class="QPushButton" name="btn_sendEnail">
+                                   <widget class="QPushButton" name="btn_sendEmail">
                                     <property name="minimumSize">
                                      <size>
                                       <width>200</width>

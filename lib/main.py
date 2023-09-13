@@ -1,3 +1,4 @@
+import datetime
 import sys
 import os
 import time
@@ -5,6 +6,9 @@ from math import log2
 import json
 import configparser
 import requests
+
+from reportlab.lib.pagesizes import letter, A4
+from reportlab.pdfgen import canvas
 
 import hashlib
 import qrcode
@@ -103,7 +107,7 @@ class Main(QDialog):
         self.btn_clearDic.clicked.connect(lambda: PasswordEvaluation.clear(self))
         self.btn_rockyou.clicked.connect(lambda: self.lineEdit_inputFileDic.setText("rockyou.txt"))
         self.btn_crackstation.clicked.connect(lambda: self.lineEdit_inputFileDic.setText("crackstation.txt"))
-
+        
         # --------------------- Message Digest ------------------------------
         # Load the list of hints from the JSON file
         with open('./data/hint.json', 'r') as openfile:
@@ -158,6 +162,8 @@ class Main(QDialog):
         self.btn_scanMalware.clicked.connect(lambda: MalwareScanning.scanMalware(self))
         self.btn_openMalware.clicked.connect(lambda: MalwareScanning.openFileScanning(self))
         self.btn_clearMalware.clicked.connect(lambda: MalwareScanning.clear(self))
+        self.btn_createReport.clicked.connect(lambda: MalwareScanning.createReport(self))
+        self.btn_sendEmail.clicked.connect(lambda: MalwareScanning.sendEmail(self))
 
         # --------------------- Vulnerability -------------------------------
        
@@ -915,7 +921,10 @@ class MalwareScanning():
         self.label_suspicious.setStyleSheet("background-color: white;")
         self.label_undetected.setStyleSheet("background-color: white;")
         self.label_imagemalware.setPixmap(QPixmap("./assets/images/Defaultscan.png"))
-        
+        self.btn_createReport.setText('Create Report')
+        self.btn_sendEmail.setText('Send Email')
+
+
 
     def scanMalware(self):
         print("Scan Malware")
@@ -1107,9 +1116,9 @@ class MalwareScanning():
                 self.label_sizeResult.setText(size)\
                     if response.json()['data']['attributes']['size'] != 0 else self.label_sizeResult.setText('-')
 
-                namefile = response.json()['data']['attributes']['names'][0]
-                self.label_finalURLResurlt.setText(namefile) \
-                    if namefile != [] else self.label_finalURLResurlt.setText('-')
+                self.label_finalURLResurlt.setText(response.json()['data']['attributes']['names'][0] ) \
+                    if response.json()['data']['attributes']['names'][0] != [] else self.label_finalURLResurlt.setText('-')
+                
                 
                 filetype = response.json()['data']['attributes']['type_description']
                 self.label_tidResult.setText(filetype) \
@@ -1202,8 +1211,56 @@ class MalwareScanning():
                 # self.label_suspicious.setStyleSheet("background-color: green;")
                 # self.label_undetected.setStyleSheet("background-color: green;")
 
-            
-        
+
+    def createReport(self):
+        print("Create Report")
+        pdf_file = "./data/MalwareReport.pdf"
+        c = canvas.Canvas(pdf_file, pagesize=A4)
+        c.setLineWidth(.3)
+        c.setFont('Helvetica', 12)
+        c.setTitle('Malware Report')
+        c.setAuthor("SecGizmo")
+        c.setSubject("Malware Analysis")
+        c.setKeywords("Python, PDF, Malware Analysis, VirusTotal, SecGizmo")
+        c.setCreator("SecGizmo")
+        c.pageHasData()
+        c.drawString(30, 750, 'Malware Report')
+        c.drawString(30, 735, 'SecGizmo')
+        c.drawString(480, 750, "Date: " + str(datetime.datetime.now().strftime("%Y-%m-%d")))
+        c.line(480,747,580,747)
+        c.setFont('Helvetica', 20)
+        c.drawString(245, 725, 'Malware Analysis')
+        c.setFont('Helvetica', 12)
+        c.drawString(30, 703, 'Malicious: ' + self.label_maliciousResult.text())
+        c.drawString(30, 683, 'Suspicious: ' + self.label_suspiciousResult.text())
+        c.drawString(30, 663, 'Undetected: ' + self.label_undetectedResult.text())
+        c.drawString(30, 643, 'Final URL: ' + self.label_finalURLResurlt.text())
+        c.drawString(30, 623, 'TLD: ' + self.label_tidResult.text())
+        c.drawString(30, 603, 'Scan Type: ' + self.label_typeMalwareResult.text())
+        c.drawString(30, 583, 'SHA-256: ' + self.label_sha256Result.text())
+        c.drawString(30, 563, 'Size: ' + self.label_sizeResult.text())
+        c.showPage()
+        c.save()
+        print(f"PDF created: {pdf_file.split('/')[-1]}")
+        self.btn_createReport.setText("Created!")
+
+        # prepare send email
+        self.lineEdit_malware.setText('')
+        self.lineEdit_malware.setPlaceholderText('ex. enter your email')
+        self.lineEdit_malware.setStyleSheet("border: 2px solid Green;")
+        self.lineEdit_malware.textChanged.connect(lambda: MalwareScanning.update(self))
+
+    def sendEmail(self):
+        print("Send Email")
+        email = self.lineEdit_malware.text()
+        if email == '':
+            print("Email Empty")
+            self.lineEdit_malware.setStyleSheet("border: 2px solid red;")
+            self.lineEdit_malware.setPlaceholderText("Empty")
+            return
+        print("final email = " + email)
+        self.btn_sendEmail.setText("Sent!")
+
     def openFileScanning(self):
         print("Open File")
         #pass
@@ -1221,6 +1278,20 @@ class MalwareScanning():
             print(f"Get file at: {path}")
 
             return path
+        
+    def update(self):
+        input_email = self.lineEdit_malware.text()
+        if '@' not in input_email:
+            print("Invalid Email")
+            self.lineEdit_malware.setStyleSheet("border: 2px solid orange;")
+            self.lineEdit_malware.setPlaceholderText("Invalid Email")
+            return
+        else:
+            print("Email Correct")
+            self.lineEdit_malware.setStyleSheet("border: 2px solid green;")
+            self.lineEdit_malware.setPlaceholderText("Email Correct")
+
+        print(input_email)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

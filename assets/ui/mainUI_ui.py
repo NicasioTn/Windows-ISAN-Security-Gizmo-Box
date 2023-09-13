@@ -3266,15 +3266,15 @@ class Ui_Form(object):
 "")
         self.btn_createReport.setObjectName("btn_createReport")
         self.horizontalLayout_47.addWidget(self.btn_createReport)
-        self.btn_sendEnail = QtWidgets.QPushButton(parent=self.widget_13)
-        self.btn_sendEnail.setMinimumSize(QtCore.QSize(200, 40))
-        self.btn_sendEnail.setMaximumSize(QtCore.QSize(200, 40))
+        self.btn_sendEmail = QtWidgets.QPushButton(parent=self.widget_13)
+        self.btn_sendEmail.setMinimumSize(QtCore.QSize(200, 40))
+        self.btn_sendEmail.setMaximumSize(QtCore.QSize(200, 40))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(13)
-        self.btn_sendEnail.setFont(font)
-        self.btn_sendEnail.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.btn_sendEnail.setStyleSheet(" QPushButton{\n"
+        self.btn_sendEmail.setFont(font)
+        self.btn_sendEmail.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btn_sendEmail.setStyleSheet(" QPushButton{\n"
 "        background-color: rgba(50,54,74,255);\n"
 "        border-radius: 5px;\n"
 "        color: rgb(255, 255, 255);\n"
@@ -3291,8 +3291,8 @@ class Ui_Form(object):
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        self.btn_sendEnail.setObjectName("btn_sendEnail")
-        self.horizontalLayout_47.addWidget(self.btn_sendEnail)
+        self.btn_sendEmail.setObjectName("btn_sendEmail")
+        self.horizontalLayout_47.addWidget(self.btn_sendEmail)
         self.verticalLayout_62.addWidget(self.widget_13)
         self.horizontalLayout_3.addWidget(self.widget_2)
         self.horizontalLayout_43.addWidget(self.frame_84)
@@ -3426,4 +3426,4 @@ class Ui_Form(object):
         self.label_sha256Result.setText(_translate("Form", "-"))
         self.label_sizeResult.setText(_translate("Form", "-"))
         self.btn_createReport.setText(_translate("Form", "Create Report"))
-        self.btn_sendEnail.setText(_translate("Form", "Send Email"))
+        self.btn_sendEmail.setText(_translate("Form", "Send Email"))
