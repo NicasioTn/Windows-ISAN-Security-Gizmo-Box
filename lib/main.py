@@ -1083,20 +1083,43 @@ class MalwareScanning():
             # show data
             
             try:
-                self.label_maliciousResult.setText(str(response.json()['data']['attributes']['last_analysis_stats']['malicious']))
-                self.label_suspiciousResult.setText(str(response.json()['data']['attributes']['last_analysis_stats']['suspicious']))
-                self.label_undetectedResult.setText(str(response.json()['data']['attributes']['last_analysis_stats']['undetected']))
+                
+                maliciouse = response.json()['data']['attributes']['last_analysis_stats']['malicious']
+                suspicious = response.json()['data']['attributes']['last_analysis_stats']['suspicious']
+                undetected = response.json()['data']['attributes']['last_analysis_stats']['undetected']
 
-                self.label_finalURLResurlt.setText(response.json()['data']['attributes']['names'][0]) \
-                    if response.json()['data']['attributes']['names'] != [] else self.label_finalURLResurlt.setText('-') 
-                self.label_sizeResult.setText(str(response.json()['data']['attributes']['size'])) \
+                self.label_maliciousResult.setText(str(maliciouse))
+                self.label_suspiciousResult.setText(str(suspicious))
+                self.label_undetectedResult.setText(str(undetected))
+
+                size = response.json()['data']['attributes']['size']
+                if size < 1024:
+                    size = str(size) + " Bytes"
+                elif size < 1048576:
+                    size = str(round(size/1024, 2)) + " KB"
+                elif size < 1073741824:
+                    size = str(round(size/1048576, 2)) + " MB"
+                elif size < 1099511627776:
+                    size = str(round(size/1073741824, 2)) + " GB"
+                else:
+                    size = str(round(size/1099511627776, 2)) + " TB"
+                    
+                self.label_sizeResult.setText(size)\
                     if response.json()['data']['attributes']['size'] != 0 else self.label_sizeResult.setText('-')
+                # self.label_sizeResult.setText(str(response.json()['data']['attributes']['size'])) \
+                #     if response.json()['data']['attributes']['size'] != 0 else self.label_sizeResult.setText('-')
+                self.label_finalURLResurlt.setText(response.json()['data']['attributes']['names'][0]) \
+                    if response.json()['data']['attributes']['names'] != [] else self.label_finalURLResurlt.setText('-')
+                
                 self.label_tidResult.setText(response.json()['data']['attributes']['type_description']) \
                     if response.json()['data']['attributes']['type_description'] != '' else self.label_tidResult.setText('-')
+                
                 self.label_typeMalwareResult.setText(response.json()['data']['type']) \
                     if response.json()['data']['type'] != '' else self.label_typeMalwareResult.setText('-')
+                
                 self.label_sha256Result.setText(response.json()['data']['attributes']['sha256']) \
                     if response.json()['data']['attributes']['sha256'] != '' else self.label_sha256Result.setText('-')
+                
             except KeyError as e:
                 print("Key Error")
 
