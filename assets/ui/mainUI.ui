@@ -6537,7 +6537,7 @@ QPushButton:pressed {
                                 <widget class="QWidget" name="widget_13" native="true">
                                  <layout class="QHBoxLayout" name="horizontalLayout_47">
                                   <item>
-                                   <widget class="QPushButton" name="btn_viewReport">
+                                   <widget class="QPushButton" name="btn_createReport">
                                     <property name="minimumSize">
                                      <size>
                                       <width>200</width>
@@ -6579,12 +6579,12 @@ QPushButton:pressed {
 </string>
                                     </property>
                                     <property name="text">
-                                     <string>View Report</string>
+                                     <string>Create Report</string>
                                     </property>
                                    </widget>
                                   </item>
                                   <item>
-                                   <widget class="QPushButton" name="btn_done">
+                                   <widget class="QPushButton" name="btn_sendEnail">
                                     <property name="minimumSize">
                                      <size>
                                       <width>200</width>
@@ -6626,7 +6626,7 @@ QPushButton:pressed {
 </string>
                                     </property>
                                     <property name="text">
-                                     <string>Done</string>
+                                     <string>Send Email</string>
                                     </property>
                                    </widget>
                                   </item>

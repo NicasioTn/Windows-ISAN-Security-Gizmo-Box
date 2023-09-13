@@ -1077,7 +1077,7 @@ class MalwareScanning():
             # rename label
             self.label_finalURL.setText('File Name')
             self.label_tid.setText('File Type')
-            self.label_typeMalware.setText('File Type')
+            self.label_typeMalware.setText('Scan Type')
             self.label_sha256.setText('SHA-256')
             self.label_size.setText('File Size')
             # show data
@@ -1103,25 +1103,28 @@ class MalwareScanning():
                     size = str(round(size/1073741824, 2)) + " GB"
                 else:
                     size = str(round(size/1099511627776, 2)) + " TB"
-                    
+                
                 self.label_sizeResult.setText(size)\
                     if response.json()['data']['attributes']['size'] != 0 else self.label_sizeResult.setText('-')
-                # self.label_sizeResult.setText(str(response.json()['data']['attributes']['size'])) \
-                #     if response.json()['data']['attributes']['size'] != 0 else self.label_sizeResult.setText('-')
-                self.label_finalURLResurlt.setText(response.json()['data']['attributes']['names'][0]) \
-                    if response.json()['data']['attributes']['names'] != [] else self.label_finalURLResurlt.setText('-')
+
+                namefile = response.json()['data']['attributes']['names'][0]
+                self.label_finalURLResurlt.setText(namefile) \
+                    if namefile != [] else self.label_finalURLResurlt.setText('-')
                 
-                self.label_tidResult.setText(response.json()['data']['attributes']['type_description']) \
-                    if response.json()['data']['attributes']['type_description'] != '' else self.label_tidResult.setText('-')
+                filetype = response.json()['data']['attributes']['type_description']
+                self.label_tidResult.setText(filetype) \
+                    if filetype != '' else self.label_tidResult.setText('-')
                 
-                self.label_typeMalwareResult.setText(response.json()['data']['type']) \
-                    if response.json()['data']['type'] != '' else self.label_typeMalwareResult.setText('-')
+                scantype = response.json()['data']['type']
+                self.label_typeMalwareResult.setText(scantype) \
+                    if scantype != '' else self.label_typeMalwareResult.setText('-')
                 
-                self.label_sha256Result.setText(response.json()['data']['attributes']['sha256']) \
-                    if response.json()['data']['attributes']['sha256'] != '' else self.label_sha256Result.setText('-')
+                hashfile =  response.json()['data']['attributes']['sha256']
+                self.label_sha256Result.setText(hashfile) \
+                    if hashfile != '' else self.label_sha256Result.setText('-')
                 
             except KeyError as e:
-                print("Key Error")
+                print("Key Error" + str(e))
 
             if int(self.label_maliciousResult.text()) > 0:
                 print("Malware")
@@ -1137,47 +1140,67 @@ class MalwareScanning():
             # rename label
             self.label_finalURL.setText('URL')
             self.label_tid.setText('TLD')
-            self.label_typeMalware.setText('Type')
+            self.label_typeMalware.setText('Scan Type')
             self.label_sha256.setText('SHA-256')
             self.label_size.setText('Site Name')
             # show data
             try:
-                self.label_maliciousResult.setText(str(response.json()['data']['attributes']['last_analysis_stats']['malicious']))
-                self.label_suspiciousResult.setText(str(response.json()['data']['attributes']['last_analysis_stats']['suspicious']))
-                self.label_undetectedResult.setText(str(response.json()['data']['attributes']['last_analysis_stats']['undetected']))
+
+                maliciouse = response.json()['data']['attributes']['last_analysis_stats']['malicious']
+                suspicious = response.json()['data']['attributes']['last_analysis_stats']['suspicious']
+                undetected = response.json()['data']['attributes']['last_analysis_stats']['undetected']
+
+                self.label_maliciousResult.setText(str(maliciouse))
+                self.label_suspiciousResult.setText(str(suspicious))
+                self.label_undetectedResult.setText(str(undetected))
                 
-                self.label_finalURLResurlt.setText(response.json()['data']['attributes']['last_final_url']) \
-                    if response.json()['data']['attributes']['last_final_url'] != '' else self.label_finalURLResurlt.setText('-')
-                self.label_tidResult.setText(response.json()['data']['attributes']['tld']) \
-                    if response.json()['data']['attributes']['tld'] != '' else self.label_tidResult.setText('-')
-                #self.label_typeMalwareResult.setText(response.json()['data']['attributes']['html_meta']['og:type'][0])
-                self.label_typeMalwareResult.setText(response.json()['data']['type'].upper()) \
-                    if response.json()['data']['type'] != '' else self.label_typeMalwareResult.setText('-')
-                self.label_sha256Result.setText(response.json()['data']['attributes']['last_http_response_content_sha256']) \
-                    if response.json()['data']['attributes']['last_http_response_content_sha256'] != '' else self.label_sha256Result.setText('-')
+                destination_url = response.json()['data']['attributes']['last_final_url']
+                self.label_finalURLResurlt.setText(destination_url) \
+                    if destination_url != '' else self.label_finalURLResurlt.setText('-')
+                
+                tld_url = response.json()['data']['attributes']['tld']
+                self.label_tidResult.setText(tld_url) \
+                    if tld_url != '' else self.label_tidResult.setText('-')
+
+                scan_type = response.json()['data']['type'].upper()
+                self.label_typeMalwareResult.setText(scan_type) \
+                    if scan_type != '' else self.label_typeMalwareResult.setText('-')
+                
+                hash_url = response.json()['data']['attributes']['last_http_response_content_sha256']
+                self.label_sha256Result.setText(hash_url) \
+                    if hash_url != '' else self.label_sha256Result.setText('-')
+                
                 #self.label_sizeResult.setText(response.json()['data']['attributes']['title'])
-                self.label_sizeResult.setText(response.json()['data']['attributes']['html_meta']['og:site_name'][0]) \
-                    if response.json()['data']['attributes']['html_meta']['og:site_name'] != [] else self.label_sizeResult.setText('-')
+                site_name = response.json()['data']['attributes']['html_meta']['title'][0] 
+                self.label_sizeResult.setText(site_name) \
+                    if site_name != [] else self.label_sizeResult.setText('-')
                 
             except KeyError as e:
-                print("Key Error")
+                print("Key Error" + str(e))
+                try:
+                    site_name = response.json()['data']['attributes']['last_final_url'].split('/')[2] 
+                except KeyError as e:
+                    site_name = "-"
+                print(site_name)
+                self.label_sizeResult.setText(site_name) \
+                    if site_name != [] else self.label_sizeResult.setText('-')
 
             if int(self.label_maliciousResult.text()) > 0:
                 print("Malware")
                 malware_logo = QPixmap("./assets/images/URLMalware.png")
                 self.label_imagemalware.setPixmap(malware_logo)
-                self.label_malicious.setStyleSheet("background-color: red;")
-                if int(self.label_suspiciousResult.text()) > 0:
-                    self.label_suspicious.setStyleSheet("background-color: orange;")
-                if int(self.label_undetectedResult.text()) > 0:
-                    self.label_undetected.setStyleSheet("background-color: gray;")
+                #self.label_malicious.setStyleSheet("background-color: red;")
+                # if int(self.label_suspiciousResult.text()) > 0:
+                #     self.label_suspicious.setStyleSheet("background-color: orange;")
+                # if int(self.label_undetectedResult.text()) > 0:
+                #     self.label_undetected.setStyleSheet("background-color: gray;")
             else:
                 print("No Malware")
                 urlcheck_logo = QPixmap("./assets/images/URLCheck.png")
                 self.label_imagemalware.setPixmap(urlcheck_logo)
-                self.label_malicious.setStyleSheet("background-color: green;")
-                self.label_suspicious.setStyleSheet("background-color: green;")
-                self.label_undetected.setStyleSheet("background-color: green;")
+                # self.label_malicious.setStyleSheet("background-color: green;")
+                # self.label_suspicious.setStyleSheet("background-color: green;")
+                # self.label_undetected.setStyleSheet("background-color: green;")
 
             
         

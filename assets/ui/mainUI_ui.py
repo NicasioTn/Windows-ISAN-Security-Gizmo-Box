@@ -3239,15 +3239,15 @@ class Ui_Form(object):
         self.widget_13.setObjectName("widget_13")
         self.horizontalLayout_47 = QtWidgets.QHBoxLayout(self.widget_13)
         self.horizontalLayout_47.setObjectName("horizontalLayout_47")
-        self.btn_viewReport = QtWidgets.QPushButton(parent=self.widget_13)
-        self.btn_viewReport.setMinimumSize(QtCore.QSize(200, 40))
-        self.btn_viewReport.setMaximumSize(QtCore.QSize(200, 40))
+        self.btn_createReport = QtWidgets.QPushButton(parent=self.widget_13)
+        self.btn_createReport.setMinimumSize(QtCore.QSize(200, 40))
+        self.btn_createReport.setMaximumSize(QtCore.QSize(200, 40))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(13)
-        self.btn_viewReport.setFont(font)
-        self.btn_viewReport.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.btn_viewReport.setStyleSheet(" QPushButton{\n"
+        self.btn_createReport.setFont(font)
+        self.btn_createReport.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btn_createReport.setStyleSheet(" QPushButton{\n"
 "        background-color: rgba(50,54,74,255);\n"
 "        border-radius: 5px;\n"
 "        color: rgb(255, 255, 255);\n"
@@ -3264,17 +3264,17 @@ class Ui_Form(object):
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        self.btn_viewReport.setObjectName("btn_viewReport")
-        self.horizontalLayout_47.addWidget(self.btn_viewReport)
-        self.btn_done = QtWidgets.QPushButton(parent=self.widget_13)
-        self.btn_done.setMinimumSize(QtCore.QSize(200, 40))
-        self.btn_done.setMaximumSize(QtCore.QSize(200, 40))
+        self.btn_createReport.setObjectName("btn_createReport")
+        self.horizontalLayout_47.addWidget(self.btn_createReport)
+        self.btn_sendEnail = QtWidgets.QPushButton(parent=self.widget_13)
+        self.btn_sendEnail.setMinimumSize(QtCore.QSize(200, 40))
+        self.btn_sendEnail.setMaximumSize(QtCore.QSize(200, 40))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(13)
-        self.btn_done.setFont(font)
-        self.btn_done.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.btn_done.setStyleSheet(" QPushButton{\n"
+        self.btn_sendEnail.setFont(font)
+        self.btn_sendEnail.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btn_sendEnail.setStyleSheet(" QPushButton{\n"
 "        background-color: rgba(50,54,74,255);\n"
 "        border-radius: 5px;\n"
 "        color: rgb(255, 255, 255);\n"
@@ -3291,8 +3291,8 @@ class Ui_Form(object):
 "    color: rgb(255, 255, 255);\n"
 "}\n"
 "")
-        self.btn_done.setObjectName("btn_done")
-        self.horizontalLayout_47.addWidget(self.btn_done)
+        self.btn_sendEnail.setObjectName("btn_sendEnail")
+        self.horizontalLayout_47.addWidget(self.btn_sendEnail)
         self.verticalLayout_62.addWidget(self.widget_13)
         self.horizontalLayout_3.addWidget(self.widget_2)
         self.horizontalLayout_43.addWidget(self.frame_84)
@@ -3425,5 +3425,5 @@ class Ui_Form(object):
         self.label_typeMalwareResult.setText(_translate("Form", "-"))
         self.label_sha256Result.setText(_translate("Form", "-"))
         self.label_sizeResult.setText(_translate("Form", "-"))
-        self.btn_viewReport.setText(_translate("Form", "View Report"))
-        self.btn_done.setText(_translate("Form", "Done"))
+        self.btn_createReport.setText(_translate("Form", "Create Report"))
+        self.btn_sendEnail.setText(_translate("Form", "Send Email"))
