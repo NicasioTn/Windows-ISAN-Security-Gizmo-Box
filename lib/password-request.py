@@ -1,6 +1,7 @@
 import requests
 import json
 
+# Request the password list from NordPass
 headers = {
     'sec-ch-ua': '"Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"',
     'Referer': 'https://nordpass.com/most-common-passwords-list/',

@@ -1,3 +1,4 @@
+import os
 from PyQt6.QtCore import QFileInfo
 from PyQt6.QtWidgets import QDialog, QFileDialog, QLineEdit
 from PyQt6.QtGui import QIcon
@@ -8,7 +9,7 @@ from math import log2
 class PasswordEvaluation(QDialog):
 
     hide = True
-    
+
     def __init__(self):
         super(PasswordEvaluation, self).__init__()
 
@@ -44,7 +45,8 @@ class PasswordEvaluation(QDialog):
                 self.label_outputSearchNordPass.setStyleSheet("color: rgba(0, 255, 143, 255);")
                 self.btn_dicAttack.setVisible(True) if self.label_outputSearchNordPass.text() == '' \
                     or self.label_outputSearchNordPass.text() == 'Not found in the list' else self.btn_dicAttack.setVisible(False)
-
+    
+    # real time password detection
     def update(self):
 
         self.chk_length.setChecked(False)
@@ -76,7 +78,7 @@ class PasswordEvaluation(QDialog):
         return password
 
     def calculate_entropy(self, password):
-        
+        # check if password is empty
         if password == '':
             self.chk_length.setIcon(self.warning_icon)
             self.chk_digits.setIcon(self.warning_icon)
@@ -85,6 +87,7 @@ class PasswordEvaluation(QDialog):
             self.chk_special.setIcon(self.warning_icon)
             return 0
     
+        # Sum the number of possible characters
         possible_characters = 0
         if self.chk_digits.isChecked(): # 0-9
             possible_characters += 10
@@ -94,6 +97,7 @@ class PasswordEvaluation(QDialog):
             possible_characters += 26
         if self.chk_special.isChecked(): # !@#$%^&*()_+-=
             possible_characters += 32
+
         # Calculate the entropy using the formula log2(possible_characters^password_length)
         entropy = log2(possible_characters**len(password))
         return entropy
@@ -125,6 +129,7 @@ class PasswordEvaluation(QDialog):
             seconds = f'{seconds:.0f}'
             seconds = int(seconds)
 
+            # Convert seconds to years, months, weeks, days, hours, minutes, seconds
             minutes, seconds = divmod(seconds, 60)
             hours, minutes = divmod(minutes, 60)
             days, hours = divmod(hours, 24)
@@ -133,6 +138,7 @@ class PasswordEvaluation(QDialog):
             years, months = divmod(months, 12)
             
             time_parts = []
+            # Show time to crack all units
             if years > 0:
                 time_parts.append(f"{years} year{'s' if years != 1 else ''}")
             if months > 0:
@@ -168,7 +174,7 @@ class PasswordEvaluation(QDialog):
         filepath, _ = QFileDialog.getOpenFileName(
             self,
            "Open Wordlist File", 
-            "D:\\icons\\avatar\\", 
+            os.getcwd(),
             "Text Files (*.txt)",
         )
         file_name = QFileInfo(filepath).fileName()

@@ -3288,7 +3288,7 @@ class Ui_Form(object):
         self.gridLayout.addWidget(self.background, 0, 1, 1, 1)
 
         self.retranslateUi(Form)
-        self.stackedWidget.setCurrentIndex(6)
+        self.stackedWidget.setCurrentIndex(7)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):

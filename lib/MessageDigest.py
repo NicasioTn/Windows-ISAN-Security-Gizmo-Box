@@ -1,12 +1,13 @@
 import os
-from PyQt6.QtWidgets import QFileDialog, QDialog
-from PyQt6.QtGui import QPixmap
-from pathlib import Path
 import hashlib
 import qrcode
 import requests
 import pyperclip
 import configparser
+from PyQt6.QtWidgets import QFileDialog, QDialog
+from PyQt6.QtGui import QPixmap
+from pathlib import Path
+
 
 class MessageDigest(QDialog):
 
@@ -16,6 +17,8 @@ class MessageDigest(QDialog):
     def saveAPIKey(self):
         self.lineAPIKey = self.lineEdit_digest_2.text()
         print(self.lineAPIKey)
+
+        # save api key to file init.conf
         config = configparser.ConfigParser()
         configFilePath = './data/init.conf'
         config.read(configFilePath)
@@ -42,6 +45,7 @@ class MessageDigest(QDialog):
         self.lineEdit_outputTextDigest.setStyleSheet("border: 1px solid black;")
         self.lineEdit_outputTextDigest.setPlaceholderText('')
         self.label_type.setText('Type')
+
         #fetch API Key from config file
         config = configparser.ConfigParser()
         configFilePath = './data/init.conf'
@@ -311,13 +315,11 @@ class MessageDigest(QDialog):
             print (f"This is file hash {type}: {file_hashed}") 
             self.lineEdit_outputTextDigest.setText(f'{file_hashed}')
         
-        
-
     def saveQRCode(self):
         pathfile, ok = QFileDialog.getSaveFileName(
             self,
             "Save File",
-            "",
+            os.getcwd(),
             "Images (*.png *.jpg)")
         
         # Check if a filename was provided
@@ -410,6 +412,7 @@ class MessageDigest(QDialog):
             
     def copyOutput(self):
         clipboard = self.lineEdit_outputTextDigest.text()
+        # copy to clipboard
         if clipboard == '':
             self.lineEdit_outputTextDigest.setPlaceholderText("Empty")
             self.lineEdit_outputTextDigest.setStyleSheet("border: 1px solid red;")

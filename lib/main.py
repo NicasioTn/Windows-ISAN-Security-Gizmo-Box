@@ -32,7 +32,7 @@ class Main(QDialog):
         super(Main, self).__init__()
         loadUi("./assets/ui/mainUI.ui", self)
 
-        # initialize 
+        # initialize Icon
         self.setWindowTitle("ISAN Security Gizmo Box v1.0")
         self.setWindowIcon(QIcon("./assets/icons/icons8-stan-marsh-96.png"))
         self.hide_icon = QIcon("./assets/icons/icon_closedeye.png")
@@ -42,8 +42,13 @@ class Main(QDialog):
         self.label_logo = QPixmap("./assets/icons/icons8-stan-marsh-96.png")
         self.image_main = QPixmap("./assets/images/main.png")
 
-        self.lineEdit_password.setEchoMode(QLineEdit.EchoMode.Password)
-        self.btn_iconEye.setIcon(self.hide_icon)
+        # Event Back Button
+        self.btn_backPassword.clicked.connect(self.openAdvancedUserHome)
+        self.btn_backDic.clicked.connect(self.PasswordEvaluationHome)
+        self.btn_backDigest.clicked.connect(self.openAdvancedUserHome)
+        self.btn_backMalware.clicked.connect(self.openAdvancedUserHome)
+        self.btn_backVulner.clicked.connect(self.openNetworkUserHome)
+        self.btn_backHttps.clicked.connect(self.openNetworkUserHome)
 
         # -------------------- Home ---------------------------------------
         self.btn_home.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_home))
@@ -64,6 +69,11 @@ class Main(QDialog):
         self.btn_https.clicked.connect(self.openHttpsHome)
 
         # --------------------- Password Evaluation -------------------------
+
+        # Initialize the password field
+        self.btn_iconEye.setIcon(self.hide_icon)
+        self.lineEdit_password.setEchoMode(QLineEdit.EchoMode.Password)
+        
         # Load the list of weak passwords
         with open('./data/nordpass_wordlist.json', 'r') as openfile:
             json_object = json.load(openfile)
@@ -71,6 +81,7 @@ class Main(QDialog):
         for item in json_object:
             self.nordpass_common_passwords.append(str(item['Password']))
 
+        # Check if the password field is empty
         if self.lineEdit_password.text() == '':
             self.chk_length.setIcon(self.warning_icon)
             self.chk_digits.setIcon(self.warning_icon)
@@ -82,35 +93,27 @@ class Main(QDialog):
             self.label_outputPasswordStrength.setText('no password')
             self.label_outputEntropy.setText('0 Bits')
 
-        # Back button
-        self.btn_backPassword.clicked.connect(self.openAdvancedUserHome)
-        self.btn_backDic.clicked.connect(self.PasswordEvaluationHome)
-        self.btn_backDigest.clicked.connect(self.openAdvancedUserHome)
-        self.btn_backMalware.clicked.connect(self.openAdvancedUserHome)
-        self.btn_backVulner.clicked.connect(self.openNetworkUserHome)
-        self.btn_backHttps.clicked.connect(self.openNetworkUserHome)
-
-        self.btn_iconEye.clicked.connect(self.btn_hidePwd)
+        # Detect changes in the password field
         self.lineEdit_password.textChanged.connect(self.getPassword)
+        
+        # Event Button Page Password Evaluation
+        self.btn_iconEye.clicked.connect(self.btn_hidePwd)
         self.btn_dicAttack.clicked.connect(self.Passowrd_Dictionary_Attack)
+
         ### --------------------- Dictionary Attack -------------------------
+
+        # Event Button Page Dictionary Attack
         self.btn_openDic.clicked.connect(lambda: PasswordEvaluation.open_file_wordlist(self))
         self.btn_clearDic.clicked.connect(lambda: PasswordEvaluation.clear(self))
         self.btn_rockyou.clicked.connect(lambda: self.lineEdit_inputFileDic.setText("rockyou.txt"))
         self.btn_crackstation.clicked.connect(lambda: self.lineEdit_inputFileDic.setText("crackstation.txt"))
         
         # --------------------- Message Digest ------------------------------
+
         # Load the list of hints from the JSON file
         with open('./data/hint.json', 'r') as openfile:
             json_object = json.load(openfile)
-        
-        # Load the API key from the config file and display it in the textbox
-        # with open('./data/init.conf', 'r') as config_file:
-        #     self.lineAPIKey = config_file.read()
-        #     if self.lineAPIKey != '':
-        #         self.lineEdit_digest_2.setText(self.lineAPIKey)
-        #     config_file.close()
-        
+    
         # Fetch API Key from config file
         config = configparser.ConfigParser()
         configFilePath = './data/init.conf'
@@ -125,6 +128,7 @@ class Main(QDialog):
         for item in json_object:
             self.hint_btn.append(str(item['tool_description'])) 
         
+        # Event Button Page Message Digest
         self.btn_openDigest.clicked.connect(self.openFileDialog)
         self.btn_clearDigest.clicked.connect(lambda: MessageDigest.clear(self))
         self.btn_saveQR.clicked.connect(lambda: MessageDigest.saveQRCode(self))
@@ -133,8 +137,11 @@ class Main(QDialog):
         self.btn_copy.clicked.connect(lambda: MessageDigest.copyOutput(self))
 
         # --------------------- Malware Scan --------------------------------
+
+        # Initialize the image
         self.label_imagemalware.setPixmap(QPixmap("./assets/images/Defaultscan.png"))
 
+        # Fetch API Key from config file
         config = configparser.ConfigParser()
         configFilePath = './data/init.conf'
         config.read(configFilePath)
@@ -150,6 +157,7 @@ class Main(QDialog):
         else:
             print('Section "Malware" does not exist in the config file.')
 
+        # Event Button Page Malware Scan
         self.btn_scanMalware.clicked.connect(lambda: MalwareScanning.scanMalware(self))
         self.btn_openMalware.clicked.connect(lambda: MalwareScanning.openFileScanning(self))
         self.btn_clearMalware.clicked.connect(lambda: MalwareScanning.clear(self))
@@ -157,10 +165,17 @@ class Main(QDialog):
         self.btn_sendEmail.clicked.connect(lambda: MalwareScanning.sendEmail(self))
 
         # --------------------- Vulnerability -------------------------------
+
+        # Event Button Page Vulnerability
         self.btn_scanVulner.clicked.connect(lambda: VulnerabilityScanning.scanVulnerability(self))
         self.btn_clearVulner.clicked.connect(lambda: VulnerabilityScanning.clear(self))
+
+
         # --------------------- HTTPS Testing -------------------------------
 
+        # Event Button Page HTTPS Testing
+        self.btn_scanHttps.clicked.connect(lambda: HSTSTesting.scanHSTS(self))
+        self.btn_clearHttps.clicked.connect(lambda: HSTSTesting.clear(self))
 
     def openAdvancedUserHome(self):
         self.stackedWidget.setCurrentWidget(self.page_advanceUser)
@@ -224,6 +239,7 @@ class Main(QDialog):
 
         self.label_outputEntropy.setText(f'{entropy:.0f} bits')
 
+        # Check if password is in the list of weak passwords
         if entropy == 0:
             self.label_outputEntropy.setText(f'-- Bits')
             self.label_outputPasswordStrength.setText('')
@@ -287,7 +303,7 @@ class Main(QDialog):
         if self.lineEdit_outputTextDigest.text() != '':
             MessageDigest.qrCodeGenerator(self, self.lineEdit_outputTextDigest.text())
             MessageDigest.ShowImage_QR(self)
-        
+
     def showBtnLine(self):
         self.label_lineAPIDigest.setVisible(True)
         self.lineEdit_digest_2.setVisible(True)
