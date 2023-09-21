@@ -8,9 +8,12 @@ from PyQt6.QtWidgets import ( QApplication, QDialog, QLineEdit)
 from PyQt6.QtGui import QIcon, QPixmap
 from PyQt6.uic import loadUi
 
-from lib import  PasswordEvaluation, MessageDigest, MalwareScanning, VulnerabilityScanning, HSTSTesting
-# Set DPI Awareness
-# os.environ["QT_FONT_DPI"] = "96"
+# Import all the classes from the lib folder
+from PasswordEvaluation import *
+from MessageDigest import *
+from MalwareScanning import *
+from VulnerabilityScanning import *
+from HSTSTesting import *
 
 class Main(QDialog):
 
@@ -284,21 +287,13 @@ class Main(QDialog):
         if self.lineEdit_outputTextDigest.text() != '':
             MessageDigest.qrCodeGenerator(self, self.lineEdit_outputTextDigest.text())
             MessageDigest.ShowImage_QR(self)
-
+        
     def showBtnLine(self):
         self.label_lineAPIDigest.setVisible(True)
         self.lineEdit_digest_2.setVisible(True)
         self.btn_sendDigest.setVisible(True)
 
-
-
-
-
-
-
-
-
-
+# Run the application
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = Main()
