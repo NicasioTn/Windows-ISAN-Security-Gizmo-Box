@@ -166,7 +166,8 @@ class Main(QDialog):
         self.btn_sendEmail.clicked.connect(lambda: MalwareScanning.sendEmail(self))
 
         # --------------------- Vulnerability -------------------------------
-       
+        self.btn_scanVulner.clicked.connect(lambda: VulnerabilityScanning.scanVulnerability(self))
+        self.btn_clearVulner.clicked.connect(lambda: VulnerabilityScanning.clear(self))
         # --------------------- HTTPS Testing -------------------------------
 
 
@@ -1293,6 +1294,43 @@ class MalwareScanning():
             self.lineEdit_malware.setPlaceholderText("Email Correct")
 
         print(input_email)
+
+class VulnerabilityScanning():
+    def __init__(self):
+        super(MalwareScanning, self).__init__()
+    
+    def clear(self):
+        self.lineEdit_vulner.setText('')
+        
+    def PrepareInput(self):
+        input = self.lineEdit_vulner.text()
+        stmt_nmap = ("nmap %s" %input).split(" ")
+
+        # Remove any leading `https://` or `http://` from the target URL.
+        if stmt_nmap[1].startswith("https://"):
+            stmt_nmap[1] = stmt_nmap[1].replace("https://", "")
+        elif stmt_nmap[1].startswith("http://"):
+            stmt_nmap[1] = stmt_nmap[1].replace("http://", "")
+            
+        print(stmt_nmap[:2])
+        craft_command = " ".join(stmt_nmap[:2])
+        self.lineEdit_vulner.setPlaceholderText(craft_command)
+        return craft_command
+
+    def scanVulnerability(self):
+        if self.lineEdit_vulner.text() == '':
+            print("Data to send Empty")
+            self.lineEdit_vulner.setStyleSheet("border: 1px solid red;")
+            self.lineEdit_vulner.setPlaceholderText("Empty")
+            return
+        else:
+            self.lineEdit_vulner.setStyleSheet("border: 2px solid green;")
+            self.lineEdit_vulner.setPlaceholderText("Correct")
+        stmt_nmap = VulnerabilityScanning.PrepareInput(self)
+        #print("nmap " + input)
+        if stmt_nmap.startswith('nmap'):
+            execute_command = stmt_nmap 
+            os.system(execute_command)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
