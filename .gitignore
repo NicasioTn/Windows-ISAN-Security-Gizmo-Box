@@ -1,3 +1,4 @@
-assets/ui/mainUI.py
-data/nmap.xml
-data/MessageDigest-QRcode.py
+/assets/ui/mainUI.py
+/data/nmap.xml
+/data/MessageDigest-QRcode.py
+/lib/__pycache__/**

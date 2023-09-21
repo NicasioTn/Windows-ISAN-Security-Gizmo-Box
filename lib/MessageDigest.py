@@ -1,3 +1,4 @@
+import os
 from PyQt6.QtWidgets import QFileDialog, QDialog
 from PyQt6.QtGui import QPixmap
 from pathlib import Path
@@ -159,14 +160,10 @@ class MessageDigest(QDialog):
 
     def open_file_dialog(self):
         filename, ok = QFileDialog.getOpenFileName(
-            # self,
-            # "Select a File", 
-            # "D:\\icons\\avatar\\", 
-            # "Images (*.png *.jpg)"
             self,
             "Select a File", 
-            "D:\\icons\\avatar\\", 
-            "Text Files (*.txt);;All Files (*)" # filter file type text but can select all file
+            os.getcwd(), 
+            "All Files (*.*)" # filter file type text but can select all file
         )
         if filename:
             path = Path(filename)
