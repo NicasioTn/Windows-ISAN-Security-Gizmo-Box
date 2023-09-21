@@ -1,263 +1,187 @@
-import sys
-import os
-from math import log2
-from PyQt6.QtWidgets import ( QApplication, QLineEdit,  QWidget, QLabel, QDialog, )
-from PyQt6.QtCore import Qt
-from math import log2
+from PyQt6.QtCore import QFileInfo
+from PyQt6.QtWidgets import QDialog, QFileDialog, QLineEdit
 from PyQt6.QtGui import QIcon
-from PyQt6.uic import loadUi
-from PyQt6.QtGui import QPixmap
+from pathlib import Path
+from math import log2
 
-import json
 
 class PasswordEvaluation(QDialog):
-    
-    # Initialize the properties of the class
+
     hide = True
     
-    number = False
-    lower = False
-    upper = False
-    symbol = False
-    shift = False
-    
-    nordpass_common_passwords = []
-
     def __init__(self):
         super(PasswordEvaluation, self).__init__()
-        loadUi("./assets/ui/Password_Evaluation.ui", self)
-        # If you run on linux, you need to change the path of the ui file
-        ### loadUi("/home/kali/Gizmo/Files/Password_Evaluation.ui", self)
-        
-        self.setWindowTitle("Password Evaluation")
 
-        # Load the list of weak passwords
-        with open('./data/nordpass_wordlist.json', 'r') as openfile:
-            json_object = json.load(openfile)
-        
-        for item in json_object:
-            self.nordpass_common_passwords.append(str(item['Password'])) # Add the password to the list of weak passwords
+    def clear(self):
+        self.lineEdit_inputFileDic.setText('')
 
-
-        # Icons Init
-        self.warning_icon = QIcon("./assets/icons/warning.png")
-        self.check_icon = QIcon("./assets/icons/Checked.png")
-        self.hide_icon = QIcon("./assets/icons/hide.png")
-        self.unhid_icon = QIcon("./assets/icons/unhide.png")
-        self.logo = QPixmap("./assets/icons/logo.png")
-        self.window_icon = QIcon("./assets/icons/logo.png")
-        
-        '''
-        self.warning_icon = QIcon("/home/kali/Gizmo/Images/warning.png")
-        self.check_icon = QIcon("/home/kali/Gizmo/Images/Checked.png")
-        self.hide_icon = QIcon("/home/kali/Gizmo/Images/hide.png")
-        self.unhid_icon = QIcon("/home/kali/Gizmo/Images/unhide.png")
-        self.logo = QPixmap("/home/kali/Gizmo/Images/logo.png")
-        self.window_icon = QIcon("/home/kali/Gizmo/Images/logo.png")
-        '''
-        self.setWindowIcon(self.window_icon)
-        self.logo_Label.setPixmap(self.logo)
-        # Hide Input
-        self.show_Button.setIcon(self.hide_icon)
-        
-        self.show_Button.setStyleSheet("background-color: transparent; border: none;")
-        self.input_Text.setEchoMode(QLineEdit.EchoMode.Password)
-        self.input_Text.setMaxLength(100)
-        self.show_Button.clicked.connect(self.showPasswd)
-        # redirec to update input
-        self.input_Text.textChanged.connect(self.update)
-        
-        
-        
-        # Initial hide checkboxes
-        self.length8_check.setIcon(self.warning_icon)
-        self.number_check.setIcon(self.warning_icon)
-        self.upper_check.setIcon(self.warning_icon)
-        self.lower_check.setIcon(self.warning_icon)
-        self.symbol_check.setIcon(self.warning_icon)
-       
-        
-    def showPasswd(self):
-        if self.hide:
-            self.input_Text.setEchoMode(QLineEdit.EchoMode.Normal)
+    def show_hide_password(self):
+        if self.hide == True:
+            self.lineEdit_password.setEchoMode(QLineEdit.EchoMode.Password) 
             self.hide = False
-            self.show_Button.setIcon(self.unhid_icon)
+            self.btn_iconEye.setIcon(self.hide_icon)
+            
         else:
-            self.input_Text.setEchoMode(QLineEdit.EchoMode.Password)
+            self.lineEdit_password.setEchoMode(QLineEdit.EchoMode.Normal) 
             self.hide = True
-            self.show_Button.setIcon(self.hide_icon)
-        
-    def update(self):
-        # Get the current password from the password edit widget
-        password = self.input_Text.text()
+            self.btn_iconEye.setIcon(self.unhide_icon)
 
-        # Reset the checkbox states to unchecked
-        self.length8_check.setChecked(False)
-        self.number_check.setChecked(False)
-        self.upper_check.setChecked(False)
-        self.lower_check.setChecked(False)
-        self.symbol_check.setChecked(False)
-        
-        # Find the password in the list of weak passwords
+    def check_common_password(self, password, nordpass_common_passwords):
         if password == '':
-            self.entropy_Label.setText('')
-            self.warning_Start.setText('Start typing to see the entropy score')
-            self.quality_Label.setText('')
+            self.label_outputEntropy.setText('')
+            self.label_outputSearchNordPass.setText('Start typing to see the entropy score')
+            self.label_outputSearchNordPass.setStyleSheet("color: rgba(0, 143, 255, 255);")
+            self.label_outputPasswordStrength.setText('')
+            self.btn_dicAttack.setVisible(False)
         else:
             if password in self.nordpass_common_passwords:
                 print(self.nordpass_common_passwords.index(password))
-                self.warning_Start.setText('Found in the top 200 most common passwords by NordPass')
+                self.label_outputSearchNordPass.setText('Found in the top 200 most common passwords by NordPass')
+                self.label_outputSearchNordPass.setStyleSheet("color: red;")
+                self.btn_dicAttack.setVisible(False)
             else:
-                self.warning_Start.setText('Not found in the list')
+                self.label_outputSearchNordPass.setText('Not found in the list')
+                self.label_outputSearchNordPass.setStyleSheet("color: rgba(0, 255, 143, 255);")
+                self.btn_dicAttack.setVisible(True) if self.label_outputSearchNordPass.text() == '' \
+                    or self.label_outputSearchNordPass.text() == 'Not found in the list' else self.btn_dicAttack.setVisible(False)
+
+    def update(self):
+
+        self.chk_length.setChecked(False)
+        self.chk_digits.setChecked(False)
+        self.chk_upper.setChecked(False)
+        self.chk_lower.setChecked(False)
+        self.chk_special.setChecked(False)
         
-        
+        # Get password real time
+        password = self.lineEdit_password.text()
+
         for char in password:
             if char.isdigit():
-                self.number_check.setChecked(True)
-                self.number_check.setIcon(self.check_icon)
+                self.chk_digits.setChecked(True)
+                self.chk_digits.setIcon(self.check_icon)
             elif char.isupper():
-                self.upper_check.setChecked(True)
-                self.upper_check.setIcon(self.check_icon)
+                self.chk_upper.setChecked(True)
+                self.chk_upper.setIcon(self.check_icon)
             elif char.islower():
-                self.lower_check.setChecked(True)
-                self.lower_check.setIcon(self.check_icon)
+                self.chk_lower.setChecked(True)
+                self.chk_lower.setIcon(self.check_icon)
             else:
-                self.symbol_check.setChecked(True)
-                self.symbol_check.setIcon(self.check_icon)
+                self.chk_special.setChecked(True)
+                self.chk_special.setIcon(self.check_icon)
                 
-            if len(self.input_Text.text()) >= 8:
-                self.length8_check.setChecked(True)
-                self.length8_check.setIcon(self.check_icon)
-        
-        # Calculate the entropy of the password
-        entropy = self.calculate_entropy(password)
-        if entropy == 0:
-            self.entropy_Label.setText(f'-- Bits')
-            self.quality_Label.setText('')
-        elif entropy > 999:
-            self.entropy_Label.setText(f'~NaN Bits')
-        else:
-            self.entropy_Label.setText(f'~{entropy:.0f} Bits')
+            if len(self.lineEdit_password.text()) >= 8:
+                self.chk_length.setChecked(True)
+                self.chk_length.setIcon(self.check_icon)
+        return password
 
-        # Check if the password meets the length and complexity requirements and display a warning if it doesn't
-        length = len(password)        
-        if length < 8:
-            self.quality_Label.setText('So very, very bad Password length should be at least 8 characters')
-            if length == 0:
-                self.quality_Label.setText('')
-        else : 
-            if entropy < 50 :
-                self.quality_Label.setText('Weak password')
-            elif entropy < 80 :
-                self.quality_Label.setText('Medium strength')
-            else:
-                self.quality_Label.setText('Good password')
-        
-        # Update the input length label
-        self.charLength8_Label.setText(f'{length} Chars')
-
-        # Update the time to crack label
-        self.time_to_crack_Label.setText(f'Time To Crack: {self.time_to_Crack()}')
-        
-        
     def calculate_entropy(self, password):
-        # Get the number of possible characters in the password
-        if password == '':
-            self.length8_check.setIcon(self.warning_icon)
-            self.number_check.setIcon(self.warning_icon)
-            self.upper_check.setIcon(self.warning_icon)
-            self.lower_check.setIcon(self.warning_icon)
-            self.symbol_check.setIcon(self.warning_icon)
-            return 0
         
+        if password == '':
+            self.chk_length.setIcon(self.warning_icon)
+            self.chk_digits.setIcon(self.warning_icon)
+            self.chk_upper.setIcon(self.warning_icon)
+            self.chk_lower.setIcon(self.warning_icon)
+            self.chk_special.setIcon(self.warning_icon)
+            return 0
+    
         possible_characters = 0
-        if self.number_check.isChecked(): # 0-9
+        if self.chk_digits.isChecked(): # 0-9
             possible_characters += 10
-        if self.upper_check.isChecked(): # A-Z
+        if self.chk_upper.isChecked(): # A-Z
             possible_characters += 26
-        if self.lower_check.isChecked(): # a-z
+        if self.chk_lower.isChecked(): # a-z
             possible_characters += 26
-        if self.symbol_check.isChecked(): # !@#$%^&*()_+-=
+        if self.chk_special.isChecked(): # !@#$%^&*()_+-=
             possible_characters += 32
         # Calculate the entropy using the formula log2(possible_characters^password_length)
-        self.total_Label.setText(f'Total {possible_characters} Chars')
-        return log2(possible_characters) * len(password)
+        entropy = log2(possible_characters**len(password))
+        return entropy
     
-
-    def time_to_Crack(self):
+    def time_to_Crack(self, password):
+        try:
+            if password == '':
+                self.chk_length.setIcon(self.warning_icon)
+                self.chk_digits.setIcon(self.warning_icon)
+                self.chk_upper.setIcon(self.warning_icon)
+                self.chk_lower.setIcon(self.warning_icon)
+                self.chk_special.setIcon(self.warning_icon)
+                return 0
         
-        # Get the current password from the password edit widget
-        password = self.input_Text.text()
+            possible_characters = 0
+            if self.chk_digits.isChecked(): # 0-9
+                possible_characters += 10
+            if self.chk_upper.isChecked(): # A-Z
+                possible_characters += 26
+            if self.chk_lower.isChecked(): # a-z
+                possible_characters += 26
+            if self.chk_special.isChecked(): # !@#$%^&*()_+-=
+                possible_characters += 32
 
-        # check if password is empty
-        if password == '':
-            self.length8_check.setIcon(self.warning_icon)
-            self.number_check.setIcon(self.warning_icon)
-            self.upper_check.setIcon(self.warning_icon)
-            self.lower_check.setIcon(self.warning_icon)
-            self.symbol_check.setIcon(self.warning_icon)
-            return 0
-        # Get the number of possible characters in the password
-        possible_characters = 0
-        if self.number_check.isChecked(): # 0-9
-            possible_characters += 10
-        if self.upper_check.isChecked(): # A-Z
-            possible_characters += 26
-        if self.lower_check.isChecked(): # a-z
-            possible_characters += 26
-        if self.symbol_check.isChecked(): # !@#$%^&*()_+-=
-            possible_characters += 32
+            combinations = possible_characters ** len(password)
+            KPS_2020 = 17042497.3 # 17 Million
+            
+            seconds = combinations / KPS_2020
+            seconds = f'{seconds:.0f}'
+            seconds = int(seconds)
 
-        passwordType = possible_characters        
-        combinations = passwordType ** len(password)
+            minutes, seconds = divmod(seconds, 60)
+            hours, minutes = divmod(minutes, 60)
+            days, hours = divmod(hours, 24)
+            weeks, days = divmod(days, 7)
+            months, weeks = divmod(weeks, 4)
+            years, months = divmod(months, 12)
+            
+            time_parts = []
+            if years > 0:
+                time_parts.append(f"{years} year{'s' if years != 1 else ''}")
+            if months > 0:
+                time_parts.append(f"{months} month{'s' if months != 1 else ''}")
+            if weeks > 0:
+                time_parts.append(f"{weeks} week{'s' if weeks != 1 else ''}")
+            if days > 0:
+                time_parts.append(f"{days} day{'s' if days != 1 else ''}")
+            if hours > 0:
+                time_parts.append(f"{hours} hour{'s' if hours != 1 else ''}")
+            if minutes > 0:
+                time_parts.append(f"{minutes} minute{'s' if minutes != 1 else ''}")
+            if seconds > 0:
+                time_parts.append(f"{seconds} second{'s' if seconds != 1 else ''}")
+            if years > 10:
+                time_parts = ['more than 10 years']
+            if time_parts == []:
+                time_parts = ['less than a second']
+
+            # Show time to crack 2 largest units
+            if len(time_parts) <= 2:
+                return " ".join(time_parts)
+            
+            largest_units = time_parts[:2]
+            return " ".join(largest_units)
         
-        KPS_2020 = 17042497.3 # 17 Million
-        seconds = combinations / KPS_2020
-        seconds = f'{seconds:.0f}'
-        seconds = int(seconds)
-
-        # hours = seconds // 3600  # Number of whole hours
-        # minutes = (seconds % 3600) // 60  # Number of whole minutes remaining
-        # seconds = seconds % 60  # Number of seconds remaining
-
-        # return f'{hours} Hours, {minutes} Minutes, {seconds} Seconds' #f'{hours}:{minutes}:{seconds}'
-
-        minutes, seconds = divmod(seconds, 60)
-        hours, minutes = divmod(minutes, 60)
-        days, hours = divmod(hours, 24)
-        weeks, days = divmod(days, 7)
-        months, weeks = divmod(weeks, 4)
-        years, months = divmod(months, 12)
-
-        if years > 10:
-            return "Please sleep wait for your next life."
+        except OverflowError as e:
+            print(f"Error: {e}")
+        except UnboundLocalError as e:
+            print(f"Error: {e}")
     
-        time_parts = []
-        if years > 0:
-            time_parts.append(f"{years} year{'s' if years != 1 else ''}")
-        if months > 0:
-            time_parts.append(f"{months} month{'s' if months != 1 else ''}")
-        if weeks > 0:
-            time_parts.append(f"{weeks} week{'s' if weeks != 1 else ''}")
-        if days > 0:
-            time_parts.append(f"{days} day{'s' if days != 1 else ''}")
-        if hours > 0:
-            time_parts.append(f"{hours} hour{'s' if hours != 1 else ''}")
-        if minutes > 0:
-            time_parts.append(f"{minutes} minute{'s' if minutes != 1 else ''}")
-        if seconds > 0:
-            time_parts.append(f"{seconds} second{'s' if seconds != 1 else ''}")
+    def open_file_wordlist(self):
+        filepath, _ = QFileDialog.getOpenFileName(
+            self,
+           "Open Wordlist File", 
+            "D:\\icons\\avatar\\", 
+            "Text Files (*.txt)",
+        )
+        file_name = QFileInfo(filepath).fileName()
+        if filepath:
+            # Process the selected filename
+            print("Selected file:", filepath)
+            
+            if filepath:
+                path = Path(filepath)
+                #self.lineEdit_inputFileDic.setText(str(path)) # show path file
+                self.lineEdit_inputFileDic.setText(file_name) # show file name
+                if path.exists() != True: # check if file exists 
+                    print(f"File exists at: {path.exists()}")
+                print(f"Get file at: {path}") 
 
-        return ", ".join(time_parts)
-
-
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    window = PasswordEvaluation()
-    window.setFixedHeight(700)
-    window.setFixedWidth(1200)
-    window.setMinimumSize(1200, 700)
-    window.setMaximumSize(1200, 700)
-    window.show()
-    sys.exit(app.exec())     
-    
+                return path

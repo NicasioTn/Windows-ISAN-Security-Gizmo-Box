@@ -770,7 +770,7 @@ border-radius: 5px;
 </string>
                  </property>
                  <property name="currentIndex">
-                  <number>0</number>
+                  <number>6</number>
                  </property>
                  <widget class="QWidget" name="page_home">
                   <property name="maximumSize">
@@ -5386,78 +5386,43 @@ border-radius: 10px;</string>
                      </property>
                      <layout class="QVBoxLayout" name="verticalLayout_34">
                       <item>
-                       <widget class="QLabel" name="label_nameVulner">
-                        <property name="font">
-                         <font>
-                          <family>Bahnschrift SemiBold</family>
-                          <pointsize>13</pointsize>
-                          <weight>75</weight>
-                          <bold>true</bold>
-                         </font>
+                       <widget class="QScrollArea" name="scrollArea">
+                        <property name="widgetResizable">
+                         <bool>true</bool>
                         </property>
-                        <property name="styleSheet">
-                         <string notr="true">color: rgb(42, 49, 66);</string>
-                        </property>
-                        <property name="text">
-                         <string>NAME</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLabel" name="label_sizeVulner">
-                        <property name="font">
-                         <font>
-                          <family>Bahnschrift SemiBold</family>
-                          <pointsize>13</pointsize>
-                          <weight>75</weight>
-                          <bold>true</bold>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">color: rgb(42, 49, 66);</string>
-                        </property>
-                        <property name="text">
-                         <string>SIZE</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLabel" name="label_dateVulner">
-                        <property name="font">
-                         <font>
-                          <family>Bahnschrift SemiBold</family>
-                          <pointsize>13</pointsize>
-                          <weight>75</weight>
-                          <bold>true</bold>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">color: rgb(42, 49, 66);
- background-color: transparent; 
-   
-</string>
-                        </property>
-                        <property name="text">
-                         <string>DATE</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLabel" name="label_typeVulner">
-                        <property name="font">
-                         <font>
-                          <family>Bahnschrift SemiBold</family>
-                          <pointsize>13</pointsize>
-                          <weight>75</weight>
-                          <bold>true</bold>
-                         </font>
-                        </property>
-                        <property name="styleSheet">
-                         <string notr="true">color: rgb(42, 49, 66);</string>
-                        </property>
-                        <property name="text">
-                         <string>TYPE</string>
-                        </property>
+                        <widget class="QWidget" name="textArea">
+                         <property name="geometry">
+                          <rect>
+                           <x>0</x>
+                           <y>0</y>
+                           <width>998</width>
+                           <height>261</height>
+                          </rect>
+                         </property>
+                         <layout class="QHBoxLayout" name="horizontalLayout_48">
+                          <item>
+                           <widget class="QWidget" name="widget_14" native="true">
+                            <layout class="QVBoxLayout" name="verticalLayout_66">
+                             <item>
+                              <widget class="QLabel" name="showVulner">
+                               <property name="font">
+                                <font>
+                                 <family>Bahnschrift SemiBold</family>
+                                 <pointsize>18</pointsize>
+                                 <weight>75</weight>
+                                 <bold>true</bold>
+                                </font>
+                               </property>
+                               <property name="text">
+                                <string/>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
                        </widget>
                       </item>
                       <item alignment="Qt::AlignRight">
