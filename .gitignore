@@ -2,3 +2,4 @@
 /data/nmap.xml
 /data/MessageDigest-QRcode.py
 /lib/__pycache__/**
+/lib/__pycache__/*.pyc
