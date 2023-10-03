@@ -175,7 +175,7 @@ class Main(QDialog):
 
         # Event Button Page HTTPS Testing
         self.btn_scanHttps.clicked.connect(lambda: HSTSTesting.scanHSTS(self))
-        self.btn_clearHttps.clicked.connect(lambda: HSTSTesting.clear(self))
+        #self.btn_clearHttps.clicked.connect(lambda: HSTSTesting.clear(self))
 
     def openAdvancedUserHome(self):
         self.stackedWidget.setCurrentWidget(self.page_advanceUser)
