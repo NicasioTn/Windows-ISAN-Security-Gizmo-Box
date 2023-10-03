@@ -5,7 +5,7 @@ import json
 import configparser
 
 from PyQt6.QtWidgets import ( QApplication, QDialog, QLineEdit)
-from PyQt6.QtGui import QIcon, QPixmap
+from PyQt6.QtGui import QIcon, QPixmap, QFont
 from PyQt6.uic import loadUi
 
 # Import all the classes from the lib folder
@@ -16,7 +16,7 @@ from VulnerabilityScanning import *
 from HSTSTesting import *
 
 class Main(QDialog):
-
+    
     algorithm = ''
     nordpass_common_passwords = []
     hint_btn = []
