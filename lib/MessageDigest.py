@@ -15,7 +15,7 @@ class MessageDigest(QDialog):
         super(MessageDigest, self).__init__()
         
     def saveAPIKey(self):
-        self.lineAPIKey = self.lineEdit_digest_2.text()
+        self.lineAPIKey = self.lineEdit_tokenMSDigest.text()
         print(self.lineAPIKey)
 
         # save api key to file init.conf
@@ -33,18 +33,19 @@ class MessageDigest(QDialog):
             config.write(configfile)
 
     def clear (self):
-        self.lineEdit_digest.setText('')
+        self.lineEdit_MSdigest.setText('')
         self.label_QRCode.clear()
         self.dropdown_sha2.setCurrentIndex(0)
         self.dropdown_sha3.setCurrentIndex(0)
         self.label_lineAPIDigest.setVisible(False)
-        self.lineEdit_digest_2.setVisible(False)
-        self.btn_sendDigest.setVisible(False)
-        self.lineEdit_digest_2.setText('')
-        self.lineEdit_outputTextDigest.setText('')
-        self.lineEdit_outputTextDigest.setStyleSheet("border: 1px solid black;")
-        self.lineEdit_outputTextDigest.setPlaceholderText('')
+        self.lineEdit_tokenMSDigest.setVisible(False)
+        self.btn_sendMSDigest.setVisible(False)
+        self.lineEdit_tokenMSDigest.setText('')
+        self.lineEdit_outputTextMSDigest.setText('')
+        self.lineEdit_outputTextMSDigest.setStyleSheet("border: 1px solid black;")
+        self.lineEdit_outputTextMSDigest.setPlaceholderText('')
         self.label_type.setText('Type')
+        self.btn_saveQR.setText('SAVE')
 
         #fetch API Key from config file
         config = configparser.ConfigParser()
@@ -52,7 +53,7 @@ class MessageDigest(QDialog):
         config.read(configFilePath)
         if 'LineNotify' in config:
             line_api_key = config.get('LineNotify', 'LineAPIKEY')
-            self.lineEdit_digest_2.setText(line_api_key)
+            self.lineEdit_tokenMSDigest.setText(line_api_key)
             print(f'Line API Key: {line_api_key}')
         else:
             print('Section "LineNotify" does not exist in the config file.')
@@ -60,57 +61,57 @@ class MessageDigest(QDialog):
     def hash(self, type):
         #print(self.dropdown_sha2.currentText())
         if type == "md5":
-            self.lineEdit_outputTextDigest.setText(MessageDigest.md5(self, self.lineEdit_digest.text())) \
-                if self.lineEdit_digest.text() != '' else self.lineEdit_outputTextDigest.setText('')
+            self.lineEdit_outputTextMSDigest.setText(MessageDigest.md5(self, self.lineEdit_MSdigest.text())) \
+                if self.lineEdit_MSdigest.text() != '' else self.lineEdit_outputTextMSDigest.setText('')
             self.algorithm = 'MD5'
             
         elif type == "sha1":
-            self.lineEdit_outputTextDigest.setText(MessageDigest.sha1(self, self.lineEdit_digest.text())) \
-                if self.lineEdit_digest.text() != '' else self.lineEdit_outputTextDigest.setText('')
+            self.lineEdit_outputTextMSDigest.setText(MessageDigest.sha1(self, self.lineEdit_MSdigest.text())) \
+                if self.lineEdit_MSdigest.text() != '' else self.lineEdit_outputTextMSDigest.setText('')
             self.algorithm = 'SHA-1'
             
         elif type == "sha2_224 BIT":
-            self.lineEdit_outputTextDigest.setText(MessageDigest.sha224(self, self.lineEdit_digest.text())) \
-                if self.lineEdit_digest.text() != '' else self.lineEdit_outputTextDigest.setText('')
+            self.lineEdit_outputTextMSDigest.setText(MessageDigest.sha224(self, self.lineEdit_MSdigest.text())) \
+                if self.lineEdit_MSdigest.text() != '' else self.lineEdit_outputTextMSDigest.setText('')
             self.algorithm = 'SHA2-224'
             
         elif type == "sha2_256 BIT":
-            self.lineEdit_outputTextDigest.setText(MessageDigest.sha256(self, self.lineEdit_digest.text())) \
-                if self.lineEdit_digest.text() != '' else self.lineEdit_outputTextDigest.setText('')
+            self.lineEdit_outputTextMSDigest.setText(MessageDigest.sha256(self, self.lineEdit_MSdigest.text())) \
+                if self.lineEdit_MSdigest.text() != '' else self.lineEdit_outputTextMSDigest.setText('')
             self.algorithm = 'SHA2-256'
             
         elif type == "sha2_384 BIT":
-            self.lineEdit_outputTextDigest.setText(MessageDigest.sha384(self, self.lineEdit_digest.text())) \
-                if self.lineEdit_digest.text() != '' else self.lineEdit_outputTextDigest.setText('')
+            self.lineEdit_outputTextMSDigest.setText(MessageDigest.sha384(self, self.lineEdit_MSdigest.text())) \
+                if self.lineEdit_MSdigest.text() != '' else self.lineEdit_outputTextMSDigest.setText('')
             self.algorithm = 'SHA2-384'
             
         elif type == "sha2_512 BIT":
-            self.lineEdit_outputTextDigest.setText(MessageDigest.sha512(self, self.lineEdit_digest.text())) \
-                if self.lineEdit_digest.text() != '' else self.lineEdit_outputTextDigest.setText('')
+            self.lineEdit_outputTextMSDigest.setText(MessageDigest.sha512(self, self.lineEdit_MSdigest.text())) \
+                if self.lineEdit_MSdigest.text() != '' else self.lineEdit_outputTextMSDigest.setText('')
             self.algorithm = 'SHA2-512'
             
         elif type == "sha3_224 BIT":
-            self.lineEdit_outputTextDigest.setText(MessageDigest.sha3_224(self, self.lineEdit_digest.text())) \
-                if self.lineEdit_digest.text() != '' else self.lineEdit_outputTextDigest.setText('')
+            self.lineEdit_outputTextMSDigest.setText(MessageDigest.sha3_224(self, self.lineEdit_MSdigest.text())) \
+                if self.lineEdit_MSdigest.text() != '' else self.lineEdit_outputTextMSDigest.setText('')
             self.algorithm = 'SHA3-224'
             
         elif type == "sha3_256 BIT":
-            self.lineEdit_outputTextDigest.setText(MessageDigest.sha3_256(self, self.lineEdit_digest.text())) \
-                if self.lineEdit_digest.text() != '' else self.lineEdit_outputTextDigest.setText('')
+            self.lineEdit_outputTextMSDigest.setText(MessageDigest.sha3_256(self, self.lineEdit_MSdigest.text())) \
+                if self.lineEdit_MSdigest.text() != '' else self.lineEdit_outputTextMSDigest.setText('')
             self.algorithm = 'SHA3-256'
             
         elif type == "sha3_384 BIT":
-            self.lineEdit_outputTextDigest.setText(MessageDigest.sha3_384(self, self.lineEdit_digest.text())) \
-                if self.lineEdit_digest.text() != '' else self.lineEdit_outputTextDigest.setText('')
+            self.lineEdit_outputTextMSDigest.setText(MessageDigest.sha3_384(self, self.lineEdit_MSdigest.text())) \
+                if self.lineEdit_MSdigest.text() != '' else self.lineEdit_outputTextMSDigest.setText('')
             self.algorithm = 'SHA3-384'
             
         elif type == "sha3_512 BIT":
-            self.lineEdit_outputTextDigest.setText(MessageDigest.sha3_512(self, self.lineEdit_digest.text())) \
-                if self.lineEdit_digest.text() != '' else self.lineEdit_outputTextDigest.setText('')
+            self.lineEdit_outputTextMSDigest.setText(MessageDigest.sha3_512(self, self.lineEdit_MSdigest.text())) \
+                if self.lineEdit_MSdigest.text() != '' else self.lineEdit_outputTextMSDigest.setText('')
             self.algorithm = 'SHA3-512'
             
 
-        self.label_type.setText(self.algorithm) if self.lineEdit_digest.text() != '' else self.label_type.setText('Type')
+        self.label_type.setText(self.algorithm) if self.lineEdit_MSdigest.text() != '' else self.label_type.setText('Type')
         # reset copy button
         self.btn_copy.setText('Copy')
 
@@ -171,7 +172,7 @@ class MessageDigest(QDialog):
         )
         if filename:
             path = Path(filename)
-            self.lineEdit_digest.setText(str(path))
+            self.lineEdit_MSdigest.setText(str(path))
             if path.exists() != True: # check if file exists 
                 print(f"File exists at: {path.exists()}")
             print(f"Get file at: {path}") 
@@ -196,7 +197,7 @@ class MessageDigest(QDialog):
                     fb = f.read(BLOCK_SIZE) 
             file_hashed =  init_hash.hexdigest()
             print (f"This is file hash {type}: {file_hashed}")
-            self.lineEdit_outputTextDigest.setText(f'{file_hashed}')
+            self.lineEdit_outputTextMSDigest.setText(f'{file_hashed}')
 
         elif type == "sha1":
             init_hash = hashlib.sha1()
@@ -209,7 +210,7 @@ class MessageDigest(QDialog):
                     fb = f.read(BLOCK_SIZE) 
             file_hashed =  init_hash.hexdigest()
             print (f"This is file hash {type}: {file_hashed}")
-            self.lineEdit_outputTextDigest.setText(f'{file_hashed}')
+            self.lineEdit_outputTextMSDigest.setText(f'{file_hashed}')
 
         elif type == "sha224":
             init_hash = hashlib.sha224()
@@ -222,7 +223,7 @@ class MessageDigest(QDialog):
                     fb = f.read(BLOCK_SIZE) 
             file_hashed =  init_hash.hexdigest()
             print (f"This is file hash {type}: {file_hashed}")
-            self.lineEdit_outputTextDigest.setText(f'{file_hashed}')
+            self.lineEdit_outputTextMSDigest.setText(f'{file_hashed}')
 
         elif type == "sha256":
             init_hash = hashlib.sha256()
@@ -235,7 +236,7 @@ class MessageDigest(QDialog):
                     fb = f.read(BLOCK_SIZE) 
             file_hashed =  init_hash.hexdigest()
             print (f"This is file hash {type}: {file_hashed}")
-            self.lineEdit_outputTextDigest.setText(f'{file_hashed}')
+            self.lineEdit_outputTextMSDigest.setText(f'{file_hashed}')
 
         elif type == "sha384":
             init_hash = hashlib.sha384()
@@ -248,7 +249,7 @@ class MessageDigest(QDialog):
                     fb = f.read(BLOCK_SIZE) 
             file_hashed =  init_hash.hexdigest()
             print (f"This is file hash {type}: {file_hashed}")
-            self.lineEdit_outputTextDigest.setText(f'{file_hashed}')
+            self.lineEdit_outputTextMSDigest.setText(f'{file_hashed}')
 
         elif type == "sha512":
             init_hash = hashlib.sha512()
@@ -261,7 +262,7 @@ class MessageDigest(QDialog):
                     fb = f.read(BLOCK_SIZE) 
             file_hashed =  init_hash.hexdigest()
             print (f"This is file hash {type}: {file_hashed}")
-            self.lineEdit_outputTextDigest.setText(f'{file_hashed}')
+            self.lineEdit_outputTextMSDigest.setText(f'{file_hashed}')
 
         elif type == "sha3_224":
             init_hash = hashlib.sha3_224()
@@ -274,7 +275,7 @@ class MessageDigest(QDialog):
                     fb = f.read(BLOCK_SIZE) 
             file_hashed =  init_hash.hexdigest()
             print (f"This is file hash {type}: {file_hashed}") 
-            self.lineEdit_outputTextDigest.setText(f'{file_hashed}')
+            self.lineEdit_outputTextMSDigest.setText(f'{file_hashed}')
 
         elif type == "sha3_256":
             init_hash = hashlib.sha3_256()
@@ -287,7 +288,7 @@ class MessageDigest(QDialog):
                     fb = f.read(BLOCK_SIZE) 
             file_hashed =  init_hash.hexdigest()
             print (f"This is file hash {type}: {file_hashed}") 
-            self.lineEdit_outputTextDigest.setText(f'{file_hashed}')
+            self.lineEdit_outputTextMSDigest.setText(f'{file_hashed}')
 
         elif type == "sha3_384":
             init_hash = hashlib.sha3_384()
@@ -300,7 +301,7 @@ class MessageDigest(QDialog):
                     fb = f.read(BLOCK_SIZE) 
             file_hashed =  init_hash.hexdigest()
             print (f"This is file hash {type}: {file_hashed}") 
-            self.lineEdit_outputTextDigest.setText(f'{file_hashed}')
+            self.lineEdit_outputTextMSDigest.setText(f'{file_hashed}')
 
         elif type == "sha3_512":
             init_hash = hashlib.sha3_512()
@@ -313,7 +314,7 @@ class MessageDigest(QDialog):
                     fb = f.read(BLOCK_SIZE) 
             file_hashed =  init_hash.hexdigest()
             print (f"This is file hash {type}: {file_hashed}") 
-            self.lineEdit_outputTextDigest.setText(f'{file_hashed}')
+            self.lineEdit_outputTextMSDigest.setText(f'{file_hashed}')
         
     def saveQRCode(self):
         pathfile, ok = QFileDialog.getSaveFileName(
@@ -368,15 +369,15 @@ class MessageDigest(QDialog):
         return hashlib.sha3_512(data.encode('utf-8')).hexdigest()
     
     def processLineKey(self):
-        if self.lineEdit_digest.text() == '':
+        if self.lineEdit_MSdigest.text() == '':
             print("Data to send Empty")
-            self.lineEdit_outputTextDigest.setStyleSheet("border: 1px solid red;")
-            self.lineEdit_outputTextDigest.setPlaceholderText("Empty")
+            self.lineEdit_outputTextMSDigest.setStyleSheet("border: 1px solid red;")
+            self.lineEdit_outputTextMSDigest.setPlaceholderText("Empty")
             return 
         type = self.label_type.text()
         api_key = '6tA0qnCW3qp6jtAMEVyL2T3CIINiEusqZ3nJH5kuzKL'
-        message = self.lineEdit_outputTextDigest.text() + "\nHash Algorithms: " + type
-        token = self.lineEdit_digest_2.text()
+        message = self.lineEdit_outputTextMSDigest.text() + "\nHash Algorithms: " + type
+        token = self.lineEdit_tokenMSDigest.text()
         try:
             if token != '':
                 getQR = "./data/MessageDigest-QRCode.png"
@@ -392,31 +393,31 @@ class MessageDigest(QDialog):
                 if response.status_code == 200:
                     MessageDigest.saveAPIKey(self) # save api key to file init.conf
                     print("Image sent successfully!")
-                    self.lineEdit_digest_2.setStyleSheet("border: 1px solid green;")
+                    self.lineEdit_tokenMSDigest.setStyleSheet("border: 1px solid green;")
                 elif response.status_code == 400:
                     print("Bad request!")
-                    self.lineEdit_digest_2.setStyleSheet("border: 1px solid red;")
+                    self.lineEdit_tokenMSDigest.setStyleSheet("border: 1px solid red;")
                 elif response.status_code == 401:
                     print("Invalid access token!")
-                    self.lineEdit_digest_2.setStyleSheet("border: 1px solid orange;")
+                    self.lineEdit_tokenMSDigest.setStyleSheet("border: 1px solid orange;")
                 elif response.status_code == 500:
                     print("Server error!")
-                    self.lineEdit_digest_2.setStyleSheet("border: 1px solid yellow;")
+                    self.lineEdit_tokenMSDigest.setStyleSheet("border: 1px solid yellow;")
                 else:
                     print("Process over time.")
-                    self.lineEdit_digest_2.setStyleSheet("border: 1px solid grey;")
+                    self.lineEdit_tokenMSDigest.setStyleSheet("border: 1px solid grey;")
             else:
-                self.lineEdit_digest_2.setStyleSheet("border: 1px solid red;")
+                self.lineEdit_tokenMSDigest.setStyleSheet("border: 1px solid red;")
         except UnicodeEncodeError as e:
             print("Cannot send message to LINE")
             
     def copyOutput(self):
-        clipboard = self.lineEdit_outputTextDigest.text()
+        clipboard = self.lineEdit_outputTextMSDigest.text()
         # copy to clipboard
         if clipboard == '':
-            self.lineEdit_outputTextDigest.setPlaceholderText("Empty")
-            self.lineEdit_outputTextDigest.setStyleSheet("border: 1px solid red;")
+            self.lineEdit_outputTextMSDigest.setPlaceholderText("Empty")
+            self.lineEdit_outputTextMSDigest.setStyleSheet("border: 1px solid red;")
         else:
-            self.lineEdit_outputTextDigest.setStyleSheet("border: 1px solid green;")
+            self.lineEdit_outputTextMSDigest.setStyleSheet("border: 1px solid green;")
             self.btn_copy.setText("Copied!")
             pyperclip.copy(clipboard)

@@ -33,24 +33,24 @@ class PasswordEvaluation(QDialog):
             self.label_outputSearchNordPass.setText('Start typing to see the entropy score')
             self.label_outputSearchNordPass.setStyleSheet("color: rgba(0, 143, 255, 255);")
             self.label_outputPasswordStrength.setText('')
-            self.btn_dicAttack.setVisible(False)
+            self.btn_dictAttack.setVisible(False)
         else:
             if password in self.nordpass_common_passwords:
                 print(self.nordpass_common_passwords.index(password))
                 self.label_outputSearchNordPass.setText('Found in the top 200 most common passwords by NordPass')
                 self.label_outputSearchNordPass.setStyleSheet("color: red;")
-                self.btn_dicAttack.setVisible(False)
+                self.btn_dictAttack.setVisible(False)
             else:
                 self.label_outputSearchNordPass.setText('Not found in the list')
                 self.label_outputSearchNordPass.setStyleSheet("color: rgba(0, 255, 143, 255);")
-                self.btn_dicAttack.setVisible(True) if self.label_outputSearchNordPass.text() == '' \
-                    or self.label_outputSearchNordPass.text() == 'Not found in the list' else self.btn_dicAttack.setVisible(False)
+                self.btn_dictAttack.setVisible(True) if self.label_outputSearchNordPass.text() == '' \
+                    or self.label_outputSearchNordPass.text() == 'Not found in the list' else self.btn_dictAttack.setVisible(False)
     
     # real time password detection
     def update(self):
 
         self.chk_length.setChecked(False)
-        self.chk_digits.setChecked(False)
+        self.chk_numeric.setChecked(False)
         self.chk_upper.setChecked(False)
         self.chk_lower.setChecked(False)
         self.chk_special.setChecked(False)
@@ -60,8 +60,8 @@ class PasswordEvaluation(QDialog):
 
         for char in password:
             if char.isdigit():
-                self.chk_digits.setChecked(True)
-                self.chk_digits.setIcon(self.check_icon)
+                self.chk_numeric.setChecked(True)
+                self.chk_numeric.setIcon(self.check_icon)
             elif char.isupper():
                 self.chk_upper.setChecked(True)
                 self.chk_upper.setIcon(self.check_icon)
@@ -81,7 +81,7 @@ class PasswordEvaluation(QDialog):
         # check if password is empty
         if password == '':
             self.chk_length.setIcon(self.warning_icon)
-            self.chk_digits.setIcon(self.warning_icon)
+            self.chk_numeric.setIcon(self.warning_icon)
             self.chk_upper.setIcon(self.warning_icon)
             self.chk_lower.setIcon(self.warning_icon)
             self.chk_special.setIcon(self.warning_icon)
@@ -89,7 +89,7 @@ class PasswordEvaluation(QDialog):
     
         # Sum the number of possible characters
         possible_characters = 0
-        if self.chk_digits.isChecked(): # 0-9
+        if self.chk_numeric.isChecked(): # 0-9
             possible_characters += 10
         if self.chk_upper.isChecked(): # A-Z
             possible_characters += 26
@@ -106,14 +106,14 @@ class PasswordEvaluation(QDialog):
         try:
             if password == '':
                 self.chk_length.setIcon(self.warning_icon)
-                self.chk_digits.setIcon(self.warning_icon)
+                self.chk_numeric.setIcon(self.warning_icon)
                 self.chk_upper.setIcon(self.warning_icon)
                 self.chk_lower.setIcon(self.warning_icon)
                 self.chk_special.setIcon(self.warning_icon)
                 return 0
         
             possible_characters = 0
-            if self.chk_digits.isChecked(): # 0-9
+            if self.chk_numeric.isChecked(): # 0-9
                 possible_characters += 10
             if self.chk_upper.isChecked(): # A-Z
                 possible_characters += 26

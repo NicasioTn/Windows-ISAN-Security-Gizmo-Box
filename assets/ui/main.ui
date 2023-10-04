@@ -99,7 +99,7 @@ border-radius: 20px;</string>
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>GIZMO.png</normaloff>GIZMO.png</iconset>
+             <normaloff>../images/GIZMO.png</normaloff>../images/GIZMO.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -152,7 +152,7 @@ QPushButton:hover {
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>icon-home.png</normaloff>icon-home.png</iconset>
+             <normaloff>../icons/icon-home.png</normaloff>../icons/icon-home.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -205,7 +205,7 @@ QPushButton:hover {
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>icon-setting.png</normaloff>icon-setting.png</iconset>
+             <normaloff>../icons/icon-setting.png</normaloff>../icons/icon-setting.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -263,7 +263,7 @@ border-radius: 20px;
                          <string/>
                         </property>
                         <property name="pixmap">
-                         <pixmap>main.png</pixmap>
+                         <pixmap>../images/main.png</pixmap>
                         </property>
                         <property name="scaledContents">
                          <bool>true</bool>
@@ -383,7 +383,7 @@ QPushButton:hover {
                            </property>
                            <property name="icon">
                             <iconset>
-                             <normaloff>icons8-password-35.png</normaloff>icons8-password-35.png</iconset>
+                             <normaloff>../icons/icon-password.png</normaloff>../icons/icon-password.png</iconset>
                            </property>
                            <property name="iconSize">
                             <size>
@@ -433,7 +433,7 @@ QPushButton:hover {
                            </property>
                            <property name="icon">
                             <iconset>
-                             <normaloff>icon-malware.png</normaloff>icon-malware.png</iconset>
+                             <normaloff>../icons/icon-malware.png</normaloff>../icons/icon-malware.png</iconset>
                            </property>
                            <property name="iconSize">
                             <size>
@@ -483,7 +483,7 @@ QPushButton:hover {
                            </property>
                            <property name="icon">
                             <iconset>
-                             <normaloff>icon-digest.png</normaloff>icon-digest.png</iconset>
+                             <normaloff>../icons/icon-digest.png</normaloff>../icons/icon-digest.png</iconset>
                            </property>
                            <property name="iconSize">
                             <size>
@@ -539,7 +539,7 @@ QPushButton:hover {
                            </property>
                            <property name="icon">
                             <iconset>
-                             <normaloff>icons8-worldwide-delivery-35.png</normaloff>icons8-worldwide-delivery-35.png</iconset>
+                             <normaloff>../icons/icon-hsts.png</normaloff>../icons/icon-hsts.png</iconset>
                            </property>
                            <property name="iconSize">
                             <size>
@@ -589,7 +589,7 @@ QPushButton:hover {
                            </property>
                            <property name="icon">
                             <iconset>
-                             <normaloff>icon-vulner.png</normaloff>icon-vulner.png</iconset>
+                             <normaloff>../icons/icon-vulner.png</normaloff>../icons/icon-vulner.png</iconset>
                            </property>
                            <property name="iconSize">
                             <size>
@@ -667,7 +667,7 @@ QPushButton:hover {
                       <string/>
                      </property>
                      <property name="pixmap">
-                      <pixmap>main.png</pixmap>
+                      <pixmap>../images/main.png</pixmap>
                      </property>
                     </widget>
                    </item>
@@ -827,7 +827,7 @@ QPushButton:hover {
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>icons8-password-35.png</normaloff>icons8-password-35.png</iconset>
+                       <normaloff>../icons/icon-password.png</normaloff>../icons/icon-password.png</iconset>
                      </property>
                      <property name="iconSize">
                       <size>
@@ -877,7 +877,7 @@ QPushButton:hover {
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>icon-malware.png</normaloff>icon-malware.png</iconset>
+                       <normaloff>../icons/icon-malware.png</normaloff>../icons/icon-malware.png</iconset>
                      </property>
                      <property name="iconSize">
                       <size>
@@ -927,7 +927,7 @@ QPushButton:hover {
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>icon-digest.png</normaloff>icon-digest.png</iconset>
+                       <normaloff>../icons/icon-digest.png</normaloff>../icons/icon-digest.png</iconset>
                      </property>
                      <property name="iconSize">
                       <size>
@@ -983,7 +983,7 @@ QPushButton:hover {
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>icons8-worldwide-delivery-35.png</normaloff>icons8-worldwide-delivery-35.png</iconset>
+                       <normaloff>../icons/icon-hsts.png</normaloff>../icons/icon-hsts.png</iconset>
                      </property>
                      <property name="iconSize">
                       <size>
@@ -1033,7 +1033,7 @@ QPushButton:hover {
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>icon-vulner.png</normaloff>icon-vulner.png</iconset>
+                       <normaloff>../icons/icon-vulner.png</normaloff>../icons/icon-vulner.png</iconset>
                      </property>
                      <property name="iconSize">
                       <size>
@@ -1106,7 +1106,7 @@ QPushButton:hover {
                    <string/>
                   </property>
                   <property name="pixmap">
-                   <pixmap>advancedUser.png</pixmap>
+                   <pixmap>../images/advancedUser.png</pixmap>
                   </property>
                  </widget>
                 </item>
@@ -1162,7 +1162,7 @@ QPushButton:hover {
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>icon-password.png</normaloff>icon-password.png</iconset>
+                       <normaloff>../icons/icon-password.png</normaloff>../icons/icon-password.png</iconset>
                      </property>
                      <property name="iconSize">
                       <size>
@@ -1215,7 +1215,7 @@ QPushButton:hover {
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>icon-malware.png</normaloff>icon-malware.png</iconset>
+                       <normaloff>../icons/icon-malware.png</normaloff>../icons/icon-malware.png</iconset>
                      </property>
                      <property name="iconSize">
                       <size>
@@ -1268,7 +1268,7 @@ QPushButton:hover {
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>icon-digest.png</normaloff>icon-digest.png</iconset>
+                       <normaloff>../icons/icon-digest.png</normaloff>../icons/icon-digest.png</iconset>
                      </property>
                      <property name="iconSize">
                       <size>
@@ -1319,6 +1319,60 @@ QWidget#widget_32 {
                       <property name="spacing">
                        <number>5</number>
                       </property>
+                      <item>
+                       <widget class="QWidget" name="widget_27" native="true">
+                        <property name="minimumSize">
+                         <size>
+                          <width>1200</width>
+                          <height>60</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>1200</width>
+                          <height>60</height>
+                         </size>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true"/>
+                        </property>
+                        <layout class="QVBoxLayout" name="verticalLayout_12">
+                         <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
+                          <widget class="QLabel" name="label_Password">
+                           <property name="minimumSize">
+                            <size>
+                             <width>500</width>
+                             <height>40</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>500</width>
+                             <height>40</height>
+                            </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <family>Bahnschrift SemiBold</family>
+                             <pointsize>20</pointsize>
+                             <weight>75</weight>
+                             <bold>true</bold>
+                            </font>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">color: rgb(38, 50, 56);</string>
+                           </property>
+                           <property name="text">
+                            <string>PASSWORD EVALUATION</string>
+                           </property>
+                           <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
                       <item alignment="Qt::AlignHCenter">
                        <widget class="QLabel" name="label_searchNordpass">
                         <property name="maximumSize">
@@ -1364,60 +1418,6 @@ QWidget#widget_32 {
                       <item>
                        <widget class="QWidget" name="widget_22" native="true">
                         <layout class="QVBoxLayout" name="verticalLayout_11">
-                         <item>
-                          <widget class="QWidget" name="widget_27" native="true">
-                           <property name="minimumSize">
-                            <size>
-                             <width>1200</width>
-                             <height>60</height>
-                            </size>
-                           </property>
-                           <property name="maximumSize">
-                            <size>
-                             <width>1200</width>
-                             <height>60</height>
-                            </size>
-                           </property>
-                           <property name="styleSheet">
-                            <string notr="true"/>
-                           </property>
-                           <layout class="QVBoxLayout" name="verticalLayout_12">
-                            <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
-                             <widget class="QLabel" name="label_Password">
-                              <property name="minimumSize">
-                               <size>
-                                <width>500</width>
-                                <height>40</height>
-                               </size>
-                              </property>
-                              <property name="maximumSize">
-                               <size>
-                                <width>500</width>
-                                <height>40</height>
-                               </size>
-                              </property>
-                              <property name="font">
-                               <font>
-                                <family>Bahnschrift SemiBold</family>
-                                <pointsize>20</pointsize>
-                                <weight>75</weight>
-                                <bold>true</bold>
-                               </font>
-                              </property>
-                              <property name="styleSheet">
-                               <string notr="true">color: rgb(38, 50, 56);</string>
-                              </property>
-                              <property name="text">
-                               <string>PASSWORD EVALUATION</string>
-                              </property>
-                              <property name="alignment">
-                               <set>Qt::AlignCenter</set>
-                              </property>
-                             </widget>
-                            </item>
-                           </layout>
-                          </widget>
-                         </item>
                          <item alignment="Qt::AlignHCenter">
                           <widget class="QWidget" name="widget_26" native="true">
                            <layout class="QHBoxLayout" name="horizontalLayout_13">
@@ -1496,7 +1496,7 @@ QPushButton:hover {
                               </property>
                               <property name="icon">
                                <iconset>
-                                <normaloff>icon-visible.png</normaloff>icon-visible.png</iconset>
+                                <normaloff>../icons/icon-visible.png</normaloff>../icons/icon-visible.png</iconset>
                               </property>
                               <property name="iconSize">
                                <size>
@@ -1964,7 +1964,7 @@ border-radius: 10px;</string>
                        </widget>
                       </item>
                       <item>
-                       <widget class="QCheckBox" name="chk_numberic">
+                       <widget class="QCheckBox" name="chk_numeric">
                         <property name="minimumSize">
                          <size>
                           <width>40</width>
@@ -2277,7 +2277,7 @@ QPushButton:hover {
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>icon-visible.png</normaloff>icon-visible.png</iconset>
+                       <normaloff>../icons/icon-visible.png</normaloff>../icons/icon-visible.png</iconset>
                      </property>
                      <property name="iconSize">
                       <size>
@@ -2338,7 +2338,7 @@ QPushButton:hover {
 }
 QComboBox::down-arrow {
 	
-	image: url(&quot;D:/Project/New folder/icons8-expand-arrow-30.png&quot;);
+	image: url(&quot;D:/ISAN Security Gizmo Box/assets/icons/icons8-expand-arrow-30.png&quot;);
 
 }
 QComboBox:hover {
@@ -2469,7 +2469,7 @@ QPushButton:hover {
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>icon-folder.png</normaloff>icon-folder.png</iconset>
+                       <normaloff>../icons/icon-folder.png</normaloff>../icons/icon-folder.png</iconset>
                      </property>
                      <property name="iconSize">
                       <size>
@@ -2522,7 +2522,7 @@ QPushButton:hover {
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>icon-clear.png</normaloff>icon-clear.png</iconset>
+                       <normaloff>../icons/icon-clear.png</normaloff>../icons/icon-clear.png</iconset>
                      </property>
                      <property name="iconSize">
                       <size>
@@ -2780,7 +2780,7 @@ QPushButton:hover {
                         </property>
                         <property name="icon">
                          <iconset>
-                          <normaloff>icon-scan.png</normaloff>icon-scan.png</iconset>
+                          <normaloff>../icons/icon-scan.png</normaloff>../icons/icon-scan.png</iconset>
                         </property>
                         <property name="iconSize">
                          <size>
@@ -2833,7 +2833,7 @@ QPushButton:hover {
                         </property>
                         <property name="icon">
                          <iconset>
-                          <normaloff>icon-folder.png</normaloff>icon-folder.png</iconset>
+                          <normaloff>../icons/icon-folder.png</normaloff>../icons/icon-folder.png</iconset>
                         </property>
                         <property name="iconSize">
                          <size>
@@ -2886,7 +2886,7 @@ QPushButton:hover {
                         </property>
                         <property name="icon">
                          <iconset>
-                          <normaloff>icon-clear.png</normaloff>icon-clear.png</iconset>
+                          <normaloff>../icons/icon-clear.png</normaloff>../icons/icon-clear.png</iconset>
                         </property>
                         <property name="iconSize">
                          <size>
@@ -2974,7 +2974,7 @@ QPushButton:hover {
                             <string/>
                            </property>
                            <property name="pixmap">
-                            <pixmap>2.png</pixmap>
+                            <pixmap>../images/Defaultscan.png</pixmap>
                            </property>
                            <property name="scaledContents">
                             <bool>true</bool>
@@ -3667,6 +3667,9 @@ QLineEdit:focus {
                           <bold>true</bold>
                          </font>
                         </property>
+                        <property name="cursor">
+                         <cursorShape>PointingHandCursor</cursorShape>
+                        </property>
                         <property name="styleSheet">
                          <string notr="true">QPushButton {    
     border: 1px solid rgba(40,43,61,255) ;
@@ -3685,7 +3688,7 @@ QPushButton:hover {
                         </property>
                         <property name="icon">
                          <iconset>
-                          <normaloff>icon-folder.png</normaloff>icon-folder.png</iconset>
+                          <normaloff>../icons/icon-folder.png</normaloff>../icons/icon-folder.png</iconset>
                         </property>
                         <property name="iconSize">
                          <size>
@@ -3717,6 +3720,9 @@ QPushButton:hover {
                           <bold>true</bold>
                          </font>
                         </property>
+                        <property name="cursor">
+                         <cursorShape>PointingHandCursor</cursorShape>
+                        </property>
                         <property name="styleSheet">
                          <string notr="true">QPushButton {    
     border: 1px solid rgba(40,43,61,255) ;
@@ -3735,7 +3741,7 @@ QPushButton:hover {
                         </property>
                         <property name="icon">
                          <iconset>
-                          <normaloff>icon-clear.png</normaloff>icon-clear.png</iconset>
+                          <normaloff>../icons/icon-clear.png</normaloff>../icons/icon-clear.png</iconset>
                         </property>
                         <property name="iconSize">
                          <size>
@@ -3854,7 +3860,7 @@ QPushButton:focus {
                     <widget class="QComboBox" name="dropdown_sha2">
                      <property name="minimumSize">
                       <size>
-                       <width>120</width>
+                       <width>119</width>
                        <height>45</height>
                       </size>
                      </property>
@@ -3895,7 +3901,7 @@ QPushButton:focus {
 }
 QComboBox::down-arrow {
 	
-		image: url(&quot;D:/Project/New folder/icons8-expand-arrow-30.png&quot;);
+		image: url(&quot;D:/ISAN Security Gizmo Box/assets/icons/icons8-expand-arrow-30.png&quot;);
 }
 QComboBox:hover {
 	border: 1px solid;
@@ -3941,7 +3947,7 @@ QComboBox:hover {
                     <widget class="QComboBox" name="dropdown_sha3">
                      <property name="minimumSize">
                       <size>
-                       <width>120</width>
+                       <width>119</width>
                        <height>45</height>
                       </size>
                      </property>
@@ -3983,7 +3989,7 @@ QComboBox:hover {
 }
 QComboBox::down-arrow {
 	
-	image: url(&quot;D:/Project/New folder/icons8-expand-arrow-30.png&quot;);
+	image: url(&quot;D:/ISAN Security Gizmo Box/assets/icons/icons8-expand-arrow-30.png&quot;);
 
 }
 QComboBox:hover {
@@ -4137,6 +4143,9 @@ QLineEdit:focus {
                              <bold>true</bold>
                             </font>
                            </property>
+                           <property name="cursor">
+                            <cursorShape>PointingHandCursor</cursorShape>
+                           </property>
                            <property name="styleSheet">
                             <string notr="true">QPushButton {    
     border: 1px solid rgba(40,43,61,255) ;
@@ -4228,7 +4237,7 @@ QPushButton:hover {
                            </property>
                            <property name="icon">
                             <iconset>
-                             <normaloff>icons8-info-20.png</normaloff>icons8-info-20.png</iconset>
+                             <normaloff>../icons/icons8-info-20.png</normaloff>../icons/icons8-info-20.png</iconset>
                            </property>
                            <property name="iconSize">
                             <size>
@@ -4307,6 +4316,9 @@ QLineEdit:focus {
                              <bold>true</bold>
                             </font>
                            </property>
+                           <property name="cursor">
+                            <cursorShape>PointingHandCursor</cursorShape>
+                           </property>
                            <property name="styleSheet">
                             <string notr="true">QPushButton {    
     border: 1px solid rgba(40,43,61,255) ;
@@ -4347,7 +4359,7 @@ QPushButton:hover {
                     <widget class="QWidget" name="widget_8" native="true">
                      <layout class="QVBoxLayout" name="verticalLayout_67">
                       <item alignment="Qt::AlignHCenter">
-                       <widget class="QLabel" name="label_8">
+                       <widget class="QLabel" name="label_type">
                         <property name="font">
                          <font>
                           <family>Bahnschrift SemiBold</family>
@@ -4388,7 +4400,7 @@ QPushButton:hover {
                          <string/>
                         </property>
                         <property name="pixmap">
-                         <pixmap>QR.png</pixmap>
+                         <pixmap>../images/QR.png</pixmap>
                         </property>
                         <property name="scaledContents">
                          <bool>true</bool>
@@ -4426,6 +4438,9 @@ QPushButton:hover {
                           <bold>true</bold>
                          </font>
                         </property>
+                        <property name="cursor">
+                         <cursorShape>PointingHandCursor</cursorShape>
+                        </property>
                         <property name="styleSheet">
                          <string notr="true">QPushButton {    
     border: 1px solid rgba(40,43,61,255) ;
@@ -4444,7 +4459,7 @@ QPushButton:hover {
                         </property>
                         <property name="icon">
                          <iconset>
-                          <normaloff>icon-line.png</normaloff>icon-line.png</iconset>
+                          <normaloff>../icons/icon-line.png</normaloff>../icons/icon-line.png</iconset>
                         </property>
                         <property name="iconSize">
                          <size>
@@ -4476,6 +4491,9 @@ QPushButton:hover {
                           <bold>true</bold>
                          </font>
                         </property>
+                        <property name="cursor">
+                         <cursorShape>PointingHandCursor</cursorShape>
+                        </property>
                         <property name="styleSheet">
                          <string notr="true">QPushButton {    
     border: 1px solid rgba(40,43,61,255) ;
@@ -4490,7 +4508,7 @@ QPushButton:hover {
 </string>
                         </property>
                         <property name="text">
-                         <string>Save QR</string>
+                         <string>SAVE</string>
                         </property>
                         <property name="iconSize">
                          <size>
@@ -4544,7 +4562,7 @@ QPushButton:hover {
                    <string/>
                   </property>
                   <property name="pixmap">
-                   <pixmap>networkUser.png</pixmap>
+                   <pixmap>../images/networkUser.png</pixmap>
                   </property>
                  </widget>
                 </item>
@@ -4600,7 +4618,7 @@ QPushButton:hover {
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>icon-scan.png</normaloff>icon-scan.png</iconset>
+                       <normaloff>../icons/icon-vulner.png</normaloff>../icons/icon-vulner.png</iconset>
                      </property>
                      <property name="iconSize">
                       <size>
@@ -4653,7 +4671,7 @@ QPushButton:hover {
                      </property>
                      <property name="icon">
                       <iconset>
-                       <normaloff>icon-hsts.png</normaloff>icon-hsts.png</iconset>
+                       <normaloff>../icons/icon-hsts.png</normaloff>../icons/icon-hsts.png</iconset>
                      </property>
                      <property name="iconSize">
                       <size>
@@ -4839,7 +4857,7 @@ QLineEdit:focus {
 }
 QComboBox::down-arrow {
 	
-			image: url(&quot;D:/Project/New folder/icons8-expand-arrow-30.png&quot;);
+			image: url(&quot;D:/ISAN Security Gizmo Box/assets/icons/icons8-expand-arrow-30.png&quot;);
 
 }
 QComboBox:hover {
@@ -4975,7 +4993,7 @@ QPushButton:hover {
                         </property>
                         <property name="icon">
                          <iconset>
-                          <normaloff>icon-scan.png</normaloff>icon-scan.png</iconset>
+                          <normaloff>../icons/icon-scan.png</normaloff>../icons/icon-scan.png</iconset>
                         </property>
                         <property name="iconSize">
                          <size>
@@ -5028,7 +5046,7 @@ QPushButton:hover {
                         </property>
                         <property name="icon">
                          <iconset>
-                          <normaloff>icon-clear.png</normaloff>icon-clear.png</iconset>
+                          <normaloff>../icons/icon-clear.png</normaloff>../icons/icon-clear.png</iconset>
                         </property>
                         <property name="iconSize">
                          <size>
@@ -5055,7 +5073,7 @@ QPushButton:hover {
           </item>
          </layout>
         </widget>
-        <widget class="QWidget" name="page_https">
+        <widget class="QWidget" name="page_hsts">
          <layout class="QHBoxLayout" name="horizontalLayout_31">
           <item>
            <widget class="QWidget" name="widget_71" native="true">
@@ -5086,7 +5104,7 @@ QPushButton:hover {
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_44">
                    <item alignment="Qt::AlignLeft">
-                    <widget class="QLabel" name="label_https">
+                    <widget class="QLabel" name="label_hsts">
                      <property name="minimumSize">
                       <size>
                        <width>500</width>
@@ -5217,7 +5235,7 @@ QPushButton:hover {
                         </property>
                         <property name="icon">
                          <iconset>
-                          <normaloff>icon-scan.png</normaloff>icon-scan.png</iconset>
+                          <normaloff>../icons/icon-scan.png</normaloff>../icons/icon-scan.png</iconset>
                         </property>
                         <property name="iconSize">
                          <size>
@@ -5228,7 +5246,7 @@ QPushButton:hover {
                        </widget>
                       </item>
                       <item>
-                       <widget class="QPushButton" name="btn_clesrHttps">
+                       <widget class="QPushButton" name="btn_clesrHsts">
                         <property name="minimumSize">
                          <size>
                           <width>150</width>
@@ -5270,7 +5288,7 @@ QPushButton:hover {
                         </property>
                         <property name="icon">
                          <iconset>
-                          <normaloff>icon-clear.png</normaloff>icon-clear.png</iconset>
+                          <normaloff>../icons/icon-clear.png</normaloff>../icons/icon-clear.png</iconset>
                         </property>
                         <property name="iconSize">
                          <size>

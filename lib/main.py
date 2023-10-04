@@ -30,7 +30,7 @@ class Main(QDialog):
 
     def __init__(self):
         super(Main, self).__init__()
-        loadUi("./assets/ui/mainUI.ui", self)
+        loadUi("./assets/ui/main.ui", self)
 
         # initialize Icon
         self.setWindowTitle("ISAN Security Gizmo Box v1.0")
@@ -43,35 +43,35 @@ class Main(QDialog):
         self.image_main = QPixmap("./assets/images/main.png")
 
         # Event Back Button
-        self.btn_backPassword.clicked.connect(self.openAdvancedUserHome)
-        self.btn_backDic.clicked.connect(self.PasswordEvaluationHome)
-        self.btn_backDigest.clicked.connect(self.openAdvancedUserHome)
-        self.btn_backMalware.clicked.connect(self.openAdvancedUserHome)
-        self.btn_backVulner.clicked.connect(self.openNetworkUserHome)
-        self.btn_backHttps.clicked.connect(self.openNetworkUserHome)
+        #self.btn_backPassword.clicked.connect(self.openAdvancedUserHome)
+        #self.btn_backDic.clicked.connect(self.PasswordEvaluationHome)
+        #self.btn_backDigest.clicked.connect(self.openAdvancedUserHome)
+        #self.btn_backMalware.clicked.connect(self.openAdvancedUserHome)
+        #self.btn_backVulner.clicked.connect(self.openNetworkUserHome)
+        #self.btn_backHttps.clicked.connect(self.openNetworkUserHome)
 
         # -------------------- Home ---------------------------------------
-        self.btn_home.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_home))
-        self.btn_advanceUser.clicked.connect(self.openAdvancedUserHome)
-        self.btn_networkUser.clicked.connect(self.openNetworkUserHome)
+        self.btn_home.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.mainpage))
+        self.btn_advancedUserHome.clicked.connect(self.openAdvancedUserHome)
+        self.btn_networkUserHome.clicked.connect(self.openNetworkUserHome)
 
         # -------------------- Advance User ---------------------------------
         self.btn_advancedUserHome.clicked.connect(self.openAdvancedUserHome)
         # ------------------------------------------------------------------
         self.btn_password.clicked.connect(self.PasswordEvaluationHome)
         self.btn_malware.clicked.connect(self.openMalwareHome)
-        self.btn_digest.clicked.connect(self.openDigestHome)
+        self.btn_MSdigest.clicked.connect(self.openDigestHome)
 
         # --------------------- Network User --------------------------------
         self.btn_networkUserHome.clicked.connect(self.openNetworkUserHome)
         # ------------------------------------------------------------------
         self.btn_vulner.clicked.connect(self.openVulnerabilityHome)
-        self.btn_https.clicked.connect(self.openHttpsHome)
+        self.btn_hsts.clicked.connect(self.openHttpsHome)
 
         # --------------------- Password Evaluation -------------------------
 
         # Initialize the password field
-        self.btn_iconEye.setIcon(self.hide_icon)
+        self.btn_showPassword.setIcon(self.hide_icon)
         self.lineEdit_password.setEchoMode(QLineEdit.EchoMode.Password)
         
         # Load the list of weak passwords
@@ -84,7 +84,7 @@ class Main(QDialog):
         # Check if the password field is empty
         if self.lineEdit_password.text() == '':
             self.chk_length.setIcon(self.warning_icon)
-            self.chk_digits.setIcon(self.warning_icon)
+            self.chk_numeric.setIcon(self.warning_icon)
             self.chk_upper.setIcon(self.warning_icon)
             self.chk_lower.setIcon(self.warning_icon)
             self.chk_special.setIcon(self.warning_icon)
@@ -97,16 +97,16 @@ class Main(QDialog):
         self.lineEdit_password.textChanged.connect(self.getPassword)
         
         # Event Button Page Password Evaluation
-        self.btn_iconEye.clicked.connect(self.btn_hidePwd)
-        self.btn_dicAttack.clicked.connect(self.Passowrd_Dictionary_Attack)
+        self.btn_showPassword.clicked.connect(self.btn_hidePwd)
+        self.btn_dictAttack.clicked.connect(self.Passowrd_Dictionary_Attack)
 
         ### --------------------- Dictionary Attack -------------------------
 
         # Event Button Page Dictionary Attack
-        self.btn_openDic.clicked.connect(lambda: PasswordEvaluation.open_file_wordlist(self))
-        self.btn_clearDic.clicked.connect(lambda: PasswordEvaluation.clear(self))
-        self.btn_rockyou.clicked.connect(lambda: self.lineEdit_inputFileDic.setText("rockyou.txt"))
-        self.btn_crackstation.clicked.connect(lambda: self.lineEdit_inputFileDic.setText("crackstation.txt"))
+        self.btn_browseDict.clicked.connect(lambda: PasswordEvaluation.open_file_wordlist(self))
+        self.btn_clearDict.clicked.connect(lambda: PasswordEvaluation.clear(self))
+        #self.btn_rockyou.clicked.connect(lambda: self.lineEdit_inputFileDic.setText("rockyou.txt"))
+        #self.btn_crackstation.clicked.connect(lambda: self.lineEdit_inputFileDic.setText("crackstation.txt"))
         
         # --------------------- Message Digest ------------------------------
 
@@ -120,7 +120,7 @@ class Main(QDialog):
         config.read(configFilePath)
         if 'LineNotify' in config:
             line_api_key = config.get('LineNotify', 'LineAPIKEY')
-            self.lineEdit_digest_2.setText(line_api_key)
+            self.lineEdit_tokenMSDigest.setText(line_api_key)
             print(f'Line API Key: {line_api_key}')
         else:
             print('Section "LineNotify" does not exist in the config file.')
@@ -129,17 +129,17 @@ class Main(QDialog):
             self.hint_btn.append(str(item['tool_description'])) 
         
         # Event Button Page Message Digest
-        self.btn_openDigest.clicked.connect(self.openFileDialog)
-        self.btn_clearDigest.clicked.connect(lambda: MessageDigest.clear(self))
+        self.btn_browseMSDigest.clicked.connect(self.openFileDialog)
+        self.btn_clearMSDigest.clicked.connect(lambda: MessageDigest.clear(self))
         self.btn_saveQR.clicked.connect(lambda: MessageDigest.saveQRCode(self))
         self.btn_lineAPI.clicked.connect(self.showBtnLine)
-        self.btn_sendDigest.clicked.connect(lambda: MessageDigest.processLineKey(self))
+        self.btn_sendMSDigest.clicked.connect(lambda: MessageDigest.processLineKey(self))
         self.btn_copy.clicked.connect(lambda: MessageDigest.copyOutput(self))
 
         # --------------------- Malware Scan --------------------------------
 
         # Initialize the image
-        self.label_imagemalware.setPixmap(QPixmap("./assets/images/Defaultscan.png"))
+        self.image_analysis.setPixmap(QPixmap("./assets/images/Defaultscan.png"))
 
         # Fetch API Key from config file
         config = configparser.ConfigParser()
@@ -159,7 +159,7 @@ class Main(QDialog):
 
         # Event Button Page Malware Scan
         self.btn_scanMalware.clicked.connect(lambda: MalwareScanning.scanMalware(self))
-        self.btn_openMalware.clicked.connect(lambda: MalwareScanning.openFileScanning(self))
+        self.btn_browseMalware.clicked.connect(lambda: MalwareScanning.openFileScanning(self))
         self.btn_clearMalware.clicked.connect(lambda: MalwareScanning.clear(self))
         self.btn_createReport.clicked.connect(lambda: MalwareScanning.createReport(self))
         self.btn_sendEmail.clicked.connect(lambda: MalwareScanning.sendEmail(self))
@@ -174,15 +174,15 @@ class Main(QDialog):
         # --------------------- HTTPS Testing -------------------------------
 
         # Event Button Page HTTPS Testing
-        self.btn_scanHttps.clicked.connect(lambda: HSTSTesting.scanHSTS(self))
+        self.btn_scanHsts.clicked.connect(lambda: HSTSTesting.scanHSTS(self))
         #self.btn_clearHttps.clicked.connect(lambda: HSTSTesting.clear(self))
 
     def openAdvancedUserHome(self):
-        self.stackedWidget.setCurrentWidget(self.page_advanceUser)
+        self.stackedWidget.setCurrentWidget(self.page_advancedUser)
 
     def PasswordEvaluationHome(self):
-        self.stackedWidget.setCurrentWidget(self.page_password)
-        self.btn_dicAttack.setVisible(False)
+        self.stackedWidget.setCurrentWidget(self.page_passwordEvaluation)
+        self.btn_dictAttack.setVisible(False)
         self.label_outputSearchNordPass.setText('Start typing to see the entropy score')
     
     def Passowrd_Dictionary_Attack(self):
@@ -195,12 +195,12 @@ class Main(QDialog):
     def openDigestHome(self):
         self.stackedWidget.setCurrentWidget(self.page_messageDigest)
         self.label_lineAPIDigest.setVisible(False)
-        self.lineEdit_digest_2.setVisible(False)
-        self.btn_sendDigest.setVisible(False)
-        self.lineEdit_digest.textChanged.connect(lambda: self.checkFile_Text())
+        self.lineEdit_tokenMSDigest.setVisible(False)
+        self.btn_sendMSDigest.setVisible(False)
+        self.lineEdit_MSdigest.textChanged.connect(lambda: self.checkFile_Text())
         
     def checkFile_Text(self):
-        if os.path.exists(self.lineEdit_digest.text()) == True: # check if file exists
+        if os.path.exists(self.lineEdit_MSdigest.text()) == True: # check if file exists
             print("File")
             self.state_detect = 1
             self.btn_md5.clicked.connect(lambda: MessageDigest.fileExtract(self, "md5", self.getPath()))
@@ -222,7 +222,7 @@ class Main(QDialog):
         self.dropdown_sha3.activated.connect(self.ShowImage_QR)
 
     def openNetworkUserHome(self):
-        self.stackedWidget.setCurrentWidget(self.page_networklUser)
+        self.stackedWidget.setCurrentWidget(self.page_networkUser)
 
     def openVulnerabilityHome(self):
         self.stackedWidget.setCurrentWidget(self.page_vulnerability)
@@ -300,14 +300,14 @@ class Main(QDialog):
         return self.path
 
     def ShowImage_QR(self):
-        if self.lineEdit_outputTextDigest.text() != '':
-            MessageDigest.qrCodeGenerator(self, self.lineEdit_outputTextDigest.text())
+        if self.lineEdit_outputTextMSDigest.text() != '':
+            MessageDigest.qrCodeGenerator(self, self.lineEdit_outputTextMSDigest.text())
             MessageDigest.ShowImage_QR(self)
 
     def showBtnLine(self):
         self.label_lineAPIDigest.setVisible(True)
-        self.lineEdit_digest_2.setVisible(True)
-        self.btn_sendDigest.setVisible(True)
+        self.lineEdit_tokenMSDigest.setVisible(True)
+        self.btn_sendMSDigest.setVisible(True)
 
 # Run the application
 if __name__ == "__main__":
