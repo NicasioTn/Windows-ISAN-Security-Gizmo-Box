@@ -4,35 +4,42 @@ from PyQt6.QtWidgets import QDialog, QFileDialog, QLineEdit
 from PyQt6.QtGui import QIcon
 from pathlib import Path
 from math import log2
-
+from PyQt6.QtMultimedia import QAudioOutput, QMediaPlayer
+from PyQt6.QtCore import QUrl
 
 class PasswordEvaluation(QDialog):
 
     hide = True
-
+    
     def __init__(self):
         super(PasswordEvaluation, self).__init__()
-
+        
     def clear(self):
-        self.lineEdit_inputFileDic.setText('')
+        self.lineEdit_inputFileDict.setText('')
+        self.lineEdit_password.setText('')
+        self.lineEdit_passwordDict.setText('')
+        self.label_outputSearchNordPass.setText('Start typing to see the entropy score')
+        self.label_outputTimeToCrack.setText('no password')
+        self.label_outputPasswordStrength.setText('no password')
+        self.label_outputEntropy.setText('0 Bits')
 
     def show_hide_password(self):
         if self.hide == True:
             self.lineEdit_password.setEchoMode(QLineEdit.EchoMode.Password) 
             self.hide = False
-            self.btn_iconEye.setIcon(self.hide_icon)
+            self.btn_showPassword.setIcon(self.hide_icon)
             
         else:
             self.lineEdit_password.setEchoMode(QLineEdit.EchoMode.Normal) 
             self.hide = True
-            self.btn_iconEye.setIcon(self.unhide_icon)
+            self.btn_showPassword.setIcon(self.unhide_icon)
 
     def check_common_password(self, password, nordpass_common_passwords):
         if password == '':
             self.label_outputEntropy.setText('')
             self.label_outputSearchNordPass.setText('Start typing to see the entropy score')
             self.label_outputSearchNordPass.setStyleSheet("color: rgba(0, 143, 255, 255);")
-            self.label_outputPasswordStrength.setText('')
+            self.label_outputPasswordStrength.setText('no password')
             self.btn_dictAttack.setVisible(False)
         else:
             if password in self.nordpass_common_passwords:
@@ -48,7 +55,7 @@ class PasswordEvaluation(QDialog):
     
     # real time password detection
     def update(self):
-
+            
         self.chk_length.setChecked(False)
         self.chk_numeric.setChecked(False)
         self.chk_upper.setChecked(False)
@@ -170,6 +177,32 @@ class PasswordEvaluation(QDialog):
         except UnboundLocalError as e:
             print(f"Error: {e}")
     
+    
+            
+
+class PasswordAttack(QDialog):
+
+    hide = True
+    def __init__(self):
+        super(PasswordAttack, self).__init__()
+    
+    def init(self):
+        self.lineEdit_passwordDict.setEchoMode(QLineEdit.EchoMode.Password)
+
+    def show_hide_password(self):
+        if self.hide == True:
+            self.lineEdit_passwordDict.setEchoMode(QLineEdit.EchoMode.Password) 
+            self.hide = False
+            self.btn_showPasswordDict.setIcon(self.hide_icon)
+            
+        else:
+            self.lineEdit_passwordDict.setEchoMode(QLineEdit.EchoMode.Normal) 
+            self.hide = True
+            self.btn_showPasswordDict.setIcon(self.unhide_icon)
+
+    def clear(self):
+        self.lineEdit_inputFileDict.setText('')
+
     def open_file_wordlist(self):
         filepath, _ = QFileDialog.getOpenFileName(
             self,
@@ -184,10 +217,11 @@ class PasswordEvaluation(QDialog):
             
             if filepath:
                 path = Path(filepath)
-                #self.lineEdit_inputFileDic.setText(str(path)) # show path file
-                self.lineEdit_inputFileDic.setText(file_name) # show file name
+                #self.lineEdit_inputFileDict.setText(str(path)) # show path file
+                self.lineEdit_inputFileDict.setText(file_name) # show file name
                 if path.exists() != True: # check if file exists 
                     print(f"File exists at: {path.exists()}")
                 print(f"Get file at: {path}") 
 
                 return path
+    

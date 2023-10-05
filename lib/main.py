@@ -52,6 +52,8 @@ class Main(QDialog):
 
         # -------------------- Home ---------------------------------------
         self.btn_home.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.mainpage))
+        self.btn_home.clicked.connect(lambda: PasswordEvaluation.clear(self))
+
         self.btn_advancedUserHome.clicked.connect(self.openAdvancedUserHome)
         self.btn_networkUserHome.clicked.connect(self.openNetworkUserHome)
 
@@ -103,10 +105,9 @@ class Main(QDialog):
         ### --------------------- Dictionary Attack -------------------------
 
         # Event Button Page Dictionary Attack
-        self.btn_browseDict.clicked.connect(lambda: PasswordEvaluation.open_file_wordlist(self))
-        self.btn_clearDict.clicked.connect(lambda: PasswordEvaluation.clear(self))
-        #self.btn_rockyou.clicked.connect(lambda: self.lineEdit_inputFileDic.setText("rockyou.txt"))
-        #self.btn_crackstation.clicked.connect(lambda: self.lineEdit_inputFileDic.setText("crackstation.txt"))
+        self.btn_browseDict.clicked.connect(lambda: PasswordAttack.open_file_wordlist(self))
+        self.btn_clearDict.clicked.connect(lambda: PasswordAttack.clear(self))
+        self.btn_showPasswordDict.clicked.connect(lambda: PasswordAttack.show_hide_password(self))
         
         # --------------------- Message Digest ------------------------------
 
@@ -186,8 +187,11 @@ class Main(QDialog):
         self.label_outputSearchNordPass.setText('Start typing to see the entropy score')
     
     def Passowrd_Dictionary_Attack(self):
-        self.lineEdit_passwordDic.setText(self.lineEdit_password.text())
-        self.stackedWidget.setCurrentWidget(self.page_dictionary)
+        self.lineEdit_passwordDict.setText(self.lineEdit_password.text())
+        self.stackedWidget.setCurrentWidget(self.page_passwordAttack)
+        PasswordAttack.init(self)
+        
+        
 
     def openMalwareHome(self):
         self.stackedWidget.setCurrentWidget(self.page_malware)
@@ -315,6 +319,7 @@ if __name__ == "__main__":
     window = Main()
     window.show()
 
+    # Exit the application
     try:
         sys.exit(app.exec())     
     except SystemExit:
