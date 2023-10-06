@@ -12,8 +12,9 @@ class PasswordEvaluation(QDialog):
     hide = True
     
     def __init__(self):
-        super(PasswordEvaluation, self).__init__()
-        
+        #super(PasswordEvaluation, self).__init__()
+        super().__init__()  
+
     def clear(self):
         self.lineEdit_inputFileDict.setText('')
         self.lineEdit_password.setText('')
@@ -184,8 +185,9 @@ class PasswordAttack(QDialog):
 
     hide = True
     def __init__(self):
-        super(PasswordAttack, self).__init__()
-    
+        #super(PasswordAttack, self).__init__()
+        super().__init__()
+
     def init(self):
         self.lineEdit_passwordDict.setEchoMode(QLineEdit.EchoMode.Password)
 
