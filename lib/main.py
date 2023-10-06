@@ -4,9 +4,10 @@ import os
 import json
 import configparser
 
-from PyQt6.QtWidgets import ( QApplication, QDialog, QLineEdit)
+from PyQt6.QtWidgets import ( QApplication, QDialog, QLineEdit, )
 from PyQt6.QtGui import QIcon, QPixmap, QFont
 from PyQt6.uic import loadUi
+from PyQt6.QtCore import Qt
 
 # Import all the classes from the lib folder
 from PasswordEvaluation import *
@@ -31,7 +32,16 @@ class Main(QDialog):
     def __init__(self):
         super(Main, self).__init__()
         loadUi("./assets/ui/main.ui", self)
+         
+        # Initialize the classes
+        passwordEvaluation = PasswordEvaluation()
+        passwordAttack = PasswordAttack()
+        messageDigest = MessageDigest()
+        malwareScanning = MalwareScanning()
+        vulnerabilityScanning = VulnerabilityScanning()
+        hstsTesting = HSTSTesting()
 
+        
         # initialize Icon
         self.setWindowTitle("ISAN Security Gizmo Box v1.0")
         self.setWindowIcon(QIcon("./assets/icons/icons8-stan-marsh-96.png"))
@@ -49,6 +59,9 @@ class Main(QDialog):
         #self.btn_backMalware.clicked.connect(self.openAdvancedUserHome)
         #self.btn_backVulner.clicked.connect(self.openNetworkUserHome)
         #self.btn_backHttps.clicked.connect(self.openNetworkUserHome)
+
+        # --------------------- Get Started ---------------------------------
+        self.btn_getStart.clicked.connect(self.openHomePage)
 
         # -------------------- Home ---------------------------------------
         self.btn_home.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.mainpage))
@@ -170,13 +183,31 @@ class Main(QDialog):
         # Event Button Page Vulnerability
         self.btn_scanVulner.clicked.connect(lambda: VulnerabilityScanning.scanVulnerability(self))
         self.btn_clearVulner.clicked.connect(lambda: VulnerabilityScanning.clear(self))
-
+        self.dropdown_typeScan.activated.connect(lambda: VulnerabilityScanning.typeScan(self))
 
         # --------------------- HTTPS Testing -------------------------------
 
         # Event Button Page HTTPS Testing
         self.btn_scanHsts.clicked.connect(lambda: HSTSTesting.scanHSTS(self))
         #self.btn_clearHttps.clicked.connect(lambda: HSTSTesting.clear(self))
+
+        # Hide the title bar
+        self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
+        
+        # icon application in taskbar
+        self.setWindowIcon(self.label_logo.scaled(96, 96))
+
+    def minimize(self):
+        self.showMinimized()
+
+    def maximize(self):
+        if self.isMaximized():
+            self.showNormal()
+        else:
+            self.showMaximized()
+
+    def close(self):
+        sys.exit()
 
     def openAdvancedUserHome(self):
         self.stackedWidget.setCurrentWidget(self.page_advancedUser)
@@ -191,7 +222,8 @@ class Main(QDialog):
         self.stackedWidget.setCurrentWidget(self.page_passwordAttack)
         PasswordAttack.init(self)
         
-        
+    def openHomePage(self):
+        self.stackedWidget.setCurrentWidget(self.mainpage)
 
     def openMalwareHome(self):
         self.stackedWidget.setCurrentWidget(self.page_malware)
@@ -312,6 +344,18 @@ class Main(QDialog):
         self.label_lineAPIDigest.setVisible(True)
         self.lineEdit_tokenMSDigest.setVisible(True)
         self.btn_sendMSDigest.setVisible(True)
+
+    def minimize(self):
+        self.showMinimized()
+
+    def maximize(self):
+        if self.isMaximized():
+            self.showNormal()
+        else:
+            self.showMaximized()
+
+    def close(self):
+        sys.exit()
 
 # Run the application
 if __name__ == "__main__":

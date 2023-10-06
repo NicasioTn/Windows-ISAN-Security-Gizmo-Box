@@ -12,8 +12,9 @@ from pathlib import Path
 class MessageDigest(QDialog):
 
     def __init__(self):
-        super(MessageDigest, self).__init__()
-        
+        #super(MessageDigest, self).__init__()
+        super().__init__()
+
     def saveAPIKey(self):
         self.lineAPIKey = self.lineEdit_tokenMSDigest.text()
         print(self.lineAPIKey)
@@ -375,7 +376,6 @@ class MessageDigest(QDialog):
             self.lineEdit_outputTextMSDigest.setPlaceholderText("Empty")
             return 
         type = self.label_type.text()
-        api_key = '6tA0qnCW3qp6jtAMEVyL2T3CIINiEusqZ3nJH5kuzKL'
         message = self.lineEdit_outputTextMSDigest.text() + "\nHash Algorithms: " + type
         token = self.lineEdit_tokenMSDigest.text()
         try:
