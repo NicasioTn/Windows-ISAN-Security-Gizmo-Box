@@ -126,7 +126,7 @@ class Main(QMainWindow):
         self.btn_clearDict.clicked.connect(lambda: PasswordAttack.clear(self))
         self.btn_showPasswordDict.clicked.connect(lambda: PasswordAttack.show_hide_password(self))
         self.dropdown_wordLists.activated.connect(lambda: PasswordAttack.select_wordlists(self))
-        
+        PasswordAttack.show_loadding(self)
         # --------------------- Message Digest ------------------------------
 
         # Load the list of hints from the JSON file
@@ -154,7 +154,7 @@ class Main(QMainWindow):
         self.btn_lineAPI.clicked.connect(self.showBtnLine)
         self.btn_sendMSDigest.clicked.connect(lambda: MessageDigest.processLineKey(self))
         self.btn_copy.clicked.connect(lambda: MessageDigest.copyOutput(self))
-
+        self.btn_infoToken.clicked.connect(lambda: MessageDigest.infoToken(self))
         # --------------------- Malware Scan --------------------------------
 
         # Initialize the image
@@ -230,6 +230,7 @@ class Main(QMainWindow):
         self.stackedWidget.setCurrentWidget(self.mainpage)
 
     def openMalwareHome(self):
+        MalwareScanning.show_resultimage(self, type='scan', status='default')
         self.stackedWidget.setCurrentWidget(self.page_malware)
 
     def openDigestHome(self):
@@ -237,6 +238,7 @@ class Main(QMainWindow):
         self.label_lineAPIDigest.setVisible(False)
         self.lineEdit_tokenMSDigest.setVisible(False)
         self.btn_sendMSDigest.setVisible(False)
+        self.btn_infoToken.setVisible(False)
         self.lineEdit_MSdigest.textChanged.connect(lambda: self.checkFile_Text())
         
     def checkFile_Text(self):
@@ -348,18 +350,7 @@ class Main(QMainWindow):
         self.label_lineAPIDigest.setVisible(True)
         self.lineEdit_tokenMSDigest.setVisible(True)
         self.btn_sendMSDigest.setVisible(True)
-
-    def minimize(self):
-        self.showMinimized()
-
-    def maximize(self):
-        if self.isMaximized():
-            self.showNormal()
-        else:
-            self.showMaximized()
-
-    def close(self):
-        sys.exit()
+        self.btn_infoToken.setVisible(True)
 
 # Run the application
 if __name__ == "__main__":

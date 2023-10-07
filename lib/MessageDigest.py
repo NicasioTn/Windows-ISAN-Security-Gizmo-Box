@@ -41,6 +41,7 @@ class MessageDigest(QDialog):
         self.label_lineAPIDigest.setVisible(False)
         self.lineEdit_tokenMSDigest.setVisible(False)
         self.btn_sendMSDigest.setVisible(False)
+        self.btn_infoToken.setVisible(False)
         self.lineEdit_tokenMSDigest.setText('')
         self.lineEdit_outputTextMSDigest.setText('')
         self.lineEdit_outputTextMSDigest.setStyleSheet("border: 1px solid black;")
@@ -318,6 +319,11 @@ class MessageDigest(QDialog):
             self.lineEdit_outputTextMSDigest.setText(f'{file_hashed}')
         
     def saveQRCode(self):
+        if self.lineEdit_outputTextMSDigest.text() == '':
+            print("Error: QR-Code is Not Generated")
+            self.lineEdit_MSdigest.setStyleSheet("border: 1px solid red;")
+            self.lineEdit_MSdigest.setPlaceholderText("Empty")
+            return
         pathfile, ok = QFileDialog.getSaveFileName(
             self,
             "Save File",
@@ -421,3 +427,9 @@ class MessageDigest(QDialog):
             self.lineEdit_outputTextMSDigest.setStyleSheet("border: 1px solid green;")
             self.btn_copy.setText("Copied!")
             pyperclip.copy(clipboard)
+    
+    def infoToken(self):
+        # Open link to browser line notify
+        import webbrowser
+        webbrowser.open('https://notify-bot.line.me/my/')
+        

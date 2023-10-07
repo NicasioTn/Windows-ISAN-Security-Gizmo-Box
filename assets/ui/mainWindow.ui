@@ -183,7 +183,7 @@ border-radius: 20px;
 </string>
       </property>
       <property name="currentIndex">
-       <number>4</number>
+       <number>5</number>
       </property>
       <widget class="QWidget" name="page_getstart">
        <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -2254,7 +2254,7 @@ QPushButton:hover {
                   <widget class="QComboBox" name="dropdown_wordLists">
                    <property name="minimumSize">
                     <size>
-                     <width>119</width>
+                     <width>101</width>
                      <height>45</height>
                     </size>
                    </property>
@@ -2591,9 +2591,6 @@ border-radius :15px;
                    </property>
                    <property name="text">
                     <string/>
-                   </property>
-                   <property name="pixmap">
-                    <pixmap>../images/beware.png</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>true</bool>
@@ -2967,11 +2964,11 @@ QPushButton:hover {
                            <height>150</height>
                           </size>
                          </property>
+                         <property name="styleSheet">
+                          <string notr="true">border-radius: 20px;</string>
+                         </property>
                          <property name="text">
                           <string/>
-                         </property>
-                         <property name="pixmap">
-                          <pixmap>../images/Defaultscan.png</pixmap>
                          </property>
                          <property name="scaledContents">
                           <bool>true</bool>
@@ -2992,6 +2989,9 @@ QPushButton:hover {
                    <layout class="QVBoxLayout" name="verticalLayout_60">
                     <item>
                      <widget class="QWidget" name="widget_86" native="true">
+                      <property name="styleSheet">
+                       <string notr="true"/>
+                      </property>
                       <layout class="QVBoxLayout" name="verticalLayout_62">
                        <item>
                         <widget class="QLabel" name="label_scanSummary_3">
@@ -3857,7 +3857,7 @@ QPushButton:focus {
                   <widget class="QComboBox" name="dropdown_sha2">
                    <property name="minimumSize">
                     <size>
-                     <width>119</width>
+                     <width>101</width>
                      <height>45</height>
                     </size>
                    </property>
@@ -3944,7 +3944,7 @@ QComboBox:hover {
                   <widget class="QComboBox" name="dropdown_sha3">
                    <property name="minimumSize">
                     <size>
-                     <width>119</width>
+                     <width>101</width>
                      <height>45</height>
                     </size>
                    </property>
@@ -4812,7 +4812,7 @@ QLineEdit:focus {
                      <widget class="QComboBox" name="dropdown_typeScan">
                       <property name="minimumSize">
                        <size>
-                        <width>119</width>
+                        <width>101</width>
                         <height>45</height>
                        </size>
                       </property>

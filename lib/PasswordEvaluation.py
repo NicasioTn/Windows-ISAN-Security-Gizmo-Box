@@ -251,3 +251,9 @@ class PasswordAttack(QDialog):
 
         return path
     
+    def show_loadding(self):
+        self.movie = QMovie("./assets/images/password-attack.gif")
+        self.movie.setCacheMode(QMovie.CacheMode.CacheAll)
+        self.movie.setSpeed(100)
+        self.label_loadding.setMovie(self.movie)
+        self.movie.start()
