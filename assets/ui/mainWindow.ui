@@ -16,7 +16,7 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_5">
     <item>
-     <widget class="QWidget" name="widget_11" native="true">
+     <widget class="QWidget" name="ToolBar" native="true">
       <property name="minimumSize">
        <size>
         <width>0</width>
@@ -185,7 +185,7 @@ border-radius: 20px;
       <property name="currentIndex">
        <number>0</number>
       </property>
-      <widget class="QWidget" name="startpage">
+      <widget class="QWidget" name="page_getstart">
        <layout class="QHBoxLayout" name="horizontalLayout_3">
         <item>
          <widget class="QWidget" name="widget" native="true">
@@ -1845,7 +1845,7 @@ border-radius: 20px;</string>
                       </property>
                      </widget>
                     </item>
-                    <item alignment="Qt::AlignRight|Qt::AlignVCenter">
+                    <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
                      <widget class="QLabel" name="label_lengthOfPassword">
                       <property name="maximumSize">
                        <size>
@@ -2254,7 +2254,7 @@ QPushButton:hover {
                   <widget class="QComboBox" name="dropdown_wordLists">
                    <property name="minimumSize">
                     <size>
-                     <width>119</width>
+                     <width>101</width>
                      <height>45</height>
                     </size>
                    </property>
@@ -2379,7 +2379,7 @@ QLineEdit:focus {
                     <bool>true</bool>
                    </property>
                    <property name="placeholderText">
-                    <string>Only text file</string>
+                    <string>Only text file (.txt)</string>
                    </property>
                   </widget>
                  </item>
@@ -2561,7 +2561,21 @@ border-radius :15px;
                </widget>
               </item>
               <item>
-               <widget class="QWidget" name="widget_59" native="true"/>
+               <widget class="QWidget" name="widget_59" native="true">
+                <widget class="QLabel" name="label_loadingAttack">
+                 <property name="geometry">
+                  <rect>
+                   <x>280</x>
+                   <y>90</y>
+                   <width>47</width>
+                   <height>13</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>TextLabel</string>
+                 </property>
+                </widget>
+               </widget>
               </item>
              </layout>
             </widget>
@@ -3817,7 +3831,7 @@ QPushButton:focus {
                   <widget class="QComboBox" name="dropdown_sha2">
                    <property name="minimumSize">
                     <size>
-                     <width>119</width>
+                     <width>101</width>
                      <height>45</height>
                     </size>
                    </property>
@@ -3904,7 +3918,7 @@ QComboBox:hover {
                   <widget class="QComboBox" name="dropdown_sha3">
                    <property name="minimumSize">
                     <size>
-                     <width>119</width>
+                     <width>101</width>
                      <height>45</height>
                     </size>
                    </property>
@@ -4772,7 +4786,7 @@ QLineEdit:focus {
                      <widget class="QComboBox" name="dropdown_typeScan">
                       <property name="minimumSize">
                        <size>
-                        <width>119</width>
+                        <width>101</width>
                         <height>45</height>
                        </size>
                       </property>

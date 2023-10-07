@@ -226,4 +226,13 @@ class PasswordAttack(QDialog):
                 print(f"Get file at: {path}") 
 
                 return path
+            
+    def select_wordlists(self):
+        wordlist = self.dropdown_wordLists.currentText()
+        print("wordlist: ", wordlist)
+        if wordlist == 'Dictionary':
+            return
+        path = Path(f"./data/wordlists/{wordlist}")
+        print("path of wordlist: ", path)
+        return path
     

@@ -7,8 +7,8 @@ class HSTSTesting(QDialog):
         super().__init__()
 
     def clear(self):
-        self.lineEdit_https.setText('')
+        self.lineEdit_hsts.setText('')
 
     def scanHSTS(self):
-        self.lineEdit_https.text()
+        self.lineEdit_hsts.text()
         print("HSTS Testing")

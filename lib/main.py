@@ -4,7 +4,7 @@ import os
 import json
 import configparser
 
-from PyQt6.QtWidgets import ( QApplication, QDialog, QLineEdit, )
+from PyQt6.QtWidgets import ( QApplication, QDialog, QLineEdit, QMainWindow )
 from PyQt6.QtGui import QIcon, QPixmap, QFont
 from PyQt6.uic import loadUi
 from PyQt6.QtCore import Qt
@@ -16,7 +16,7 @@ from MalwareScanning import *
 from VulnerabilityScanning import *
 from HSTSTesting import *
 
-class Main(QDialog):
+class Main(QMainWindow):
     
     algorithm = ''
     nordpass_common_passwords = []
@@ -31,7 +31,7 @@ class Main(QDialog):
 
     def __init__(self):
         super(Main, self).__init__()
-        loadUi("./assets/ui/main.ui", self)
+        loadUi("./assets/ui/mainWindow.ui", self)
          
         # Initialize the classes
         passwordEvaluation = PasswordEvaluation()
@@ -41,7 +41,6 @@ class Main(QDialog):
         vulnerabilityScanning = VulnerabilityScanning()
         hstsTesting = HSTSTesting()
 
-        
         # initialize Icon
         self.setWindowTitle("ISAN Security Gizmo Box v1.0")
         self.setWindowIcon(QIcon("./assets/icons/icons8-stan-marsh-96.png"))
@@ -66,6 +65,11 @@ class Main(QDialog):
         # -------------------- Home ---------------------------------------
         self.btn_home.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.mainpage))
         self.btn_home.clicked.connect(lambda: PasswordEvaluation.clear(self))
+        self.btn_home.clicked.connect(lambda: PasswordAttack.clear(self))
+        self.btn_home.clicked.connect(lambda: MessageDigest.clear(self))
+        self.btn_home.clicked.connect(lambda: MalwareScanning.clear(self))
+        self.btn_home.clicked.connect(lambda: VulnerabilityScanning.clear(self))
+        self.btn_home.clicked.connect(lambda: HSTSTesting.clear(self))
 
         self.btn_advancedUserHome.clicked.connect(self.openAdvancedUserHome)
         self.btn_networkUserHome.clicked.connect(self.openNetworkUserHome)
@@ -121,6 +125,7 @@ class Main(QDialog):
         self.btn_browseDict.clicked.connect(lambda: PasswordAttack.open_file_wordlist(self))
         self.btn_clearDict.clicked.connect(lambda: PasswordAttack.clear(self))
         self.btn_showPasswordDict.clicked.connect(lambda: PasswordAttack.show_hide_password(self))
+        self.dropdown_wordLists.activated.connect(lambda: PasswordAttack.select_wordlists(self))
         
         # --------------------- Message Digest ------------------------------
 
@@ -263,7 +268,7 @@ class Main(QDialog):
         self.stackedWidget.setCurrentWidget(self.page_vulnerability)
     
     def openHttpsHome(self):
-        self.stackedWidget.setCurrentWidget(self.page_https)
+        self.stackedWidget.setCurrentWidget(self.page_hsts)
     
     def btn_hidePwd(self):
         PasswordEvaluation.show_hide_password(self)
