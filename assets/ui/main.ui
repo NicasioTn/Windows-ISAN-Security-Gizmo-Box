@@ -329,7 +329,7 @@ border-radius: 20px;
 </string>
         </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>1</number>
         </property>
         <widget class="QWidget" name="startpage">
          <layout class="QHBoxLayout" name="horizontalLayout_3">
