@@ -2576,7 +2576,7 @@ border-radius :15px;
                 </property>
                 <layout class="QHBoxLayout" name="horizontalLayout">
                  <item>
-                  <widget class="QLabel" name="label">
+                  <widget class="QLabel" name="label_loadding">
                    <property name="minimumSize">
                     <size>
                      <width>400</width>
