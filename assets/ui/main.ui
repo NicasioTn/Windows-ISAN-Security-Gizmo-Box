@@ -215,6 +215,106 @@ QPushButton:hover {
            </property>
           </widget>
          </item>
+         <item>
+          <widget class="QPushButton" name="pushButton">
+           <property name="minimumSize">
+            <size>
+             <width>130</width>
+             <height>45</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>130</width>
+             <height>45</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Bahnschrift SemiBold</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 20px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
+}
+
+QPushButton:hover {
+    background-color: ;
+}
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>C:/Users/kanja/Downloads/icons8-minimize-45.png</normaloff>C:/Users/kanja/Downloads/icons8-minimize-45.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>35</width>
+             <height>35</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_2">
+           <property name="minimumSize">
+            <size>
+             <width>130</width>
+             <height>45</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>130</width>
+             <height>45</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Bahnschrift SemiBold</family>
+             <pointsize>12</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 20px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
+}
+
+QPushButton:hover {
+    background-color: ;
+}
+</string>
+           </property>
+           <property name="text">
+            <string>EXIT</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>C:/Users/kanja/Downloads/icons8-exit-45.png</normaloff>C:/Users/kanja/Downloads/icons8-exit-45.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>35</width>
+             <height>35</height>
+            </size>
+           </property>
+          </widget>
+         </item>
         </layout>
        </widget>
       </item>
@@ -2300,7 +2400,7 @@ QPushButton:hover {
                     <widget class="QComboBox" name="dropdown_wordLists">
                      <property name="minimumSize">
                       <size>
-                       <width>101</width>
+                       <width>119</width>
                        <height>45</height>
                       </size>
                      </property>
@@ -3863,7 +3963,7 @@ QPushButton:focus {
                     <widget class="QComboBox" name="dropdown_sha2">
                      <property name="minimumSize">
                       <size>
-                       <width>101</width>
+                       <width>119</width>
                        <height>45</height>
                       </size>
                      </property>
@@ -3950,7 +4050,7 @@ QComboBox:hover {
                     <widget class="QComboBox" name="dropdown_sha3">
                      <property name="minimumSize">
                       <size>
-                       <width>101</width>
+                       <width>119</width>
                        <height>45</height>
                       </size>
                      </property>
@@ -4402,6 +4502,9 @@ QPushButton:hover {
                         <property name="text">
                          <string/>
                         </property>
+                        <property name="pixmap">
+                         <pixmap>../images/QR.png</pixmap>
+                        </property>
                         <property name="scaledContents">
                          <bool>true</bool>
                         </property>
@@ -4815,7 +4918,7 @@ QLineEdit:focus {
                        <widget class="QComboBox" name="dropdown_typeScan">
                         <property name="minimumSize">
                          <size>
-                          <width>101</width>
+                          <width>119</width>
                           <height>45</height>
                          </size>
                         </property>
@@ -4946,7 +5049,7 @@ QLineEdit:focus {
                          <bool>true</bool>
                         </property>
                         <property name="placeholderText">
-                         <string>command</string>
+                         <string>Only text file</string>
                         </property>
                        </widget>
                       </item>
