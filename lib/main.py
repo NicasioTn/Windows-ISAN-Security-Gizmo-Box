@@ -192,10 +192,9 @@ class Main(QDialog):
         #self.btn_clearHttps.clicked.connect(lambda: HSTSTesting.clear(self))
 
         # Hide the title bar
-        self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
-        
-        # icon application in taskbar
-        self.setWindowIcon(self.label_logo.scaled(96, 96))
+        #self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
+        #self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground) # make the background transparent
+
 
     def minimize(self):
         self.showMinimized()
