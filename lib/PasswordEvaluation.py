@@ -6,6 +6,7 @@ from pathlib import Path
 from math import log2
 from PyQt6.QtMultimedia import QAudioOutput, QMediaPlayer
 from PyQt6.QtCore import QUrl
+from PyQt6.QtGui import QMovie
 
 class PasswordEvaluation(QDialog):
 
@@ -228,11 +229,25 @@ class PasswordAttack(QDialog):
                 return path
             
     def select_wordlists(self):
+        # select wordlists
         wordlist = self.dropdown_wordLists.currentText()
         print("wordlist: ", wordlist)
+
+        # check if wordlist is empty
         if wordlist == 'Dictionary':
             return
+        
+        # get path of wordlist
         path = Path(f"./data/wordlists/{wordlist}")
         print("path of wordlist: ", path)
+
+        # check if wordlist exists
+        if path.exists() != True:
+            print(f"File exists at: {path.exists()}")
+        print(f"Get file at: {path}")
+
+        # show path of wordlist
+        self.lineEdit_inputFileDict.setText(str(path.name))
+
         return path
     
