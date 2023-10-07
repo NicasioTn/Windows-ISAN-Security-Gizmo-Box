@@ -53,7 +53,7 @@ border-radius: 20px;</string>
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/images/GIZMO.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/images/GIZMO.png</iconset>
+           <normaloff>../images/GIZMO.png</normaloff>../images/GIZMO.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -106,7 +106,7 @@ QPushButton:hover {
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-home.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-home.png</iconset>
+           <normaloff>../icons/icon-home.png</normaloff>../icons/icon-home.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -159,7 +159,7 @@ QPushButton:hover {
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-setting.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-setting.png</iconset>
+           <normaloff>../icons/icon-setting.png</normaloff>../icons/icon-setting.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -183,7 +183,7 @@ border-radius: 20px;
 </string>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="startpage">
        <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -217,7 +217,7 @@ border-radius: 20px;
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>D:/Project/ISAN-Security-Gizmo-Box/assets/images/main.png</pixmap>
+                       <pixmap>../images/main.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -337,7 +337,7 @@ QPushButton:hover {
                          </property>
                          <property name="icon">
                           <iconset>
-                           <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-password.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-password.png</iconset>
+                           <normaloff>../icons/icon-password.png</normaloff>../icons/icon-password.png</iconset>
                          </property>
                          <property name="iconSize">
                           <size>
@@ -387,7 +387,7 @@ QPushButton:hover {
                          </property>
                          <property name="icon">
                           <iconset>
-                           <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-malware.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-malware.png</iconset>
+                           <normaloff>../icons/icon-malware.png</normaloff>../icons/icon-malware.png</iconset>
                          </property>
                          <property name="iconSize">
                           <size>
@@ -437,7 +437,7 @@ QPushButton:hover {
                          </property>
                          <property name="icon">
                           <iconset>
-                           <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-digest.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-digest.png</iconset>
+                           <normaloff>../icons/icon-digest.png</normaloff>../icons/icon-digest.png</iconset>
                          </property>
                          <property name="iconSize">
                           <size>
@@ -493,7 +493,7 @@ QPushButton:hover {
                          </property>
                          <property name="icon">
                           <iconset>
-                           <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-hsts.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-hsts.png</iconset>
+                           <normaloff>../icons/icon-hsts.png</normaloff>../icons/icon-hsts.png</iconset>
                          </property>
                          <property name="iconSize">
                           <size>
@@ -543,7 +543,7 @@ QPushButton:hover {
                          </property>
                          <property name="icon">
                           <iconset>
-                           <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-vulner.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-vulner.png</iconset>
+                           <normaloff>../icons/icon-vulner.png</normaloff>../icons/icon-vulner.png</iconset>
                          </property>
                          <property name="iconSize">
                           <size>
@@ -621,7 +621,7 @@ QPushButton:hover {
                     <string/>
                    </property>
                    <property name="pixmap">
-                    <pixmap>D:/Project/ISAN-Security-Gizmo-Box/assets/images/main.png</pixmap>
+                    <pixmap>../images/main.png</pixmap>
                    </property>
                   </widget>
                  </item>
@@ -781,7 +781,7 @@ QPushButton:hover {
                    </property>
                    <property name="icon">
                     <iconset>
-                     <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-password.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-password.png</iconset>
+                     <normaloff>../icons/icon-password.png</normaloff>../icons/icon-password.png</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -831,7 +831,7 @@ QPushButton:hover {
                    </property>
                    <property name="icon">
                     <iconset>
-                     <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-malware.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-malware.png</iconset>
+                     <normaloff>../icons/icon-malware.png</normaloff>../icons/icon-malware.png</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -881,7 +881,7 @@ QPushButton:hover {
                    </property>
                    <property name="icon">
                     <iconset>
-                     <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-digest.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-digest.png</iconset>
+                     <normaloff>../icons/icon-digest.png</normaloff>../icons/icon-digest.png</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -937,7 +937,7 @@ QPushButton:hover {
                    </property>
                    <property name="icon">
                     <iconset>
-                     <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-hsts.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-hsts.png</iconset>
+                     <normaloff>../icons/icon-hsts.png</normaloff>../icons/icon-hsts.png</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -987,7 +987,7 @@ QPushButton:hover {
                    </property>
                    <property name="icon">
                     <iconset>
-                     <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-vulner.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-vulner.png</iconset>
+                     <normaloff>../icons/icon-vulner.png</normaloff>../icons/icon-vulner.png</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -1060,7 +1060,7 @@ QPushButton:hover {
                  <string/>
                 </property>
                 <property name="pixmap">
-                 <pixmap>D:/Project/ISAN-Security-Gizmo-Box/assets/images/advancedUser.png</pixmap>
+                 <pixmap>../images/advancedUser.png</pixmap>
                 </property>
                </widget>
               </item>
@@ -1116,7 +1116,7 @@ QPushButton:hover {
                    </property>
                    <property name="icon">
                     <iconset>
-                     <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-password.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-password.png</iconset>
+                     <normaloff>../icons/icon-password.png</normaloff>../icons/icon-password.png</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -1169,7 +1169,7 @@ QPushButton:hover {
                    </property>
                    <property name="icon">
                     <iconset>
-                     <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-malware.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-malware.png</iconset>
+                     <normaloff>../icons/icon-malware.png</normaloff>../icons/icon-malware.png</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -1222,7 +1222,7 @@ QPushButton:hover {
                    </property>
                    <property name="icon">
                     <iconset>
-                     <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-digest.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-digest.png</iconset>
+                     <normaloff>../icons/icon-digest.png</normaloff>../icons/icon-digest.png</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -1450,7 +1450,7 @@ QPushButton:hover {
                             </property>
                             <property name="icon">
                              <iconset>
-                              <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-visible.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-visible.png</iconset>
+                              <normaloff>../icons/icon-visible.png</normaloff>../icons/icon-visible.png</iconset>
                             </property>
                             <property name="iconSize">
                              <size>
@@ -1463,36 +1463,33 @@ QPushButton:hover {
                          </layout>
                         </widget>
                        </item>
-                      </layout>
-                     </widget>
-                    </item>
-                    <item alignment="Qt::AlignRight">
-                     <widget class="QPushButton" name="btn_dictAttack">
-                      <property name="minimumSize">
-                       <size>
-                        <width>200</width>
-                        <height>45</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>200</width>
-                        <height>40</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Bahnschrift SemiBold</family>
-                        <pointsize>12</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                      <property name="cursor">
-                       <cursorShape>PointingHandCursor</cursorShape>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">QPushButton {    
+                       <item alignment="Qt::AlignRight">
+                        <widget class="QPushButton" name="btn_dictAttack">
+                         <property name="minimumSize">
+                          <size>
+                           <width>200</width>
+                           <height>45</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>200</width>
+                           <height>40</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Bahnschrift SemiBold</family>
+                           <pointsize>12</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="cursor">
+                          <cursorShape>PointingHandCursor</cursorShape>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QPushButton {    
     border: 1px solid rgba(40,43,61,255) ;
     border-radius: 20px;
     padding: 5px 10px;
@@ -1503,10 +1500,13 @@ QPushButton:hover {
     background-color: ;
 }
 </string>
-                      </property>
-                      <property name="text">
-                       <string>Dictionary attack</string>
-                      </property>
+                         </property>
+                         <property name="text">
+                          <string>Dictionary attack</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
                      </widget>
                     </item>
                    </layout>
@@ -1677,7 +1677,7 @@ border-radius: 20px;</string>
                          </property>
                          <property name="icon">
                           <iconset>
-                           <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/ui/icons8-info-20.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/ui/icons8-info-20.png</iconset>
+                           <normaloff>../icons/icon_info.png</normaloff>../icons/icon_info.png</iconset>
                          </property>
                          <property name="iconSize">
                           <size>
@@ -1808,7 +1808,7 @@ border-radius: 20px;</string>
               <item>
                <widget class="QWidget" name="widget_25" native="true">
                 <layout class="QVBoxLayout" name="verticalLayout_15">
-                 <item alignment="Qt::AlignHCenter">
+                 <item>
                   <widget class="QWidget" name="widget_31" native="true">
                    <layout class="QHBoxLayout" name="horizontalLayout_14">
                     <property name="spacing">
@@ -1817,7 +1817,7 @@ border-radius: 20px;</string>
                     <property name="leftMargin">
                      <number>11</number>
                     </property>
-                    <item alignment="Qt::AlignLeft">
+                    <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
                      <widget class="QLabel" name="label_specialWarning">
                       <property name="maximumSize">
                        <size>
@@ -1845,7 +1845,7 @@ border-radius: 20px;</string>
                       </property>
                      </widget>
                     </item>
-                    <item>
+                    <item alignment="Qt::AlignRight|Qt::AlignVCenter">
                      <widget class="QLabel" name="label_lengthOfPassword">
                       <property name="maximumSize">
                        <size>
@@ -1907,7 +1907,7 @@ border-radius: 10px;</string>
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/ui/icon-no.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/ui/icon-no.png</iconset>
+                        <normaloff>icon-no.png</normaloff>icon-no.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -1942,7 +1942,7 @@ border-radius: 10px;</string>
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/ui/icon-no.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/ui/icon-no.png</iconset>
+                        <normaloff>icon-no.png</normaloff>icon-no.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -1977,7 +1977,7 @@ border-radius: 10px;</string>
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/ui/icon-no.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/ui/icon-no.png</iconset>
+                        <normaloff>icon-no.png</normaloff>icon-no.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -2012,7 +2012,7 @@ border-radius: 10px;</string>
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/ui/icon-no.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/ui/icon-no.png</iconset>
+                        <normaloff>icon-no.png</normaloff>icon-no.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -2050,7 +2050,7 @@ border-radius: 10px;</string>
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/ui/icon-no.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/ui/icon-no.png</iconset>
+                        <normaloff>icon-no.png</normaloff>icon-no.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -2234,7 +2234,7 @@ QPushButton:hover {
                    </property>
                    <property name="icon">
                     <iconset>
-                     <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-visible.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-visible.png</iconset>
+                     <normaloff>../icons/icon-visible.png</normaloff>../icons/icon-visible.png</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -2426,7 +2426,7 @@ QPushButton:hover {
                    </property>
                    <property name="icon">
                     <iconset>
-                     <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-folder.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-folder.png</iconset>
+                     <normaloff>../icons/icon-folder.png</normaloff>../icons/icon-folder.png</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -2479,7 +2479,7 @@ QPushButton:hover {
                    </property>
                    <property name="icon">
                     <iconset>
-                     <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-clear.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-clear.png</iconset>
+                     <normaloff>../icons/icon-clear.png</normaloff>../icons/icon-clear.png</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -2737,7 +2737,7 @@ QPushButton:hover {
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-scan.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-scan.png</iconset>
+                        <normaloff>../icons/icon-scan.png</normaloff>../icons/icon-scan.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -2790,7 +2790,7 @@ QPushButton:hover {
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-folder.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-folder.png</iconset>
+                        <normaloff>../icons/icon-folder.png</normaloff>../icons/icon-folder.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -2843,7 +2843,7 @@ QPushButton:hover {
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-clear.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-clear.png</iconset>
+                        <normaloff>../icons/icon-clear.png</normaloff>../icons/icon-clear.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -2931,7 +2931,7 @@ QPushButton:hover {
                           <string/>
                          </property>
                          <property name="pixmap">
-                          <pixmap>D:/Project/ISAN-Security-Gizmo-Box/assets/images/Defaultscan.png</pixmap>
+                          <pixmap>../images/Defaultscan.png</pixmap>
                          </property>
                          <property name="scaledContents">
                           <bool>true</bool>
@@ -3645,7 +3645,7 @@ QPushButton:hover {
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-folder.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-folder.png</iconset>
+                        <normaloff>../icons/icon-folder.png</normaloff>../icons/icon-folder.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -3698,7 +3698,7 @@ QPushButton:hover {
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-clear.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-clear.png</iconset>
+                        <normaloff>../icons/icon-clear.png</normaloff>../icons/icon-clear.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -4194,7 +4194,7 @@ QPushButton:hover {
                          </property>
                          <property name="icon">
                           <iconset>
-                           <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icons8-info-20.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icons8-info-20.png</iconset>
+                           <normaloff>../icons/icons8-info-20.png</normaloff>../icons/icons8-info-20.png</iconset>
                          </property>
                          <property name="iconSize">
                           <size>
@@ -4357,7 +4357,7 @@ QPushButton:hover {
                        <string/>
                       </property>
                       <property name="pixmap">
-                       <pixmap>D:/Project/ISAN-Security-Gizmo-Box/assets/images/QR.png</pixmap>
+                       <pixmap>../images/QR.png</pixmap>
                       </property>
                       <property name="scaledContents">
                        <bool>true</bool>
@@ -4416,7 +4416,7 @@ QPushButton:hover {
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-line.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-line.png</iconset>
+                        <normaloff>../icons/icon-line.png</normaloff>../icons/icon-line.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -4519,7 +4519,7 @@ QPushButton:hover {
                  <string/>
                 </property>
                 <property name="pixmap">
-                 <pixmap>D:/Project/ISAN-Security-Gizmo-Box/assets/images/networkUser.png</pixmap>
+                 <pixmap>../images/networkUser.png</pixmap>
                 </property>
                </widget>
               </item>
@@ -4575,7 +4575,7 @@ QPushButton:hover {
                    </property>
                    <property name="icon">
                     <iconset>
-                     <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-vulner.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-vulner.png</iconset>
+                     <normaloff>../icons/icon-vulner.png</normaloff>../icons/icon-vulner.png</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -4628,7 +4628,7 @@ QPushButton:hover {
                    </property>
                    <property name="icon">
                     <iconset>
-                     <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-hsts.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-hsts.png</iconset>
+                     <normaloff>../icons/icon-hsts.png</normaloff>../icons/icon-hsts.png</iconset>
                    </property>
                    <property name="iconSize">
                     <size>
@@ -4950,7 +4950,7 @@ QPushButton:hover {
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-scan.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-scan.png</iconset>
+                        <normaloff>../icons/icon-scan.png</normaloff>../icons/icon-scan.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -5003,7 +5003,7 @@ QPushButton:hover {
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-clear.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-clear.png</iconset>
+                        <normaloff>../icons/icon-clear.png</normaloff>../icons/icon-clear.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -5192,7 +5192,7 @@ QPushButton:hover {
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-scan.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-scan.png</iconset>
+                        <normaloff>../icons/icon-scan.png</normaloff>../icons/icon-scan.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
@@ -5245,7 +5245,7 @@ QPushButton:hover {
                       </property>
                       <property name="icon">
                        <iconset>
-                        <normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-clear.png</normaloff>D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-clear.png</iconset>
+                        <normaloff>../icons/icon-clear.png</normaloff>../icons/icon-clear.png</iconset>
                       </property>
                       <property name="iconSize">
                        <size>
