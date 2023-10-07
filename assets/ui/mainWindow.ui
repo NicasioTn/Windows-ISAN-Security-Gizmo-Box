@@ -183,7 +183,7 @@ border-radius: 20px;
 </string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>4</number>
       </property>
       <widget class="QWidget" name="page_getstart">
        <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -2254,7 +2254,7 @@ QPushButton:hover {
                   <widget class="QComboBox" name="dropdown_wordLists">
                    <property name="minimumSize">
                     <size>
-                     <width>101</width>
+                     <width>119</width>
                      <height>45</height>
                     </size>
                    </property>
@@ -2560,21 +2560,47 @@ border-radius :15px;
                 </layout>
                </widget>
               </item>
-              <item>
-               <widget class="QWidget" name="widget_59" native="true">
-                <widget class="QLabel" name="label_loadingAttack">
-                 <property name="geometry">
-                  <rect>
-                   <x>280</x>
-                   <y>90</y>
-                   <width>47</width>
-                   <height>13</height>
-                  </rect>
-                 </property>
-                 <property name="text">
-                  <string>TextLabel</string>
-                 </property>
-                </widget>
+              <item alignment="Qt::AlignHCenter">
+               <widget class="QWidget" name="widget_11" native="true">
+                <property name="minimumSize">
+                 <size>
+                  <width>500</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>500</width>
+                  <height>400</height>
+                 </size>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout">
+                 <item>
+                  <widget class="QLabel" name="label">
+                   <property name="minimumSize">
+                    <size>
+                     <width>400</width>
+                     <height>350</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>400</width>
+                     <height>350</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="pixmap">
+                    <pixmap>../images/beware.png</pixmap>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
                </widget>
               </item>
              </layout>
@@ -3831,7 +3857,7 @@ QPushButton:focus {
                   <widget class="QComboBox" name="dropdown_sha2">
                    <property name="minimumSize">
                     <size>
-                     <width>101</width>
+                     <width>119</width>
                      <height>45</height>
                     </size>
                    </property>
@@ -3918,7 +3944,7 @@ QComboBox:hover {
                   <widget class="QComboBox" name="dropdown_sha3">
                    <property name="minimumSize">
                     <size>
-                     <width>101</width>
+                     <width>119</width>
                      <height>45</height>
                     </size>
                    </property>
@@ -4786,7 +4812,7 @@ QLineEdit:focus {
                      <widget class="QComboBox" name="dropdown_typeScan">
                       <property name="minimumSize">
                        <size>
-                        <width>101</width>
+                        <width>119</width>
                         <height>45</height>
                        </size>
                       </property>
