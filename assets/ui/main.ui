@@ -329,7 +329,7 @@ border-radius: 20px;
 </string>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="startpage">
          <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -4502,6 +4502,9 @@ QPushButton:hover {
                         <property name="text">
                          <string/>
                         </property>
+                        <property name="pixmap">
+                         <pixmap>../images/QR.png</pixmap>
+                        </property>
                         <property name="scaledContents">
                          <bool>true</bool>
                         </property>
@@ -5046,7 +5049,7 @@ QLineEdit:focus {
                          <bool>true</bool>
                         </property>
                         <property name="placeholderText">
-                         <string>command</string>
+                         <string>Only text file</string>
                         </property>
                        </widget>
                       </item>
