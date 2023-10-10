@@ -128,6 +128,7 @@ class Main(QMainWindow):
         # Event Button Page Password Evaluation
         self.btn_showPassword.clicked.connect(self.btn_hidePwd)
         self.btn_dictAttack.clicked.connect(self.Passowrd_Dictionary_Attack)
+        self.btn_infoEntropy.clicked.connect(lambda: PasswordEvaluation.infoEntropy(self))
 
         ### --------------------- Dictionary Attack -------------------------
 
@@ -151,7 +152,7 @@ class Main(QMainWindow):
         if 'LineNotify' in config:
             line_api_key = config.get('LineNotify', 'LineAPIKEY')
             self.lineEdit_tokenMSDigest.setText(line_api_key)
-            print(f'Line API Key: {line_api_key}')
+            #print(f'Line API Key: {line_api_key}')
         else:
             print('Section "LineNotify" does not exist in the config file.')
         
@@ -169,7 +170,7 @@ class Main(QMainWindow):
         # --------------------- Malware Scan --------------------------------
 
         # Initialize the image
-        self.image_analysis.setPixmap(QPixmap("./assets/images/Defaultscan.png"))
+        MalwareScanning.show_resultimage(self, type='scan', status='default')
 
         # Fetch API Key from config file
         config = configparser.ConfigParser()
@@ -180,10 +181,10 @@ class Main(QMainWindow):
             self.api_url_scan = config.get('Malware', 'api_url_scan')
             self.api_file_scan = config.get('Malware', 'api_file_scan')
             self.api_file_analysis = config.get('Malware', 'api_file_analysis')
-            print(f'VT API Key: {self.api_vt_key}')
-            print(f'VT API URL: {self.api_url_scan}')
-            print(f'VT API File: {self.api_file_scan}')
-            print(f'VT API Analysis: {self.api_file_analysis}')
+            # print(f'VT API Key: {self.api_vt_key}')
+            # print(f'VT API URL: {self.api_url_scan}')
+            # print(f'VT API File: {self.api_file_scan}')
+            # print(f'VT API Analysis: {self.api_file_analysis}')
         else:
             print('Section "Malware" does not exist in the config file.')
 
@@ -206,10 +207,6 @@ class Main(QMainWindow):
         # Event Button Page HTTPS Testing
         self.btn_scanHsts.clicked.connect(lambda: HSTSTesting.scanHSTS(self))
         #self.btn_clearHttps.clicked.connect(lambda: HSTSTesting.clear(self))
-
-        # Hide the title bar
-        #self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
-        #self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground) # make the background transparent
 
     def openAdvancedUserHome(self):
         self.stackedWidget.setCurrentWidget(self.page_advancedUser)
@@ -277,22 +274,23 @@ class Main(QMainWindow):
         password = PasswordEvaluation.update(self)
         entropy = PasswordEvaluation.calculate_entropy(self, password)
 
-        self.label_outputEntropy.setText(f'{entropy:.0f} bits')
+        self.label_outputEntropy.setText(f'{entropy:.0f} Bits')
 
         # Check if password is in the list of weak passwords
         if entropy == 0:
-            self.label_outputEntropy.setText(f'-- Bits')
+            self.label_outputEntropy.setText(f'0 Bits')
             self.label_outputPasswordStrength.setText('')
         elif entropy > 999:
             self.label_outputEntropy.setText(f'~NaN Bits')
         else:
             self.label_outputEntropy.setText(f'~{entropy:.0f} Bits')
         
-        length = len(password)        
+        length = len(password)
         if length < 8:
             self.label_outputPasswordStrength.setText('So very, very bad Password')
-            if length == 0:
+            if length == 0: 
                 self.label_outputPasswordStrength.setText('')
+                self.label_outputEntropy.setText(f'0 Bits')
         else : 
             if entropy < 50 :
                 self.label_outputPasswordStrength.setText('Weak password')
@@ -322,7 +320,6 @@ class Main(QMainWindow):
 
     def openFileDialog(self):
         path = MessageDigest.open_file_dialog(self)
-        #print(type(path)) # <class 'pathlib.WindowsPath'>
 
         # try except to check if file exists
         try:

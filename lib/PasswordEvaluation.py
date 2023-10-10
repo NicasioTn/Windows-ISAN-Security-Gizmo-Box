@@ -57,7 +57,7 @@ class PasswordEvaluation(QDialog):
     
     # real time password detection
     def update(self):
-            
+
         self.chk_length.setChecked(False)
         self.chk_numeric.setChecked(False)
         self.chk_upper.setChecked(False)
@@ -119,7 +119,7 @@ class PasswordEvaluation(QDialog):
                 self.chk_upper.setIcon(self.warning_icon)
                 self.chk_lower.setIcon(self.warning_icon)
                 self.chk_special.setIcon(self.warning_icon)
-                return 0
+                return "no password"
         
             possible_characters = 0
             if self.chk_numeric.isChecked(): # 0-9
@@ -166,7 +166,7 @@ class PasswordEvaluation(QDialog):
                 time_parts = ['more than 10 years']
             if time_parts == []:
                 time_parts = ['less than a second']
-
+                
             # Show time to crack 2 largest units
             if len(time_parts) <= 2:
                 return " ".join(time_parts)
@@ -179,7 +179,9 @@ class PasswordEvaluation(QDialog):
         except UnboundLocalError as e:
             print(f"Error: {e}")
     
-    
+    def infoEntropy(self):
+        import webbrowser
+        webbrowser.open('https://www.okta.com/identity-101/password-entropy/')
             
 
 class PasswordAttack(QDialog):

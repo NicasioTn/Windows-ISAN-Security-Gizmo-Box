@@ -2395,9 +2395,7 @@ class Ui_MainWindow(object):
         self.btn_infoToken.setMaximumSize(QtCore.QSize(30, 30))
         self.btn_infoToken.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_infoToken.setText("")
-        icon15 = QtGui.QIcon()
-        icon15.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icons8-info-20.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btn_infoToken.setIcon(icon15)
+        self.btn_infoToken.setIcon(icon10)
         self.btn_infoToken.setIconSize(QtCore.QSize(20, 20))
         self.btn_infoToken.setObjectName("btn_infoToken")
         self.horizontalLayout_36.addWidget(self.btn_infoToken, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
@@ -2515,9 +2513,9 @@ class Ui_MainWindow(object):
 "    background-color: ;\n"
 "}\n"
 "")
-        icon16 = QtGui.QIcon()
-        icon16.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-line.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btn_lineAPI.setIcon(icon16)
+        icon15 = QtGui.QIcon()
+        icon15.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-line.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btn_lineAPI.setIcon(icon15)
         self.btn_lineAPI.setIconSize(QtCore.QSize(35, 35))
         self.btn_lineAPI.setObjectName("btn_lineAPI")
         self.horizontalLayout_26.addWidget(self.btn_lineAPI)
