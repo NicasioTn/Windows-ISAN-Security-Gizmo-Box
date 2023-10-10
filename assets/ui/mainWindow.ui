@@ -1035,20 +1035,72 @@ QPushButton:hover {
         <item>
          <widget class="QWidget" name="widget_15" native="true">
           <layout class="QVBoxLayout" name="verticalLayout_7">
-           <item>
+           <item alignment="Qt::AlignLeft">
             <widget class="QWidget" name="widget_17" native="true">
              <property name="minimumSize">
               <size>
                <width>0</width>
-               <height>50</height>
+               <height>60</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
                <width>16777215</width>
-               <height>50</height>
+               <height>60</height>
               </size>
              </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_10">
+              <item>
+               <widget class="QPushButton" name="btn_backAdvancedUser">
+                <property name="minimumSize">
+                 <size>
+                  <width>130</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>130</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Bahnschrift SemiBold</family>
+                  <pointsize>12</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 20px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
+}
+
+QPushButton:hover {
+    background-color: ;
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>Back</string>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>../icons/icons8-go-back-45.png</normaloff>../icons/icons8-go-back-45.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>35</width>
+                  <height>35</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </widget>
            </item>
            <item>
@@ -1265,6 +1317,143 @@ QWidget#widget_32 {
             <widget class="QWidget" name="widget_20" native="true">
              <layout class="QVBoxLayout" name="verticalLayout_10">
               <item>
+               <widget class="QWidget" name="widget_27" native="true">
+                <property name="minimumSize">
+                 <size>
+                  <width>1200</width>
+                  <height>70</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>70</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <widget class="QWidget" name="widget_106" native="true">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>5</y>
+                   <width>152</width>
+                   <height>60</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>60</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>60</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:rgb(65,155,249);
+background-color: rgb(237, 236, 237);
+border-radius: 20px;</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_46">
+                  <item alignment="Qt::AlignLeft">
+                   <widget class="QPushButton" name="btn_backPassword">
+                    <property name="minimumSize">
+                     <size>
+                      <width>130</width>
+                      <height>45</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>130</width>
+                      <height>45</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Bahnschrift SemiBold</family>
+                      <pointsize>12</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 20px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
+}
+
+QPushButton:hover {
+    background-color: ;
+}
+</string>
+                    </property>
+                    <property name="text">
+                     <string>Back</string>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>../icons/icons8-go-back-45.png</normaloff>../icons/icons8-go-back-45.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>35</width>
+                      <height>35</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QLabel" name="label_Password">
+                 <property name="geometry">
+                  <rect>
+                   <x>152</x>
+                   <y>15</y>
+                   <width>500</width>
+                   <height>45</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>500</width>
+                   <height>45</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>500</width>
+                   <height>45</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Bahnschrift SemiBold</family>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(38, 50, 56);</string>
+                 </property>
+                 <property name="text">
+                  <string>PASSWORD EVALUATION</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </widget>
+              </item>
+              <item>
                <widget class="QWidget" name="widget_23" native="true">
                 <layout class="QVBoxLayout" name="verticalLayout_13">
                  <item>
@@ -1273,60 +1462,6 @@ QWidget#widget_32 {
                     <property name="spacing">
                      <number>5</number>
                     </property>
-                    <item>
-                     <widget class="QWidget" name="widget_27" native="true">
-                      <property name="minimumSize">
-                       <size>
-                        <width>1200</width>
-                        <height>60</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>1200</width>
-                        <height>60</height>
-                       </size>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true"/>
-                      </property>
-                      <layout class="QVBoxLayout" name="verticalLayout_12">
-                       <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
-                        <widget class="QLabel" name="label_Password">
-                         <property name="minimumSize">
-                          <size>
-                           <width>500</width>
-                           <height>40</height>
-                          </size>
-                         </property>
-                         <property name="maximumSize">
-                          <size>
-                           <width>500</width>
-                           <height>40</height>
-                          </size>
-                         </property>
-                         <property name="font">
-                          <font>
-                           <family>Bahnschrift SemiBold</family>
-                           <pointsize>20</pointsize>
-                           <weight>75</weight>
-                           <bold>true</bold>
-                          </font>
-                         </property>
-                         <property name="styleSheet">
-                          <string notr="true">color: rgb(38, 50, 56);</string>
-                         </property>
-                         <property name="text">
-                          <string>PASSWORD EVALUATION</string>
-                         </property>
-                         <property name="alignment">
-                          <set>Qt::AlignCenter</set>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
-                    </item>
                     <item alignment="Qt::AlignHCenter">
                      <widget class="QLabel" name="label_searchNordpass">
                       <property name="maximumSize">
@@ -2101,56 +2236,142 @@ QWidget#widget_57 {
           <layout class="QVBoxLayout" name="verticalLayout_21">
            <item>
             <widget class="QWidget" name="widget_36" native="true">
-             <layout class="QVBoxLayout" name="verticalLayout_22">
+             <layout class="QVBoxLayout" name="verticalLayout_12">
               <item>
                <widget class="QWidget" name="widget_38" native="true">
                 <property name="minimumSize">
                  <size>
-                  <width>1220</width>
-                  <height>60</height>
+                  <width>1200</width>
+                  <height>70</height>
                  </size>
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>1220</width>
-                  <height>60</height>
+                  <width>16777215</width>
+                  <height>70</height>
                  </size>
                 </property>
-                <layout class="QVBoxLayout" name="verticalLayout_23">
-                 <item alignment="Qt::AlignLeft">
-                  <widget class="QLabel" name="label_dictionary">
-                   <property name="minimumSize">
-                    <size>
-                     <width>500</width>
-                     <height>40</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>500</width>
-                     <height>40</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <family>Bahnschrift SemiBold</family>
-                     <pointsize>20</pointsize>
-                     <weight>75</weight>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">	color: rgba(40,43,61,255) ;</string>
-                   </property>
-                   <property name="text">
-                    <string>DICTIONARY ATTACK</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <widget class="QWidget" name="widget_109" native="true">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>5</y>
+                   <width>152</width>
+                   <height>60</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>60</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>60</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:rgb(65,155,249);
+background-color: rgb(237, 236, 237);
+border-radius: 20px;</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_49">
+                  <item alignment="Qt::AlignLeft">
+                   <widget class="QPushButton" name="btn_backDict">
+                    <property name="minimumSize">
+                     <size>
+                      <width>130</width>
+                      <height>45</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>130</width>
+                      <height>45</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Bahnschrift SemiBold</family>
+                      <pointsize>12</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 20px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
+}
+
+QPushButton:hover {
+    background-color: ;
+}
+</string>
+                    </property>
+                    <property name="text">
+                     <string>Back</string>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>../icons/icons8-go-back-45.png</normaloff>../icons/icons8-go-back-45.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>35</width>
+                      <height>35</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QLabel" name="label_Password_4">
+                 <property name="geometry">
+                  <rect>
+                   <x>152</x>
+                   <y>15</y>
+                   <width>500</width>
+                   <height>45</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>500</width>
+                   <height>45</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>500</width>
+                   <height>45</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Bahnschrift SemiBold</family>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(38, 50, 56);</string>
+                 </property>
+                 <property name="text">
+                  <string>DICTIONATY ATTACK</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
                </widget>
               </item>
               <item alignment="Qt::AlignHCenter">
@@ -2626,56 +2847,142 @@ QWidget#widget_89 {
           <layout class="QVBoxLayout" name="verticalLayout_47">
            <item>
             <widget class="QWidget" name="widget_78" native="true">
-             <layout class="QVBoxLayout" name="verticalLayout_48">
+             <layout class="QVBoxLayout" name="verticalLayout_22">
               <item>
                <widget class="QWidget" name="widget_80" native="true">
                 <property name="minimumSize">
                  <size>
-                  <width>1220</width>
-                  <height>60</height>
+                  <width>1200</width>
+                  <height>70</height>
                  </size>
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>1220</width>
-                  <height>60</height>
+                  <width>16777215</width>
+                  <height>70</height>
                  </size>
                 </property>
-                <layout class="QVBoxLayout" name="verticalLayout_49">
-                 <item alignment="Qt::AlignLeft">
-                  <widget class="QLabel" name="label_malware">
-                   <property name="minimumSize">
-                    <size>
-                     <width>500</width>
-                     <height>40</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>500</width>
-                     <height>40</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <family>Bahnschrift SemiBold</family>
-                     <pointsize>20</pointsize>
-                     <weight>75</weight>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">	color: rgba(40,43,61,255) ;</string>
-                   </property>
-                   <property name="text">
-                    <string>MALWARE SCANNING</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <widget class="QWidget" name="widget_110" native="true">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>5</y>
+                   <width>152</width>
+                   <height>60</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>60</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>60</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:rgb(65,155,249);
+background-color: rgb(237, 236, 237);
+border-radius: 20px;</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_50">
+                  <item alignment="Qt::AlignLeft">
+                   <widget class="QPushButton" name="btn_backMalware">
+                    <property name="minimumSize">
+                     <size>
+                      <width>130</width>
+                      <height>45</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>130</width>
+                      <height>45</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Bahnschrift SemiBold</family>
+                      <pointsize>12</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 20px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
+}
+
+QPushButton:hover {
+    background-color: ;
+}
+</string>
+                    </property>
+                    <property name="text">
+                     <string>Back</string>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>../icons/icons8-go-back-45.png</normaloff>../icons/icons8-go-back-45.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>35</width>
+                      <height>35</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QLabel" name="label_Password_6">
+                 <property name="geometry">
+                  <rect>
+                   <x>152</x>
+                   <y>15</y>
+                   <width>500</width>
+                   <height>45</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>500</width>
+                   <height>45</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>500</width>
+                   <height>45</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Bahnschrift SemiBold</family>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(38, 50, 56);</string>
+                 </property>
+                 <property name="text">
+                  <string>MALWARE SCANNING</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
                </widget>
               </item>
               <item alignment="Qt::AlignHCenter">
@@ -3543,56 +3850,142 @@ QWidget#widget_49 {
           <layout class="QVBoxLayout" name="verticalLayout_24">
            <item>
             <widget class="QWidget" name="widget_42" native="true">
-             <layout class="QVBoxLayout" name="verticalLayout_25">
+             <layout class="QVBoxLayout" name="verticalLayout_23">
               <item>
                <widget class="QWidget" name="widget_44" native="true">
                 <property name="minimumSize">
                  <size>
-                  <width>1220</width>
-                  <height>60</height>
+                  <width>1200</width>
+                  <height>70</height>
                  </size>
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>1220</width>
-                  <height>60</height>
+                  <width>16777215</width>
+                  <height>70</height>
                  </size>
                 </property>
-                <layout class="QVBoxLayout" name="verticalLayout_26">
-                 <item alignment="Qt::AlignLeft">
-                  <widget class="QLabel" name="label_digest">
-                   <property name="minimumSize">
-                    <size>
-                     <width>500</width>
-                     <height>40</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>500</width>
-                     <height>40</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <family>Bahnschrift SemiBold</family>
-                     <pointsize>20</pointsize>
-                     <weight>75</weight>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">	color: rgba(40,43,61,255) ;</string>
-                   </property>
-                   <property name="text">
-                    <string>MESSAGE DIGEST</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <widget class="QWidget" name="widget_111" native="true">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>5</y>
+                   <width>152</width>
+                   <height>60</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>60</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>60</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:rgb(65,155,249);
+background-color: rgb(237, 236, 237);
+border-radius: 20px;</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_51">
+                  <item alignment="Qt::AlignLeft">
+                   <widget class="QPushButton" name="btn_backMSDigest">
+                    <property name="minimumSize">
+                     <size>
+                      <width>130</width>
+                      <height>45</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>130</width>
+                      <height>45</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Bahnschrift SemiBold</family>
+                      <pointsize>12</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 20px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
+}
+
+QPushButton:hover {
+    background-color: ;
+}
+</string>
+                    </property>
+                    <property name="text">
+                     <string>Back</string>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>../icons/icons8-go-back-45.png</normaloff>../icons/icons8-go-back-45.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>35</width>
+                      <height>35</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QLabel" name="label_Password_5">
+                 <property name="geometry">
+                  <rect>
+                   <x>152</x>
+                   <y>15</y>
+                   <width>500</width>
+                   <height>45</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>500</width>
+                   <height>45</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>500</width>
+                   <height>45</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Bahnschrift SemiBold</family>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(38, 50, 56);</string>
+                 </property>
+                 <property name="text">
+                  <string>MESSAGE DIGEST</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
                </widget>
               </item>
               <item alignment="Qt::AlignHCenter">
@@ -4534,20 +4927,72 @@ QPushButton:hover {
         <item>
          <widget class="QWidget" name="widget_60" native="true">
           <layout class="QVBoxLayout" name="verticalLayout_35">
-           <item>
+           <item alignment="Qt::AlignLeft">
             <widget class="QWidget" name="widget_62" native="true">
              <property name="minimumSize">
               <size>
                <width>0</width>
-               <height>50</height>
+               <height>60</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
                <width>16777215</width>
-               <height>50</height>
+               <height>60</height>
               </size>
              </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_42">
+              <item>
+               <widget class="QPushButton" name="btn_backNetworkUser">
+                <property name="minimumSize">
+                 <size>
+                  <width>130</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>130</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Bahnschrift SemiBold</family>
+                  <pointsize>12</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 20px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
+}
+
+QPushButton:hover {
+    background-color: ;
+}
+</string>
+                </property>
+                <property name="text">
+                 <string>Back</string>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>../icons/icons8-go-back-45.png</normaloff>../icons/icons8-go-back-45.png</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>35</width>
+                  <height>35</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </widget>
            </item>
            <item>
@@ -4694,7 +5139,7 @@ QPushButton:hover {
         <item>
          <widget class="QWidget" name="widget_64" native="true">
           <property name="styleSheet">
-           <string notr="true">QWidget#widget_67 {
+           <string notr="true">QWidget#widget_59 {
     border: 1px solid rgb(237, 236, 237); /* Set the &quot;groove&quot; border style for the specific widgets */
 	background-color: rgb(237, 236, 237);
 }
@@ -4705,59 +5150,145 @@ QPushButton:hover {
             <widget class="QWidget" name="widget_65" native="true">
              <layout class="QVBoxLayout" name="verticalLayout_38">
               <item>
-               <widget class="QWidget" name="widget_67" native="true">
+               <widget class="QWidget" name="widget_59" native="true">
                 <property name="minimumSize">
                  <size>
-                  <width>1220</width>
-                  <height>60</height>
+                  <width>1200</width>
+                  <height>70</height>
                  </size>
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>1220</width>
-                  <height>60</height>
+                  <width>16777215</width>
+                  <height>70</height>
                  </size>
                 </property>
-                <layout class="QVBoxLayout" name="verticalLayout_39">
-                 <item alignment="Qt::AlignLeft">
-                  <widget class="QLabel" name="label_vulnerability">
-                   <property name="minimumSize">
-                    <size>
-                     <width>500</width>
-                     <height>40</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>500</width>
-                     <height>40</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <family>Bahnschrift SemiBold</family>
-                     <pointsize>20</pointsize>
-                     <weight>75</weight>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">color: rgba(40,43,61,255) ;color: rgb(38, 50, 56);</string>
-                   </property>
-                   <property name="text">
-                    <string>VULNERABILITY SCANNING</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <widget class="QWidget" name="widget_113" native="true">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>5</y>
+                   <width>152</width>
+                   <height>60</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>60</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>60</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:rgb(65,155,249);
+background-color: rgb(237, 236, 237);
+border-radius: 20px;</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_53">
+                  <item alignment="Qt::AlignLeft">
+                   <widget class="QPushButton" name="btn_backVulner">
+                    <property name="minimumSize">
+                     <size>
+                      <width>130</width>
+                      <height>45</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>130</width>
+                      <height>45</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Bahnschrift SemiBold</family>
+                      <pointsize>12</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 20px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
+}
+
+QPushButton:hover {
+    background-color: ;
+}
+</string>
+                    </property>
+                    <property name="text">
+                     <string>Back</string>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>../icons/icons8-go-back-45.png</normaloff>../icons/icons8-go-back-45.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>35</width>
+                      <height>35</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QLabel" name="label_Password_8">
+                 <property name="geometry">
+                  <rect>
+                   <x>152</x>
+                   <y>15</y>
+                   <width>500</width>
+                   <height>45</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>500</width>
+                   <height>45</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>500</width>
+                   <height>45</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Bahnschrift SemiBold</family>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(38, 50, 56);</string>
+                 </property>
+                 <property name="text">
+                  <string>VULNERABILITY SCANNING</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
                </widget>
               </item>
               <item>
                <widget class="QWidget" name="widget_68" native="true">
-                <layout class="QVBoxLayout" name="verticalLayout_40">
+                <layout class="QVBoxLayout" name="verticalLayout_25">
                  <item alignment="Qt::AlignHCenter">
                   <widget class="QWidget" name="widget_69" native="true">
                    <layout class="QVBoxLayout" name="verticalLayout_41">
@@ -5075,7 +5606,7 @@ QPushButton:hover {
         <item>
          <widget class="QWidget" name="widget_71" native="true">
           <property name="styleSheet">
-           <string notr="true">QWidget#widget_74 {
+           <string notr="true">QWidget#widget_67 {
     border: 1px solid rgb(237, 236, 237); /* Set the &quot;groove&quot; border style for the specific widgets */
 	background-color: rgb(237, 236, 237);
 }
@@ -5084,56 +5615,142 @@ QPushButton:hover {
           <layout class="QVBoxLayout" name="verticalLayout_42">
            <item>
             <widget class="QWidget" name="widget_72" native="true">
-             <layout class="QVBoxLayout" name="verticalLayout_43">
+             <layout class="QVBoxLayout" name="verticalLayout_26">
               <item>
-               <widget class="QWidget" name="widget_74" native="true">
+               <widget class="QWidget" name="widget_67" native="true">
                 <property name="minimumSize">
                  <size>
-                  <width>1220</width>
-                  <height>60</height>
+                  <width>1200</width>
+                  <height>70</height>
                  </size>
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>1220</width>
-                  <height>60</height>
+                  <width>16777215</width>
+                  <height>70</height>
                  </size>
                 </property>
-                <layout class="QVBoxLayout" name="verticalLayout_44">
-                 <item alignment="Qt::AlignLeft">
-                  <widget class="QLabel" name="label_hsts">
-                   <property name="minimumSize">
-                    <size>
-                     <width>500</width>
-                     <height>40</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>500</width>
-                     <height>40</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <family>Bahnschrift SemiBold</family>
-                     <pointsize>20</pointsize>
-                     <weight>75</weight>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">color: rgb(38, 50, 56);</string>
-                   </property>
-                   <property name="text">
-                    <string>HSTS TESTING</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <widget class="QWidget" name="widget_114" native="true">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>5</y>
+                   <width>152</width>
+                   <height>60</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>60</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>60</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:rgb(65,155,249);
+background-color: rgb(237, 236, 237);
+border-radius: 20px;</string>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_54">
+                  <item alignment="Qt::AlignLeft">
+                   <widget class="QPushButton" name="btn_backHsts">
+                    <property name="minimumSize">
+                     <size>
+                      <width>130</width>
+                      <height>45</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>130</width>
+                      <height>45</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Bahnschrift SemiBold</family>
+                      <pointsize>12</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 20px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
+}
+
+QPushButton:hover {
+    background-color: ;
+}
+</string>
+                    </property>
+                    <property name="text">
+                     <string>Back</string>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>../icons/icons8-go-back-45.png</normaloff>../icons/icons8-go-back-45.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>35</width>
+                      <height>35</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QLabel" name="label_Password_9">
+                 <property name="geometry">
+                  <rect>
+                   <x>152</x>
+                   <y>15</y>
+                   <width>500</width>
+                   <height>45</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>500</width>
+                   <height>45</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>500</width>
+                   <height>45</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Bahnschrift SemiBold</family>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(38, 50, 56);</string>
+                 </property>
+                 <property name="text">
+                  <string>HTTPS TESTING</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
                </widget>
               </item>
               <item>
