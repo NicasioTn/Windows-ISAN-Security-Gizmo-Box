@@ -183,7 +183,7 @@ border-radius: 20px;
 </string>
       </property>
       <property name="currentIndex">
-       <number>5</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="page_getstart">
        <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -2254,7 +2254,7 @@ QPushButton:hover {
                   <widget class="QComboBox" name="dropdown_wordLists">
                    <property name="minimumSize">
                     <size>
-                     <width>101</width>
+                     <width>119</width>
                      <height>45</height>
                     </size>
                    </property>
@@ -3857,7 +3857,7 @@ QPushButton:focus {
                   <widget class="QComboBox" name="dropdown_sha2">
                    <property name="minimumSize">
                     <size>
-                     <width>101</width>
+                     <width>119</width>
                      <height>45</height>
                     </size>
                    </property>
@@ -3944,7 +3944,7 @@ QComboBox:hover {
                   <widget class="QComboBox" name="dropdown_sha3">
                    <property name="minimumSize">
                     <size>
-                     <width>101</width>
+                     <width>119</width>
                      <height>45</height>
                     </size>
                    </property>
@@ -4812,7 +4812,7 @@ QLineEdit:focus {
                      <widget class="QComboBox" name="dropdown_typeScan">
                       <property name="minimumSize">
                        <size>
-                        <width>101</width>
+                        <width>119</width>
                         <height>45</height>
                        </size>
                       </property>
