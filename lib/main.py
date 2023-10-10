@@ -52,12 +52,22 @@ class Main(QMainWindow):
         self.image_main = QPixmap("./assets/images/main.png")
 
         # Event Back Button
-        #self.btn_backPassword.clicked.connect(self.openAdvancedUserHome)
-        #self.btn_backDic.clicked.connect(self.PasswordEvaluationHome)
-        #self.btn_backDigest.clicked.connect(self.openAdvancedUserHome)
-        #self.btn_backMalware.clicked.connect(self.openAdvancedUserHome)
-        #self.btn_backVulner.clicked.connect(self.openNetworkUserHome)
-        #self.btn_backHttps.clicked.connect(self.openNetworkUserHome)
+        self.btn_backAdvancedUser.clicked.connect(self.openHomePage)
+        self.btn_backPassword.clicked.connect(self.openAdvancedUserHome)
+        self.btn_backDict.clicked.connect(self.PasswordEvaluationHome)
+        self.btn_backMalware.clicked.connect(self.openAdvancedUserHome)
+        self.btn_backMSDigest.clicked.connect(self.openAdvancedUserHome)
+        self.btn_backNetworkUser.clicked.connect(self.openHomePage)
+        self.btn_backVulner.clicked.connect(self.openNetworkUserHome)
+        self.btn_backHsts.clicked.connect(self.openNetworkUserHome)
+
+        # clear after back button
+        self.btn_backPassword.clicked.connect(lambda: PasswordEvaluation.clear(self))
+        self.btn_backDict.clicked.connect(lambda: PasswordAttack.clear(self))
+        self.btn_backMalware.clicked.connect(lambda: MalwareScanning.clear(self))
+        self.btn_backMSDigest.clicked.connect(lambda: MessageDigest.clear(self))
+        self.btn_backVulner.clicked.connect(lambda: VulnerabilityScanning.clear(self))
+        self.btn_backHsts.clicked.connect(lambda: HSTSTesting.clear(self))
 
         # --------------------- Get Started ---------------------------------
         self.btn_getStart.clicked.connect(self.openHomePage)
@@ -127,6 +137,7 @@ class Main(QMainWindow):
         self.btn_showPasswordDict.clicked.connect(lambda: PasswordAttack.show_hide_password(self))
         self.dropdown_wordLists.activated.connect(lambda: PasswordAttack.select_wordlists(self))
         PasswordAttack.show_loadding(self)
+
         # --------------------- Message Digest ------------------------------
 
         # Load the list of hints from the JSON file
@@ -199,19 +210,6 @@ class Main(QMainWindow):
         # Hide the title bar
         #self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
         #self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground) # make the background transparent
-
-
-    def minimize(self):
-        self.showMinimized()
-
-    def maximize(self):
-        if self.isMaximized():
-            self.showNormal()
-        else:
-            self.showMaximized()
-
-    def close(self):
-        sys.exit()
 
     def openAdvancedUserHome(self):
         self.stackedWidget.setCurrentWidget(self.page_advancedUser)

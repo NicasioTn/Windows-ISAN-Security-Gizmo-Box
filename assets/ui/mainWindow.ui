@@ -1072,6 +1072,9 @@ QPushButton:hover {
                   <bold>true</bold>
                  </font>
                 </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
                 <property name="styleSheet">
                  <string notr="true">QPushButton {    
     border: 1px solid rgba(40,43,61,255) ;
@@ -1381,6 +1384,9 @@ border-radius: 20px;</string>
                       <weight>75</weight>
                       <bold>true</bold>
                      </font>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
                     </property>
                     <property name="styleSheet">
                      <string notr="true">QPushButton {    
@@ -2303,6 +2309,9 @@ border-radius: 20px;</string>
                       <bold>true</bold>
                      </font>
                     </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
                     <property name="styleSheet">
                      <string notr="true">QPushButton {    
     border: 1px solid rgba(40,43,61,255) ;
@@ -2475,7 +2484,7 @@ QPushButton:hover {
                   <widget class="QComboBox" name="dropdown_wordLists">
                    <property name="minimumSize">
                     <size>
-                     <width>119</width>
+                     <width>101</width>
                      <height>45</height>
                     </size>
                    </property>
@@ -2913,6 +2922,9 @@ border-radius: 20px;</string>
                       <weight>75</weight>
                       <bold>true</bold>
                      </font>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
                     </property>
                     <property name="styleSheet">
                      <string notr="true">QPushButton {    
@@ -3917,6 +3929,9 @@ border-radius: 20px;</string>
                       <bold>true</bold>
                      </font>
                     </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
                     <property name="styleSheet">
                      <string notr="true">QPushButton {    
     border: 1px solid rgba(40,43,61,255) ;
@@ -4250,7 +4265,7 @@ QPushButton:focus {
                   <widget class="QComboBox" name="dropdown_sha2">
                    <property name="minimumSize">
                     <size>
-                     <width>119</width>
+                     <width>101</width>
                      <height>45</height>
                     </size>
                    </property>
@@ -4337,7 +4352,7 @@ QComboBox:hover {
                   <widget class="QComboBox" name="dropdown_sha3">
                    <property name="minimumSize">
                     <size>
-                     <width>119</width>
+                     <width>101</width>
                      <height>45</height>
                     </size>
                    </property>
@@ -4964,6 +4979,9 @@ QPushButton:hover {
                   <bold>true</bold>
                  </font>
                 </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
                 <property name="styleSheet">
                  <string notr="true">QPushButton {    
     border: 1px solid rgba(40,43,61,255) ;
@@ -5215,6 +5233,9 @@ border-radius: 20px;</string>
                       <bold>true</bold>
                      </font>
                     </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
+                    </property>
                     <property name="styleSheet">
                      <string notr="true">QPushButton {    
     border: 1px solid rgba(40,43,61,255) ;
@@ -5343,7 +5364,7 @@ QLineEdit:focus {
                      <widget class="QComboBox" name="dropdown_typeScan">
                       <property name="minimumSize">
                        <size>
-                        <width>119</width>
+                        <width>101</width>
                         <height>45</height>
                        </size>
                       </property>
@@ -5602,6 +5623,9 @@ QPushButton:hover {
        </layout>
       </widget>
       <widget class="QWidget" name="page_hsts">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <layout class="QHBoxLayout" name="horizontalLayout_31">
         <item>
          <widget class="QWidget" name="widget_71" native="true">
