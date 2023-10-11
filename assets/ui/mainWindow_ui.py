@@ -1342,7 +1342,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_17 = QtWidgets.QHBoxLayout(self.widget_107)
         self.horizontalLayout_17.setObjectName("horizontalLayout_17")
         self.dropdown_modeAttack = QtWidgets.QComboBox(parent=self.widget_107)
-        self.dropdown_modeAttack.setMinimumSize(QtCore.QSize(120, 45))
+        self.dropdown_modeAttack.setMinimumSize(QtCore.QSize(101, 45))
         self.dropdown_modeAttack.setMaximumSize(QtCore.QSize(200, 45))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")

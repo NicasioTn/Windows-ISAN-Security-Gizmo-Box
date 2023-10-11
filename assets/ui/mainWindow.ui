@@ -2655,7 +2655,7 @@ QPushButton:hover {
                      <widget class="QComboBox" name="dropdown_modeAttack">
                       <property name="minimumSize">
                        <size>
-                        <width>120</width>
+                        <width>101</width>
                         <height>45</height>
                        </size>
                       </property>
