@@ -11,9 +11,29 @@ from pathlib import Path
 
 class MessageDigest(QDialog):
 
+    path = ''
+    algorithm = ''
+    state_detect = 0
+
     def __init__(self):
         #super(MessageDigest, self).__init__()
         super().__init__()
+
+    def clear (self):
+        self.lineEdit_MSdigest.setText('')
+        self.label_QRCode.clear()
+        self.dropdown_sha2.setCurrentIndex(0)
+        self.dropdown_sha3.setCurrentIndex(0)
+        self.label_lineAPIDigest.setVisible(False)
+        self.lineEdit_tokenMSDigest.setVisible(False)
+        self.btn_sendMSDigest.setVisible(False)
+        self.btn_infoToken.setVisible(False)
+        self.lineEdit_tokenMSDigest.setText('')
+        self.lineEdit_outputTextMSDigest.setText('')
+        self.lineEdit_outputTextMSDigest.setStyleSheet("border: 1px solid black;")
+        self.lineEdit_outputTextMSDigest.setPlaceholderText('')
+        self.label_type.setText('Type')
+        self.btn_saveQR.setText('SAVE')
 
     def saveAPIKey(self):
         self.lineAPIKey = self.lineEdit_tokenMSDigest.text()
@@ -33,32 +53,66 @@ class MessageDigest(QDialog):
         with open(configFilePath, 'w') as configfile:
             config.write(configfile)
 
-    def clear (self):
-        self.lineEdit_MSdigest.setText('')
-        self.label_QRCode.clear()
-        self.dropdown_sha2.setCurrentIndex(0)
-        self.dropdown_sha3.setCurrentIndex(0)
-        self.label_lineAPIDigest.setVisible(False)
-        self.lineEdit_tokenMSDigest.setVisible(False)
-        self.btn_sendMSDigest.setVisible(False)
-        self.btn_infoToken.setVisible(False)
-        self.lineEdit_tokenMSDigest.setText('')
-        self.lineEdit_outputTextMSDigest.setText('')
-        self.lineEdit_outputTextMSDigest.setStyleSheet("border: 1px solid black;")
-        self.lineEdit_outputTextMSDigest.setPlaceholderText('')
-        self.label_type.setText('Type')
-        self.btn_saveQR.setText('SAVE')
+    def openFileDialog(self):
+        path = MessageDigest.open_file_dialog(self)
 
-        #fetch API Key from config file
-        config = configparser.ConfigParser()
-        configFilePath = './data/init.conf'
-        config.read(configFilePath)
-        if 'LineNotify' in config:
-            line_api_key = config.get('LineNotify', 'LineAPIKEY')
-            self.lineEdit_tokenMSDigest.setText(line_api_key)
-            print(f'Line API Key: {line_api_key}')
+        # try except to check if file exists
+        try:
+            if path.exists() == True: # check if file exists
+                print(f"File exists at: {path.exists()}" + " ++")
+        except AttributeError as e:
+            print(f"Empty file or Not found")
+
+        MessageDigest.setPath(self, path)
+    
+    def setPath(self, path):
+        MessageDigest.path = path
+
+    def getPath(self):
+        return MessageDigest.path
+
+    def ShowImage_QR(self):
+        if self.lineEdit_outputTextMSDigest.text() != '':
+            MessageDigest.qrCodeGenerator(self, self.lineEdit_outputTextMSDigest.text())
+            MessageDigest.ShowImage_QR(self)
+
+    def showBtnLine(self):
+        self.label_lineAPIDigest.setVisible(True)
+        self.lineEdit_tokenMSDigest.setVisible(True)
+        self.btn_sendMSDigest.setVisible(True)
+        self.btn_infoToken.setVisible(True)
+
+    def checkFile_Text(self):
+        if os.path.exists(self.lineEdit_MSdigest.text()) == True: # check if file exists
+            print("File")
+            MessageDigest.state_detect = 1
+            self.btn_md5.clicked.connect(lambda: MessageDigest.fileExtract(self, "md5", MessageDigest.getPath(self)))
+            self.btn_sha1.clicked.connect(lambda: MessageDigest.fileExtract(self, "sha1", MessageDigest.getPath(self)))
+            self.dropdown_sha2.activated.connect(lambda: MessageDigest.fileExtract(self, "sha2_" + self.dropdown_sha2.currentText(), MessageDigest.getPath(self)))
+            self.dropdown_sha3.activated.connect(lambda: MessageDigest.fileExtract(self, "sha3_" + self.dropdown_sha3.currentText(), MessageDigest.getPath(self)))
         else:
-            print('Section "LineNotify" does not exist in the config file.')
+            MessageDigest.state_detect = 0
+            print("Plaintext")
+            self.btn_md5.clicked.connect(lambda: MessageDigest.hash(self, "md5"))
+            self.btn_sha1.clicked.connect(lambda: MessageDigest.hash(self, "sha1"))
+            self.dropdown_sha2.activated.connect(lambda: MessageDigest.getdropdown_sha2(self))
+            self.dropdown_sha3.activated.connect(lambda: MessageDigest.getdropdown_sha3(self))
+
+        # show Image QR Code
+        self.btn_md5.clicked.connect(lambda: MessageDigest.ShowImage_QR(self))
+        self.btn_sha1.clicked.connect(lambda: MessageDigest.ShowImage_QR(self))
+        self.dropdown_sha2.activated.connect(lambda: MessageDigest.ShowImage_QR(self))
+        self.dropdown_sha3.activated.connect(lambda: MessageDigest.ShowImage_QR(self))
+
+    def getdropdown_sha2(self):
+        MessageDigest.hash(self, "sha2_" + self.dropdown_sha2.currentText())
+        MessageDigest.algorithm = 'SHA2-' + self.dropdown_sha2.currentText()
+        self.dropdown_sha3.setCurrentIndex(0) 
+
+    def getdropdown_sha3(self):
+        MessageDigest.hash(self, "sha3_" + self.dropdown_sha3.currentText())
+        MessageDigest.algorithm = 'SHA3-' + self.dropdown_sha3.currentText()
+        self.dropdown_sha2.setCurrentIndex(0)
 
     def hash(self, type):
         #print(self.dropdown_sha2.currentText())
@@ -130,6 +184,11 @@ class MessageDigest(QDialog):
         return img
         
     def ShowImage_QR(self):
+        if self.lineEdit_outputTextMSDigest.text() == '':
+            print("Error: QR-Code is Not Generated")
+            self.lineEdit_outputTextMSDigest.setStyleSheet("border: 1px solid red;")
+            self.lineEdit_outputTextMSDigest.setPlaceholderText("Empty")
+            return
         imagePath = "./data/MessageDigest-QRCode.png"
         pixmap = QPixmap(imagePath)
         pixmap = pixmap.scaledToWidth(200)
@@ -160,10 +219,10 @@ class MessageDigest(QDialog):
             MessageDigest.fileHash(self, "sha3_512", path)
 
         # Show Image QR Code
-        self.btn_md5.clicked.connect(self.ShowImage_QR)
-        self.btn_sha1.clicked.connect(self.ShowImage_QR)
-        self.dropdown_sha2.activated.connect(self.ShowImage_QR)
-        self.dropdown_sha3.activated.connect(self.ShowImage_QR)
+        self.btn_md5.clicked.connect(lambda: MessageDigest.ShowImage_QR(self))
+        self.btn_sha1.clicked.connect(lambda: MessageDigest.ShowImage_QR(self))
+        self.dropdown_sha2.activated.connect(lambda: MessageDigest.ShowImage_QR(self))
+        self.dropdown_sha3.activated.connect(lambda: MessageDigest.ShowImage_QR(self))
 
     def open_file_dialog(self):
         filename, ok = QFileDialog.getOpenFileName(
@@ -431,5 +490,5 @@ class MessageDigest(QDialog):
     def infoToken(self):
         # Open link to browser line notify
         import webbrowser
-        webbrowser.open('https://notify-bot.line.me/my/')
+        webbrowser.open('https://notify-bot.line.me/doc/en/')
         

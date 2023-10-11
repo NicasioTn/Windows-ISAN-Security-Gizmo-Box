@@ -17,12 +17,8 @@ from HSTSTesting import *
 
 class Main(QMainWindow):
     
-    algorithm = ''
     nordpass_common_passwords = []
     hint_btn = []
-    state_detect = 0
-    path = ''
-
     api_url_scan = ''
     api_vt_key = ''
     api_file_scan = ''
@@ -88,7 +84,7 @@ class Main(QMainWindow):
         # ------------------------------------------------------------------
         self.btn_password.clicked.connect(self.PasswordEvaluationHome)
         self.btn_malware.clicked.connect(self.openMalwareHome)
-        self.btn_MSdigest.clicked.connect(self.openDigestHome)
+        self.btn_MSdigest.clicked.connect(self.openMessageDigestHome)
 
         # --------------------- Network User --------------------------------
         self.btn_networkUserHome.clicked.connect(self.openNetworkUserHome)
@@ -117,15 +113,15 @@ class Main(QMainWindow):
             self.chk_lower.setIcon(self.warning_icon)
             self.chk_special.setIcon(self.warning_icon)
             self.label_outputSearchNordPass.setText('Start typing to see the entropy score')
-            self.label_outputTimeToCrack.setText('no password')
+            self.label_outputTimeToCrack.setText('0 Seconds')
             self.label_outputPasswordStrength.setText('no password')
             self.label_outputEntropy.setText('0 Bits')
 
         # Detect changes in the password field
-        self.lineEdit_password.textChanged.connect(self.getPassword)
+        self.lineEdit_password.textChanged.connect(lambda: PasswordEvaluation.getPassword(self))
         
         # Event Button Page Password Evaluation
-        self.btn_showPassword.clicked.connect(self.btn_hidePwd)
+        self.btn_showPassword.clicked.connect(lambda: PasswordEvaluation.show_hide_password(self))
         self.btn_dictAttack.clicked.connect(self.Passowrd_Dictionary_Attack)
         self.btn_infoEntropy.clicked.connect(lambda: PasswordEvaluation.infoEntropy(self))
 
@@ -159,10 +155,10 @@ class Main(QMainWindow):
             self.hint_btn.append(str(item['tool_description'])) 
         
         # Event Button Page Message Digest
-        self.btn_browseMSDigest.clicked.connect(self.openFileDialog)
+        self.btn_browseMSDigest.clicked.connect(lambda: MessageDigest.openFileDialog(self))
         self.btn_clearMSDigest.clicked.connect(lambda: MessageDigest.clear(self))
         self.btn_saveQR.clicked.connect(lambda: MessageDigest.saveQRCode(self))
-        self.btn_lineAPI.clicked.connect(self.showBtnLine)
+        self.btn_lineAPI.clicked.connect(lambda: MessageDigest.showBtnLine(self))
         self.btn_sendMSDigest.clicked.connect(lambda: MessageDigest.processLineKey(self))
         self.btn_copy.clicked.connect(lambda: MessageDigest.copyOutput(self))
         self.btn_infoToken.clicked.connect(lambda: MessageDigest.infoToken(self))
@@ -206,7 +202,12 @@ class Main(QMainWindow):
         # Event Button Page HTTPS Testing
         self.btn_scanHsts.clicked.connect(lambda: HSTSTesting.scanHSTS(self))
         #self.btn_clearHttps.clicked.connect(lambda: HSTSTesting.clear(self))
-
+    
+    # -------------------- Home ---------------------------------------
+    def openHomePage(self):
+        self.stackedWidget.setCurrentWidget(self.mainpage)
+    
+    # Advanced User ------------------------------------------
     def openAdvancedUserHome(self):
         self.stackedWidget.setCurrentWidget(self.page_advancedUser)
 
@@ -219,44 +220,20 @@ class Main(QMainWindow):
         self.lineEdit_passwordDict.setText(self.lineEdit_password.text())
         self.stackedWidget.setCurrentWidget(self.page_passwordAttack)
         PasswordAttack.init(self)
-        
-    def openHomePage(self):
-        self.stackedWidget.setCurrentWidget(self.mainpage)
-
+    
     def openMalwareHome(self):
         MalwareScanning.show_resultimage(self, type='scan', status='default')
         self.stackedWidget.setCurrentWidget(self.page_malware)
 
-    def openDigestHome(self):
+    def openMessageDigestHome(self):
         self.stackedWidget.setCurrentWidget(self.page_messageDigest)
         self.label_lineAPIDigest.setVisible(False)
         self.lineEdit_tokenMSDigest.setVisible(False)
         self.btn_sendMSDigest.setVisible(False)
         self.btn_infoToken.setVisible(False)
-        self.lineEdit_MSdigest.textChanged.connect(lambda: self.checkFile_Text())
-        
-    def checkFile_Text(self):
-        if os.path.exists(self.lineEdit_MSdigest.text()) == True: # check if file exists
-            print("File")
-            self.state_detect = 1
-            self.btn_md5.clicked.connect(lambda: MessageDigest.fileExtract(self, "md5", self.getPath()))
-            self.btn_sha1.clicked.connect(lambda: MessageDigest.fileExtract(self, "sha1", self.getPath()))
-            self.dropdown_sha2.activated.connect(lambda: MessageDigest.fileExtract(self, "sha2_" + self.dropdown_sha2.currentText(), self.getPath()))
-            self.dropdown_sha3.activated.connect(lambda: MessageDigest.fileExtract(self, "sha3_" + self.dropdown_sha3.currentText(), self.getPath()))
-        else:
-            self.state_detect = 0
-            print("Plaintext")
-            self.btn_md5.clicked.connect(lambda: MessageDigest.hash(self, "md5"))
-            self.btn_sha1.clicked.connect(lambda: MessageDigest.hash(self, "sha1"))
-            self.dropdown_sha2.activated.connect(lambda: self.getdropdown_sha2())
-            self.dropdown_sha3.activated.connect(lambda: self.getdropdown_sha3())
+        self.lineEdit_MSdigest.textChanged.connect(lambda: MessageDigest.checkFile_Text(self))
 
-        # show Image QR Code
-        self.btn_md5.clicked.connect(self.ShowImage_QR)
-        self.btn_sha1.clicked.connect(self.ShowImage_QR)
-        self.dropdown_sha2.activated.connect(self.ShowImage_QR)
-        self.dropdown_sha3.activated.connect(self.ShowImage_QR)
-
+    # Network User ------------------------------------------
     def openNetworkUserHome(self):
         self.stackedWidget.setCurrentWidget(self.page_networkUser)
 
@@ -265,86 +242,6 @@ class Main(QMainWindow):
     
     def openHttpsHome(self):
         self.stackedWidget.setCurrentWidget(self.page_hsts)
-    
-    def btn_hidePwd(self):
-        PasswordEvaluation.show_hide_password(self)
-
-    def getPassword(self):
-        password = PasswordEvaluation.update(self)
-        entropy = PasswordEvaluation.calculate_entropy(self, password)
-
-        self.label_outputEntropy.setText(f'{entropy:.0f} Bits')
-
-        # Check if password is in the list of weak passwords
-        if entropy == 0:
-            self.label_outputEntropy.setText(f'0 Bits')
-            self.label_outputPasswordStrength.setText('')
-        elif entropy > 999:
-            self.label_outputEntropy.setText(f'~NaN Bits')
-        else:
-            self.label_outputEntropy.setText(f'~{entropy:.0f} Bits')
-        
-        length = len(password)
-        if length < 8:
-            self.label_outputPasswordStrength.setText('So very, very bad Password')
-            if length == 0: 
-                self.label_outputPasswordStrength.setText('')
-                self.label_outputEntropy.setText(f'0 Bits')
-        else : 
-            if entropy < 50 :
-                self.label_outputPasswordStrength.setText('Weak password')
-            elif entropy < 80 :
-                self.label_outputPasswordStrength.setText('Medium strength')
-            else:
-                self.label_outputPasswordStrength.setText('Good password')
-        
-        # Show length of password
-        self.label_lengthOfPassword.setText(f'{length} Chars')
-
-        # Show time to crack
-        self.label_outputTimeToCrack.setText(f'{PasswordEvaluation.time_to_Crack(self, password)}')
-
-        # Check if password is in the list of weak passwords
-        PasswordEvaluation.check_common_password(self, password, self.nordpass_common_passwords)
-    
-    def getdropdown_sha2(self):
-        MessageDigest.hash(self, "sha2_" + self.dropdown_sha2.currentText())
-        self.algorithm = 'SHA2-' + self.dropdown_sha2.currentText()
-        self.dropdown_sha3.setCurrentIndex(0) 
-
-    def getdropdown_sha3(self):
-        MessageDigest.hash(self, "sha3_" + self.dropdown_sha3.currentText())
-        self.algorithm = 'SHA3-' + self.dropdown_sha3.currentText()
-        self.dropdown_sha2.setCurrentIndex(0)
-
-    def openFileDialog(self):
-        path = MessageDigest.open_file_dialog(self)
-
-        # try except to check if file exists
-        try:
-            if path.exists() == True: # check if file exists
-                print(f"File exists at: {path.exists()}" + " ++")
-        except AttributeError as e:
-            print(f"Empty file or Not found")
-
-        self.setPath(path)
-    
-    def setPath(self, path):
-        self.path = path
-
-    def getPath(self):
-        return self.path
-
-    def ShowImage_QR(self):
-        if self.lineEdit_outputTextMSDigest.text() != '':
-            MessageDigest.qrCodeGenerator(self, self.lineEdit_outputTextMSDigest.text())
-            MessageDigest.ShowImage_QR(self)
-
-    def showBtnLine(self):
-        self.label_lineAPIDigest.setVisible(True)
-        self.lineEdit_tokenMSDigest.setVisible(True)
-        self.btn_sendMSDigest.setVisible(True)
-        self.btn_infoToken.setVisible(True)
 
 # Run the application
 if __name__ == "__main__":
