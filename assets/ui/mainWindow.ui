@@ -1604,7 +1604,13 @@ QPushButton:hover {
                          </layout>
                         </widget>
                        </item>
-                       <item alignment="Qt::AlignRight">
+                      </layout>
+                     </widget>
+                    </item>
+                    <item alignment="Qt::AlignRight">
+                     <widget class="QWidget" name="widget_108" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_47">
+                       <item alignment="Qt::AlignHCenter">
                         <widget class="QPushButton" name="btn_dictAttack">
                          <property name="minimumSize">
                           <size>
