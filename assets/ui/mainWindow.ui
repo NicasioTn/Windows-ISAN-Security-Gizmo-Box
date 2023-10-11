@@ -2479,93 +2479,16 @@ QPushButton:hover {
               </item>
               <item alignment="Qt::AlignHCenter">
                <widget class="QWidget" name="widget_40" native="true">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
                 <layout class="QVBoxLayout" name="verticalLayout_39">
                  <item>
                   <widget class="QWidget" name="widget_74" native="true">
                    <layout class="QHBoxLayout" name="horizontalLayout">
-                    <item>
-                     <widget class="QComboBox" name="dropdown_wordLists">
-                      <property name="minimumSize">
-                       <size>
-                        <width>119</width>
-                        <height>45</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>210</width>
-                        <height>41</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Bahnschrift SemiBold</family>
-                        <pointsize>13</pointsize>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                      <property name="cursor">
-                       <cursorShape>PointingHandCursor</cursorShape>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">QComboBox {
-        border: 1px solid gray;
-        border-radius: 5px;
-        padding: 1px 18px 1px 3px;
-        min-width: 6em;
-		color: rgba(40,43,61,255) ;
- }
- QComboBox:drop-down {
-	subcontrol-origin: padding;
-	subcontrol-position: top right;
-	width: 30px;
-	border-left-width: 1px;
-	border-left-color: darkgray;
-	border-left-style: solid;
-	border-top-right-radius: 3px;
-	border-bottom-right-radius: 3px;	
-}
-QComboBox::down-arrow {
-	
-	image: url(&quot;D:/ISAN Security Gizmo Box/assets/icons/icons8-expand-arrow-30.png&quot;);
-
-}
-QComboBox:hover {
-	border: 1px solid;
-   border-color:  rgba(0,143,255,255);
-}
-
-</string>
-                      </property>
-                      <property name="iconSize">
-                       <size>
-                        <width>10</width>
-                        <height>10</height>
-                       </size>
-                      </property>
-                      <item>
-                       <property name="text">
-                        <string>Dictionary</string>
-                       </property>
-                      </item>
-                      <item>
-                       <property name="text">
-                        <string>Rockyou.txt</string>
-                       </property>
-                      </item>
-                      <item>
-                       <property name="text">
-                        <string>Crackstation.txt</string>
-                       </property>
-                      </item>
-                      <item>
-                       <property name="text">
-                        <string>Skipping attack </string>
-                       </property>
-                      </item>
-                     </widget>
-                    </item>
                     <item>
                      <widget class="QLineEdit" name="lineEdit_inputFileDict">
                       <property name="minimumSize">
@@ -2729,10 +2652,167 @@ QPushButton:hover {
                   <widget class="QWidget" name="widget_107" native="true">
                    <layout class="QHBoxLayout" name="horizontalLayout_17">
                     <item>
+                     <widget class="QComboBox" name="dropdown_modeAttack">
+                      <property name="minimumSize">
+                       <size>
+                        <width>120</width>
+                        <height>45</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>200</width>
+                        <height>45</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift SemiBold</family>
+                        <pointsize>13</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QComboBox {
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding: 1px 18px 1px 3px;
+        min-width: 6em;
+		color: rgba(40,43,61,255) ;
+ }
+ QComboBox:drop-down {
+	subcontrol-origin: padding;
+	subcontrol-position: top right;
+	width: 30px;
+	border-left-width: 1px;
+	border-left-color: darkgray;
+	border-left-style: solid;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;	
+}
+QComboBox::down-arrow {
+	
+	image: url(&quot;D:/ISAN Security Gizmo Box/assets/icons/icons8-expand-arrow-30.png&quot;);
+
+}
+QComboBox:hover {
+	border: 1px solid;
+   border-color:  rgba(0,143,255,255);
+}
+
+</string>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>Mode</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Straight forward</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Combinator</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Skipping 1</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Skipping 2</string>
+                       </property>
+                      </item>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QComboBox" name="dropdown_wordLists">
+                      <property name="minimumSize">
+                       <size>
+                        <width>101</width>
+                        <height>45</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>190</width>
+                        <height>45</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift SemiBold</family>
+                        <pointsize>13</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="cursor">
+                       <cursorShape>PointingHandCursor</cursorShape>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QComboBox {
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding: 1px 18px 1px 3px;
+        min-width: 6em;
+		color: rgba(40,43,61,255) ;
+ }
+ QComboBox:drop-down {
+	subcontrol-origin: padding;
+	subcontrol-position: top right;
+	width: 30px;
+	border-left-width: 1px;
+	border-left-color: darkgray;
+	border-left-style: solid;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;	
+}
+QComboBox::down-arrow {
+	
+	image: url(&quot;D:/ISAN Security Gizmo Box/assets/icons/icons8-expand-arrow-30.png&quot;);
+
+}
+QComboBox:hover {
+	border: 1px solid;
+   border-color:  rgba(0,143,255,255);
+}
+
+</string>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>10</width>
+                        <height>10</height>
+                       </size>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>Wordlists</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Rockyou.txt</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Crackstation.txt</string>
+                       </property>
+                      </item>
+                     </widget>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="btn_browseDict_2">
                       <property name="minimumSize">
                        <size>
-                        <width>170</width>
+                        <width>300</width>
                         <height>45</height>
                        </size>
                       </property>
@@ -2797,17 +2877,17 @@ QPushButton:hover {
                <widget class="QWidget" name="widget_11" native="true">
                 <layout class="QHBoxLayout" name="horizontalLayout_45">
                  <item>
-                  <widget class="QLabel" name="label">
+                  <widget class="QLabel" name="label_loadding">
                    <property name="minimumSize">
                     <size>
-                     <width>500</width>
+                     <width>400</width>
                      <height>250</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>500</width>
-                     <height>250</height>
+                     <width>400</width>
+                     <height>350</height>
                     </size>
                    </property>
                    <property name="text">
@@ -4315,7 +4395,7 @@ QPushButton:focus {
                   <widget class="QComboBox" name="dropdown_sha2">
                    <property name="minimumSize">
                     <size>
-                     <width>119</width>
+                     <width>101</width>
                      <height>45</height>
                     </size>
                    </property>
@@ -4402,7 +4482,7 @@ QComboBox:hover {
                   <widget class="QComboBox" name="dropdown_sha3">
                    <property name="minimumSize">
                     <size>
-                     <width>119</width>
+                     <width>101</width>
                      <height>45</height>
                     </size>
                    </property>
@@ -5414,7 +5494,7 @@ QLineEdit:focus {
                      <widget class="QComboBox" name="dropdown_typeScan">
                       <property name="minimumSize">
                        <size>
-                        <width>119</width>
+                        <width>101</width>
                         <height>45</height>
                        </size>
                       </property>

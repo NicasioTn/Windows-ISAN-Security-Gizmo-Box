@@ -1246,6 +1246,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_18.addWidget(self.btn_showPasswordDict)
         self.verticalLayout_12.addWidget(self.widget_39, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.widget_40 = QtWidgets.QWidget(parent=self.widget_36)
+        self.widget_40.setMinimumSize(QtCore.QSize(0, 0))
         self.widget_40.setObjectName("widget_40")
         self.verticalLayout_39 = QtWidgets.QVBoxLayout(self.widget_40)
         self.verticalLayout_39.setObjectName("verticalLayout_39")
@@ -1253,51 +1254,6 @@ class Ui_MainWindow(object):
         self.widget_74.setObjectName("widget_74")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.widget_74)
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.dropdown_wordLists = QtWidgets.QComboBox(parent=self.widget_74)
-        self.dropdown_wordLists.setMinimumSize(QtCore.QSize(119, 45))
-        self.dropdown_wordLists.setMaximumSize(QtCore.QSize(210, 41))
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(13)
-        font.setBold(True)
-        font.setWeight(75)
-        self.dropdown_wordLists.setFont(font)
-        self.dropdown_wordLists.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.dropdown_wordLists.setStyleSheet("QComboBox {\n"
-"        border: 1px solid gray;\n"
-"        border-radius: 5px;\n"
-"        padding: 1px 18px 1px 3px;\n"
-"        min-width: 6em;\n"
-"        color: rgba(40,43,61,255) ;\n"
-" }\n"
-" QComboBox:drop-down {\n"
-"    subcontrol-origin: padding;\n"
-"    subcontrol-position: top right;\n"
-"    width: 30px;\n"
-"    border-left-width: 1px;\n"
-"    border-left-color: darkgray;\n"
-"    border-left-style: solid;\n"
-"    border-top-right-radius: 3px;\n"
-"    border-bottom-right-radius: 3px;    \n"
-"}\n"
-"QComboBox::down-arrow {\n"
-"    \n"
-"    image: url(\"D:/ISAN Security Gizmo Box/assets/icons/icons8-expand-arrow-30.png\");\n"
-"\n"
-"}\n"
-"QComboBox:hover {\n"
-"    border: 1px solid;\n"
-"   border-color:  rgba(0,143,255,255);\n"
-"}\n"
-"\n"
-"")
-        self.dropdown_wordLists.setIconSize(QtCore.QSize(10, 10))
-        self.dropdown_wordLists.setObjectName("dropdown_wordLists")
-        self.dropdown_wordLists.addItem("")
-        self.dropdown_wordLists.addItem("")
-        self.dropdown_wordLists.addItem("")
-        self.dropdown_wordLists.addItem("")
-        self.horizontalLayout.addWidget(self.dropdown_wordLists)
         self.lineEdit_inputFileDict = QtWidgets.QLineEdit(parent=self.widget_74)
         self.lineEdit_inputFileDict.setMinimumSize(QtCore.QSize(400, 45))
         self.lineEdit_inputFileDict.setMaximumSize(QtCore.QSize(400, 40))
@@ -1385,8 +1341,96 @@ class Ui_MainWindow(object):
         self.widget_107.setObjectName("widget_107")
         self.horizontalLayout_17 = QtWidgets.QHBoxLayout(self.widget_107)
         self.horizontalLayout_17.setObjectName("horizontalLayout_17")
+        self.dropdown_modeAttack = QtWidgets.QComboBox(parent=self.widget_107)
+        self.dropdown_modeAttack.setMinimumSize(QtCore.QSize(120, 45))
+        self.dropdown_modeAttack.setMaximumSize(QtCore.QSize(200, 45))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.dropdown_modeAttack.setFont(font)
+        self.dropdown_modeAttack.setStyleSheet("QComboBox {\n"
+"        border: 1px solid gray;\n"
+"        border-radius: 5px;\n"
+"        padding: 1px 18px 1px 3px;\n"
+"        min-width: 6em;\n"
+"        color: rgba(40,43,61,255) ;\n"
+" }\n"
+" QComboBox:drop-down {\n"
+"    subcontrol-origin: padding;\n"
+"    subcontrol-position: top right;\n"
+"    width: 30px;\n"
+"    border-left-width: 1px;\n"
+"    border-left-color: darkgray;\n"
+"    border-left-style: solid;\n"
+"    border-top-right-radius: 3px;\n"
+"    border-bottom-right-radius: 3px;    \n"
+"}\n"
+"QComboBox::down-arrow {\n"
+"    \n"
+"    image: url(\"D:/ISAN Security Gizmo Box/assets/icons/icons8-expand-arrow-30.png\");\n"
+"\n"
+"}\n"
+"QComboBox:hover {\n"
+"    border: 1px solid;\n"
+"   border-color:  rgba(0,143,255,255);\n"
+"}\n"
+"\n"
+"")
+        self.dropdown_modeAttack.setObjectName("dropdown_modeAttack")
+        self.dropdown_modeAttack.addItem("")
+        self.dropdown_modeAttack.addItem("")
+        self.dropdown_modeAttack.addItem("")
+        self.dropdown_modeAttack.addItem("")
+        self.dropdown_modeAttack.addItem("")
+        self.horizontalLayout_17.addWidget(self.dropdown_modeAttack)
+        self.dropdown_wordLists = QtWidgets.QComboBox(parent=self.widget_107)
+        self.dropdown_wordLists.setMinimumSize(QtCore.QSize(101, 45))
+        self.dropdown_wordLists.setMaximumSize(QtCore.QSize(190, 45))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(13)
+        font.setBold(True)
+        font.setWeight(75)
+        self.dropdown_wordLists.setFont(font)
+        self.dropdown_wordLists.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.dropdown_wordLists.setStyleSheet("QComboBox {\n"
+"        border: 1px solid gray;\n"
+"        border-radius: 5px;\n"
+"        padding: 1px 18px 1px 3px;\n"
+"        min-width: 6em;\n"
+"        color: rgba(40,43,61,255) ;\n"
+" }\n"
+" QComboBox:drop-down {\n"
+"    subcontrol-origin: padding;\n"
+"    subcontrol-position: top right;\n"
+"    width: 30px;\n"
+"    border-left-width: 1px;\n"
+"    border-left-color: darkgray;\n"
+"    border-left-style: solid;\n"
+"    border-top-right-radius: 3px;\n"
+"    border-bottom-right-radius: 3px;    \n"
+"}\n"
+"QComboBox::down-arrow {\n"
+"    \n"
+"    image: url(\"D:/ISAN Security Gizmo Box/assets/icons/icons8-expand-arrow-30.png\");\n"
+"\n"
+"}\n"
+"QComboBox:hover {\n"
+"    border: 1px solid;\n"
+"   border-color:  rgba(0,143,255,255);\n"
+"}\n"
+"\n"
+"")
+        self.dropdown_wordLists.setIconSize(QtCore.QSize(10, 10))
+        self.dropdown_wordLists.setObjectName("dropdown_wordLists")
+        self.dropdown_wordLists.addItem("")
+        self.dropdown_wordLists.addItem("")
+        self.dropdown_wordLists.addItem("")
+        self.horizontalLayout_17.addWidget(self.dropdown_wordLists)
         self.btn_browseDict_2 = QtWidgets.QPushButton(parent=self.widget_107)
-        self.btn_browseDict_2.setMinimumSize(QtCore.QSize(170, 45))
+        self.btn_browseDict_2.setMinimumSize(QtCore.QSize(300, 45))
         self.btn_browseDict_2.setMaximumSize(QtCore.QSize(170, 40))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -1423,12 +1467,12 @@ class Ui_MainWindow(object):
         self.widget_11.setObjectName("widget_11")
         self.horizontalLayout_45 = QtWidgets.QHBoxLayout(self.widget_11)
         self.horizontalLayout_45.setObjectName("horizontalLayout_45")
-        self.label = QtWidgets.QLabel(parent=self.widget_11)
-        self.label.setMinimumSize(QtCore.QSize(500, 250))
-        self.label.setMaximumSize(QtCore.QSize(500, 250))
-        self.label.setText("")
-        self.label.setObjectName("label")
-        self.horizontalLayout_45.addWidget(self.label)
+        self.label_loadding = QtWidgets.QLabel(parent=self.widget_11)
+        self.label_loadding.setMinimumSize(QtCore.QSize(400, 250))
+        self.label_loadding.setMaximumSize(QtCore.QSize(400, 350))
+        self.label_loadding.setText("")
+        self.label_loadding.setObjectName("label_loadding")
+        self.horizontalLayout_45.addWidget(self.label_loadding)
         self.verticalLayout_34.addWidget(self.widget_11, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.widget_57 = QtWidgets.QWidget(parent=self.widget_37)
         self.widget_57.setMinimumSize(QtCore.QSize(650, 50))
@@ -2228,7 +2272,7 @@ class Ui_MainWindow(object):
         self.btn_sha1.setObjectName("btn_sha1")
         self.horizontalLayout_21.addWidget(self.btn_sha1)
         self.dropdown_sha2 = QtWidgets.QComboBox(parent=self.widget_46)
-        self.dropdown_sha2.setMinimumSize(QtCore.QSize(119, 45))
+        self.dropdown_sha2.setMinimumSize(QtCore.QSize(101, 45))
         self.dropdown_sha2.setMaximumSize(QtCore.QSize(111, 41))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -2273,7 +2317,7 @@ class Ui_MainWindow(object):
         self.dropdown_sha2.addItem("")
         self.horizontalLayout_21.addWidget(self.dropdown_sha2)
         self.dropdown_sha3 = QtWidgets.QComboBox(parent=self.widget_46)
-        self.dropdown_sha3.setMinimumSize(QtCore.QSize(119, 45))
+        self.dropdown_sha3.setMinimumSize(QtCore.QSize(101, 45))
         self.dropdown_sha3.setMaximumSize(QtCore.QSize(111, 41))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -2806,7 +2850,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_30 = QtWidgets.QHBoxLayout(self.widget_70)
         self.horizontalLayout_30.setObjectName("horizontalLayout_30")
         self.dropdown_typeScan = QtWidgets.QComboBox(parent=self.widget_70)
-        self.dropdown_typeScan.setMinimumSize(QtCore.QSize(119, 45))
+        self.dropdown_typeScan.setMinimumSize(QtCore.QSize(101, 45))
         self.dropdown_typeScan.setMaximumSize(QtCore.QSize(160, 41))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -3158,13 +3202,17 @@ class Ui_MainWindow(object):
         self.btn_backDict.setText(_translate("MainWindow", "Back"))
         self.label_Password_4.setText(_translate("MainWindow", "DICTIONATY ATTACK"))
         self.lineEdit_passwordDict.setPlaceholderText(_translate("MainWindow", "Type here"))
-        self.dropdown_wordLists.setItemText(0, _translate("MainWindow", "Dictionary"))
-        self.dropdown_wordLists.setItemText(1, _translate("MainWindow", "Rockyou.txt"))
-        self.dropdown_wordLists.setItemText(2, _translate("MainWindow", "Crackstation.txt"))
-        self.dropdown_wordLists.setItemText(3, _translate("MainWindow", "Skipping attack "))
         self.lineEdit_inputFileDict.setPlaceholderText(_translate("MainWindow", "Only text file (.txt)"))
         self.btn_browseDict.setText(_translate("MainWindow", "Browse"))
         self.btn_clearDict.setText(_translate("MainWindow", "Clear"))
+        self.dropdown_modeAttack.setItemText(0, _translate("MainWindow", "Mode"))
+        self.dropdown_modeAttack.setItemText(1, _translate("MainWindow", "Straight forward"))
+        self.dropdown_modeAttack.setItemText(2, _translate("MainWindow", "Combinator"))
+        self.dropdown_modeAttack.setItemText(3, _translate("MainWindow", "Skipping 1"))
+        self.dropdown_modeAttack.setItemText(4, _translate("MainWindow", "Skipping 2"))
+        self.dropdown_wordLists.setItemText(0, _translate("MainWindow", "Wordlists"))
+        self.dropdown_wordLists.setItemText(1, _translate("MainWindow", "Rockyou.txt"))
+        self.dropdown_wordLists.setItemText(2, _translate("MainWindow", "Crackstation.txt"))
         self.btn_browseDict_2.setText(_translate("MainWindow", "Start Attack"))
         self.btn_backMalware.setText(_translate("MainWindow", "Back"))
         self.label_Password_6.setText(_translate("MainWindow", "MALWARE SCANNING"))
