@@ -152,7 +152,7 @@ class Main(QMainWindow):
             print('Section "LineNotify" does not exist in the config file.')
         
         for item in json_object:
-            self.hint_btn.append(str(item['tool_description'])) 
+            self.hint_btn.append(str(item['tool_description']))
         
         # Event Button Page Message Digest
         self.btn_browseMSDigest.clicked.connect(lambda: MessageDigest.openFileDialog(self))
