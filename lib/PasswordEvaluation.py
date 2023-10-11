@@ -1,4 +1,5 @@
 import os
+import re
 from PyQt6.QtCore import QFileInfo
 from PyQt6.QtWidgets import QDialog, QFileDialog, QLineEdit
 from PyQt6.QtGui import QIcon
@@ -21,7 +22,7 @@ class PasswordEvaluation(QDialog):
         self.lineEdit_password.setText('')
         self.lineEdit_passwordDict.setText('')
         self.label_outputSearchNordPass.setText('Start typing to see the entropy score')
-        self.label_outputTimeToCrack.setText('no password')
+        self.label_outputTimeToCrack.setText('0 seconds')
         self.label_outputPasswordStrength.setText('no password')
         self.label_outputEntropy.setText('0 Bits')
 
@@ -36,9 +37,47 @@ class PasswordEvaluation(QDialog):
             self.hide = True
             self.btn_showPassword.setIcon(self.unhide_icon)
 
+    def getPassword(self):
+        password = PasswordEvaluation.update(self)
+        entropy = PasswordEvaluation.calculate_entropy(self, password)
+
+        self.label_outputEntropy.setText(f'{entropy:.0f} Bits')
+
+        # Check if password is in the list of weak passwords
+        if entropy == 0:
+            self.label_outputEntropy.setText(f'0 Bits')
+            self.label_outputPasswordStrength.setText('')
+        elif entropy > 999:
+            self.label_outputEntropy.setText(f'~NaN Bits')
+        else:
+            self.label_outputEntropy.setText(f'~{entropy:.0f} Bits')
+        
+        length = len(password)
+        if length < 8:
+            self.label_outputPasswordStrength.setText('So very, very bad Password')
+            if length == 0: 
+                self.label_outputPasswordStrength.setText('')
+                self.label_outputEntropy.setText(f'0 Bits')
+        else : 
+            if entropy < 50 :
+                self.label_outputPasswordStrength.setText('Weak password')
+            elif entropy < 80 :
+                self.label_outputPasswordStrength.setText('Medium password')
+            else:
+                self.label_outputPasswordStrength.setText('Good password')
+        
+        # Show length of password
+        self.label_lengthOfPassword.setText(f'{length} Chars')
+
+        # Show time to crack
+        self.label_outputTimeToCrack.setText(f'{PasswordEvaluation.time_to_Crack(self, password)}')
+
+        # Check if password is in the list of weak passwords
+        PasswordEvaluation.check_common_password(self, password, self.nordpass_common_passwords)
+        
     def check_common_password(self, password, nordpass_common_passwords):
         if password == '':
-            self.label_outputEntropy.setText('')
+            self.label_outputEntropy.setText('0 Bits')
             self.label_outputSearchNordPass.setText('Start typing to see the entropy score')
             self.label_outputSearchNordPass.setStyleSheet("color: rgba(0, 143, 255, 255);")
             self.label_outputPasswordStrength.setText('no password')
@@ -55,6 +94,18 @@ class PasswordEvaluation(QDialog):
                 self.btn_dictAttack.setVisible(True) if self.label_outputSearchNordPass.text() == '' \
                     or self.label_outputSearchNordPass.text() == 'Not found in the list' else self.btn_dictAttack.setVisible(False)
     
+    def validate_input(self, password):
+        # check password only contains valid characters , a-z, A-Z, 0-9, !@#$%^&*()_+=-
+        valid_input = re.sub(r'[^a-zA-Z0-9!@#$%^&*()_+=-]|\s', '', password)
+        #self.lineEdit_password.setText(valid_input)
+
+        # check password not contains a-z, A-Z, 0-9, !@#$%^&*()_+=-
+        if password != valid_input:
+            self.lineEdit_password.setStyleSheet("border: 5px solid red;")
+        else:
+            self.lineEdit_password.setStyleSheet("border: 1px solid black;")
+        return valid_input
+
     # real time password detection
     def update(self):
 
@@ -66,6 +117,7 @@ class PasswordEvaluation(QDialog):
         
         # Get password real time
         password = self.lineEdit_password.text()
+        password = PasswordEvaluation.validate_input(self, password)
 
         for char in password:
             if char.isdigit():
@@ -119,7 +171,7 @@ class PasswordEvaluation(QDialog):
                 self.chk_upper.setIcon(self.warning_icon)
                 self.chk_lower.setIcon(self.warning_icon)
                 self.chk_special.setIcon(self.warning_icon)
-                return "no password"
+                return "0 seconds"
         
             possible_characters = 0
             if self.chk_numeric.isChecked(): # 0-9
