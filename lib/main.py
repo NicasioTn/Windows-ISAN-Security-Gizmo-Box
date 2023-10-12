@@ -239,6 +239,7 @@ class Main(QMainWindow):
 
     def openVulnerabilityHome(self):
         self.stackedWidget.setCurrentWidget(self.page_vulnerability)
+        VulnerabilityScanning.showWellKnownPorts(self)
     
     def openHttpsHome(self):
         self.stackedWidget.setCurrentWidget(self.page_hsts)

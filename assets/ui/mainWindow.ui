@@ -5293,7 +5293,9 @@ QPushButton:hover {
         <item>
          <widget class="QWidget" name="widget_64" native="true">
           <property name="styleSheet">
-           <string notr="true">QWidget#widget_59 {
+           <string notr="true">QWidget#widget_59,
+QWidget#widget_112,
+QWidget#widget_115 {
     border: 1px solid rgb(237, 236, 237); /* Set the &quot;groove&quot; border style for the specific widgets */
 	background-color: rgb(237, 236, 237);
 }
@@ -5506,7 +5508,7 @@ QLineEdit:focus {
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>160</width>
+                        <width>190</width>
                         <height>41</height>
                        </size>
                       </property>
@@ -5565,37 +5567,42 @@ QComboBox:hover {
                       </item>
                       <item>
                        <property name="text">
-                        <string>Stealth</string>
+                        <string>Quick Scan</string>
                        </property>
                       </item>
                       <item>
                        <property name="text">
-                        <string>Agressive</string>
+                        <string>Stealth Scan</string>
                        </property>
                       </item>
                       <item>
                        <property name="text">
-                        <string>Adaptive</string>
+                        <string>Agressive Scan</string>
                        </property>
                       </item>
                       <item>
                        <property name="text">
-                        <string>Vulner.NSE</string>
+                        <string>Adaptive Scan</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Vulner.NSE Script</string>
                        </property>
                       </item>
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLineEdit" name="lineEdit_inputFilevulner">
+                     <widget class="QLineEdit" name="lineEdit_commandvulner">
                       <property name="minimumSize">
                        <size>
-                        <width>400</width>
+                        <width>450</width>
                         <height>45</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>400</width>
+                        <width>450</width>
                         <height>40</height>
                        </size>
                       </property>
@@ -5631,7 +5638,7 @@ QLineEdit:focus {
                        <bool>true</bool>
                       </property>
                       <property name="placeholderText">
-                       <string>Only text file</string>
+                       <string>command execute</string>
                       </property>
                      </widget>
                     </item>
@@ -5751,7 +5758,100 @@ QPushButton:hover {
             </widget>
            </item>
            <item>
-            <widget class="QWidget" name="widget_66" native="true"/>
+            <widget class="QWidget" name="widget_66" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_48">
+              <item>
+               <widget class="QWidget" name="widget_112" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_52">
+                 <item>
+                  <widget class="QLabel" name="label_Vulner">
+                   <property name="minimumSize">
+                    <size>
+                     <width>600</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Bahnschrift SemiBold</family>
+                     <pointsize>13</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget_115" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_55">
+                 <item>
+                  <widget class="QLabel" name="label_SimplePorts">
+                   <property name="minimumSize">
+                    <size>
+                     <width>100</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Bahnschrift SemiBold</family>
+                     <pointsize>13</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Ports</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignHCenter|Qt::AlignTop</set>
+                   </property>
+                   <property name="margin">
+                    <number>20</number>
+                   </property>
+                   <property name="indent">
+                    <number>15</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_SimpleServices">
+                   <property name="minimumSize">
+                    <size>
+                     <width>500</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Bahnschrift SemiBold</family>
+                     <pointsize>13</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Services</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                   </property>
+                   <property name="margin">
+                    <number>20</number>
+                   </property>
+                   <property name="indent">
+                    <number>15</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
            </item>
           </layout>
          </widget>
