@@ -5783,6 +5783,12 @@ QPushButton:hover {
                    <property name="alignment">
                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
                    </property>
+                   <property name="margin">
+                    <number>20</number>
+                   </property>
+                   <property name="indent">
+                    <number>15</number>
+                   </property>
                   </widget>
                  </item>
                 </layout>

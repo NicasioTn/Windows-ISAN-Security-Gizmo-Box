@@ -3000,6 +3000,7 @@ class Ui_MainWindow(object):
         font.setPointSize(13)
         self.label_Vulner.setFont(font)
         self.label_Vulner.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignTop)
+        self.label_Vulner.setIndent(15)
         self.label_Vulner.setObjectName("label_Vulner")
         self.horizontalLayout_52.addWidget(self.label_Vulner)
         self.horizontalLayout_48.addWidget(self.widget_112)
