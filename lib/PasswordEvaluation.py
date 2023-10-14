@@ -51,36 +51,99 @@ class PasswordEvaluation(QDialog):
             self.label_outputEntropy.setText(f'Almost impossible to crack')
         else:
             self.label_outputEntropy.setText(f'{entropy:.0f} Bits')
-        
+
         length = len(password)
 
         if length < 8:
             self.label_outputPasswordStrength.setText('Very Bad')
-            self.label_outputPasswordStrength.setStyleSheet("color: red;"
+            self.label_outputPasswordStrength.setStyleSheet("color: rgba(254,61,58,255);"
             "background-color: rgb(237, 236, 237);"
             "border-radius: 20px;")
+            self.progressBar_pwdStrength.setValue(10)
+            self.progressBar_pwdStrength.setStyleSheet('''QProgressBar
+                                                        {
+                                                            border: solid;
+                                                            border-radius: 30px;
+                                                            color: black;
+                                                        }
+                                                        QProgressBar::chunk 
+                                                        {
+                                                            background-color:rgba(254,61,58,255);
+                                                            border-radius :15px;
+                                                        }     ''')
             if length == 0: 
                 self.label_outputPasswordStrength.setText('')
                 self.label_outputEntropy.setText(f'0 Bits')
-                self.label_outputPasswordStrength.setStyleSheet("color: black;"
+                self.label_outputPasswordStrength.setStyleSheet("color: gray;"
             "background-color: rgb(237, 236, 237);"
             "border-radius: 20px;")
+                self.progressBar_pwdStrength.setValue(0)
+                self.progressBar_pwdStrength.setStyleSheet('''QProgressBar
+                                                        {
+                                                            border: solid;
+                                                            border-radius: 30px;
+                                                            color: black;
+                                                        }
+                                                        QProgressBar::chunk 
+                                                        {
+                                                            background-color: gray;
+                                                            border-radius :15px;
+                                                        }     ''')
+
         else : 
             if entropy < PasswordEvaluation.minentropy : # 50 bits
                 self.label_outputPasswordStrength.setText('Weak')
-                self.label_outputPasswordStrength.setStyleSheet("color: red;"
+                self.label_outputPasswordStrength.setStyleSheet("color: rgba(255,182,0,255);"
             "background-color: rgb(237, 236, 237);"
             "border-radius: 20px;")
+                self.progressBar_pwdStrength.setValue(20)
+                self.progressBar_pwdStrength.setStyleSheet('''QProgressBar
+                                                        {
+                                                            border: solid;
+                                                            border-radius: 30px;
+                                                            color: black;
+                                                        }
+                                                        QProgressBar::chunk 
+                                                        {
+                                                            background-color: rgba(255,182,0,255);
+                                                            border-radius :15px;
+                                                        }     ''')
+
             elif entropy < PasswordEvaluation.maxentropy : # 80 bits
                 self.label_outputPasswordStrength.setText('Medium')
-                self.label_outputPasswordStrength.setStyleSheet("color: Orange;"
+                self.label_outputPasswordStrength.setStyleSheet("color: rgba(0,134,213,255);"
             "background-color: rgb(237, 236, 237);"
             "border-radius: 20px;")
+                self.progressBar_pwdStrength.setValue(50)
+                self.progressBar_pwdStrength.setStyleSheet('''QProgressBar
+                                                        {
+                                                            border: solid;
+                                                            border-radius: 30px;
+                                                            color: black;
+                                                        }
+                                                        QProgressBar::chunk 
+                                                        {
+                                                            background-color: rgba(0,134,213,255);
+                                                            border-radius :15px;
+                                                        }     ''')
+
             else:
                 self.label_outputPasswordStrength.setText('Good')
-                self.label_outputPasswordStrength.setStyleSheet("color: green;"
+                self.label_outputPasswordStrength.setStyleSheet("color: rgba(15,152,72,255);"
             "background-color: rgb(237, 236, 237);"
             "border-radius: 20px;")
+                self.progressBar_pwdStrength.setValue(80)
+                self.progressBar_pwdStrength.setStyleSheet('''QProgressBar
+                                                        {
+                                                            border: solid;
+                                                            border-radius: 30px;
+                                                            color: black;
+                                                        }
+                                                        QProgressBar::chunk 
+                                                        {
+                                                            background-color: rgba(15,152,72,255);
+                                                            border-radius :15px;
+                                                        }     ''')
         
         # Show length of password
         self.label_lengthOfPassword.setText(f'{length} Chars')
@@ -103,14 +166,30 @@ class PasswordEvaluation(QDialog):
             if password in nordpass_common_passwords:
                 print(self.nordpass_common_passwords.index(password))
                 self.label_outputSearchNordPass.setText('Found in the top 200 most common passwords by NordPass')
-                self.label_outputSearchNordPass.setStyleSheet("color: red;")
+                self.label_outputSearchNordPass.setStyleSheet("color: rgba(254,61,58,255);")
                 self.btn_dictAttack.setVisible(False)
                 self.label_outputPasswordStrength.setText('Very Bad')
+                self.label_outputPasswordStrength.setStyleSheet('''color: rgba(254,61,58,255);
+                                                                    background-color: rgb(237, 236, 237);
+                                                                    border-radius: 20px;''')
+                self.progressBar_pwdStrength.setValue(10)
+                self.progressBar_pwdStrength.setStyleSheet('''QProgressBar
+                                                            {
+                                                                border: solid;
+                                                                border-radius: 30px;
+                                                                color: black;
+                                                            }
+                                                            QProgressBar::chunk 
+                                                            {
+                                                                background-color:rgba(254,61,58,255);
+                                                                border-radius :15px;
+                                                            }     ''')
             else:
                 self.label_outputSearchNordPass.setText('Not found in the lists')
                 self.label_outputSearchNordPass.setStyleSheet("color: rgb(8, 120, 41);")
                 self.btn_dictAttack.setVisible(True) if self.label_outputSearchNordPass.text() == '' \
                     or self.label_outputSearchNordPass.text() == 'Not found in the lists' else self.btn_dictAttack.setVisible(False)
+                
     
     def validate_input(self, password):
         # check password only contains valid characters , a-z, A-Z, 0-9, !@#$%^&*()_+=-, space

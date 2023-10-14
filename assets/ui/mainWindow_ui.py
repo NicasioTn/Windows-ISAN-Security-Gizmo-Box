@@ -1012,8 +1012,9 @@ class Ui_MainWindow(object):
 "    background-color:rgb(8,120,41);\n"
 "    border-radius :15px;\n"
 "}     ")
-        self.progressBar_pwdStrength.setProperty("value", 20)
+        self.progressBar_pwdStrength.setProperty("value", 0)
         self.progressBar_pwdStrength.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.progressBar_pwdStrength.setTextVisible(False)
         self.progressBar_pwdStrength.setObjectName("progressBar_pwdStrength")
         self.verticalLayout_19.addWidget(self.progressBar_pwdStrength, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.verticalLayout_14.addWidget(self.widget_29)

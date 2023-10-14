@@ -1974,10 +1974,13 @@ QProgressBar::chunk
 }     </string>
                       </property>
                       <property name="value">
-                       <number>20</number>
+                       <number>0</number>
                       </property>
                       <property name="alignment">
                        <set>Qt::AlignCenter</set>
+                      </property>
+                      <property name="textVisible">
+                       <bool>false</bool>
                       </property>
                      </widget>
                     </item>
