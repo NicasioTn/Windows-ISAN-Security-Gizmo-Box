@@ -41,7 +41,7 @@ class Main(QMainWindow):
         self.setWindowIcon(QIcon("./assets/icons/icons8-stan-marsh-96.png"))
         self.hide_icon = QIcon("./assets/icons/icon_closedeye.png")
         self.unhide_icon = QIcon("./assets/icons/icon_openeye.png")
-        self.warning_icon = QIcon("./assets/icons/warning.png")
+        self.warning_icon = QIcon("./assets/icons/warning-red.png")
         self.check_icon = QIcon("./assets/icons/Checked.png")
         self.label_logo = QPixmap("./assets/icons/icons8-stan-marsh-96.png")
         self.image_main = QPixmap("./assets/images/main.png")
@@ -56,7 +56,7 @@ class Main(QMainWindow):
         self.btn_backVulner.clicked.connect(self.openNetworkUserHome)
         self.btn_backHsts.clicked.connect(self.openNetworkUserHome)
 
-        # clear after back button
+        # clear cache data after back button
         self.btn_backPassword.clicked.connect(lambda: PasswordEvaluation.clear(self))
         self.btn_backDict.clicked.connect(lambda: PasswordAttack.clear(self))
         self.btn_backMalware.clicked.connect(lambda: MalwareScanning.clear(self))
