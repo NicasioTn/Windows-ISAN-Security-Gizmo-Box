@@ -1946,6 +1946,41 @@ border-radius: 20px;</string>
                       </property>
                      </widget>
                     </item>
+                    <item alignment="Qt::AlignHCenter">
+                     <widget class="QProgressBar" name="progressBar">
+                      <property name="minimumSize">
+                       <size>
+                        <width>500</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>500</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QProgressBar
+{
+	border: solid;
+	border-radius: 30px;
+	color: black;
+}
+QProgressBar::chunk 
+{
+	background-color:rgb(8,120,41);
+	border-radius :15px;
+}     </string>
+                      </property>
+                      <property name="value">
+                       <number>20</number>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
                    </layout>
                   </widget>
                  </item>
@@ -3441,15 +3476,12 @@ QPushButton:hover {
                  </item>
                  <item>
                   <widget class="QWidget" name="widget_33" native="true">
-                   <layout class="QVBoxLayout" name="verticalLayout_60">
+                   <layout class="QVBoxLayout" name="verticalLayout_40">
                     <item>
-                     <widget class="QWidget" name="widget_86" native="true">
-                      <property name="styleSheet">
-                       <string notr="true"/>
-                      </property>
-                      <layout class="QVBoxLayout" name="verticalLayout_62">
+                     <widget class="QWidget" name="widget_116" native="true">
+                      <layout class="QVBoxLayout" name="verticalLayout_71">
                        <item>
-                        <widget class="QLabel" name="label_scanSummary_3">
+                        <widget class="QLabel" name="label_Analysis_2">
                          <property name="font">
                           <font>
                            <family>Bahnschrift SemiBold</family>
