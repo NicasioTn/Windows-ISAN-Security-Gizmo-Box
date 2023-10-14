@@ -998,10 +998,10 @@ class Ui_MainWindow(object):
         self.label_outputPasswordStrength.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_outputPasswordStrength.setObjectName("label_outputPasswordStrength")
         self.verticalLayout_19.addWidget(self.label_outputPasswordStrength, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
-        self.progressBar = QtWidgets.QProgressBar(parent=self.widget_29)
-        self.progressBar.setMinimumSize(QtCore.QSize(500, 30))
-        self.progressBar.setMaximumSize(QtCore.QSize(500, 30))
-        self.progressBar.setStyleSheet("QProgressBar\n"
+        self.progressBar_pwdStrength = QtWidgets.QProgressBar(parent=self.widget_29)
+        self.progressBar_pwdStrength.setMinimumSize(QtCore.QSize(500, 30))
+        self.progressBar_pwdStrength.setMaximumSize(QtCore.QSize(500, 30))
+        self.progressBar_pwdStrength.setStyleSheet("QProgressBar\n"
 "{\n"
 "    border: solid;\n"
 "    border-radius: 30px;\n"
@@ -1012,10 +1012,10 @@ class Ui_MainWindow(object):
 "    background-color:rgb(8,120,41);\n"
 "    border-radius :15px;\n"
 "}     ")
-        self.progressBar.setProperty("value", 20)
-        self.progressBar.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.progressBar.setObjectName("progressBar")
-        self.verticalLayout_19.addWidget(self.progressBar, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
+        self.progressBar_pwdStrength.setProperty("value", 20)
+        self.progressBar_pwdStrength.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.progressBar_pwdStrength.setObjectName("progressBar_pwdStrength")
+        self.verticalLayout_19.addWidget(self.progressBar_pwdStrength, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.verticalLayout_14.addWidget(self.widget_29)
         self.horizontalLayout_12.addWidget(self.widget_24)
         self.widget_25 = QtWidgets.QWidget(parent=self.widget_21)
@@ -1772,11 +1772,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_54.addWidget(self.image_analysis, 0, QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignTop)
         self.verticalLayout_53.addWidget(self.widget_88)
         self.verticalLayout_52.addWidget(self.widget_89)
-        self.widget_33 = QtWidgets.QWidget(parent=self.widget_84)
-        self.widget_33.setObjectName("widget_33")
-        self.verticalLayout_40 = QtWidgets.QVBoxLayout(self.widget_33)
-        self.verticalLayout_40.setObjectName("verticalLayout_40")
-        self.widget_116 = QtWidgets.QWidget(parent=self.widget_33)
+        self.widget_116 = QtWidgets.QWidget(parent=self.widget_84)
         self.widget_116.setObjectName("widget_116")
         self.verticalLayout_71 = QtWidgets.QVBoxLayout(self.widget_116)
         self.verticalLayout_71.setObjectName("verticalLayout_71")
@@ -1790,7 +1786,11 @@ class Ui_MainWindow(object):
         self.label_Analysis_2.setStyleSheet("    color: rgba(40,43,61,255) ;")
         self.label_Analysis_2.setObjectName("label_Analysis_2")
         self.verticalLayout_71.addWidget(self.label_Analysis_2)
-        self.verticalLayout_40.addWidget(self.widget_116)
+        self.verticalLayout_52.addWidget(self.widget_116)
+        self.widget_33 = QtWidgets.QWidget(parent=self.widget_84)
+        self.widget_33.setObjectName("widget_33")
+        self.verticalLayout_40 = QtWidgets.QVBoxLayout(self.widget_33)
+        self.verticalLayout_40.setObjectName("verticalLayout_40")
         self.widget_97 = QtWidgets.QWidget(parent=self.widget_33)
         self.widget_97.setObjectName("widget_97")
         self.horizontalLayout_15 = QtWidgets.QHBoxLayout(self.widget_97)
