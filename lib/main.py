@@ -194,7 +194,7 @@ class Main(QMainWindow):
         # --------------------- Vulnerability -------------------------------
 
         # Event Button Page Vulnerability
-        self.btn_scanVulner.clicked.connect(lambda: VulnerabilityScanning.nmapScan(self))
+        self.btn_scanVulner.clicked.connect(lambda: VulnerabilityScanning.prepareCommand(self))
         self.btn_clearVulner.clicked.connect(lambda: VulnerabilityScanning.clear(self))
         self.dropdown_typeScan.activated.connect(lambda: VulnerabilityScanning.typeScan(self))
 
