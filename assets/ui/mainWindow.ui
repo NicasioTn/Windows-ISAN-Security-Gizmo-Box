@@ -1947,7 +1947,7 @@ border-radius: 20px;</string>
                      </widget>
                     </item>
                     <item alignment="Qt::AlignHCenter">
-                     <widget class="QProgressBar" name="progressBar">
+                     <widget class="QProgressBar" name="progressBar_pwdStrength">
                       <property name="minimumSize">
                        <size>
                         <width>500</width>
@@ -3475,32 +3475,32 @@ QPushButton:hover {
                   </widget>
                  </item>
                  <item>
-                  <widget class="QWidget" name="widget_33" native="true">
-                   <layout class="QVBoxLayout" name="verticalLayout_40">
+                  <widget class="QWidget" name="widget_116" native="true">
+                   <layout class="QVBoxLayout" name="verticalLayout_71">
                     <item>
-                     <widget class="QWidget" name="widget_116" native="true">
-                      <layout class="QVBoxLayout" name="verticalLayout_71">
-                       <item>
-                        <widget class="QLabel" name="label_Analysis_2">
-                         <property name="font">
-                          <font>
-                           <family>Bahnschrift SemiBold</family>
-                           <pointsize>13</pointsize>
-                           <weight>75</weight>
-                           <bold>true</bold>
-                          </font>
-                         </property>
-                         <property name="styleSheet">
-                          <string notr="true">	color: rgba(40,43,61,255) ;</string>
-                         </property>
-                         <property name="text">
-                          <string>Threat Scan Summary</string>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
+                     <widget class="QLabel" name="label_Analysis_2">
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift SemiBold</family>
+                        <pointsize>13</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">	color: rgba(40,43,61,255) ;</string>
+                      </property>
+                      <property name="text">
+                       <string>Threat Scan Summary</string>
+                      </property>
                      </widget>
                     </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="widget_33" native="true">
+                   <layout class="QVBoxLayout" name="verticalLayout_40">
                     <item>
                      <widget class="QWidget" name="widget_97" native="true">
                       <layout class="QHBoxLayout" name="horizontalLayout_15">
