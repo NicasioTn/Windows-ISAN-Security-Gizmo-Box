@@ -3,17 +3,16 @@ import os
 import json
 import configparser
 
-from PyQt6.QtWidgets import ( QApplication, QDialog, QLineEdit, QMainWindow )
-from PyQt6.QtGui import QIcon, QPixmap, QFont
+from PyQt6.QtWidgets import ( QApplication, QLineEdit, QMainWindow )
+from PyQt6.QtGui import QIcon, QPixmap
 from PyQt6.uic import loadUi
-from PyQt6.QtCore import Qt
 
 # Import all the classes from the lib folder
 from PasswordEvaluation import *
 from MessageDigest import *
 from MalwareScanning import *
 from VulnerabilityScanning import *
-from HSTSTesting import *
+from HTTPSTesting import *
 
 class Main(QMainWindow):
     
@@ -34,7 +33,7 @@ class Main(QMainWindow):
         messageDigest = MessageDigest()
         malwareScanning = MalwareScanning()
         vulnerabilityScanning = VulnerabilityScanning()
-        hstsTesting = HSTSTesting()
+        hstsTesting = HTTPSTesting()
 
         # initialize Icon
         self.setWindowTitle("ISAN Security Gizmo Box v1.0")
@@ -54,7 +53,7 @@ class Main(QMainWindow):
         self.btn_backMSDigest.clicked.connect(self.openAdvancedUserHome)
         self.btn_backNetworkUser.clicked.connect(self.openHomePage)
         self.btn_backVulner.clicked.connect(self.openNetworkUserHome)
-        self.btn_backHsts.clicked.connect(self.openNetworkUserHome)
+        self.btn_backHttps.clicked.connect(self.openNetworkUserHome)
 
         # clear cache data after back button
         self.btn_backPassword.clicked.connect(lambda: PasswordEvaluation.clear(self))
@@ -62,7 +61,7 @@ class Main(QMainWindow):
         self.btn_backMalware.clicked.connect(lambda: MalwareScanning.clear(self))
         self.btn_backMSDigest.clicked.connect(lambda: MessageDigest.clear(self))
         self.btn_backVulner.clicked.connect(lambda: VulnerabilityScanning.clear(self))
-        self.btn_backHsts.clicked.connect(lambda: HSTSTesting.clear(self))
+        self.btn_backHttps.clicked.connect(lambda: HTTPSTesting.clear(self))
 
         # --------------------- Get Started ---------------------------------
         self.btn_getStart.clicked.connect(self.openHomePage)
@@ -74,7 +73,7 @@ class Main(QMainWindow):
         self.btn_home.clicked.connect(lambda: MessageDigest.clear(self))
         self.btn_home.clicked.connect(lambda: MalwareScanning.clear(self))
         self.btn_home.clicked.connect(lambda: VulnerabilityScanning.clear(self))
-        self.btn_home.clicked.connect(lambda: HSTSTesting.clear(self))
+        self.btn_home.clicked.connect(lambda: HTTPSTesting.clear(self))
 
         self.btn_advancedUserHome.clicked.connect(self.openAdvancedUserHome)
         self.btn_networkUserHome.clicked.connect(self.openNetworkUserHome)
@@ -145,7 +144,7 @@ class Main(QMainWindow):
         configFilePath = './data/init.conf'
         config.read(configFilePath)
         if 'LineNotify' in config:
-            line_api_key = config.get('LineNotify', 'LineAPIKEY')
+            line_api_key = config.get('LineNotify', 'lineapikey')
             self.lineEdit_tokenMSDigest.setText(line_api_key)
             #print(f'Line API Key: {line_api_key}')
         else:
@@ -158,10 +157,12 @@ class Main(QMainWindow):
         self.btn_browseMSDigest.clicked.connect(lambda: MessageDigest.openFileDialog(self))
         self.btn_clearMSDigest.clicked.connect(lambda: MessageDigest.clear(self))
         self.btn_saveQR.clicked.connect(lambda: MessageDigest.saveQRCode(self))
-        self.btn_lineAPI.clicked.connect(lambda: MessageDigest.showBtnLine(self))
+        self.btn_lineAPI.clicked.connect(lambda: MessageDigest.showBtnLine(self, MessageDigest.state_line))
         self.btn_sendMSDigest.clicked.connect(lambda: MessageDigest.processLineKey(self))
         self.btn_copy.clicked.connect(lambda: MessageDigest.copyOutput(self))
         self.btn_infoToken.clicked.connect(lambda: MessageDigest.infoToken(self))
+        self.lineEdit_outputTextMSDigest.textChanged.connect(lambda: MessageDigest.qrCodeGenerator(self, self.lineEdit_outputTextMSDigest.text()))
+        
         # --------------------- Malware Scan --------------------------------
 
         # Initialize the image
@@ -200,8 +201,9 @@ class Main(QMainWindow):
         # --------------------- HTTPS Testing -------------------------------
 
         # Event Button Page HTTPS Testing
-        self.btn_scanHsts.clicked.connect(lambda: HSTSTesting.scanHSTS(self))
-        #self.btn_clearHttps.clicked.connect(lambda: HSTSTesting.clear(self))
+        self.btn_scanHttps.clicked.connect(lambda: HTTPSTesting.scanHTTPS(self))
+        self.btn_clearHttps.clicked.connect(lambda: HTTPSTesting.clear(self))
+        self.lineEdit_https.textChanged.connect(lambda: HTTPSTesting.checkHTTPS(self))
     
     # -------------------- Home ---------------------------------------
     def openHomePage(self):
@@ -227,11 +229,8 @@ class Main(QMainWindow):
 
     def openMessageDigestHome(self):
         self.stackedWidget.setCurrentWidget(self.page_messageDigest)
-        self.label_lineAPIDigest.setVisible(False)
-        self.lineEdit_tokenMSDigest.setVisible(False)
-        self.btn_sendMSDigest.setVisible(False)
-        self.btn_infoToken.setVisible(False)
         self.lineEdit_MSdigest.textChanged.connect(lambda: MessageDigest.checkFile_Text(self))
+        MessageDigest.showBtnLine(self, False) # Hide the Line Notify button
 
     # Network User ------------------------------------------
     def openNetworkUserHome(self):
@@ -242,7 +241,7 @@ class Main(QMainWindow):
         VulnerabilityScanning.showWellKnownPorts(self)
     
     def openHttpsHome(self):
-        self.stackedWidget.setCurrentWidget(self.page_hsts)
+        self.stackedWidget.setCurrentWidget(self.page_https)
 
 # Run the application
 if __name__ == "__main__":

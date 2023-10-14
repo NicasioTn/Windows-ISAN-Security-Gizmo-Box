@@ -8,12 +8,12 @@ from PyQt6.QtWidgets import QFileDialog, QDialog
 from PyQt6.QtGui import QPixmap
 from pathlib import Path
 
-
 class MessageDigest(QDialog):
 
     path = ''
     algorithm = ''
     state_detect = 0
+    state_line = False
 
     def __init__(self):
         #super(MessageDigest, self).__init__()
@@ -34,6 +34,37 @@ class MessageDigest(QDialog):
         self.lineEdit_outputTextMSDigest.setPlaceholderText('')
         self.label_type.setText('Type')
         self.btn_saveQR.setText('SAVE')
+    
+    def qrCodeGenerator(self, hash):
+        if self.lineEdit_outputTextMSDigest == '': # check current text output is empty 
+            print("Error: QR-Code is Not Generated")
+            self.lineEdit_outputTextMSDigest.setStyleSheet("border: 1px solid red;")
+            self.lineEdit_outputTextMSDigest.setPlaceholderText("Empty")
+            return
+        # Generate QR Code
+        qr = qrcode.QRCode(
+            version=1,
+            box_size=10,
+            border=5
+        )
+        qr.add_data(hash)
+        qr.make(fit=True)
+        img = qr.make_image(fill_color="black", back_color="white")
+        img.save("./data/MessageDigest-QRCode.png")
+        print("QR Code Generated")
+        return img
+        
+    def ShowImage_QR(self):
+        if self.lineEdit_outputTextMSDigest.text() == '':
+            print("Error: QR-Code is Not Generated")
+            self.lineEdit_outputTextMSDigest.setStyleSheet("border: 1px solid red;")
+            self.lineEdit_outputTextMSDigest.setPlaceholderText("Empty")
+            return
+        imagePath = "./data/MessageDigest-QRCode.png"
+        pixmap = QPixmap(imagePath)
+        pixmap = pixmap.scaledToWidth(200)
+        pixmap = pixmap.scaledToHeight(200)
+        self.label_QRCode.setPixmap(pixmap)
 
     def saveAPIKey(self):
         self.lineAPIKey = self.lineEdit_tokenMSDigest.text()
@@ -71,16 +102,36 @@ class MessageDigest(QDialog):
     def getPath(self):
         return MessageDigest.path
 
-    def ShowImage_QR(self):
-        if self.lineEdit_outputTextMSDigest.text() != '':
-            MessageDigest.qrCodeGenerator(self, self.lineEdit_outputTextMSDigest.text())
-            MessageDigest.ShowImage_QR(self)
+    def showBtnLine(self, state):
+        # Open File Line API Key
+        if MessageDigest.state_line == True:
+            self.label_lineAPIDigest.setVisible(True)
+            self.lineEdit_tokenMSDigest.setVisible(True)
+            self.btn_sendMSDigest.setVisible(True)
+            self.btn_infoToken.setVisible(True)
+            MessageDigest.state_line = False
+        else:
+            self.label_lineAPIDigest.setVisible(False)
+            self.lineEdit_tokenMSDigest.setVisible(False)
+            self.btn_sendMSDigest.setVisible(False)
+            self.btn_infoToken.setVisible(False)
+            MessageDigest.state_line = True
+    
+    def open_file_dialog(self):
+        filename, ok = QFileDialog.getOpenFileName(
+            self,
+            "Select a File", 
+            os.getcwd(), 
+            "All Files (*.*)" # filter file type text but can select all file
+        )
+        if filename:
+            path = Path(filename)
+            self.lineEdit_MSdigest.setText(str(path))
+            if path.exists() != True: # check if file exists 
+                print(f"File exists at: {path.exists()}")
+            print(f"Get file at: {path}") 
 
-    def showBtnLine(self):
-        self.label_lineAPIDigest.setVisible(True)
-        self.lineEdit_tokenMSDigest.setVisible(True)
-        self.btn_sendMSDigest.setVisible(True)
-        self.btn_infoToken.setVisible(True)
+            return path
 
     def checkFile_Text(self):
         if os.path.exists(self.lineEdit_MSdigest.text()) == True: # check if file exists
@@ -107,7 +158,7 @@ class MessageDigest(QDialog):
     def getdropdown_sha2(self):
         MessageDigest.hash(self, "sha2_" + self.dropdown_sha2.currentText())
         MessageDigest.algorithm = 'SHA2-' + self.dropdown_sha2.currentText()
-        self.dropdown_sha3.setCurrentIndex(0) 
+        self.dropdown_sha3.setCurrentIndex(0)
 
     def getdropdown_sha3(self):
         MessageDigest.hash(self, "sha3_" + self.dropdown_sha3.currentText())
@@ -171,29 +222,7 @@ class MessageDigest(QDialog):
         # reset copy button
         self.btn_copy.setText('Copy')
 
-    def qrCodeGenerator(self, hash):
-        qr = qrcode.QRCode(
-            version=1,
-            box_size=10,
-            border=5
-        )
-        qr.add_data(hash)
-        qr.make(fit=True)
-        img = qr.make_image(fill_color="black", back_color="white")
-        img.save("./data/MessageDigest-QRCode.png")
-        return img
-        
-    def ShowImage_QR(self):
-        if self.lineEdit_outputTextMSDigest.text() == '':
-            print("Error: QR-Code is Not Generated")
-            self.lineEdit_outputTextMSDigest.setStyleSheet("border: 1px solid red;")
-            self.lineEdit_outputTextMSDigest.setPlaceholderText("Empty")
-            return
-        imagePath = "./data/MessageDigest-QRCode.png"
-        pixmap = QPixmap(imagePath)
-        pixmap = pixmap.scaledToWidth(200)
-        pixmap = pixmap.scaledToHeight(200)
-        self.label_QRCode.setPixmap(pixmap)
+
         
     def fileExtract(self, type, path):
         print(type)
@@ -223,22 +252,6 @@ class MessageDigest(QDialog):
         self.btn_sha1.clicked.connect(lambda: MessageDigest.ShowImage_QR(self))
         self.dropdown_sha2.activated.connect(lambda: MessageDigest.ShowImage_QR(self))
         self.dropdown_sha3.activated.connect(lambda: MessageDigest.ShowImage_QR(self))
-
-    def open_file_dialog(self):
-        filename, ok = QFileDialog.getOpenFileName(
-            self,
-            "Select a File", 
-            os.getcwd(), 
-            "All Files (*.*)" # filter file type text but can select all file
-        )
-        if filename:
-            path = Path(filename)
-            self.lineEdit_MSdigest.setText(str(path))
-            if path.exists() != True: # check if file exists 
-                print(f"File exists at: {path.exists()}")
-            print(f"Get file at: {path}") 
-
-            return path
     
     # File Hashing -----------------------------------------------
     def fileHash(self, type, path):
