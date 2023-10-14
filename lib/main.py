@@ -144,7 +144,7 @@ class Main(QMainWindow):
         configFilePath = './data/init.conf'
         config.read(configFilePath)
         if 'LineNotify' in config:
-            line_api_key = config.get('LineNotify', 'LineAPIKEY')
+            line_api_key = config.get('LineNotify', 'lineapikey')
             self.lineEdit_tokenMSDigest.setText(line_api_key)
             #print(f'Line API Key: {line_api_key}')
         else:
@@ -157,10 +157,11 @@ class Main(QMainWindow):
         self.btn_browseMSDigest.clicked.connect(lambda: MessageDigest.openFileDialog(self))
         self.btn_clearMSDigest.clicked.connect(lambda: MessageDigest.clear(self))
         self.btn_saveQR.clicked.connect(lambda: MessageDigest.saveQRCode(self))
-        self.btn_lineAPI.clicked.connect(lambda: MessageDigest.showBtnLine(self))
+        self.btn_lineAPI.clicked.connect(lambda: MessageDigest.showBtnLine(self, MessageDigest.state_line))
         self.btn_sendMSDigest.clicked.connect(lambda: MessageDigest.processLineKey(self))
         self.btn_copy.clicked.connect(lambda: MessageDigest.copyOutput(self))
         self.btn_infoToken.clicked.connect(lambda: MessageDigest.infoToken(self))
+        self.lineEdit_outputTextMSDigest.textChanged.connect(lambda: MessageDigest.qrCodeGenerator(self, self.lineEdit_outputTextMSDigest.text()))
         
         # --------------------- Malware Scan --------------------------------
 
@@ -228,11 +229,8 @@ class Main(QMainWindow):
 
     def openMessageDigestHome(self):
         self.stackedWidget.setCurrentWidget(self.page_messageDigest)
-        self.label_lineAPIDigest.setVisible(False)
-        self.lineEdit_tokenMSDigest.setVisible(False)
-        self.btn_sendMSDigest.setVisible(False)
-        self.btn_infoToken.setVisible(False)
         self.lineEdit_MSdigest.textChanged.connect(lambda: MessageDigest.checkFile_Text(self))
+        MessageDigest.showBtnLine(self, False) # Hide the Line Notify button
 
     # Network User ------------------------------------------
     def openNetworkUserHome(self):
