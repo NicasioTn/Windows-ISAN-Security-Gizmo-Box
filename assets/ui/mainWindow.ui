@@ -489,7 +489,7 @@ QPushButton:hover {
 </string>
                          </property>
                          <property name="text">
-                          <string>HSTS Tesing</string>
+                          <string>HTTPS Tesing</string>
                          </property>
                          <property name="icon">
                           <iconset>
@@ -933,7 +933,7 @@ QPushButton:hover {
 </string>
                    </property>
                    <property name="text">
-                    <string>HSTS Tesing</string>
+                    <string>HTTPS Tesing</string>
                    </property>
                    <property name="icon">
                     <iconset>
@@ -1418,7 +1418,7 @@ QPushButton:hover {
                   </item>
                  </layout>
                 </widget>
-                <widget class="QLabel" name="label_Password">
+                <widget class="QLabel" name="label_headofPassword">
                  <property name="geometry">
                   <rect>
                    <x>152</x>
@@ -2386,7 +2386,7 @@ QPushButton:hover {
                   </item>
                  </layout>
                 </widget>
-                <widget class="QLabel" name="label_Password_4">
+                <widget class="QLabel" name="label_headofPasswordAttack">
                  <property name="geometry">
                   <rect>
                    <x>152</x>
@@ -3130,7 +3130,7 @@ QPushButton:hover {
                   </item>
                  </layout>
                 </widget>
-                <widget class="QLabel" name="label_Password_6">
+                <widget class="QLabel" name="label_headofMalware">
                  <property name="geometry">
                   <rect>
                    <x>152</x>
@@ -4133,7 +4133,7 @@ QPushButton:hover {
                   </item>
                  </layout>
                 </widget>
-                <widget class="QLabel" name="label_Password_5">
+                <widget class="QLabel" name="label_headofMessageDigest">
                  <property name="geometry">
                   <rect>
                    <x>152</x>
@@ -5298,7 +5298,7 @@ QPushButton:hover {
 </string>
                    </property>
                    <property name="text">
-                    <string>HSTS Testing</string>
+                    <string>HTTPS Testing</string>
                    </property>
                    <property name="icon">
                     <iconset>
@@ -5439,7 +5439,7 @@ QPushButton:hover {
                   </item>
                  </layout>
                 </widget>
-                <widget class="QLabel" name="label_Password_8">
+                <widget class="QLabel" name="label_headofVulner">
                  <property name="geometry">
                   <rect>
                    <x>152</x>
@@ -5925,7 +5925,7 @@ QScrollBar::sub-line:vertical {
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="page_hsts">
+      <widget class="QWidget" name="page_https">
        <property name="cursor">
         <cursorShape>ArrowCursor</cursorShape>
        </property>
@@ -5988,7 +5988,7 @@ border-radius: 20px;</string>
                  </property>
                  <layout class="QHBoxLayout" name="horizontalLayout_54">
                   <item alignment="Qt::AlignLeft">
-                   <widget class="QPushButton" name="btn_backHsts">
+                   <widget class="QPushButton" name="btn_backHttps">
                     <property name="minimumSize">
                      <size>
                       <width>130</width>
@@ -6042,7 +6042,7 @@ QPushButton:hover {
                   </item>
                  </layout>
                 </widget>
-                <widget class="QLabel" name="label_Password_9">
+                <widget class="QLabel" name="label_headofHttpstesting">
                  <property name="geometry">
                   <rect>
                    <x>152</x>
@@ -6090,7 +6090,7 @@ QPushButton:hover {
                   <widget class="QWidget" name="widget_77" native="true">
                    <layout class="QVBoxLayout" name="verticalLayout_46">
                     <item>
-                     <widget class="QLineEdit" name="lineEdit_hsts">
+                     <widget class="QLineEdit" name="lineEdit_https">
                       <property name="minimumSize">
                        <size>
                         <width>600</width>
@@ -6137,7 +6137,7 @@ QLineEdit:focus {
                   <widget class="QWidget" name="widget_76" native="true">
                    <layout class="QHBoxLayout" name="horizontalLayout_32">
                     <item>
-                     <widget class="QPushButton" name="btn_scanHsts">
+                     <widget class="QPushButton" name="btn_scanHttps">
                       <property name="minimumSize">
                        <size>
                         <width>150</width>
@@ -6190,7 +6190,7 @@ QPushButton:hover {
                      </widget>
                     </item>
                     <item>
-                     <widget class="QPushButton" name="btn_clearHsts">
+                     <widget class="QPushButton" name="btn_clearHttps">
                       <property name="minimumSize">
                        <size>
                         <width>150</width>

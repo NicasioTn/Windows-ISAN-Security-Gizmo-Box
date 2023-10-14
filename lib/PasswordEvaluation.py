@@ -71,6 +71,7 @@ class PasswordEvaluation(QDialog):
                                                             background-color:rgba(254,61,58,255);
                                                             border-radius :15px;
                                                         }     ''')
+            
             if length == 0: 
                 self.label_outputPasswordStrength.setText('')
                 self.label_outputEntropy.setText(f'0 Bits')
