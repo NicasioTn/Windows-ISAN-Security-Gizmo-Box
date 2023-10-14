@@ -2661,7 +2661,7 @@ QPushButton:hover {
                      <widget class="QComboBox" name="dropdown_modeAttack">
                       <property name="minimumSize">
                        <size>
-                        <width>101</width>
+                        <width>119</width>
                         <height>45</height>
                        </size>
                       </property>
@@ -2740,7 +2740,7 @@ QComboBox:hover {
                      <widget class="QComboBox" name="dropdown_wordLists">
                       <property name="minimumSize">
                        <size>
-                        <width>101</width>
+                        <width>119</width>
                         <height>45</height>
                        </size>
                       </property>
@@ -4401,7 +4401,7 @@ QPushButton:focus {
                   <widget class="QComboBox" name="dropdown_sha2">
                    <property name="minimumSize">
                     <size>
-                     <width>101</width>
+                     <width>119</width>
                      <height>45</height>
                     </size>
                    </property>
@@ -4488,7 +4488,7 @@ QComboBox:hover {
                   <widget class="QComboBox" name="dropdown_sha3">
                    <property name="minimumSize">
                     <size>
-                     <width>101</width>
+                     <width>119</width>
                      <height>45</height>
                     </size>
                    </property>
@@ -5502,7 +5502,7 @@ QLineEdit:focus {
                      <widget class="QComboBox" name="dropdown_typeScan">
                       <property name="minimumSize">
                        <size>
-                        <width>101</width>
+                        <width>119</width>
                         <height>45</height>
                        </size>
                       </property>
@@ -5588,6 +5588,11 @@ QComboBox:hover {
                       <item>
                        <property name="text">
                         <string>Vulner.NSE Script</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Caft Commands</string>
                        </property>
                       </item>
                      </widget>
@@ -5764,12 +5769,12 @@ QPushButton:hover {
                <widget class="QWidget" name="widget_112" native="true">
                 <layout class="QHBoxLayout" name="horizontalLayout_52">
                  <item>
-                  <widget class="QLabel" name="label_Vulner">
-                   <property name="minimumSize">
-                    <size>
-                     <width>600</width>
-                     <height>0</height>
-                    </size>
+                  <widget class="QTextEdit" name="textEdit_ResultScan">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
                    </property>
                    <property name="font">
                     <font>
@@ -5777,17 +5782,38 @@ QPushButton:hover {
                      <pointsize>13</pointsize>
                     </font>
                    </property>
-                   <property name="text">
-                    <string>TextLabel</string>
+                   <property name="styleSheet">
+                    <string notr="true">QTextEdit {
+		padding-top: 20px;
+        padding-left: 15px;
+}
+QScrollBar:vertical {
+        border: 1px solid #c2c2c2; /* Vertical scroll bar border */
+        background: #f0f0f0; /* Vertical scroll bar background color */
+        width: 15px; /* Width of the scroll bar */
+}
+QScrollBar::handle:vertical {
+        background: #666666; /* Color of the scroll bar thumb */
+        border: 1px solid #333333; /* Border of the scroll bar thumb */
+        min-height: 30px; /* Height of the scroll bar thumb */
+}
+QScrollBar::add-line:vertical {
+        height: 20px; /* Height of the bottom button */
+        background: #f0f0f0; /* Color of the bottom button */
+}
+QScrollBar::sub-line:vertical {
+        height: 20px; /* Height of the top button */
+        background: #f0f0f0; /* Color of the top button */
+}</string>
                    </property>
-                   <property name="alignment">
-                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                   <property name="midLineWidth">
+                    <number>0</number>
                    </property>
-                   <property name="margin">
-                    <number>20</number>
+                   <property name="readOnly">
+                    <bool>true</bool>
                    </property>
-                   <property name="indent">
-                    <number>15</number>
+                   <property name="placeholderText">
+                    <string>Result</string>
                    </property>
                   </widget>
                  </item>
@@ -5866,7 +5892,7 @@ QPushButton:hover {
       </widget>
       <widget class="QWidget" name="page_hsts">
        <property name="cursor">
-        <cursorShape>PointingHandCursor</cursorShape>
+        <cursorShape>ArrowCursor</cursorShape>
        </property>
        <layout class="QHBoxLayout" name="horizontalLayout_31">
         <item>
@@ -5947,6 +5973,9 @@ border-radius: 20px;</string>
                       <weight>75</weight>
                       <bold>true</bold>
                      </font>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>PointingHandCursor</cursorShape>
                     </property>
                     <property name="styleSheet">
                      <string notr="true">QPushButton {    

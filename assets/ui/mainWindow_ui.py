@@ -1347,7 +1347,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_17 = QtWidgets.QHBoxLayout(self.widget_107)
         self.horizontalLayout_17.setObjectName("horizontalLayout_17")
         self.dropdown_modeAttack = QtWidgets.QComboBox(parent=self.widget_107)
-        self.dropdown_modeAttack.setMinimumSize(QtCore.QSize(101, 45))
+        self.dropdown_modeAttack.setMinimumSize(QtCore.QSize(119, 45))
         self.dropdown_modeAttack.setMaximumSize(QtCore.QSize(200, 45))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -1391,7 +1391,7 @@ class Ui_MainWindow(object):
         self.dropdown_modeAttack.addItem("")
         self.horizontalLayout_17.addWidget(self.dropdown_modeAttack)
         self.dropdown_wordLists = QtWidgets.QComboBox(parent=self.widget_107)
-        self.dropdown_wordLists.setMinimumSize(QtCore.QSize(101, 45))
+        self.dropdown_wordLists.setMinimumSize(QtCore.QSize(119, 45))
         self.dropdown_wordLists.setMaximumSize(QtCore.QSize(190, 45))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -2277,7 +2277,7 @@ class Ui_MainWindow(object):
         self.btn_sha1.setObjectName("btn_sha1")
         self.horizontalLayout_21.addWidget(self.btn_sha1)
         self.dropdown_sha2 = QtWidgets.QComboBox(parent=self.widget_46)
-        self.dropdown_sha2.setMinimumSize(QtCore.QSize(101, 45))
+        self.dropdown_sha2.setMinimumSize(QtCore.QSize(119, 45))
         self.dropdown_sha2.setMaximumSize(QtCore.QSize(111, 41))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -2322,7 +2322,7 @@ class Ui_MainWindow(object):
         self.dropdown_sha2.addItem("")
         self.horizontalLayout_21.addWidget(self.dropdown_sha2)
         self.dropdown_sha3 = QtWidgets.QComboBox(parent=self.widget_46)
-        self.dropdown_sha3.setMinimumSize(QtCore.QSize(101, 45))
+        self.dropdown_sha3.setMinimumSize(QtCore.QSize(119, 45))
         self.dropdown_sha3.setMaximumSize(QtCore.QSize(111, 41))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -2857,7 +2857,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_30 = QtWidgets.QHBoxLayout(self.widget_70)
         self.horizontalLayout_30.setObjectName("horizontalLayout_30")
         self.dropdown_typeScan = QtWidgets.QComboBox(parent=self.widget_70)
-        self.dropdown_typeScan.setMinimumSize(QtCore.QSize(101, 45))
+        self.dropdown_typeScan.setMinimumSize(QtCore.QSize(119, 45))
         self.dropdown_typeScan.setMaximumSize(QtCore.QSize(190, 41))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -2897,6 +2897,7 @@ class Ui_MainWindow(object):
 "")
         self.dropdown_typeScan.setIconSize(QtCore.QSize(10, 10))
         self.dropdown_typeScan.setObjectName("dropdown_typeScan")
+        self.dropdown_typeScan.addItem("")
         self.dropdown_typeScan.addItem("")
         self.dropdown_typeScan.addItem("")
         self.dropdown_typeScan.addItem("")
@@ -2993,16 +2994,42 @@ class Ui_MainWindow(object):
         self.widget_112.setObjectName("widget_112")
         self.horizontalLayout_52 = QtWidgets.QHBoxLayout(self.widget_112)
         self.horizontalLayout_52.setObjectName("horizontalLayout_52")
-        self.label_Vulner = QtWidgets.QLabel(parent=self.widget_112)
-        self.label_Vulner.setMinimumSize(QtCore.QSize(600, 0))
+        self.textEdit_ResultScan = QtWidgets.QTextEdit(parent=self.widget_112)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Preferred, QtWidgets.QSizePolicy.Policy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.textEdit_ResultScan.sizePolicy().hasHeightForWidth())
+        self.textEdit_ResultScan.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(13)
-        self.label_Vulner.setFont(font)
-        self.label_Vulner.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignTop)
-        self.label_Vulner.setIndent(15)
-        self.label_Vulner.setObjectName("label_Vulner")
-        self.horizontalLayout_52.addWidget(self.label_Vulner)
+        self.textEdit_ResultScan.setFont(font)
+        self.textEdit_ResultScan.setStyleSheet("QTextEdit {\n"
+"        padding-top: 20px;\n"
+"        padding-left: 15px;\n"
+"}\n"
+"QScrollBar:vertical {\n"
+"        border: 1px solid #c2c2c2; /* Vertical scroll bar border */\n"
+"        background: #f0f0f0; /* Vertical scroll bar background color */\n"
+"        width: 15px; /* Width of the scroll bar */\n"
+"}\n"
+"QScrollBar::handle:vertical {\n"
+"        background: #666666; /* Color of the scroll bar thumb */\n"
+"        border: 1px solid #333333; /* Border of the scroll bar thumb */\n"
+"        min-height: 30px; /* Height of the scroll bar thumb */\n"
+"}\n"
+"QScrollBar::add-line:vertical {\n"
+"        height: 20px; /* Height of the bottom button */\n"
+"        background: #f0f0f0; /* Color of the bottom button */\n"
+"}\n"
+"QScrollBar::sub-line:vertical {\n"
+"        height: 20px; /* Height of the top button */\n"
+"        background: #f0f0f0; /* Color of the top button */\n"
+"}")
+        self.textEdit_ResultScan.setMidLineWidth(0)
+        self.textEdit_ResultScan.setReadOnly(True)
+        self.textEdit_ResultScan.setObjectName("textEdit_ResultScan")
+        self.horizontalLayout_52.addWidget(self.textEdit_ResultScan)
         self.horizontalLayout_48.addWidget(self.widget_112)
         self.widget_115 = QtWidgets.QWidget(parent=self.widget_66)
         self.widget_115.setObjectName("widget_115")
@@ -3033,7 +3060,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_29.addWidget(self.widget_64)
         self.stackedWidget.addWidget(self.page_vulnerability)
         self.page_hsts = QtWidgets.QWidget()
-        self.page_hsts.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.page_hsts.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.ArrowCursor))
         self.page_hsts.setObjectName("page_hsts")
         self.horizontalLayout_31 = QtWidgets.QHBoxLayout(self.page_hsts)
         self.horizontalLayout_31.setObjectName("horizontalLayout_31")
@@ -3075,6 +3102,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.btn_backHsts.setFont(font)
+        self.btn_backHsts.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_backHsts.setStyleSheet("QPushButton {    \n"
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
@@ -3328,10 +3356,11 @@ class Ui_MainWindow(object):
         self.dropdown_typeScan.setItemText(3, _translate("MainWindow", "Agressive Scan"))
         self.dropdown_typeScan.setItemText(4, _translate("MainWindow", "Adaptive Scan"))
         self.dropdown_typeScan.setItemText(5, _translate("MainWindow", "Vulner.NSE Script"))
+        self.dropdown_typeScan.setItemText(6, _translate("MainWindow", "Caft Commands"))
         self.lineEdit_commandvulner.setPlaceholderText(_translate("MainWindow", "command execute"))
         self.btn_scanVulner.setText(_translate("MainWindow", "Scan"))
         self.btn_clearVulner.setText(_translate("MainWindow", "Clear"))
-        self.label_Vulner.setText(_translate("MainWindow", "TextLabel"))
+        self.textEdit_ResultScan.setPlaceholderText(_translate("MainWindow", "Result"))
         self.label_SimplePorts.setText(_translate("MainWindow", "Ports"))
         self.label_SimpleServices.setText(_translate("MainWindow", "Services"))
         self.btn_backHsts.setText(_translate("MainWindow", "Back"))

@@ -193,7 +193,7 @@ class Main(QMainWindow):
         # --------------------- Vulnerability -------------------------------
 
         # Event Button Page Vulnerability
-        self.btn_scanVulner.clicked.connect(lambda: VulnerabilityScanning.scanVulnerability(self))
+        self.btn_scanVulner.clicked.connect(lambda: VulnerabilityScanning.nmapScan(self))
         self.btn_clearVulner.clicked.connect(lambda: VulnerabilityScanning.clear(self))
         self.dropdown_typeScan.activated.connect(lambda: VulnerabilityScanning.typeScan(self))
 
@@ -247,7 +247,7 @@ class Main(QMainWindow):
 # Run the application
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = Main()
+    window = Main() 
     window.show()
 
     # Exit the application
