@@ -1795,7 +1795,7 @@ border-radius: 20px;</string>
                           <string notr="true">color: rgba(40,43,61,255) ;</string>
                          </property>
                          <property name="text">
-                          <string>Password entropy</string>
+                          <string>Approximated Entropy Bits of the password</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignCenter</set>
@@ -2661,7 +2661,7 @@ QPushButton:hover {
                      <widget class="QComboBox" name="dropdown_modeAttack">
                       <property name="minimumSize">
                        <size>
-                        <width>119</width>
+                        <width>101</width>
                         <height>45</height>
                        </size>
                       </property>
@@ -2740,7 +2740,7 @@ QComboBox:hover {
                      <widget class="QComboBox" name="dropdown_wordLists">
                       <property name="minimumSize">
                        <size>
-                        <width>119</width>
+                        <width>101</width>
                         <height>45</height>
                        </size>
                       </property>
@@ -4401,7 +4401,7 @@ QPushButton:focus {
                   <widget class="QComboBox" name="dropdown_sha2">
                    <property name="minimumSize">
                     <size>
-                     <width>119</width>
+                     <width>101</width>
                      <height>45</height>
                     </size>
                    </property>
@@ -4488,7 +4488,7 @@ QComboBox:hover {
                   <widget class="QComboBox" name="dropdown_sha3">
                    <property name="minimumSize">
                     <size>
-                     <width>119</width>
+                     <width>101</width>
                      <height>45</height>
                     </size>
                    </property>
@@ -5502,7 +5502,7 @@ QLineEdit:focus {
                      <widget class="QComboBox" name="dropdown_typeScan">
                       <property name="minimumSize">
                        <size>
-                        <width>119</width>
+                        <width>101</width>
                         <height>45</height>
                        </size>
                       </property>

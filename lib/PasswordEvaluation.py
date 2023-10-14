@@ -41,7 +41,6 @@ class PasswordEvaluation(QDialog):
     def getPassword(self):
         password = PasswordEvaluation.update(self)
         entropy = PasswordEvaluation.calculate_entropy(self, password)
-        
         self.label_outputEntropy.setText(f'{entropy:.0f} Bits')
 
         # Check if password is in the list of weak passwords
@@ -49,7 +48,7 @@ class PasswordEvaluation(QDialog):
             self.label_outputEntropy.setText(f'0 Bits')
             self.label_outputPasswordStrength.setText('')
         elif entropy > PasswordEvaluation.maxentropy_to_show: # 1024 bits
-            self.label_outputEntropy.setText(f'very high Entropy Bits (>1024)') 
+            self.label_outputEntropy.setText(f'Almost impossible to crack')
         else:
             self.label_outputEntropy.setText(f'{entropy:.0f} Bits')
         
@@ -88,6 +87,7 @@ class PasswordEvaluation(QDialog):
 
         # Show time to crack
         self.label_outputTimeToCrack.setText(f'{PasswordEvaluation.time_to_Crack(self, password)}')
+        
 
         # Check if password is in the list of weak passwords
         PasswordEvaluation.check_common_password(self, password, self.nordpass_common_passwords)
@@ -108,14 +108,14 @@ class PasswordEvaluation(QDialog):
                 self.label_outputPasswordStrength.setText('Very Bad')
             else:
                 self.label_outputSearchNordPass.setText('Not found in the lists')
-                self.label_outputSearchNordPass.setStyleSheet("color: rgba(0, 255, 143, 255);")
+                self.label_outputSearchNordPass.setStyleSheet("color: rgb(8, 120, 41);")
                 self.btn_dictAttack.setVisible(True) if self.label_outputSearchNordPass.text() == '' \
                     or self.label_outputSearchNordPass.text() == 'Not found in the lists' else self.btn_dictAttack.setVisible(False)
     
     def validate_input(self, password):
         # check password only contains valid characters , a-z, A-Z, 0-9, !@#$%^&*()_+=-, space
-        valid_input = re.sub(r'[^a-zA-Z0-9!@#$%^&*()_+=-` ]|\s', '', password)
-        #self.lineEdit_password.setText(valid_input)
+        #valid_input = re.sub(r'[^a-zA-Z0-9!@#$%^&*()_+=-` ]|\s', '', password)
+        valid_input = re.sub(r'[^a-zA-Z0-9!@#$%^&*()_+=-` ]', '', password)
 
         # check password not contains a-z, A-Z, 0-9, !@#$%^&*()_+=- 
         if password not in valid_input:
@@ -137,7 +137,7 @@ class PasswordEvaluation(QDialog):
         # Get password real time
         password = self.lineEdit_password.text()
         print(password)
-        PasswordEvaluation.validate_input(self, password)
+        password = PasswordEvaluation.validate_input(self, password)
 
         for char in password:
             if char.isdigit():
@@ -179,6 +179,8 @@ class PasswordEvaluation(QDialog):
             possible_characters += 26
         if self.chk_special.isChecked(): # !@#$%^&*()_+-=
             possible_characters += 32
+        if password.isspace() == True: # space
+            possible_characters += 1
 
         # Calculate the entropy using the formula log2(possible_characters^password_length)
         entropy = log2(possible_characters**len(password))
@@ -203,6 +205,8 @@ class PasswordEvaluation(QDialog):
                 possible_characters += 26
             if self.chk_special.isChecked(): # !@#$%^&*()_+-=
                 possible_characters += 32
+            if password.isspace() == True: # space
+                possible_characters += 1
 
             combinations = possible_characters ** len(password)
             KPS_2020 = 17042497.3 # 17 Million
@@ -249,6 +253,7 @@ class PasswordEvaluation(QDialog):
         
         except OverflowError as e:
             print(f"Error: {e}")
+            return "Over Time to Crack"
         except UnboundLocalError as e:
             print(f"Error: {e}")
     
