@@ -1,3 +1,4 @@
+import json
 import os
 import re
 from PyQt6.QtCore import QFileInfo
@@ -13,11 +14,33 @@ class PasswordEvaluation(QDialog):
     minentropy = 50
     maxentropy = 80
     minpasswordlength = 8
+    nordpass_common_passwords = []
 
     def __init__(self):
         #super(PasswordEvaluation, self).__init__()
-        super().__init__()  
-
+        super().__init__()
+    
+    def init(self):
+        # Check if the password field is empty
+        if self.lineEdit_password.text() == '':
+            self.chk_length.setIcon(self.warning_icon)
+            self.chk_numeric.setIcon(self.warning_icon)
+            self.chk_upper.setIcon(self.warning_icon)
+            self.chk_lower.setIcon(self.warning_icon)
+            self.chk_special.setIcon(self.warning_icon)
+            self.label_outputSearchNordPass.setText('Start typing to see the entropy score')
+            self.label_outputTimeToCrack.setText('0 Seconds')
+            self.label_outputPasswordStrength.setText('no password')
+            self.label_outputEntropy.setText('0 Bits')
+    
+    def LoadWordlist(self):
+        # Load the list of weak passwords
+        with open('./data/nordpass_wordlist.json', 'r') as openfile:
+            json_object = json.load(openfile)
+        
+        for item in json_object:
+            PasswordEvaluation.nordpass_common_passwords.append(str(item['Password']))
+            
     def clear(self):
         self.lineEdit_inputFileDict.setText('')
         self.lineEdit_password.setText('')
@@ -152,9 +175,8 @@ class PasswordEvaluation(QDialog):
         # Show time to crack
         self.label_outputTimeToCrack.setText(f'{PasswordEvaluation.time_to_Crack(self, password)}')
         
-
         # Check if password is in the list of weak passwords
-        PasswordEvaluation.check_common_password(self, password, self.nordpass_common_passwords)
+        PasswordEvaluation.check_common_password(self, password, PasswordEvaluation.nordpass_common_passwords)
         
     def check_common_password(self, password, nordpass_common_passwords):
         if password == '':
@@ -165,7 +187,7 @@ class PasswordEvaluation(QDialog):
             self.btn_dictAttack.setVisible(False)
         else:
             if password in nordpass_common_passwords:
-                print(self.nordpass_common_passwords.index(password))
+                print(PasswordEvaluation.nordpass_common_passwords.index(password))
                 self.label_outputSearchNordPass.setText('Found in the top 200 most common passwords by NordPass')
                 self.label_outputSearchNordPass.setStyleSheet("color: rgba(254,61,58,255);")
                 self.btn_dictAttack.setVisible(False)
@@ -216,7 +238,7 @@ class PasswordEvaluation(QDialog):
         
         # Get password real time
         password = self.lineEdit_password.text()
-        print(password)
+        # print(password)
         password = PasswordEvaluation.validate_input(self, password)
 
         for char in password:

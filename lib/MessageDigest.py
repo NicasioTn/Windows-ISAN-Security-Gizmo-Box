@@ -1,3 +1,4 @@
+import json
 import os
 import hashlib
 import qrcode
@@ -19,6 +20,19 @@ class MessageDigest(QDialog):
         #super(MessageDigest, self).__init__()
         super().__init__()
 
+    def LoadAPIKey(self):
+        # Fetch API Key from config file
+        config = configparser.ConfigParser()
+        configFilePath = './data/init.conf'
+        config.read(configFilePath)
+        if 'LineNotify' in config:
+            line_api_key = config.get('LineNotify', 'lineapikey')
+            self.lineEdit_tokenMSDigest.setText(line_api_key)
+            # print(f'Line API Key: {line_api_key}')
+        else:
+            print('Section "LineNotify" does not exist in the config file.')
+        
+        
     def clear (self):
         self.lineEdit_MSdigest.setText('')
         self.label_QRCode.clear()
