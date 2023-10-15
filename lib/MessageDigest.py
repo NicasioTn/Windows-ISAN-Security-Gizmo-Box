@@ -413,7 +413,7 @@ class MessageDigest(QDialog):
         pathfile, ok = QFileDialog.getSaveFileName(
             self,
             "Save File",
-            os.getcwd(),
+            "MessageDigest-QRCode-" + self.algorithm + ".png",
             "Images (*.png *.jpg)")
         
         # Check if a filename was provided
