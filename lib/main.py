@@ -16,25 +16,10 @@ from HTTPSTesting import *
 
 class Main(QMainWindow):
     
-    nordpass_common_passwords = []
-    hint_btn = []
-    api_url_scan = ''
-    api_vt_key = ''
-    api_file_scan = ''
-    api_file_analysis = ''
-
     def __init__(self):
         super(Main, self).__init__()
         loadUi("./assets/ui/mainWindow.ui", self)
          
-        # Initialize the classes
-        passwordEvaluation = PasswordEvaluation()
-        passwordAttack = PasswordAttack()
-        messageDigest = MessageDigest()
-        malwareScanning = MalwareScanning()
-        vulnerabilityScanning = VulnerabilityScanning()
-        hstsTesting = HTTPSTesting()
-
         # initialize Icon
         self.setWindowTitle("ISAN Security Gizmo Box v1.0")
         self.setWindowIcon(QIcon("./assets/icons/icons8-stan-marsh-96.png"))
@@ -91,31 +76,14 @@ class Main(QMainWindow):
         self.btn_vulner.clicked.connect(self.openVulnerabilityHome)
         self.btn_hsts.clicked.connect(self.openHttpsHome)
 
-        # --------------------- Password Evaluation -------------------------
+        ### --------------------- Password Evaluation -------------------------
+        PasswordEvaluation.init(self) # Initialize the password evaluation page
+        PasswordEvaluation.LoadWordlist(self) # Load the wordlist from the file
 
         # Initialize the password field
         self.btn_showPassword.setIcon(self.hide_icon)
         self.lineEdit_password.setEchoMode(QLineEdit.EchoMode.Password)
         
-        # Load the list of weak passwords
-        with open('./data/nordpass_wordlist.json', 'r') as openfile:
-            json_object = json.load(openfile)
-        
-        for item in json_object:
-            self.nordpass_common_passwords.append(str(item['Password']))
-
-        # Check if the password field is empty
-        if self.lineEdit_password.text() == '':
-            self.chk_length.setIcon(self.warning_icon)
-            self.chk_numeric.setIcon(self.warning_icon)
-            self.chk_upper.setIcon(self.warning_icon)
-            self.chk_lower.setIcon(self.warning_icon)
-            self.chk_special.setIcon(self.warning_icon)
-            self.label_outputSearchNordPass.setText('Start typing to see the entropy score')
-            self.label_outputTimeToCrack.setText('0 Seconds')
-            self.label_outputPasswordStrength.setText('no password')
-            self.label_outputEntropy.setText('0 Bits')
-
         # Detect changes in the password field
         self.lineEdit_password.textChanged.connect(lambda: PasswordEvaluation.getPassword(self))
         
@@ -125,7 +93,7 @@ class Main(QMainWindow):
         self.btn_infoEntropy.clicked.connect(lambda: PasswordEvaluation.infoEntropy(self))
 
         ### --------------------- Dictionary Attack -------------------------
-
+        
         # Event Button Page Dictionary Attack
         self.btn_browseDict.clicked.connect(lambda: PasswordAttack.open_file_wordlist(self))
         self.btn_clearDict.clicked.connect(lambda: PasswordAttack.clear(self))
@@ -133,25 +101,8 @@ class Main(QMainWindow):
         self.dropdown_wordLists.activated.connect(lambda: PasswordAttack.select_wordlists(self))
         PasswordAttack.show_loadding(self)
 
-        # --------------------- Message Digest ------------------------------
-
-        # Load the list of hints from the JSON file
-        with open('./data/hint.json', 'r') as openfile:
-            json_object = json.load(openfile)
-    
-        # Fetch API Key from config file
-        config = configparser.ConfigParser()
-        configFilePath = './data/init.conf'
-        config.read(configFilePath)
-        if 'LineNotify' in config:
-            line_api_key = config.get('LineNotify', 'lineapikey')
-            self.lineEdit_tokenMSDigest.setText(line_api_key)
-            #print(f'Line API Key: {line_api_key}')
-        else:
-            print('Section "LineNotify" does not exist in the config file.')
-        
-        for item in json_object:
-            self.hint_btn.append(str(item['tool_description']))
+        ### --------------------- Message Digest ------------------------------
+        MessageDigest.LoadAPIKey(self) # Load API Key from config file
         
         # Event Button Page Message Digest
         self.btn_browseMSDigest.clicked.connect(lambda: MessageDigest.openFileDialog(self))
@@ -163,27 +114,10 @@ class Main(QMainWindow):
         self.btn_infoToken.clicked.connect(lambda: MessageDigest.infoToken(self))
         self.lineEdit_outputTextMSDigest.textChanged.connect(lambda: MessageDigest.qrCodeGenerator(self, self.lineEdit_outputTextMSDigest.text()))
         
-        # --------------------- Malware Scan --------------------------------
-
-        # Initialize the image
-        MalwareScanning.show_resultimage(self, type='scan', status='default')
-
-        # Fetch API Key from config file
-        config = configparser.ConfigParser()
-        configFilePath = './data/init.conf'
-        config.read(configFilePath)
-        if 'Malware' in config:
-            self.api_vt_key = config.get('Malware', 'virustotal_api_key')
-            self.api_url_scan = config.get('Malware', 'api_url_scan')
-            self.api_file_scan = config.get('Malware', 'api_file_scan')
-            self.api_file_analysis = config.get('Malware', 'api_file_analysis')
-            # print(f'VT API Key: {self.api_vt_key}')
-            # print(f'VT API URL: {self.api_url_scan}')
-            # print(f'VT API File: {self.api_file_scan}')
-            # print(f'VT API Analysis: {self.api_file_analysis}')
-        else:
-            print('Section "Malware" does not exist in the config file.')
-
+        ### --------------------- Malware Scan --------------------------------
+        MalwareScanning.show_resultimage(self, type='scan', status='default') # Initialize the image
+        MalwareScanning.loadAPIKey(self) # Load API Key from config file
+        
         # Event Button Page Malware Scan
         self.btn_scanMalware.clicked.connect(lambda: MalwareScanning.scanMalware(self))
         self.btn_browseMalware.clicked.connect(lambda: MalwareScanning.openFileScanning(self))
@@ -191,14 +125,14 @@ class Main(QMainWindow):
         self.btn_createReport.clicked.connect(lambda: MalwareScanning.createReport(self))
         self.btn_sendEmail.clicked.connect(lambda: MalwareScanning.sendEmail(self))
 
-        # --------------------- Vulnerability -------------------------------
+        ### --------------------- Vulnerability -------------------------------
 
         # Event Button Page Vulnerability
-        self.btn_scanVulner.clicked.connect(lambda: VulnerabilityScanning.nmapScan(self))
+        self.btn_scanVulner.clicked.connect(lambda: VulnerabilityScanning.prepareCommand(self))
         self.btn_clearVulner.clicked.connect(lambda: VulnerabilityScanning.clear(self))
         self.dropdown_typeScan.activated.connect(lambda: VulnerabilityScanning.typeScan(self))
 
-        # --------------------- HTTPS Testing -------------------------------
+        ### --------------------- HTTPS Testing -------------------------------
 
         # Event Button Page HTTPS Testing
         self.btn_scanHttps.clicked.connect(lambda: HTTPSTesting.scanHTTPS(self))
