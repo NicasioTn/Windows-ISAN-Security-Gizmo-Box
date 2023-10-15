@@ -39,6 +39,7 @@ class Main(QMainWindow):
         self.btn_backNetworkUser.clicked.connect(self.openHomePage)
         self.btn_backVulner.clicked.connect(self.openNetworkUserHome)
         self.btn_backHttps.clicked.connect(self.openNetworkUserHome)
+        self.btn_backSettings.clicked.connect(self.openHomePage)
 
         # clear cache data after back button
         self.btn_backPassword.clicked.connect(lambda: PasswordEvaluation.clear(self))
@@ -50,6 +51,10 @@ class Main(QMainWindow):
 
         # --------------------- Get Started ---------------------------------
         self.btn_getStart.clicked.connect(self.openHomePage)
+
+        # --------------------- Setting -----------------------------------
+        self.btn_settings.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_settings))
+        
 
         # -------------------- Home ---------------------------------------
         self.btn_home.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.mainpage))

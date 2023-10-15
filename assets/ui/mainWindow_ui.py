@@ -62,17 +62,17 @@ class Ui_MainWindow(object):
         self.btn_home.setIconSize(QtCore.QSize(30, 30))
         self.btn_home.setObjectName("btn_home")
         self.horizontalLayout_2.addWidget(self.btn_home, 0, QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignVCenter)
-        self.btn_setting = QtWidgets.QPushButton(parent=self.ToolBar)
-        self.btn_setting.setMinimumSize(QtCore.QSize(130, 40))
-        self.btn_setting.setMaximumSize(QtCore.QSize(130, 40))
+        self.btn_settings = QtWidgets.QPushButton(parent=self.ToolBar)
+        self.btn_settings.setMinimumSize(QtCore.QSize(130, 40))
+        self.btn_settings.setMaximumSize(QtCore.QSize(130, 40))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
-        self.btn_setting.setFont(font)
-        self.btn_setting.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.btn_setting.setStyleSheet("QPushButton {    \n"
+        self.btn_settings.setFont(font)
+        self.btn_settings.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btn_settings.setStyleSheet("QPushButton {    \n"
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
@@ -85,10 +85,10 @@ class Ui_MainWindow(object):
 "")
         icon2 = QtGui.QIcon()
         icon2.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-setting.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btn_setting.setIcon(icon2)
-        self.btn_setting.setIconSize(QtCore.QSize(30, 30))
-        self.btn_setting.setObjectName("btn_setting")
-        self.horizontalLayout_2.addWidget(self.btn_setting)
+        self.btn_settings.setIcon(icon2)
+        self.btn_settings.setIconSize(QtCore.QSize(30, 30))
+        self.btn_settings.setObjectName("btn_settings")
+        self.horizontalLayout_2.addWidget(self.btn_settings)
         self.verticalLayout_5.addWidget(self.ToolBar)
         self.stackedWidget = QtWidgets.QStackedWidget(parent=self.centralwidget)
         self.stackedWidget.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.ArrowCursor))
@@ -311,8 +311,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.widget_105 = QtWidgets.QWidget(parent=self.widget_9)
         self.widget_105.setObjectName("widget_105")
-        self.verticalLayout_69 = QtWidgets.QVBoxLayout(self.widget_105)
-        self.verticalLayout_69.setObjectName("verticalLayout_69")
+        self.verticalLayout_43 = QtWidgets.QVBoxLayout(self.widget_105)
+        self.verticalLayout_43.setObjectName("verticalLayout_43")
         self.widget_12 = QtWidgets.QWidget(parent=self.widget_105)
         self.widget_12.setObjectName("widget_12")
         self.verticalLayout_6 = QtWidgets.QVBoxLayout(self.widget_12)
@@ -324,7 +324,7 @@ class Ui_MainWindow(object):
         self.image_mainpage.setPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../images/main.png"))
         self.image_mainpage.setObjectName("image_mainpage")
         self.verticalLayout_6.addWidget(self.image_mainpage, 0, QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignVCenter)
-        self.verticalLayout_69.addWidget(self.widget_12)
+        self.verticalLayout_43.addWidget(self.widget_12, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.widget_14 = QtWidgets.QWidget(parent=self.widget_105)
         self.widget_14.setObjectName("widget_14")
         self.horizontalLayout_8 = QtWidgets.QHBoxLayout(self.widget_14)
@@ -377,7 +377,7 @@ class Ui_MainWindow(object):
         self.btn_networkUserHome.setIconSize(QtCore.QSize(40, 40))
         self.btn_networkUserHome.setObjectName("btn_networkUserHome")
         self.horizontalLayout_8.addWidget(self.btn_networkUserHome, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
-        self.verticalLayout_69.addWidget(self.widget_14, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
+        self.verticalLayout_43.addWidget(self.widget_14, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.widget_101 = QtWidgets.QWidget(parent=self.widget_105)
         self.widget_101.setObjectName("widget_101")
         self.horizontalLayout_28 = QtWidgets.QHBoxLayout(self.widget_101)
@@ -454,22 +454,21 @@ class Ui_MainWindow(object):
         self.show_digest_2.setIconSize(QtCore.QSize(35, 35))
         self.show_digest_2.setObjectName("show_digest_2")
         self.horizontalLayout_28.addWidget(self.show_digest_2)
-        self.verticalLayout_69.addWidget(self.widget_101, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
-        self.widget_100 = QtWidgets.QWidget(parent=self.widget_105)
-        self.widget_100.setObjectName("widget_100")
-        self.horizontalLayout_41 = QtWidgets.QHBoxLayout(self.widget_100)
-        self.horizontalLayout_41.setSpacing(0)
-        self.horizontalLayout_41.setObjectName("horizontalLayout_41")
-        self.show_https_2 = QtWidgets.QPushButton(parent=self.widget_100)
-        self.show_https_2.setMinimumSize(QtCore.QSize(200, 50))
-        self.show_https_2.setMaximumSize(QtCore.QSize(200, 50))
+        self.verticalLayout_43.addWidget(self.widget_101, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
+        self.widget_79 = QtWidgets.QWidget(parent=self.widget_105)
+        self.widget_79.setObjectName("widget_79")
+        self.horizontalLayout_57 = QtWidgets.QHBoxLayout(self.widget_79)
+        self.horizontalLayout_57.setObjectName("horizontalLayout_57")
+        self.show_https_3 = QtWidgets.QPushButton(parent=self.widget_79)
+        self.show_https_3.setMinimumSize(QtCore.QSize(200, 50))
+        self.show_https_3.setMaximumSize(QtCore.QSize(200, 50))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
-        self.show_https_2.setFont(font)
-        self.show_https_2.setStyleSheet("QPushButton {    \n"
+        self.show_https_3.setFont(font)
+        self.show_https_3.setStyleSheet("QPushButton {    \n"
 "\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
@@ -480,20 +479,20 @@ class Ui_MainWindow(object):
 "    background-color: ;\n"
 "}\n"
 "")
-        self.show_https_2.setIcon(icon6)
-        self.show_https_2.setIconSize(QtCore.QSize(35, 35))
-        self.show_https_2.setObjectName("show_https_2")
-        self.horizontalLayout_41.addWidget(self.show_https_2, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
-        self.show_vulner_2 = QtWidgets.QPushButton(parent=self.widget_100)
-        self.show_vulner_2.setMinimumSize(QtCore.QSize(380, 50))
-        self.show_vulner_2.setMaximumSize(QtCore.QSize(380, 50))
+        self.show_https_3.setIcon(icon6)
+        self.show_https_3.setIconSize(QtCore.QSize(35, 35))
+        self.show_https_3.setObjectName("show_https_3")
+        self.horizontalLayout_57.addWidget(self.show_https_3, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
+        self.show_vulner_3 = QtWidgets.QPushButton(parent=self.widget_79)
+        self.show_vulner_3.setMinimumSize(QtCore.QSize(380, 50))
+        self.show_vulner_3.setMaximumSize(QtCore.QSize(380, 50))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
-        self.show_vulner_2.setFont(font)
-        self.show_vulner_2.setStyleSheet("QPushButton {    \n"
+        self.show_vulner_3.setFont(font)
+        self.show_vulner_3.setStyleSheet("QPushButton {    \n"
 "\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
@@ -504,18 +503,18 @@ class Ui_MainWindow(object):
 "    background-color: ;\n"
 "}\n"
 "")
-        self.show_vulner_2.setIcon(icon7)
-        self.show_vulner_2.setIconSize(QtCore.QSize(35, 45))
-        self.show_vulner_2.setObjectName("show_vulner_2")
-        self.horizontalLayout_41.addWidget(self.show_vulner_2, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
-        self.frame_3 = QtWidgets.QFrame(parent=self.widget_100)
-        self.frame_3.setMinimumSize(QtCore.QSize(250, 50))
-        self.frame_3.setMaximumSize(QtCore.QSize(250, 50))
-        self.frame_3.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
-        self.frame_3.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
-        self.frame_3.setObjectName("frame_3")
-        self.horizontalLayout_41.addWidget(self.frame_3)
-        self.verticalLayout_69.addWidget(self.widget_100, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
+        self.show_vulner_3.setIcon(icon7)
+        self.show_vulner_3.setIconSize(QtCore.QSize(35, 45))
+        self.show_vulner_3.setObjectName("show_vulner_3")
+        self.horizontalLayout_57.addWidget(self.show_vulner_3)
+        self.frame_4 = QtWidgets.QFrame(parent=self.widget_79)
+        self.frame_4.setMinimumSize(QtCore.QSize(250, 50))
+        self.frame_4.setMaximumSize(QtCore.QSize(250, 50))
+        self.frame_4.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
+        self.frame_4.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
+        self.frame_4.setObjectName("frame_4")
+        self.horizontalLayout_57.addWidget(self.frame_4)
+        self.verticalLayout_43.addWidget(self.widget_79, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
         self.verticalLayout_4.addWidget(self.widget_105)
         self.horizontalLayout_7.addWidget(self.widget_9, 0, QtCore.Qt.AlignmentFlag.AlignTop)
         self.stackedWidget.addWidget(self.mainpage)
@@ -721,7 +720,7 @@ class Ui_MainWindow(object):
         self.btn_backPassword.setObjectName("btn_backPassword")
         self.horizontalLayout_46.addWidget(self.btn_backPassword, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
         self.label_headofPassword = QtWidgets.QLabel(parent=self.widget_27)
-        self.label_headofPassword.setGeometry(QtCore.QRect(152, 15, 500, 45))
+        self.label_headofPassword.setGeometry(QtCore.QRect(152, 15, 500, 40))
         self.label_headofPassword.setMinimumSize(QtCore.QSize(500, 40))
         self.label_headofPassword.setMaximumSize(QtCore.QSize(500, 40))
         font = QtGui.QFont()
@@ -1350,7 +1349,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_17 = QtWidgets.QHBoxLayout(self.widget_107)
         self.horizontalLayout_17.setObjectName("horizontalLayout_17")
         self.dropdown_modeAttack = QtWidgets.QComboBox(parent=self.widget_107)
-        self.dropdown_modeAttack.setMinimumSize(QtCore.QSize(119, 45))
+        self.dropdown_modeAttack.setMinimumSize(QtCore.QSize(101, 45))
         self.dropdown_modeAttack.setMaximumSize(QtCore.QSize(200, 45))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -1394,7 +1393,7 @@ class Ui_MainWindow(object):
         self.dropdown_modeAttack.addItem("")
         self.horizontalLayout_17.addWidget(self.dropdown_modeAttack)
         self.dropdown_wordLists = QtWidgets.QComboBox(parent=self.widget_107)
-        self.dropdown_wordLists.setMinimumSize(QtCore.QSize(119, 45))
+        self.dropdown_wordLists.setMinimumSize(QtCore.QSize(101, 45))
         self.dropdown_wordLists.setMaximumSize(QtCore.QSize(190, 45))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -1582,7 +1581,7 @@ class Ui_MainWindow(object):
         self.btn_backMalware.setObjectName("btn_backMalware")
         self.horizontalLayout_50.addWidget(self.btn_backMalware, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
         self.label_headofMalware = QtWidgets.QLabel(parent=self.widget_80)
-        self.label_headofMalware.setGeometry(QtCore.QRect(152, 15, 500, 45))
+        self.label_headofMalware.setGeometry(QtCore.QRect(152, 15, 500, 40))
         self.label_headofMalware.setMinimumSize(QtCore.QSize(500, 40))
         self.label_headofMalware.setMaximumSize(QtCore.QSize(500, 40))
         font = QtGui.QFont()
@@ -1723,10 +1722,12 @@ class Ui_MainWindow(object):
         self.verticalLayout_52 = QtWidgets.QVBoxLayout(self.widget_84)
         self.verticalLayout_52.setObjectName("verticalLayout_52")
         self.widget_87 = QtWidgets.QWidget(parent=self.widget_84)
+        self.widget_87.setMinimumSize(QtCore.QSize(600, 0))
         self.widget_87.setObjectName("widget_87")
         self.verticalLayout_70 = QtWidgets.QVBoxLayout(self.widget_87)
         self.verticalLayout_70.setObjectName("verticalLayout_70")
         self.label_Analysis = QtWidgets.QLabel(parent=self.widget_87)
+        self.label_Analysis.setMinimumSize(QtCore.QSize(0, 30))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(13)
@@ -1736,7 +1737,7 @@ class Ui_MainWindow(object):
         self.label_Analysis.setStyleSheet("    color: rgba(40,43,61,255) ;")
         self.label_Analysis.setObjectName("label_Analysis")
         self.verticalLayout_70.addWidget(self.label_Analysis)
-        self.verticalLayout_52.addWidget(self.widget_87)
+        self.verticalLayout_52.addWidget(self.widget_87, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
         self.widget_89 = QtWidgets.QWidget(parent=self.widget_84)
         self.widget_89.setMinimumSize(QtCore.QSize(0, 0))
         self.widget_89.setMaximumSize(QtCore.QSize(16777215, 500))
@@ -1759,10 +1760,12 @@ class Ui_MainWindow(object):
         self.verticalLayout_53.addWidget(self.widget_88)
         self.verticalLayout_52.addWidget(self.widget_89)
         self.widget_116 = QtWidgets.QWidget(parent=self.widget_84)
+        self.widget_116.setMinimumSize(QtCore.QSize(600, 0))
         self.widget_116.setObjectName("widget_116")
         self.verticalLayout_71 = QtWidgets.QVBoxLayout(self.widget_116)
         self.verticalLayout_71.setObjectName("verticalLayout_71")
         self.label_Analysis_2 = QtWidgets.QLabel(parent=self.widget_116)
+        self.label_Analysis_2.setMinimumSize(QtCore.QSize(0, 30))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(13)
@@ -1772,7 +1775,7 @@ class Ui_MainWindow(object):
         self.label_Analysis_2.setStyleSheet("    color: rgba(40,43,61,255) ;")
         self.label_Analysis_2.setObjectName("label_Analysis_2")
         self.verticalLayout_71.addWidget(self.label_Analysis_2)
-        self.verticalLayout_52.addWidget(self.widget_116)
+        self.verticalLayout_52.addWidget(self.widget_116, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
         self.widget_33 = QtWidgets.QWidget(parent=self.widget_84)
         self.widget_33.setObjectName("widget_33")
         self.verticalLayout_40 = QtWidgets.QVBoxLayout(self.widget_33)
@@ -1794,7 +1797,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.label_malicious.setFont(font)
-        self.label_malicious.setStyleSheet("    color: rgba(40,43,61,255) ;")
+        self.label_malicious.setStyleSheet("")
         self.label_malicious.setObjectName("label_malicious")
         self.verticalLayout_61.addWidget(self.label_malicious)
         self.label_suspicious = QtWidgets.QLabel(parent=self.widget_98)
@@ -1805,7 +1808,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.label_suspicious.setFont(font)
-        self.label_suspicious.setStyleSheet("    color: rgba(40,43,61,255) ;")
+        self.label_suspicious.setStyleSheet("")
         self.label_suspicious.setObjectName("label_suspicious")
         self.verticalLayout_61.addWidget(self.label_suspicious)
         self.label_undetected = QtWidgets.QLabel(parent=self.widget_98)
@@ -1816,7 +1819,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.label_undetected.setFont(font)
-        self.label_undetected.setStyleSheet("    color: rgba(40,43,61,255) ;")
+        self.label_undetected.setStyleSheet("")
         self.label_undetected.setObjectName("label_undetected")
         self.verticalLayout_61.addWidget(self.label_undetected)
         self.horizontalLayout_15.addWidget(self.widget_98)
@@ -2133,7 +2136,7 @@ class Ui_MainWindow(object):
         self.btn_backMSDigest.setObjectName("btn_backMSDigest")
         self.horizontalLayout_51.addWidget(self.btn_backMSDigest, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
         self.label_headofMessageDigest = QtWidgets.QLabel(parent=self.widget_44)
-        self.label_headofMessageDigest.setGeometry(QtCore.QRect(152, 15, 500, 45))
+        self.label_headofMessageDigest.setGeometry(QtCore.QRect(152, 15, 500, 40))
         self.label_headofMessageDigest.setMinimumSize(QtCore.QSize(500, 40))
         self.label_headofMessageDigest.setMaximumSize(QtCore.QSize(500, 40))
         font = QtGui.QFont()
@@ -2294,7 +2297,7 @@ class Ui_MainWindow(object):
         self.btn_sha1.setObjectName("btn_sha1")
         self.horizontalLayout_21.addWidget(self.btn_sha1)
         self.dropdown_sha2 = QtWidgets.QComboBox(parent=self.widget_46)
-        self.dropdown_sha2.setMinimumSize(QtCore.QSize(119, 40))
+        self.dropdown_sha2.setMinimumSize(QtCore.QSize(101, 40))
         self.dropdown_sha2.setMaximumSize(QtCore.QSize(111, 41))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -2339,7 +2342,7 @@ class Ui_MainWindow(object):
         self.dropdown_sha2.addItem("")
         self.horizontalLayout_21.addWidget(self.dropdown_sha2)
         self.dropdown_sha3 = QtWidgets.QComboBox(parent=self.widget_46)
-        self.dropdown_sha3.setMinimumSize(QtCore.QSize(119, 40))
+        self.dropdown_sha3.setMinimumSize(QtCore.QSize(101, 40))
         self.dropdown_sha3.setMaximumSize(QtCore.QSize(111, 41))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -2822,7 +2825,7 @@ class Ui_MainWindow(object):
         self.btn_backVulner.setObjectName("btn_backVulner")
         self.horizontalLayout_53.addWidget(self.btn_backVulner, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
         self.label_headofVulner = QtWidgets.QLabel(parent=self.widget_59)
-        self.label_headofVulner.setGeometry(QtCore.QRect(152, 15, 500, 45))
+        self.label_headofVulner.setGeometry(QtCore.QRect(152, 15, 500, 40))
         self.label_headofVulner.setMinimumSize(QtCore.QSize(500, 40))
         self.label_headofVulner.setMaximumSize(QtCore.QSize(500, 40))
         font = QtGui.QFont()
@@ -2877,7 +2880,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_30 = QtWidgets.QHBoxLayout(self.widget_70)
         self.horizontalLayout_30.setObjectName("horizontalLayout_30")
         self.dropdown_typeScan = QtWidgets.QComboBox(parent=self.widget_70)
-        self.dropdown_typeScan.setMinimumSize(QtCore.QSize(119, 45))
+        self.dropdown_typeScan.setMinimumSize(QtCore.QSize(101, 45))
         self.dropdown_typeScan.setMaximumSize(QtCore.QSize(190, 41))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -3802,11 +3805,11 @@ class Ui_MainWindow(object):
         self.verticalLayout_42.addWidget(self.widget_72)
         self.horizontalLayout_31.addWidget(self.widget_71, 0, QtCore.Qt.AlignmentFlag.AlignTop)
         self.stackedWidget.addWidget(self.page_https)
-        self.page = QtWidgets.QWidget()
-        self.page.setObjectName("page")
-        self.horizontalLayout_61 = QtWidgets.QHBoxLayout(self.page)
+        self.page_settings = QtWidgets.QWidget()
+        self.page_settings.setObjectName("page_settings")
+        self.horizontalLayout_61 = QtWidgets.QHBoxLayout(self.page_settings)
         self.horizontalLayout_61.setObjectName("horizontalLayout_61")
-        self.widget_130 = QtWidgets.QWidget(parent=self.page)
+        self.widget_130 = QtWidgets.QWidget(parent=self.page_settings)
         self.widget_130.setStyleSheet("QWidget#widget_135 {\n"
 "    border: 1px solid rgb(237, 236, 237); /* Set the \"groove\" border style for the specific widgets */\n"
 "    background-color: rgb(237, 236, 237);\n"
@@ -3931,11 +3934,11 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QCheckBox::indicator:checked {\n"
-"    image: url(D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-switchon.png);\n"
+"      image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);\n"
 "}\n"
 "\n"
 "QCheckBox::indicator:unchecked {\n"
-"    image:  url(D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon_switchoff.png);\n"
+"     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);\n"
 "}\n"
 "")
         self.checkBox_notificationSettings.setText("")
@@ -4002,11 +4005,11 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QCheckBox::indicator:checked {\n"
-"      image:  url(D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon_switchoff.png);\n"
+"      image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);\n"
 "}\n"
 "\n"
 "QCheckBox::indicator:unchecked {\n"
-"     image: url(D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-switchon.png);\n"
+"     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);\n"
 "}\n"
 "")
         self.checkBox_btn_languageSettings.setText("")
@@ -4072,11 +4075,11 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QCheckBox::indicator:checked {\n"
-"    image: url(D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-switchon.png);\n"
+"      image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);\n"
 "}\n"
 "\n"
 "QCheckBox::indicator:unchecked {\n"
-"    image:  url(D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon_switchoff.png);\n"
+"     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);\n"
 "}\n"
 "")
         self.checkBox_soundSettings.setText("")
@@ -4307,11 +4310,11 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QCheckBox::indicator:checked {\n"
-"      image:  url(D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon_switchoff.png);\n"
+"      image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);\n"
 "}\n"
 "\n"
 "QCheckBox::indicator:unchecked {\n"
-"     image: url(D:/Project/ISAN-Security-Gizmo-Box/assets/icons/icon-switchon.png);\n"
+"     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);\n"
 "}\n"
 "")
         self.checkBox_themeSettings.setText("")
@@ -4337,7 +4340,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_77.addWidget(self.widget_164)
         self.verticalLayout_76.addWidget(self.widget_131)
         self.horizontalLayout_61.addWidget(self.widget_130, 0, QtCore.Qt.AlignmentFlag.AlignTop)
-        self.stackedWidget.addWidget(self.page)
+        self.stackedWidget.addWidget(self.page_settings)
         self.verticalLayout_5.addWidget(self.stackedWidget)
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -4349,7 +4352,7 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.btn_home.setText(_translate("MainWindow", "Home"))
-        self.btn_setting.setText(_translate("MainWindow", "Settings"))
+        self.btn_settings.setText(_translate("MainWindow", "Settings"))
         self.btn_getStart.setText(_translate("MainWindow", "Get Start"))
         self.show_password.setText(_translate("MainWindow", "Password Evaluation"))
         self.show_malware.setText(_translate("MainWindow", "Malware Scanning"))
@@ -4361,8 +4364,8 @@ class Ui_MainWindow(object):
         self.show_password_2.setText(_translate("MainWindow", "Password Evaluation"))
         self.show_malware_2.setText(_translate("MainWindow", "Malware Scanning"))
         self.show_digest_2.setText(_translate("MainWindow", "Message Digest"))
-        self.show_https_2.setText(_translate("MainWindow", "HTTPS Tesing"))
-        self.show_vulner_2.setText(_translate("MainWindow", "Vulnerability Scanning"))
+        self.show_https_3.setText(_translate("MainWindow", "HTTPS Tesing"))
+        self.show_vulner_3.setText(_translate("MainWindow", "Vulnerability Scanning"))
         self.btn_backAdvancedUser.setText(_translate("MainWindow", "Back"))
         self.btn_password.setText(_translate("MainWindow", "Password Evaluation"))
         self.btn_malware.setText(_translate("MainWindow", "Malware Scanning"))
@@ -4371,7 +4374,7 @@ class Ui_MainWindow(object):
         self.label_headofPassword.setText(_translate("MainWindow", "PASSWORD EVALUATION"))
         self.label_searchNordpass.setText(_translate("MainWindow", "Search for your Password in the NordPass Wordlists"))
         self.label_outputSearchNordPass.setText(_translate("MainWindow", "----"))
-        self.lineEdit_password.setPlaceholderText(_translate("MainWindow", "Type here"))
+        self.lineEdit_password.setPlaceholderText(_translate("MainWindow", "enter password"))
         self.btn_dictAttack.setText(_translate("MainWindow", "Dictionary attack"))
         self.label_timeToCrack.setText(_translate("MainWindow", "Estimated time to crack"))
         self.label_outputTimeToCrack.setText(_translate("MainWindow", "1 Hr 30 Min 20 Sec"))
@@ -4388,7 +4391,7 @@ class Ui_MainWindow(object):
         self.chk_special.setText(_translate("MainWindow", "Special symbols"))
         self.btn_backDict.setText(_translate("MainWindow", "Back"))
         self.label_headofPasswordAttack.setText(_translate("MainWindow", "DICTIONATY ATTACK"))
-        self.lineEdit_passwordDict.setPlaceholderText(_translate("MainWindow", "Type here"))
+        self.lineEdit_passwordDict.setPlaceholderText(_translate("MainWindow", "enter password"))
         self.lineEdit_inputFileDict.setPlaceholderText(_translate("MainWindow", "Only text file (.txt)"))
         self.btn_browseDict.setText(_translate("MainWindow", "Browse"))
         self.btn_clearDict.setText(_translate("MainWindow", "Clear"))
@@ -4416,7 +4419,7 @@ class Ui_MainWindow(object):
         self.label_suspiciousResult.setText(_translate("MainWindow", "0"))
         self.label_undetectedResult.setText(_translate("MainWindow", "0"))
         self.label_scanDetail.setText(_translate("MainWindow", "Detail"))
-        self.label_dateTimeDetail.setText(_translate("MainWindow", "Date/Time"))
+        self.label_dateTimeDetail.setText(_translate("MainWindow", "Date / Time"))
         self.label_namefile.setText(_translate("MainWindow", "Name"))
         self.label_typeFile.setText(_translate("MainWindow", "Type"))
         self.label_typeScan.setText(_translate("MainWindow", "Scan Type"))
@@ -4431,7 +4434,7 @@ class Ui_MainWindow(object):
         self.btn_sendEmail.setText(_translate("MainWindow", "Send Email"))
         self.btn_backMSDigest.setText(_translate("MainWindow", "Back"))
         self.label_headofMessageDigest.setText(_translate("MainWindow", "MESSAGE DIGEST"))
-        self.lineEdit_MSdigest.setPlaceholderText(_translate("MainWindow", "Type here"))
+        self.lineEdit_MSdigest.setPlaceholderText(_translate("MainWindow", "ex. text or file"))
         self.btn_browseMSDigest.setText(_translate("MainWindow", "Browse"))
         self.btn_clearMSDigest.setText(_translate("MainWindow", "Clear"))
         self.btn_md5.setText(_translate("MainWindow", "MD5"))
@@ -4458,7 +4461,7 @@ class Ui_MainWindow(object):
         self.btn_hsts.setText(_translate("MainWindow", "HTTPS Testing"))
         self.btn_backVulner.setText(_translate("MainWindow", "Back"))
         self.label_headofVulner.setText(_translate("MainWindow", "VULNERABILITY SCANNING"))
-        self.lineEdit_vulner.setPlaceholderText(_translate("MainWindow", "Type here"))
+        self.lineEdit_vulner.setPlaceholderText(_translate("MainWindow", "ex. example.com or IP"))
         self.dropdown_typeScan.setItemText(0, _translate("MainWindow", "Type Scan"))
         self.dropdown_typeScan.setItemText(1, _translate("MainWindow", "Quick Scan"))
         self.dropdown_typeScan.setItemText(2, _translate("MainWindow", "Stealth Scan"))
@@ -4473,7 +4476,7 @@ class Ui_MainWindow(object):
         self.label_SimpleServices.setText(_translate("MainWindow", "Services"))
         self.btn_backHttps.setText(_translate("MainWindow", "Back"))
         self.label_headofHttpstesting.setText(_translate("MainWindow", "HTTPS TESTING"))
-        self.lineEdit_https.setPlaceholderText(_translate("MainWindow", "Type here"))
+        self.lineEdit_https.setPlaceholderText(_translate("MainWindow", "ex. example.com or IP"))
         self.btn_scanHttps.setText(_translate("MainWindow", "Scan"))
         self.btn_clearHttps.setText(_translate("MainWindow", "Clear"))
         self.label_testingHttps_2.setText(_translate("MainWindow", "Testing summary"))
