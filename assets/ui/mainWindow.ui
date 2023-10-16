@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1392</width>
+    <width>1398</width>
     <height>875</height>
    </rect>
   </property>
@@ -1490,29 +1490,26 @@ QPushButton:hover {
                      </widget>
                     </item>
                     <item>
-                     <widget class="QWidget" name="widget_22" native="true">
-                      <layout class="QVBoxLayout" name="verticalLayout_11">
-                       <item alignment="Qt::AlignHCenter">
-                        <widget class="QWidget" name="widget_26" native="true">
-                         <layout class="QHBoxLayout" name="horizontalLayout_13">
-                          <item>
-                           <widget class="QLineEdit" name="lineEdit_password">
-                            <property name="minimumSize">
-                             <size>
-                              <width>700</width>
-                              <height>45</height>
-                             </size>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <family>Bahnschrift SemiBold</family>
-                              <pointsize>12</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="styleSheet">
-                             <string notr="true">QLineEdit {
+                     <widget class="QWidget" name="widget_26" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_13">
+                       <item>
+                        <widget class="QLineEdit" name="lineEdit_password">
+                         <property name="minimumSize">
+                          <size>
+                           <width>700</width>
+                           <height>45</height>
+                          </size>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Bahnschrift SemiBold</family>
+                           <pointsize>12</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QLineEdit {
   border: 1px solid gray;
   color: rgba(40,43,61,255);
   border-radius: 5px;
@@ -1527,34 +1524,34 @@ QLineEdit:focus {
   border-color: rgba(88,199,141,255);
 }
 </string>
-                            </property>
-                            <property name="alignment">
-                             <set>Qt::AlignCenter</set>
-                            </property>
-                            <property name="placeholderText">
-                             <string>enter password</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QPushButton" name="btn_showPassword">
-                            <property name="minimumSize">
-                             <size>
-                              <width>50</width>
-                              <height>40</height>
-                             </size>
-                            </property>
-                            <property name="maximumSize">
-                             <size>
-                              <width>50</width>
-                              <height>40</height>
-                             </size>
-                            </property>
-                            <property name="cursor">
-                             <cursorShape>PointingHandCursor</cursorShape>
-                            </property>
-                            <property name="styleSheet">
-                             <string notr="true">QPushButton {    
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                         <property name="placeholderText">
+                          <string>enter password</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="btn_showPassword">
+                         <property name="minimumSize">
+                          <size>
+                           <width>50</width>
+                           <height>40</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>50</width>
+                           <height>40</height>
+                          </size>
+                         </property>
+                         <property name="cursor">
+                          <cursorShape>PointingHandCursor</cursorShape>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QPushButton {    
     border: 1px solid rgba(40,43,61,255);
     border-radius: 20px;
     padding: 5px 10px;
@@ -1564,58 +1561,52 @@ QPushButton:hover {
     background-color: ;
 }
 </string>
-                            </property>
-                            <property name="text">
-                             <string/>
-                            </property>
-                            <property name="icon">
-                             <iconset>
-                              <normaloff>../icons/icon-visible.png</normaloff>../icons/icon-visible.png</iconset>
-                            </property>
-                            <property name="iconSize">
-                             <size>
-                              <width>30</width>
-                              <height>30</height>
-                             </size>
-                            </property>
-                           </widget>
-                          </item>
-                         </layout>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="icon">
+                          <iconset>
+                           <normaloff>../icons/icon-visible.png</normaloff>../icons/icon-visible.png</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>30</width>
+                           <height>30</height>
+                          </size>
+                         </property>
                         </widget>
                        </item>
-                      </layout>
-                     </widget>
-                    </item>
-                    <item alignment="Qt::AlignRight">
-                     <widget class="QWidget" name="widget_108" native="true">
-                      <layout class="QHBoxLayout" name="horizontalLayout_47">
-                       <item alignment="Qt::AlignHCenter">
-                        <widget class="QPushButton" name="btn_dictAttack">
-                         <property name="minimumSize">
-                          <size>
-                           <width>200</width>
-                           <height>45</height>
-                          </size>
-                         </property>
-                         <property name="maximumSize">
-                          <size>
-                           <width>200</width>
-                           <height>40</height>
-                          </size>
-                         </property>
-                         <property name="font">
-                          <font>
-                           <family>Bahnschrift SemiBold</family>
-                           <pointsize>12</pointsize>
-                           <weight>75</weight>
-                           <bold>true</bold>
-                          </font>
-                         </property>
-                         <property name="cursor">
-                          <cursorShape>PointingHandCursor</cursorShape>
-                         </property>
-                         <property name="styleSheet">
-                          <string notr="true">QPushButton {    
+                       <item>
+                        <widget class="QWidget" name="widget_108" native="true">
+                         <layout class="QHBoxLayout" name="horizontalLayout_47">
+                          <item alignment="Qt::AlignHCenter">
+                           <widget class="QPushButton" name="btn_dictAttack">
+                            <property name="minimumSize">
+                             <size>
+                              <width>200</width>
+                              <height>45</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>200</width>
+                              <height>40</height>
+                             </size>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Bahnschrift SemiBold</family>
+                              <pointsize>12</pointsize>
+                              <weight>75</weight>
+                              <bold>true</bold>
+                             </font>
+                            </property>
+                            <property name="cursor">
+                             <cursorShape>PointingHandCursor</cursorShape>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">QPushButton {    
     border: 1px solid rgba(40,43,61,255) ;
     border-radius: 20px;
     padding: 5px 10px;
@@ -1626,10 +1617,13 @@ QPushButton:hover {
     background-color: ;
 }
 </string>
-                         </property>
-                         <property name="text">
-                          <string>Dictionary attack</string>
-                         </property>
+                            </property>
+                            <property name="text">
+                             <string>Dictionary attack</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
                         </widget>
                        </item>
                       </layout>
@@ -1640,6 +1634,18 @@ QPushButton:hover {
                  </item>
                  <item>
                   <widget class="QWidget" name="widget_86" native="true">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>450</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
                    <layout class="QHBoxLayout" name="horizontalLayout_56">
                     <item>
                      <widget class="QWidget" name="widget_24" native="true">
@@ -3969,48 +3975,33 @@ QPushButton:hover {
                       </layout>
                      </widget>
                     </item>
-                    <item>
-                     <widget class="QWidget" name="widget_93" native="true">
+                    <item alignment="Qt::AlignRight">
+                     <widget class="QPushButton" name="btn_createReport">
                       <property name="minimumSize">
                        <size>
-                        <width>0</width>
-                        <height>70</height>
+                        <width>150</width>
+                        <height>40</height>
                        </size>
                       </property>
                       <property name="maximumSize">
                        <size>
-                        <width>16777215</width>
-                        <height>70</height>
+                        <width>150</width>
+                        <height>40</height>
                        </size>
                       </property>
-                      <layout class="QHBoxLayout" name="horizontalLayout_38">
-                       <item>
-                        <widget class="QPushButton" name="btn_createReport">
-                         <property name="minimumSize">
-                          <size>
-                           <width>150</width>
-                           <height>40</height>
-                          </size>
-                         </property>
-                         <property name="maximumSize">
-                          <size>
-                           <width>150</width>
-                           <height>40</height>
-                          </size>
-                         </property>
-                         <property name="font">
-                          <font>
-                           <family>Bahnschrift SemiBold</family>
-                           <pointsize>12</pointsize>
-                           <weight>75</weight>
-                           <bold>true</bold>
-                          </font>
-                         </property>
-                         <property name="cursor">
-                          <cursorShape>PointingHandCursor</cursorShape>
-                         </property>
-                         <property name="styleSheet">
-                          <string notr="true">QPushButton {    
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift SemiBold</family>
+                        <pointsize>12</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="cursor">
+                       <cursorShape>PointingHandCursor</cursorShape>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {    
     border: 1px solid rgba(40,43,61,255) ;
     border-radius: 20px;
     padding: 5px 10px;
@@ -4021,56 +4012,10 @@ QPushButton:hover {
     background-color: ;
 }
 </string>
-                         </property>
-                         <property name="text">
-                          <string>Create Report</string>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QPushButton" name="btn_sendEmail">
-                         <property name="minimumSize">
-                          <size>
-                           <width>150</width>
-                           <height>40</height>
-                          </size>
-                         </property>
-                         <property name="maximumSize">
-                          <size>
-                           <width>150</width>
-                           <height>40</height>
-                          </size>
-                         </property>
-                         <property name="font">
-                          <font>
-                           <family>Bahnschrift SemiBold</family>
-                           <pointsize>12</pointsize>
-                           <weight>75</weight>
-                           <bold>true</bold>
-                          </font>
-                         </property>
-                         <property name="cursor">
-                          <cursorShape>PointingHandCursor</cursorShape>
-                         </property>
-                         <property name="styleSheet">
-                          <string notr="true">QPushButton {    
-    border: 1px solid rgba(40,43,61,255) ;
-    border-radius: 20px;
-    padding: 5px 10px;
-	color: rgba(40,43,61,255) ;
-}
-
-QPushButton:hover {
-    background-color: ;
-}
-</string>
-                         </property>
-                         <property name="text">
-                          <string>Send Email</string>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
+                      </property>
+                      <property name="text">
+                       <string>Create Report</string>
+                      </property>
                      </widget>
                     </item>
                    </layout>
@@ -4689,6 +4634,12 @@ QComboBox:hover {
            </item>
            <item>
             <widget class="QWidget" name="widget_43" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>400</height>
+              </size>
+             </property>
              <layout class="QHBoxLayout" name="horizontalLayout_22">
               <item>
                <widget class="QWidget" name="widget_48" native="true">
@@ -5915,9 +5866,21 @@ border-radius :15px;
            </item>
            <item>
             <widget class="QWidget" name="widget_66" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
              <layout class="QHBoxLayout" name="horizontalLayout_48">
               <item>
                <widget class="QWidget" name="widget_112" native="true">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>350</height>
+                 </size>
+                </property>
                 <layout class="QHBoxLayout" name="horizontalLayout_52">
                  <item>
                   <widget class="QTextEdit" name="textEdit_ResultScan">
@@ -6031,6 +5994,60 @@ QScrollBar::sub-line:vertical {
                   </widget>
                  </item>
                 </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignRight">
+            <widget class="QWidget" name="widget_22" native="true">
+             <property name="font">
+              <font>
+               <family>Bahnschrift SemiBold</family>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 20px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
+}
+
+QPushButton:hover {
+    background-color: ;
+}
+</string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_73">
+              <item>
+               <widget class="QPushButton" name="btn_createReportVulner">
+                <property name="minimumSize">
+                 <size>
+                  <width>130</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>130</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Bahnschrift SemiBold</family>
+                  <pointsize>12</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Create Report</string>
+                </property>
                </widget>
               </item>
              </layout>
@@ -6369,6 +6386,12 @@ QPushButton:hover {
                  </item>
                  <item>
                   <widget class="QWidget" name="widget_134" native="true">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>400</height>
+                    </size>
+                   </property>
                    <layout class="QHBoxLayout" name="horizontalLayout_63">
                     <item>
                      <widget class="QWidget" name="widget_13" native="true">
@@ -6409,6 +6432,18 @@ QPushButton:hover {
                           </item>
                           <item>
                            <widget class="QLabel" name="label_domainName_2">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -6424,6 +6459,18 @@ QPushButton:hover {
                           </item>
                           <item>
                            <widget class="QLabel" name="label_STS_2">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -6439,6 +6486,18 @@ QPushButton:hover {
                           </item>
                           <item>
                            <widget class="QLabel" name="label_serverBanner_2">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -6449,60 +6508,6 @@ QPushButton:hover {
                             </property>
                             <property name="text">
                              <string>Server banner</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QLabel" name="label_AltHttps_2">
-                            <property name="minimumSize">
-                             <size>
-                              <width>0</width>
-                              <height>20</height>
-                             </size>
-                            </property>
-                            <property name="maximumSize">
-                             <size>
-                              <width>16777215</width>
-                              <height>20</height>
-                             </size>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <family>Bahnschrift SemiBold</family>
-                              <pointsize>11</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="text">
-                             <string>Alternative names</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QLabel" name="label_cerTransHttps_2">
-                            <property name="minimumSize">
-                             <size>
-                              <width>0</width>
-                              <height>20</height>
-                             </size>
-                            </property>
-                            <property name="maximumSize">
-                             <size>
-                              <width>16777215</width>
-                              <height>20</height>
-                             </size>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <family>Bahnschrift SemiBold</family>
-                              <pointsize>11</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="text">
-                             <string>Certificate Transparency</string>
                             </property>
                            </widget>
                           </item>
@@ -6530,6 +6535,33 @@ QPushButton:hover {
                             </property>
                             <property name="text">
                              <string>Signature Algorithm</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="label_cerTransHttps_2">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Bahnschrift SemiBold</family>
+                              <pointsize>11</pointsize>
+                              <weight>75</weight>
+                              <bold>true</bold>
+                             </font>
+                            </property>
+                            <property name="text">
+                             <string>Certificate Transparency</string>
                             </property>
                            </widget>
                           </item>
@@ -6598,13 +6630,13 @@ QPushButton:hover {
                             <property name="minimumSize">
                              <size>
                               <width>0</width>
-                              <height>30</height>
+                              <height>40</height>
                              </size>
                             </property>
                             <property name="maximumSize">
                              <size>
                               <width>16777215</width>
-                              <height>30</height>
+                              <height>40</height>
                              </size>
                             </property>
                             <property name="font">
@@ -6622,6 +6654,18 @@ QPushButton:hover {
                           </item>
                           <item>
                            <widget class="QLabel" name="label_resultDomainName_2">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>30</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -6640,6 +6684,18 @@ QPushButton:hover {
                           </item>
                           <item>
                            <widget class="QLabel" name="label_resultSTS_2">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>30</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -6658,6 +6714,18 @@ QPushButton:hover {
                           </item>
                           <item>
                            <widget class="QLabel" name="label_resultServerBanner_2">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>30</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -6672,58 +6740,19 @@ QPushButton:hover {
                            </widget>
                           </item>
                           <item>
-                           <widget class="QLabel" name="label_ResultCerProHttps_2">
-                            <property name="font">
-                             <font>
-                              <family>Bahnschrift SemiBold</family>
-                              <pointsize>11</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="styleSheet">
-                             <string notr="true"/>
-                            </property>
-                            <property name="text">
-                             <string>2 (2403 bytes)</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QLabel" name="label_ResultCerTransHttps_2">
-                            <property name="font">
-                             <font>
-                              <family>Bahnschrift SemiBold</family>
-                              <pointsize>11</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="text">
-                             <string>Yes (certificate)</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QLabel" name="label_ResultAltNameHttps_2">
-                            <property name="font">
-                             <font>
-                              <family>Bahnschrift SemiBold</family>
-                              <pointsize>11</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="styleSheet">
-                             <string notr="true"/>
-                            </property>
-                            <property name="text">
-                             <string>isanmsu.com www.isanmsu.com</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
                            <widget class="QLabel" name="label_ResultSignatureHttps_2">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>30</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -6741,7 +6770,76 @@ QPushButton:hover {
                            </widget>
                           </item>
                           <item>
+                           <widget class="QLabel" name="label_ResultCerTransHttps_2">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Bahnschrift SemiBold</family>
+                              <pointsize>11</pointsize>
+                              <weight>75</weight>
+                              <bold>true</bold>
+                             </font>
+                            </property>
+                            <property name="text">
+                             <string>Yes (certificate)</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="label_ResultCerProHttps_2">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Bahnschrift SemiBold</family>
+                              <pointsize>11</pointsize>
+                              <weight>75</weight>
+                              <bold>true</bold>
+                             </font>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true"/>
+                            </property>
+                            <property name="text">
+                             <string>2 (2403 bytes)</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
                            <widget class="QLabel" name="label_ResultissuerHttps_2">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>30</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -6808,33 +6906,6 @@ QPushButton:hover {
                            </widget>
                           </item>
                           <item>
-                           <widget class="QLabel" name="label_TLS1Https">
-                            <property name="minimumSize">
-                             <size>
-                              <width>0</width>
-                              <height>20</height>
-                             </size>
-                            </property>
-                            <property name="maximumSize">
-                             <size>
-                              <width>16777215</width>
-                              <height>20</height>
-                             </size>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <family>Bahnschrift SemiBold</family>
-                              <pointsize>11</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="text">
-                             <string>TLS 1</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
                            <widget class="QLabel" name="label_SSLv2Https">
                             <property name="minimumSize">
                              <size>
@@ -6885,6 +6956,33 @@ QPushButton:hover {
                             </property>
                             <property name="text">
                              <string>SSLv3</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="label_TLS1Https">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Bahnschrift SemiBold</family>
+                              <pointsize>11</pointsize>
+                              <weight>75</weight>
+                              <bold>true</bold>
+                             </font>
+                            </property>
+                            <property name="text">
+                             <string>TLS 1</string>
                             </property>
                            </widget>
                           </item>
@@ -6980,13 +7078,13 @@ QPushButton:hover {
                             <property name="minimumSize">
                              <size>
                               <width>0</width>
-                              <height>35</height>
+                              <height>30</height>
                              </size>
                             </property>
                             <property name="maximumSize">
                              <size>
                               <width>16777215</width>
-                              <height>35</height>
+                              <height>30</height>
                              </size>
                             </property>
                             <property name="font">
@@ -7004,6 +7102,99 @@ QPushButton:hover {
                           </item>
                           <item>
                            <widget class="QLabel" name="label_ResultTLS1Https">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Bahnschrift SemiBold</family>
+                              <pointsize>11</pointsize>
+                              <weight>75</weight>
+                              <bold>true</bold>
+                             </font>
+                            </property>
+                            <property name="text">
+                             <string>No</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="label_ResultSSLv2Https">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Bahnschrift SemiBold</family>
+                              <pointsize>11</pointsize>
+                              <weight>75</weight>
+                              <bold>true</bold>
+                             </font>
+                            </property>
+                            <property name="text">
+                             <string>No</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="label_ResultSSLv3Https">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Bahnschrift SemiBold</family>
+                              <pointsize>11</pointsize>
+                              <weight>75</weight>
+                              <bold>true</bold>
+                             </font>
+                            </property>
+                            <property name="text">
+                             <string>No</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="label_ResultTLS11Https">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -7019,6 +7210,18 @@ QPushButton:hover {
                           </item>
                           <item>
                            <widget class="QLabel" name="label_ResultTLS12Https">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -7036,52 +7239,19 @@ QPushButton:hover {
                            </widget>
                           </item>
                           <item>
-                           <widget class="QLabel" name="label_ResultSSLv2Https">
-                            <property name="font">
-                             <font>
-                              <family>Bahnschrift SemiBold</family>
-                              <pointsize>11</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="text">
-                             <string>No</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QLabel" name="label_ResultSSLv3Https">
-                            <property name="font">
-                             <font>
-                              <family>Bahnschrift SemiBold</family>
-                              <pointsize>11</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="text">
-                             <string>No</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QLabel" name="label_ResultTLS11Https">
-                            <property name="font">
-                             <font>
-                              <family>Bahnschrift SemiBold</family>
-                              <pointsize>11</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="text">
-                             <string>No</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
                            <widget class="QLabel" name="label_ResultTLS13Https">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -7338,6 +7508,18 @@ QPushButton:hover {
                           </item>
                           <item>
                            <widget class="QLabel" name="label_resultPoodleHttps">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -7356,6 +7538,18 @@ QPushButton:hover {
                           </item>
                           <item>
                            <widget class="QLabel" name="label_resultDrownHttps">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -7374,6 +7568,18 @@ QPushButton:hover {
                           </item>
                           <item>
                            <widget class="QLabel" name="label_resultBeastHttps">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -7392,6 +7598,18 @@ QPushButton:hover {
                           </item>
                           <item>
                            <widget class="QLabel" name="label_resultHeartBleedHttps">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -7410,6 +7628,18 @@ QPushButton:hover {
                           </item>
                           <item>
                            <widget class="QLabel" name="label_resultSweet32Https">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -7428,6 +7658,18 @@ QPushButton:hover {
                           </item>
                           <item>
                            <widget class="QLabel" name="label_resultLuck13Https">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -7451,6 +7693,46 @@ QPushButton:hover {
                      </widget>
                     </item>
                    </layout>
+                  </widget>
+                 </item>
+                 <item alignment="Qt::AlignRight">
+                  <widget class="QPushButton" name="btn_createReportHttps">
+                   <property name="minimumSize">
+                    <size>
+                     <width>130</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>130</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Bahnschrift SemiBold</family>
+                     <pointsize>12</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 20px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
+}
+
+QPushButton:hover {
+    background-color: ;
+}
+</string>
+                   </property>
+                   <property name="text">
+                    <string>Create Report</string>
+                   </property>
                   </widget>
                  </item>
                 </layout>
@@ -8651,6 +8933,661 @@ QPushButton:hover {
                      <height>0</height>
                     </size>
                    </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page">
+       <layout class="QHBoxLayout" name="horizontalLayout_67">
+        <item>
+         <widget class="QWidget" name="widget_126" native="true">
+          <property name="styleSheet">
+           <string notr="true">QWidget#widget_140{
+    border: 1px solid rgb(237, 236, 237); /* Set the &quot;groove&quot; border style for the specific widgets */
+	background-color: rgb(237, 236, 237);
+}
+</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_44">
+           <item>
+            <widget class="QWidget" name="widget_140" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>1200</width>
+               <height>70</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>70</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <widget class="QWidget" name="widget_141" native="true">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>5</y>
+                <width>152</width>
+                <height>60</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>60</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>60</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color:rgb(65,155,249);
+background-color: rgb(237, 236, 237);
+border-radius: 20px;</string>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_70">
+               <item alignment="Qt::AlignLeft">
+                <widget class="QPushButton" name="btn_backEmail">
+                 <property name="minimumSize">
+                  <size>
+                   <width>130</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>130</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Bahnschrift SemiBold</family>
+                   <pointsize>12</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 20px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
+}
+
+QPushButton:hover {
+    background-color: ;
+}
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Back</string>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normaloff>../icons/icons8-go-back-45.png</normaloff>../icons/icons8-go-back-45.png</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>35</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QLabel" name="label_headofEmail">
+              <property name="geometry">
+               <rect>
+                <x>152</x>
+                <y>15</y>
+                <width>500</width>
+                <height>45</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>500</width>
+                <height>45</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>500</width>
+                <height>45</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>Bahnschrift SemiBold</family>
+                <pointsize>20</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: rgb(38, 50, 56);</string>
+              </property>
+              <property name="text">
+               <string>Send ISAN Secutity Gixmo Box Report</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              </property>
+              <property name="margin">
+               <number>0</number>
+              </property>
+              <property name="indent">
+               <number>20</number>
+              </property>
+             </widget>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_137" native="true">
+             <property name="font">
+              <font>
+               <family>Bahnschrift SemiBold</family>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_68">
+              <item>
+               <widget class="QWidget" name="widget_132" native="true">
+                <layout class="QVBoxLayout" name="verticalLayout_69">
+                 <item>
+                  <widget class="QWidget" name="widget_139" native="true">
+                   <layout class="QHBoxLayout" name="horizontalLayout_72">
+                    <item>
+                     <widget class="QLabel" name="label_Report">
+                      <property name="minimumSize">
+                       <size>
+                        <width>400</width>
+                        <height>500</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>400</width>
+                        <height>500</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="pixmap">
+                       <pixmap>C:/Users/kanja/OneDrive/Pictures/Screenshots/Screenshot 2023-10-16 152325.png</pixmap>
+                      </property>
+                      <property name="scaledContents">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+                  <widget class="QWidget" name="widget_142" native="true">
+                   <layout class="QHBoxLayout" name="horizontalLayout_71">
+                    <item>
+                     <widget class="QPushButton" name="btn_backReport">
+                      <property name="minimumSize">
+                       <size>
+                        <width>100</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift SemiBold</family>
+                        <pointsize>10</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 20px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
+}
+
+QPushButton:hover {
+    background-color: ;
+}
+</string>
+                      </property>
+                      <property name="text">
+                       <string>Back</string>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>C:/Users/kanja/Downloads/icon_back.png</normaloff>C:/Users/kanja/Downloads/icon_back.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>35</width>
+                        <height>35</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="label_countPageReport">
+                      <property name="minimumSize">
+                       <size>
+                        <width>30</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>30</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift SemiBold</family>
+                        <pointsize>11</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QLabel {
+  border: 1px solid gray;
+  color: rgba(40,43,61,255);
+  border-radius: 5px;
+}
+
+</string>
+                      </property>
+                      <property name="text">
+                       <string>0</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="btn_nextReport">
+                      <property name="minimumSize">
+                       <size>
+                        <width>100</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift SemiBold</family>
+                        <pointsize>10</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="layoutDirection">
+                       <enum>Qt::RightToLeft</enum>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 20px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
+}
+
+QPushButton:hover {
+    background-color: ;
+}
+</string>
+                      </property>
+                      <property name="text">
+                       <string>Next</string>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>C:/Users/kanja/Downloads/icon_next.png</normaloff>C:/Users/kanja/Downloads/icon_next.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>35</width>
+                        <height>35</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget_138" native="true">
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>570</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>570</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_69">
+                 <item alignment="Qt::AlignRight|Qt::AlignTop">
+                  <widget class="QWidget" name="widget_128" native="true">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>150</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>150</height>
+                    </size>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_62">
+                    <item>
+                     <widget class="QLabel" name="label_3">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift SemiBold</family>
+                        <pointsize>12</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>To:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="label_4">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift SemiBold</family>
+                        <pointsize>12</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Subject:</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                  <widget class="QWidget" name="widget_127" native="true">
+                   <layout class="QVBoxLayout" name="verticalLayout_60">
+                    <item alignment="Qt::AlignHCenter">
+                     <widget class="QLabel" name="label_headerEmail">
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift SemiBold</family>
+                        <pointsize>12</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>ISAN Secutity Gixmo Box</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="lineEdit_toEmail">
+                      <property name="minimumSize">
+                       <size>
+                        <width>600</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>600</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QLineEdit {
+  border: 1px solid gray;
+  color: rgba(40,43,61,255);
+  border-radius: 5px;
+}
+
+QLineEdit:hover {
+  border: 2px solid;
+  border-color: rgba(0,143,255,255);
+}
+QLineEdit:focus {
+  border: 1px solid;
+  border-color: rgba(88,199,141,255);
+}
+</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="lineEdit_subjectEmail">
+                      <property name="minimumSize">
+                       <size>
+                        <width>600</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>600</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QLineEdit {
+  border: 1px solid gray;
+  color: rgba(40,43,61,255);
+  border-radius: 5px;
+}
+
+QLineEdit:hover {
+  border: 2px solid;
+  border-color: rgba(0,143,255,255);
+}
+QLineEdit:focus {
+  border: 1px solid;
+  border-color: rgba(88,199,141,255);
+}
+</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="lineEdit_detailEmail">
+                      <property name="minimumSize">
+                       <size>
+                        <width>600</width>
+                        <height>300</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>600</width>
+                        <height>300</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QLineEdit {
+  border: 1px solid gray;
+  color: rgba(40,43,61,255);
+  border-radius: 5px;
+}
+
+QLineEdit:hover {
+  border: 2px solid;
+  border-color: rgba(0,143,255,255);
+}
+QLineEdit:focus {
+  border: 1px solid;
+  border-color: rgba(88,199,141,255);
+}
+</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="btn_fileEmail">
+                      <property name="minimumSize">
+                       <size>
+                        <width>600</width>
+                        <height>45</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>600</width>
+                        <height>45</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift SemiBold</family>
+                        <pointsize>12</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 5px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
+}
+
+QPushButton:hover {
+    background-color: ;
+}
+</string>
+                      </property>
+                      <property name="text">
+                       <string>File</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item alignment="Qt::AlignRight">
+                     <widget class="QPushButton" name="btn_sendReportToMail">
+                      <property name="minimumSize">
+                       <size>
+                        <width>130</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>130</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift SemiBold</family>
+                        <pointsize>12</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 20px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
+}
+
+QPushButton:hover {
+    background-color: ;
+}
+</string>
+                      </property>
+                      <property name="text">
+                       <string>Send</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
                   </widget>
                  </item>
                 </layout>
