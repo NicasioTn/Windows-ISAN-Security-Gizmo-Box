@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1332, 850)
+        MainWindow.resize(1392, 875)
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout_5 = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -1349,7 +1349,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_17 = QtWidgets.QHBoxLayout(self.widget_107)
         self.horizontalLayout_17.setObjectName("horizontalLayout_17")
         self.dropdown_modeAttack = QtWidgets.QComboBox(parent=self.widget_107)
-        self.dropdown_modeAttack.setMinimumSize(QtCore.QSize(101, 45))
+        self.dropdown_modeAttack.setMinimumSize(QtCore.QSize(119, 45))
         self.dropdown_modeAttack.setMaximumSize(QtCore.QSize(200, 45))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -1393,7 +1393,7 @@ class Ui_MainWindow(object):
         self.dropdown_modeAttack.addItem("")
         self.horizontalLayout_17.addWidget(self.dropdown_modeAttack)
         self.dropdown_wordLists = QtWidgets.QComboBox(parent=self.widget_107)
-        self.dropdown_wordLists.setMinimumSize(QtCore.QSize(101, 45))
+        self.dropdown_wordLists.setMinimumSize(QtCore.QSize(119, 45))
         self.dropdown_wordLists.setMaximumSize(QtCore.QSize(190, 45))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -2297,7 +2297,7 @@ class Ui_MainWindow(object):
         self.btn_sha1.setObjectName("btn_sha1")
         self.horizontalLayout_21.addWidget(self.btn_sha1)
         self.dropdown_sha2 = QtWidgets.QComboBox(parent=self.widget_46)
-        self.dropdown_sha2.setMinimumSize(QtCore.QSize(101, 40))
+        self.dropdown_sha2.setMinimumSize(QtCore.QSize(119, 40))
         self.dropdown_sha2.setMaximumSize(QtCore.QSize(111, 41))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -2342,7 +2342,7 @@ class Ui_MainWindow(object):
         self.dropdown_sha2.addItem("")
         self.horizontalLayout_21.addWidget(self.dropdown_sha2)
         self.dropdown_sha3 = QtWidgets.QComboBox(parent=self.widget_46)
-        self.dropdown_sha3.setMinimumSize(QtCore.QSize(101, 40))
+        self.dropdown_sha3.setMinimumSize(QtCore.QSize(119, 40))
         self.dropdown_sha3.setMaximumSize(QtCore.QSize(111, 41))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -2880,7 +2880,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_30 = QtWidgets.QHBoxLayout(self.widget_70)
         self.horizontalLayout_30.setObjectName("horizontalLayout_30")
         self.dropdown_typeScan = QtWidgets.QComboBox(parent=self.widget_70)
-        self.dropdown_typeScan.setMinimumSize(QtCore.QSize(101, 45))
+        self.dropdown_typeScan.setMinimumSize(QtCore.QSize(119, 45))
         self.dropdown_typeScan.setMaximumSize(QtCore.QSize(190, 41))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -4148,23 +4148,30 @@ class Ui_MainWindow(object):
         self.widget_100.setObjectName("widget_100")
         self.horizontalLayout_35 = QtWidgets.QHBoxLayout(self.widget_100)
         self.horizontalLayout_35.setObjectName("horizontalLayout_35")
-        self.checkBox_APILine = QtWidgets.QCheckBox(parent=self.widget_100)
-        self.checkBox_APILine.setStyleSheet("QCheckBox::indicator {\n"
-"    width: 45px;\n"
-"    height: 45px;\n"
+        self.btn_removeLineAPISettings = QtWidgets.QPushButton(parent=self.widget_100)
+        self.btn_removeLineAPISettings.setMinimumSize(QtCore.QSize(100, 40))
+        self.btn_removeLineAPISettings.setMaximumSize(QtCore.QSize(100, 40))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_removeLineAPISettings.setFont(font)
+        self.btn_removeLineAPISettings.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btn_removeLineAPISettings.setStyleSheet("QPushButton {    \n"
+"    border: 1px solid rgba(40,43,61,255) ;\n"
+"    border-radius: 20px;\n"
+"    padding: 5px 10px;\n"
+"    color: rgba(40,43,61,255) ;\n"
 "}\n"
 "\n"
-"QCheckBox::indicator:checked {\n"
-"      image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:unchecked {\n"
-"     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
-        self.checkBox_APILine.setText("")
-        self.checkBox_APILine.setObjectName("checkBox_APILine")
-        self.horizontalLayout_35.addWidget(self.checkBox_APILine)
+        self.btn_removeLineAPISettings.setIconSize(QtCore.QSize(0, 0))
+        self.btn_removeLineAPISettings.setObjectName("btn_removeLineAPISettings")
+        self.horizontalLayout_35.addWidget(self.btn_removeLineAPISettings)
         self.horizontalLayout_104.addWidget(self.widget_100, 0, QtCore.Qt.AlignmentFlag.AlignRight)
         self.horizontalLayout_103.addWidget(self.widget_186)
         self.verticalLayout_87.addWidget(self.widget_185)
@@ -4229,7 +4236,11 @@ class Ui_MainWindow(object):
         self.widget_191.setObjectName("widget_191")
         self.horizontalLayout_108 = QtWidgets.QHBoxLayout(self.widget_191)
         self.horizontalLayout_108.setObjectName("horizontalLayout_108")
-        self.btn_virusTotalAPISettings = QtWidgets.QPushButton(parent=self.widget_191)
+        self.widget_123 = QtWidgets.QWidget(parent=self.widget_191)
+        self.widget_123.setObjectName("widget_123")
+        self.horizontalLayout_65 = QtWidgets.QHBoxLayout(self.widget_123)
+        self.horizontalLayout_65.setObjectName("horizontalLayout_65")
+        self.btn_virusTotalAPISettings = QtWidgets.QPushButton(parent=self.widget_123)
         self.btn_virusTotalAPISettings.setEnabled(True)
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -4242,28 +4253,36 @@ class Ui_MainWindow(object):
         self.btn_virusTotalAPISettings.setIcon(icon20)
         self.btn_virusTotalAPISettings.setIconSize(QtCore.QSize(40, 40))
         self.btn_virusTotalAPISettings.setObjectName("btn_virusTotalAPISettings")
-        self.horizontalLayout_108.addWidget(self.btn_virusTotalAPISettings, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
+        self.horizontalLayout_65.addWidget(self.btn_virusTotalAPISettings)
+        self.horizontalLayout_108.addWidget(self.widget_123, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
         self.widget_119 = QtWidgets.QWidget(parent=self.widget_191)
         self.widget_119.setObjectName("widget_119")
         self.horizontalLayout_59 = QtWidgets.QHBoxLayout(self.widget_119)
         self.horizontalLayout_59.setObjectName("horizontalLayout_59")
-        self.checkBox_APIVirusToTal = QtWidgets.QCheckBox(parent=self.widget_119)
-        self.checkBox_APIVirusToTal.setStyleSheet("QCheckBox::indicator {\n"
-"    width: 45px;\n"
-"    height: 45px;\n"
+        self.btn_removeVirusTotalAPISettings = QtWidgets.QPushButton(parent=self.widget_119)
+        self.btn_removeVirusTotalAPISettings.setMinimumSize(QtCore.QSize(100, 40))
+        self.btn_removeVirusTotalAPISettings.setMaximumSize(QtCore.QSize(100, 40))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_removeVirusTotalAPISettings.setFont(font)
+        self.btn_removeVirusTotalAPISettings.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btn_removeVirusTotalAPISettings.setStyleSheet("QPushButton {    \n"
+"    border: 1px solid rgba(40,43,61,255) ;\n"
+"    border-radius: 20px;\n"
+"    padding: 5px 10px;\n"
+"    color: rgba(40,43,61,255) ;\n"
 "}\n"
 "\n"
-"QCheckBox::indicator:checked {\n"
-"      image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:unchecked {\n"
-"     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
-        self.checkBox_APIVirusToTal.setText("")
-        self.checkBox_APIVirusToTal.setObjectName("checkBox_APIVirusToTal")
-        self.horizontalLayout_59.addWidget(self.checkBox_APIVirusToTal)
+        self.btn_removeVirusTotalAPISettings.setIconSize(QtCore.QSize(0, 0))
+        self.btn_removeVirusTotalAPISettings.setObjectName("btn_removeVirusTotalAPISettings")
+        self.horizontalLayout_59.addWidget(self.btn_removeVirusTotalAPISettings)
         self.horizontalLayout_108.addWidget(self.widget_119, 0, QtCore.Qt.AlignmentFlag.AlignRight)
         self.horizontalLayout_107.addWidget(self.widget_191)
         self.verticalLayout_88.addWidget(self.widget_190)
@@ -4387,6 +4406,35 @@ class Ui_MainWindow(object):
         self.verticalLayout_89.addWidget(self.widget_198)
         self.horizontalLayout_115.addWidget(self.widget_194)
         self.verticalLayout_77.addWidget(self.widget_164)
+        self.widget_124 = QtWidgets.QWidget(parent=self.widget_131)
+        self.widget_124.setObjectName("widget_124")
+        self.horizontalLayout_66 = QtWidgets.QHBoxLayout(self.widget_124)
+        self.horizontalLayout_66.setObjectName("horizontalLayout_66")
+        self.btn_saveSettings = QtWidgets.QPushButton(parent=self.widget_124)
+        self.btn_saveSettings.setMinimumSize(QtCore.QSize(100, 40))
+        self.btn_saveSettings.setMaximumSize(QtCore.QSize(100, 40))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_saveSettings.setFont(font)
+        self.btn_saveSettings.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btn_saveSettings.setStyleSheet("QPushButton {    \n"
+"    border: 1px solid rgba(40,43,61,255) ;\n"
+"    border-radius: 20px;\n"
+"    padding: 5px 10px;\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
+"}\n"
+"")
+        self.btn_saveSettings.setIconSize(QtCore.QSize(0, 0))
+        self.btn_saveSettings.setObjectName("btn_saveSettings")
+        self.horizontalLayout_66.addWidget(self.btn_saveSettings, 0, QtCore.Qt.AlignmentFlag.AlignRight)
+        self.verticalLayout_77.addWidget(self.widget_124)
         self.verticalLayout_76.addWidget(self.widget_131)
         self.horizontalLayout_61.addWidget(self.widget_130, 0, QtCore.Qt.AlignmentFlag.AlignTop)
         self.stackedWidget.addWidget(self.page_settings)
@@ -4585,12 +4633,14 @@ class Ui_MainWindow(object):
 " to generate and play audio, such as  notifications, or other \n"
 " auditory feedback."))
         self.btn_LineAPISettings.setText(_translate("MainWindow", "   LINE API Token"))
+        self.btn_removeLineAPISettings.setText(_translate("MainWindow", "Remove"))
         self.lineEdit_LineAPISettings.setPlaceholderText(_translate("MainWindow", "LINE API Token"))
         self.label_LineAPISettings.setText(_translate("MainWindow", "\"LINE API token\" refers to an access token used to interact with \n"
 "the LINE Messaging API, which is a set of APIs provided by LINE \n"
 "Corporation for developers to integrate LINE messaging features \n"
 "into their applications and services."))
         self.btn_virusTotalAPISettings.setText(_translate("MainWindow", "   Visrus Total API Token"))
+        self.btn_removeVirusTotalAPISettings.setText(_translate("MainWindow", "Remove"))
         self.lineEdit_virusTotalAPISettings.setPlaceholderText(_translate("MainWindow", "Virus Total API Token"))
         self.label_virusTotalAPISettings.setText(_translate("MainWindow", "VirusTotal\'s  API lets you upload and scan files, submit and scan \n"
 "URLs, access finished scan reports and make automatic \n"
@@ -4601,3 +4651,4 @@ class Ui_MainWindow(object):
         self.label_themeSettings.setText(_translate("MainWindow", "\"light theme\" refers to the appearance or color scheme \n"
 "used in user interfaces, particularly in software, apps, websites, \n"
 "and operating systems. "))
+        self.btn_saveSettings.setText(_translate("MainWindow", "Save"))

@@ -26,7 +26,7 @@ class MessageDigest(QDialog):
         configFilePath = './data/init.conf'
         config.read(configFilePath)
         if 'LineNotify' in config:
-            line_api_key = config.get('LineNotify', 'lineapikey')
+            line_api_key = config.get('LineNotify', 'line_api_key')
             self.lineEdit_tokenMSDigest.setText(line_api_key)
             # print(f'Line API Key: {line_api_key}')
         else:
@@ -34,16 +34,15 @@ class MessageDigest(QDialog):
         return line_api_key
 
     def saveAPIKey(self, line_api_key):
-        self.lineAPIKey = line_api_key # get api key from line api settings
-        print(self.lineAPIKey)
+        print(line_api_key)
 
         # save api key to file init.conf
         config = configparser.ConfigParser()
         configFilePath = './data/init.conf'
         config.read(configFilePath)
         if 'LineNotify' in config:
-            config.set('LineNotify', 'lineapikey', str(self.lineAPIKey))
-            print(f'Set API KEY: {self.lineAPIKey}')
+            config.set('LineNotify', 'line_api_key', str(line_api_key))
+            print(f'Set API KEY: {line_api_key}')
         else:
             print('Section "LineNotify" does not exist in the config file.')
 
@@ -117,7 +116,7 @@ class MessageDigest(QDialog):
 
     def showBtnLine(self, state):
         # Open File Line API Key
-        if MessageDigest.state_line == True:
+        if state == True:
             self.label_lineAPIDigest.setVisible(True)
             self.lineEdit_tokenMSDigest.setVisible(True)
             self.btn_sendMSDigest.setVisible(True)
