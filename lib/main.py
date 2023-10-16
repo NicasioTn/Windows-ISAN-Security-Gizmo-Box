@@ -14,9 +14,6 @@ from HTTPSTesting import *
 
 class Main(QMainWindow):
     
-    state_api_line = False
-    state_api_virustotal = False
-
     def __init__(self):
         super(Main, self).__init__()
         loadUi("./assets/ui/mainWindow.ui", self)
@@ -190,11 +187,19 @@ class Main(QMainWindow):
         self.lineEdit_LineAPISettings.setText(line_api_key)
 
         # Load Malware API Key from file config
-        virustotal_api_key = MalwareScanning.getAPIKey(self)
+        virustotal_api_key = MalwareScanning.loadAPIKey(self)
         self.lineEdit_virusTotalAPISettings.setText(virustotal_api_key)
     
     def saveSetting(self):
         pass
+
+    def removeline_api_key(self):
+        self.lineEdit_LineAPISettings.setText('')
+        MessageDigest.saveAPIKey(self, '')
+    
+    def removevirustotal_api_key(self):
+        self.lineEdit_virusTotalAPISettings.setText('')
+        MalwareScanning.saveAPIKey(self, '')
 
 # Run the application
 if __name__ == "__main__":
