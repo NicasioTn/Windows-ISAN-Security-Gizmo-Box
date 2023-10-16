@@ -31,7 +31,24 @@ class MessageDigest(QDialog):
             # print(f'Line API Key: {line_api_key}')
         else:
             print('Section "LineNotify" does not exist in the config file.')
-        
+        return line_api_key
+
+    def saveAPIKey(self, line_api_key):
+        self.lineAPIKey = line_api_key # get api key from line api settings
+        print(self.lineAPIKey)
+
+        # save api key to file init.conf
+        config = configparser.ConfigParser()
+        configFilePath = './data/init.conf'
+        config.read(configFilePath)
+        if 'LineNotify' in config:
+            config.set('LineNotify', 'lineapikey', str(self.lineAPIKey))
+            print(f'Set API KEY: {self.lineAPIKey}')
+        else:
+            print('Section "LineNotify" does not exist in the config file.')
+
+        with open(configFilePath, 'w') as configfile:
+            config.write(configfile)
         
     def clear (self):
         self.lineEdit_MSdigest.setText('')
@@ -79,24 +96,6 @@ class MessageDigest(QDialog):
         pixmap = pixmap.scaledToWidth(200)
         pixmap = pixmap.scaledToHeight(200)
         self.label_QRCode.setPixmap(pixmap)
-
-    def saveAPIKey(self):
-        self.lineAPIKey = self.lineEdit_tokenMSDigest.text()
-        print(self.lineAPIKey)
-
-        # save api key to file init.conf
-        config = configparser.ConfigParser()
-        configFilePath = './data/init.conf'
-        config.read(configFilePath)
-
-        if 'LineNotify' in config:
-            config.set('LineNotify', 'LineAPIKEY', str(self.lineAPIKey))
-            print(f'Set API KEY: {self.lineAPIKey}')
-        else:
-            print('Section "LineNotify" does not exist in the config file.')
-
-        with open(configFilePath, 'w') as configfile:
-            config.write(configfile)
 
     def openFileDialog(self):
         path = MessageDigest.open_file_dialog(self)
@@ -483,7 +482,7 @@ class MessageDigest(QDialog):
                     response = requests.post(url, headers=headers, params=payload, files=files)
                 
                 if response.status_code == 200:
-                    MessageDigest.saveAPIKey(self) # save api key to file init.conf
+                    MessageDigest.saveAPIKey(self, self.lineEdit_LineAPISettings.text()) # save api key to file init.conf
                     print("Image sent successfully!")
                     self.lineEdit_tokenMSDigest.setStyleSheet("border: 1px solid green;")
                 elif response.status_code == 400:

@@ -8082,32 +8082,66 @@ QCheckBox::indicator:unchecked {
                        <item>
                         <widget class="QWidget" name="widget_186" native="true">
                          <layout class="QHBoxLayout" name="horizontalLayout_104">
-                          <item alignment="Qt::AlignLeft">
-                           <widget class="QPushButton" name="btn_LineAPISettings">
-                            <property name="enabled">
-                             <bool>true</bool>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <family>Bahnschrift SemiBold</family>
-                              <pointsize>11</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="text">
-                             <string>   LINE API Token</string>
-                            </property>
-                            <property name="icon">
-                             <iconset>
-                              <normaloff>../icons/icon-line.png</normaloff>../icons/icon-line.png</iconset>
-                            </property>
-                            <property name="iconSize">
-                             <size>
-                              <width>40</width>
-                              <height>40</height>
-                             </size>
-                            </property>
+                          <item>
+                           <widget class="QWidget" name="widget_118" native="true">
+                            <layout class="QHBoxLayout" name="horizontalLayout_41">
+                             <item>
+                              <widget class="QPushButton" name="btn_LineAPISettings">
+                               <property name="enabled">
+                                <bool>true</bool>
+                               </property>
+                               <property name="font">
+                                <font>
+                                 <family>Bahnschrift SemiBold</family>
+                                 <pointsize>11</pointsize>
+                                 <weight>75</weight>
+                                 <bold>true</bold>
+                                </font>
+                               </property>
+                               <property name="text">
+                                <string>   LINE API Token</string>
+                               </property>
+                               <property name="icon">
+                                <iconset>
+                                 <normaloff>../icons/icon-line.png</normaloff>../icons/icon-line.png</iconset>
+                               </property>
+                               <property name="iconSize">
+                                <size>
+                                 <width>40</width>
+                                 <height>40</height>
+                                </size>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                          <item alignment="Qt::AlignRight">
+                           <widget class="QWidget" name="widget_100" native="true">
+                            <layout class="QHBoxLayout" name="horizontalLayout_35">
+                             <item>
+                              <widget class="QCheckBox" name="checkBox_APILine">
+                               <property name="styleSheet">
+                                <string notr="true">QCheckBox::indicator {
+    width: 45px;
+    height: 45px;
+}
+
+QCheckBox::indicator:checked {
+ 	 image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);
+}
+
+QCheckBox::indicator:unchecked {
+     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);
+}
+</string>
+                               </property>
+                               <property name="text">
+                                <string/>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
                            </widget>
                           </item>
                          </layout>
@@ -8255,6 +8289,34 @@ into their applications and services.</string>
                               <height>40</height>
                              </size>
                             </property>
+                           </widget>
+                          </item>
+                          <item alignment="Qt::AlignRight">
+                           <widget class="QWidget" name="widget_119" native="true">
+                            <layout class="QHBoxLayout" name="horizontalLayout_59">
+                             <item>
+                              <widget class="QCheckBox" name="checkBox_APIVirusToTal">
+                               <property name="styleSheet">
+                                <string notr="true">QCheckBox::indicator {
+    width: 45px;
+    height: 45px;
+}
+
+QCheckBox::indicator:checked {
+ 	 image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);
+}
+
+QCheckBox::indicator:unchecked {
+     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);
+}
+</string>
+                               </property>
+                               <property name="text">
+                                <string/>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
                            </widget>
                           </item>
                          </layout>

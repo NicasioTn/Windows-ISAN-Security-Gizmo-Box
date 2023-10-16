@@ -1,6 +1,4 @@
 import sys
-import os
-import json
 import configparser
 
 from PyQt6.QtWidgets import ( QApplication, QLineEdit, QMainWindow )
@@ -16,6 +14,9 @@ from HTTPSTesting import *
 
 class Main(QMainWindow):
     
+    state_api_line = False
+    state_api_virustotal = False
+
     def __init__(self):
         super(Main, self).__init__()
         loadUi("./assets/ui/mainWindow.ui", self)
@@ -53,8 +54,7 @@ class Main(QMainWindow):
         self.btn_getStart.clicked.connect(self.openHomePage)
 
         # --------------------- Setting -----------------------------------
-        self.btn_settings.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_settings))
-        
+        self.btn_settings.clicked.connect(self.openSettings)
 
         # -------------------- Home ---------------------------------------
         self.btn_home.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.mainpage))
@@ -181,6 +181,20 @@ class Main(QMainWindow):
     
     def openHttpsHome(self):
         self.stackedWidget.setCurrentWidget(self.page_https)
+
+    def openSettings(self):
+        self.stackedWidget.setCurrentWidget(self.page_settings)
+
+        # Load Message Digest API Key from file config
+        line_api_key = MessageDigest.LoadAPIKey(self)
+        self.lineEdit_LineAPISettings.setText(line_api_key)
+
+        # Load Malware API Key from file config
+        virustotal_api_key = MalwareScanning.getAPIKey(self)
+        self.lineEdit_virusTotalAPISettings.setText(virustotal_api_key)
+    
+    def saveSetting(self):
+        pass
 
 # Run the application
 if __name__ == "__main__":

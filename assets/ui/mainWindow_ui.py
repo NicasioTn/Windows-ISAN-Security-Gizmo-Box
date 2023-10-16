@@ -4127,7 +4127,11 @@ class Ui_MainWindow(object):
         self.widget_186.setObjectName("widget_186")
         self.horizontalLayout_104 = QtWidgets.QHBoxLayout(self.widget_186)
         self.horizontalLayout_104.setObjectName("horizontalLayout_104")
-        self.btn_LineAPISettings = QtWidgets.QPushButton(parent=self.widget_186)
+        self.widget_118 = QtWidgets.QWidget(parent=self.widget_186)
+        self.widget_118.setObjectName("widget_118")
+        self.horizontalLayout_41 = QtWidgets.QHBoxLayout(self.widget_118)
+        self.horizontalLayout_41.setObjectName("horizontalLayout_41")
+        self.btn_LineAPISettings = QtWidgets.QPushButton(parent=self.widget_118)
         self.btn_LineAPISettings.setEnabled(True)
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -4138,7 +4142,30 @@ class Ui_MainWindow(object):
         self.btn_LineAPISettings.setIcon(icon16)
         self.btn_LineAPISettings.setIconSize(QtCore.QSize(40, 40))
         self.btn_LineAPISettings.setObjectName("btn_LineAPISettings")
-        self.horizontalLayout_104.addWidget(self.btn_LineAPISettings, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
+        self.horizontalLayout_41.addWidget(self.btn_LineAPISettings)
+        self.horizontalLayout_104.addWidget(self.widget_118)
+        self.widget_100 = QtWidgets.QWidget(parent=self.widget_186)
+        self.widget_100.setObjectName("widget_100")
+        self.horizontalLayout_35 = QtWidgets.QHBoxLayout(self.widget_100)
+        self.horizontalLayout_35.setObjectName("horizontalLayout_35")
+        self.checkBox_APILine = QtWidgets.QCheckBox(parent=self.widget_100)
+        self.checkBox_APILine.setStyleSheet("QCheckBox::indicator {\n"
+"    width: 45px;\n"
+"    height: 45px;\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:checked {\n"
+"      image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:unchecked {\n"
+"     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);\n"
+"}\n"
+"")
+        self.checkBox_APILine.setText("")
+        self.checkBox_APILine.setObjectName("checkBox_APILine")
+        self.horizontalLayout_35.addWidget(self.checkBox_APILine)
+        self.horizontalLayout_104.addWidget(self.widget_100, 0, QtCore.Qt.AlignmentFlag.AlignRight)
         self.horizontalLayout_103.addWidget(self.widget_186)
         self.verticalLayout_87.addWidget(self.widget_185)
         self.lineEdit_LineAPISettings = QtWidgets.QLineEdit(parent=self.widget_184)
@@ -4216,6 +4243,28 @@ class Ui_MainWindow(object):
         self.btn_virusTotalAPISettings.setIconSize(QtCore.QSize(40, 40))
         self.btn_virusTotalAPISettings.setObjectName("btn_virusTotalAPISettings")
         self.horizontalLayout_108.addWidget(self.btn_virusTotalAPISettings, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
+        self.widget_119 = QtWidgets.QWidget(parent=self.widget_191)
+        self.widget_119.setObjectName("widget_119")
+        self.horizontalLayout_59 = QtWidgets.QHBoxLayout(self.widget_119)
+        self.horizontalLayout_59.setObjectName("horizontalLayout_59")
+        self.checkBox_APIVirusToTal = QtWidgets.QCheckBox(parent=self.widget_119)
+        self.checkBox_APIVirusToTal.setStyleSheet("QCheckBox::indicator {\n"
+"    width: 45px;\n"
+"    height: 45px;\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:checked {\n"
+"      image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:unchecked {\n"
+"     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);\n"
+"}\n"
+"")
+        self.checkBox_APIVirusToTal.setText("")
+        self.checkBox_APIVirusToTal.setObjectName("checkBox_APIVirusToTal")
+        self.horizontalLayout_59.addWidget(self.checkBox_APIVirusToTal)
+        self.horizontalLayout_108.addWidget(self.widget_119, 0, QtCore.Qt.AlignmentFlag.AlignRight)
         self.horizontalLayout_107.addWidget(self.widget_191)
         self.verticalLayout_88.addWidget(self.widget_190)
         self.lineEdit_virusTotalAPISettings = QtWidgets.QLineEdit(parent=self.widget_189)
