@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1332</width>
-    <height>850</height>
+    <width>1392</width>
+    <height>875</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -2690,7 +2690,7 @@ QPushButton:hover {
                      <widget class="QComboBox" name="dropdown_modeAttack">
                       <property name="minimumSize">
                        <size>
-                        <width>101</width>
+                        <width>119</width>
                         <height>45</height>
                        </size>
                       </property>
@@ -2769,7 +2769,7 @@ QComboBox:hover {
                      <widget class="QComboBox" name="dropdown_wordLists">
                       <property name="minimumSize">
                        <size>
-                        <width>101</width>
+                        <width>119</width>
                         <height>45</height>
                        </size>
                       </property>
@@ -4509,7 +4509,7 @@ QPushButton:focus {
                   <widget class="QComboBox" name="dropdown_sha2">
                    <property name="minimumSize">
                     <size>
-                     <width>101</width>
+                     <width>119</width>
                      <height>40</height>
                     </size>
                    </property>
@@ -4596,7 +4596,7 @@ QComboBox:hover {
                   <widget class="QComboBox" name="dropdown_sha3">
                    <property name="minimumSize">
                     <size>
-                     <width>101</width>
+                     <width>119</width>
                      <height>40</height>
                     </size>
                    </property>
@@ -5622,7 +5622,7 @@ QLineEdit:focus {
                      <widget class="QComboBox" name="dropdown_typeScan">
                       <property name="minimumSize">
                        <size>
-                        <width>101</width>
+                        <width>119</width>
                         <height>45</height>
                        </size>
                       </property>
@@ -8120,24 +8120,51 @@ QCheckBox::indicator:unchecked {
                            <widget class="QWidget" name="widget_100" native="true">
                             <layout class="QHBoxLayout" name="horizontalLayout_35">
                              <item>
-                              <widget class="QCheckBox" name="checkBox_APILine">
+                              <widget class="QPushButton" name="btn_removeLineAPISettings">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>100</width>
+                                 <height>40</height>
+                                </size>
+                               </property>
+                               <property name="maximumSize">
+                                <size>
+                                 <width>100</width>
+                                 <height>40</height>
+                                </size>
+                               </property>
+                               <property name="font">
+                                <font>
+                                 <family>Bahnschrift SemiBold</family>
+                                 <pointsize>12</pointsize>
+                                 <weight>75</weight>
+                                 <bold>true</bold>
+                                </font>
+                               </property>
+                               <property name="cursor">
+                                <cursorShape>PointingHandCursor</cursorShape>
+                               </property>
                                <property name="styleSheet">
-                                <string notr="true">QCheckBox::indicator {
-    width: 45px;
-    height: 45px;
+                                <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 20px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
 }
 
-QCheckBox::indicator:checked {
- 	 image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);
-}
-
-QCheckBox::indicator:unchecked {
-     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);
+QPushButton:hover {
+    background-color: ;
 }
 </string>
                                </property>
                                <property name="text">
-                                <string/>
+                                <string>Remove</string>
+                               </property>
+                               <property name="iconSize">
+                                <size>
+                                 <width>0</width>
+                                 <height>0</height>
+                                </size>
                                </property>
                               </widget>
                              </item>
@@ -8264,55 +8291,88 @@ into their applications and services.</string>
                         <widget class="QWidget" name="widget_191" native="true">
                          <layout class="QHBoxLayout" name="horizontalLayout_108">
                           <item alignment="Qt::AlignLeft">
-                           <widget class="QPushButton" name="btn_virusTotalAPISettings">
-                            <property name="enabled">
-                             <bool>true</bool>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <family>Bahnschrift SemiBold</family>
-                              <pointsize>11</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="text">
-                             <string>   Visrus Total API Token</string>
-                            </property>
-                            <property name="icon">
-                             <iconset>
-                              <normaloff>../icons/icons_virustotal.png</normaloff>../icons/icons_virustotal.png</iconset>
-                            </property>
-                            <property name="iconSize">
-                             <size>
-                              <width>40</width>
-                              <height>40</height>
-                             </size>
-                            </property>
+                           <widget class="QWidget" name="widget_123" native="true">
+                            <layout class="QHBoxLayout" name="horizontalLayout_65">
+                             <item>
+                              <widget class="QPushButton" name="btn_virusTotalAPISettings">
+                               <property name="enabled">
+                                <bool>true</bool>
+                               </property>
+                               <property name="font">
+                                <font>
+                                 <family>Bahnschrift SemiBold</family>
+                                 <pointsize>11</pointsize>
+                                 <weight>75</weight>
+                                 <bold>true</bold>
+                                </font>
+                               </property>
+                               <property name="text">
+                                <string>   Visrus Total API Token</string>
+                               </property>
+                               <property name="icon">
+                                <iconset>
+                                 <normaloff>../icons/icons_virustotal.png</normaloff>../icons/icons_virustotal.png</iconset>
+                               </property>
+                               <property name="iconSize">
+                                <size>
+                                 <width>40</width>
+                                 <height>40</height>
+                                </size>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
                            </widget>
                           </item>
                           <item alignment="Qt::AlignRight">
                            <widget class="QWidget" name="widget_119" native="true">
                             <layout class="QHBoxLayout" name="horizontalLayout_59">
                              <item>
-                              <widget class="QCheckBox" name="checkBox_APIVirusToTal">
+                              <widget class="QPushButton" name="btn_removeVirusTotalAPISettings">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>100</width>
+                                 <height>40</height>
+                                </size>
+                               </property>
+                               <property name="maximumSize">
+                                <size>
+                                 <width>100</width>
+                                 <height>40</height>
+                                </size>
+                               </property>
+                               <property name="font">
+                                <font>
+                                 <family>Bahnschrift SemiBold</family>
+                                 <pointsize>12</pointsize>
+                                 <weight>75</weight>
+                                 <bold>true</bold>
+                                </font>
+                               </property>
+                               <property name="cursor">
+                                <cursorShape>PointingHandCursor</cursorShape>
+                               </property>
                                <property name="styleSheet">
-                                <string notr="true">QCheckBox::indicator {
-    width: 45px;
-    height: 45px;
+                                <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 20px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
 }
 
-QCheckBox::indicator:checked {
- 	 image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);
-}
-
-QCheckBox::indicator:unchecked {
-     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);
+QPushButton:hover {
+    background-color: ;
 }
 </string>
                                </property>
                                <property name="text">
-                                <string/>
+                                <string>Remove</string>
+                               </property>
+                               <property name="iconSize">
+                                <size>
+                                 <width>0</width>
+                                 <height>0</height>
+                                </size>
                                </property>
                               </widget>
                              </item>
@@ -8536,6 +8596,61 @@ and operating systems. </string>
                      </widget>
                     </item>
                    </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget_124" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_66">
+                 <item alignment="Qt::AlignRight">
+                  <widget class="QPushButton" name="btn_saveSettings">
+                   <property name="minimumSize">
+                    <size>
+                     <width>100</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>100</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Bahnschrift SemiBold</family>
+                     <pointsize>12</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="cursor">
+                    <cursorShape>PointingHandCursor</cursorShape>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 20px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
+}
+
+QPushButton:hover {
+    background-color: ;
+}
+</string>
+                   </property>
+                   <property name="text">
+                    <string>Save</string>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>0</width>
+                     <height>0</height>
+                    </size>
+                   </property>
                   </widget>
                  </item>
                 </layout>
