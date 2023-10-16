@@ -4689,6 +4689,12 @@ QComboBox:hover {
            </item>
            <item>
             <widget class="QWidget" name="widget_43" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>400</height>
+              </size>
+             </property>
              <layout class="QHBoxLayout" name="horizontalLayout_22">
               <item>
                <widget class="QWidget" name="widget_48" native="true">
@@ -5918,6 +5924,12 @@ border-radius :15px;
              <layout class="QHBoxLayout" name="horizontalLayout_48">
               <item>
                <widget class="QWidget" name="widget_112" native="true">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>400</height>
+                 </size>
+                </property>
                 <layout class="QHBoxLayout" name="horizontalLayout_52">
                  <item>
                   <widget class="QTextEdit" name="textEdit_ResultScan">
@@ -6369,6 +6381,12 @@ QPushButton:hover {
                  </item>
                  <item>
                   <widget class="QWidget" name="widget_134" native="true">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>450</height>
+                    </size>
+                   </property>
                    <layout class="QHBoxLayout" name="horizontalLayout_63">
                     <item>
                      <widget class="QWidget" name="widget_13" native="true">
@@ -6409,6 +6427,18 @@ QPushButton:hover {
                           </item>
                           <item>
                            <widget class="QLabel" name="label_domainName_2">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -6424,6 +6454,18 @@ QPushButton:hover {
                           </item>
                           <item>
                            <widget class="QLabel" name="label_STS_2">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -6439,6 +6481,18 @@ QPushButton:hover {
                           </item>
                           <item>
                            <widget class="QLabel" name="label_serverBanner_2">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -6449,60 +6503,6 @@ QPushButton:hover {
                             </property>
                             <property name="text">
                              <string>Server banner</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QLabel" name="label_AltHttps_2">
-                            <property name="minimumSize">
-                             <size>
-                              <width>0</width>
-                              <height>20</height>
-                             </size>
-                            </property>
-                            <property name="maximumSize">
-                             <size>
-                              <width>16777215</width>
-                              <height>20</height>
-                             </size>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <family>Bahnschrift SemiBold</family>
-                              <pointsize>11</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="text">
-                             <string>Alternative names</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QLabel" name="label_cerTransHttps_2">
-                            <property name="minimumSize">
-                             <size>
-                              <width>0</width>
-                              <height>20</height>
-                             </size>
-                            </property>
-                            <property name="maximumSize">
-                             <size>
-                              <width>16777215</width>
-                              <height>20</height>
-                             </size>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <family>Bahnschrift SemiBold</family>
-                              <pointsize>11</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="text">
-                             <string>Certificate Transparency</string>
                             </property>
                            </widget>
                           </item>
@@ -6530,6 +6530,33 @@ QPushButton:hover {
                             </property>
                             <property name="text">
                              <string>Signature Algorithm</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="label_cerTransHttps_2">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Bahnschrift SemiBold</family>
+                              <pointsize>11</pointsize>
+                              <weight>75</weight>
+                              <bold>true</bold>
+                             </font>
+                            </property>
+                            <property name="text">
+                             <string>Certificate Transparency</string>
                             </property>
                            </widget>
                           </item>
@@ -6598,13 +6625,13 @@ QPushButton:hover {
                             <property name="minimumSize">
                              <size>
                               <width>0</width>
-                              <height>30</height>
+                              <height>40</height>
                              </size>
                             </property>
                             <property name="maximumSize">
                              <size>
                               <width>16777215</width>
-                              <height>30</height>
+                              <height>40</height>
                              </size>
                             </property>
                             <property name="font">
@@ -6622,6 +6649,18 @@ QPushButton:hover {
                           </item>
                           <item>
                            <widget class="QLabel" name="label_resultDomainName_2">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>30</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -6640,6 +6679,18 @@ QPushButton:hover {
                           </item>
                           <item>
                            <widget class="QLabel" name="label_resultSTS_2">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>30</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -6658,6 +6709,18 @@ QPushButton:hover {
                           </item>
                           <item>
                            <widget class="QLabel" name="label_resultServerBanner_2">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>30</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -6672,58 +6735,19 @@ QPushButton:hover {
                            </widget>
                           </item>
                           <item>
-                           <widget class="QLabel" name="label_ResultCerProHttps_2">
-                            <property name="font">
-                             <font>
-                              <family>Bahnschrift SemiBold</family>
-                              <pointsize>11</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="styleSheet">
-                             <string notr="true"/>
-                            </property>
-                            <property name="text">
-                             <string>2 (2403 bytes)</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QLabel" name="label_ResultCerTransHttps_2">
-                            <property name="font">
-                             <font>
-                              <family>Bahnschrift SemiBold</family>
-                              <pointsize>11</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="text">
-                             <string>Yes (certificate)</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QLabel" name="label_ResultAltNameHttps_2">
-                            <property name="font">
-                             <font>
-                              <family>Bahnschrift SemiBold</family>
-                              <pointsize>11</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="styleSheet">
-                             <string notr="true"/>
-                            </property>
-                            <property name="text">
-                             <string>isanmsu.com www.isanmsu.com</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
                            <widget class="QLabel" name="label_ResultSignatureHttps_2">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>30</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -6741,7 +6765,76 @@ QPushButton:hover {
                            </widget>
                           </item>
                           <item>
+                           <widget class="QLabel" name="label_ResultCerTransHttps_2">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Bahnschrift SemiBold</family>
+                              <pointsize>11</pointsize>
+                              <weight>75</weight>
+                              <bold>true</bold>
+                             </font>
+                            </property>
+                            <property name="text">
+                             <string>Yes (certificate)</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="label_ResultCerProHttps_2">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Bahnschrift SemiBold</family>
+                              <pointsize>11</pointsize>
+                              <weight>75</weight>
+                              <bold>true</bold>
+                             </font>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true"/>
+                            </property>
+                            <property name="text">
+                             <string>2 (2403 bytes)</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
                            <widget class="QLabel" name="label_ResultissuerHttps_2">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>30</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>30</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -6808,33 +6901,6 @@ QPushButton:hover {
                            </widget>
                           </item>
                           <item>
-                           <widget class="QLabel" name="label_TLS1Https">
-                            <property name="minimumSize">
-                             <size>
-                              <width>0</width>
-                              <height>20</height>
-                             </size>
-                            </property>
-                            <property name="maximumSize">
-                             <size>
-                              <width>16777215</width>
-                              <height>20</height>
-                             </size>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <family>Bahnschrift SemiBold</family>
-                              <pointsize>11</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="text">
-                             <string>TLS 1</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
                            <widget class="QLabel" name="label_SSLv2Https">
                             <property name="minimumSize">
                              <size>
@@ -6885,6 +6951,33 @@ QPushButton:hover {
                             </property>
                             <property name="text">
                              <string>SSLv3</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="label_TLS1Https">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Bahnschrift SemiBold</family>
+                              <pointsize>11</pointsize>
+                              <weight>75</weight>
+                              <bold>true</bold>
+                             </font>
+                            </property>
+                            <property name="text">
+                             <string>TLS 1</string>
                             </property>
                            </widget>
                           </item>
@@ -6980,13 +7073,13 @@ QPushButton:hover {
                             <property name="minimumSize">
                              <size>
                               <width>0</width>
-                              <height>35</height>
+                              <height>30</height>
                              </size>
                             </property>
                             <property name="maximumSize">
                              <size>
                               <width>16777215</width>
-                              <height>35</height>
+                              <height>30</height>
                              </size>
                             </property>
                             <property name="font">
@@ -7004,6 +7097,99 @@ QPushButton:hover {
                           </item>
                           <item>
                            <widget class="QLabel" name="label_ResultTLS1Https">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Bahnschrift SemiBold</family>
+                              <pointsize>11</pointsize>
+                              <weight>75</weight>
+                              <bold>true</bold>
+                             </font>
+                            </property>
+                            <property name="text">
+                             <string>No</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="label_ResultSSLv2Https">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Bahnschrift SemiBold</family>
+                              <pointsize>11</pointsize>
+                              <weight>75</weight>
+                              <bold>true</bold>
+                             </font>
+                            </property>
+                            <property name="text">
+                             <string>No</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="label_ResultSSLv3Https">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Bahnschrift SemiBold</family>
+                              <pointsize>11</pointsize>
+                              <weight>75</weight>
+                              <bold>true</bold>
+                             </font>
+                            </property>
+                            <property name="text">
+                             <string>No</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="label_ResultTLS11Https">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -7019,6 +7205,18 @@ QPushButton:hover {
                           </item>
                           <item>
                            <widget class="QLabel" name="label_ResultTLS12Https">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -7036,52 +7234,19 @@ QPushButton:hover {
                            </widget>
                           </item>
                           <item>
-                           <widget class="QLabel" name="label_ResultSSLv2Https">
-                            <property name="font">
-                             <font>
-                              <family>Bahnschrift SemiBold</family>
-                              <pointsize>11</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="text">
-                             <string>No</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QLabel" name="label_ResultSSLv3Https">
-                            <property name="font">
-                             <font>
-                              <family>Bahnschrift SemiBold</family>
-                              <pointsize>11</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="text">
-                             <string>No</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QLabel" name="label_ResultTLS11Https">
-                            <property name="font">
-                             <font>
-                              <family>Bahnschrift SemiBold</family>
-                              <pointsize>11</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="text">
-                             <string>No</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
                            <widget class="QLabel" name="label_ResultTLS13Https">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -7338,6 +7503,18 @@ QPushButton:hover {
                           </item>
                           <item>
                            <widget class="QLabel" name="label_resultPoodleHttps">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -7356,6 +7533,18 @@ QPushButton:hover {
                           </item>
                           <item>
                            <widget class="QLabel" name="label_resultDrownHttps">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -7374,6 +7563,18 @@ QPushButton:hover {
                           </item>
                           <item>
                            <widget class="QLabel" name="label_resultBeastHttps">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -7392,6 +7593,18 @@ QPushButton:hover {
                           </item>
                           <item>
                            <widget class="QLabel" name="label_resultHeartBleedHttps">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -7410,6 +7623,18 @@ QPushButton:hover {
                           </item>
                           <item>
                            <widget class="QLabel" name="label_resultSweet32Https">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
@@ -7428,6 +7653,18 @@ QPushButton:hover {
                           </item>
                           <item>
                            <widget class="QLabel" name="label_resultLuck13Https">
+                            <property name="minimumSize">
+                             <size>
+                              <width>0</width>
+                              <height>20</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>20</height>
+                             </size>
+                            </property>
                             <property name="font">
                              <font>
                               <family>Bahnschrift SemiBold</family>
