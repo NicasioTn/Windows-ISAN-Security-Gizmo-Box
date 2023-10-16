@@ -116,7 +116,7 @@ class MessageDigest(QDialog):
 
     def showBtnLine(self, state):
         # Open File Line API Key
-        if MessageDigest.state_line == True:
+        if state == True:
             self.label_lineAPIDigest.setVisible(True)
             self.lineEdit_tokenMSDigest.setVisible(True)
             self.btn_sendMSDigest.setVisible(True)

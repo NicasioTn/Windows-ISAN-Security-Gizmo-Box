@@ -52,7 +52,10 @@ class Main(QMainWindow):
 
         # --------------------- Setting -----------------------------------
         self.btn_settings.clicked.connect(self.openSettings)
-
+        self.btn_saveSettings.clicked.connect(self.saveSetting)
+        self.btn_removeLineAPISettings.clicked.connect(self.removeline_api_key)
+        self.btn_removeVirusTotalAPISettings.clicked.connect(self.removevirustotal_api_key)
+        
         # -------------------- Home ---------------------------------------
         self.btn_home.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.mainpage))
         self.btn_home.clicked.connect(lambda: PasswordEvaluation.clear(self))
@@ -182,6 +185,11 @@ class Main(QMainWindow):
     def openSettings(self):
         self.stackedWidget.setCurrentWidget(self.page_settings)
 
+        # Initialize the button
+        self.btn_removeLineAPISettings.setText('Remove')
+        self.btn_removeVirusTotalAPISettings.setText('Remove')
+        self.btn_saveSettings.setText('Save')
+
         # Load Message Digest API Key from file config
         line_api_key = MessageDigest.LoadAPIKey(self)
         self.lineEdit_LineAPISettings.setText(line_api_key)
@@ -191,14 +199,18 @@ class Main(QMainWindow):
         self.lineEdit_virusTotalAPISettings.setText(virustotal_api_key)
     
     def saveSetting(self):
-        pass
+        self.btn_saveSettings.setText('Saved')
+        MessageDigest.saveAPIKey(self, self.lineEdit_LineAPISettings.text())
+        MalwareScanning.saveAPIKey(self, self.lineEdit_virusTotalAPISettings.text())
 
     def removeline_api_key(self):
         self.lineEdit_LineAPISettings.setText('')
+        self.btn_removeLineAPISettings.setText('Removed')
         MessageDigest.saveAPIKey(self, '')
     
     def removevirustotal_api_key(self):
         self.lineEdit_virusTotalAPISettings.setText('')
+        self.btn_removeVirusTotalAPISettings.setText('Removed')
         MalwareScanning.saveAPIKey(self, '')
 
 # Run the application
