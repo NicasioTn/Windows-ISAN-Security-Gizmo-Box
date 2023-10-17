@@ -49,7 +49,7 @@ class MessageDigest(QDialog):
         with open(configFilePath, 'w') as configfile:
             config.write(configfile)
         
-    def clear (self):
+    def clear(self):
         self.lineEdit_MSdigest.setText('')
         self.label_QRCode.clear()
         self.dropdown_sha2.setCurrentIndex(0)
@@ -267,6 +267,7 @@ class MessageDigest(QDialog):
     
     # File Hashing -----------------------------------------------
     def fileHash(self, type, path):
+        MessageDigest.LoadAPIKey(self)
         text_type = type
         if "_" in type:
             text_type = text_type.replace("_", " ")

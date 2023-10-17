@@ -46,6 +46,7 @@ class Main(QMainWindow):
         self.btn_backMSDigest.clicked.connect(lambda: MessageDigest.clear(self))
         self.btn_backVulner.clicked.connect(lambda: VulnerabilityScanning.clear(self))
         self.btn_backHttps.clicked.connect(lambda: HTTPSTesting.clear(self))
+        self.btn_backEmail.clicked.connect(lambda: VulnerabilityScanning.clear(self))
 
         # --------------------- Get Started ---------------------------------
         self.btn_getStart.clicked.connect(self.openHomePage)
@@ -91,7 +92,8 @@ class Main(QMainWindow):
         
         # Detect changes in the password field
         self.lineEdit_password.textChanged.connect(lambda: PasswordEvaluation.getPassword(self))
-        
+        self.lineEdit_password.textChanged.connect(lambda: PasswordEvaluation.check_password(self))
+
         # Event Button Page Password Evaluation
         self.btn_showPassword.clicked.connect(lambda: PasswordEvaluation.show_hide_password(self))
         self.btn_dictAttack.clicked.connect(self.Passowrd_Dictionary_Attack)
@@ -104,10 +106,12 @@ class Main(QMainWindow):
         self.btn_clearDict.clicked.connect(lambda: PasswordAttack.clear(self))
         self.btn_showPasswordDict.clicked.connect(lambda: PasswordAttack.show_hide_password(self))
         self.dropdown_wordLists.activated.connect(lambda: PasswordAttack.select_wordlists(self))
+        self.btn_start_attack.clicked.connect(lambda: PasswordAttack.start_attack(self))
         PasswordAttack.show_loadding(self)
 
         ### --------------------- Message Digest ------------------------------
         MessageDigest.LoadAPIKey(self) # Load API Key from config file
+        self.lineEdit_outputTextMSDigest.textChanged.connect(lambda: MessageDigest.LoadAPIKey(self))
         
         # Event Button Page Message Digest
         self.btn_browseMSDigest.clicked.connect(lambda: MessageDigest.openFileDialog(self))
@@ -130,11 +134,15 @@ class Main(QMainWindow):
         self.btn_createReport.clicked.connect(lambda: MalwareScanning.createReport(self))
 
         ### --------------------- Vulnerability -------------------------------
-
+        self.progressBar_vulnerScan.setValue(0)
+        self.progressBar_vulnerScan.setVisible(False)
+        self.textEdit_ResultScan.textChanged.connect(lambda: VulnerabilityScanning.chech_output(self))
         # Event Button Page Vulnerability
         self.btn_scanVulner.clicked.connect(lambda: VulnerabilityScanning.prepareCommand(self))
         self.btn_clearVulner.clicked.connect(lambda: VulnerabilityScanning.clear(self))
         self.dropdown_typeScan.activated.connect(lambda: VulnerabilityScanning.typeScan(self))
+        self.lineEdit_vulner.textChanged.connect(lambda: VulnerabilityScanning.validate_input(self, self.lineEdit_vulner.text()))
+        self.btn_createReportVulner.clicked.connect(self.openSendEmail)
 
         ### --------------------- HTTPS Testing -------------------------------
 
@@ -142,6 +150,9 @@ class Main(QMainWindow):
         self.btn_scanHttps.clicked.connect(lambda: HTTPSTesting.scanHTTPS(self))
         self.btn_clearHttps.clicked.connect(lambda: HTTPSTesting.clear(self))
         self.lineEdit_https.textChanged.connect(lambda: HTTPSTesting.checkHTTPS(self))
+
+        ### --------------------- Send Email ----------------------------------
+        self.btn_sendReportToMail.clicked.connect(lambda: VulnerabilityScanning.send_email(self))
     
     # -------------------- Home ---------------------------------------
     def openHomePage(self):
@@ -180,6 +191,10 @@ class Main(QMainWindow):
     
     def openHttpsHome(self):
         self.stackedWidget.setCurrentWidget(self.page_https)
+    
+    def openSendEmail(self):
+        self.stackedWidget.setCurrentWidget(self.page_vulner_email)
+        VulnerabilityScanning.createReport(self)
 
     def openSettings(self):
         self.stackedWidget.setCurrentWidget(self.page_settings)
