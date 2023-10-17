@@ -20,12 +20,12 @@ class Main(QMainWindow):
          
         # initialize Icon
         self.setWindowTitle("ISAN Security Gizmo Box v1.0")
-        self.setWindowIcon(QIcon("./assets/icons/icons8-stan-marsh-96.png"))
+        self.setWindowIcon(QIcon("./assets/images/LogoGIZMO.png"))
         self.hide_icon = QIcon("./assets/icons/icon_closedeye.png")
         self.unhide_icon = QIcon("./assets/icons/icon_openeye.png")
         self.warning_icon = QIcon("./assets/icons/warning-red.png")
         self.check_icon = QIcon("./assets/icons/Checked.png")
-        self.label_logo = QPixmap("./assets/icons/icons8-stan-marsh-96.png")
+        self.label_logo = QPixmap("./assets/images/LogoGIZMO.png")
         self.image_main = QPixmap("./assets/images/main.png")
 
         # Event Back Button
