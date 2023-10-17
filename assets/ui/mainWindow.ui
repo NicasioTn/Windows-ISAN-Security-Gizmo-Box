@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1398</width>
-    <height>868</height>
+    <height>891</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -8890,7 +8890,7 @@ QPushButton:hover {
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="page">
+      <widget class="QWidget" name="page_email">
        <layout class="QHBoxLayout" name="horizontalLayout_67">
         <item>
          <widget class="QWidget" name="widget_126" native="true">

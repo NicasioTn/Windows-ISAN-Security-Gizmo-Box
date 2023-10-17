@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1398, 868)
+        MainWindow.resize(1398, 891)
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout_5 = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -4422,11 +4422,11 @@ class Ui_MainWindow(object):
         self.verticalLayout_76.addWidget(self.btn_saveSettings, 0, QtCore.Qt.AlignmentFlag.AlignRight)
         self.horizontalLayout_61.addWidget(self.widget_130, 0, QtCore.Qt.AlignmentFlag.AlignTop)
         self.stackedWidget.addWidget(self.page_settings)
-        self.page = QtWidgets.QWidget()
-        self.page.setObjectName("page")
-        self.horizontalLayout_67 = QtWidgets.QHBoxLayout(self.page)
+        self.page_email = QtWidgets.QWidget()
+        self.page_email.setObjectName("page_email")
+        self.horizontalLayout_67 = QtWidgets.QHBoxLayout(self.page_email)
         self.horizontalLayout_67.setObjectName("horizontalLayout_67")
-        self.widget_126 = QtWidgets.QWidget(parent=self.page)
+        self.widget_126 = QtWidgets.QWidget(parent=self.page_email)
         self.widget_126.setStyleSheet("QWidget#widget_140{\n"
 "    border: 1px solid rgb(237, 236, 237); /* Set the \"groove\" border style for the specific widgets */\n"
 "    background-color: rgb(237, 236, 237);\n"
@@ -4754,7 +4754,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_68.addWidget(self.widget_138)
         self.verticalLayout_44.addWidget(self.widget_137)
         self.horizontalLayout_67.addWidget(self.widget_126)
-        self.stackedWidget.addWidget(self.page)
+        self.stackedWidget.addWidget(self.page_email)
         self.verticalLayout_5.addWidget(self.stackedWidget)
         MainWindow.setCentralWidget(self.centralwidget)
 
