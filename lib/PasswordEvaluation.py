@@ -363,6 +363,16 @@ class PasswordEvaluation(QDialog):
         import webbrowser
         webbrowser.open('https://www.okta.com/identity-101/password-entropy/')
             
+import subprocess
+import PyQt6.QtGui as QtGui
+import threading
+import hashlib
+import sys
+import os
+import subprocess
+import threading
+from PyQt6.QtCore import Qt, pyqtSignal, QObject
+from PyQt6.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QTextEdit, QPushButton, QWidget
 
 class PasswordAttack(QDialog):
 
@@ -387,6 +397,10 @@ class PasswordAttack(QDialog):
 
     def clear(self):
         self.lineEdit_inputFileDict.setText('')
+        self.lineEdit_inputFileDict.setText('')
+        self.dropdown_modeAttack.setItemText(0, "Mode")
+        self.dropdown_wordLists.setItemText(0, "Wordlists")
+        self.textEdit_result_hashcat.clear()
 
     def open_file_wordlist(self):
         filepath, _ = QFileDialog.getOpenFileName(
@@ -439,3 +453,69 @@ class PasswordAttack(QDialog):
         self.movie.setSpeed(100)
         self.label_loadding.setMovie(self.movie)
         self.movie.start()
+
+    def select_mode_attack(self):
+        mode = self.dropdown_modeAttack.currentText()
+        if mode == "Straight forward":
+            mode = "0"
+        elif mode == "Combinator":
+            mode = "1"
+        elif mode == "Skipping 1":
+            mode = "6"
+        elif mode == "Skipping 2":
+            mode = "7"
+        return mode
+    
+    def start_attack(self):
+        runner = HashcatRunner()
+        runner.finished.connect(lambda: PasswordAttack.on_finished(self))
+        runner.update_text.connect(lambda text: PasswordAttack.on_update_text(self, text))
+        self.textEdit_result_hashcat.clear()
+        
+        password = self.lineEdit_passwordDict.text()
+        mode = PasswordAttack.select_mode_attack(self)
+        wordlist = PasswordAttack.select_wordlists(self)
+        password_hash = hashlib.md5(password.encode()).hexdigest()
+        
+        thread = threading.Thread(target=runner.run_hashcat, args=(mode, wordlist, password_hash, password))
+        thread.start()
+
+    def on_finished(self):
+        self.btn_startAttack.setEnabled(True)
+
+    def on_update_text(self, text):
+        self.textEdit_result_hashcat.append(text)
+       
+class HashcatRunner(QObject):
+    finished = pyqtSignal()
+    update_text = pyqtSignal(str)
+
+    def __init__(self):
+        super().__init__()
+
+    def run_hashcat(self, mode, wordlist, hash, password):
+        if mode == "0": # Straight forward
+            command = f"hashcat -m 0 -a {mode} {hash} {wordlist} | grep ':{password}'" 
+        elif mode == "1": # Combination
+            command = f"hashcat -m 0 -a {mode} {hash} {wordlist} {wordlist} | grep ':{password}'"
+        elif mode == "6": # Skipping 1
+            command = f"hashcat -m 0 -a {mode} {hash} {wordlist} | grep ':{password}'"
+        elif mode == "7": # Skipping 2
+            command = f"hashcat -m 0 -a {mode} {hash} {wordlist} | grep ':{password}'"
+
+        if command is None:
+            return None
+        process = subprocess.Popen(
+            command,
+            shell=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True
+        )
+
+        for line in process.stdout:
+            if line is None:
+                return "No password found"
+            self.update_text.emit(line)
+        process.communicate()
+        self.finished.emit()
