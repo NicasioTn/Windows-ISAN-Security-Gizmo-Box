@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1398</width>
-    <height>868</height>
+    <height>875</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -1298,7 +1298,7 @@ QWidget#widget_27 {
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_9">
            <property name="spacing">
-            <number>30</number>
+            <number>10</number>
            </property>
            <item>
             <widget class="QWidget" name="widget_27" native="true">
@@ -2297,7 +2297,7 @@ QWidget#widget_57 {
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_21">
            <property name="spacing">
-            <number>30</number>
+            <number>10</number>
            </property>
            <item>
             <widget class="QWidget" name="widget_38" native="true">
@@ -3029,7 +3029,7 @@ QWidget#widget_89 {
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_47">
            <property name="spacing">
-            <number>30</number>
+            <number>10</number>
            </property>
            <item>
             <widget class="QWidget" name="widget_78" native="true">
@@ -4053,7 +4053,7 @@ QWidget#widget_49 {
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_24">
            <property name="spacing">
-            <number>30</number>
+            <number>10</number>
            </property>
            <item>
             <widget class="QWidget" name="widget_44" native="true">
@@ -5349,7 +5349,7 @@ QPushButton:hover {
       </widget>
       <widget class="QWidget" name="page_vulnerability">
        <layout class="QHBoxLayout" name="horizontalLayout_29">
-        <item alignment="Qt::AlignBottom">
+        <item alignment="Qt::AlignTop">
          <widget class="QWidget" name="widget_64" native="true">
           <property name="styleSheet">
            <string notr="true">QWidget#widget_59,
@@ -5362,7 +5362,7 @@ QWidget#widget_115 {
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_37">
            <property name="spacing">
-            <number>30</number>
+            <number>10</number>
            </property>
            <item>
             <widget class="QWidget" name="widget_59" native="true">
@@ -5988,13 +5988,13 @@ QScrollBar::sub-line:vertical {
             <widget class="QPushButton" name="btn_createReportVulner">
              <property name="minimumSize">
               <size>
-               <width>130</width>
+               <width>155</width>
                <height>40</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>130</width>
+               <width>155</width>
                <height>40</height>
               </size>
              </property>
@@ -7673,13 +7673,13 @@ QPushButton:hover {
             <widget class="QPushButton" name="btn_createReportHttps">
              <property name="minimumSize">
               <size>
-               <width>130</width>
+               <width>150</width>
                <height>40</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>130</width>
+               <width>150</width>
                <height>40</height>
               </size>
              </property>
