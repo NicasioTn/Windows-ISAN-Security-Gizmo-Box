@@ -153,6 +153,8 @@ class Main(QMainWindow):
 
         ### --------------------- Send Email ----------------------------------
         self.btn_sendReportToMail.clicked.connect(lambda: VulnerabilityScanning.send_email(self))
+        self.btn_backReport.clicked.connect(lambda: VulnerabilityScanning.set_pdf_viewer(self, "back"))
+        self.btn_nextReport.clicked.connect(lambda: VulnerabilityScanning.set_pdf_viewer(self, "next"))
     
     # -------------------- Home ---------------------------------------
     def openHomePage(self):
