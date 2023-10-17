@@ -4647,8 +4647,8 @@ class Ui_MainWindow(object):
         self.horizontalLayout_69.addWidget(self.widget_128, 0, QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTop)
         self.widget_127 = QtWidgets.QWidget(parent=self.widget_138)
         self.widget_127.setObjectName("widget_127")
-        self.verticalLayout_60 = QtWidgets.QVBoxLayout(self.widget_127)
-        self.verticalLayout_60.setObjectName("verticalLayout_60")
+        self.verticalLayout_10 = QtWidgets.QVBoxLayout(self.widget_127)
+        self.verticalLayout_10.setObjectName("verticalLayout_10")
         self.label_headerEmail = QtWidgets.QLabel(parent=self.widget_127)
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -4657,7 +4657,7 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.label_headerEmail.setFont(font)
         self.label_headerEmail.setObjectName("label_headerEmail")
-        self.verticalLayout_60.addWidget(self.label_headerEmail, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
+        self.verticalLayout_10.addWidget(self.label_headerEmail)
         self.lineEdit_toEmail = QtWidgets.QLineEdit(parent=self.widget_127)
         self.lineEdit_toEmail.setMinimumSize(QtCore.QSize(600, 40))
         self.lineEdit_toEmail.setMaximumSize(QtCore.QSize(600, 40))
@@ -4677,7 +4677,7 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         self.lineEdit_toEmail.setObjectName("lineEdit_toEmail")
-        self.verticalLayout_60.addWidget(self.lineEdit_toEmail)
+        self.verticalLayout_10.addWidget(self.lineEdit_toEmail)
         self.lineEdit_subjectEmail = QtWidgets.QLineEdit(parent=self.widget_127)
         self.lineEdit_subjectEmail.setMinimumSize(QtCore.QSize(600, 40))
         self.lineEdit_subjectEmail.setMaximumSize(QtCore.QSize(600, 40))
@@ -4697,27 +4697,26 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         self.lineEdit_subjectEmail.setObjectName("lineEdit_subjectEmail")
-        self.verticalLayout_60.addWidget(self.lineEdit_subjectEmail)
-        self.lineEdit_detailEmail = QtWidgets.QLineEdit(parent=self.widget_127)
-        self.lineEdit_detailEmail.setMinimumSize(QtCore.QSize(600, 300))
-        self.lineEdit_detailEmail.setMaximumSize(QtCore.QSize(600, 300))
-        self.lineEdit_detailEmail.setStyleSheet("QLineEdit {\n"
+        self.verticalLayout_10.addWidget(self.lineEdit_subjectEmail)
+        self.textEdit_bodyEmail = QtWidgets.QTextEdit(parent=self.widget_127)
+        self.textEdit_bodyEmail.setMinimumSize(QtCore.QSize(0, 300))
+        self.textEdit_bodyEmail.setStyleSheet("QTextEdit {\n"
 "  border: 1px solid gray;\n"
 "  color: rgba(40,43,61,255);\n"
 "  border-radius: 5px;\n"
 "}\n"
 "\n"
-"QLineEdit:hover {\n"
+"QTextEdit:hover {\n"
 "  border: 2px solid;\n"
 "  border-color: rgba(0,143,255,255);\n"
 "}\n"
-"QLineEdit:focus {\n"
+"QTextEdit:focus {\n"
 "  border: 1px solid;\n"
 "  border-color: rgba(88,199,141,255);\n"
 "}\n"
 "")
-        self.lineEdit_detailEmail.setObjectName("lineEdit_detailEmail")
-        self.verticalLayout_60.addWidget(self.lineEdit_detailEmail)
+        self.textEdit_bodyEmail.setObjectName("textEdit_bodyEmail")
+        self.verticalLayout_10.addWidget(self.textEdit_bodyEmail)
         self.btn_fileEmail = QtWidgets.QPushButton(parent=self.widget_127)
         self.btn_fileEmail.setMinimumSize(QtCore.QSize(600, 45))
         self.btn_fileEmail.setMaximumSize(QtCore.QSize(600, 45))
@@ -4739,7 +4738,7 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         self.btn_fileEmail.setObjectName("btn_fileEmail")
-        self.verticalLayout_60.addWidget(self.btn_fileEmail)
+        self.verticalLayout_10.addWidget(self.btn_fileEmail)
         self.btn_sendReportToMail = QtWidgets.QPushButton(parent=self.widget_127)
         self.btn_sendReportToMail.setMinimumSize(QtCore.QSize(130, 40))
         self.btn_sendReportToMail.setMaximumSize(QtCore.QSize(130, 40))
@@ -4762,7 +4761,7 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         self.btn_sendReportToMail.setObjectName("btn_sendReportToMail")
-        self.verticalLayout_60.addWidget(self.btn_sendReportToMail, 0, QtCore.Qt.AlignmentFlag.AlignRight)
+        self.verticalLayout_10.addWidget(self.btn_sendReportToMail, 0, QtCore.Qt.AlignmentFlag.AlignRight)
         self.horizontalLayout_69.addWidget(self.widget_127, 0, QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignTop)
         self.horizontalLayout_68.addWidget(self.widget_138)
         self.verticalLayout_44.addWidget(self.widget_137)

@@ -9339,8 +9339,8 @@ QPushButton:hover {
                  </item>
                  <item alignment="Qt::AlignLeft|Qt::AlignTop">
                   <widget class="QWidget" name="widget_127" native="true">
-                   <layout class="QVBoxLayout" name="verticalLayout_60">
-                    <item alignment="Qt::AlignHCenter">
+                   <layout class="QVBoxLayout" name="verticalLayout_10">
+                    <item>
                      <widget class="QLabel" name="label_headerEmail">
                       <property name="font">
                        <font>
@@ -9422,31 +9422,25 @@ QLineEdit:focus {
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLineEdit" name="lineEdit_detailEmail">
+                     <widget class="QTextEdit" name="textEdit_bodyEmail">
                       <property name="minimumSize">
                        <size>
-                        <width>600</width>
-                        <height>300</height>
-                       </size>
-                      </property>
-                      <property name="maximumSize">
-                       <size>
-                        <width>600</width>
+                        <width>0</width>
                         <height>300</height>
                        </size>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">QLineEdit {
+                       <string notr="true">QTextEdit {
   border: 1px solid gray;
   color: rgba(40,43,61,255);
   border-radius: 5px;
 }
 
-QLineEdit:hover {
+QTextEdit:hover {
   border: 2px solid;
   border-color: rgba(0,143,255,255);
 }
-QLineEdit:focus {
+QTextEdit:focus {
   border: 1px solid;
   border-color: rgba(88,199,141,255);
 }
