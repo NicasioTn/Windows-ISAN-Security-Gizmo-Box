@@ -33,7 +33,7 @@ class HTTPSTesting(QDialog):
     def createReport(self):
         # Create a PDF canvas
         current_time = datetime.now()
-        file_name = f"./data/HTTPS_Testing_Report.pdf"
+        file_name = f"./data/Reports/HTTPS_Testing_Report.pdf"
         self.btn_file_email_https.setText(file_name.split('/')[-1])
         target = self.lineEdit_https.text()
 
@@ -163,7 +163,7 @@ class HTTPSTesting(QDialog):
         to_receiver_email = self.lineEdit_to_email_https.text()
         subject_receiver = self.lineEdit_subject_email_https.text()
         body = self.textEdit_body_email_https.toPlainText()
-        file = "./data/HTTPS_Testing_Report.pdf"
+        file = "./data/Reports/HTTPS_Testing_Report.pdf"
         
         SendEmail.sending(SendEmail, to_receiver_email, subject_receiver, body, file)
     
@@ -172,13 +172,13 @@ class HTTPSTesting(QDialog):
         import fitz
 
         # Path to PDF file
-        pdf_file = r"./data/HTTPS_Testing_Report.pdf"
+        pdf_file = r"./data/Reports/HTTPS_Testing_Report.pdf"
 
         # Open PDF file
         pdf_doc = fitz.open(pdf_file)
 
         # Output directory
-        output_dir = r"./data/"  # Corrected path
+        output_dir = r"./data/ImagesfromPDF/"  # Corrected path
 
         # Iterate through pages and convert to PNG
         for page_number, page in enumerate(pdf_doc):
@@ -189,7 +189,7 @@ class HTTPSTesting(QDialog):
         # Close PDF file
         pdf_doc.close()
 
-        self.label_Report_https.setPixmap(QtGui.QPixmap("./data/output_page_https_0.png"))
+        self.label_Report_https.setPixmap(QtGui.QPixmap("./data/ImagesfromPDF/output_page_https_0.png"))
         self.label_countPageReport_https.setText("0")
 
     def set_pdf_viewer(self, step):
@@ -206,4 +206,4 @@ class HTTPSTesting(QDialog):
             number = 0
 
         self.label_countPageReport_https.setText(str(number))
-        self.label_Report_https.setPixmap(QtGui.QPixmap(f"./data/output_page_https_{number}.png"))
+        self.label_Report_https.setPixmap(QtGui.QPixmap(f"./data/ImagesfromPDF/output_page_https_{number}.png"))
