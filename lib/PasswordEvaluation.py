@@ -226,6 +226,37 @@ class PasswordEvaluation(QDialog):
             self.lineEdit_password.setStyleSheet("border: 1px solid black;")
         return valid_input
 
+    def check_password(self):
+        password = self.lineEdit_password.text()
+
+        has_length = len(password) >= PasswordEvaluation.minpasswordlength
+        has_numeric = any(char.isdigit() for char in password)
+        has_upper = any(char.isupper() for char in password)
+        has_lower = any(char.islower() for char in password)
+        has_special = any(char in "!@#$%^&*()_+-=" for char in password)
+
+        if has_numeric:
+            self.chk_numeric.setIcon(self.check_icon)
+        else:
+            self.chk_numeric.setIcon(self.warning_icon)
+        if has_upper:
+            self.chk_upper.setIcon(self.check_icon)
+        else:
+            self.chk_upper.setIcon(self.warning_icon)
+        if has_lower:
+            self.chk_lower.setIcon(self.check_icon)
+        else:
+            self.chk_lower.setIcon(self.warning_icon)
+        if has_special:
+            self.chk_special.setIcon(self.check_icon)
+        else:
+            self.chk_special.setIcon(self.warning_icon)
+        if has_length:
+            self.chk_length.setIcon(self.check_icon)
+        else:
+            self.chk_length.setIcon(self.warning_icon)
+
+
     # real time password detection
     def update(self):
         
@@ -240,7 +271,6 @@ class PasswordEvaluation(QDialog):
         password = self.lineEdit_password.text()
         # print(password)
         password = PasswordEvaluation.validate_input(self, password)
-
         for char in password:
             if char.isdigit():
                 self.chk_numeric.setChecked(True)
@@ -251,10 +281,13 @@ class PasswordEvaluation(QDialog):
             elif char.islower():
                 self.chk_lower.setChecked(True)
                 self.chk_lower.setIcon(self.check_icon)
-            else:
+            elif char in '!@#$%^&*()_+-=':
                 self.chk_special.setChecked(True)
                 self.chk_special.setIcon(self.check_icon)
-                
+            else:
+                pass
+       
+        
             if len(self.lineEdit_password.text()) >= PasswordEvaluation.minpasswordlength: # 8 chars
                 self.chk_length.setChecked(True)
                 self.chk_length.setIcon(self.check_icon)
@@ -372,7 +405,6 @@ import os
 import subprocess
 import threading
 from PyQt6.QtCore import Qt, pyqtSignal, QObject
-from PyQt6.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QTextEdit, QPushButton, QWidget
 
 class PasswordAttack(QDialog):
 
@@ -434,7 +466,7 @@ class PasswordAttack(QDialog):
             return
         
         # get path of wordlist
-        path = Path(f"./data/wordlists/{wordlist}")
+        path = Path(f"./data/{wordlist}")
         print("path of wordlist: ", path)
 
         # check if wordlist exists
@@ -481,7 +513,7 @@ class PasswordAttack(QDialog):
         thread.start()
 
     def on_finished(self):
-        self.btn_startAttack.setEnabled(True)
+        self.btn_start_attack.setEnabled(True)
 
     def on_update_text(self, text):
         self.textEdit_result_hashcat.append(text)
@@ -495,16 +527,16 @@ class HashcatRunner(QObject):
 
     def run_hashcat(self, mode, wordlist, hash, password):
         if mode == "0": # Straight forward
-            command = f"hashcat -m 0 -a {mode} {hash} {wordlist} | grep ':{password}'" 
+            command = f"D:\Hashcat\hashcat-6.2.5\hashcat.exe -d 2 -m 0 -a {mode} {hash} D:\ISAN Security Gizmo Box\{wordlist} | findstr '{password}" 
         elif mode == "1": # Combination
-            command = f"hashcat -m 0 -a {mode} {hash} {wordlist} {wordlist} | grep ':{password}'"
+            command = f"D:\Hashcat\hashcat-6.2.5\hashcat.exe -d 2 -m 0 -a {mode} {hash} {wordlist} {wordlist} | findstr ':{password}'"
         elif mode == "6": # Skipping 1
-            command = f"hashcat -m 0 -a {mode} {hash} {wordlist} | grep ':{password}'"
+            command = f"D:\Hashcat\hashcat-6.2.5\hashcat.exe -d 2 -m 0 -a {mode} {hash} {wordlist} | findstr ':{password}'"
         elif mode == "7": # Skipping 2
-            command = f"hashcat -m 0 -a {mode} {hash} {wordlist} | grep ':{password}'"
-
+            command = f"D:\Hashcat\hashcat-6.2.5\hashcat.exe -d 2 -m 0 -a {mode} {hash} {wordlist} | findstr ':{password}'"
+        print(command)
         if command is None:
-            return None
+            return "No password found"
         process = subprocess.Popen(
             command,
             shell=True,

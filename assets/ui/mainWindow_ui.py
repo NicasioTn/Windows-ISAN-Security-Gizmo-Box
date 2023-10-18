@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1398, 875)
+        MainWindow.resize(1398, 891)
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout_5 = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -49,7 +49,11 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         icon1 = QtGui.QIcon()
@@ -72,7 +76,11 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         icon2 = QtGui.QIcon()
@@ -158,11 +166,15 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.show_password.setFont(font)
         self.show_password.setStyleSheet("QPushButton {    \n"
+"\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
 "}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
+"}\n"
 "")
         icon3 = QtGui.QIcon()
         icon3.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-password.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
@@ -180,11 +192,15 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.show_malware.setFont(font)
         self.show_malware.setStyleSheet("QPushButton {    \n"
+" \n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
 "}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
+"}\n"
 "")
         icon4 = QtGui.QIcon()
         icon4.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-malware.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
@@ -202,11 +218,15 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.show_digest.setFont(font)
         self.show_digest.setStyleSheet("QPushButton {    \n"
+"\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
 "}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
+"}\n"
 "")
         icon5 = QtGui.QIcon()
         icon5.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-digest.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
@@ -229,11 +249,15 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.show_https.setFont(font)
         self.show_https.setStyleSheet("QPushButton {    \n"
+"\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
 "}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
+"}\n"
 "")
         icon6 = QtGui.QIcon()
         icon6.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-hsts.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
@@ -251,11 +275,15 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.show_vulner.setFont(font)
         self.show_vulner.setStyleSheet("QPushButton {    \n"
+"\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
 "}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
+"}\n"
 "")
         icon7 = QtGui.QIcon()
         icon7.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-vulner.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
@@ -317,7 +345,7 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
@@ -366,11 +394,15 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.show_password_2.setFont(font)
         self.show_password_2.setStyleSheet("QPushButton {    \n"
+"\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
 "}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
+"}\n"
 "")
         self.show_password_2.setIcon(icon3)
         self.show_password_2.setIconSize(QtCore.QSize(45, 45))
@@ -386,11 +418,15 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.show_malware_2.setFont(font)
         self.show_malware_2.setStyleSheet("QPushButton {    \n"
+" \n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
 "}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
+"}\n"
 "")
         self.show_malware_2.setIcon(icon4)
         self.show_malware_2.setIconSize(QtCore.QSize(35, 35))
@@ -406,11 +442,15 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.show_digest_2.setFont(font)
         self.show_digest_2.setStyleSheet("QPushButton {    \n"
+"\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
 "}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
+"}\n"
 "")
         self.show_digest_2.setIcon(icon5)
         self.show_digest_2.setIconSize(QtCore.QSize(35, 35))
@@ -431,11 +471,15 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.show_https_3.setFont(font)
         self.show_https_3.setStyleSheet("QPushButton {    \n"
+"\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
 "}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
+"}\n"
 "")
         self.show_https_3.setIcon(icon6)
         self.show_https_3.setIconSize(QtCore.QSize(35, 35))
@@ -451,11 +495,15 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.show_vulner_3.setFont(font)
         self.show_vulner_3.setStyleSheet("QPushButton {    \n"
+"\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
 "}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
+"}\n"
 "")
         self.show_vulner_3.setIcon(icon7)
         self.show_vulner_3.setIconSize(QtCore.QSize(35, 45))
@@ -498,12 +546,15 @@ class Ui_MainWindow(object):
         self.btn_backAdvancedUser.setFont(font)
         self.btn_backAdvancedUser.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_backAdvancedUser.setStyleSheet("QPushButton {    \n"
-"    border: 1px solid rgba(40,43,61,255);\n"
+"    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
 "}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
+"}\n"
 "")
         icon8 = QtGui.QIcon()
         icon8.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icons8-go-back-45.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
@@ -544,9 +595,12 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255);\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
 "}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
+"}\n"
 "")
         self.btn_password.setIcon(icon3)
         self.btn_password.setIconSize(QtCore.QSize(35, 35))
@@ -566,9 +620,12 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255);\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
 "}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
+"}\n"
 "")
         self.btn_malware.setIcon(icon4)
         self.btn_malware.setIconSize(QtCore.QSize(35, 35))
@@ -588,9 +645,12 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255);\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
 "}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
+"}\n"
 "")
         self.btn_MSdigest.setIcon(icon5)
         self.btn_MSdigest.setIconSize(QtCore.QSize(35, 35))
@@ -614,7 +674,7 @@ class Ui_MainWindow(object):
 "")
         self.widget_19.setObjectName("widget_19")
         self.verticalLayout_9 = QtWidgets.QVBoxLayout(self.widget_19)
-        self.verticalLayout_9.setSpacing(10)
+        self.verticalLayout_9.setSpacing(30)
         self.verticalLayout_9.setObjectName("verticalLayout_9")
         self.widget_27 = QtWidgets.QWidget(parent=self.widget_19)
         self.widget_27.setMinimumSize(QtCore.QSize(1200, 70))
@@ -643,12 +703,15 @@ class Ui_MainWindow(object):
         self.btn_backPassword.setFont(font)
         self.btn_backPassword.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_backPassword.setStyleSheet("QPushButton {    \n"
-"    border: 1px solid rgba(40,43,61,255);\n"
+"    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
 "}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
+"}\n"
 "")
         self.btn_backPassword.setIcon(icon8)
         self.btn_backPassword.setIconSize(QtCore.QSize(35, 35))
@@ -664,7 +727,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.label_headofPassword.setFont(font)
-        self.label_headofPassword.setStyleSheet("color: rgb(0, 0, 0);")
+        self.label_headofPassword.setStyleSheet("color: rgb(38, 50, 56);")
         self.label_headofPassword.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignVCenter)
         self.label_headofPassword.setIndent(20)
         self.label_headofPassword.setObjectName("label_headofPassword")
@@ -682,7 +745,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.label_searchNordpass.setFont(font)
-        self.label_searchNordpass.setStyleSheet("color: rgb(0, 0, 0);")
+        self.label_searchNordpass.setStyleSheet("color: rgba(40,43,61,255) ;")
         self.label_searchNordpass.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_searchNordpass.setObjectName("label_searchNordpass")
         self.verticalLayout_20.addWidget(self.label_searchNordpass, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
@@ -760,7 +823,11 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         self.btn_dictAttack.setObjectName("btn_dictAttack")
@@ -794,7 +861,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.label_timeToCrack.setFont(font)
-        self.label_timeToCrack.setStyleSheet("color: rgb(0, 0, 0);")
+        self.label_timeToCrack.setStyleSheet("color: rgba(40,43,61,255) ;")
         self.label_timeToCrack.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_timeToCrack.setObjectName("label_timeToCrack")
         self.verticalLayout_17.addWidget(self.label_timeToCrack, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
@@ -833,7 +900,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.label_entropy.setFont(font)
-        self.label_entropy.setStyleSheet("color: rgb(0, 0, 0);")
+        self.label_entropy.setStyleSheet("color: rgba(40,43,61,255) ;")
         self.label_entropy.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_entropy.setObjectName("label_entropy")
         self.horizontalLayout_39.addWidget(self.label_entropy, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
@@ -879,7 +946,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.label_pwdStrength.setFont(font)
-        self.label_pwdStrength.setStyleSheet("color: rgb(0, 0, 0);")
+        self.label_pwdStrength.setStyleSheet("color: rgba(40,43,61,255) ;")
         self.label_pwdStrength.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_pwdStrength.setObjectName("label_pwdStrength")
         self.verticalLayout_19.addWidget(self.label_pwdStrength, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
@@ -940,7 +1007,7 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         font.setKerning(True)
         self.label_specialWarning.setFont(font)
-        self.label_specialWarning.setStyleSheet("color: rgb(0, 0, 0);")
+        self.label_specialWarning.setStyleSheet("color: rgba(40,43,61,255) ;")
         self.label_specialWarning.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_specialWarning.setObjectName("label_specialWarning")
         self.horizontalLayout_14.addWidget(self.label_specialWarning, 0, QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignVCenter)
@@ -952,7 +1019,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.label_lengthOfPassword.setFont(font)
-        self.label_lengthOfPassword.setStyleSheet("color: rgb(0, 0, 0);")
+        self.label_lengthOfPassword.setStyleSheet("color: rgba(40,43,61,255) ;")
         self.label_lengthOfPassword.setObjectName("label_lengthOfPassword")
         self.horizontalLayout_14.addWidget(self.label_lengthOfPassword, 0, QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignVCenter)
         self.verticalLayout_15.addWidget(self.widget_31)
@@ -976,7 +1043,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.chk_length.setFont(font)
-        self.chk_length.setStyleSheet("color: rgb(0, 0, 0);\n"
+        self.chk_length.setStyleSheet("color: rgba(40,43,61,255);\n"
 "border-radius: 10px;")
         icon11 = QtGui.QIcon()
         icon11.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\icon-no.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
@@ -992,7 +1059,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.chk_numeric.setFont(font)
-        self.chk_numeric.setStyleSheet("color: rgb(0, 0, 0);\n"
+        self.chk_numeric.setStyleSheet("color: rgba(40,43,61,255);\n"
 "border-radius: 10px;")
         self.chk_numeric.setIcon(icon11)
         self.chk_numeric.setIconSize(QtCore.QSize(30, 30))
@@ -1006,7 +1073,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.chk_lower.setFont(font)
-        self.chk_lower.setStyleSheet("color: rgb(0, 0, 0);\n"
+        self.chk_lower.setStyleSheet("color: rgba(40,43,61,255);\n"
 "border-radius: 10px;")
         self.chk_lower.setIcon(icon11)
         self.chk_lower.setIconSize(QtCore.QSize(30, 30))
@@ -1020,7 +1087,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.chk_upper.setFont(font)
-        self.chk_upper.setStyleSheet("color: rgb(0, 0, 0);\n"
+        self.chk_upper.setStyleSheet("color: rgba(40,43,61,255);\n"
 "border-radius: 10px;")
         self.chk_upper.setIcon(icon11)
         self.chk_upper.setIconSize(QtCore.QSize(30, 30))
@@ -1035,7 +1102,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.chk_special.setFont(font)
-        self.chk_special.setStyleSheet("color: rgb(0, 0, 0);\n"
+        self.chk_special.setStyleSheet("color: rgba(40,43,61,255);\n"
 "border-radius: 10px;")
         self.chk_special.setIcon(icon11)
         self.chk_special.setIconSize(QtCore.QSize(30, 30))
@@ -1063,7 +1130,7 @@ class Ui_MainWindow(object):
 "")
         self.widget_35.setObjectName("widget_35")
         self.verticalLayout_21 = QtWidgets.QVBoxLayout(self.widget_35)
-        self.verticalLayout_21.setSpacing(10)
+        self.verticalLayout_21.setSpacing(30)
         self.verticalLayout_21.setObjectName("verticalLayout_21")
         self.widget_38 = QtWidgets.QWidget(parent=self.widget_35)
         self.widget_38.setMinimumSize(QtCore.QSize(1200, 70))
@@ -1095,7 +1162,11 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         self.btn_backDict.setIcon(icon8)
@@ -1112,7 +1183,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.label_headofPasswordAttack.setFont(font)
-        self.label_headofPasswordAttack.setStyleSheet("color: rgb(0, 0, 0);")
+        self.label_headofPasswordAttack.setStyleSheet("color: rgb(38, 50, 56);")
         self.label_headofPasswordAttack.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignVCenter)
         self.label_headofPasswordAttack.setIndent(20)
         self.label_headofPasswordAttack.setObjectName("label_headofPasswordAttack")
@@ -1214,7 +1285,11 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         icon12 = QtGui.QIcon()
@@ -1237,7 +1312,11 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         icon13 = QtGui.QIcon()
@@ -1253,7 +1332,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_17.setObjectName("horizontalLayout_17")
         self.dropdown_modeAttack = QtWidgets.QComboBox(parent=self.widget_107)
         self.dropdown_modeAttack.setMinimumSize(QtCore.QSize(119, 45))
-        self.dropdown_modeAttack.setMaximumSize(QtCore.QSize(200, 45))
+        self.dropdown_modeAttack.setMaximumSize(QtCore.QSize(260, 45))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(13)
@@ -1265,8 +1344,7 @@ class Ui_MainWindow(object):
 "        border-radius: 5px;\n"
 "        padding: 1px 18px 1px 3px;\n"
 "        min-width: 6em;\n"
-"        \n"
-"    color: rgb(0, 0, 0);\n"
+"        color: rgba(40,43,61,255) ;\n"
 " }\n"
 " QComboBox:drop-down {\n"
 "    subcontrol-origin: padding;\n"
@@ -1298,7 +1376,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_17.addWidget(self.dropdown_modeAttack)
         self.dropdown_wordLists = QtWidgets.QComboBox(parent=self.widget_107)
         self.dropdown_wordLists.setMinimumSize(QtCore.QSize(119, 45))
-        self.dropdown_wordLists.setMaximumSize(QtCore.QSize(190, 45))
+        self.dropdown_wordLists.setMaximumSize(QtCore.QSize(270, 45))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(13)
@@ -1311,8 +1389,7 @@ class Ui_MainWindow(object):
 "        border-radius: 5px;\n"
 "        padding: 1px 18px 1px 3px;\n"
 "        min-width: 6em;\n"
-"        \n"
-"    color: rgb(0, 0, 0);\n"
+"        color: rgba(40,43,61,255) ;\n"
 " }\n"
 " QComboBox:drop-down {\n"
 "    subcontrol-origin: padding;\n"
@@ -1341,34 +1418,79 @@ class Ui_MainWindow(object):
         self.dropdown_wordLists.addItem("")
         self.dropdown_wordLists.addItem("")
         self.horizontalLayout_17.addWidget(self.dropdown_wordLists)
-        self.btn_browseDict_2 = QtWidgets.QPushButton(parent=self.widget_107)
-        self.btn_browseDict_2.setMinimumSize(QtCore.QSize(300, 45))
-        self.btn_browseDict_2.setMaximumSize(QtCore.QSize(170, 40))
+        self.btn_start_attack = QtWidgets.QPushButton(parent=self.widget_107)
+        self.btn_start_attack.setMinimumSize(QtCore.QSize(300, 45))
+        self.btn_start_attack.setMaximumSize(QtCore.QSize(170, 40))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
-        self.btn_browseDict_2.setFont(font)
-        self.btn_browseDict_2.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.btn_browseDict_2.setStyleSheet("QPushButton {    \n"
+        self.btn_start_attack.setFont(font)
+        self.btn_start_attack.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btn_start_attack.setStyleSheet("QPushButton {    \n"
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         icon14 = QtGui.QIcon()
         icon14.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon_start.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btn_browseDict_2.setIcon(icon14)
-        self.btn_browseDict_2.setIconSize(QtCore.QSize(35, 35))
-        self.btn_browseDict_2.setObjectName("btn_browseDict_2")
-        self.horizontalLayout_17.addWidget(self.btn_browseDict_2)
+        self.btn_start_attack.setIcon(icon14)
+        self.btn_start_attack.setIconSize(QtCore.QSize(35, 35))
+        self.btn_start_attack.setObjectName("btn_start_attack")
+        self.horizontalLayout_17.addWidget(self.btn_start_attack)
         self.verticalLayout_21.addWidget(self.widget_107, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.widget_37 = QtWidgets.QWidget(parent=self.widget_35)
         self.widget_37.setObjectName("widget_37")
-        self.verticalLayout_34 = QtWidgets.QVBoxLayout(self.widget_37)
-        self.verticalLayout_34.setObjectName("verticalLayout_34")
+        self.horizontalLayout_38 = QtWidgets.QHBoxLayout(self.widget_37)
+        self.horizontalLayout_38.setObjectName("horizontalLayout_38")
+        self.widget_20 = QtWidgets.QWidget(parent=self.widget_37)
+        self.widget_20.setObjectName("widget_20")
+        self.horizontalLayout_47 = QtWidgets.QHBoxLayout(self.widget_20)
+        self.horizontalLayout_47.setObjectName("horizontalLayout_47")
+        self.textEdit_result_hashcat = QtWidgets.QTextEdit(parent=self.widget_20)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Preferred, QtWidgets.QSizePolicy.Policy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.textEdit_result_hashcat.sizePolicy().hasHeightForWidth())
+        self.textEdit_result_hashcat.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(13)
+        self.textEdit_result_hashcat.setFont(font)
+        self.textEdit_result_hashcat.setStyleSheet("QTextEdit {\n"
+"        padding-top: 20px;\n"
+"        padding-left: 15px;\n"
+"}\n"
+"QScrollBar:vertical {\n"
+"        border: 1px solid #c2c2c2; /* Vertical scroll bar border */\n"
+"        background: #f0f0f0; /* Vertical scroll bar background color */\n"
+"        width: 15px; /* Width of the scroll bar */\n"
+"}\n"
+"QScrollBar::handle:vertical {\n"
+"        background: #666666; /* Color of the scroll bar thumb */\n"
+"        border: 1px solid #333333; /* Border of the scroll bar thumb */\n"
+"        min-height: 30px; /* Height of the scroll bar thumb */\n"
+"}\n"
+"QScrollBar::add-line:vertical {\n"
+"        height: 20px; /* Height of the bottom button */\n"
+"        background: #f0f0f0; /* Color of the bottom button */\n"
+"}\n"
+"QScrollBar::sub-line:vertical {\n"
+"        height: 20px; /* Height of the top button */\n"
+"        background: #f0f0f0; /* Color of the top button */\n"
+"}")
+        self.textEdit_result_hashcat.setMidLineWidth(0)
+        self.textEdit_result_hashcat.setReadOnly(True)
+        self.textEdit_result_hashcat.setObjectName("textEdit_result_hashcat")
+        self.horizontalLayout_47.addWidget(self.textEdit_result_hashcat)
+        self.horizontalLayout_38.addWidget(self.widget_20)
         self.widget_11 = QtWidgets.QWidget(parent=self.widget_37)
         self.widget_11.setObjectName("widget_11")
         self.horizontalLayout_45 = QtWidgets.QHBoxLayout(self.widget_11)
@@ -1379,39 +1501,7 @@ class Ui_MainWindow(object):
         self.label_loadding.setText("")
         self.label_loadding.setObjectName("label_loadding")
         self.horizontalLayout_45.addWidget(self.label_loadding)
-        self.verticalLayout_34.addWidget(self.widget_11, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
-        self.widget_57 = QtWidgets.QWidget(parent=self.widget_37)
-        self.widget_57.setMinimumSize(QtCore.QSize(650, 50))
-        self.widget_57.setMaximumSize(QtCore.QSize(350, 50))
-        self.widget_57.setObjectName("widget_57")
-        self.verticalLayout_68 = QtWidgets.QVBoxLayout(self.widget_57)
-        self.verticalLayout_68.setObjectName("verticalLayout_68")
-        self.progressBar_attack = QtWidgets.QProgressBar(parent=self.widget_57)
-        self.progressBar_attack.setMinimumSize(QtCore.QSize(620, 30))
-        self.progressBar_attack.setMaximumSize(QtCore.QSize(620, 30))
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.progressBar_attack.setFont(font)
-        self.progressBar_attack.setStyleSheet("QProgressBar\n"
-"{\n"
-"border: solid grey;\n"
-"border-radius: 15px;\n"
-"color: black;\n"
-"}\n"
-"QProgressBar::chunk \n"
-"{\n"
-"\n"
-"background-color: rgba(40,43,61,255);\n"
-"border-radius :15px;\n"
-"}     ")
-        self.progressBar_attack.setProperty("value", 0)
-        self.progressBar_attack.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.progressBar_attack.setObjectName("progressBar_attack")
-        self.verticalLayout_68.addWidget(self.progressBar_attack)
-        self.verticalLayout_34.addWidget(self.widget_57, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
+        self.horizontalLayout_38.addWidget(self.widget_11)
         self.verticalLayout_21.addWidget(self.widget_37)
         self.horizontalLayout_16.addWidget(self.widget_35, 0, QtCore.Qt.AlignmentFlag.AlignTop)
         self.stackedWidget.addWidget(self.page_passwordAttack)
@@ -1431,7 +1521,7 @@ class Ui_MainWindow(object):
 "")
         self.widget_10.setObjectName("widget_10")
         self.verticalLayout_47 = QtWidgets.QVBoxLayout(self.widget_10)
-        self.verticalLayout_47.setSpacing(10)
+        self.verticalLayout_47.setSpacing(30)
         self.verticalLayout_47.setObjectName("verticalLayout_47")
         self.widget_78 = QtWidgets.QWidget(parent=self.widget_10)
         self.widget_78.setObjectName("widget_78")
@@ -1469,7 +1559,11 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         self.btn_backMalware.setIcon(icon8)
@@ -1486,7 +1580,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.label_headofMalware.setFont(font)
-        self.label_headofMalware.setStyleSheet("color: rgb(0, 0, 0);")
+        self.label_headofMalware.setStyleSheet("color: rgb(38, 50, 56);")
         self.label_headofMalware.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignVCenter)
         self.label_headofMalware.setIndent(20)
         self.label_headofMalware.setObjectName("label_headofMalware")
@@ -1544,7 +1638,11 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         icon15 = QtGui.QIcon()
@@ -1567,7 +1665,11 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         self.btn_browseMalware.setIcon(icon12)
@@ -1588,7 +1690,11 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         self.btn_clearMalware.setIcon(icon13)
@@ -1618,7 +1724,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.label_Analysis.setFont(font)
-        self.label_Analysis.setStyleSheet("color: rgb(0, 0, 0);")
+        self.label_Analysis.setStyleSheet("    color: rgba(40,43,61,255) ;")
         self.label_Analysis.setObjectName("label_Analysis")
         self.verticalLayout_70.addWidget(self.label_Analysis)
         self.verticalLayout_52.addWidget(self.widget_87, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
@@ -1656,7 +1762,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.label_Analysis_2.setFont(font)
-        self.label_Analysis_2.setStyleSheet("color: rgb(0, 0, 0);")
+        self.label_Analysis_2.setStyleSheet("    color: rgba(40,43,61,255) ;")
         self.label_Analysis_2.setObjectName("label_Analysis_2")
         self.verticalLayout_71.addWidget(self.label_Analysis_2)
         self.verticalLayout_52.addWidget(self.widget_116, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
@@ -1665,7 +1771,6 @@ class Ui_MainWindow(object):
         self.verticalLayout_40 = QtWidgets.QVBoxLayout(self.widget_33)
         self.verticalLayout_40.setObjectName("verticalLayout_40")
         self.widget_97 = QtWidgets.QWidget(parent=self.widget_33)
-        self.widget_97.setStyleSheet("color: rgb(0, 0, 0);")
         self.widget_97.setObjectName("widget_97")
         self.horizontalLayout_15 = QtWidgets.QHBoxLayout(self.widget_97)
         self.horizontalLayout_15.setObjectName("horizontalLayout_15")
@@ -1753,7 +1858,6 @@ class Ui_MainWindow(object):
         self.widget_91 = QtWidgets.QWidget(parent=self.widget_85)
         self.widget_91.setMinimumSize(QtCore.QSize(400, 65))
         self.widget_91.setMaximumSize(QtCore.QSize(400, 65))
-        self.widget_91.setStyleSheet("color: rgb(0, 0, 0);")
         self.widget_91.setObjectName("widget_91")
         self.verticalLayout_56 = QtWidgets.QVBoxLayout(self.widget_91)
         self.verticalLayout_56.setObjectName("verticalLayout_56")
@@ -1781,7 +1885,6 @@ class Ui_MainWindow(object):
         self.widget_92 = QtWidgets.QWidget(parent=self.widget_85)
         self.widget_92.setMinimumSize(QtCore.QSize(0, 250))
         self.widget_92.setMaximumSize(QtCore.QSize(16777215, 280))
-        self.widget_92.setStyleSheet("color: rgb(0, 0, 0);")
         self.widget_92.setObjectName("widget_92")
         self.horizontalLayout_37 = QtWidgets.QHBoxLayout(self.widget_92)
         self.horizontalLayout_37.setSpacing(7)
@@ -1918,9 +2021,12 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
 "}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
+"}\n"
 "")
         self.btn_createReport.setObjectName("btn_createReport")
         self.verticalLayout_55.addWidget(self.btn_createReport, 0, QtCore.Qt.AlignmentFlag.AlignRight)
@@ -1943,7 +2049,7 @@ class Ui_MainWindow(object):
 "")
         self.widget_41.setObjectName("widget_41")
         self.verticalLayout_24 = QtWidgets.QVBoxLayout(self.widget_41)
-        self.verticalLayout_24.setSpacing(10)
+        self.verticalLayout_24.setSpacing(30)
         self.verticalLayout_24.setObjectName("verticalLayout_24")
         self.widget_44 = QtWidgets.QWidget(parent=self.widget_41)
         self.widget_44.setMinimumSize(QtCore.QSize(1200, 70))
@@ -1975,7 +2081,11 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         self.btn_backMSDigest.setIcon(icon8)
@@ -2045,7 +2155,11 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         self.btn_browseMSDigest.setIcon(icon12)
@@ -2066,7 +2180,11 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         self.btn_clearMSDigest.setIcon(icon13)
@@ -2091,7 +2209,7 @@ class Ui_MainWindow(object):
         self.btn_md5.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_md5.setStyleSheet("QPushButton{\n"
 "         border: 1px solid gray;\n"
-"           color: rgb(0, 0, 0);\n"
+"          color: rgba(40,43,61,255) ;\n"
 "    }\n"
 " QPushButton{\n"
 "        border-radius: 10px;\n"
@@ -2119,7 +2237,7 @@ class Ui_MainWindow(object):
         self.btn_sha1.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_sha1.setStyleSheet("QPushButton{\n"
 "         border: 1px solid gray;    \n"
-"         color: rgb(0, 0, 0);\n"
+"        color: rgba(40,43,61,255) ;\n"
 "    }\n"
 " QPushButton{\n"
 "        border-radius: 10px;\n"
@@ -2150,7 +2268,7 @@ class Ui_MainWindow(object):
 "        border-radius: 5px;\n"
 "        padding: 1px 18px 1px 3px;\n"
 "        min-width: 6em;\n"
-"         color: rgb(0, 0, 0);\n"
+"         color: rgba(40,43,61,255) ;\n"
 " }\n"
 " QComboBox:drop-down {\n"
 "    subcontrol-origin: padding;\n"
@@ -2195,7 +2313,7 @@ class Ui_MainWindow(object):
 "        border-radius: 5px;\n"
 "        padding: 1px 18px 1px 3px;\n"
 "        min-width: 6em;\n"
-"        color: rgb(0, 0, 0);\n"
+"        color: rgba(40,43,61,255) ;\n"
 "\n"
 " }\n"
 " QComboBox:drop-down {\n"
@@ -2253,7 +2371,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.label_resultDigeat.setFont(font)
-        self.label_resultDigeat.setStyleSheet("color: rgb(0, 0, 0);")
+        self.label_resultDigeat.setStyleSheet("    color: rgba(40,43,61,255) ;")
         self.label_resultDigeat.setObjectName("label_resultDigeat")
         self.verticalLayout_30.addWidget(self.label_resultDigeat)
         self.verticalLayout_29.addWidget(self.widget_52)
@@ -2269,7 +2387,7 @@ class Ui_MainWindow(object):
         self.lineEdit_outputTextMSDigest.setFont(font)
         self.lineEdit_outputTextMSDigest.setStyleSheet("QLineEdit {\n"
 "  border: 1px solid gray;\n"
-"  color: rgb(0, 0, 0);\n"
+"  color: rgba(40,43,61,255);\n"
 "  border-radius: 5px;\n"
 "}\n"
 "\n"
@@ -2299,7 +2417,11 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         self.btn_copy.setIconSize(QtCore.QSize(35, 35))
@@ -2325,7 +2447,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.label_lineAPIDigest.setFont(font)
-        self.label_lineAPIDigest.setStyleSheet("color: rgb(0, 0, 0);")
+        self.label_lineAPIDigest.setStyleSheet("    color: rgba(40,43,61,255) ;")
         self.label_lineAPIDigest.setObjectName("label_lineAPIDigest")
         self.horizontalLayout_36.addWidget(self.label_lineAPIDigest)
         self.btn_infoToken = QtWidgets.QPushButton(parent=self.widget_54)
@@ -2380,7 +2502,7 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
@@ -2408,7 +2530,6 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.label_type.setFont(font)
-        self.label_type.setStyleSheet("color: rgb(0, 0, 0);")
         self.label_type.setObjectName("label_type")
         self.verticalLayout_67.addWidget(self.label_type, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.verticalLayout_33.addWidget(self.widget_8)
@@ -2445,7 +2566,11 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         icon16 = QtGui.QIcon()
@@ -2468,7 +2593,11 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         self.btn_saveQR.setIconSize(QtCore.QSize(35, 35))
@@ -2508,7 +2637,11 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         self.btn_backNetworkUser.setIcon(icon8)
@@ -2544,7 +2677,11 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255);\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         self.btn_vulner.setIcon(icon7)
@@ -2565,7 +2702,11 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255);\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         self.btn_hsts.setIcon(icon6)
@@ -2589,7 +2730,7 @@ class Ui_MainWindow(object):
 "")
         self.widget_64.setObjectName("widget_64")
         self.verticalLayout_37 = QtWidgets.QVBoxLayout(self.widget_64)
-        self.verticalLayout_37.setSpacing(10)
+        self.verticalLayout_37.setSpacing(30)
         self.verticalLayout_37.setObjectName("verticalLayout_37")
         self.widget_59 = QtWidgets.QWidget(parent=self.widget_64)
         self.widget_59.setMinimumSize(QtCore.QSize(1200, 70))
@@ -2621,7 +2762,11 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         self.btn_backVulner.setIcon(icon8)
@@ -2638,7 +2783,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.label_headofVulner.setFont(font)
-        self.label_headofVulner.setStyleSheet("color: rgb(0, 0, 0);")
+        self.label_headofVulner.setStyleSheet("color: rgb(38, 50, 56);")
         self.label_headofVulner.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignVCenter)
         self.label_headofVulner.setIndent(20)
         self.label_headofVulner.setObjectName("label_headofVulner")
@@ -2692,7 +2837,7 @@ class Ui_MainWindow(object):
 "        border-radius: 5px;\n"
 "        padding: 1px 18px 1px 3px;\n"
 "        min-width: 6em;\n"
-"        color: rgb(0, 0, 0);\n"
+"        color: rgba(40,43,61,255) ;\n"
 "\n"
 " }\n"
 " QComboBox:drop-down {\n"
@@ -2718,7 +2863,6 @@ class Ui_MainWindow(object):
 "")
         self.dropdown_typeScan.setIconSize(QtCore.QSize(10, 10))
         self.dropdown_typeScan.setObjectName("dropdown_typeScan")
-        self.dropdown_typeScan.addItem("")
         self.dropdown_typeScan.addItem("")
         self.dropdown_typeScan.addItem("")
         self.dropdown_typeScan.addItem("")
@@ -2767,7 +2911,11 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         self.btn_scanVulner.setIcon(icon15)
@@ -2788,9 +2936,12 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
 "}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
+"}\n"
 "")
         self.btn_clearVulner.setIcon(icon13)
         self.btn_clearVulner.setIconSize(QtCore.QSize(30, 30))
@@ -2814,6 +2965,7 @@ class Ui_MainWindow(object):
 "}     ")
         self.progressBar_vulnerScan.setProperty("value", 24)
         self.progressBar_vulnerScan.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.progressBar_vulnerScan.setTextVisible(False)
         self.progressBar_vulnerScan.setObjectName("progressBar_vulnerScan")
         self.verticalLayout_41.addWidget(self.progressBar_vulnerScan, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.verticalLayout_37.addWidget(self.widget_69)
@@ -2892,24 +3044,29 @@ class Ui_MainWindow(object):
         self.horizontalLayout_48.addWidget(self.widget_115)
         self.verticalLayout_37.addWidget(self.widget_66)
         self.btn_createReportVulner = QtWidgets.QPushButton(parent=self.widget_64)
-        self.btn_createReportVulner.setMinimumSize(QtCore.QSize(155, 40))
-        self.btn_createReportVulner.setMaximumSize(QtCore.QSize(155, 40))
+        self.btn_createReportVulner.setMinimumSize(QtCore.QSize(130, 40))
+        self.btn_createReportVulner.setMaximumSize(QtCore.QSize(150, 40))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
         self.btn_createReportVulner.setFont(font)
+        self.btn_createReportVulner.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_createReportVulner.setStyleSheet("QPushButton {    \n"
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         self.btn_createReportVulner.setObjectName("btn_createReportVulner")
-        self.verticalLayout_37.addWidget(self.btn_createReportVulner, 0, QtCore.Qt.AlignmentFlag.AlignRight)
-        self.horizontalLayout_29.addWidget(self.widget_64, 0, QtCore.Qt.AlignmentFlag.AlignTop)
+        self.verticalLayout_37.addWidget(self.btn_createReportVulner, 0, QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTop)
+        self.horizontalLayout_29.addWidget(self.widget_64, 0, QtCore.Qt.AlignmentFlag.AlignBottom)
         self.stackedWidget.addWidget(self.page_vulnerability)
         self.page_https = QtWidgets.QWidget()
         self.page_https.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.ArrowCursor))
@@ -2959,7 +3116,11 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         self.btn_backHttps.setIcon(icon8)
@@ -2976,7 +3137,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.label_headofHttpstesting.setFont(font)
-        self.label_headofHttpstesting.setStyleSheet("color: rgb(0, 0, 0);")
+        self.label_headofHttpstesting.setStyleSheet("color: rgb(38, 50, 56);")
         self.label_headofHttpstesting.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignVCenter)
         self.label_headofHttpstesting.setIndent(20)
         self.label_headofHttpstesting.setObjectName("label_headofHttpstesting")
@@ -3029,7 +3190,11 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         self.btn_scanHttps.setIcon(icon15)
@@ -3050,7 +3215,11 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         self.btn_clearHttps.setIcon(icon13)
@@ -3623,8 +3792,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_45.addWidget(self.widget_134)
         self.verticalLayout_42.addWidget(self.widget_75)
         self.btn_createReportHttps = QtWidgets.QPushButton(parent=self.widget_71)
-        self.btn_createReportHttps.setMinimumSize(QtCore.QSize(150, 40))
-        self.btn_createReportHttps.setMaximumSize(QtCore.QSize(150, 40))
+        self.btn_createReportHttps.setMinimumSize(QtCore.QSize(130, 40))
+        self.btn_createReportHttps.setMaximumSize(QtCore.QSize(130, 40))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(12)
@@ -3635,7 +3804,11 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         self.btn_createReportHttps.setObjectName("btn_createReportHttps")
@@ -3686,7 +3859,11 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         self.btn_backSettings.setIcon(icon8)
@@ -3703,7 +3880,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.label_headofHttpstesting_2.setFont(font)
-        self.label_headofHttpstesting_2.setStyleSheet("color: rgb(0, 0, 0);")
+        self.label_headofHttpstesting_2.setStyleSheet("color: rgb(38, 50, 56);")
         self.label_headofHttpstesting_2.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignVCenter)
         self.label_headofHttpstesting_2.setIndent(20)
         self.label_headofHttpstesting_2.setObjectName("label_headofHttpstesting_2")
@@ -4243,7 +4420,11 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         self.btn_saveSettings.setIconSize(QtCore.QSize(0, 0))
@@ -4251,11 +4432,11 @@ class Ui_MainWindow(object):
         self.verticalLayout_76.addWidget(self.btn_saveSettings, 0, QtCore.Qt.AlignmentFlag.AlignRight)
         self.horizontalLayout_61.addWidget(self.widget_130, 0, QtCore.Qt.AlignmentFlag.AlignTop)
         self.stackedWidget.addWidget(self.page_settings)
-        self.page_email = QtWidgets.QWidget()
-        self.page_email.setObjectName("page_email")
-        self.horizontalLayout_67 = QtWidgets.QHBoxLayout(self.page_email)
+        self.page_vulner_email = QtWidgets.QWidget()
+        self.page_vulner_email.setObjectName("page_vulner_email")
+        self.horizontalLayout_67 = QtWidgets.QHBoxLayout(self.page_vulner_email)
         self.horizontalLayout_67.setObjectName("horizontalLayout_67")
-        self.widget_126 = QtWidgets.QWidget(parent=self.page_email)
+        self.widget_126 = QtWidgets.QWidget(parent=self.page_vulner_email)
         self.widget_126.setStyleSheet("QWidget#widget_140{\n"
 "    border: 1px solid rgb(237, 236, 237); /* Set the \"groove\" border style for the specific widgets */\n"
 "    background-color: rgb(237, 236, 237);\n"
@@ -4295,7 +4476,11 @@ class Ui_MainWindow(object):
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         self.btn_backEmail.setIcon(icon8)
@@ -4305,14 +4490,14 @@ class Ui_MainWindow(object):
         self.label_headofEmail = QtWidgets.QLabel(parent=self.widget_140)
         self.label_headofEmail.setGeometry(QtCore.QRect(152, 15, 600, 45))
         self.label_headofEmail.setMinimumSize(QtCore.QSize(600, 45))
-        self.label_headofEmail.setMaximumSize(QtCore.QSize(600, 45))
+        self.label_headofEmail.setMaximumSize(QtCore.QSize(800, 45))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(20)
         font.setBold(True)
         font.setWeight(75)
         self.label_headofEmail.setFont(font)
-        self.label_headofEmail.setStyleSheet("color: rgb(0, 0, 0);")
+        self.label_headofEmail.setStyleSheet("color: rgb(38, 50, 56);")
         self.label_headofEmail.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignVCenter)
         self.label_headofEmail.setIndent(20)
         self.label_headofEmail.setObjectName("label_headofEmail")
@@ -4357,11 +4542,16 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.btn_backReport.setFont(font)
+        self.btn_backReport.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_backReport.setStyleSheet("QPushButton {    \n"
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         icon22 = QtGui.QIcon()
@@ -4371,8 +4561,8 @@ class Ui_MainWindow(object):
         self.btn_backReport.setObjectName("btn_backReport")
         self.horizontalLayout_71.addWidget(self.btn_backReport)
         self.label_countPageReport = QtWidgets.QLabel(parent=self.widget_142)
-        self.label_countPageReport.setMinimumSize(QtCore.QSize(30, 30))
-        self.label_countPageReport.setMaximumSize(QtCore.QSize(30, 30))
+        self.label_countPageReport.setMinimumSize(QtCore.QSize(40, 30))
+        self.label_countPageReport.setMaximumSize(QtCore.QSize(40, 30))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(11)
@@ -4381,7 +4571,7 @@ class Ui_MainWindow(object):
         self.label_countPageReport.setFont(font)
         self.label_countPageReport.setStyleSheet("QLabel {\n"
 "  border: 1px solid gray;\n"
-"  color: rgb(0, 0, 0);\n"
+"  color: rgba(40,43,61,255);\n"
 "  border-radius: 5px;\n"
 "}\n"
 "\n"
@@ -4398,12 +4588,17 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.btn_nextReport.setFont(font)
+        self.btn_nextReport.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_nextReport.setLayoutDirection(QtCore.Qt.LayoutDirection.RightToLeft)
         self.btn_nextReport.setStyleSheet("QPushButton {    \n"
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
-"    color: rgb(0, 0, 0);\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
 "}\n"
 "")
         icon23 = QtGui.QIcon()
@@ -4452,8 +4647,8 @@ class Ui_MainWindow(object):
         self.horizontalLayout_69.addWidget(self.widget_128, 0, QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTop)
         self.widget_127 = QtWidgets.QWidget(parent=self.widget_138)
         self.widget_127.setObjectName("widget_127")
-        self.verticalLayout_60 = QtWidgets.QVBoxLayout(self.widget_127)
-        self.verticalLayout_60.setObjectName("verticalLayout_60")
+        self.verticalLayout_10 = QtWidgets.QVBoxLayout(self.widget_127)
+        self.verticalLayout_10.setObjectName("verticalLayout_10")
         self.label_headerEmail = QtWidgets.QLabel(parent=self.widget_127)
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -4462,7 +4657,7 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.label_headerEmail.setFont(font)
         self.label_headerEmail.setObjectName("label_headerEmail")
-        self.verticalLayout_60.addWidget(self.label_headerEmail, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
+        self.verticalLayout_10.addWidget(self.label_headerEmail)
         self.lineEdit_toEmail = QtWidgets.QLineEdit(parent=self.widget_127)
         self.lineEdit_toEmail.setMinimumSize(QtCore.QSize(600, 40))
         self.lineEdit_toEmail.setMaximumSize(QtCore.QSize(600, 40))
@@ -4482,7 +4677,7 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         self.lineEdit_toEmail.setObjectName("lineEdit_toEmail")
-        self.verticalLayout_60.addWidget(self.lineEdit_toEmail)
+        self.verticalLayout_10.addWidget(self.lineEdit_toEmail)
         self.lineEdit_subjectEmail = QtWidgets.QLineEdit(parent=self.widget_127)
         self.lineEdit_subjectEmail.setMinimumSize(QtCore.QSize(600, 40))
         self.lineEdit_subjectEmail.setMaximumSize(QtCore.QSize(600, 40))
@@ -4502,11 +4697,10 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         self.lineEdit_subjectEmail.setObjectName("lineEdit_subjectEmail")
-        self.verticalLayout_60.addWidget(self.lineEdit_subjectEmail)
-        self.textEdit_bodyEMail = QtWidgets.QTextEdit(parent=self.widget_127)
-        self.textEdit_bodyEMail.setMinimumSize(QtCore.QSize(0, 300))
-        self.textEdit_bodyEMail.setMaximumSize(QtCore.QSize(16777215, 500))
-        self.textEdit_bodyEMail.setStyleSheet("QTextEdit {\n"
+        self.verticalLayout_10.addWidget(self.lineEdit_subjectEmail)
+        self.textEdit_bodyEmail = QtWidgets.QTextEdit(parent=self.widget_127)
+        self.textEdit_bodyEmail.setMinimumSize(QtCore.QSize(0, 300))
+        self.textEdit_bodyEmail.setStyleSheet("QTextEdit {\n"
 "  border: 1px solid gray;\n"
 "  color: rgba(40,43,61,255);\n"
 "  border-radius: 5px;\n"
@@ -4521,8 +4715,8 @@ class Ui_MainWindow(object):
 "  border-color: rgba(88,199,141,255);\n"
 "}\n"
 "")
-        self.textEdit_bodyEMail.setObjectName("textEdit_bodyEMail")
-        self.verticalLayout_60.addWidget(self.textEdit_bodyEMail)
+        self.textEdit_bodyEmail.setObjectName("textEdit_bodyEmail")
+        self.verticalLayout_10.addWidget(self.textEdit_bodyEmail)
         self.btn_fileEmail = QtWidgets.QPushButton(parent=self.widget_127)
         self.btn_fileEmail.setMinimumSize(QtCore.QSize(600, 45))
         self.btn_fileEmail.setMaximumSize(QtCore.QSize(600, 45))
@@ -4544,7 +4738,7 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         self.btn_fileEmail.setObjectName("btn_fileEmail")
-        self.verticalLayout_60.addWidget(self.btn_fileEmail)
+        self.verticalLayout_10.addWidget(self.btn_fileEmail)
         self.btn_sendReportToMail = QtWidgets.QPushButton(parent=self.widget_127)
         self.btn_sendReportToMail.setMinimumSize(QtCore.QSize(130, 40))
         self.btn_sendReportToMail.setMaximumSize(QtCore.QSize(130, 40))
@@ -4554,6 +4748,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.btn_sendReportToMail.setFont(font)
+        self.btn_sendReportToMail.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_sendReportToMail.setStyleSheet("QPushButton {    \n"
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
@@ -4566,12 +4761,12 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         self.btn_sendReportToMail.setObjectName("btn_sendReportToMail")
-        self.verticalLayout_60.addWidget(self.btn_sendReportToMail, 0, QtCore.Qt.AlignmentFlag.AlignRight)
+        self.verticalLayout_10.addWidget(self.btn_sendReportToMail, 0, QtCore.Qt.AlignmentFlag.AlignRight)
         self.horizontalLayout_69.addWidget(self.widget_127, 0, QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignTop)
         self.horizontalLayout_68.addWidget(self.widget_138)
         self.verticalLayout_44.addWidget(self.widget_137)
         self.horizontalLayout_67.addWidget(self.widget_126)
-        self.stackedWidget.addWidget(self.page_email)
+        self.stackedWidget.addWidget(self.page_vulner_email)
         self.verticalLayout_5.addWidget(self.stackedWidget)
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -4632,9 +4827,10 @@ class Ui_MainWindow(object):
         self.dropdown_modeAttack.setItemText(3, _translate("MainWindow", "Skipping 1"))
         self.dropdown_modeAttack.setItemText(4, _translate("MainWindow", "Skipping 2"))
         self.dropdown_wordLists.setItemText(0, _translate("MainWindow", "Wordlists"))
-        self.dropdown_wordLists.setItemText(1, _translate("MainWindow", "Rockyou.txt"))
-        self.dropdown_wordLists.setItemText(2, _translate("MainWindow", "Crackstation.txt"))
-        self.btn_browseDict_2.setText(_translate("MainWindow", "Start Attack"))
+        self.dropdown_wordLists.setItemText(1, _translate("MainWindow", "rockyou.txt"))
+        self.dropdown_wordLists.setItemText(2, _translate("MainWindow", "crackstation.txt"))
+        self.btn_start_attack.setText(_translate("MainWindow", "Start Attack"))
+        self.textEdit_result_hashcat.setPlaceholderText(_translate("MainWindow", "Result"))
         self.btn_backMalware.setText(_translate("MainWindow", "Back"))
         self.label_headofMalware.setText(_translate("MainWindow", "MALWARE SCANNING"))
         self.lineEdit_malware.setPlaceholderText(_translate("MainWindow", "ex. https:// or file"))
@@ -4695,9 +4891,8 @@ class Ui_MainWindow(object):
         self.dropdown_typeScan.setItemText(0, _translate("MainWindow", "Type Scan"))
         self.dropdown_typeScan.setItemText(1, _translate("MainWindow", "Quick Scan"))
         self.dropdown_typeScan.setItemText(2, _translate("MainWindow", "Stealth Scan"))
-        self.dropdown_typeScan.setItemText(3, _translate("MainWindow", "Agressive Scan"))
-        self.dropdown_typeScan.setItemText(4, _translate("MainWindow", "Adaptive Scan"))
-        self.dropdown_typeScan.setItemText(5, _translate("MainWindow", "Vulner.NSE Script"))
+        self.dropdown_typeScan.setItemText(3, _translate("MainWindow", "Aggressive Scan"))
+        self.dropdown_typeScan.setItemText(4, _translate("MainWindow", "Vulner.NSE Script"))
         self.lineEdit_commandvulner.setPlaceholderText(_translate("MainWindow", "command execute"))
         self.btn_scanVulner.setText(_translate("MainWindow", "Scan"))
         self.btn_clearVulner.setText(_translate("MainWindow", "Clear"))
