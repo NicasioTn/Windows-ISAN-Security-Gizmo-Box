@@ -64,6 +64,7 @@ class MessageDigest(QDialog):
         self.lineEdit_outputTextMSDigest.setPlaceholderText('')
         self.label_type.setText('Type')
         self.btn_saveQR.setText('SAVE')
+        MessageDigest.LoadAPIKey(self)
     
     def qrCodeGenerator(self, hash):
         if self.lineEdit_outputTextMSDigest == '': # check current text output is empty 

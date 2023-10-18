@@ -3881,7 +3881,7 @@ QPushButton:hover {
                <widget class="QComboBox" name="dropdown_modeAttack">
                 <property name="minimumSize">
                  <size>
-                  <width>119</width>
+                  <width>101</width>
                   <height>45</height>
                  </size>
                 </property>
@@ -3960,7 +3960,7 @@ QComboBox:hover {
                <widget class="QComboBox" name="dropdown_wordLists">
                 <property name="minimumSize">
                  <size>
-                  <width>119</width>
+                  <width>101</width>
                   <height>45</height>
                  </size>
                 </property>
@@ -5629,7 +5629,7 @@ QPushButton:focus {
                <widget class="QComboBox" name="dropdown_sha2">
                 <property name="minimumSize">
                  <size>
-                  <width>119</width>
+                  <width>101</width>
                   <height>40</height>
                  </size>
                 </property>
@@ -5716,7 +5716,7 @@ QComboBox:hover {
                <widget class="QComboBox" name="dropdown_sha3">
                 <property name="minimumSize">
                  <size>
-                  <width>119</width>
+                  <width>101</width>
                   <height>40</height>
                  </size>
                 </property>
@@ -6518,7 +6518,7 @@ QPushButton:hover {
       </widget>
       <widget class="QWidget" name="page_vulnerability">
        <layout class="QHBoxLayout" name="horizontalLayout_29">
-        <item alignment="Qt::AlignBottom">
+        <item alignment="Qt::AlignTop">
          <widget class="QWidget" name="widget_64" native="true">
           <property name="styleSheet">
            <string notr="true">QWidget#widget_59,
@@ -6531,7 +6531,7 @@ QWidget#widget_115 {
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_37">
            <property name="spacing">
-            <number>30</number>
+            <number>40</number>
            </property>
            <item>
             <widget class="QWidget" name="widget_59" native="true">
@@ -6727,7 +6727,7 @@ QLineEdit:focus {
                   <widget class="QComboBox" name="dropdown_typeScan">
                    <property name="minimumSize">
                     <size>
-                     <width>119</width>
+                     <width>101</width>
                      <height>45</height>
                     </size>
                    </property>
@@ -7218,7 +7218,7 @@ QWidget#widget_134 {
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_42">
            <property name="spacing">
-            <number>30</number>
+            <number>40</number>
            </property>
            <item>
             <widget class="QWidget" name="widget_67" native="true">
@@ -8860,6 +8860,9 @@ QPushButton:hover {
                <weight>75</weight>
                <bold>true</bold>
               </font>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
              </property>
              <property name="styleSheet">
               <string notr="true">QPushButton {    

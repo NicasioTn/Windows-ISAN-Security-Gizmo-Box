@@ -520,6 +520,627 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.addWidget(self.widget_105)
         self.horizontalLayout_7.addWidget(self.widget_9, 0, QtCore.Qt.AlignmentFlag.AlignTop)
         self.stackedWidget.addWidget(self.mainpage)
+        self.page_settings = QtWidgets.QWidget()
+        self.page_settings.setObjectName("page_settings")
+        self.horizontalLayout_61 = QtWidgets.QHBoxLayout(self.page_settings)
+        self.horizontalLayout_61.setObjectName("horizontalLayout_61")
+        self.widget_130 = QtWidgets.QWidget(parent=self.page_settings)
+        self.widget_130.setStyleSheet("QWidget#widget_135 {\n"
+"    border: 1px solid rgb(237, 236, 237); /* Set the \"groove\" border style for the specific widgets */\n"
+"    background-color: rgb(237, 236, 237);\n"
+"}\n"
+"")
+        self.widget_130.setObjectName("widget_130")
+        self.verticalLayout_76 = QtWidgets.QVBoxLayout(self.widget_130)
+        self.verticalLayout_76.setSpacing(30)
+        self.verticalLayout_76.setObjectName("verticalLayout_76")
+        self.widget_135 = QtWidgets.QWidget(parent=self.widget_130)
+        self.widget_135.setMinimumSize(QtCore.QSize(1200, 70))
+        self.widget_135.setMaximumSize(QtCore.QSize(16777215, 70))
+        self.widget_135.setStyleSheet("")
+        self.widget_135.setObjectName("widget_135")
+        self.widget_136 = QtWidgets.QWidget(parent=self.widget_135)
+        self.widget_136.setGeometry(QtCore.QRect(0, 5, 152, 60))
+        self.widget_136.setMinimumSize(QtCore.QSize(0, 60))
+        self.widget_136.setMaximumSize(QtCore.QSize(16777215, 60))
+        self.widget_136.setStyleSheet("color:rgb(65,155,249);\n"
+"background-color: rgb(237, 236, 237);\n"
+"border-radius: 20px;")
+        self.widget_136.setObjectName("widget_136")
+        self.horizontalLayout_62 = QtWidgets.QHBoxLayout(self.widget_136)
+        self.horizontalLayout_62.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_62.setObjectName("horizontalLayout_62")
+        self.btn_backSettings = QtWidgets.QPushButton(parent=self.widget_136)
+        self.btn_backSettings.setMinimumSize(QtCore.QSize(130, 40))
+        self.btn_backSettings.setMaximumSize(QtCore.QSize(130, 40))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_backSettings.setFont(font)
+        self.btn_backSettings.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btn_backSettings.setStyleSheet("QPushButton {    \n"
+"    border: 1px solid rgba(40,43,61,255) ;\n"
+"    border-radius: 20px;\n"
+"    padding: 5px 10px;\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
+"}\n"
+"")
+        icon8 = QtGui.QIcon()
+        icon8.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icons8-go-back-45.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btn_backSettings.setIcon(icon8)
+        self.btn_backSettings.setIconSize(QtCore.QSize(35, 35))
+        self.btn_backSettings.setObjectName("btn_backSettings")
+        self.horizontalLayout_62.addWidget(self.btn_backSettings, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
+        self.label_headofHttpstesting_2 = QtWidgets.QLabel(parent=self.widget_135)
+        self.label_headofHttpstesting_2.setGeometry(QtCore.QRect(152, 15, 500, 45))
+        self.label_headofHttpstesting_2.setMinimumSize(QtCore.QSize(500, 45))
+        self.label_headofHttpstesting_2.setMaximumSize(QtCore.QSize(500, 45))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_headofHttpstesting_2.setFont(font)
+        self.label_headofHttpstesting_2.setStyleSheet("color: rgb(38, 50, 56);")
+        self.label_headofHttpstesting_2.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_headofHttpstesting_2.setIndent(20)
+        self.label_headofHttpstesting_2.setObjectName("label_headofHttpstesting_2")
+        self.verticalLayout_76.addWidget(self.widget_135)
+        self.widget_129 = QtWidgets.QWidget(parent=self.widget_130)
+        self.widget_129.setObjectName("widget_129")
+        self.horizontalLayout_102 = QtWidgets.QHBoxLayout(self.widget_129)
+        self.horizontalLayout_102.setContentsMargins(-1, -1, -1, 11)
+        self.horizontalLayout_102.setSpacing(0)
+        self.horizontalLayout_102.setObjectName("horizontalLayout_102")
+        self.widget_165 = QtWidgets.QWidget(parent=self.widget_129)
+        self.widget_165.setMinimumSize(QtCore.QSize(400, 0))
+        self.widget_165.setMaximumSize(QtCore.QSize(400, 16777215))
+        self.widget_165.setObjectName("widget_165")
+        self.verticalLayout_84 = QtWidgets.QVBoxLayout(self.widget_165)
+        self.verticalLayout_84.setObjectName("verticalLayout_84")
+        self.widget_170 = QtWidgets.QWidget(parent=self.widget_165)
+        self.widget_170.setObjectName("widget_170")
+        self.horizontalLayout_90 = QtWidgets.QHBoxLayout(self.widget_170)
+        self.horizontalLayout_90.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_90.setSpacing(0)
+        self.horizontalLayout_90.setObjectName("horizontalLayout_90")
+        self.widget_171 = QtWidgets.QWidget(parent=self.widget_170)
+        self.widget_171.setObjectName("widget_171")
+        self.horizontalLayout_91 = QtWidgets.QHBoxLayout(self.widget_171)
+        self.horizontalLayout_91.setObjectName("horizontalLayout_91")
+        self.btn_notificationSettings = QtWidgets.QPushButton(parent=self.widget_171)
+        self.btn_notificationSettings.setEnabled(True)
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_notificationSettings.setFont(font)
+        icon9 = QtGui.QIcon()
+        icon9.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon_notification.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btn_notificationSettings.setIcon(icon9)
+        self.btn_notificationSettings.setIconSize(QtCore.QSize(40, 40))
+        self.btn_notificationSettings.setObjectName("btn_notificationSettings")
+        self.horizontalLayout_91.addWidget(self.btn_notificationSettings)
+        self.horizontalLayout_90.addWidget(self.widget_171)
+        self.widget_172 = QtWidgets.QWidget(parent=self.widget_170)
+        self.widget_172.setObjectName("widget_172")
+        self.horizontalLayout_92 = QtWidgets.QHBoxLayout(self.widget_172)
+        self.horizontalLayout_92.setSpacing(0)
+        self.horizontalLayout_92.setObjectName("horizontalLayout_92")
+        self.checkBox_notificationSettings = QtWidgets.QCheckBox(parent=self.widget_172)
+        self.checkBox_notificationSettings.setStyleSheet("QCheckBox::indicator {\n"
+"    width: 45px;\n"
+"    height: 45px;\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:checked {\n"
+"      image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:unchecked {\n"
+"     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);\n"
+"}\n"
+"")
+        self.checkBox_notificationSettings.setText("")
+        self.checkBox_notificationSettings.setObjectName("checkBox_notificationSettings")
+        self.horizontalLayout_92.addWidget(self.checkBox_notificationSettings)
+        self.horizontalLayout_90.addWidget(self.widget_172, 0, QtCore.Qt.AlignmentFlag.AlignRight)
+        self.verticalLayout_84.addWidget(self.widget_170)
+        self.widget_173 = QtWidgets.QWidget(parent=self.widget_165)
+        self.widget_173.setObjectName("widget_173")
+        self.horizontalLayout_93 = QtWidgets.QHBoxLayout(self.widget_173)
+        self.horizontalLayout_93.setObjectName("horizontalLayout_93")
+        self.label_notifucationSettings = QtWidgets.QLabel(parent=self.widget_173)
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift Light")
+        font.setPointSize(9)
+        font.setBold(False)
+        font.setWeight(50)
+        self.label_notifucationSettings.setFont(font)
+        self.label_notifucationSettings.setObjectName("label_notifucationSettings")
+        self.horizontalLayout_93.addWidget(self.label_notifucationSettings)
+        self.verticalLayout_84.addWidget(self.widget_173)
+        self.horizontalLayout_102.addWidget(self.widget_165)
+        self.widget_174 = QtWidgets.QWidget(parent=self.widget_129)
+        self.widget_174.setMinimumSize(QtCore.QSize(400, 0))
+        self.widget_174.setMaximumSize(QtCore.QSize(400, 16777215))
+        self.widget_174.setObjectName("widget_174")
+        self.verticalLayout_85 = QtWidgets.QVBoxLayout(self.widget_174)
+        self.verticalLayout_85.setObjectName("verticalLayout_85")
+        self.widget_175 = QtWidgets.QWidget(parent=self.widget_174)
+        self.widget_175.setObjectName("widget_175")
+        self.horizontalLayout_94 = QtWidgets.QHBoxLayout(self.widget_175)
+        self.horizontalLayout_94.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_94.setSpacing(0)
+        self.horizontalLayout_94.setObjectName("horizontalLayout_94")
+        self.widget_176 = QtWidgets.QWidget(parent=self.widget_175)
+        self.widget_176.setObjectName("widget_176")
+        self.horizontalLayout_95 = QtWidgets.QHBoxLayout(self.widget_176)
+        self.horizontalLayout_95.setObjectName("horizontalLayout_95")
+        self.btn_languageSettings = QtWidgets.QPushButton(parent=self.widget_176)
+        self.btn_languageSettings.setEnabled(True)
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_languageSettings.setFont(font)
+        icon10 = QtGui.QIcon()
+        icon10.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icons_language.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btn_languageSettings.setIcon(icon10)
+        self.btn_languageSettings.setIconSize(QtCore.QSize(40, 40))
+        self.btn_languageSettings.setObjectName("btn_languageSettings")
+        self.horizontalLayout_95.addWidget(self.btn_languageSettings)
+        self.horizontalLayout_94.addWidget(self.widget_176)
+        self.widget_177 = QtWidgets.QWidget(parent=self.widget_175)
+        self.widget_177.setObjectName("widget_177")
+        self.horizontalLayout_96 = QtWidgets.QHBoxLayout(self.widget_177)
+        self.horizontalLayout_96.setSpacing(0)
+        self.horizontalLayout_96.setObjectName("horizontalLayout_96")
+        self.checkBox_btn_languageSettings = QtWidgets.QCheckBox(parent=self.widget_177)
+        self.checkBox_btn_languageSettings.setEnabled(False)
+        self.checkBox_btn_languageSettings.setStyleSheet("QCheckBox::indicator {\n"
+"    width: 45px;\n"
+"    height: 45px;\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:checked {\n"
+"      image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:unchecked {\n"
+"     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);\n"
+"}\n"
+"")
+        self.checkBox_btn_languageSettings.setText("")
+        self.checkBox_btn_languageSettings.setObjectName("checkBox_btn_languageSettings")
+        self.horizontalLayout_96.addWidget(self.checkBox_btn_languageSettings)
+        self.horizontalLayout_94.addWidget(self.widget_177, 0, QtCore.Qt.AlignmentFlag.AlignRight)
+        self.verticalLayout_85.addWidget(self.widget_175)
+        self.widget_178 = QtWidgets.QWidget(parent=self.widget_174)
+        self.widget_178.setObjectName("widget_178")
+        self.horizontalLayout_97 = QtWidgets.QHBoxLayout(self.widget_178)
+        self.horizontalLayout_97.setObjectName("horizontalLayout_97")
+        self.label_btn_languageSettings = QtWidgets.QLabel(parent=self.widget_178)
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift Light")
+        font.setPointSize(9)
+        font.setBold(False)
+        font.setWeight(50)
+        self.label_btn_languageSettings.setFont(font)
+        self.label_btn_languageSettings.setObjectName("label_btn_languageSettings")
+        self.horizontalLayout_97.addWidget(self.label_btn_languageSettings)
+        self.verticalLayout_85.addWidget(self.widget_178)
+        self.horizontalLayout_102.addWidget(self.widget_174)
+        self.widget_179 = QtWidgets.QWidget(parent=self.widget_129)
+        self.widget_179.setMinimumSize(QtCore.QSize(0, 0))
+        self.widget_179.setMaximumSize(QtCore.QSize(400, 16777215))
+        self.widget_179.setObjectName("widget_179")
+        self.verticalLayout_86 = QtWidgets.QVBoxLayout(self.widget_179)
+        self.verticalLayout_86.setObjectName("verticalLayout_86")
+        self.widget_180 = QtWidgets.QWidget(parent=self.widget_179)
+        self.widget_180.setObjectName("widget_180")
+        self.horizontalLayout_98 = QtWidgets.QHBoxLayout(self.widget_180)
+        self.horizontalLayout_98.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_98.setSpacing(0)
+        self.horizontalLayout_98.setObjectName("horizontalLayout_98")
+        self.widget_181 = QtWidgets.QWidget(parent=self.widget_180)
+        self.widget_181.setObjectName("widget_181")
+        self.horizontalLayout_99 = QtWidgets.QHBoxLayout(self.widget_181)
+        self.horizontalLayout_99.setObjectName("horizontalLayout_99")
+        self.btn_soundSettings = QtWidgets.QPushButton(parent=self.widget_181)
+        self.btn_soundSettings.setEnabled(True)
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_soundSettings.setFont(font)
+        icon11 = QtGui.QIcon()
+        icon11.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icons_sound.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btn_soundSettings.setIcon(icon11)
+        self.btn_soundSettings.setIconSize(QtCore.QSize(40, 40))
+        self.btn_soundSettings.setObjectName("btn_soundSettings")
+        self.horizontalLayout_99.addWidget(self.btn_soundSettings)
+        self.horizontalLayout_98.addWidget(self.widget_181)
+        self.widget_182 = QtWidgets.QWidget(parent=self.widget_180)
+        self.widget_182.setObjectName("widget_182")
+        self.horizontalLayout_100 = QtWidgets.QHBoxLayout(self.widget_182)
+        self.horizontalLayout_100.setSpacing(0)
+        self.horizontalLayout_100.setObjectName("horizontalLayout_100")
+        self.checkBox_soundSettings = QtWidgets.QCheckBox(parent=self.widget_182)
+        self.checkBox_soundSettings.setStyleSheet("QCheckBox::indicator {\n"
+"    width: 45px;\n"
+"    height: 45px;\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:checked {\n"
+"      image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:unchecked {\n"
+"     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);\n"
+"}\n"
+"")
+        self.checkBox_soundSettings.setText("")
+        self.checkBox_soundSettings.setObjectName("checkBox_soundSettings")
+        self.horizontalLayout_100.addWidget(self.checkBox_soundSettings)
+        self.horizontalLayout_98.addWidget(self.widget_182, 0, QtCore.Qt.AlignmentFlag.AlignRight)
+        self.verticalLayout_86.addWidget(self.widget_180)
+        self.widget_183 = QtWidgets.QWidget(parent=self.widget_179)
+        font = QtGui.QFont()
+        font.setPointSize(9)
+        self.widget_183.setFont(font)
+        self.widget_183.setObjectName("widget_183")
+        self.horizontalLayout_101 = QtWidgets.QHBoxLayout(self.widget_183)
+        self.horizontalLayout_101.setObjectName("horizontalLayout_101")
+        self.label_10 = QtWidgets.QLabel(parent=self.widget_183)
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift Light")
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setWeight(50)
+        self.label_10.setFont(font)
+        self.label_10.setObjectName("label_10")
+        self.horizontalLayout_101.addWidget(self.label_10)
+        self.verticalLayout_86.addWidget(self.widget_183)
+        self.horizontalLayout_102.addWidget(self.widget_179)
+        self.verticalLayout_76.addWidget(self.widget_129)
+        self.widget_164 = QtWidgets.QWidget(parent=self.widget_130)
+        self.widget_164.setObjectName("widget_164")
+        self.horizontalLayout_115 = QtWidgets.QHBoxLayout(self.widget_164)
+        self.horizontalLayout_115.setSpacing(0)
+        self.horizontalLayout_115.setObjectName("horizontalLayout_115")
+        self.widget_184 = QtWidgets.QWidget(parent=self.widget_164)
+        self.widget_184.setMinimumSize(QtCore.QSize(400, 0))
+        self.widget_184.setMaximumSize(QtCore.QSize(400, 16777215))
+        self.widget_184.setObjectName("widget_184")
+        self.verticalLayout_87 = QtWidgets.QVBoxLayout(self.widget_184)
+        self.verticalLayout_87.setObjectName("verticalLayout_87")
+        self.widget_185 = QtWidgets.QWidget(parent=self.widget_184)
+        self.widget_185.setObjectName("widget_185")
+        self.horizontalLayout_103 = QtWidgets.QHBoxLayout(self.widget_185)
+        self.horizontalLayout_103.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_103.setSpacing(0)
+        self.horizontalLayout_103.setObjectName("horizontalLayout_103")
+        self.widget_186 = QtWidgets.QWidget(parent=self.widget_185)
+        self.widget_186.setObjectName("widget_186")
+        self.horizontalLayout_104 = QtWidgets.QHBoxLayout(self.widget_186)
+        self.horizontalLayout_104.setObjectName("horizontalLayout_104")
+        self.widget_118 = QtWidgets.QWidget(parent=self.widget_186)
+        self.widget_118.setObjectName("widget_118")
+        self.horizontalLayout_41 = QtWidgets.QHBoxLayout(self.widget_118)
+        self.horizontalLayout_41.setObjectName("horizontalLayout_41")
+        self.btn_LineAPISettings = QtWidgets.QPushButton(parent=self.widget_118)
+        self.btn_LineAPISettings.setEnabled(True)
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_LineAPISettings.setFont(font)
+        icon12 = QtGui.QIcon()
+        icon12.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-line.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btn_LineAPISettings.setIcon(icon12)
+        self.btn_LineAPISettings.setIconSize(QtCore.QSize(40, 40))
+        self.btn_LineAPISettings.setObjectName("btn_LineAPISettings")
+        self.horizontalLayout_41.addWidget(self.btn_LineAPISettings)
+        self.horizontalLayout_104.addWidget(self.widget_118)
+        self.widget_100 = QtWidgets.QWidget(parent=self.widget_186)
+        self.widget_100.setObjectName("widget_100")
+        self.horizontalLayout_35 = QtWidgets.QHBoxLayout(self.widget_100)
+        self.horizontalLayout_35.setObjectName("horizontalLayout_35")
+        self.btn_removeLineAPISettings = QtWidgets.QPushButton(parent=self.widget_100)
+        self.btn_removeLineAPISettings.setMinimumSize(QtCore.QSize(100, 40))
+        self.btn_removeLineAPISettings.setMaximumSize(QtCore.QSize(100, 40))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_removeLineAPISettings.setFont(font)
+        self.btn_removeLineAPISettings.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btn_removeLineAPISettings.setStyleSheet("QPushButton {    \n"
+"    border: 1px solid rgba(40,43,61,255) ;\n"
+"    border-radius: 20px;\n"
+"    padding: 5px 10px;\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
+"}\n"
+"")
+        self.btn_removeLineAPISettings.setIconSize(QtCore.QSize(0, 0))
+        self.btn_removeLineAPISettings.setObjectName("btn_removeLineAPISettings")
+        self.horizontalLayout_35.addWidget(self.btn_removeLineAPISettings)
+        self.horizontalLayout_104.addWidget(self.widget_100, 0, QtCore.Qt.AlignmentFlag.AlignRight)
+        self.horizontalLayout_103.addWidget(self.widget_186)
+        self.verticalLayout_87.addWidget(self.widget_185)
+        self.lineEdit_LineAPISettings = QtWidgets.QLineEdit(parent=self.widget_184)
+        self.lineEdit_LineAPISettings.setMinimumSize(QtCore.QSize(0, 30))
+        self.lineEdit_LineAPISettings.setMaximumSize(QtCore.QSize(16777215, 30))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lineEdit_LineAPISettings.setFont(font)
+        self.lineEdit_LineAPISettings.setStyleSheet("QLineEdit {\n"
+"  border: 1px solid gray;\n"
+"  color: rgba(40,43,61,255);\n"
+"  border-radius: 5px;\n"
+"}\n"
+"\n"
+"QLineEdit:hover {\n"
+"  border: 2px solid;\n"
+"  border-color: rgba(0,143,255,255);\n"
+"}\n"
+"QLineEdit:focus {\n"
+"  border: 1px solid;\n"
+"  border-color: rgba(88,199,141,255);\n"
+"}\n"
+"")
+        self.lineEdit_LineAPISettings.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.lineEdit_LineAPISettings.setObjectName("lineEdit_LineAPISettings")
+        self.verticalLayout_87.addWidget(self.lineEdit_LineAPISettings)
+        self.widget_188 = QtWidgets.QWidget(parent=self.widget_184)
+        self.widget_188.setObjectName("widget_188")
+        self.horizontalLayout_106 = QtWidgets.QHBoxLayout(self.widget_188)
+        self.horizontalLayout_106.setObjectName("horizontalLayout_106")
+        self.label_LineAPISettings = QtWidgets.QLabel(parent=self.widget_188)
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift Light")
+        font.setPointSize(9)
+        font.setBold(False)
+        font.setWeight(50)
+        self.label_LineAPISettings.setFont(font)
+        self.label_LineAPISettings.setObjectName("label_LineAPISettings")
+        self.horizontalLayout_106.addWidget(self.label_LineAPISettings)
+        self.verticalLayout_87.addWidget(self.widget_188)
+        self.widget_21 = QtWidgets.QWidget(parent=self.widget_184)
+        self.widget_21.setObjectName("widget_21")
+        self.verticalLayout_87.addWidget(self.widget_21)
+        self.horizontalLayout_115.addWidget(self.widget_184)
+        self.widget_189 = QtWidgets.QWidget(parent=self.widget_164)
+        self.widget_189.setMinimumSize(QtCore.QSize(400, 0))
+        self.widget_189.setMaximumSize(QtCore.QSize(400, 16777215))
+        self.widget_189.setObjectName("widget_189")
+        self.verticalLayout_88 = QtWidgets.QVBoxLayout(self.widget_189)
+        self.verticalLayout_88.setObjectName("verticalLayout_88")
+        self.widget_190 = QtWidgets.QWidget(parent=self.widget_189)
+        self.widget_190.setObjectName("widget_190")
+        self.horizontalLayout_107 = QtWidgets.QHBoxLayout(self.widget_190)
+        self.horizontalLayout_107.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_107.setSpacing(0)
+        self.horizontalLayout_107.setObjectName("horizontalLayout_107")
+        self.widget_191 = QtWidgets.QWidget(parent=self.widget_190)
+        self.widget_191.setObjectName("widget_191")
+        self.horizontalLayout_108 = QtWidgets.QHBoxLayout(self.widget_191)
+        self.horizontalLayout_108.setObjectName("horizontalLayout_108")
+        self.widget_123 = QtWidgets.QWidget(parent=self.widget_191)
+        self.widget_123.setObjectName("widget_123")
+        self.horizontalLayout_65 = QtWidgets.QHBoxLayout(self.widget_123)
+        self.horizontalLayout_65.setObjectName("horizontalLayout_65")
+        self.btn_virusTotalAPISettings = QtWidgets.QPushButton(parent=self.widget_123)
+        self.btn_virusTotalAPISettings.setEnabled(True)
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_virusTotalAPISettings.setFont(font)
+        icon13 = QtGui.QIcon()
+        icon13.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icons_virustotal.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btn_virusTotalAPISettings.setIcon(icon13)
+        self.btn_virusTotalAPISettings.setIconSize(QtCore.QSize(40, 40))
+        self.btn_virusTotalAPISettings.setObjectName("btn_virusTotalAPISettings")
+        self.horizontalLayout_65.addWidget(self.btn_virusTotalAPISettings)
+        self.horizontalLayout_108.addWidget(self.widget_123, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
+        self.widget_119 = QtWidgets.QWidget(parent=self.widget_191)
+        self.widget_119.setObjectName("widget_119")
+        self.horizontalLayout_59 = QtWidgets.QHBoxLayout(self.widget_119)
+        self.horizontalLayout_59.setObjectName("horizontalLayout_59")
+        self.btn_removeVirusTotalAPISettings = QtWidgets.QPushButton(parent=self.widget_119)
+        self.btn_removeVirusTotalAPISettings.setMinimumSize(QtCore.QSize(100, 40))
+        self.btn_removeVirusTotalAPISettings.setMaximumSize(QtCore.QSize(100, 40))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_removeVirusTotalAPISettings.setFont(font)
+        self.btn_removeVirusTotalAPISettings.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btn_removeVirusTotalAPISettings.setStyleSheet("QPushButton {    \n"
+"    border: 1px solid rgba(40,43,61,255) ;\n"
+"    border-radius: 20px;\n"
+"    padding: 5px 10px;\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
+"}\n"
+"")
+        self.btn_removeVirusTotalAPISettings.setIconSize(QtCore.QSize(0, 0))
+        self.btn_removeVirusTotalAPISettings.setObjectName("btn_removeVirusTotalAPISettings")
+        self.horizontalLayout_59.addWidget(self.btn_removeVirusTotalAPISettings)
+        self.horizontalLayout_108.addWidget(self.widget_119, 0, QtCore.Qt.AlignmentFlag.AlignRight)
+        self.horizontalLayout_107.addWidget(self.widget_191)
+        self.verticalLayout_88.addWidget(self.widget_190)
+        self.lineEdit_virusTotalAPISettings = QtWidgets.QLineEdit(parent=self.widget_189)
+        self.lineEdit_virusTotalAPISettings.setMinimumSize(QtCore.QSize(0, 30))
+        self.lineEdit_virusTotalAPISettings.setMaximumSize(QtCore.QSize(16777215, 30))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lineEdit_virusTotalAPISettings.setFont(font)
+        self.lineEdit_virusTotalAPISettings.setStyleSheet("QLineEdit {\n"
+"  border: 1px solid gray;\n"
+"  color: rgba(40,43,61,255);\n"
+"  border-radius: 5px;\n"
+"}\n"
+"\n"
+"QLineEdit:hover {\n"
+"  border: 2px solid;\n"
+"  border-color: rgba(0,143,255,255);\n"
+"}\n"
+"QLineEdit:focus {\n"
+"  border: 1px solid;\n"
+"  border-color: rgba(88,199,141,255);\n"
+"}\n"
+"")
+        self.lineEdit_virusTotalAPISettings.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.lineEdit_virusTotalAPISettings.setObjectName("lineEdit_virusTotalAPISettings")
+        self.verticalLayout_88.addWidget(self.lineEdit_virusTotalAPISettings)
+        self.widget_193 = QtWidgets.QWidget(parent=self.widget_189)
+        self.widget_193.setObjectName("widget_193")
+        self.horizontalLayout_110 = QtWidgets.QHBoxLayout(self.widget_193)
+        self.horizontalLayout_110.setObjectName("horizontalLayout_110")
+        self.label_virusTotalAPISettings = QtWidgets.QLabel(parent=self.widget_193)
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift Light")
+        font.setPointSize(9)
+        font.setBold(False)
+        font.setWeight(50)
+        self.label_virusTotalAPISettings.setFont(font)
+        self.label_virusTotalAPISettings.setObjectName("label_virusTotalAPISettings")
+        self.horizontalLayout_110.addWidget(self.label_virusTotalAPISettings)
+        self.verticalLayout_88.addWidget(self.widget_193)
+        self.horizontalLayout_115.addWidget(self.widget_189)
+        self.widget_194 = QtWidgets.QWidget(parent=self.widget_164)
+        self.widget_194.setMinimumSize(QtCore.QSize(400, 0))
+        self.widget_194.setMaximumSize(QtCore.QSize(400, 16777215))
+        self.widget_194.setObjectName("widget_194")
+        self.verticalLayout_89 = QtWidgets.QVBoxLayout(self.widget_194)
+        self.verticalLayout_89.setObjectName("verticalLayout_89")
+        self.widget_195 = QtWidgets.QWidget(parent=self.widget_194)
+        self.widget_195.setObjectName("widget_195")
+        self.horizontalLayout_111 = QtWidgets.QHBoxLayout(self.widget_195)
+        self.horizontalLayout_111.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_111.setSpacing(0)
+        self.horizontalLayout_111.setObjectName("horizontalLayout_111")
+        self.widget_196 = QtWidgets.QWidget(parent=self.widget_195)
+        self.widget_196.setObjectName("widget_196")
+        self.horizontalLayout_112 = QtWidgets.QHBoxLayout(self.widget_196)
+        self.horizontalLayout_112.setObjectName("horizontalLayout_112")
+        self.btn_themeSettings = QtWidgets.QPushButton(parent=self.widget_196)
+        self.btn_themeSettings.setEnabled(True)
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_themeSettings.setFont(font)
+        icon14 = QtGui.QIcon()
+        icon14.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icons_display.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btn_themeSettings.setIcon(icon14)
+        self.btn_themeSettings.setIconSize(QtCore.QSize(40, 40))
+        self.btn_themeSettings.setObjectName("btn_themeSettings")
+        self.horizontalLayout_112.addWidget(self.btn_themeSettings)
+        self.horizontalLayout_111.addWidget(self.widget_196)
+        self.widget_197 = QtWidgets.QWidget(parent=self.widget_195)
+        self.widget_197.setObjectName("widget_197")
+        self.horizontalLayout_113 = QtWidgets.QHBoxLayout(self.widget_197)
+        self.horizontalLayout_113.setSpacing(0)
+        self.horizontalLayout_113.setObjectName("horizontalLayout_113")
+        self.checkBox_themeSettings = QtWidgets.QCheckBox(parent=self.widget_197)
+        self.checkBox_themeSettings.setEnabled(False)
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.checkBox_themeSettings.setFont(font)
+        self.checkBox_themeSettings.setStyleSheet("QCheckBox::indicator {\n"
+"    width: 45px;\n"
+"    height: 45px;\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:checked {\n"
+"      image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:unchecked {\n"
+"     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);\n"
+"}\n"
+"")
+        self.checkBox_themeSettings.setText("")
+        self.checkBox_themeSettings.setObjectName("checkBox_themeSettings")
+        self.horizontalLayout_113.addWidget(self.checkBox_themeSettings)
+        self.horizontalLayout_111.addWidget(self.widget_197, 0, QtCore.Qt.AlignmentFlag.AlignRight)
+        self.verticalLayout_89.addWidget(self.widget_195)
+        self.widget_198 = QtWidgets.QWidget(parent=self.widget_194)
+        self.widget_198.setObjectName("widget_198")
+        self.horizontalLayout_114 = QtWidgets.QHBoxLayout(self.widget_198)
+        self.horizontalLayout_114.setObjectName("horizontalLayout_114")
+        self.label_themeSettings = QtWidgets.QLabel(parent=self.widget_198)
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift Light")
+        font.setPointSize(9)
+        font.setBold(False)
+        font.setWeight(50)
+        self.label_themeSettings.setFont(font)
+        self.label_themeSettings.setObjectName("label_themeSettings")
+        self.horizontalLayout_114.addWidget(self.label_themeSettings)
+        self.verticalLayout_89.addWidget(self.widget_198)
+        self.horizontalLayout_115.addWidget(self.widget_194)
+        self.verticalLayout_76.addWidget(self.widget_164)
+        self.btn_saveSettings = QtWidgets.QPushButton(parent=self.widget_130)
+        self.btn_saveSettings.setMinimumSize(QtCore.QSize(100, 40))
+        self.btn_saveSettings.setMaximumSize(QtCore.QSize(100, 40))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_saveSettings.setFont(font)
+        self.btn_saveSettings.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btn_saveSettings.setStyleSheet("QPushButton {    \n"
+"    border: 1px solid rgba(40,43,61,255) ;\n"
+"    border-radius: 20px;\n"
+"    padding: 5px 10px;\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
+"}\n"
+"")
+        self.btn_saveSettings.setIconSize(QtCore.QSize(0, 0))
+        self.btn_saveSettings.setObjectName("btn_saveSettings")
+        self.verticalLayout_76.addWidget(self.btn_saveSettings, 0, QtCore.Qt.AlignmentFlag.AlignRight)
+        self.horizontalLayout_61.addWidget(self.widget_130, 0, QtCore.Qt.AlignmentFlag.AlignTop)
+        self.stackedWidget.addWidget(self.page_settings)
         self.page_advancedUser = QtWidgets.QWidget()
         self.page_advancedUser.setObjectName("page_advancedUser")
         self.horizontalLayout_9 = QtWidgets.QHBoxLayout(self.page_advancedUser)
@@ -556,8 +1177,6 @@ class Ui_MainWindow(object):
 "    background-color: ;\n"
 "}\n"
 "")
-        icon8 = QtGui.QIcon()
-        icon8.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icons8-go-back-45.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.btn_backAdvancedUser.setIcon(icon8)
         self.btn_backAdvancedUser.setIconSize(QtCore.QSize(35, 35))
         self.btn_backAdvancedUser.setObjectName("btn_backAdvancedUser")
@@ -803,9 +1422,9 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         self.btn_showPassword.setText("")
-        icon9 = QtGui.QIcon()
-        icon9.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-visible.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btn_showPassword.setIcon(icon9)
+        icon15 = QtGui.QIcon()
+        icon15.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-visible.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btn_showPassword.setIcon(icon15)
         self.btn_showPassword.setIconSize(QtCore.QSize(30, 30))
         self.btn_showPassword.setObjectName("btn_showPassword")
         self.horizontalLayout_13.addWidget(self.btn_showPassword)
@@ -909,9 +1528,9 @@ class Ui_MainWindow(object):
         self.btn_infoEntropy.setMaximumSize(QtCore.QSize(30, 30))
         self.btn_infoEntropy.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_infoEntropy.setText("")
-        icon10 = QtGui.QIcon()
-        icon10.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon_info.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btn_infoEntropy.setIcon(icon10)
+        icon16 = QtGui.QIcon()
+        icon16.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon_info.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btn_infoEntropy.setIcon(icon16)
         self.btn_infoEntropy.setIconSize(QtCore.QSize(20, 20))
         self.btn_infoEntropy.setObjectName("btn_infoEntropy")
         self.horizontalLayout_39.addWidget(self.btn_infoEntropy, 0, QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignTop)
@@ -1045,9 +1664,9 @@ class Ui_MainWindow(object):
         self.chk_length.setFont(font)
         self.chk_length.setStyleSheet("color: rgba(40,43,61,255);\n"
 "border-radius: 10px;")
-        icon11 = QtGui.QIcon()
-        icon11.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\icon-no.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.chk_length.setIcon(icon11)
+        icon17 = QtGui.QIcon()
+        icon17.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\icon-no.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.chk_length.setIcon(icon17)
         self.chk_length.setIconSize(QtCore.QSize(30, 30))
         self.chk_length.setObjectName("chk_length")
         self.verticalLayout_16.addWidget(self.chk_length)
@@ -1061,7 +1680,7 @@ class Ui_MainWindow(object):
         self.chk_numeric.setFont(font)
         self.chk_numeric.setStyleSheet("color: rgba(40,43,61,255);\n"
 "border-radius: 10px;")
-        self.chk_numeric.setIcon(icon11)
+        self.chk_numeric.setIcon(icon17)
         self.chk_numeric.setIconSize(QtCore.QSize(30, 30))
         self.chk_numeric.setObjectName("chk_numeric")
         self.verticalLayout_16.addWidget(self.chk_numeric)
@@ -1075,7 +1694,7 @@ class Ui_MainWindow(object):
         self.chk_lower.setFont(font)
         self.chk_lower.setStyleSheet("color: rgba(40,43,61,255);\n"
 "border-radius: 10px;")
-        self.chk_lower.setIcon(icon11)
+        self.chk_lower.setIcon(icon17)
         self.chk_lower.setIconSize(QtCore.QSize(30, 30))
         self.chk_lower.setObjectName("chk_lower")
         self.verticalLayout_16.addWidget(self.chk_lower)
@@ -1089,7 +1708,7 @@ class Ui_MainWindow(object):
         self.chk_upper.setFont(font)
         self.chk_upper.setStyleSheet("color: rgba(40,43,61,255);\n"
 "border-radius: 10px;")
-        self.chk_upper.setIcon(icon11)
+        self.chk_upper.setIcon(icon17)
         self.chk_upper.setIconSize(QtCore.QSize(30, 30))
         self.chk_upper.setObjectName("chk_upper")
         self.verticalLayout_16.addWidget(self.chk_upper)
@@ -1104,7 +1723,7 @@ class Ui_MainWindow(object):
         self.chk_special.setFont(font)
         self.chk_special.setStyleSheet("color: rgba(40,43,61,255);\n"
 "border-radius: 10px;")
-        self.chk_special.setIcon(icon11)
+        self.chk_special.setIcon(icon17)
         self.chk_special.setIconSize(QtCore.QSize(30, 30))
         self.chk_special.setShortcut("")
         self.chk_special.setCheckable(True)
@@ -1234,7 +1853,7 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         self.btn_showPasswordDict.setText("")
-        self.btn_showPasswordDict.setIcon(icon9)
+        self.btn_showPasswordDict.setIcon(icon15)
         self.btn_showPasswordDict.setIconSize(QtCore.QSize(30, 30))
         self.btn_showPasswordDict.setObjectName("btn_showPasswordDict")
         self.horizontalLayout_18.addWidget(self.btn_showPasswordDict)
@@ -1292,9 +1911,9 @@ class Ui_MainWindow(object):
 "    background-color: ;\n"
 "}\n"
 "")
-        icon12 = QtGui.QIcon()
-        icon12.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-folder.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btn_browseDict.setIcon(icon12)
+        icon18 = QtGui.QIcon()
+        icon18.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-folder.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btn_browseDict.setIcon(icon18)
         self.btn_browseDict.setIconSize(QtCore.QSize(35, 35))
         self.btn_browseDict.setObjectName("btn_browseDict")
         self.horizontalLayout.addWidget(self.btn_browseDict)
@@ -1319,9 +1938,9 @@ class Ui_MainWindow(object):
 "    background-color: ;\n"
 "}\n"
 "")
-        icon13 = QtGui.QIcon()
-        icon13.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-clear.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btn_clearDict.setIcon(icon13)
+        icon19 = QtGui.QIcon()
+        icon19.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-clear.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btn_clearDict.setIcon(icon19)
         self.btn_clearDict.setIconSize(QtCore.QSize(35, 35))
         self.btn_clearDict.setObjectName("btn_clearDict")
         self.horizontalLayout.addWidget(self.btn_clearDict)
@@ -1331,7 +1950,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_17 = QtWidgets.QHBoxLayout(self.widget_107)
         self.horizontalLayout_17.setObjectName("horizontalLayout_17")
         self.dropdown_modeAttack = QtWidgets.QComboBox(parent=self.widget_107)
-        self.dropdown_modeAttack.setMinimumSize(QtCore.QSize(119, 45))
+        self.dropdown_modeAttack.setMinimumSize(QtCore.QSize(101, 45))
         self.dropdown_modeAttack.setMaximumSize(QtCore.QSize(260, 45))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -1375,7 +1994,7 @@ class Ui_MainWindow(object):
         self.dropdown_modeAttack.addItem("")
         self.horizontalLayout_17.addWidget(self.dropdown_modeAttack)
         self.dropdown_wordLists = QtWidgets.QComboBox(parent=self.widget_107)
-        self.dropdown_wordLists.setMinimumSize(QtCore.QSize(119, 45))
+        self.dropdown_wordLists.setMinimumSize(QtCore.QSize(101, 45))
         self.dropdown_wordLists.setMaximumSize(QtCore.QSize(270, 45))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -1439,9 +2058,9 @@ class Ui_MainWindow(object):
 "    background-color: ;\n"
 "}\n"
 "")
-        icon14 = QtGui.QIcon()
-        icon14.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon_start.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btn_start_attack.setIcon(icon14)
+        icon20 = QtGui.QIcon()
+        icon20.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon_start.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btn_start_attack.setIcon(icon20)
         self.btn_start_attack.setIconSize(QtCore.QSize(35, 35))
         self.btn_start_attack.setObjectName("btn_start_attack")
         self.horizontalLayout_17.addWidget(self.btn_start_attack)
@@ -1645,9 +2264,9 @@ class Ui_MainWindow(object):
 "    background-color: ;\n"
 "}\n"
 "")
-        icon15 = QtGui.QIcon()
-        icon15.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-scan.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btn_scanMalware.setIcon(icon15)
+        icon21 = QtGui.QIcon()
+        icon21.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-scan.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btn_scanMalware.setIcon(icon21)
         self.btn_scanMalware.setIconSize(QtCore.QSize(30, 30))
         self.btn_scanMalware.setObjectName("btn_scanMalware")
         self.horizontalLayout_34.addWidget(self.btn_scanMalware, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
@@ -1672,7 +2291,7 @@ class Ui_MainWindow(object):
 "    background-color: ;\n"
 "}\n"
 "")
-        self.btn_browseMalware.setIcon(icon12)
+        self.btn_browseMalware.setIcon(icon18)
         self.btn_browseMalware.setIconSize(QtCore.QSize(30, 30))
         self.btn_browseMalware.setObjectName("btn_browseMalware")
         self.horizontalLayout_34.addWidget(self.btn_browseMalware)
@@ -1697,7 +2316,7 @@ class Ui_MainWindow(object):
 "    background-color: ;\n"
 "}\n"
 "")
-        self.btn_clearMalware.setIcon(icon13)
+        self.btn_clearMalware.setIcon(icon19)
         self.btn_clearMalware.setIconSize(QtCore.QSize(30, 30))
         self.btn_clearMalware.setObjectName("btn_clearMalware")
         self.horizontalLayout_34.addWidget(self.btn_clearMalware, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
@@ -2162,7 +2781,7 @@ class Ui_MainWindow(object):
 "    background-color: ;\n"
 "}\n"
 "")
-        self.btn_browseMSDigest.setIcon(icon12)
+        self.btn_browseMSDigest.setIcon(icon18)
         self.btn_browseMSDigest.setIconSize(QtCore.QSize(30, 30))
         self.btn_browseMSDigest.setObjectName("btn_browseMSDigest")
         self.horizontalLayout_20.addWidget(self.btn_browseMSDigest)
@@ -2187,7 +2806,7 @@ class Ui_MainWindow(object):
 "    background-color: ;\n"
 "}\n"
 "")
-        self.btn_clearMSDigest.setIcon(icon13)
+        self.btn_clearMSDigest.setIcon(icon19)
         self.btn_clearMSDigest.setIconSize(QtCore.QSize(30, 30))
         self.btn_clearMSDigest.setObjectName("btn_clearMSDigest")
         self.horizontalLayout_20.addWidget(self.btn_clearMSDigest)
@@ -2254,7 +2873,7 @@ class Ui_MainWindow(object):
         self.btn_sha1.setObjectName("btn_sha1")
         self.horizontalLayout_21.addWidget(self.btn_sha1)
         self.dropdown_sha2 = QtWidgets.QComboBox(parent=self.widget_46)
-        self.dropdown_sha2.setMinimumSize(QtCore.QSize(119, 40))
+        self.dropdown_sha2.setMinimumSize(QtCore.QSize(101, 40))
         self.dropdown_sha2.setMaximumSize(QtCore.QSize(111, 41))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -2299,7 +2918,7 @@ class Ui_MainWindow(object):
         self.dropdown_sha2.addItem("")
         self.horizontalLayout_21.addWidget(self.dropdown_sha2)
         self.dropdown_sha3 = QtWidgets.QComboBox(parent=self.widget_46)
-        self.dropdown_sha3.setMinimumSize(QtCore.QSize(119, 40))
+        self.dropdown_sha3.setMinimumSize(QtCore.QSize(101, 40))
         self.dropdown_sha3.setMaximumSize(QtCore.QSize(111, 41))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -2455,7 +3074,7 @@ class Ui_MainWindow(object):
         self.btn_infoToken.setMaximumSize(QtCore.QSize(30, 30))
         self.btn_infoToken.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_infoToken.setText("")
-        self.btn_infoToken.setIcon(icon10)
+        self.btn_infoToken.setIcon(icon16)
         self.btn_infoToken.setIconSize(QtCore.QSize(20, 20))
         self.btn_infoToken.setObjectName("btn_infoToken")
         self.horizontalLayout_36.addWidget(self.btn_infoToken, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
@@ -2573,9 +3192,7 @@ class Ui_MainWindow(object):
 "    background-color: ;\n"
 "}\n"
 "")
-        icon16 = QtGui.QIcon()
-        icon16.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-line.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btn_lineAPI.setIcon(icon16)
+        self.btn_lineAPI.setIcon(icon12)
         self.btn_lineAPI.setIconSize(QtCore.QSize(35, 35))
         self.btn_lineAPI.setObjectName("btn_lineAPI")
         self.horizontalLayout_26.addWidget(self.btn_lineAPI)
@@ -2730,7 +3347,7 @@ class Ui_MainWindow(object):
 "")
         self.widget_64.setObjectName("widget_64")
         self.verticalLayout_37 = QtWidgets.QVBoxLayout(self.widget_64)
-        self.verticalLayout_37.setSpacing(30)
+        self.verticalLayout_37.setSpacing(40)
         self.verticalLayout_37.setObjectName("verticalLayout_37")
         self.widget_59 = QtWidgets.QWidget(parent=self.widget_64)
         self.widget_59.setMinimumSize(QtCore.QSize(1200, 70))
@@ -2823,7 +3440,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_30 = QtWidgets.QHBoxLayout(self.widget_70)
         self.horizontalLayout_30.setObjectName("horizontalLayout_30")
         self.dropdown_typeScan = QtWidgets.QComboBox(parent=self.widget_70)
-        self.dropdown_typeScan.setMinimumSize(QtCore.QSize(119, 45))
+        self.dropdown_typeScan.setMinimumSize(QtCore.QSize(101, 45))
         self.dropdown_typeScan.setMaximumSize(QtCore.QSize(190, 41))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
@@ -2918,7 +3535,7 @@ class Ui_MainWindow(object):
 "    background-color: ;\n"
 "}\n"
 "")
-        self.btn_scanVulner.setIcon(icon15)
+        self.btn_scanVulner.setIcon(icon21)
         self.btn_scanVulner.setIconSize(QtCore.QSize(30, 30))
         self.btn_scanVulner.setObjectName("btn_scanVulner")
         self.horizontalLayout_30.addWidget(self.btn_scanVulner)
@@ -2943,7 +3560,7 @@ class Ui_MainWindow(object):
 "    background-color: ;\n"
 "}\n"
 "")
-        self.btn_clearVulner.setIcon(icon13)
+        self.btn_clearVulner.setIcon(icon19)
         self.btn_clearVulner.setIconSize(QtCore.QSize(30, 30))
         self.btn_clearVulner.setObjectName("btn_clearVulner")
         self.horizontalLayout_30.addWidget(self.btn_clearVulner)
@@ -3066,7 +3683,7 @@ class Ui_MainWindow(object):
 "")
         self.btn_createReportVulner.setObjectName("btn_createReportVulner")
         self.verticalLayout_37.addWidget(self.btn_createReportVulner, 0, QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTop)
-        self.horizontalLayout_29.addWidget(self.widget_64, 0, QtCore.Qt.AlignmentFlag.AlignBottom)
+        self.horizontalLayout_29.addWidget(self.widget_64, 0, QtCore.Qt.AlignmentFlag.AlignTop)
         self.stackedWidget.addWidget(self.page_vulnerability)
         self.page_https = QtWidgets.QWidget()
         self.page_https.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.ArrowCursor))
@@ -3084,7 +3701,7 @@ class Ui_MainWindow(object):
 "")
         self.widget_71.setObjectName("widget_71")
         self.verticalLayout_42 = QtWidgets.QVBoxLayout(self.widget_71)
-        self.verticalLayout_42.setSpacing(30)
+        self.verticalLayout_42.setSpacing(40)
         self.verticalLayout_42.setObjectName("verticalLayout_42")
         self.widget_67 = QtWidgets.QWidget(parent=self.widget_71)
         self.widget_67.setMinimumSize(QtCore.QSize(1200, 70))
@@ -3197,7 +3814,7 @@ class Ui_MainWindow(object):
 "    background-color: ;\n"
 "}\n"
 "")
-        self.btn_scanHttps.setIcon(icon15)
+        self.btn_scanHttps.setIcon(icon21)
         self.btn_scanHttps.setIconSize(QtCore.QSize(30, 30))
         self.btn_scanHttps.setObjectName("btn_scanHttps")
         self.horizontalLayout_32.addWidget(self.btn_scanHttps)
@@ -3222,7 +3839,7 @@ class Ui_MainWindow(object):
 "    background-color: ;\n"
 "}\n"
 "")
-        self.btn_clearHttps.setIcon(icon13)
+        self.btn_clearHttps.setIcon(icon19)
         self.btn_clearHttps.setIconSize(QtCore.QSize(30, 30))
         self.btn_clearHttps.setObjectName("btn_clearHttps")
         self.horizontalLayout_32.addWidget(self.btn_clearHttps)
@@ -3800,6 +4417,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.btn_createReportHttps.setFont(font)
+        self.btn_createReportHttps.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_createReportHttps.setStyleSheet("QPushButton {    \n"
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
@@ -3815,47 +4433,48 @@ class Ui_MainWindow(object):
         self.verticalLayout_42.addWidget(self.btn_createReportHttps, 0, QtCore.Qt.AlignmentFlag.AlignRight)
         self.horizontalLayout_31.addWidget(self.widget_71, 0, QtCore.Qt.AlignmentFlag.AlignTop)
         self.stackedWidget.addWidget(self.page_https)
-        self.page_settings = QtWidgets.QWidget()
-        self.page_settings.setObjectName("page_settings")
-        self.horizontalLayout_61 = QtWidgets.QHBoxLayout(self.page_settings)
-        self.horizontalLayout_61.setObjectName("horizontalLayout_61")
-        self.widget_130 = QtWidgets.QWidget(parent=self.page_settings)
-        self.widget_130.setStyleSheet("QWidget#widget_135 {\n"
+        self.page_malware_email = QtWidgets.QWidget()
+        self.page_malware_email.setObjectName("page_malware_email")
+        self.horizontalLayout_66 = QtWidgets.QHBoxLayout(self.page_malware_email)
+        self.horizontalLayout_66.setObjectName("horizontalLayout_66")
+        self.widget_131 = QtWidgets.QWidget(parent=self.page_malware_email)
+        self.widget_131.setStyleSheet("QWidget#widget_140,\n"
+"QWidget#widget_143{\n"
 "    border: 1px solid rgb(237, 236, 237); /* Set the \"groove\" border style for the specific widgets */\n"
 "    background-color: rgb(237, 236, 237);\n"
 "}\n"
 "")
-        self.widget_130.setObjectName("widget_130")
-        self.verticalLayout_76 = QtWidgets.QVBoxLayout(self.widget_130)
-        self.verticalLayout_76.setSpacing(30)
-        self.verticalLayout_76.setObjectName("verticalLayout_76")
-        self.widget_135 = QtWidgets.QWidget(parent=self.widget_130)
-        self.widget_135.setMinimumSize(QtCore.QSize(1200, 70))
-        self.widget_135.setMaximumSize(QtCore.QSize(16777215, 70))
-        self.widget_135.setStyleSheet("")
-        self.widget_135.setObjectName("widget_135")
-        self.widget_136 = QtWidgets.QWidget(parent=self.widget_135)
-        self.widget_136.setGeometry(QtCore.QRect(0, 5, 152, 60))
-        self.widget_136.setMinimumSize(QtCore.QSize(0, 60))
-        self.widget_136.setMaximumSize(QtCore.QSize(16777215, 60))
-        self.widget_136.setStyleSheet("color:rgb(65,155,249);\n"
+        self.widget_131.setObjectName("widget_131")
+        self.verticalLayout_60 = QtWidgets.QVBoxLayout(self.widget_131)
+        self.verticalLayout_60.setSpacing(30)
+        self.verticalLayout_60.setObjectName("verticalLayout_60")
+        self.widget_143 = QtWidgets.QWidget(parent=self.widget_131)
+        self.widget_143.setMinimumSize(QtCore.QSize(1200, 70))
+        self.widget_143.setMaximumSize(QtCore.QSize(16777215, 70))
+        self.widget_143.setStyleSheet("")
+        self.widget_143.setObjectName("widget_143")
+        self.widget_144 = QtWidgets.QWidget(parent=self.widget_143)
+        self.widget_144.setGeometry(QtCore.QRect(0, 5, 152, 60))
+        self.widget_144.setMinimumSize(QtCore.QSize(0, 60))
+        self.widget_144.setMaximumSize(QtCore.QSize(16777215, 60))
+        self.widget_144.setStyleSheet("color:rgb(65,155,249);\n"
 "background-color: rgb(237, 236, 237);\n"
 "border-radius: 20px;")
-        self.widget_136.setObjectName("widget_136")
-        self.horizontalLayout_62 = QtWidgets.QHBoxLayout(self.widget_136)
-        self.horizontalLayout_62.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_62.setObjectName("horizontalLayout_62")
-        self.btn_backSettings = QtWidgets.QPushButton(parent=self.widget_136)
-        self.btn_backSettings.setMinimumSize(QtCore.QSize(130, 40))
-        self.btn_backSettings.setMaximumSize(QtCore.QSize(130, 40))
+        self.widget_144.setObjectName("widget_144")
+        self.horizontalLayout_73 = QtWidgets.QHBoxLayout(self.widget_144)
+        self.horizontalLayout_73.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_73.setObjectName("horizontalLayout_73")
+        self.btn_backEmail_malware = QtWidgets.QPushButton(parent=self.widget_144)
+        self.btn_backEmail_malware.setMinimumSize(QtCore.QSize(130, 40))
+        self.btn_backEmail_malware.setMaximumSize(QtCore.QSize(130, 40))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
-        self.btn_backSettings.setFont(font)
-        self.btn_backSettings.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.btn_backSettings.setStyleSheet("QPushButton {    \n"
+        self.btn_backEmail_malware.setFont(font)
+        self.btn_backEmail_malware.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btn_backEmail_malware.setStyleSheet("QPushButton {    \n"
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
@@ -3866,299 +4485,67 @@ class Ui_MainWindow(object):
 "    background-color: ;\n"
 "}\n"
 "")
-        self.btn_backSettings.setIcon(icon8)
-        self.btn_backSettings.setIconSize(QtCore.QSize(35, 35))
-        self.btn_backSettings.setObjectName("btn_backSettings")
-        self.horizontalLayout_62.addWidget(self.btn_backSettings, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
-        self.label_headofHttpstesting_2 = QtWidgets.QLabel(parent=self.widget_135)
-        self.label_headofHttpstesting_2.setGeometry(QtCore.QRect(152, 15, 500, 45))
-        self.label_headofHttpstesting_2.setMinimumSize(QtCore.QSize(500, 45))
-        self.label_headofHttpstesting_2.setMaximumSize(QtCore.QSize(500, 45))
+        self.btn_backEmail_malware.setIcon(icon8)
+        self.btn_backEmail_malware.setIconSize(QtCore.QSize(35, 35))
+        self.btn_backEmail_malware.setObjectName("btn_backEmail_malware")
+        self.horizontalLayout_73.addWidget(self.btn_backEmail_malware, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
+        self.label_headofEmail_malware = QtWidgets.QLabel(parent=self.widget_143)
+        self.label_headofEmail_malware.setGeometry(QtCore.QRect(152, 15, 600, 45))
+        self.label_headofEmail_malware.setMinimumSize(QtCore.QSize(600, 45))
+        self.label_headofEmail_malware.setMaximumSize(QtCore.QSize(800, 45))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(20)
         font.setBold(True)
         font.setWeight(75)
-        self.label_headofHttpstesting_2.setFont(font)
-        self.label_headofHttpstesting_2.setStyleSheet("color: rgb(38, 50, 56);")
-        self.label_headofHttpstesting_2.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignVCenter)
-        self.label_headofHttpstesting_2.setIndent(20)
-        self.label_headofHttpstesting_2.setObjectName("label_headofHttpstesting_2")
-        self.verticalLayout_76.addWidget(self.widget_135)
-        self.widget_129 = QtWidgets.QWidget(parent=self.widget_130)
-        self.widget_129.setObjectName("widget_129")
-        self.horizontalLayout_102 = QtWidgets.QHBoxLayout(self.widget_129)
-        self.horizontalLayout_102.setContentsMargins(-1, -1, -1, 11)
-        self.horizontalLayout_102.setSpacing(0)
-        self.horizontalLayout_102.setObjectName("horizontalLayout_102")
-        self.widget_165 = QtWidgets.QWidget(parent=self.widget_129)
-        self.widget_165.setMinimumSize(QtCore.QSize(400, 0))
-        self.widget_165.setMaximumSize(QtCore.QSize(400, 16777215))
-        self.widget_165.setObjectName("widget_165")
-        self.verticalLayout_84 = QtWidgets.QVBoxLayout(self.widget_165)
-        self.verticalLayout_84.setObjectName("verticalLayout_84")
-        self.widget_170 = QtWidgets.QWidget(parent=self.widget_165)
-        self.widget_170.setObjectName("widget_170")
-        self.horizontalLayout_90 = QtWidgets.QHBoxLayout(self.widget_170)
-        self.horizontalLayout_90.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_90.setSpacing(0)
-        self.horizontalLayout_90.setObjectName("horizontalLayout_90")
-        self.widget_171 = QtWidgets.QWidget(parent=self.widget_170)
-        self.widget_171.setObjectName("widget_171")
-        self.horizontalLayout_91 = QtWidgets.QHBoxLayout(self.widget_171)
-        self.horizontalLayout_91.setObjectName("horizontalLayout_91")
-        self.btn_notificationSettings = QtWidgets.QPushButton(parent=self.widget_171)
-        self.btn_notificationSettings.setEnabled(True)
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.btn_notificationSettings.setFont(font)
-        icon17 = QtGui.QIcon()
-        icon17.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon_notification.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btn_notificationSettings.setIcon(icon17)
-        self.btn_notificationSettings.setIconSize(QtCore.QSize(40, 40))
-        self.btn_notificationSettings.setObjectName("btn_notificationSettings")
-        self.horizontalLayout_91.addWidget(self.btn_notificationSettings)
-        self.horizontalLayout_90.addWidget(self.widget_171)
-        self.widget_172 = QtWidgets.QWidget(parent=self.widget_170)
-        self.widget_172.setObjectName("widget_172")
-        self.horizontalLayout_92 = QtWidgets.QHBoxLayout(self.widget_172)
-        self.horizontalLayout_92.setSpacing(0)
-        self.horizontalLayout_92.setObjectName("horizontalLayout_92")
-        self.checkBox_notificationSettings = QtWidgets.QCheckBox(parent=self.widget_172)
-        self.checkBox_notificationSettings.setStyleSheet("QCheckBox::indicator {\n"
-"    width: 45px;\n"
-"    height: 45px;\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:checked {\n"
-"      image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:unchecked {\n"
-"     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);\n"
-"}\n"
-"")
-        self.checkBox_notificationSettings.setText("")
-        self.checkBox_notificationSettings.setObjectName("checkBox_notificationSettings")
-        self.horizontalLayout_92.addWidget(self.checkBox_notificationSettings)
-        self.horizontalLayout_90.addWidget(self.widget_172, 0, QtCore.Qt.AlignmentFlag.AlignRight)
-        self.verticalLayout_84.addWidget(self.widget_170)
-        self.widget_173 = QtWidgets.QWidget(parent=self.widget_165)
-        self.widget_173.setObjectName("widget_173")
-        self.horizontalLayout_93 = QtWidgets.QHBoxLayout(self.widget_173)
-        self.horizontalLayout_93.setObjectName("horizontalLayout_93")
-        self.label_notifucationSettings = QtWidgets.QLabel(parent=self.widget_173)
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift Light")
-        font.setPointSize(9)
-        font.setBold(False)
-        font.setWeight(50)
-        self.label_notifucationSettings.setFont(font)
-        self.label_notifucationSettings.setObjectName("label_notifucationSettings")
-        self.horizontalLayout_93.addWidget(self.label_notifucationSettings)
-        self.verticalLayout_84.addWidget(self.widget_173)
-        self.horizontalLayout_102.addWidget(self.widget_165)
-        self.widget_174 = QtWidgets.QWidget(parent=self.widget_129)
-        self.widget_174.setMinimumSize(QtCore.QSize(400, 0))
-        self.widget_174.setMaximumSize(QtCore.QSize(400, 16777215))
-        self.widget_174.setObjectName("widget_174")
-        self.verticalLayout_85 = QtWidgets.QVBoxLayout(self.widget_174)
-        self.verticalLayout_85.setObjectName("verticalLayout_85")
-        self.widget_175 = QtWidgets.QWidget(parent=self.widget_174)
-        self.widget_175.setObjectName("widget_175")
-        self.horizontalLayout_94 = QtWidgets.QHBoxLayout(self.widget_175)
-        self.horizontalLayout_94.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_94.setSpacing(0)
-        self.horizontalLayout_94.setObjectName("horizontalLayout_94")
-        self.widget_176 = QtWidgets.QWidget(parent=self.widget_175)
-        self.widget_176.setObjectName("widget_176")
-        self.horizontalLayout_95 = QtWidgets.QHBoxLayout(self.widget_176)
-        self.horizontalLayout_95.setObjectName("horizontalLayout_95")
-        self.btn_languageSettings = QtWidgets.QPushButton(parent=self.widget_176)
-        self.btn_languageSettings.setEnabled(True)
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.btn_languageSettings.setFont(font)
-        icon18 = QtGui.QIcon()
-        icon18.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icons_language.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btn_languageSettings.setIcon(icon18)
-        self.btn_languageSettings.setIconSize(QtCore.QSize(40, 40))
-        self.btn_languageSettings.setObjectName("btn_languageSettings")
-        self.horizontalLayout_95.addWidget(self.btn_languageSettings)
-        self.horizontalLayout_94.addWidget(self.widget_176)
-        self.widget_177 = QtWidgets.QWidget(parent=self.widget_175)
-        self.widget_177.setObjectName("widget_177")
-        self.horizontalLayout_96 = QtWidgets.QHBoxLayout(self.widget_177)
-        self.horizontalLayout_96.setSpacing(0)
-        self.horizontalLayout_96.setObjectName("horizontalLayout_96")
-        self.checkBox_btn_languageSettings = QtWidgets.QCheckBox(parent=self.widget_177)
-        self.checkBox_btn_languageSettings.setEnabled(False)
-        self.checkBox_btn_languageSettings.setStyleSheet("QCheckBox::indicator {\n"
-"    width: 45px;\n"
-"    height: 45px;\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:checked {\n"
-"      image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:unchecked {\n"
-"     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);\n"
-"}\n"
-"")
-        self.checkBox_btn_languageSettings.setText("")
-        self.checkBox_btn_languageSettings.setObjectName("checkBox_btn_languageSettings")
-        self.horizontalLayout_96.addWidget(self.checkBox_btn_languageSettings)
-        self.horizontalLayout_94.addWidget(self.widget_177, 0, QtCore.Qt.AlignmentFlag.AlignRight)
-        self.verticalLayout_85.addWidget(self.widget_175)
-        self.widget_178 = QtWidgets.QWidget(parent=self.widget_174)
-        self.widget_178.setObjectName("widget_178")
-        self.horizontalLayout_97 = QtWidgets.QHBoxLayout(self.widget_178)
-        self.horizontalLayout_97.setObjectName("horizontalLayout_97")
-        self.label_btn_languageSettings = QtWidgets.QLabel(parent=self.widget_178)
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift Light")
-        font.setPointSize(9)
-        font.setBold(False)
-        font.setWeight(50)
-        self.label_btn_languageSettings.setFont(font)
-        self.label_btn_languageSettings.setObjectName("label_btn_languageSettings")
-        self.horizontalLayout_97.addWidget(self.label_btn_languageSettings)
-        self.verticalLayout_85.addWidget(self.widget_178)
-        self.horizontalLayout_102.addWidget(self.widget_174)
-        self.widget_179 = QtWidgets.QWidget(parent=self.widget_129)
-        self.widget_179.setMinimumSize(QtCore.QSize(0, 0))
-        self.widget_179.setMaximumSize(QtCore.QSize(400, 16777215))
-        self.widget_179.setObjectName("widget_179")
-        self.verticalLayout_86 = QtWidgets.QVBoxLayout(self.widget_179)
-        self.verticalLayout_86.setObjectName("verticalLayout_86")
-        self.widget_180 = QtWidgets.QWidget(parent=self.widget_179)
-        self.widget_180.setObjectName("widget_180")
-        self.horizontalLayout_98 = QtWidgets.QHBoxLayout(self.widget_180)
-        self.horizontalLayout_98.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_98.setSpacing(0)
-        self.horizontalLayout_98.setObjectName("horizontalLayout_98")
-        self.widget_181 = QtWidgets.QWidget(parent=self.widget_180)
-        self.widget_181.setObjectName("widget_181")
-        self.horizontalLayout_99 = QtWidgets.QHBoxLayout(self.widget_181)
-        self.horizontalLayout_99.setObjectName("horizontalLayout_99")
-        self.btn_soundSettings = QtWidgets.QPushButton(parent=self.widget_181)
-        self.btn_soundSettings.setEnabled(True)
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.btn_soundSettings.setFont(font)
-        icon19 = QtGui.QIcon()
-        icon19.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icons_sound.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btn_soundSettings.setIcon(icon19)
-        self.btn_soundSettings.setIconSize(QtCore.QSize(40, 40))
-        self.btn_soundSettings.setObjectName("btn_soundSettings")
-        self.horizontalLayout_99.addWidget(self.btn_soundSettings)
-        self.horizontalLayout_98.addWidget(self.widget_181)
-        self.widget_182 = QtWidgets.QWidget(parent=self.widget_180)
-        self.widget_182.setObjectName("widget_182")
-        self.horizontalLayout_100 = QtWidgets.QHBoxLayout(self.widget_182)
-        self.horizontalLayout_100.setSpacing(0)
-        self.horizontalLayout_100.setObjectName("horizontalLayout_100")
-        self.checkBox_soundSettings = QtWidgets.QCheckBox(parent=self.widget_182)
-        self.checkBox_soundSettings.setStyleSheet("QCheckBox::indicator {\n"
-"    width: 45px;\n"
-"    height: 45px;\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:checked {\n"
-"      image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:unchecked {\n"
-"     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);\n"
-"}\n"
-"")
-        self.checkBox_soundSettings.setText("")
-        self.checkBox_soundSettings.setObjectName("checkBox_soundSettings")
-        self.horizontalLayout_100.addWidget(self.checkBox_soundSettings)
-        self.horizontalLayout_98.addWidget(self.widget_182, 0, QtCore.Qt.AlignmentFlag.AlignRight)
-        self.verticalLayout_86.addWidget(self.widget_180)
-        self.widget_183 = QtWidgets.QWidget(parent=self.widget_179)
-        font = QtGui.QFont()
-        font.setPointSize(9)
-        self.widget_183.setFont(font)
-        self.widget_183.setObjectName("widget_183")
-        self.horizontalLayout_101 = QtWidgets.QHBoxLayout(self.widget_183)
-        self.horizontalLayout_101.setObjectName("horizontalLayout_101")
-        self.label_10 = QtWidgets.QLabel(parent=self.widget_183)
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift Light")
-        font.setPointSize(10)
-        font.setBold(False)
-        font.setWeight(50)
-        self.label_10.setFont(font)
-        self.label_10.setObjectName("label_10")
-        self.horizontalLayout_101.addWidget(self.label_10)
-        self.verticalLayout_86.addWidget(self.widget_183)
-        self.horizontalLayout_102.addWidget(self.widget_179)
-        self.verticalLayout_76.addWidget(self.widget_129)
-        self.widget_164 = QtWidgets.QWidget(parent=self.widget_130)
-        self.widget_164.setObjectName("widget_164")
-        self.horizontalLayout_115 = QtWidgets.QHBoxLayout(self.widget_164)
-        self.horizontalLayout_115.setSpacing(0)
-        self.horizontalLayout_115.setObjectName("horizontalLayout_115")
-        self.widget_184 = QtWidgets.QWidget(parent=self.widget_164)
-        self.widget_184.setMinimumSize(QtCore.QSize(400, 0))
-        self.widget_184.setMaximumSize(QtCore.QSize(400, 16777215))
-        self.widget_184.setObjectName("widget_184")
-        self.verticalLayout_87 = QtWidgets.QVBoxLayout(self.widget_184)
-        self.verticalLayout_87.setObjectName("verticalLayout_87")
-        self.widget_185 = QtWidgets.QWidget(parent=self.widget_184)
-        self.widget_185.setObjectName("widget_185")
-        self.horizontalLayout_103 = QtWidgets.QHBoxLayout(self.widget_185)
-        self.horizontalLayout_103.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_103.setSpacing(0)
-        self.horizontalLayout_103.setObjectName("horizontalLayout_103")
-        self.widget_186 = QtWidgets.QWidget(parent=self.widget_185)
-        self.widget_186.setObjectName("widget_186")
-        self.horizontalLayout_104 = QtWidgets.QHBoxLayout(self.widget_186)
-        self.horizontalLayout_104.setObjectName("horizontalLayout_104")
-        self.widget_118 = QtWidgets.QWidget(parent=self.widget_186)
-        self.widget_118.setObjectName("widget_118")
-        self.horizontalLayout_41 = QtWidgets.QHBoxLayout(self.widget_118)
-        self.horizontalLayout_41.setObjectName("horizontalLayout_41")
-        self.btn_LineAPISettings = QtWidgets.QPushButton(parent=self.widget_118)
-        self.btn_LineAPISettings.setEnabled(True)
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.btn_LineAPISettings.setFont(font)
-        self.btn_LineAPISettings.setIcon(icon16)
-        self.btn_LineAPISettings.setIconSize(QtCore.QSize(40, 40))
-        self.btn_LineAPISettings.setObjectName("btn_LineAPISettings")
-        self.horizontalLayout_41.addWidget(self.btn_LineAPISettings)
-        self.horizontalLayout_104.addWidget(self.widget_118)
-        self.widget_100 = QtWidgets.QWidget(parent=self.widget_186)
-        self.widget_100.setObjectName("widget_100")
-        self.horizontalLayout_35 = QtWidgets.QHBoxLayout(self.widget_100)
-        self.horizontalLayout_35.setObjectName("horizontalLayout_35")
-        self.btn_removeLineAPISettings = QtWidgets.QPushButton(parent=self.widget_100)
-        self.btn_removeLineAPISettings.setMinimumSize(QtCore.QSize(100, 40))
-        self.btn_removeLineAPISettings.setMaximumSize(QtCore.QSize(100, 40))
+        self.label_headofEmail_malware.setFont(font)
+        self.label_headofEmail_malware.setStyleSheet("color: rgb(38, 50, 56);")
+        self.label_headofEmail_malware.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_headofEmail_malware.setIndent(20)
+        self.label_headofEmail_malware.setObjectName("label_headofEmail_malware")
+        self.verticalLayout_60.addWidget(self.widget_143)
+        self.widget_145 = QtWidgets.QWidget(parent=self.widget_131)
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
-        self.btn_removeLineAPISettings.setFont(font)
-        self.btn_removeLineAPISettings.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.btn_removeLineAPISettings.setStyleSheet("QPushButton {    \n"
+        self.widget_145.setFont(font)
+        self.widget_145.setObjectName("widget_145")
+        self.horizontalLayout_74 = QtWidgets.QHBoxLayout(self.widget_145)
+        self.horizontalLayout_74.setObjectName("horizontalLayout_74")
+        self.widget_133 = QtWidgets.QWidget(parent=self.widget_145)
+        self.widget_133.setObjectName("widget_133")
+        self.verticalLayout_72 = QtWidgets.QVBoxLayout(self.widget_133)
+        self.verticalLayout_72.setObjectName("verticalLayout_72")
+        self.widget_146 = QtWidgets.QWidget(parent=self.widget_133)
+        self.widget_146.setObjectName("widget_146")
+        self.horizontalLayout_75 = QtWidgets.QHBoxLayout(self.widget_146)
+        self.horizontalLayout_75.setObjectName("horizontalLayout_75")
+        self.label_Report_malware = QtWidgets.QLabel(parent=self.widget_146)
+        self.label_Report_malware.setMinimumSize(QtCore.QSize(400, 500))
+        self.label_Report_malware.setMaximumSize(QtCore.QSize(400, 500))
+        self.label_Report_malware.setText("")
+        self.label_Report_malware.setPixmap(QtGui.QPixmap("C:/Users/kanja/OneDrive/Pictures/Screenshots/Screenshot 2023-10-16 152325.png"))
+        self.label_Report_malware.setScaledContents(True)
+        self.label_Report_malware.setObjectName("label_Report_malware")
+        self.horizontalLayout_75.addWidget(self.label_Report_malware)
+        self.verticalLayout_72.addWidget(self.widget_146)
+        self.widget_147 = QtWidgets.QWidget(parent=self.widget_133)
+        self.widget_147.setObjectName("widget_147")
+        self.horizontalLayout_76 = QtWidgets.QHBoxLayout(self.widget_147)
+        self.horizontalLayout_76.setObjectName("horizontalLayout_76")
+        self.btn_backReport_malware = QtWidgets.QPushButton(parent=self.widget_147)
+        self.btn_backReport_malware.setMinimumSize(QtCore.QSize(100, 40))
+        self.btn_backReport_malware.setMaximumSize(QtCore.QSize(100, 40))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_backReport_malware.setFont(font)
+        self.btn_backReport_malware.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btn_backReport_malware.setStyleSheet("QPushButton {    \n"
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
@@ -4169,22 +4556,114 @@ class Ui_MainWindow(object):
 "    background-color: ;\n"
 "}\n"
 "")
-        self.btn_removeLineAPISettings.setIconSize(QtCore.QSize(0, 0))
-        self.btn_removeLineAPISettings.setObjectName("btn_removeLineAPISettings")
-        self.horizontalLayout_35.addWidget(self.btn_removeLineAPISettings)
-        self.horizontalLayout_104.addWidget(self.widget_100, 0, QtCore.Qt.AlignmentFlag.AlignRight)
-        self.horizontalLayout_103.addWidget(self.widget_186)
-        self.verticalLayout_87.addWidget(self.widget_185)
-        self.lineEdit_LineAPISettings = QtWidgets.QLineEdit(parent=self.widget_184)
-        self.lineEdit_LineAPISettings.setMinimumSize(QtCore.QSize(0, 30))
-        self.lineEdit_LineAPISettings.setMaximumSize(QtCore.QSize(16777215, 30))
+        icon22 = QtGui.QIcon()
+        icon22.addPixmap(QtGui.QPixmap("C:/Users/kanja/Downloads/icon_back.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btn_backReport_malware.setIcon(icon22)
+        self.btn_backReport_malware.setIconSize(QtCore.QSize(35, 35))
+        self.btn_backReport_malware.setObjectName("btn_backReport_malware")
+        self.horizontalLayout_76.addWidget(self.btn_backReport_malware)
+        self.label_countPageReport_malware = QtWidgets.QLabel(parent=self.widget_147)
+        self.label_countPageReport_malware.setMinimumSize(QtCore.QSize(40, 30))
+        self.label_countPageReport_malware.setMaximumSize(QtCore.QSize(40, 30))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_countPageReport_malware.setFont(font)
+        self.label_countPageReport_malware.setStyleSheet("QLabel {\n"
+"  border: 1px solid gray;\n"
+"  color: rgba(40,43,61,255);\n"
+"  border-radius: 5px;\n"
+"}\n"
+"\n"
+"")
+        self.label_countPageReport_malware.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_countPageReport_malware.setObjectName("label_countPageReport_malware")
+        self.horizontalLayout_76.addWidget(self.label_countPageReport_malware)
+        self.btn_nextReport_malware = QtWidgets.QPushButton(parent=self.widget_147)
+        self.btn_nextReport_malware.setMinimumSize(QtCore.QSize(100, 40))
+        self.btn_nextReport_malware.setMaximumSize(QtCore.QSize(100, 40))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
-        self.lineEdit_LineAPISettings.setFont(font)
-        self.lineEdit_LineAPISettings.setStyleSheet("QLineEdit {\n"
+        self.btn_nextReport_malware.setFont(font)
+        self.btn_nextReport_malware.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btn_nextReport_malware.setLayoutDirection(QtCore.Qt.LayoutDirection.RightToLeft)
+        self.btn_nextReport_malware.setStyleSheet("QPushButton {    \n"
+"    border: 1px solid rgba(40,43,61,255) ;\n"
+"    border-radius: 20px;\n"
+"    padding: 5px 10px;\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
+"}\n"
+"")
+        icon23 = QtGui.QIcon()
+        icon23.addPixmap(QtGui.QPixmap("C:/Users/kanja/Downloads/icon_next.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.btn_nextReport_malware.setIcon(icon23)
+        self.btn_nextReport_malware.setIconSize(QtCore.QSize(35, 35))
+        self.btn_nextReport_malware.setObjectName("btn_nextReport_malware")
+        self.horizontalLayout_76.addWidget(self.btn_nextReport_malware)
+        self.verticalLayout_72.addWidget(self.widget_147, 0, QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignTop)
+        self.horizontalLayout_74.addWidget(self.widget_133)
+        self.widget_148 = QtWidgets.QWidget(parent=self.widget_145)
+        self.widget_148.setMinimumSize(QtCore.QSize(100, 570))
+        self.widget_148.setMaximumSize(QtCore.QSize(16777215, 570))
+        self.widget_148.setStyleSheet("")
+        self.widget_148.setObjectName("widget_148")
+        self.horizontalLayout_77 = QtWidgets.QHBoxLayout(self.widget_148)
+        self.horizontalLayout_77.setObjectName("horizontalLayout_77")
+        self.widget_149 = QtWidgets.QWidget(parent=self.widget_148)
+        self.widget_149.setMinimumSize(QtCore.QSize(0, 150))
+        self.widget_149.setMaximumSize(QtCore.QSize(16777215, 150))
+        self.widget_149.setObjectName("widget_149")
+        self.verticalLayout_66 = QtWidgets.QVBoxLayout(self.widget_149)
+        self.verticalLayout_66.setObjectName("verticalLayout_66")
+        self.label_to_malware = QtWidgets.QLabel(parent=self.widget_149)
+        self.label_to_malware.setMinimumSize(QtCore.QSize(0, 0))
+        self.label_to_malware.setMaximumSize(QtCore.QSize(16777215, 30))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_to_malware.setFont(font)
+        self.label_to_malware.setObjectName("label_to_malware")
+        self.verticalLayout_66.addWidget(self.label_to_malware)
+        self.label_subject_malware = QtWidgets.QLabel(parent=self.widget_149)
+        self.label_subject_malware.setMinimumSize(QtCore.QSize(0, 0))
+        self.label_subject_malware.setMaximumSize(QtCore.QSize(16777215, 30))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_subject_malware.setFont(font)
+        self.label_subject_malware.setObjectName("label_subject_malware")
+        self.verticalLayout_66.addWidget(self.label_subject_malware)
+        self.horizontalLayout_77.addWidget(self.widget_149, 0, QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTop)
+        self.widget_150 = QtWidgets.QWidget(parent=self.widget_148)
+        self.widget_150.setObjectName("widget_150")
+        self.verticalLayout_11 = QtWidgets.QVBoxLayout(self.widget_150)
+        self.verticalLayout_11.setObjectName("verticalLayout_11")
+        self.label_header_email_malware = QtWidgets.QLabel(parent=self.widget_150)
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_header_email_malware.setFont(font)
+        self.label_header_email_malware.setObjectName("label_header_email_malware")
+        self.verticalLayout_11.addWidget(self.label_header_email_malware)
+        self.lineEdit_to_email_malware = QtWidgets.QLineEdit(parent=self.widget_150)
+        self.lineEdit_to_email_malware.setMinimumSize(QtCore.QSize(600, 40))
+        self.lineEdit_to_email_malware.setMaximumSize(QtCore.QSize(600, 40))
+        self.lineEdit_to_email_malware.setStyleSheet("QLineEdit {\n"
 "  border: 1px solid gray;\n"
 "  color: rgba(40,43,61,255);\n"
 "  border-radius: 5px;\n"
@@ -4199,103 +4678,12 @@ class Ui_MainWindow(object):
 "  border-color: rgba(88,199,141,255);\n"
 "}\n"
 "")
-        self.lineEdit_LineAPISettings.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.lineEdit_LineAPISettings.setObjectName("lineEdit_LineAPISettings")
-        self.verticalLayout_87.addWidget(self.lineEdit_LineAPISettings)
-        self.widget_188 = QtWidgets.QWidget(parent=self.widget_184)
-        self.widget_188.setObjectName("widget_188")
-        self.horizontalLayout_106 = QtWidgets.QHBoxLayout(self.widget_188)
-        self.horizontalLayout_106.setObjectName("horizontalLayout_106")
-        self.label_LineAPISettings = QtWidgets.QLabel(parent=self.widget_188)
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift Light")
-        font.setPointSize(9)
-        font.setBold(False)
-        font.setWeight(50)
-        self.label_LineAPISettings.setFont(font)
-        self.label_LineAPISettings.setObjectName("label_LineAPISettings")
-        self.horizontalLayout_106.addWidget(self.label_LineAPISettings)
-        self.verticalLayout_87.addWidget(self.widget_188)
-        self.widget_21 = QtWidgets.QWidget(parent=self.widget_184)
-        self.widget_21.setObjectName("widget_21")
-        self.verticalLayout_87.addWidget(self.widget_21)
-        self.horizontalLayout_115.addWidget(self.widget_184)
-        self.widget_189 = QtWidgets.QWidget(parent=self.widget_164)
-        self.widget_189.setMinimumSize(QtCore.QSize(400, 0))
-        self.widget_189.setMaximumSize(QtCore.QSize(400, 16777215))
-        self.widget_189.setObjectName("widget_189")
-        self.verticalLayout_88 = QtWidgets.QVBoxLayout(self.widget_189)
-        self.verticalLayout_88.setObjectName("verticalLayout_88")
-        self.widget_190 = QtWidgets.QWidget(parent=self.widget_189)
-        self.widget_190.setObjectName("widget_190")
-        self.horizontalLayout_107 = QtWidgets.QHBoxLayout(self.widget_190)
-        self.horizontalLayout_107.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_107.setSpacing(0)
-        self.horizontalLayout_107.setObjectName("horizontalLayout_107")
-        self.widget_191 = QtWidgets.QWidget(parent=self.widget_190)
-        self.widget_191.setObjectName("widget_191")
-        self.horizontalLayout_108 = QtWidgets.QHBoxLayout(self.widget_191)
-        self.horizontalLayout_108.setObjectName("horizontalLayout_108")
-        self.widget_123 = QtWidgets.QWidget(parent=self.widget_191)
-        self.widget_123.setObjectName("widget_123")
-        self.horizontalLayout_65 = QtWidgets.QHBoxLayout(self.widget_123)
-        self.horizontalLayout_65.setObjectName("horizontalLayout_65")
-        self.btn_virusTotalAPISettings = QtWidgets.QPushButton(parent=self.widget_123)
-        self.btn_virusTotalAPISettings.setEnabled(True)
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.btn_virusTotalAPISettings.setFont(font)
-        icon20 = QtGui.QIcon()
-        icon20.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icons_virustotal.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btn_virusTotalAPISettings.setIcon(icon20)
-        self.btn_virusTotalAPISettings.setIconSize(QtCore.QSize(40, 40))
-        self.btn_virusTotalAPISettings.setObjectName("btn_virusTotalAPISettings")
-        self.horizontalLayout_65.addWidget(self.btn_virusTotalAPISettings)
-        self.horizontalLayout_108.addWidget(self.widget_123, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
-        self.widget_119 = QtWidgets.QWidget(parent=self.widget_191)
-        self.widget_119.setObjectName("widget_119")
-        self.horizontalLayout_59 = QtWidgets.QHBoxLayout(self.widget_119)
-        self.horizontalLayout_59.setObjectName("horizontalLayout_59")
-        self.btn_removeVirusTotalAPISettings = QtWidgets.QPushButton(parent=self.widget_119)
-        self.btn_removeVirusTotalAPISettings.setMinimumSize(QtCore.QSize(100, 40))
-        self.btn_removeVirusTotalAPISettings.setMaximumSize(QtCore.QSize(100, 40))
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(12)
-        font.setBold(True)
-        font.setWeight(75)
-        self.btn_removeVirusTotalAPISettings.setFont(font)
-        self.btn_removeVirusTotalAPISettings.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.btn_removeVirusTotalAPISettings.setStyleSheet("QPushButton {    \n"
-"    border: 1px solid rgba(40,43,61,255) ;\n"
-"    border-radius: 20px;\n"
-"    padding: 5px 10px;\n"
-"    color: rgba(40,43,61,255) ;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background-color: ;\n"
-"}\n"
-"")
-        self.btn_removeVirusTotalAPISettings.setIconSize(QtCore.QSize(0, 0))
-        self.btn_removeVirusTotalAPISettings.setObjectName("btn_removeVirusTotalAPISettings")
-        self.horizontalLayout_59.addWidget(self.btn_removeVirusTotalAPISettings)
-        self.horizontalLayout_108.addWidget(self.widget_119, 0, QtCore.Qt.AlignmentFlag.AlignRight)
-        self.horizontalLayout_107.addWidget(self.widget_191)
-        self.verticalLayout_88.addWidget(self.widget_190)
-        self.lineEdit_virusTotalAPISettings = QtWidgets.QLineEdit(parent=self.widget_189)
-        self.lineEdit_virusTotalAPISettings.setMinimumSize(QtCore.QSize(0, 30))
-        self.lineEdit_virusTotalAPISettings.setMaximumSize(QtCore.QSize(16777215, 30))
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.lineEdit_virusTotalAPISettings.setFont(font)
-        self.lineEdit_virusTotalAPISettings.setStyleSheet("QLineEdit {\n"
+        self.lineEdit_to_email_malware.setObjectName("lineEdit_to_email_malware")
+        self.verticalLayout_11.addWidget(self.lineEdit_to_email_malware)
+        self.lineEdit_subject_email_malware = QtWidgets.QLineEdit(parent=self.widget_150)
+        self.lineEdit_subject_email_malware.setMinimumSize(QtCore.QSize(600, 40))
+        self.lineEdit_subject_email_malware.setMaximumSize(QtCore.QSize(600, 40))
+        self.lineEdit_subject_email_malware.setStyleSheet("QLineEdit {\n"
 "  border: 1px solid gray;\n"
 "  color: rgba(40,43,61,255);\n"
 "  border-radius: 5px;\n"
@@ -4310,113 +4698,60 @@ class Ui_MainWindow(object):
 "  border-color: rgba(88,199,141,255);\n"
 "}\n"
 "")
-        self.lineEdit_virusTotalAPISettings.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.lineEdit_virusTotalAPISettings.setObjectName("lineEdit_virusTotalAPISettings")
-        self.verticalLayout_88.addWidget(self.lineEdit_virusTotalAPISettings)
-        self.widget_193 = QtWidgets.QWidget(parent=self.widget_189)
-        self.widget_193.setObjectName("widget_193")
-        self.horizontalLayout_110 = QtWidgets.QHBoxLayout(self.widget_193)
-        self.horizontalLayout_110.setObjectName("horizontalLayout_110")
-        self.label_virusTotalAPISettings = QtWidgets.QLabel(parent=self.widget_193)
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift Light")
-        font.setPointSize(9)
-        font.setBold(False)
-        font.setWeight(50)
-        self.label_virusTotalAPISettings.setFont(font)
-        self.label_virusTotalAPISettings.setObjectName("label_virusTotalAPISettings")
-        self.horizontalLayout_110.addWidget(self.label_virusTotalAPISettings)
-        self.verticalLayout_88.addWidget(self.widget_193)
-        self.horizontalLayout_115.addWidget(self.widget_189)
-        self.widget_194 = QtWidgets.QWidget(parent=self.widget_164)
-        self.widget_194.setMinimumSize(QtCore.QSize(400, 0))
-        self.widget_194.setMaximumSize(QtCore.QSize(400, 16777215))
-        self.widget_194.setObjectName("widget_194")
-        self.verticalLayout_89 = QtWidgets.QVBoxLayout(self.widget_194)
-        self.verticalLayout_89.setObjectName("verticalLayout_89")
-        self.widget_195 = QtWidgets.QWidget(parent=self.widget_194)
-        self.widget_195.setObjectName("widget_195")
-        self.horizontalLayout_111 = QtWidgets.QHBoxLayout(self.widget_195)
-        self.horizontalLayout_111.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_111.setSpacing(0)
-        self.horizontalLayout_111.setObjectName("horizontalLayout_111")
-        self.widget_196 = QtWidgets.QWidget(parent=self.widget_195)
-        self.widget_196.setObjectName("widget_196")
-        self.horizontalLayout_112 = QtWidgets.QHBoxLayout(self.widget_196)
-        self.horizontalLayout_112.setObjectName("horizontalLayout_112")
-        self.btn_themeSettings = QtWidgets.QPushButton(parent=self.widget_196)
-        self.btn_themeSettings.setEnabled(True)
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.btn_themeSettings.setFont(font)
-        icon21 = QtGui.QIcon()
-        icon21.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icons_display.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btn_themeSettings.setIcon(icon21)
-        self.btn_themeSettings.setIconSize(QtCore.QSize(40, 40))
-        self.btn_themeSettings.setObjectName("btn_themeSettings")
-        self.horizontalLayout_112.addWidget(self.btn_themeSettings)
-        self.horizontalLayout_111.addWidget(self.widget_196)
-        self.widget_197 = QtWidgets.QWidget(parent=self.widget_195)
-        self.widget_197.setObjectName("widget_197")
-        self.horizontalLayout_113 = QtWidgets.QHBoxLayout(self.widget_197)
-        self.horizontalLayout_113.setSpacing(0)
-        self.horizontalLayout_113.setObjectName("horizontalLayout_113")
-        self.checkBox_themeSettings = QtWidgets.QCheckBox(parent=self.widget_197)
-        self.checkBox_themeSettings.setEnabled(False)
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift SemiBold")
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.checkBox_themeSettings.setFont(font)
-        self.checkBox_themeSettings.setStyleSheet("QCheckBox::indicator {\n"
-"    width: 45px;\n"
-"    height: 45px;\n"
+        self.lineEdit_subject_email_malware.setObjectName("lineEdit_subject_email_malware")
+        self.verticalLayout_11.addWidget(self.lineEdit_subject_email_malware)
+        self.textEdit_body_email_malware = QtWidgets.QTextEdit(parent=self.widget_150)
+        self.textEdit_body_email_malware.setMinimumSize(QtCore.QSize(0, 300))
+        self.textEdit_body_email_malware.setStyleSheet("QTextEdit {\n"
+"  border: 1px solid gray;\n"
+"  color: rgba(40,43,61,255);\n"
+"  border-radius: 5px;\n"
 "}\n"
 "\n"
-"QCheckBox::indicator:checked {\n"
-"      image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);\n"
+"QTextEdit:hover {\n"
+"  border: 2px solid;\n"
+"  border-color: rgba(0,143,255,255);\n"
 "}\n"
-"\n"
-"QCheckBox::indicator:unchecked {\n"
-"     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);\n"
+"QTextEdit:focus {\n"
+"  border: 1px solid;\n"
+"  border-color: rgba(88,199,141,255);\n"
 "}\n"
 "")
-        self.checkBox_themeSettings.setText("")
-        self.checkBox_themeSettings.setObjectName("checkBox_themeSettings")
-        self.horizontalLayout_113.addWidget(self.checkBox_themeSettings)
-        self.horizontalLayout_111.addWidget(self.widget_197, 0, QtCore.Qt.AlignmentFlag.AlignRight)
-        self.verticalLayout_89.addWidget(self.widget_195)
-        self.widget_198 = QtWidgets.QWidget(parent=self.widget_194)
-        self.widget_198.setObjectName("widget_198")
-        self.horizontalLayout_114 = QtWidgets.QHBoxLayout(self.widget_198)
-        self.horizontalLayout_114.setObjectName("horizontalLayout_114")
-        self.label_themeSettings = QtWidgets.QLabel(parent=self.widget_198)
-        font = QtGui.QFont()
-        font.setFamily("Bahnschrift Light")
-        font.setPointSize(9)
-        font.setBold(False)
-        font.setWeight(50)
-        self.label_themeSettings.setFont(font)
-        self.label_themeSettings.setObjectName("label_themeSettings")
-        self.horizontalLayout_114.addWidget(self.label_themeSettings)
-        self.verticalLayout_89.addWidget(self.widget_198)
-        self.horizontalLayout_115.addWidget(self.widget_194)
-        self.verticalLayout_76.addWidget(self.widget_164)
-        self.btn_saveSettings = QtWidgets.QPushButton(parent=self.widget_130)
-        self.btn_saveSettings.setMinimumSize(QtCore.QSize(100, 40))
-        self.btn_saveSettings.setMaximumSize(QtCore.QSize(100, 40))
+        self.textEdit_body_email_malware.setObjectName("textEdit_body_email_malware")
+        self.verticalLayout_11.addWidget(self.textEdit_body_email_malware)
+        self.btn_file_email_malware = QtWidgets.QPushButton(parent=self.widget_150)
+        self.btn_file_email_malware.setMinimumSize(QtCore.QSize(600, 45))
+        self.btn_file_email_malware.setMaximumSize(QtCore.QSize(600, 45))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
-        self.btn_saveSettings.setFont(font)
-        self.btn_saveSettings.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.btn_saveSettings.setStyleSheet("QPushButton {    \n"
+        self.btn_file_email_malware.setFont(font)
+        self.btn_file_email_malware.setStyleSheet("QPushButton {    \n"
+"    border: 1px solid rgba(40,43,61,255) ;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px 10px;\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
+"}\n"
+"")
+        self.btn_file_email_malware.setObjectName("btn_file_email_malware")
+        self.verticalLayout_11.addWidget(self.btn_file_email_malware)
+        self.btn_sendReport_email_malware = QtWidgets.QPushButton(parent=self.widget_150)
+        self.btn_sendReport_email_malware.setMinimumSize(QtCore.QSize(130, 40))
+        self.btn_sendReport_email_malware.setMaximumSize(QtCore.QSize(130, 40))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_sendReport_email_malware.setFont(font)
+        self.btn_sendReport_email_malware.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btn_sendReport_email_malware.setStyleSheet("QPushButton {    \n"
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
@@ -4427,11 +4762,13 @@ class Ui_MainWindow(object):
 "    background-color: ;\n"
 "}\n"
 "")
-        self.btn_saveSettings.setIconSize(QtCore.QSize(0, 0))
-        self.btn_saveSettings.setObjectName("btn_saveSettings")
-        self.verticalLayout_76.addWidget(self.btn_saveSettings, 0, QtCore.Qt.AlignmentFlag.AlignRight)
-        self.horizontalLayout_61.addWidget(self.widget_130, 0, QtCore.Qt.AlignmentFlag.AlignTop)
-        self.stackedWidget.addWidget(self.page_settings)
+        self.btn_sendReport_email_malware.setObjectName("btn_sendReport_email_malware")
+        self.verticalLayout_11.addWidget(self.btn_sendReport_email_malware, 0, QtCore.Qt.AlignmentFlag.AlignRight)
+        self.horizontalLayout_77.addWidget(self.widget_150, 0, QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignTop)
+        self.horizontalLayout_74.addWidget(self.widget_148)
+        self.verticalLayout_60.addWidget(self.widget_145)
+        self.horizontalLayout_66.addWidget(self.widget_131)
+        self.stackedWidget.addWidget(self.page_malware_email)
         self.page_vulner_email = QtWidgets.QWidget()
         self.page_vulner_email.setObjectName("page_vulner_email")
         self.horizontalLayout_67 = QtWidgets.QHBoxLayout(self.page_vulner_email)
@@ -4462,17 +4799,17 @@ class Ui_MainWindow(object):
         self.horizontalLayout_70 = QtWidgets.QHBoxLayout(self.widget_141)
         self.horizontalLayout_70.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_70.setObjectName("horizontalLayout_70")
-        self.btn_backEmail = QtWidgets.QPushButton(parent=self.widget_141)
-        self.btn_backEmail.setMinimumSize(QtCore.QSize(130, 40))
-        self.btn_backEmail.setMaximumSize(QtCore.QSize(130, 40))
+        self.btn_backEmail_vulner = QtWidgets.QPushButton(parent=self.widget_141)
+        self.btn_backEmail_vulner.setMinimumSize(QtCore.QSize(130, 40))
+        self.btn_backEmail_vulner.setMaximumSize(QtCore.QSize(130, 40))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
-        self.btn_backEmail.setFont(font)
-        self.btn_backEmail.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.btn_backEmail.setStyleSheet("QPushButton {    \n"
+        self.btn_backEmail_vulner.setFont(font)
+        self.btn_backEmail_vulner.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btn_backEmail_vulner.setStyleSheet("QPushButton {    \n"
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
@@ -4483,24 +4820,24 @@ class Ui_MainWindow(object):
 "    background-color: ;\n"
 "}\n"
 "")
-        self.btn_backEmail.setIcon(icon8)
-        self.btn_backEmail.setIconSize(QtCore.QSize(35, 35))
-        self.btn_backEmail.setObjectName("btn_backEmail")
-        self.horizontalLayout_70.addWidget(self.btn_backEmail, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
-        self.label_headofEmail = QtWidgets.QLabel(parent=self.widget_140)
-        self.label_headofEmail.setGeometry(QtCore.QRect(152, 15, 600, 45))
-        self.label_headofEmail.setMinimumSize(QtCore.QSize(600, 45))
-        self.label_headofEmail.setMaximumSize(QtCore.QSize(800, 45))
+        self.btn_backEmail_vulner.setIcon(icon8)
+        self.btn_backEmail_vulner.setIconSize(QtCore.QSize(35, 35))
+        self.btn_backEmail_vulner.setObjectName("btn_backEmail_vulner")
+        self.horizontalLayout_70.addWidget(self.btn_backEmail_vulner, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
+        self.label_headofEmail_vulner = QtWidgets.QLabel(parent=self.widget_140)
+        self.label_headofEmail_vulner.setGeometry(QtCore.QRect(152, 15, 650, 45))
+        self.label_headofEmail_vulner.setMinimumSize(QtCore.QSize(650, 45))
+        self.label_headofEmail_vulner.setMaximumSize(QtCore.QSize(650, 45))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(20)
         font.setBold(True)
         font.setWeight(75)
-        self.label_headofEmail.setFont(font)
-        self.label_headofEmail.setStyleSheet("color: rgb(38, 50, 56);")
-        self.label_headofEmail.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignVCenter)
-        self.label_headofEmail.setIndent(20)
-        self.label_headofEmail.setObjectName("label_headofEmail")
+        self.label_headofEmail_vulner.setFont(font)
+        self.label_headofEmail_vulner.setStyleSheet("color: rgb(38, 50, 56);")
+        self.label_headofEmail_vulner.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_headofEmail_vulner.setIndent(20)
+        self.label_headofEmail_vulner.setObjectName("label_headofEmail_vulner")
         self.verticalLayout_44.addWidget(self.widget_140)
         self.widget_137 = QtWidgets.QWidget(parent=self.widget_126)
         font = QtGui.QFont()
@@ -4520,30 +4857,30 @@ class Ui_MainWindow(object):
         self.widget_139.setObjectName("widget_139")
         self.horizontalLayout_72 = QtWidgets.QHBoxLayout(self.widget_139)
         self.horizontalLayout_72.setObjectName("horizontalLayout_72")
-        self.label_Report = QtWidgets.QLabel(parent=self.widget_139)
-        self.label_Report.setMinimumSize(QtCore.QSize(400, 500))
-        self.label_Report.setMaximumSize(QtCore.QSize(400, 500))
-        self.label_Report.setText("")
-        self.label_Report.setPixmap(QtGui.QPixmap("C:/Users/kanja/OneDrive/Pictures/Screenshots/Screenshot 2023-10-16 152325.png"))
-        self.label_Report.setScaledContents(True)
-        self.label_Report.setObjectName("label_Report")
-        self.horizontalLayout_72.addWidget(self.label_Report)
+        self.label_report_vulner = QtWidgets.QLabel(parent=self.widget_139)
+        self.label_report_vulner.setMinimumSize(QtCore.QSize(400, 500))
+        self.label_report_vulner.setMaximumSize(QtCore.QSize(400, 500))
+        self.label_report_vulner.setText("")
+        self.label_report_vulner.setPixmap(QtGui.QPixmap("C:/Users/kanja/OneDrive/Pictures/Screenshots/Screenshot 2023-10-16 152325.png"))
+        self.label_report_vulner.setScaledContents(True)
+        self.label_report_vulner.setObjectName("label_report_vulner")
+        self.horizontalLayout_72.addWidget(self.label_report_vulner)
         self.verticalLayout_69.addWidget(self.widget_139)
         self.widget_142 = QtWidgets.QWidget(parent=self.widget_132)
         self.widget_142.setObjectName("widget_142")
         self.horizontalLayout_71 = QtWidgets.QHBoxLayout(self.widget_142)
         self.horizontalLayout_71.setObjectName("horizontalLayout_71")
-        self.btn_backReport = QtWidgets.QPushButton(parent=self.widget_142)
-        self.btn_backReport.setMinimumSize(QtCore.QSize(100, 40))
-        self.btn_backReport.setMaximumSize(QtCore.QSize(100, 40))
+        self.btn_backReport_vulner = QtWidgets.QPushButton(parent=self.widget_142)
+        self.btn_backReport_vulner.setMinimumSize(QtCore.QSize(100, 40))
+        self.btn_backReport_vulner.setMaximumSize(QtCore.QSize(100, 40))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
-        self.btn_backReport.setFont(font)
-        self.btn_backReport.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.btn_backReport.setStyleSheet("QPushButton {    \n"
+        self.btn_backReport_vulner.setFont(font)
+        self.btn_backReport_vulner.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btn_backReport_vulner.setStyleSheet("QPushButton {    \n"
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
@@ -4554,43 +4891,41 @@ class Ui_MainWindow(object):
 "    background-color: ;\n"
 "}\n"
 "")
-        icon22 = QtGui.QIcon()
-        icon22.addPixmap(QtGui.QPixmap("C:/Users/kanja/Downloads/icon_back.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btn_backReport.setIcon(icon22)
-        self.btn_backReport.setIconSize(QtCore.QSize(35, 35))
-        self.btn_backReport.setObjectName("btn_backReport")
-        self.horizontalLayout_71.addWidget(self.btn_backReport)
-        self.label_countPageReport = QtWidgets.QLabel(parent=self.widget_142)
-        self.label_countPageReport.setMinimumSize(QtCore.QSize(40, 30))
-        self.label_countPageReport.setMaximumSize(QtCore.QSize(40, 30))
+        self.btn_backReport_vulner.setIcon(icon22)
+        self.btn_backReport_vulner.setIconSize(QtCore.QSize(35, 35))
+        self.btn_backReport_vulner.setObjectName("btn_backReport_vulner")
+        self.horizontalLayout_71.addWidget(self.btn_backReport_vulner)
+        self.label_countPageReport_vulner = QtWidgets.QLabel(parent=self.widget_142)
+        self.label_countPageReport_vulner.setMinimumSize(QtCore.QSize(40, 30))
+        self.label_countPageReport_vulner.setMaximumSize(QtCore.QSize(40, 30))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(11)
         font.setBold(True)
         font.setWeight(75)
-        self.label_countPageReport.setFont(font)
-        self.label_countPageReport.setStyleSheet("QLabel {\n"
+        self.label_countPageReport_vulner.setFont(font)
+        self.label_countPageReport_vulner.setStyleSheet("QLabel {\n"
 "  border: 1px solid gray;\n"
 "  color: rgba(40,43,61,255);\n"
 "  border-radius: 5px;\n"
 "}\n"
 "\n"
 "")
-        self.label_countPageReport.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.label_countPageReport.setObjectName("label_countPageReport")
-        self.horizontalLayout_71.addWidget(self.label_countPageReport)
-        self.btn_nextReport = QtWidgets.QPushButton(parent=self.widget_142)
-        self.btn_nextReport.setMinimumSize(QtCore.QSize(100, 40))
-        self.btn_nextReport.setMaximumSize(QtCore.QSize(100, 40))
+        self.label_countPageReport_vulner.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_countPageReport_vulner.setObjectName("label_countPageReport_vulner")
+        self.horizontalLayout_71.addWidget(self.label_countPageReport_vulner)
+        self.btn_nextReport_vulner = QtWidgets.QPushButton(parent=self.widget_142)
+        self.btn_nextReport_vulner.setMinimumSize(QtCore.QSize(100, 40))
+        self.btn_nextReport_vulner.setMaximumSize(QtCore.QSize(100, 40))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
-        self.btn_nextReport.setFont(font)
-        self.btn_nextReport.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.btn_nextReport.setLayoutDirection(QtCore.Qt.LayoutDirection.RightToLeft)
-        self.btn_nextReport.setStyleSheet("QPushButton {    \n"
+        self.btn_nextReport_vulner.setFont(font)
+        self.btn_nextReport_vulner.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btn_nextReport_vulner.setLayoutDirection(QtCore.Qt.LayoutDirection.RightToLeft)
+        self.btn_nextReport_vulner.setStyleSheet("QPushButton {    \n"
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
@@ -4601,12 +4936,10 @@ class Ui_MainWindow(object):
 "    background-color: ;\n"
 "}\n"
 "")
-        icon23 = QtGui.QIcon()
-        icon23.addPixmap(QtGui.QPixmap("C:/Users/kanja/Downloads/icon_next.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.btn_nextReport.setIcon(icon23)
-        self.btn_nextReport.setIconSize(QtCore.QSize(35, 35))
-        self.btn_nextReport.setObjectName("btn_nextReport")
-        self.horizontalLayout_71.addWidget(self.btn_nextReport)
+        self.btn_nextReport_vulner.setIcon(icon23)
+        self.btn_nextReport_vulner.setIconSize(QtCore.QSize(35, 35))
+        self.btn_nextReport_vulner.setObjectName("btn_nextReport_vulner")
+        self.horizontalLayout_71.addWidget(self.btn_nextReport_vulner)
         self.verticalLayout_69.addWidget(self.widget_142, 0, QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignTop)
         self.horizontalLayout_68.addWidget(self.widget_132)
         self.widget_138 = QtWidgets.QWidget(parent=self.widget_137)
@@ -4622,46 +4955,46 @@ class Ui_MainWindow(object):
         self.widget_128.setObjectName("widget_128")
         self.verticalLayout_62 = QtWidgets.QVBoxLayout(self.widget_128)
         self.verticalLayout_62.setObjectName("verticalLayout_62")
-        self.label_3 = QtWidgets.QLabel(parent=self.widget_128)
-        self.label_3.setMinimumSize(QtCore.QSize(0, 0))
-        self.label_3.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.label_to_vulner = QtWidgets.QLabel(parent=self.widget_128)
+        self.label_to_vulner.setMinimumSize(QtCore.QSize(0, 0))
+        self.label_to_vulner.setMaximumSize(QtCore.QSize(16777215, 30))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
-        self.label_3.setFont(font)
-        self.label_3.setObjectName("label_3")
-        self.verticalLayout_62.addWidget(self.label_3)
-        self.label_4 = QtWidgets.QLabel(parent=self.widget_128)
-        self.label_4.setMinimumSize(QtCore.QSize(0, 0))
-        self.label_4.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.label_to_vulner.setFont(font)
+        self.label_to_vulner.setObjectName("label_to_vulner")
+        self.verticalLayout_62.addWidget(self.label_to_vulner)
+        self.label_subject_vulner = QtWidgets.QLabel(parent=self.widget_128)
+        self.label_subject_vulner.setMinimumSize(QtCore.QSize(0, 0))
+        self.label_subject_vulner.setMaximumSize(QtCore.QSize(16777215, 30))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
-        self.label_4.setFont(font)
-        self.label_4.setObjectName("label_4")
-        self.verticalLayout_62.addWidget(self.label_4)
+        self.label_subject_vulner.setFont(font)
+        self.label_subject_vulner.setObjectName("label_subject_vulner")
+        self.verticalLayout_62.addWidget(self.label_subject_vulner)
         self.horizontalLayout_69.addWidget(self.widget_128, 0, QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTop)
         self.widget_127 = QtWidgets.QWidget(parent=self.widget_138)
         self.widget_127.setObjectName("widget_127")
         self.verticalLayout_10 = QtWidgets.QVBoxLayout(self.widget_127)
         self.verticalLayout_10.setObjectName("verticalLayout_10")
-        self.label_headerEmail = QtWidgets.QLabel(parent=self.widget_127)
+        self.label_header_email_vulner = QtWidgets.QLabel(parent=self.widget_127)
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
-        self.label_headerEmail.setFont(font)
-        self.label_headerEmail.setObjectName("label_headerEmail")
-        self.verticalLayout_10.addWidget(self.label_headerEmail)
-        self.lineEdit_toEmail = QtWidgets.QLineEdit(parent=self.widget_127)
-        self.lineEdit_toEmail.setMinimumSize(QtCore.QSize(600, 40))
-        self.lineEdit_toEmail.setMaximumSize(QtCore.QSize(600, 40))
-        self.lineEdit_toEmail.setStyleSheet("QLineEdit {\n"
+        self.label_header_email_vulner.setFont(font)
+        self.label_header_email_vulner.setObjectName("label_header_email_vulner")
+        self.verticalLayout_10.addWidget(self.label_header_email_vulner)
+        self.lineEdit_to_email_vulner = QtWidgets.QLineEdit(parent=self.widget_127)
+        self.lineEdit_to_email_vulner.setMinimumSize(QtCore.QSize(600, 40))
+        self.lineEdit_to_email_vulner.setMaximumSize(QtCore.QSize(600, 40))
+        self.lineEdit_to_email_vulner.setStyleSheet("QLineEdit {\n"
 "  border: 1px solid gray;\n"
 "  color: rgba(40,43,61,255);\n"
 "  border-radius: 5px;\n"
@@ -4676,12 +5009,12 @@ class Ui_MainWindow(object):
 "  border-color: rgba(88,199,141,255);\n"
 "}\n"
 "")
-        self.lineEdit_toEmail.setObjectName("lineEdit_toEmail")
-        self.verticalLayout_10.addWidget(self.lineEdit_toEmail)
-        self.lineEdit_subjectEmail = QtWidgets.QLineEdit(parent=self.widget_127)
-        self.lineEdit_subjectEmail.setMinimumSize(QtCore.QSize(600, 40))
-        self.lineEdit_subjectEmail.setMaximumSize(QtCore.QSize(600, 40))
-        self.lineEdit_subjectEmail.setStyleSheet("QLineEdit {\n"
+        self.lineEdit_to_email_vulner.setObjectName("lineEdit_to_email_vulner")
+        self.verticalLayout_10.addWidget(self.lineEdit_to_email_vulner)
+        self.lineEdit_subject_email_vulner = QtWidgets.QLineEdit(parent=self.widget_127)
+        self.lineEdit_subject_email_vulner.setMinimumSize(QtCore.QSize(600, 40))
+        self.lineEdit_subject_email_vulner.setMaximumSize(QtCore.QSize(600, 40))
+        self.lineEdit_subject_email_vulner.setStyleSheet("QLineEdit {\n"
 "  border: 1px solid gray;\n"
 "  color: rgba(40,43,61,255);\n"
 "  border-radius: 5px;\n"
@@ -4696,11 +5029,11 @@ class Ui_MainWindow(object):
 "  border-color: rgba(88,199,141,255);\n"
 "}\n"
 "")
-        self.lineEdit_subjectEmail.setObjectName("lineEdit_subjectEmail")
-        self.verticalLayout_10.addWidget(self.lineEdit_subjectEmail)
-        self.textEdit_bodyEmail = QtWidgets.QTextEdit(parent=self.widget_127)
-        self.textEdit_bodyEmail.setMinimumSize(QtCore.QSize(0, 300))
-        self.textEdit_bodyEmail.setStyleSheet("QTextEdit {\n"
+        self.lineEdit_subject_email_vulner.setObjectName("lineEdit_subject_email_vulner")
+        self.verticalLayout_10.addWidget(self.lineEdit_subject_email_vulner)
+        self.textEdit_body_email_vulner = QtWidgets.QTextEdit(parent=self.widget_127)
+        self.textEdit_body_email_vulner.setMinimumSize(QtCore.QSize(0, 300))
+        self.textEdit_body_email_vulner.setStyleSheet("QTextEdit {\n"
 "  border: 1px solid gray;\n"
 "  color: rgba(40,43,61,255);\n"
 "  border-radius: 5px;\n"
@@ -4715,18 +5048,18 @@ class Ui_MainWindow(object):
 "  border-color: rgba(88,199,141,255);\n"
 "}\n"
 "")
-        self.textEdit_bodyEmail.setObjectName("textEdit_bodyEmail")
-        self.verticalLayout_10.addWidget(self.textEdit_bodyEmail)
-        self.btn_fileEmail = QtWidgets.QPushButton(parent=self.widget_127)
-        self.btn_fileEmail.setMinimumSize(QtCore.QSize(600, 45))
-        self.btn_fileEmail.setMaximumSize(QtCore.QSize(600, 45))
+        self.textEdit_body_email_vulner.setObjectName("textEdit_body_email_vulner")
+        self.verticalLayout_10.addWidget(self.textEdit_body_email_vulner)
+        self.btn_file_email_vulner = QtWidgets.QPushButton(parent=self.widget_127)
+        self.btn_file_email_vulner.setMinimumSize(QtCore.QSize(600, 45))
+        self.btn_file_email_vulner.setMaximumSize(QtCore.QSize(600, 45))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
-        self.btn_fileEmail.setFont(font)
-        self.btn_fileEmail.setStyleSheet("QPushButton {    \n"
+        self.btn_file_email_vulner.setFont(font)
+        self.btn_file_email_vulner.setStyleSheet("QPushButton {    \n"
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 5px;\n"
 "    padding: 5px 10px;\n"
@@ -4737,19 +5070,19 @@ class Ui_MainWindow(object):
 "    background-color: ;\n"
 "}\n"
 "")
-        self.btn_fileEmail.setObjectName("btn_fileEmail")
-        self.verticalLayout_10.addWidget(self.btn_fileEmail)
-        self.btn_sendReportToMail = QtWidgets.QPushButton(parent=self.widget_127)
-        self.btn_sendReportToMail.setMinimumSize(QtCore.QSize(130, 40))
-        self.btn_sendReportToMail.setMaximumSize(QtCore.QSize(130, 40))
+        self.btn_file_email_vulner.setObjectName("btn_file_email_vulner")
+        self.verticalLayout_10.addWidget(self.btn_file_email_vulner)
+        self.btn_sendReport_email_vulner = QtWidgets.QPushButton(parent=self.widget_127)
+        self.btn_sendReport_email_vulner.setMinimumSize(QtCore.QSize(130, 40))
+        self.btn_sendReport_email_vulner.setMaximumSize(QtCore.QSize(130, 40))
         font = QtGui.QFont()
         font.setFamily("Bahnschrift SemiBold")
         font.setPointSize(12)
         font.setBold(True)
         font.setWeight(75)
-        self.btn_sendReportToMail.setFont(font)
-        self.btn_sendReportToMail.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.btn_sendReportToMail.setStyleSheet("QPushButton {    \n"
+        self.btn_sendReport_email_vulner.setFont(font)
+        self.btn_sendReport_email_vulner.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btn_sendReport_email_vulner.setStyleSheet("QPushButton {    \n"
 "    border: 1px solid rgba(40,43,61,255) ;\n"
 "    border-radius: 20px;\n"
 "    padding: 5px 10px;\n"
@@ -4760,13 +5093,345 @@ class Ui_MainWindow(object):
 "    background-color: ;\n"
 "}\n"
 "")
-        self.btn_sendReportToMail.setObjectName("btn_sendReportToMail")
-        self.verticalLayout_10.addWidget(self.btn_sendReportToMail, 0, QtCore.Qt.AlignmentFlag.AlignRight)
+        self.btn_sendReport_email_vulner.setObjectName("btn_sendReport_email_vulner")
+        self.verticalLayout_10.addWidget(self.btn_sendReport_email_vulner, 0, QtCore.Qt.AlignmentFlag.AlignRight)
         self.horizontalLayout_69.addWidget(self.widget_127, 0, QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignTop)
         self.horizontalLayout_68.addWidget(self.widget_138)
         self.verticalLayout_44.addWidget(self.widget_137)
         self.horizontalLayout_67.addWidget(self.widget_126)
         self.stackedWidget.addWidget(self.page_vulner_email)
+        self.page_https_email = QtWidgets.QWidget()
+        self.page_https_email.setObjectName("page_https_email")
+        self.horizontalLayout_83 = QtWidgets.QHBoxLayout(self.page_https_email)
+        self.horizontalLayout_83.setObjectName("horizontalLayout_83")
+        self.widget_151 = QtWidgets.QWidget(parent=self.page_https_email)
+        self.widget_151.setStyleSheet("QWidget#widget_140,\n"
+"QWidget#widget_152{\n"
+"    border: 1px solid rgb(237, 236, 237); /* Set the \"groove\" border style for the specific widgets */\n"
+"    background-color: rgb(237, 236, 237);\n"
+"}\n"
+"")
+        self.widget_151.setObjectName("widget_151")
+        self.verticalLayout_68 = QtWidgets.QVBoxLayout(self.widget_151)
+        self.verticalLayout_68.setSpacing(30)
+        self.verticalLayout_68.setObjectName("verticalLayout_68")
+        self.widget_152 = QtWidgets.QWidget(parent=self.widget_151)
+        self.widget_152.setMinimumSize(QtCore.QSize(1200, 70))
+        self.widget_152.setMaximumSize(QtCore.QSize(16777215, 70))
+        self.widget_152.setStyleSheet("")
+        self.widget_152.setObjectName("widget_152")
+        self.widget_153 = QtWidgets.QWidget(parent=self.widget_152)
+        self.widget_153.setGeometry(QtCore.QRect(0, 5, 152, 60))
+        self.widget_153.setMinimumSize(QtCore.QSize(0, 60))
+        self.widget_153.setMaximumSize(QtCore.QSize(16777215, 60))
+        self.widget_153.setStyleSheet("color:rgb(65,155,249);\n"
+"background-color: rgb(237, 236, 237);\n"
+"border-radius: 20px;")
+        self.widget_153.setObjectName("widget_153")
+        self.horizontalLayout_78 = QtWidgets.QHBoxLayout(self.widget_153)
+        self.horizontalLayout_78.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_78.setObjectName("horizontalLayout_78")
+        self.btn_backEmail_https = QtWidgets.QPushButton(parent=self.widget_153)
+        self.btn_backEmail_https.setMinimumSize(QtCore.QSize(130, 40))
+        self.btn_backEmail_https.setMaximumSize(QtCore.QSize(130, 40))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_backEmail_https.setFont(font)
+        self.btn_backEmail_https.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btn_backEmail_https.setStyleSheet("QPushButton {    \n"
+"    border: 1px solid rgba(40,43,61,255) ;\n"
+"    border-radius: 20px;\n"
+"    padding: 5px 10px;\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
+"}\n"
+"")
+        self.btn_backEmail_https.setIcon(icon8)
+        self.btn_backEmail_https.setIconSize(QtCore.QSize(35, 35))
+        self.btn_backEmail_https.setObjectName("btn_backEmail_https")
+        self.horizontalLayout_78.addWidget(self.btn_backEmail_https, 0, QtCore.Qt.AlignmentFlag.AlignLeft)
+        self.label_headofEmail_https = QtWidgets.QLabel(parent=self.widget_152)
+        self.label_headofEmail_https.setGeometry(QtCore.QRect(152, 15, 600, 45))
+        self.label_headofEmail_https.setMinimumSize(QtCore.QSize(600, 45))
+        self.label_headofEmail_https.setMaximumSize(QtCore.QSize(800, 45))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_headofEmail_https.setFont(font)
+        self.label_headofEmail_https.setStyleSheet("color: rgb(38, 50, 56);")
+        self.label_headofEmail_https.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label_headofEmail_https.setIndent(20)
+        self.label_headofEmail_https.setObjectName("label_headofEmail_https")
+        self.verticalLayout_68.addWidget(self.widget_152)
+        self.widget_154 = QtWidgets.QWidget(parent=self.widget_151)
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.widget_154.setFont(font)
+        self.widget_154.setObjectName("widget_154")
+        self.horizontalLayout_79 = QtWidgets.QHBoxLayout(self.widget_154)
+        self.horizontalLayout_79.setObjectName("horizontalLayout_79")
+        self.widget_155 = QtWidgets.QWidget(parent=self.widget_154)
+        self.widget_155.setObjectName("widget_155")
+        self.verticalLayout_73 = QtWidgets.QVBoxLayout(self.widget_155)
+        self.verticalLayout_73.setObjectName("verticalLayout_73")
+        self.widget_156 = QtWidgets.QWidget(parent=self.widget_155)
+        self.widget_156.setObjectName("widget_156")
+        self.horizontalLayout_80 = QtWidgets.QHBoxLayout(self.widget_156)
+        self.horizontalLayout_80.setObjectName("horizontalLayout_80")
+        self.label_Report_https = QtWidgets.QLabel(parent=self.widget_156)
+        self.label_Report_https.setMinimumSize(QtCore.QSize(400, 500))
+        self.label_Report_https.setMaximumSize(QtCore.QSize(400, 500))
+        self.label_Report_https.setText("")
+        self.label_Report_https.setPixmap(QtGui.QPixmap("C:/Users/kanja/OneDrive/Pictures/Screenshots/Screenshot 2023-10-16 152325.png"))
+        self.label_Report_https.setScaledContents(True)
+        self.label_Report_https.setObjectName("label_Report_https")
+        self.horizontalLayout_80.addWidget(self.label_Report_https)
+        self.verticalLayout_73.addWidget(self.widget_156)
+        self.widget_157 = QtWidgets.QWidget(parent=self.widget_155)
+        self.widget_157.setObjectName("widget_157")
+        self.horizontalLayout_81 = QtWidgets.QHBoxLayout(self.widget_157)
+        self.horizontalLayout_81.setObjectName("horizontalLayout_81")
+        self.btn_backReport_https = QtWidgets.QPushButton(parent=self.widget_157)
+        self.btn_backReport_https.setMinimumSize(QtCore.QSize(100, 40))
+        self.btn_backReport_https.setMaximumSize(QtCore.QSize(100, 40))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_backReport_https.setFont(font)
+        self.btn_backReport_https.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btn_backReport_https.setStyleSheet("QPushButton {    \n"
+"    border: 1px solid rgba(40,43,61,255) ;\n"
+"    border-radius: 20px;\n"
+"    padding: 5px 10px;\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
+"}\n"
+"")
+        self.btn_backReport_https.setIcon(icon22)
+        self.btn_backReport_https.setIconSize(QtCore.QSize(35, 35))
+        self.btn_backReport_https.setObjectName("btn_backReport_https")
+        self.horizontalLayout_81.addWidget(self.btn_backReport_https)
+        self.label_countPageReport_https = QtWidgets.QLabel(parent=self.widget_157)
+        self.label_countPageReport_https.setMinimumSize(QtCore.QSize(40, 30))
+        self.label_countPageReport_https.setMaximumSize(QtCore.QSize(40, 30))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_countPageReport_https.setFont(font)
+        self.label_countPageReport_https.setStyleSheet("QLabel {\n"
+"  border: 1px solid gray;\n"
+"  color: rgba(40,43,61,255);\n"
+"  border-radius: 5px;\n"
+"}\n"
+"\n"
+"")
+        self.label_countPageReport_https.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_countPageReport_https.setObjectName("label_countPageReport_https")
+        self.horizontalLayout_81.addWidget(self.label_countPageReport_https)
+        self.btn_nextReport_https = QtWidgets.QPushButton(parent=self.widget_157)
+        self.btn_nextReport_https.setMinimumSize(QtCore.QSize(100, 40))
+        self.btn_nextReport_https.setMaximumSize(QtCore.QSize(100, 40))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_nextReport_https.setFont(font)
+        self.btn_nextReport_https.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btn_nextReport_https.setLayoutDirection(QtCore.Qt.LayoutDirection.RightToLeft)
+        self.btn_nextReport_https.setStyleSheet("QPushButton {    \n"
+"    border: 1px solid rgba(40,43,61,255) ;\n"
+"    border-radius: 20px;\n"
+"    padding: 5px 10px;\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
+"}\n"
+"")
+        self.btn_nextReport_https.setIcon(icon23)
+        self.btn_nextReport_https.setIconSize(QtCore.QSize(35, 35))
+        self.btn_nextReport_https.setObjectName("btn_nextReport_https")
+        self.horizontalLayout_81.addWidget(self.btn_nextReport_https)
+        self.verticalLayout_73.addWidget(self.widget_157, 0, QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignTop)
+        self.horizontalLayout_79.addWidget(self.widget_155)
+        self.widget_158 = QtWidgets.QWidget(parent=self.widget_154)
+        self.widget_158.setMinimumSize(QtCore.QSize(100, 570))
+        self.widget_158.setMaximumSize(QtCore.QSize(16777215, 570))
+        self.widget_158.setStyleSheet("")
+        self.widget_158.setObjectName("widget_158")
+        self.horizontalLayout_82 = QtWidgets.QHBoxLayout(self.widget_158)
+        self.horizontalLayout_82.setObjectName("horizontalLayout_82")
+        self.widget_159 = QtWidgets.QWidget(parent=self.widget_158)
+        self.widget_159.setMinimumSize(QtCore.QSize(0, 150))
+        self.widget_159.setMaximumSize(QtCore.QSize(16777215, 150))
+        self.widget_159.setObjectName("widget_159")
+        self.verticalLayout_74 = QtWidgets.QVBoxLayout(self.widget_159)
+        self.verticalLayout_74.setObjectName("verticalLayout_74")
+        self.label_to_https = QtWidgets.QLabel(parent=self.widget_159)
+        self.label_to_https.setMinimumSize(QtCore.QSize(0, 0))
+        self.label_to_https.setMaximumSize(QtCore.QSize(16777215, 30))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_to_https.setFont(font)
+        self.label_to_https.setObjectName("label_to_https")
+        self.verticalLayout_74.addWidget(self.label_to_https)
+        self.label_subject_https = QtWidgets.QLabel(parent=self.widget_159)
+        self.label_subject_https.setMinimumSize(QtCore.QSize(0, 0))
+        self.label_subject_https.setMaximumSize(QtCore.QSize(16777215, 30))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_subject_https.setFont(font)
+        self.label_subject_https.setObjectName("label_subject_https")
+        self.verticalLayout_74.addWidget(self.label_subject_https)
+        self.horizontalLayout_82.addWidget(self.widget_159, 0, QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignTop)
+        self.widget_160 = QtWidgets.QWidget(parent=self.widget_158)
+        self.widget_160.setObjectName("widget_160")
+        self.verticalLayout_12 = QtWidgets.QVBoxLayout(self.widget_160)
+        self.verticalLayout_12.setObjectName("verticalLayout_12")
+        self.label_header_email_https = QtWidgets.QLabel(parent=self.widget_160)
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_header_email_https.setFont(font)
+        self.label_header_email_https.setObjectName("label_header_email_https")
+        self.verticalLayout_12.addWidget(self.label_header_email_https)
+        self.lineEdit_to_email_https = QtWidgets.QLineEdit(parent=self.widget_160)
+        self.lineEdit_to_email_https.setMinimumSize(QtCore.QSize(600, 40))
+        self.lineEdit_to_email_https.setMaximumSize(QtCore.QSize(600, 40))
+        self.lineEdit_to_email_https.setStyleSheet("QLineEdit {\n"
+"  border: 1px solid gray;\n"
+"  color: rgba(40,43,61,255);\n"
+"  border-radius: 5px;\n"
+"}\n"
+"\n"
+"QLineEdit:hover {\n"
+"  border: 2px solid;\n"
+"  border-color: rgba(0,143,255,255);\n"
+"}\n"
+"QLineEdit:focus {\n"
+"  border: 1px solid;\n"
+"  border-color: rgba(88,199,141,255);\n"
+"}\n"
+"")
+        self.lineEdit_to_email_https.setObjectName("lineEdit_to_email_https")
+        self.verticalLayout_12.addWidget(self.lineEdit_to_email_https)
+        self.lineEdit_subject_email_https = QtWidgets.QLineEdit(parent=self.widget_160)
+        self.lineEdit_subject_email_https.setMinimumSize(QtCore.QSize(600, 40))
+        self.lineEdit_subject_email_https.setMaximumSize(QtCore.QSize(600, 40))
+        self.lineEdit_subject_email_https.setStyleSheet("QLineEdit {\n"
+"  border: 1px solid gray;\n"
+"  color: rgba(40,43,61,255);\n"
+"  border-radius: 5px;\n"
+"}\n"
+"\n"
+"QLineEdit:hover {\n"
+"  border: 2px solid;\n"
+"  border-color: rgba(0,143,255,255);\n"
+"}\n"
+"QLineEdit:focus {\n"
+"  border: 1px solid;\n"
+"  border-color: rgba(88,199,141,255);\n"
+"}\n"
+"")
+        self.lineEdit_subject_email_https.setObjectName("lineEdit_subject_email_https")
+        self.verticalLayout_12.addWidget(self.lineEdit_subject_email_https)
+        self.textEdit_body_email_https = QtWidgets.QTextEdit(parent=self.widget_160)
+        self.textEdit_body_email_https.setMinimumSize(QtCore.QSize(0, 300))
+        self.textEdit_body_email_https.setStyleSheet("QTextEdit {\n"
+"  border: 1px solid gray;\n"
+"  color: rgba(40,43,61,255);\n"
+"  border-radius: 5px;\n"
+"}\n"
+"\n"
+"QTextEdit:hover {\n"
+"  border: 2px solid;\n"
+"  border-color: rgba(0,143,255,255);\n"
+"}\n"
+"QTextEdit:focus {\n"
+"  border: 1px solid;\n"
+"  border-color: rgba(88,199,141,255);\n"
+"}\n"
+"")
+        self.textEdit_body_email_https.setObjectName("textEdit_body_email_https")
+        self.verticalLayout_12.addWidget(self.textEdit_body_email_https)
+        self.btn_file_email_https = QtWidgets.QPushButton(parent=self.widget_160)
+        self.btn_file_email_https.setMinimumSize(QtCore.QSize(600, 45))
+        self.btn_file_email_https.setMaximumSize(QtCore.QSize(600, 45))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_file_email_https.setFont(font)
+        self.btn_file_email_https.setStyleSheet("QPushButton {    \n"
+"    border: 1px solid rgba(40,43,61,255) ;\n"
+"    border-radius: 5px;\n"
+"    padding: 5px 10px;\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
+"}\n"
+"")
+        self.btn_file_email_https.setObjectName("btn_file_email_https")
+        self.verticalLayout_12.addWidget(self.btn_file_email_https)
+        self.btn_sendReport_email_https = QtWidgets.QPushButton(parent=self.widget_160)
+        self.btn_sendReport_email_https.setMinimumSize(QtCore.QSize(130, 40))
+        self.btn_sendReport_email_https.setMaximumSize(QtCore.QSize(130, 40))
+        font = QtGui.QFont()
+        font.setFamily("Bahnschrift SemiBold")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.btn_sendReport_email_https.setFont(font)
+        self.btn_sendReport_email_https.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.btn_sendReport_email_https.setStyleSheet("QPushButton {    \n"
+"    border: 1px solid rgba(40,43,61,255) ;\n"
+"    border-radius: 20px;\n"
+"    padding: 5px 10px;\n"
+"    color: rgba(40,43,61,255) ;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: ;\n"
+"}\n"
+"")
+        self.btn_sendReport_email_https.setObjectName("btn_sendReport_email_https")
+        self.verticalLayout_12.addWidget(self.btn_sendReport_email_https, 0, QtCore.Qt.AlignmentFlag.AlignRight)
+        self.horizontalLayout_82.addWidget(self.widget_160, 0, QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignTop)
+        self.horizontalLayout_79.addWidget(self.widget_158)
+        self.verticalLayout_68.addWidget(self.widget_154)
+        self.horizontalLayout_83.addWidget(self.widget_151)
+        self.stackedWidget.addWidget(self.page_https_email)
         self.verticalLayout_5.addWidget(self.stackedWidget)
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -4792,6 +5457,39 @@ class Ui_MainWindow(object):
         self.show_digest_2.setText(_translate("MainWindow", "Message Digest"))
         self.show_https_3.setText(_translate("MainWindow", "HTTPS Tesing"))
         self.show_vulner_3.setText(_translate("MainWindow", "Vulnerability Scanning"))
+        self.btn_backSettings.setText(_translate("MainWindow", "Back"))
+        self.label_headofHttpstesting_2.setText(_translate("MainWindow", "Settings"))
+        self.btn_notificationSettings.setText(_translate("MainWindow", "    Notification"))
+        self.label_notifucationSettings.setText(_translate("MainWindow", " \"notification\" is typically refers to a pop-up message or alert \n"
+"that appears on your computer screen to inform you about \n"
+"a specific event, task, or update. "))
+        self.btn_languageSettings.setText(_translate("MainWindow", " English  Language"))
+        self.label_btn_languageSettings.setText(_translate("MainWindow", " The software is designed to be used exclusively \n"
+" in the English language."))
+        self.btn_soundSettings.setText(_translate("MainWindow", "   Sound"))
+        self.label_10.setText(_translate("MainWindow", " \"sound\" refers to audio output or the ability of a program \n"
+" to generate and play audio, such as  notifications, or other \n"
+" auditory feedback."))
+        self.btn_LineAPISettings.setText(_translate("MainWindow", "   LINE API Token"))
+        self.btn_removeLineAPISettings.setText(_translate("MainWindow", "Remove"))
+        self.lineEdit_LineAPISettings.setPlaceholderText(_translate("MainWindow", "LINE API Token"))
+        self.label_LineAPISettings.setText(_translate("MainWindow", "\"LINE API token\" refers to an access token used to interact with \n"
+"the LINE Messaging API, which is a set of APIs provided by LINE \n"
+"Corporation for developers to integrate LINE messaging features \n"
+"into their applications and services."))
+        self.btn_virusTotalAPISettings.setText(_translate("MainWindow", "   Visrus Total API Token"))
+        self.btn_removeVirusTotalAPISettings.setText(_translate("MainWindow", "Remove"))
+        self.lineEdit_virusTotalAPISettings.setPlaceholderText(_translate("MainWindow", "Virus Total API Token"))
+        self.label_virusTotalAPISettings.setText(_translate("MainWindow", "VirusTotal\'s  API lets you upload and scan files, submit and scan \n"
+"URLs, access finished scan reports and make automatic \n"
+"comments on URLs and samples without the need of using \n"
+"the HTML website interface. In other words, it allows you to build \n"
+"simple scripts to access the information generated by VirusTotal."))
+        self.btn_themeSettings.setText(_translate("MainWindow", "   Light Theme"))
+        self.label_themeSettings.setText(_translate("MainWindow", "\"light theme\" refers to the appearance or color scheme \n"
+"used in user interfaces, particularly in software, apps, websites, \n"
+"and operating systems. "))
+        self.btn_saveSettings.setText(_translate("MainWindow", "Save"))
         self.btn_backAdvancedUser.setText(_translate("MainWindow", "Back"))
         self.btn_password.setText(_translate("MainWindow", "Password Evaluation"))
         self.btn_malware.setText(_translate("MainWindow", "Malware Scanning"))
@@ -4947,46 +5645,33 @@ class Ui_MainWindow(object):
         self.label_resultSweet32Https.setText(_translate("MainWindow", "No"))
         self.label_resultLuck13Https.setText(_translate("MainWindow", "No"))
         self.btn_createReportHttps.setText(_translate("MainWindow", "Create Report"))
-        self.btn_backSettings.setText(_translate("MainWindow", "Back"))
-        self.label_headofHttpstesting_2.setText(_translate("MainWindow", "Settings"))
-        self.btn_notificationSettings.setText(_translate("MainWindow", "    Notification"))
-        self.label_notifucationSettings.setText(_translate("MainWindow", " \"notification\" is typically refers to a pop-up message or alert \n"
-"that appears on your computer screen to inform you about \n"
-"a specific event, task, or update. "))
-        self.btn_languageSettings.setText(_translate("MainWindow", " English  Language"))
-        self.label_btn_languageSettings.setText(_translate("MainWindow", " The software is designed to be used exclusively \n"
-" in the English language."))
-        self.btn_soundSettings.setText(_translate("MainWindow", "   Sound"))
-        self.label_10.setText(_translate("MainWindow", " \"sound\" refers to audio output or the ability of a program \n"
-" to generate and play audio, such as  notifications, or other \n"
-" auditory feedback."))
-        self.btn_LineAPISettings.setText(_translate("MainWindow", "   LINE API Token"))
-        self.btn_removeLineAPISettings.setText(_translate("MainWindow", "Remove"))
-        self.lineEdit_LineAPISettings.setPlaceholderText(_translate("MainWindow", "LINE API Token"))
-        self.label_LineAPISettings.setText(_translate("MainWindow", "\"LINE API token\" refers to an access token used to interact with \n"
-"the LINE Messaging API, which is a set of APIs provided by LINE \n"
-"Corporation for developers to integrate LINE messaging features \n"
-"into their applications and services."))
-        self.btn_virusTotalAPISettings.setText(_translate("MainWindow", "   Visrus Total API Token"))
-        self.btn_removeVirusTotalAPISettings.setText(_translate("MainWindow", "Remove"))
-        self.lineEdit_virusTotalAPISettings.setPlaceholderText(_translate("MainWindow", "Virus Total API Token"))
-        self.label_virusTotalAPISettings.setText(_translate("MainWindow", "VirusTotal\'s  API lets you upload and scan files, submit and scan \n"
-"URLs, access finished scan reports and make automatic \n"
-"comments on URLs and samples without the need of using \n"
-"the HTML website interface. In other words, it allows you to build \n"
-"simple scripts to access the information generated by VirusTotal."))
-        self.btn_themeSettings.setText(_translate("MainWindow", "   Light Theme"))
-        self.label_themeSettings.setText(_translate("MainWindow", "\"light theme\" refers to the appearance or color scheme \n"
-"used in user interfaces, particularly in software, apps, websites, \n"
-"and operating systems. "))
-        self.btn_saveSettings.setText(_translate("MainWindow", "Save"))
-        self.btn_backEmail.setText(_translate("MainWindow", "Back"))
-        self.label_headofEmail.setText(_translate("MainWindow", "Send ISAN Secutity Gixmo Box Report"))
-        self.btn_backReport.setText(_translate("MainWindow", "Back"))
-        self.label_countPageReport.setText(_translate("MainWindow", "0"))
-        self.btn_nextReport.setText(_translate("MainWindow", "Next"))
-        self.label_3.setText(_translate("MainWindow", "To:"))
-        self.label_4.setText(_translate("MainWindow", "Subject:"))
-        self.label_headerEmail.setText(_translate("MainWindow", "ISAN Secutity Gixmo Box"))
-        self.btn_fileEmail.setText(_translate("MainWindow", "File"))
-        self.btn_sendReportToMail.setText(_translate("MainWindow", "Send"))
+        self.btn_backEmail_malware.setText(_translate("MainWindow", "Back"))
+        self.label_headofEmail_malware.setText(_translate("MainWindow", "Send ISAN Secutity Gixmo Box Malware Report"))
+        self.btn_backReport_malware.setText(_translate("MainWindow", "Back"))
+        self.label_countPageReport_malware.setText(_translate("MainWindow", "0"))
+        self.btn_nextReport_malware.setText(_translate("MainWindow", "Next"))
+        self.label_to_malware.setText(_translate("MainWindow", "To:"))
+        self.label_subject_malware.setText(_translate("MainWindow", "Subject:"))
+        self.label_header_email_malware.setText(_translate("MainWindow", "ISAN Secutity Gixmo Box"))
+        self.btn_file_email_malware.setText(_translate("MainWindow", "File"))
+        self.btn_sendReport_email_malware.setText(_translate("MainWindow", "Send"))
+        self.btn_backEmail_vulner.setText(_translate("MainWindow", "Back"))
+        self.label_headofEmail_vulner.setText(_translate("MainWindow", "Send ISAN Secutity Gixmo Box Vulnerability Report"))
+        self.btn_backReport_vulner.setText(_translate("MainWindow", "Back"))
+        self.label_countPageReport_vulner.setText(_translate("MainWindow", "0"))
+        self.btn_nextReport_vulner.setText(_translate("MainWindow", "Next"))
+        self.label_to_vulner.setText(_translate("MainWindow", "To:"))
+        self.label_subject_vulner.setText(_translate("MainWindow", "Subject:"))
+        self.label_header_email_vulner.setText(_translate("MainWindow", "ISAN Secutity Gixmo Box"))
+        self.btn_file_email_vulner.setText(_translate("MainWindow", "File"))
+        self.btn_sendReport_email_vulner.setText(_translate("MainWindow", "Send"))
+        self.btn_backEmail_https.setText(_translate("MainWindow", "Back"))
+        self.label_headofEmail_https.setText(_translate("MainWindow", "Send ISAN Secutity Gixmo Box HTTPS Report"))
+        self.btn_backReport_https.setText(_translate("MainWindow", "Back"))
+        self.label_countPageReport_https.setText(_translate("MainWindow", "0"))
+        self.btn_nextReport_https.setText(_translate("MainWindow", "Next"))
+        self.label_to_https.setText(_translate("MainWindow", "To:"))
+        self.label_subject_https.setText(_translate("MainWindow", "Subject:"))
+        self.label_header_email_https.setText(_translate("MainWindow", "ISAN Secutity Gixmo Box"))
+        self.btn_file_email_https.setText(_translate("MainWindow", "File"))
+        self.btn_sendReport_email_https.setText(_translate("MainWindow", "Send"))

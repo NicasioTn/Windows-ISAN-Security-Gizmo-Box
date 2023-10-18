@@ -38,8 +38,10 @@ class Main(QMainWindow):
         self.btn_backVulner.clicked.connect(self.openNetworkUserHome)
         self.btn_backHttps.clicked.connect(self.openNetworkUserHome)
         self.btn_backSettings.clicked.connect(self.openHomePage)
+        self.btn_backEmail_malware.clicked.connect(self.openMalwareHome)
         self.btn_backEmail_vulner.clicked.connect(self.openVulnerabilityHome)
-
+        self.btn_backEmail_https.clicked.connect(self.openHttpsHome)
+        
         # clear cache data after back button
         self.btn_backPassword.clicked.connect(lambda: PasswordEvaluation.clear(self))
         self.btn_backDict.clicked.connect(lambda: PasswordAttack.clear(self))
@@ -47,7 +49,10 @@ class Main(QMainWindow):
         self.btn_backMSDigest.clicked.connect(lambda: MessageDigest.clear(self))
         self.btn_backVulner.clicked.connect(lambda: VulnerabilityScanning.clear(self))
         self.btn_backHttps.clicked.connect(lambda: HTTPSTesting.clear(self))
+        self.btn_backEmail_malware.clicked.connect(lambda: MalwareScanning.clear(self))
         self.btn_backEmail_vulner.clicked.connect(lambda: VulnerabilityScanning.clear(self))
+        self.btn_backEmail_https.clicked.connect(lambda: HTTPSTesting.clear(self))
+        
 
         # --------------------- Get Started ---------------------------------
         self.btn_getStart.clicked.connect(self.openHomePage)
@@ -132,7 +137,7 @@ class Main(QMainWindow):
         self.btn_scanMalware.clicked.connect(lambda: MalwareScanning.scanMalware(self))
         self.btn_browseMalware.clicked.connect(lambda: MalwareScanning.openFileScanning(self))
         self.btn_clearMalware.clicked.connect(lambda: MalwareScanning.clear(self))
-        self.btn_createReport.clicked.connect(lambda: MalwareScanning.createReport(self))
+        self.btn_createReport.clicked.connect(self.openSendEmail_malware)
 
         ### --------------------- Vulnerability -------------------------------
         self.progressBar_vulnerScan.setValue(0)
@@ -143,7 +148,7 @@ class Main(QMainWindow):
         self.btn_clearVulner.clicked.connect(lambda: VulnerabilityScanning.clear(self))
         self.dropdown_typeScan.activated.connect(lambda: VulnerabilityScanning.typeScan(self))
         self.lineEdit_vulner.textChanged.connect(lambda: VulnerabilityScanning.validate_input(self, self.lineEdit_vulner.text()))
-        self.btn_createReportVulner.clicked.connect(self.openSendEmail)
+        self.btn_createReportVulner.clicked.connect(self.openSendEmail_vulner)
 
         ### --------------------- HTTPS Testing -------------------------------
 
@@ -151,12 +156,22 @@ class Main(QMainWindow):
         self.btn_scanHttps.clicked.connect(lambda: HTTPSTesting.scanHTTPS(self))
         self.btn_clearHttps.clicked.connect(lambda: HTTPSTesting.clear(self))
         self.lineEdit_https.textChanged.connect(lambda: HTTPSTesting.checkHTTPS(self))
+        self.btn_createReportHttps.clicked.connect(self.openSendEmail_https)
 
         ### --------------------- Send Email ----------------------------------
+        self.btn_sendReport_email_malware.clicked.connect(lambda: MalwareScanning.send_email(self))
+        self.btn_backReport_malware.clicked.connect(lambda: MalwareScanning.set_pdf_viewer(self, "back"))
+        self.btn_nextReport_malware.clicked.connect(lambda: MalwareScanning.set_pdf_viewer(self, "next"))
+
         self.btn_sendReport_email_vulner.clicked.connect(lambda: VulnerabilityScanning.send_email(self))
         self.btn_backReport_vulner.clicked.connect(lambda: VulnerabilityScanning.set_pdf_viewer(self, "back"))
         self.btn_nextReport_vulner.clicked.connect(lambda: VulnerabilityScanning.set_pdf_viewer(self, "next"))
-    
+
+        self.btn_sendReport_email_https.clicked.connect(lambda: HTTPSTesting.send_email(self))
+        self.btn_backReport_https.clicked.connect(lambda: HTTPSTesting.set_pdf_viewer(self, "back"))
+        self.btn_nextReport_https.clicked.connect(lambda: HTTPSTesting.set_pdf_viewer(self, "next"))
+
+        
     # -------------------- Home ---------------------------------------
     def openHomePage(self):
         self.stackedWidget.setCurrentWidget(self.mainpage)
@@ -194,10 +209,21 @@ class Main(QMainWindow):
     
     def openHttpsHome(self):
         self.stackedWidget.setCurrentWidget(self.page_https)
+
+    # Send Email --------------------------------------------
+    def openSendEmail_malware(self):
+        self.stackedWidget.setCurrentWidget(self.page_malware_email)
+        MalwareScanning.createReport(self)
     
-    def openSendEmail(self):
+    def openSendEmail_vulner(self):
         self.stackedWidget.setCurrentWidget(self.page_vulner_email)
         VulnerabilityScanning.createReport(self)
+    
+    def openSendEmail_https(self):
+        self.stackedWidget.setCurrentWidget(self.page_https_email)
+        HTTPSTesting.createReport(self)
+
+    # Setting -----------------------------------------------
 
     def openSettings(self):
         self.stackedWidget.setCurrentWidget(self.page_settings)

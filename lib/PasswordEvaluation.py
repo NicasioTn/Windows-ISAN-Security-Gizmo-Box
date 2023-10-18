@@ -62,7 +62,7 @@ class PasswordEvaluation(QDialog):
             self.btn_showPassword.setIcon(self.unhide_icon)
 
     def getPassword(self):
-        password = PasswordEvaluation.update(self)
+        password = PasswordEvaluation.update(self) # Get Password in real time & Check List
         entropy = PasswordEvaluation.calculate_entropy(self, password)
         self.label_outputEntropy.setText(f'{entropy:.0f} Bits')
 
@@ -115,6 +115,8 @@ class PasswordEvaluation(QDialog):
                                                         }     ''')
 
         else : 
+            
+            # ----- Check Entropy ----- #
             if entropy < PasswordEvaluation.minentropy : # 50 bits
                 self.label_outputPasswordStrength.setText('Weak')
                 self.label_outputPasswordStrength.setStyleSheet("color: rgba(255,182,0,255);"
@@ -400,7 +402,6 @@ import subprocess
 import PyQt6.QtGui as QtGui
 import threading
 import hashlib
-import sys
 import os
 import subprocess
 import threading
@@ -505,9 +506,9 @@ class PasswordAttack(QDialog):
         self.textEdit_result_hashcat.clear()
         
         password = self.lineEdit_passwordDict.text()
+        password_hash = hashlib.md5(password.encode()).hexdigest()
         mode = PasswordAttack.select_mode_attack(self)
         wordlist = PasswordAttack.select_wordlists(self)
-        password_hash = hashlib.md5(password.encode()).hexdigest()
         
         thread = threading.Thread(target=runner.run_hashcat, args=(mode, wordlist, password_hash, password))
         thread.start()
