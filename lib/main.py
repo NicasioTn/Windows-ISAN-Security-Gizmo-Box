@@ -53,7 +53,6 @@ class Main(QMainWindow):
         self.btn_backEmail_vulner.clicked.connect(lambda: VulnerabilityScanning.clear(self))
         self.btn_backEmail_https.clicked.connect(lambda: HTTPSTesting.clear(self))
         
-
         # --------------------- Get Started ---------------------------------
         self.btn_getStart.clicked.connect(self.openHomePage)
 
