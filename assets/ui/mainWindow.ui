@@ -1012,6 +1012,1182 @@ QPushButton:hover {
         </item>
        </layout>
       </widget>
+      <widget class="QWidget" name="page_settings">
+       <layout class="QHBoxLayout" name="horizontalLayout_61">
+        <item alignment="Qt::AlignTop">
+         <widget class="QWidget" name="widget_130" native="true">
+          <property name="styleSheet">
+           <string notr="true">QWidget#widget_135 {
+    border: 1px solid rgb(237, 236, 237); /* Set the &quot;groove&quot; border style for the specific widgets */
+	background-color: rgb(237, 236, 237);
+}
+</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_76">
+           <property name="spacing">
+            <number>30</number>
+           </property>
+           <item>
+            <widget class="QWidget" name="widget_135" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>1200</width>
+               <height>70</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>70</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <widget class="QWidget" name="widget_136" native="true">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>5</y>
+                <width>152</width>
+                <height>60</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>60</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>60</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color:rgb(65,155,249);
+background-color: rgb(237, 236, 237);
+border-radius: 20px;</string>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_62">
+               <item alignment="Qt::AlignLeft">
+                <widget class="QPushButton" name="btn_backSettings">
+                 <property name="minimumSize">
+                  <size>
+                   <width>130</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>130</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Bahnschrift SemiBold</family>
+                   <pointsize>12</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 20px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
+}
+
+QPushButton:hover {
+    background-color: ;
+}
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Back</string>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normaloff>../icons/icons8-go-back-45.png</normaloff>../icons/icons8-go-back-45.png</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>35</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QLabel" name="label_headofHttpstesting_2">
+              <property name="geometry">
+               <rect>
+                <x>152</x>
+                <y>15</y>
+                <width>500</width>
+                <height>45</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>500</width>
+                <height>45</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>500</width>
+                <height>45</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>Bahnschrift SemiBold</family>
+                <pointsize>20</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: rgb(38, 50, 56);</string>
+              </property>
+              <property name="text">
+               <string>Settings</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              </property>
+              <property name="margin">
+               <number>0</number>
+              </property>
+              <property name="indent">
+               <number>20</number>
+              </property>
+             </widget>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_129" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_102">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>11</number>
+              </property>
+              <item>
+               <widget class="QWidget" name="widget_165" native="true">
+                <property name="minimumSize">
+                 <size>
+                  <width>400</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>400</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_84">
+                 <item>
+                  <widget class="QWidget" name="widget_170" native="true">
+                   <layout class="QHBoxLayout" name="horizontalLayout_90">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QWidget" name="widget_171" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_91">
+                       <item>
+                        <widget class="QPushButton" name="btn_notificationSettings">
+                         <property name="enabled">
+                          <bool>true</bool>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Bahnschrift SemiBold</family>
+                           <pointsize>11</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="text">
+                          <string>    Notification</string>
+                         </property>
+                         <property name="icon">
+                          <iconset>
+                           <normaloff>../icons/icon_notification.png</normaloff>../icons/icon_notification.png</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>40</width>
+                           <height>40</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item alignment="Qt::AlignRight">
+                     <widget class="QWidget" name="widget_172" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_92">
+                       <property name="spacing">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QCheckBox" name="checkBox_notificationSettings">
+                         <property name="styleSheet">
+                          <string notr="true">QCheckBox::indicator {
+    width: 45px;
+    height: 45px;
+}
+
+QCheckBox::indicator:checked {
+ 	 image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);
+}
+
+QCheckBox::indicator:unchecked {
+     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);
+}
+</string>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="widget_173" native="true">
+                   <layout class="QHBoxLayout" name="horizontalLayout_93">
+                    <item>
+                     <widget class="QLabel" name="label_notifucationSettings">
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift Light</family>
+                        <pointsize>9</pointsize>
+                        <weight>50</weight>
+                        <bold>false</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string> &quot;notification&quot; is typically refers to a pop-up message or alert 
+that appears on your computer screen to inform you about 
+a specific event, task, or update. </string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget_174" native="true">
+                <property name="minimumSize">
+                 <size>
+                  <width>400</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>400</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_85">
+                 <item>
+                  <widget class="QWidget" name="widget_175" native="true">
+                   <layout class="QHBoxLayout" name="horizontalLayout_94">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QWidget" name="widget_176" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_95">
+                       <item>
+                        <widget class="QPushButton" name="btn_languageSettings">
+                         <property name="enabled">
+                          <bool>true</bool>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Bahnschrift SemiBold</family>
+                           <pointsize>11</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="text">
+                          <string> English  Language</string>
+                         </property>
+                         <property name="icon">
+                          <iconset>
+                           <normaloff>../icons/icons_language.png</normaloff>../icons/icons_language.png</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>40</width>
+                           <height>40</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item alignment="Qt::AlignRight">
+                     <widget class="QWidget" name="widget_177" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_96">
+                       <property name="spacing">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QCheckBox" name="checkBox_btn_languageSettings">
+                         <property name="enabled">
+                          <bool>false</bool>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QCheckBox::indicator {
+    width: 45px;
+    height: 45px;
+}
+
+QCheckBox::indicator:checked {
+ 	 image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);
+}
+
+QCheckBox::indicator:unchecked {
+     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);
+}
+</string>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="widget_178" native="true">
+                   <layout class="QHBoxLayout" name="horizontalLayout_97">
+                    <item>
+                     <widget class="QLabel" name="label_btn_languageSettings">
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift Light</family>
+                        <pointsize>9</pointsize>
+                        <weight>50</weight>
+                        <bold>false</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string> The software is designed to be used exclusively 
+ in the English language.</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget_179" native="true">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>400</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_86">
+                 <item>
+                  <widget class="QWidget" name="widget_180" native="true">
+                   <layout class="QHBoxLayout" name="horizontalLayout_98">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QWidget" name="widget_181" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_99">
+                       <item>
+                        <widget class="QPushButton" name="btn_soundSettings">
+                         <property name="enabled">
+                          <bool>true</bool>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Bahnschrift SemiBold</family>
+                           <pointsize>11</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="text">
+                          <string>   Sound</string>
+                         </property>
+                         <property name="icon">
+                          <iconset>
+                           <normaloff>../icons/icons_sound.png</normaloff>../icons/icons_sound.png</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>40</width>
+                           <height>40</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item alignment="Qt::AlignRight">
+                     <widget class="QWidget" name="widget_182" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_100">
+                       <property name="spacing">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QCheckBox" name="checkBox_soundSettings">
+                         <property name="styleSheet">
+                          <string notr="true">QCheckBox::indicator {
+    width: 45px;
+    height: 45px;
+}
+
+QCheckBox::indicator:checked {
+ 	 image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);
+}
+
+QCheckBox::indicator:unchecked {
+     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);
+}
+</string>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="widget_183" native="true">
+                   <property name="font">
+                    <font>
+                     <pointsize>9</pointsize>
+                    </font>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_101">
+                    <item>
+                     <widget class="QLabel" name="label_10">
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift Light</family>
+                        <pointsize>10</pointsize>
+                        <weight>50</weight>
+                        <bold>false</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string> &quot;sound&quot; refers to audio output or the ability of a program 
+ to generate and play audio, such as  notifications, or other 
+ auditory feedback.</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_164" native="true">
+             <layout class="QHBoxLayout" name="horizontalLayout_115">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QWidget" name="widget_184" native="true">
+                <property name="minimumSize">
+                 <size>
+                  <width>400</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>400</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_87">
+                 <item>
+                  <widget class="QWidget" name="widget_185" native="true">
+                   <layout class="QHBoxLayout" name="horizontalLayout_103">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QWidget" name="widget_186" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_104">
+                       <item>
+                        <widget class="QWidget" name="widget_118" native="true">
+                         <layout class="QHBoxLayout" name="horizontalLayout_41">
+                          <item>
+                           <widget class="QPushButton" name="btn_LineAPISettings">
+                            <property name="enabled">
+                             <bool>true</bool>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Bahnschrift SemiBold</family>
+                              <pointsize>11</pointsize>
+                              <weight>75</weight>
+                              <bold>true</bold>
+                             </font>
+                            </property>
+                            <property name="text">
+                             <string>   LINE API Token</string>
+                            </property>
+                            <property name="icon">
+                             <iconset>
+                              <normaloff>../icons/icon-line.png</normaloff>../icons/icon-line.png</iconset>
+                            </property>
+                            <property name="iconSize">
+                             <size>
+                              <width>40</width>
+                              <height>40</height>
+                             </size>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item alignment="Qt::AlignRight">
+                        <widget class="QWidget" name="widget_100" native="true">
+                         <layout class="QHBoxLayout" name="horizontalLayout_35">
+                          <item>
+                           <widget class="QPushButton" name="btn_removeLineAPISettings">
+                            <property name="minimumSize">
+                             <size>
+                              <width>100</width>
+                              <height>40</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>100</width>
+                              <height>40</height>
+                             </size>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Bahnschrift SemiBold</family>
+                              <pointsize>12</pointsize>
+                              <weight>75</weight>
+                              <bold>true</bold>
+                             </font>
+                            </property>
+                            <property name="cursor">
+                             <cursorShape>PointingHandCursor</cursorShape>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 20px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
+}
+
+QPushButton:hover {
+    background-color: ;
+}
+</string>
+                            </property>
+                            <property name="text">
+                             <string>Remove</string>
+                            </property>
+                            <property name="iconSize">
+                             <size>
+                              <width>0</width>
+                              <height>0</height>
+                             </size>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_LineAPISettings">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Bahnschrift SemiBold</family>
+                     <pointsize>10</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QLineEdit {
+  border: 1px solid gray;
+  color: rgba(40,43,61,255);
+  border-radius: 5px;
+}
+
+QLineEdit:hover {
+  border: 2px solid;
+  border-color: rgba(0,143,255,255);
+}
+QLineEdit:focus {
+  border: 1px solid;
+  border-color: rgba(88,199,141,255);
+}
+</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="placeholderText">
+                    <string>LINE API Token</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="widget_188" native="true">
+                   <layout class="QHBoxLayout" name="horizontalLayout_106">
+                    <item>
+                     <widget class="QLabel" name="label_LineAPISettings">
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift Light</family>
+                        <pointsize>9</pointsize>
+                        <weight>50</weight>
+                        <bold>false</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>&quot;LINE API token&quot; refers to an access token used to interact with 
+the LINE Messaging API, which is a set of APIs provided by LINE 
+Corporation for developers to integrate LINE messaging features 
+into their applications and services.</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="widget_21" native="true"/>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget_189" native="true">
+                <property name="minimumSize">
+                 <size>
+                  <width>400</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>400</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_88">
+                 <item>
+                  <widget class="QWidget" name="widget_190" native="true">
+                   <layout class="QHBoxLayout" name="horizontalLayout_107">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QWidget" name="widget_191" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_108">
+                       <item alignment="Qt::AlignLeft">
+                        <widget class="QWidget" name="widget_123" native="true">
+                         <layout class="QHBoxLayout" name="horizontalLayout_65">
+                          <item>
+                           <widget class="QPushButton" name="btn_virusTotalAPISettings">
+                            <property name="enabled">
+                             <bool>true</bool>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Bahnschrift SemiBold</family>
+                              <pointsize>11</pointsize>
+                              <weight>75</weight>
+                              <bold>true</bold>
+                             </font>
+                            </property>
+                            <property name="text">
+                             <string>   Visrus Total API Token</string>
+                            </property>
+                            <property name="icon">
+                             <iconset>
+                              <normaloff>../icons/icons_virustotal.png</normaloff>../icons/icons_virustotal.png</iconset>
+                            </property>
+                            <property name="iconSize">
+                             <size>
+                              <width>40</width>
+                              <height>40</height>
+                             </size>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item alignment="Qt::AlignRight">
+                        <widget class="QWidget" name="widget_119" native="true">
+                         <layout class="QHBoxLayout" name="horizontalLayout_59">
+                          <item>
+                           <widget class="QPushButton" name="btn_removeVirusTotalAPISettings">
+                            <property name="minimumSize">
+                             <size>
+                              <width>100</width>
+                              <height>40</height>
+                             </size>
+                            </property>
+                            <property name="maximumSize">
+                             <size>
+                              <width>100</width>
+                              <height>40</height>
+                             </size>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Bahnschrift SemiBold</family>
+                              <pointsize>12</pointsize>
+                              <weight>75</weight>
+                              <bold>true</bold>
+                             </font>
+                            </property>
+                            <property name="cursor">
+                             <cursorShape>PointingHandCursor</cursorShape>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 20px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
+}
+
+QPushButton:hover {
+    background-color: ;
+}
+</string>
+                            </property>
+                            <property name="text">
+                             <string>Remove</string>
+                            </property>
+                            <property name="iconSize">
+                             <size>
+                              <width>0</width>
+                              <height>0</height>
+                             </size>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_virusTotalAPISettings">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Bahnschrift SemiBold</family>
+                     <pointsize>10</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QLineEdit {
+  border: 1px solid gray;
+  color: rgba(40,43,61,255);
+  border-radius: 5px;
+}
+
+QLineEdit:hover {
+  border: 2px solid;
+  border-color: rgba(0,143,255,255);
+}
+QLineEdit:focus {
+  border: 1px solid;
+  border-color: rgba(88,199,141,255);
+}
+</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="placeholderText">
+                    <string>Virus Total API Token</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="widget_193" native="true">
+                   <layout class="QHBoxLayout" name="horizontalLayout_110">
+                    <item>
+                     <widget class="QLabel" name="label_virusTotalAPISettings">
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift Light</family>
+                        <pointsize>9</pointsize>
+                        <weight>50</weight>
+                        <bold>false</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>VirusTotal's  API lets you upload and scan files, submit and scan 
+URLs, access finished scan reports and make automatic 
+comments on URLs and samples without the need of using 
+the HTML website interface. In other words, it allows you to build 
+simple scripts to access the information generated by VirusTotal.</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget_194" native="true">
+                <property name="minimumSize">
+                 <size>
+                  <width>400</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>400</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_89">
+                 <item>
+                  <widget class="QWidget" name="widget_195" native="true">
+                   <layout class="QHBoxLayout" name="horizontalLayout_111">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QWidget" name="widget_196" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_112">
+                       <item>
+                        <widget class="QPushButton" name="btn_themeSettings">
+                         <property name="enabled">
+                          <bool>true</bool>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Bahnschrift SemiBold</family>
+                           <pointsize>11</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="text">
+                          <string>   Light Theme</string>
+                         </property>
+                         <property name="icon">
+                          <iconset>
+                           <normaloff>../icons/icons_display.png</normaloff>../icons/icons_display.png</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>40</width>
+                           <height>40</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item alignment="Qt::AlignRight">
+                     <widget class="QWidget" name="widget_197" native="true">
+                      <layout class="QHBoxLayout" name="horizontalLayout_113">
+                       <property name="spacing">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QCheckBox" name="checkBox_themeSettings">
+                         <property name="enabled">
+                          <bool>false</bool>
+                         </property>
+                         <property name="font">
+                          <font>
+                           <family>Bahnschrift SemiBold</family>
+                           <pointsize>10</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QCheckBox::indicator {
+    width: 45px;
+    height: 45px;
+}
+
+QCheckBox::indicator:checked {
+ 	 image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);
+}
+
+QCheckBox::indicator:unchecked {
+     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);
+}
+</string>
+                         </property>
+                         <property name="text">
+                          <string/>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QWidget" name="widget_198" native="true">
+                   <layout class="QHBoxLayout" name="horizontalLayout_114">
+                    <item>
+                     <widget class="QLabel" name="label_themeSettings">
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift Light</family>
+                        <pointsize>9</pointsize>
+                        <weight>50</weight>
+                        <bold>false</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>&quot;light theme&quot; refers to the appearance or color scheme 
+used in user interfaces, particularly in software, apps, websites, 
+and operating systems. </string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignRight">
+            <widget class="QPushButton" name="btn_saveSettings">
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>100</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Bahnschrift SemiBold</family>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 20px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
+}
+
+QPushButton:hover {
+    background-color: ;
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Save</string>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
       <widget class="QWidget" name="page_advancedUser">
        <layout class="QHBoxLayout" name="horizontalLayout_9">
         <item alignment="Qt::AlignTop">
@@ -7708,23 +8884,24 @@ QPushButton:hover {
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="page_settings">
-       <layout class="QHBoxLayout" name="horizontalLayout_61">
-        <item alignment="Qt::AlignTop">
-         <widget class="QWidget" name="widget_130" native="true">
+      <widget class="QWidget" name="page_malware_email">
+       <layout class="QHBoxLayout" name="horizontalLayout_66">
+        <item>
+         <widget class="QWidget" name="widget_131" native="true">
           <property name="styleSheet">
-           <string notr="true">QWidget#widget_135 {
+           <string notr="true">QWidget#widget_140,
+QWidget#widget_143{
     border: 1px solid rgb(237, 236, 237); /* Set the &quot;groove&quot; border style for the specific widgets */
 	background-color: rgb(237, 236, 237);
 }
 </string>
           </property>
-          <layout class="QVBoxLayout" name="verticalLayout_76">
+          <layout class="QVBoxLayout" name="verticalLayout_60">
            <property name="spacing">
             <number>30</number>
            </property>
            <item>
-            <widget class="QWidget" name="widget_135" native="true">
+            <widget class="QWidget" name="widget_143" native="true">
              <property name="minimumSize">
               <size>
                <width>1200</width>
@@ -7740,7 +8917,7 @@ QPushButton:hover {
              <property name="styleSheet">
               <string notr="true"/>
              </property>
-             <widget class="QWidget" name="widget_136" native="true">
+             <widget class="QWidget" name="widget_144" native="true">
               <property name="geometry">
                <rect>
                 <x>0</x>
@@ -7766,9 +8943,9 @@ QPushButton:hover {
 background-color: rgb(237, 236, 237);
 border-radius: 20px;</string>
               </property>
-              <layout class="QHBoxLayout" name="horizontalLayout_62">
+              <layout class="QHBoxLayout" name="horizontalLayout_73">
                <item alignment="Qt::AlignLeft">
-                <widget class="QPushButton" name="btn_backSettings">
+                <widget class="QPushButton" name="btn_backEmail_malware">
                  <property name="minimumSize">
                   <size>
                    <width>130</width>
@@ -7822,24 +8999,24 @@ QPushButton:hover {
                </item>
               </layout>
              </widget>
-             <widget class="QLabel" name="label_headofHttpstesting_2">
+             <widget class="QLabel" name="label_headofEmail_malware">
               <property name="geometry">
                <rect>
                 <x>152</x>
                 <y>15</y>
-                <width>500</width>
+                <width>600</width>
                 <height>45</height>
                </rect>
               </property>
               <property name="minimumSize">
                <size>
-                <width>500</width>
+                <width>600</width>
                 <height>45</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>500</width>
+                <width>800</width>
                 <height>45</height>
                </size>
               </property>
@@ -7855,7 +9032,7 @@ QPushButton:hover {
                <string notr="true">color: rgb(38, 50, 56);</string>
               </property>
               <property name="text">
-               <string>Settings</string>
+               <string>Send ISAN Secutity Gixmo Box Malware Report</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -7870,980 +9047,7 @@ QPushButton:hover {
             </widget>
            </item>
            <item>
-            <widget class="QWidget" name="widget_129" native="true">
-             <layout class="QHBoxLayout" name="horizontalLayout_102">
-              <property name="spacing">
-               <number>0</number>
-              </property>
-              <property name="bottomMargin">
-               <number>11</number>
-              </property>
-              <item>
-               <widget class="QWidget" name="widget_165" native="true">
-                <property name="minimumSize">
-                 <size>
-                  <width>400</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>400</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <layout class="QVBoxLayout" name="verticalLayout_84">
-                 <item>
-                  <widget class="QWidget" name="widget_170" native="true">
-                   <layout class="QHBoxLayout" name="horizontalLayout_90">
-                    <property name="spacing">
-                     <number>0</number>
-                    </property>
-                    <property name="leftMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="topMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="bottomMargin">
-                     <number>0</number>
-                    </property>
-                    <item>
-                     <widget class="QWidget" name="widget_171" native="true">
-                      <layout class="QHBoxLayout" name="horizontalLayout_91">
-                       <item>
-                        <widget class="QPushButton" name="btn_notificationSettings">
-                         <property name="enabled">
-                          <bool>true</bool>
-                         </property>
-                         <property name="font">
-                          <font>
-                           <family>Bahnschrift SemiBold</family>
-                           <pointsize>11</pointsize>
-                           <weight>75</weight>
-                           <bold>true</bold>
-                          </font>
-                         </property>
-                         <property name="text">
-                          <string>    Notification</string>
-                         </property>
-                         <property name="icon">
-                          <iconset>
-                           <normaloff>../icons/icon_notification.png</normaloff>../icons/icon_notification.png</iconset>
-                         </property>
-                         <property name="iconSize">
-                          <size>
-                           <width>40</width>
-                           <height>40</height>
-                          </size>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
-                    </item>
-                    <item alignment="Qt::AlignRight">
-                     <widget class="QWidget" name="widget_172" native="true">
-                      <layout class="QHBoxLayout" name="horizontalLayout_92">
-                       <property name="spacing">
-                        <number>0</number>
-                       </property>
-                       <item>
-                        <widget class="QCheckBox" name="checkBox_notificationSettings">
-                         <property name="styleSheet">
-                          <string notr="true">QCheckBox::indicator {
-    width: 45px;
-    height: 45px;
-}
-
-QCheckBox::indicator:checked {
- 	 image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);
-}
-
-QCheckBox::indicator:unchecked {
-     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);
-}
-</string>
-                         </property>
-                         <property name="text">
-                          <string/>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QWidget" name="widget_173" native="true">
-                   <layout class="QHBoxLayout" name="horizontalLayout_93">
-                    <item>
-                     <widget class="QLabel" name="label_notifucationSettings">
-                      <property name="font">
-                       <font>
-                        <family>Bahnschrift Light</family>
-                        <pointsize>9</pointsize>
-                        <weight>50</weight>
-                        <bold>false</bold>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string> &quot;notification&quot; is typically refers to a pop-up message or alert 
-that appears on your computer screen to inform you about 
-a specific event, task, or update. </string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QWidget" name="widget_174" native="true">
-                <property name="minimumSize">
-                 <size>
-                  <width>400</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>400</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <layout class="QVBoxLayout" name="verticalLayout_85">
-                 <item>
-                  <widget class="QWidget" name="widget_175" native="true">
-                   <layout class="QHBoxLayout" name="horizontalLayout_94">
-                    <property name="spacing">
-                     <number>0</number>
-                    </property>
-                    <property name="leftMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="topMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="bottomMargin">
-                     <number>0</number>
-                    </property>
-                    <item>
-                     <widget class="QWidget" name="widget_176" native="true">
-                      <layout class="QHBoxLayout" name="horizontalLayout_95">
-                       <item>
-                        <widget class="QPushButton" name="btn_languageSettings">
-                         <property name="enabled">
-                          <bool>true</bool>
-                         </property>
-                         <property name="font">
-                          <font>
-                           <family>Bahnschrift SemiBold</family>
-                           <pointsize>11</pointsize>
-                           <weight>75</weight>
-                           <bold>true</bold>
-                          </font>
-                         </property>
-                         <property name="text">
-                          <string> English  Language</string>
-                         </property>
-                         <property name="icon">
-                          <iconset>
-                           <normaloff>../icons/icons_language.png</normaloff>../icons/icons_language.png</iconset>
-                         </property>
-                         <property name="iconSize">
-                          <size>
-                           <width>40</width>
-                           <height>40</height>
-                          </size>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
-                    </item>
-                    <item alignment="Qt::AlignRight">
-                     <widget class="QWidget" name="widget_177" native="true">
-                      <layout class="QHBoxLayout" name="horizontalLayout_96">
-                       <property name="spacing">
-                        <number>0</number>
-                       </property>
-                       <item>
-                        <widget class="QCheckBox" name="checkBox_btn_languageSettings">
-                         <property name="enabled">
-                          <bool>false</bool>
-                         </property>
-                         <property name="styleSheet">
-                          <string notr="true">QCheckBox::indicator {
-    width: 45px;
-    height: 45px;
-}
-
-QCheckBox::indicator:checked {
- 	 image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);
-}
-
-QCheckBox::indicator:unchecked {
-     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);
-}
-</string>
-                         </property>
-                         <property name="text">
-                          <string/>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QWidget" name="widget_178" native="true">
-                   <layout class="QHBoxLayout" name="horizontalLayout_97">
-                    <item>
-                     <widget class="QLabel" name="label_btn_languageSettings">
-                      <property name="font">
-                       <font>
-                        <family>Bahnschrift Light</family>
-                        <pointsize>9</pointsize>
-                        <weight>50</weight>
-                        <bold>false</bold>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string> The software is designed to be used exclusively 
- in the English language.</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QWidget" name="widget_179" native="true">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>400</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <layout class="QVBoxLayout" name="verticalLayout_86">
-                 <item>
-                  <widget class="QWidget" name="widget_180" native="true">
-                   <layout class="QHBoxLayout" name="horizontalLayout_98">
-                    <property name="spacing">
-                     <number>0</number>
-                    </property>
-                    <property name="leftMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="topMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="bottomMargin">
-                     <number>0</number>
-                    </property>
-                    <item>
-                     <widget class="QWidget" name="widget_181" native="true">
-                      <layout class="QHBoxLayout" name="horizontalLayout_99">
-                       <item>
-                        <widget class="QPushButton" name="btn_soundSettings">
-                         <property name="enabled">
-                          <bool>true</bool>
-                         </property>
-                         <property name="font">
-                          <font>
-                           <family>Bahnschrift SemiBold</family>
-                           <pointsize>11</pointsize>
-                           <weight>75</weight>
-                           <bold>true</bold>
-                          </font>
-                         </property>
-                         <property name="text">
-                          <string>   Sound</string>
-                         </property>
-                         <property name="icon">
-                          <iconset>
-                           <normaloff>../icons/icons_sound.png</normaloff>../icons/icons_sound.png</iconset>
-                         </property>
-                         <property name="iconSize">
-                          <size>
-                           <width>40</width>
-                           <height>40</height>
-                          </size>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
-                    </item>
-                    <item alignment="Qt::AlignRight">
-                     <widget class="QWidget" name="widget_182" native="true">
-                      <layout class="QHBoxLayout" name="horizontalLayout_100">
-                       <property name="spacing">
-                        <number>0</number>
-                       </property>
-                       <item>
-                        <widget class="QCheckBox" name="checkBox_soundSettings">
-                         <property name="styleSheet">
-                          <string notr="true">QCheckBox::indicator {
-    width: 45px;
-    height: 45px;
-}
-
-QCheckBox::indicator:checked {
- 	 image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);
-}
-
-QCheckBox::indicator:unchecked {
-     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);
-}
-</string>
-                         </property>
-                         <property name="text">
-                          <string/>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QWidget" name="widget_183" native="true">
-                   <property name="font">
-                    <font>
-                     <pointsize>9</pointsize>
-                    </font>
-                   </property>
-                   <layout class="QHBoxLayout" name="horizontalLayout_101">
-                    <item>
-                     <widget class="QLabel" name="label_10">
-                      <property name="font">
-                       <font>
-                        <family>Bahnschrift Light</family>
-                        <pointsize>10</pointsize>
-                        <weight>50</weight>
-                        <bold>false</bold>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string> &quot;sound&quot; refers to audio output or the ability of a program 
- to generate and play audio, such as  notifications, or other 
- auditory feedback.</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="widget_164" native="true">
-             <layout class="QHBoxLayout" name="horizontalLayout_115">
-              <property name="spacing">
-               <number>0</number>
-              </property>
-              <item>
-               <widget class="QWidget" name="widget_184" native="true">
-                <property name="minimumSize">
-                 <size>
-                  <width>400</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>400</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <layout class="QVBoxLayout" name="verticalLayout_87">
-                 <item>
-                  <widget class="QWidget" name="widget_185" native="true">
-                   <layout class="QHBoxLayout" name="horizontalLayout_103">
-                    <property name="spacing">
-                     <number>0</number>
-                    </property>
-                    <property name="leftMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="topMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="bottomMargin">
-                     <number>0</number>
-                    </property>
-                    <item>
-                     <widget class="QWidget" name="widget_186" native="true">
-                      <layout class="QHBoxLayout" name="horizontalLayout_104">
-                       <item>
-                        <widget class="QWidget" name="widget_118" native="true">
-                         <layout class="QHBoxLayout" name="horizontalLayout_41">
-                          <item>
-                           <widget class="QPushButton" name="btn_LineAPISettings">
-                            <property name="enabled">
-                             <bool>true</bool>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <family>Bahnschrift SemiBold</family>
-                              <pointsize>11</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="text">
-                             <string>   LINE API Token</string>
-                            </property>
-                            <property name="icon">
-                             <iconset>
-                              <normaloff>../icons/icon-line.png</normaloff>../icons/icon-line.png</iconset>
-                            </property>
-                            <property name="iconSize">
-                             <size>
-                              <width>40</width>
-                              <height>40</height>
-                             </size>
-                            </property>
-                           </widget>
-                          </item>
-                         </layout>
-                        </widget>
-                       </item>
-                       <item alignment="Qt::AlignRight">
-                        <widget class="QWidget" name="widget_100" native="true">
-                         <layout class="QHBoxLayout" name="horizontalLayout_35">
-                          <item>
-                           <widget class="QPushButton" name="btn_removeLineAPISettings">
-                            <property name="minimumSize">
-                             <size>
-                              <width>100</width>
-                              <height>40</height>
-                             </size>
-                            </property>
-                            <property name="maximumSize">
-                             <size>
-                              <width>100</width>
-                              <height>40</height>
-                             </size>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <family>Bahnschrift SemiBold</family>
-                              <pointsize>12</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="cursor">
-                             <cursorShape>PointingHandCursor</cursorShape>
-                            </property>
-                            <property name="styleSheet">
-                             <string notr="true">QPushButton {    
-    border: 1px solid rgba(40,43,61,255) ;
-    border-radius: 20px;
-    padding: 5px 10px;
-	color: rgba(40,43,61,255) ;
-}
-
-QPushButton:hover {
-    background-color: ;
-}
-</string>
-                            </property>
-                            <property name="text">
-                             <string>Remove</string>
-                            </property>
-                            <property name="iconSize">
-                             <size>
-                              <width>0</width>
-                              <height>0</height>
-                             </size>
-                            </property>
-                           </widget>
-                          </item>
-                         </layout>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLineEdit" name="lineEdit_LineAPISettings">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>30</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>16777215</width>
-                     <height>30</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <family>Bahnschrift SemiBold</family>
-                     <pointsize>10</pointsize>
-                     <weight>75</weight>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">QLineEdit {
-  border: 1px solid gray;
-  color: rgba(40,43,61,255);
-  border-radius: 5px;
-}
-
-QLineEdit:hover {
-  border: 2px solid;
-  border-color: rgba(0,143,255,255);
-}
-QLineEdit:focus {
-  border: 1px solid;
-  border-color: rgba(88,199,141,255);
-}
-</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                   <property name="placeholderText">
-                    <string>LINE API Token</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QWidget" name="widget_188" native="true">
-                   <layout class="QHBoxLayout" name="horizontalLayout_106">
-                    <item>
-                     <widget class="QLabel" name="label_LineAPISettings">
-                      <property name="font">
-                       <font>
-                        <family>Bahnschrift Light</family>
-                        <pointsize>9</pointsize>
-                        <weight>50</weight>
-                        <bold>false</bold>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>&quot;LINE API token&quot; refers to an access token used to interact with 
-the LINE Messaging API, which is a set of APIs provided by LINE 
-Corporation for developers to integrate LINE messaging features 
-into their applications and services.</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QWidget" name="widget_21" native="true"/>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QWidget" name="widget_189" native="true">
-                <property name="minimumSize">
-                 <size>
-                  <width>400</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>400</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <layout class="QVBoxLayout" name="verticalLayout_88">
-                 <item>
-                  <widget class="QWidget" name="widget_190" native="true">
-                   <layout class="QHBoxLayout" name="horizontalLayout_107">
-                    <property name="spacing">
-                     <number>0</number>
-                    </property>
-                    <property name="leftMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="topMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="bottomMargin">
-                     <number>0</number>
-                    </property>
-                    <item>
-                     <widget class="QWidget" name="widget_191" native="true">
-                      <layout class="QHBoxLayout" name="horizontalLayout_108">
-                       <item alignment="Qt::AlignLeft">
-                        <widget class="QWidget" name="widget_123" native="true">
-                         <layout class="QHBoxLayout" name="horizontalLayout_65">
-                          <item>
-                           <widget class="QPushButton" name="btn_virusTotalAPISettings">
-                            <property name="enabled">
-                             <bool>true</bool>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <family>Bahnschrift SemiBold</family>
-                              <pointsize>11</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="text">
-                             <string>   Visrus Total API Token</string>
-                            </property>
-                            <property name="icon">
-                             <iconset>
-                              <normaloff>../icons/icons_virustotal.png</normaloff>../icons/icons_virustotal.png</iconset>
-                            </property>
-                            <property name="iconSize">
-                             <size>
-                              <width>40</width>
-                              <height>40</height>
-                             </size>
-                            </property>
-                           </widget>
-                          </item>
-                         </layout>
-                        </widget>
-                       </item>
-                       <item alignment="Qt::AlignRight">
-                        <widget class="QWidget" name="widget_119" native="true">
-                         <layout class="QHBoxLayout" name="horizontalLayout_59">
-                          <item>
-                           <widget class="QPushButton" name="btn_removeVirusTotalAPISettings">
-                            <property name="minimumSize">
-                             <size>
-                              <width>100</width>
-                              <height>40</height>
-                             </size>
-                            </property>
-                            <property name="maximumSize">
-                             <size>
-                              <width>100</width>
-                              <height>40</height>
-                             </size>
-                            </property>
-                            <property name="font">
-                             <font>
-                              <family>Bahnschrift SemiBold</family>
-                              <pointsize>12</pointsize>
-                              <weight>75</weight>
-                              <bold>true</bold>
-                             </font>
-                            </property>
-                            <property name="cursor">
-                             <cursorShape>PointingHandCursor</cursorShape>
-                            </property>
-                            <property name="styleSheet">
-                             <string notr="true">QPushButton {    
-    border: 1px solid rgba(40,43,61,255) ;
-    border-radius: 20px;
-    padding: 5px 10px;
-	color: rgba(40,43,61,255) ;
-}
-
-QPushButton:hover {
-    background-color: ;
-}
-</string>
-                            </property>
-                            <property name="text">
-                             <string>Remove</string>
-                            </property>
-                            <property name="iconSize">
-                             <size>
-                              <width>0</width>
-                              <height>0</height>
-                             </size>
-                            </property>
-                           </widget>
-                          </item>
-                         </layout>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLineEdit" name="lineEdit_virusTotalAPISettings">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>30</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>16777215</width>
-                     <height>30</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <family>Bahnschrift SemiBold</family>
-                     <pointsize>10</pointsize>
-                     <weight>75</weight>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">QLineEdit {
-  border: 1px solid gray;
-  color: rgba(40,43,61,255);
-  border-radius: 5px;
-}
-
-QLineEdit:hover {
-  border: 2px solid;
-  border-color: rgba(0,143,255,255);
-}
-QLineEdit:focus {
-  border: 1px solid;
-  border-color: rgba(88,199,141,255);
-}
-</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                   <property name="placeholderText">
-                    <string>Virus Total API Token</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QWidget" name="widget_193" native="true">
-                   <layout class="QHBoxLayout" name="horizontalLayout_110">
-                    <item>
-                     <widget class="QLabel" name="label_virusTotalAPISettings">
-                      <property name="font">
-                       <font>
-                        <family>Bahnschrift Light</family>
-                        <pointsize>9</pointsize>
-                        <weight>50</weight>
-                        <bold>false</bold>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>VirusTotal's  API lets you upload and scan files, submit and scan 
-URLs, access finished scan reports and make automatic 
-comments on URLs and samples without the need of using 
-the HTML website interface. In other words, it allows you to build 
-simple scripts to access the information generated by VirusTotal.</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
-               <widget class="QWidget" name="widget_194" native="true">
-                <property name="minimumSize">
-                 <size>
-                  <width>400</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>400</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <layout class="QVBoxLayout" name="verticalLayout_89">
-                 <item>
-                  <widget class="QWidget" name="widget_195" native="true">
-                   <layout class="QHBoxLayout" name="horizontalLayout_111">
-                    <property name="spacing">
-                     <number>0</number>
-                    </property>
-                    <property name="leftMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="topMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="bottomMargin">
-                     <number>0</number>
-                    </property>
-                    <item>
-                     <widget class="QWidget" name="widget_196" native="true">
-                      <layout class="QHBoxLayout" name="horizontalLayout_112">
-                       <item>
-                        <widget class="QPushButton" name="btn_themeSettings">
-                         <property name="enabled">
-                          <bool>true</bool>
-                         </property>
-                         <property name="font">
-                          <font>
-                           <family>Bahnschrift SemiBold</family>
-                           <pointsize>11</pointsize>
-                           <weight>75</weight>
-                           <bold>true</bold>
-                          </font>
-                         </property>
-                         <property name="text">
-                          <string>   Light Theme</string>
-                         </property>
-                         <property name="icon">
-                          <iconset>
-                           <normaloff>../icons/icons_display.png</normaloff>../icons/icons_display.png</iconset>
-                         </property>
-                         <property name="iconSize">
-                          <size>
-                           <width>40</width>
-                           <height>40</height>
-                          </size>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
-                    </item>
-                    <item alignment="Qt::AlignRight">
-                     <widget class="QWidget" name="widget_197" native="true">
-                      <layout class="QHBoxLayout" name="horizontalLayout_113">
-                       <property name="spacing">
-                        <number>0</number>
-                       </property>
-                       <item>
-                        <widget class="QCheckBox" name="checkBox_themeSettings">
-                         <property name="enabled">
-                          <bool>false</bool>
-                         </property>
-                         <property name="font">
-                          <font>
-                           <family>Bahnschrift SemiBold</family>
-                           <pointsize>10</pointsize>
-                           <weight>75</weight>
-                           <bold>true</bold>
-                          </font>
-                         </property>
-                         <property name="styleSheet">
-                          <string notr="true">QCheckBox::indicator {
-    width: 45px;
-    height: 45px;
-}
-
-QCheckBox::indicator:checked {
- 	 image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);
-}
-
-QCheckBox::indicator:unchecked {
-     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);
-}
-</string>
-                         </property>
-                         <property name="text">
-                          <string/>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QWidget" name="widget_198" native="true">
-                   <layout class="QHBoxLayout" name="horizontalLayout_114">
-                    <item>
-                     <widget class="QLabel" name="label_themeSettings">
-                      <property name="font">
-                       <font>
-                        <family>Bahnschrift Light</family>
-                        <pointsize>9</pointsize>
-                        <weight>50</weight>
-                        <bold>false</bold>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>&quot;light theme&quot; refers to the appearance or color scheme 
-used in user interfaces, particularly in software, apps, websites, 
-and operating systems. </string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item alignment="Qt::AlignRight">
-            <widget class="QPushButton" name="btn_saveSettings">
-             <property name="minimumSize">
-              <size>
-               <width>100</width>
-               <height>40</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>100</width>
-               <height>40</height>
-              </size>
-             </property>
+            <widget class="QWidget" name="widget_145" native="true">
              <property name="font">
               <font>
                <family>Bahnschrift SemiBold</family>
@@ -8852,11 +9056,71 @@ and operating systems. </string>
                <bold>true</bold>
               </font>
              </property>
-             <property name="cursor">
-              <cursorShape>PointingHandCursor</cursorShape>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QPushButton {    
+             <layout class="QHBoxLayout" name="horizontalLayout_74">
+              <item>
+               <widget class="QWidget" name="widget_133" native="true">
+                <layout class="QVBoxLayout" name="verticalLayout_72">
+                 <item>
+                  <widget class="QWidget" name="widget_146" native="true">
+                   <layout class="QHBoxLayout" name="horizontalLayout_75">
+                    <item>
+                     <widget class="QLabel" name="label_Report_malware">
+                      <property name="minimumSize">
+                       <size>
+                        <width>400</width>
+                        <height>500</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>400</width>
+                        <height>500</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="pixmap">
+                       <pixmap>C:/Users/kanja/OneDrive/Pictures/Screenshots/Screenshot 2023-10-16 152325.png</pixmap>
+                      </property>
+                      <property name="scaledContents">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+                  <widget class="QWidget" name="widget_147" native="true">
+                   <layout class="QHBoxLayout" name="horizontalLayout_76">
+                    <item>
+                     <widget class="QPushButton" name="btn_backReport_malware">
+                      <property name="minimumSize">
+                       <size>
+                        <width>100</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift SemiBold</family>
+                        <pointsize>10</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="cursor">
+                       <cursorShape>PointingHandCursor</cursorShape>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {    
     border: 1px solid rgba(40,43,61,255) ;
     border-radius: 20px;
     padding: 5px 10px;
@@ -8867,16 +9131,414 @@ QPushButton:hover {
     background-color: ;
 }
 </string>
-             </property>
-             <property name="text">
-              <string>Save</string>
-             </property>
-             <property name="iconSize">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
+                      </property>
+                      <property name="text">
+                       <string>Back</string>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>C:/Users/kanja/Downloads/icon_back.png</normaloff>C:/Users/kanja/Downloads/icon_back.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>35</width>
+                        <height>35</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="label_countPageReport_malware">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>40</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift SemiBold</family>
+                        <pointsize>11</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QLabel {
+  border: 1px solid gray;
+  color: rgba(40,43,61,255);
+  border-radius: 5px;
+}
+
+</string>
+                      </property>
+                      <property name="text">
+                       <string>0</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="btn_nextReport_malware">
+                      <property name="minimumSize">
+                       <size>
+                        <width>100</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift SemiBold</family>
+                        <pointsize>10</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="cursor">
+                       <cursorShape>PointingHandCursor</cursorShape>
+                      </property>
+                      <property name="layoutDirection">
+                       <enum>Qt::RightToLeft</enum>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 20px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
+}
+
+QPushButton:hover {
+    background-color: ;
+}
+</string>
+                      </property>
+                      <property name="text">
+                       <string>Next</string>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>C:/Users/kanja/Downloads/icon_next.png</normaloff>C:/Users/kanja/Downloads/icon_next.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>35</width>
+                        <height>35</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget_148" native="true">
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>570</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>570</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_77">
+                 <item alignment="Qt::AlignRight|Qt::AlignTop">
+                  <widget class="QWidget" name="widget_149" native="true">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>150</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>150</height>
+                    </size>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_66">
+                    <item>
+                     <widget class="QLabel" name="label_to_malware">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift SemiBold</family>
+                        <pointsize>12</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>To:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="label_subject_malware">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift SemiBold</family>
+                        <pointsize>12</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Subject:</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                  <widget class="QWidget" name="widget_150" native="true">
+                   <layout class="QVBoxLayout" name="verticalLayout_11">
+                    <item>
+                     <widget class="QLabel" name="label_header_email_malware">
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift SemiBold</family>
+                        <pointsize>12</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>ISAN Secutity Gixmo Box</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="lineEdit_to_email_malware">
+                      <property name="minimumSize">
+                       <size>
+                        <width>600</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>600</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QLineEdit {
+  border: 1px solid gray;
+  color: rgba(40,43,61,255);
+  border-radius: 5px;
+}
+
+QLineEdit:hover {
+  border: 2px solid;
+  border-color: rgba(0,143,255,255);
+}
+QLineEdit:focus {
+  border: 1px solid;
+  border-color: rgba(88,199,141,255);
+}
+</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="lineEdit_subject_email_malware">
+                      <property name="minimumSize">
+                       <size>
+                        <width>600</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>600</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QLineEdit {
+  border: 1px solid gray;
+  color: rgba(40,43,61,255);
+  border-radius: 5px;
+}
+
+QLineEdit:hover {
+  border: 2px solid;
+  border-color: rgba(0,143,255,255);
+}
+QLineEdit:focus {
+  border: 1px solid;
+  border-color: rgba(88,199,141,255);
+}
+</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QTextEdit" name="textEdit_body_email_malware">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>300</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QTextEdit {
+  border: 1px solid gray;
+  color: rgba(40,43,61,255);
+  border-radius: 5px;
+}
+
+QTextEdit:hover {
+  border: 2px solid;
+  border-color: rgba(0,143,255,255);
+}
+QTextEdit:focus {
+  border: 1px solid;
+  border-color: rgba(88,199,141,255);
+}
+</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="btn_file_email_malware">
+                      <property name="minimumSize">
+                       <size>
+                        <width>600</width>
+                        <height>45</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>600</width>
+                        <height>45</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift SemiBold</family>
+                        <pointsize>12</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 5px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
+}
+
+QPushButton:hover {
+    background-color: ;
+}
+</string>
+                      </property>
+                      <property name="text">
+                       <string>File</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item alignment="Qt::AlignRight">
+                     <widget class="QPushButton" name="btn_sendReport_email_malware">
+                      <property name="minimumSize">
+                       <size>
+                        <width>130</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>130</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift SemiBold</family>
+                        <pointsize>12</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="cursor">
+                       <cursorShape>PointingHandCursor</cursorShape>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 20px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
+}
+
+QPushButton:hover {
+    background-color: ;
+}
+</string>
+                      </property>
+                      <property name="text">
+                       <string>Send</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
             </widget>
            </item>
           </layout>
@@ -8944,7 +9606,7 @@ border-radius: 20px;</string>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_70">
                <item alignment="Qt::AlignLeft">
-                <widget class="QPushButton" name="btn_backEmail">
+                <widget class="QPushButton" name="btn_backEmail_vulner">
                  <property name="minimumSize">
                   <size>
                    <width>130</width>
@@ -8998,24 +9660,24 @@ QPushButton:hover {
                </item>
               </layout>
              </widget>
-             <widget class="QLabel" name="label_headofEmail">
+             <widget class="QLabel" name="label_headofEmail_vulner">
               <property name="geometry">
                <rect>
                 <x>152</x>
                 <y>15</y>
-                <width>600</width>
+                <width>650</width>
                 <height>45</height>
                </rect>
               </property>
               <property name="minimumSize">
                <size>
-                <width>600</width>
+                <width>650</width>
                 <height>45</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>800</width>
+                <width>650</width>
                 <height>45</height>
                </size>
               </property>
@@ -9031,7 +9693,7 @@ QPushButton:hover {
                <string notr="true">color: rgb(38, 50, 56);</string>
               </property>
               <property name="text">
-               <string>Send ISAN Secutity Gixmo Box Report</string>
+               <string>Send ISAN Secutity Gixmo Box Vulnerability Report</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -9063,7 +9725,7 @@ QPushButton:hover {
                   <widget class="QWidget" name="widget_139" native="true">
                    <layout class="QHBoxLayout" name="horizontalLayout_72">
                     <item>
-                     <widget class="QLabel" name="label_Report">
+                     <widget class="QLabel" name="label_report_vulner">
                       <property name="minimumSize">
                        <size>
                         <width>400</width>
@@ -9094,7 +9756,7 @@ QPushButton:hover {
                   <widget class="QWidget" name="widget_142" native="true">
                    <layout class="QHBoxLayout" name="horizontalLayout_71">
                     <item>
-                     <widget class="QPushButton" name="btn_backReport">
+                     <widget class="QPushButton" name="btn_backReport_vulner">
                       <property name="minimumSize">
                        <size>
                         <width>100</width>
@@ -9147,7 +9809,7 @@ QPushButton:hover {
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLabel" name="label_countPageReport">
+                     <widget class="QLabel" name="label_countPageReport_vulner">
                       <property name="minimumSize">
                        <size>
                         <width>40</width>
@@ -9186,7 +9848,7 @@ QPushButton:hover {
                      </widget>
                     </item>
                     <item>
-                     <widget class="QPushButton" name="btn_nextReport">
+                     <widget class="QPushButton" name="btn_nextReport_vulner">
                       <property name="minimumSize">
                        <size>
                         <width>100</width>
@@ -9281,7 +9943,7 @@ QPushButton:hover {
                    </property>
                    <layout class="QVBoxLayout" name="verticalLayout_62">
                     <item>
-                     <widget class="QLabel" name="label_3">
+                     <widget class="QLabel" name="label_to_vulner">
                       <property name="minimumSize">
                        <size>
                         <width>0</width>
@@ -9308,7 +9970,7 @@ QPushButton:hover {
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLabel" name="label_4">
+                     <widget class="QLabel" name="label_subject_vulner">
                       <property name="minimumSize">
                        <size>
                         <width>0</width>
@@ -9341,7 +10003,7 @@ QPushButton:hover {
                   <widget class="QWidget" name="widget_127" native="true">
                    <layout class="QVBoxLayout" name="verticalLayout_10">
                     <item>
-                     <widget class="QLabel" name="label_headerEmail">
+                     <widget class="QLabel" name="label_header_email_vulner">
                       <property name="font">
                        <font>
                         <family>Bahnschrift SemiBold</family>
@@ -9356,7 +10018,7 @@ QPushButton:hover {
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLineEdit" name="lineEdit_toEmail">
+                     <widget class="QLineEdit" name="lineEdit_to_email_vulner">
                       <property name="minimumSize">
                        <size>
                         <width>600</width>
@@ -9389,7 +10051,7 @@ QLineEdit:focus {
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLineEdit" name="lineEdit_subjectEmail">
+                     <widget class="QLineEdit" name="lineEdit_subject_email_vulner">
                       <property name="minimumSize">
                        <size>
                         <width>600</width>
@@ -9422,7 +10084,7 @@ QLineEdit:focus {
                      </widget>
                     </item>
                     <item>
-                     <widget class="QTextEdit" name="textEdit_bodyEmail">
+                     <widget class="QTextEdit" name="textEdit_body_email_vulner">
                       <property name="minimumSize">
                        <size>
                         <width>0</width>
@@ -9449,7 +10111,7 @@ QTextEdit:focus {
                      </widget>
                     </item>
                     <item>
-                     <widget class="QPushButton" name="btn_fileEmail">
+                     <widget class="QPushButton" name="btn_file_email_vulner">
                       <property name="minimumSize">
                        <size>
                         <width>600</width>
@@ -9489,7 +10151,669 @@ QPushButton:hover {
                      </widget>
                     </item>
                     <item alignment="Qt::AlignRight">
-                     <widget class="QPushButton" name="btn_sendReportToMail">
+                     <widget class="QPushButton" name="btn_sendReport_email_vulner">
+                      <property name="minimumSize">
+                       <size>
+                        <width>130</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>130</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift SemiBold</family>
+                        <pointsize>12</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="cursor">
+                       <cursorShape>PointingHandCursor</cursorShape>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 20px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
+}
+
+QPushButton:hover {
+    background-color: ;
+}
+</string>
+                      </property>
+                      <property name="text">
+                       <string>Send</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_https_email">
+       <layout class="QHBoxLayout" name="horizontalLayout_83">
+        <item>
+         <widget class="QWidget" name="widget_151" native="true">
+          <property name="styleSheet">
+           <string notr="true">QWidget#widget_140,
+QWidget#widget_152{
+    border: 1px solid rgb(237, 236, 237); /* Set the &quot;groove&quot; border style for the specific widgets */
+	background-color: rgb(237, 236, 237);
+}
+</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_68">
+           <property name="spacing">
+            <number>30</number>
+           </property>
+           <item>
+            <widget class="QWidget" name="widget_152" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>1200</width>
+               <height>70</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>70</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <widget class="QWidget" name="widget_153" native="true">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>5</y>
+                <width>152</width>
+                <height>60</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>60</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>60</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color:rgb(65,155,249);
+background-color: rgb(237, 236, 237);
+border-radius: 20px;</string>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_78">
+               <item alignment="Qt::AlignLeft">
+                <widget class="QPushButton" name="btn_backEmail_https">
+                 <property name="minimumSize">
+                  <size>
+                   <width>130</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>130</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Bahnschrift SemiBold</family>
+                   <pointsize>12</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="cursor">
+                  <cursorShape>PointingHandCursor</cursorShape>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 20px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
+}
+
+QPushButton:hover {
+    background-color: ;
+}
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Back</string>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normaloff>../icons/icons8-go-back-45.png</normaloff>../icons/icons8-go-back-45.png</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>35</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QLabel" name="label_headofEmail_https">
+              <property name="geometry">
+               <rect>
+                <x>152</x>
+                <y>15</y>
+                <width>600</width>
+                <height>45</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>600</width>
+                <height>45</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>800</width>
+                <height>45</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>Bahnschrift SemiBold</family>
+                <pointsize>20</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: rgb(38, 50, 56);</string>
+              </property>
+              <property name="text">
+               <string>Send ISAN Secutity Gixmo Box HTTPS Report</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              </property>
+              <property name="margin">
+               <number>0</number>
+              </property>
+              <property name="indent">
+               <number>20</number>
+              </property>
+             </widget>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_154" native="true">
+             <property name="font">
+              <font>
+               <family>Bahnschrift SemiBold</family>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_79">
+              <item>
+               <widget class="QWidget" name="widget_155" native="true">
+                <layout class="QVBoxLayout" name="verticalLayout_73">
+                 <item>
+                  <widget class="QWidget" name="widget_156" native="true">
+                   <layout class="QHBoxLayout" name="horizontalLayout_80">
+                    <item>
+                     <widget class="QLabel" name="label_Report_https">
+                      <property name="minimumSize">
+                       <size>
+                        <width>400</width>
+                        <height>500</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>400</width>
+                        <height>500</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="pixmap">
+                       <pixmap>C:/Users/kanja/OneDrive/Pictures/Screenshots/Screenshot 2023-10-16 152325.png</pixmap>
+                      </property>
+                      <property name="scaledContents">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+                  <widget class="QWidget" name="widget_157" native="true">
+                   <layout class="QHBoxLayout" name="horizontalLayout_81">
+                    <item>
+                     <widget class="QPushButton" name="btn_backReport_https">
+                      <property name="minimumSize">
+                       <size>
+                        <width>100</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift SemiBold</family>
+                        <pointsize>10</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="cursor">
+                       <cursorShape>PointingHandCursor</cursorShape>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 20px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
+}
+
+QPushButton:hover {
+    background-color: ;
+}
+</string>
+                      </property>
+                      <property name="text">
+                       <string>Back</string>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>C:/Users/kanja/Downloads/icon_back.png</normaloff>C:/Users/kanja/Downloads/icon_back.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>35</width>
+                        <height>35</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="label_countPageReport_https">
+                      <property name="minimumSize">
+                       <size>
+                        <width>40</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>40</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift SemiBold</family>
+                        <pointsize>11</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QLabel {
+  border: 1px solid gray;
+  color: rgba(40,43,61,255);
+  border-radius: 5px;
+}
+
+</string>
+                      </property>
+                      <property name="text">
+                       <string>0</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="btn_nextReport_https">
+                      <property name="minimumSize">
+                       <size>
+                        <width>100</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>100</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift SemiBold</family>
+                        <pointsize>10</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="cursor">
+                       <cursorShape>PointingHandCursor</cursorShape>
+                      </property>
+                      <property name="layoutDirection">
+                       <enum>Qt::RightToLeft</enum>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 20px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
+}
+
+QPushButton:hover {
+    background-color: ;
+}
+</string>
+                      </property>
+                      <property name="text">
+                       <string>Next</string>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>C:/Users/kanja/Downloads/icon_next.png</normaloff>C:/Users/kanja/Downloads/icon_next.png</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>35</width>
+                        <height>35</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QWidget" name="widget_158" native="true">
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>570</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>570</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_82">
+                 <item alignment="Qt::AlignRight|Qt::AlignTop">
+                  <widget class="QWidget" name="widget_159" native="true">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>150</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>150</height>
+                    </size>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_74">
+                    <item>
+                     <widget class="QLabel" name="label_to_https">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift SemiBold</family>
+                        <pointsize>12</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>To:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="label_subject_https">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>30</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift SemiBold</family>
+                        <pointsize>12</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>Subject:</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                  <widget class="QWidget" name="widget_160" native="true">
+                   <layout class="QVBoxLayout" name="verticalLayout_12">
+                    <item>
+                     <widget class="QLabel" name="label_header_email_https">
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift SemiBold</family>
+                        <pointsize>12</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>ISAN Secutity Gixmo Box</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="lineEdit_to_email_https">
+                      <property name="minimumSize">
+                       <size>
+                        <width>600</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>600</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QLineEdit {
+  border: 1px solid gray;
+  color: rgba(40,43,61,255);
+  border-radius: 5px;
+}
+
+QLineEdit:hover {
+  border: 2px solid;
+  border-color: rgba(0,143,255,255);
+}
+QLineEdit:focus {
+  border: 1px solid;
+  border-color: rgba(88,199,141,255);
+}
+</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="lineEdit_subject_email_https">
+                      <property name="minimumSize">
+                       <size>
+                        <width>600</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>600</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QLineEdit {
+  border: 1px solid gray;
+  color: rgba(40,43,61,255);
+  border-radius: 5px;
+}
+
+QLineEdit:hover {
+  border: 2px solid;
+  border-color: rgba(0,143,255,255);
+}
+QLineEdit:focus {
+  border: 1px solid;
+  border-color: rgba(88,199,141,255);
+}
+</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QTextEdit" name="textEdit_body_email_https">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>300</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QTextEdit {
+  border: 1px solid gray;
+  color: rgba(40,43,61,255);
+  border-radius: 5px;
+}
+
+QTextEdit:hover {
+  border: 2px solid;
+  border-color: rgba(0,143,255,255);
+}
+QTextEdit:focus {
+  border: 1px solid;
+  border-color: rgba(88,199,141,255);
+}
+</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="btn_file_email_https">
+                      <property name="minimumSize">
+                       <size>
+                        <width>600</width>
+                        <height>45</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>600</width>
+                        <height>45</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Bahnschrift SemiBold</family>
+                        <pointsize>12</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QPushButton {    
+    border: 1px solid rgba(40,43,61,255) ;
+    border-radius: 5px;
+    padding: 5px 10px;
+	color: rgba(40,43,61,255) ;
+}
+
+QPushButton:hover {
+    background-color: ;
+}
+</string>
+                      </property>
+                      <property name="text">
+                       <string>File</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item alignment="Qt::AlignRight">
+                     <widget class="QPushButton" name="btn_sendReport_email_https">
                       <property name="minimumSize">
                        <size>
                         <width>130</width>
