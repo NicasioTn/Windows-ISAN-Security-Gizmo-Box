@@ -20,12 +20,12 @@ class Main(QMainWindow):
          
         # initialize Icon
         self.setWindowTitle("ISAN Security Gizmo Box v1.0")
-        self.setWindowIcon(QIcon("./assets/images/LogoGIZMO.png"))
+        self.setWindowIcon(QIcon("./assets/icons/icon_gixmobox.png"))
         self.hide_icon = QIcon("./assets/icons/icon_closedeye.png")
         self.unhide_icon = QIcon("./assets/icons/icon_openeye.png")
         self.warning_icon = QIcon("./assets/icons/warning-red.png")
         self.check_icon = QIcon("./assets/icons/Checked.png")
-        self.label_logo = QPixmap("./assets/images/LogoGIZMO.png")
+        self.label_logo = QPixmap("./assets/icons/icon_gixmobox.png")
         self.image_main = QPixmap("./assets/images/main.png")
 
         # Event Back Button
@@ -38,6 +38,7 @@ class Main(QMainWindow):
         self.btn_backVulner.clicked.connect(self.openNetworkUserHome)
         self.btn_backHttps.clicked.connect(self.openNetworkUserHome)
         self.btn_backSettings.clicked.connect(self.openHomePage)
+        self.btn_backEmail_vulner.clicked.connect(self.openVulnerabilityHome)
 
         # clear cache data after back button
         self.btn_backPassword.clicked.connect(lambda: PasswordEvaluation.clear(self))
@@ -46,7 +47,7 @@ class Main(QMainWindow):
         self.btn_backMSDigest.clicked.connect(lambda: MessageDigest.clear(self))
         self.btn_backVulner.clicked.connect(lambda: VulnerabilityScanning.clear(self))
         self.btn_backHttps.clicked.connect(lambda: HTTPSTesting.clear(self))
-        self.btn_backEmail.clicked.connect(lambda: VulnerabilityScanning.clear(self))
+        self.btn_backEmail_vulner.clicked.connect(lambda: VulnerabilityScanning.clear(self))
 
         # --------------------- Get Started ---------------------------------
         self.btn_getStart.clicked.connect(self.openHomePage)
@@ -152,9 +153,9 @@ class Main(QMainWindow):
         self.lineEdit_https.textChanged.connect(lambda: HTTPSTesting.checkHTTPS(self))
 
         ### --------------------- Send Email ----------------------------------
-        self.btn_sendReportToMail.clicked.connect(lambda: VulnerabilityScanning.send_email(self))
-        self.btn_backReport.clicked.connect(lambda: VulnerabilityScanning.set_pdf_viewer(self, "back"))
-        self.btn_nextReport.clicked.connect(lambda: VulnerabilityScanning.set_pdf_viewer(self, "next"))
+        self.btn_sendReport_email_vulner.clicked.connect(lambda: VulnerabilityScanning.send_email(self))
+        self.btn_backReport_vulner.clicked.connect(lambda: VulnerabilityScanning.set_pdf_viewer(self, "back"))
+        self.btn_nextReport_vulner.clicked.connect(lambda: VulnerabilityScanning.set_pdf_viewer(self, "next"))
     
     # -------------------- Home ---------------------------------------
     def openHomePage(self):
