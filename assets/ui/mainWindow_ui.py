@@ -642,11 +642,11 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QCheckBox::indicator:checked {\n"
-"      image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);\n"
+"      image:  url(D:/ISAN-Security-Gizmo-Box/assets/icons/icon_switchoff.png);\n"
 "}\n"
 "\n"
 "QCheckBox::indicator:unchecked {\n"
-"     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);\n"
+"     image: url(D:/ISAN-Security-Gizmo-Box/assets/icons/icon_switchon.png);\n"
 "}\n"
 "")
         self.checkBox_notificationSettings.setText("")
@@ -703,6 +703,19 @@ class Ui_MainWindow(object):
         self.horizontalLayout_95.addWidget(self.btn_languageSettings)
         self.horizontalLayout_94.addWidget(self.widget_176)
         self.widget_177 = QtWidgets.QWidget(parent=self.widget_175)
+        self.widget_177.setStyleSheet("QCheckBox::indicator {\n"
+"    width: 45px;\n"
+"    height: 45px;\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:checked {\n"
+"      image:  url(D:/ISAN-Security-Gizmo-Box/assets/icons/icon_switchoff.png);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:unchecked {\n"
+"     image: url(D:/ISAN-Security-Gizmo-Box/assets/icons/icon_switchon.png);\n"
+"}\n"
+"")
         self.widget_177.setObjectName("widget_177")
         self.horizontalLayout_96 = QtWidgets.QHBoxLayout(self.widget_177)
         self.horizontalLayout_96.setSpacing(0)
@@ -715,11 +728,11 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QCheckBox::indicator:checked {\n"
-"      image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);\n"
+"      image:  url(D:/ISAN-Security-Gizmo-Box/assets/icons/icon_switchoff.png);\n"
 "}\n"
 "\n"
 "QCheckBox::indicator:unchecked {\n"
-"     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);\n"
+"     image: url(D:/ISAN-Security-Gizmo-Box/assets/icons/icon_switchon.png);\n"
 "}\n"
 "")
         self.checkBox_btn_languageSettings.setText("")
@@ -787,11 +800,11 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QCheckBox::indicator:checked {\n"
-"      image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);\n"
+"      image:  url(D:/ISAN-Security-Gizmo-Box/assets/icons/icon_switchoff.png);\n"
 "}\n"
 "\n"
 "QCheckBox::indicator:unchecked {\n"
-"     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);\n"
+"     image: url(D:/ISAN-Security-Gizmo-Box/assets/icons/icon_switchon.png);\n"
 "}\n"
 "")
         self.checkBox_soundSettings.setText("")
@@ -1098,11 +1111,11 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "QCheckBox::indicator:checked {\n"
-"      image:  url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchoff.png);\n"
+"      image:  url(D:/ISAN-Security-Gizmo-Box/assets/icons/icon_switchoff.png);\n"
 "}\n"
 "\n"
 "QCheckBox::indicator:unchecked {\n"
-"     image: url(D:/ISAN Security Gizmo Box/assets/icons/icon_switchon.png);\n"
+"     image: url(D:/ISAN-Security-Gizmo-Box/assets/icons/icon_switchon.png);\n"
 "}\n"
 "")
         self.checkBox_themeSettings.setText("")
