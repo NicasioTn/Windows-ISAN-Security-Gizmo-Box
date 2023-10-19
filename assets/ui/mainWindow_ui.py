@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'd:\ISAN Security Gizmo Box\assets\ui\mainWindow.ui'
+# Form implementation generated from reading ui file 'd:\ISAN-Security-Gizmo-Box\assets\ui\mainWindow.ui'
 #
 # Created by: PyQt6 UI code generator 6.5.2
 #
@@ -30,7 +30,7 @@ class Ui_MainWindow(object):
         self.label_logo.setMaximumSize(QtCore.QSize(55, 55))
         self.label_logo.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../images/GIZMO.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon.addPixmap(QtGui.QPixmap("d:\\ISAN-Security-Gizmo-Box\\assets\\ui\\../images/LogoGIZMO.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.label_logo.setIcon(icon)
         self.label_logo.setIconSize(QtCore.QSize(100, 100))
         self.label_logo.setObjectName("label_logo")
@@ -57,7 +57,7 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-home.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon1.addPixmap(QtGui.QPixmap("d:\\ISAN-Security-Gizmo-Box\\assets\\ui\\../icons/icon-home.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.btn_home.setIcon(icon1)
         self.btn_home.setIconSize(QtCore.QSize(30, 30))
         self.btn_home.setObjectName("btn_home")
@@ -84,7 +84,7 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-setting.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon2.addPixmap(QtGui.QPixmap("d:\\ISAN-Security-Gizmo-Box\\assets\\ui\\../icons/icon-setting.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.btn_settings.setIcon(icon2)
         self.btn_settings.setIconSize(QtCore.QSize(30, 30))
         self.btn_settings.setObjectName("btn_settings")
@@ -117,7 +117,7 @@ class Ui_MainWindow(object):
         self.image_startpage.setMinimumSize(QtCore.QSize(500, 0))
         self.image_startpage.setMaximumSize(QtCore.QSize(1000, 16777215))
         self.image_startpage.setText("")
-        self.image_startpage.setPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../images/main.png"))
+        self.image_startpage.setPixmap(QtGui.QPixmap("d:\\ISAN-Security-Gizmo-Box\\assets\\ui\\../images/main.png"))
         self.image_startpage.setScaledContents(True)
         self.image_startpage.setObjectName("image_startpage")
         self.verticalLayout_64.addWidget(self.image_startpage)
@@ -177,7 +177,7 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-password.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon3.addPixmap(QtGui.QPixmap("d:\\ISAN-Security-Gizmo-Box\\assets\\ui\\../icons/icon-password.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.show_password.setIcon(icon3)
         self.show_password.setIconSize(QtCore.QSize(45, 45))
         self.show_password.setObjectName("show_password")
@@ -203,7 +203,7 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-malware.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon4.addPixmap(QtGui.QPixmap("d:\\ISAN-Security-Gizmo-Box\\assets\\ui\\../icons/icon-malware.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.show_malware.setIcon(icon4)
         self.show_malware.setIconSize(QtCore.QSize(35, 35))
         self.show_malware.setObjectName("show_malware")
@@ -229,7 +229,7 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-digest.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon5.addPixmap(QtGui.QPixmap("d:\\ISAN-Security-Gizmo-Box\\assets\\ui\\../icons/icon-digest.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.show_digest.setIcon(icon5)
         self.show_digest.setIconSize(QtCore.QSize(35, 35))
         self.show_digest.setObjectName("show_digest")
@@ -260,7 +260,7 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-hsts.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon6.addPixmap(QtGui.QPixmap("d:\\ISAN-Security-Gizmo-Box\\assets\\ui\\../icons/icon-hsts.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.show_https.setIcon(icon6)
         self.show_https.setIconSize(QtCore.QSize(35, 35))
         self.show_https.setObjectName("show_https")
@@ -286,7 +286,7 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         icon7 = QtGui.QIcon()
-        icon7.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-vulner.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon7.addPixmap(QtGui.QPixmap("d:\\ISAN-Security-Gizmo-Box\\assets\\ui\\../icons/icon-vulner.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.show_vulner.setIcon(icon7)
         self.show_vulner.setIconSize(QtCore.QSize(35, 45))
         self.show_vulner.setObjectName("show_vulner")
@@ -323,7 +323,7 @@ class Ui_MainWindow(object):
         self.image_mainpage.setMinimumSize(QtCore.QSize(500, 0))
         self.image_mainpage.setMaximumSize(QtCore.QSize(1000, 16777215))
         self.image_mainpage.setText("")
-        self.image_mainpage.setPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../images/main.png"))
+        self.image_mainpage.setPixmap(QtGui.QPixmap("d:\\ISAN-Security-Gizmo-Box\\assets\\ui\\../images/main.png"))
         self.image_mainpage.setObjectName("image_mainpage")
         self.verticalLayout_6.addWidget(self.image_mainpage, 0, QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignVCenter)
         self.verticalLayout_43.addWidget(self.widget_12, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
@@ -572,7 +572,7 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         icon8 = QtGui.QIcon()
-        icon8.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icons8-go-back-45.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon8.addPixmap(QtGui.QPixmap("d:\\ISAN-Security-Gizmo-Box\\assets\\ui\\../icons/icons8-go-back-45.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.btn_backSettings.setIcon(icon8)
         self.btn_backSettings.setIconSize(QtCore.QSize(35, 35))
         self.btn_backSettings.setObjectName("btn_backSettings")
@@ -623,7 +623,7 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.btn_notificationSettings.setFont(font)
         icon9 = QtGui.QIcon()
-        icon9.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon_notification.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon9.addPixmap(QtGui.QPixmap("d:\\ISAN-Security-Gizmo-Box\\assets\\ui\\../icons/icon_notification.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.btn_notificationSettings.setIcon(icon9)
         self.btn_notificationSettings.setIconSize(QtCore.QSize(40, 40))
         self.btn_notificationSettings.setObjectName("btn_notificationSettings")
@@ -693,7 +693,7 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.btn_languageSettings.setFont(font)
         icon10 = QtGui.QIcon()
-        icon10.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icons_language.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon10.addPixmap(QtGui.QPixmap("d:\\ISAN-Security-Gizmo-Box\\assets\\ui\\../icons/icons_language.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.btn_languageSettings.setIcon(icon10)
         self.btn_languageSettings.setIconSize(QtCore.QSize(40, 40))
         self.btn_languageSettings.setObjectName("btn_languageSettings")
@@ -764,7 +764,7 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.btn_soundSettings.setFont(font)
         icon11 = QtGui.QIcon()
-        icon11.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icons_sound.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon11.addPixmap(QtGui.QPixmap("d:\\ISAN-Security-Gizmo-Box\\assets\\ui\\../icons/icons_sound.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.btn_soundSettings.setIcon(icon11)
         self.btn_soundSettings.setIconSize(QtCore.QSize(40, 40))
         self.btn_soundSettings.setObjectName("btn_soundSettings")
@@ -847,7 +847,7 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.btn_LineAPISettings.setFont(font)
         icon12 = QtGui.QIcon()
-        icon12.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-line.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon12.addPixmap(QtGui.QPixmap("d:\\ISAN-Security-Gizmo-Box\\assets\\ui\\../icons/icon-line.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.btn_LineAPISettings.setIcon(icon12)
         self.btn_LineAPISettings.setIconSize(QtCore.QSize(40, 40))
         self.btn_LineAPISettings.setObjectName("btn_LineAPISettings")
@@ -958,7 +958,7 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.btn_virusTotalAPISettings.setFont(font)
         icon13 = QtGui.QIcon()
-        icon13.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icons_virustotal.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon13.addPixmap(QtGui.QPixmap("d:\\ISAN-Security-Gizmo-Box\\assets\\ui\\../icons/icons_virustotal.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.btn_virusTotalAPISettings.setIcon(icon13)
         self.btn_virusTotalAPISettings.setIconSize(QtCore.QSize(40, 40))
         self.btn_virusTotalAPISettings.setObjectName("btn_virusTotalAPISettings")
@@ -1062,7 +1062,7 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.btn_themeSettings.setFont(font)
         icon14 = QtGui.QIcon()
-        icon14.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icons_display.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon14.addPixmap(QtGui.QPixmap("d:\\ISAN-Security-Gizmo-Box\\assets\\ui\\../icons/icons_display.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.btn_themeSettings.setIcon(icon14)
         self.btn_themeSettings.setIconSize(QtCore.QSize(40, 40))
         self.btn_themeSettings.setObjectName("btn_themeSettings")
@@ -1188,7 +1188,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_8.setObjectName("verticalLayout_8")
         self.image_advancedUser = QtWidgets.QLabel(parent=self.widget_16)
         self.image_advancedUser.setText("")
-        self.image_advancedUser.setPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../images/advancedUser.png"))
+        self.image_advancedUser.setPixmap(QtGui.QPixmap("d:\\ISAN-Security-Gizmo-Box\\assets\\ui\\../images/advancedUser.png"))
         self.image_advancedUser.setObjectName("image_advancedUser")
         self.verticalLayout_8.addWidget(self.image_advancedUser, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.verticalLayout_7.addWidget(self.widget_16)
@@ -1423,7 +1423,7 @@ class Ui_MainWindow(object):
 "")
         self.btn_showPassword.setText("")
         icon15 = QtGui.QIcon()
-        icon15.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-visible.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon15.addPixmap(QtGui.QPixmap("d:\\ISAN-Security-Gizmo-Box\\assets\\ui\\../icons/icon-visible.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.btn_showPassword.setIcon(icon15)
         self.btn_showPassword.setIconSize(QtCore.QSize(30, 30))
         self.btn_showPassword.setObjectName("btn_showPassword")
@@ -1529,7 +1529,7 @@ class Ui_MainWindow(object):
         self.btn_infoEntropy.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.btn_infoEntropy.setText("")
         icon16 = QtGui.QIcon()
-        icon16.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon_info.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon16.addPixmap(QtGui.QPixmap("d:\\ISAN-Security-Gizmo-Box\\assets\\ui\\../icons/icon_info.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.btn_infoEntropy.setIcon(icon16)
         self.btn_infoEntropy.setIconSize(QtCore.QSize(20, 20))
         self.btn_infoEntropy.setObjectName("btn_infoEntropy")
@@ -1665,7 +1665,7 @@ class Ui_MainWindow(object):
         self.chk_length.setStyleSheet("color: rgba(40,43,61,255);\n"
 "border-radius: 10px;")
         icon17 = QtGui.QIcon()
-        icon17.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\icon-no.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon17.addPixmap(QtGui.QPixmap("d:\\ISAN-Security-Gizmo-Box\\assets\\ui\\icon-no.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.chk_length.setIcon(icon17)
         self.chk_length.setIconSize(QtCore.QSize(30, 30))
         self.chk_length.setObjectName("chk_length")
@@ -1912,7 +1912,7 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         icon18 = QtGui.QIcon()
-        icon18.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-folder.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon18.addPixmap(QtGui.QPixmap("d:\\ISAN-Security-Gizmo-Box\\assets\\ui\\../icons/icon-folder.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.btn_browseDict.setIcon(icon18)
         self.btn_browseDict.setIconSize(QtCore.QSize(35, 35))
         self.btn_browseDict.setObjectName("btn_browseDict")
@@ -1939,7 +1939,7 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         icon19 = QtGui.QIcon()
-        icon19.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-clear.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon19.addPixmap(QtGui.QPixmap("d:\\ISAN-Security-Gizmo-Box\\assets\\ui\\../icons/icon-clear.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.btn_clearDict.setIcon(icon19)
         self.btn_clearDict.setIconSize(QtCore.QSize(35, 35))
         self.btn_clearDict.setObjectName("btn_clearDict")
@@ -1958,6 +1958,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.dropdown_modeAttack.setFont(font)
+        self.dropdown_modeAttack.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.dropdown_modeAttack.setStyleSheet("QComboBox {\n"
 "        border: 1px solid gray;\n"
 "        border-radius: 5px;\n"
@@ -1977,7 +1978,7 @@ class Ui_MainWindow(object):
 "}\n"
 "QComboBox::down-arrow {\n"
 "    \n"
-"    image: url(\"D:/ISAN Security Gizmo Box/assets/icons/icons8-expand-arrow-30.png\");\n"
+"    image: url(\"D:/ISAN-Security-Gizmo-Box/assets/icons/icons8-expand-arrow-30.png\");\n"
 "\n"
 "}\n"
 "QComboBox:hover {\n"
@@ -2022,7 +2023,7 @@ class Ui_MainWindow(object):
 "}\n"
 "QComboBox::down-arrow {\n"
 "    \n"
-"    image: url(\"D:/ISAN Security Gizmo Box/assets/icons/icons8-expand-arrow-30.png\");\n"
+"    image: url(\"D:/ISAN-Security-Gizmo-Box/assets/icons/icons8-expand-arrow-30.png\");\n"
 "\n"
 "}\n"
 "QComboBox:hover {\n"
@@ -2059,7 +2060,7 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         icon20 = QtGui.QIcon()
-        icon20.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon_start.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon20.addPixmap(QtGui.QPixmap("d:\\ISAN-Security-Gizmo-Box\\assets\\ui\\../icons/icon_start.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.btn_start_attack.setIcon(icon20)
         self.btn_start_attack.setIconSize(QtCore.QSize(35, 35))
         self.btn_start_attack.setObjectName("btn_start_attack")
@@ -2265,7 +2266,7 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         icon21 = QtGui.QIcon()
-        icon21.addPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../icons/icon-scan.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon21.addPixmap(QtGui.QPixmap("d:\\ISAN-Security-Gizmo-Box\\assets\\ui\\../icons/icon-scan.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.btn_scanMalware.setIcon(icon21)
         self.btn_scanMalware.setIconSize(QtCore.QSize(30, 30))
         self.btn_scanMalware.setObjectName("btn_scanMalware")
@@ -2901,7 +2902,7 @@ class Ui_MainWindow(object):
 "}\n"
 "QComboBox::down-arrow {\n"
 "    \n"
-"        image: url(\"D:/ISAN Security Gizmo Box/assets/icons/icons8-expand-arrow-30.png\");\n"
+"        image: url(\"D:/ISAN-Security-Gizmo-Box/assets/icons/icons8-expand-arrow-30.png\");\n"
 "}\n"
 "QComboBox:hover {\n"
 "    border: 1px solid;\n"
@@ -2947,7 +2948,7 @@ class Ui_MainWindow(object):
 "}\n"
 "QComboBox::down-arrow {\n"
 "    \n"
-"    image: url(\"D:/ISAN Security Gizmo Box/assets/icons/icons8-expand-arrow-30.png\");\n"
+"    image: url(\"D:/ISAN-Security-Gizmo-Box/assets/icons/icons8-expand-arrow-30.png\");\n"
 "\n"
 "}\n"
 "QComboBox:hover {\n"
@@ -3161,7 +3162,7 @@ class Ui_MainWindow(object):
         self.label_QRCode.setMaximumSize(QtCore.QSize(200, 200))
         self.label_QRCode.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.label_QRCode.setText("")
-        self.label_QRCode.setPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../images/QR.png"))
+        self.label_QRCode.setPixmap(QtGui.QPixmap("d:\\ISAN-Security-Gizmo-Box\\assets\\ui\\../images/QR.png"))
         self.label_QRCode.setScaledContents(True)
         self.label_QRCode.setObjectName("label_QRCode")
         self.horizontalLayout_25.addWidget(self.label_QRCode, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
@@ -3272,7 +3273,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_36.setObjectName("verticalLayout_36")
         self.image_networkUser = QtWidgets.QLabel(parent=self.widget_61)
         self.image_networkUser.setText("")
-        self.image_networkUser.setPixmap(QtGui.QPixmap("d:\\ISAN Security Gizmo Box\\assets\\ui\\../images/networkUser.png"))
+        self.image_networkUser.setPixmap(QtGui.QPixmap("d:\\ISAN-Security-Gizmo-Box\\assets\\ui\\../images/networkUser.png"))
         self.image_networkUser.setObjectName("image_networkUser")
         self.verticalLayout_36.addWidget(self.image_networkUser, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.verticalLayout_35.addWidget(self.widget_61)
@@ -3469,7 +3470,7 @@ class Ui_MainWindow(object):
 "}\n"
 "QComboBox::down-arrow {\n"
 "    \n"
-"            image: url(\"D:/ISAN Security Gizmo Box/assets/icons/icons8-expand-arrow-30.png\");\n"
+"            image: url(\"D:/ISAN-Security-Gizmo-Box/assets/icons/icons8-expand-arrow-30.png\");\n"
 "\n"
 "}\n"
 "QComboBox:hover {\n"

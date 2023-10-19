@@ -53,7 +53,7 @@ border-radius: 20px;</string>
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../images/GIZMO.png</normaloff>../images/GIZMO.png</iconset>
+           <normaloff>../images/LogoGIZMO.png</normaloff>../images/LogoGIZMO.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -3899,6 +3899,9 @@ QPushButton:hover {
                   <bold>true</bold>
                  </font>
                 </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
                 <property name="styleSheet">
                  <string notr="true">QComboBox {
         border: 1px solid gray;
@@ -3919,7 +3922,7 @@ QPushButton:hover {
 }
 QComboBox::down-arrow {
 	
-	image: url(&quot;D:/ISAN Security Gizmo Box/assets/icons/icons8-expand-arrow-30.png&quot;);
+	image: url(&quot;D:/ISAN-Security-Gizmo-Box/assets/icons/icons8-expand-arrow-30.png&quot;);
 
 }
 QComboBox:hover {
@@ -4001,7 +4004,7 @@ QComboBox:hover {
 }
 QComboBox::down-arrow {
 	
-	image: url(&quot;D:/ISAN Security Gizmo Box/assets/icons/icons8-expand-arrow-30.png&quot;);
+	image: url(&quot;D:/ISAN-Security-Gizmo-Box/assets/icons/icons8-expand-arrow-30.png&quot;);
 
 }
 QComboBox:hover {
@@ -5670,7 +5673,7 @@ QPushButton:focus {
 }
 QComboBox::down-arrow {
 	
-		image: url(&quot;D:/ISAN Security Gizmo Box/assets/icons/icons8-expand-arrow-30.png&quot;);
+		image: url(&quot;D:/ISAN-Security-Gizmo-Box/assets/icons/icons8-expand-arrow-30.png&quot;);
 }
 QComboBox:hover {
 	border: 1px solid;
@@ -5758,7 +5761,7 @@ QComboBox:hover {
 }
 QComboBox::down-arrow {
 	
-	image: url(&quot;D:/ISAN Security Gizmo Box/assets/icons/icons8-expand-arrow-30.png&quot;);
+	image: url(&quot;D:/ISAN-Security-Gizmo-Box/assets/icons/icons8-expand-arrow-30.png&quot;);
 
 }
 QComboBox:hover {
@@ -6769,7 +6772,7 @@ QLineEdit:focus {
 }
 QComboBox::down-arrow {
 	
-			image: url(&quot;D:/ISAN Security Gizmo Box/assets/icons/icons8-expand-arrow-30.png&quot;);
+			image: url(&quot;D:/ISAN-Security-Gizmo-Box/assets/icons/icons8-expand-arrow-30.png&quot;);
 
 }
 QComboBox:hover {
