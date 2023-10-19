@@ -499,6 +499,8 @@ class PasswordAttack(QDialog):
             mode = "6"
         elif mode == "Skipping 2":
             mode = "7"
+        else:
+            mode = None
         
         return mode
     
@@ -533,17 +535,21 @@ class HashcatRunner(QObject):
         super().__init__()
 
     def run_hashcat(self, mode, wordlist, hash, password):
-        wordlist= f"D:/ISAN Security Gizmo Box/data/Wordlists/rockyou.txt"
-        hashcat_exe = f"D:/ISAN Security Gizmo Box/data/Tools/hashcat-6.2.5/hashcat.exe"
+        wordlist= f"./data/Wordlists/rockyou.txt"
+        hashcat_exe = f"./data/Tools/hashcat-6.2.5/hashcat.exe"
 
         if mode == "0": # Straight forward
-            command = f"{hashcat_exe} -d 2 -m 0 -a {mode} {hash} {wordlist}'" 
+            command = f"{hashcat_exe} -d 2 -m 0 -a {mode} {hash} {wordlist}" 
         elif mode == "1": # Combination
-            command = f"{hashcat_exe} -d 2 -m 0 -a {mode} {hash} {wordlist} {wordlist}'"
+            command = f"{hashcat_exe} -d 2 -m 0 -a {mode} {hash} {wordlist} {wordlist}"
         elif mode == "6": # Skipping 1
-            command = f"{hashcat_exe} -d 2 -m 0 -a {mode} {hash} {wordlist} ?d?d?d?d'"
+            command = f"{hashcat_exe} -d 2 -m 0 -a {mode} {hash} {wordlist} ?d?d?d?d"
         elif mode == "7": # Skipping 2
-            command = f"{hashcat_exe} -d 2 -m 0 -a {mode} {hash} ?d?d?d?d {wordlist}'"
+            command = f"{hashcat_exe} -d 2 -m 0 -a {mode} {hash} ?d?d?d?d {wordlist}"
+        else:
+            self.update_text.emit(f"No mode selected")
+            return
+
         print(command)
         if command is None:
             return "No password found"
@@ -574,6 +580,9 @@ class HashcatRunner(QObject):
                 # Additional debug output
                 for line in process.stderr:
                     self.update_text.emit(f"Hashcat Error Output: {line}")
+            
+            if process.returncode == 4294967295:
+                self.update_text.emit(f"Error: Hashcat process exited with code {process.returncode}")
 
         except Exception as e:
             self.update_text.emit(f"Error: {str(e)}")
