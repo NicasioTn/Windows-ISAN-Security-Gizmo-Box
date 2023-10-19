@@ -434,6 +434,8 @@ class PasswordAttack(QDialog):
         self.dropdown_modeAttack.setItemText(0, "Mode")
         self.dropdown_wordLists.setItemText(0, "Wordlists")
         self.textEdit_result_hashcat.clear()
+        self.dropdown_modeAttack.setCurrentIndex(0)
+        self.dropdown_wordLists.setCurrentIndex(0)
 
     def open_file_wordlist(self):
         filepath, _ = QFileDialog.getOpenFileName(
@@ -467,7 +469,7 @@ class PasswordAttack(QDialog):
             return
         
         # get path of wordlist
-        path = Path(f"./data/{wordlist}")
+        path = Path(f"./data/Wordlists/{wordlist}")
         print("path of wordlist: ", path)
 
         # check if wordlist exists
@@ -497,13 +499,15 @@ class PasswordAttack(QDialog):
             mode = "6"
         elif mode == "Skipping 2":
             mode = "7"
+        
         return mode
     
     def start_attack(self):
+        self.textEdit_result_hashcat.clear()
+
         runner = HashcatRunner()
         runner.finished.connect(lambda: PasswordAttack.on_finished(self))
         runner.update_text.connect(lambda text: PasswordAttack.on_update_text(self, text))
-        self.textEdit_result_hashcat.clear()
         
         password = self.lineEdit_passwordDict.text()
         password_hash = hashlib.md5(password.encode()).hexdigest()
@@ -515,9 +519,11 @@ class PasswordAttack(QDialog):
 
     def on_finished(self):
         self.btn_start_attack.setEnabled(True)
+        print("Finished running hashcat")
 
     def on_update_text(self, text):
         self.textEdit_result_hashcat.append(text)
+        print("update: "+ text)
        
 class HashcatRunner(QObject):
     finished = pyqtSignal()
@@ -527,28 +533,47 @@ class HashcatRunner(QObject):
         super().__init__()
 
     def run_hashcat(self, mode, wordlist, hash, password):
+        wordlist= f"D:/ISAN Security Gizmo Box/data/Wordlists/rockyou.txt"
+        hashcat_exe = f"D:/ISAN Security Gizmo Box/data/Tools/hashcat-6.2.5/hashcat.exe"
+
         if mode == "0": # Straight forward
-            command = f"D:\Hashcat\hashcat-6.2.5\hashcat.exe -d 2 -m 0 -a {mode} {hash} D:\ISAN Security Gizmo Box\{wordlist} | findstr '{password}" 
+            command = f"{hashcat_exe} -d 2 -m 0 -a {mode} {hash} {wordlist}'" 
         elif mode == "1": # Combination
-            command = f"D:\Hashcat\hashcat-6.2.5\hashcat.exe -d 2 -m 0 -a {mode} {hash} {wordlist} {wordlist} | findstr ':{password}'"
+            command = f"{hashcat_exe} -d 2 -m 0 -a {mode} {hash} {wordlist} {wordlist}'"
         elif mode == "6": # Skipping 1
-            command = f"D:\Hashcat\hashcat-6.2.5\hashcat.exe -d 2 -m 0 -a {mode} {hash} {wordlist} | findstr ':{password}'"
+            command = f"{hashcat_exe} -d 2 -m 0 -a {mode} {hash} {wordlist} ?d?d?d?d'"
         elif mode == "7": # Skipping 2
-            command = f"D:\Hashcat\hashcat-6.2.5\hashcat.exe -d 2 -m 0 -a {mode} {hash} {wordlist} | findstr ':{password}'"
+            command = f"{hashcat_exe} -d 2 -m 0 -a {mode} {hash} ?d?d?d?d {wordlist}'"
         print(command)
         if command is None:
             return "No password found"
-        process = subprocess.Popen(
-            command,
-            shell=True,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True
-        )
+        try:
+            process = subprocess.Popen(
+                command,
+                shell=True,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True
+            )
 
-        for line in process.stdout:
-            if line is None:
-                return "No password found"
-            self.update_text.emit(line)
-        process.communicate()
-        self.finished.emit()
+            for line in process.stdout:
+                # Process the output here
+                if password in line:
+                    # Password found, do something
+                    self.update_text.emit(f"Password found: {password}")
+                    break
+            process.communicate()
+
+            # Check if the process was successful or not
+            if process.returncode == 0:
+                self.finished.emit()
+            else:
+                self.update_text.emit(f"Error: Hashcat process exited with code {process.returncode}")
+            
+            if process.returncode == 255:
+                # Additional debug output
+                for line in process.stderr:
+                    self.update_text.emit(f"Hashcat Error Output: {line}")
+
+        except Exception as e:
+            self.update_text.emit(f"Error: {str(e)}")

@@ -9035,7 +9035,7 @@ QPushButton:hover {
                <string notr="true">color: rgb(38, 50, 56);</string>
               </property>
               <property name="text">
-               <string>Send ISAN Secutity Gixmo Box Malware Report</string>
+               <string>Send ISAN Secutity Gizmo Box Malware Report</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -9696,7 +9696,7 @@ QPushButton:hover {
                <string notr="true">color: rgb(38, 50, 56);</string>
               </property>
               <property name="text">
-               <string>Send ISAN Secutity Gixmo Box Vulnerability Report</string>
+               <string>Send ISAN Secutity Gizmo Box Vulnerability Report</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -10358,7 +10358,7 @@ QPushButton:hover {
                <string notr="true">color: rgb(38, 50, 56);</string>
               </property>
               <property name="text">
-               <string>Send ISAN Secutity Gixmo Box HTTPS Report</string>
+               <string>Send ISAN Secutity Gizmo Box HTTPS Report</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
